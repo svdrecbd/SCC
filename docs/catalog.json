@@ -1,5 +1,4 @@
 {
-  "generated_at_utc": "2026-09-12T23:15:27.549497+00:00",
   "current_assessment": "docs/RESEARCH_RESET.md",
   "entries": [
     {
@@ -1425,6 +1424,39 @@
     {
       "path": "deliverables/scc-master-20260910-v1/SCC_Master_Document.md",
       "role": "Historical sharing artifact"
+    },
+    {
+      "path": "reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md",
+      "role": "Qualified ordinary reference and next matrix control"
+    },
+    {
+      "path": "protocols/SCC_PERSISTENT_REFERENCE_V1.md",
+      "role": "Frozen primary reference contract"
+    },
+    {
+      "path": "protocols/SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md",
+      "role": "Frozen extended reference contract"
+    },
+    {
+      "path": "protocols/SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md",
+      "role": "Frozen successful reference contract"
+    },
+    {
+      "path": "protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md",
+      "role": "Frozen submitted matrix control"
+    },
+    {
+      "path": "scc/persistent_reference.py",
+      "role": "Ordinary GRU implementation"
+    },
+    {
+      "path": "scripts/run_persistent_reference.py",
+      "role": "Reference runner"
+    },
+    {
+      "path": "scripts/audit_persistent_reference.py",
+      "role": "Independent reference audit"
     }
-  ]
+  ],
+  "generated_at_utc": "2026-09-12T23:55:09.400633+00:00"
 }

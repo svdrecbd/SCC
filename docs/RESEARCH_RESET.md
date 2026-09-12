@@ -2,7 +2,10 @@
 
 **12 September 2026.** This is the current synthesis. Runtime states are from
 22:46 UTC; additional saved-result audits and CPU diagnostics were completed
-during the reset without polling unfinished jobs. Dated reports remain evidence
+during the reset without polling unfinished jobs. A subsequent local reference
+now qualifies, and one new matrix optimization control has been submitted;
+see the [follow-up readout](../reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md).
+Dated reports remain evidence
 about their original experiments, not competing current plans.
 
 ## Where we actually are
@@ -36,8 +39,12 @@ its cognition before completing an unauthorized action.
 | Earlier construction round | 38 / 38 | 18 | All 12 qualified coupled models admit retained-capability exceptions |
 | Memory factorial | 21 / 24 | 17 | All eight qualified coupled models admit targeted exceptions; three seed-59 coupled jobs were still running |
 | Persistent-matrix learning | 8 / 8 | 0 | No reliable ordinary learned computation established |
+| Ordinary GRU reference, local | 3 / 3 | 1 | Successful final recipe gets all 2,304 validation requests correct; two earlier final recipes fail |
+| Matrix optimization control, new GPU job | 0 / 1 at submission | Pending | Apply the successful reference's training schedule to the unchanged smooth matrix |
 
-These 70 experiments are not the lifetime project total. GPU completion,
+The first three rows describe the original 70 GPU experiments; the three local
+reference runs and one new GPU control are additional work. These are not the
+lifetime project total. GPU completion,
 software-test success, intact qualification and SCC success are different
 outcomes. Most memory evidence consists of checked evaluator summaries. All
 eight persistent archives, source bytes, saved predictions and training logs
@@ -88,6 +95,26 @@ same easy escape have diminishing information value. That is a reason to
 improve experiment selection, not to pretend the work is nearly complete.
 
 ## What the completed evidence now says
+
+### A conventional reference now learns the complete persistent-task suite
+
+A width-128 GRU passes all 18 continuous-use cells with **2,304/2,304 correct
+predictions** after 12,000 updates, reducing Adam's learning rate from .003 to
+.0003 after update 6,000. Its two prior final recipes pass 16/18 and 17/18 cells;
+those failures remain preserved. This is one seed developed through three
+related conditions, not independent replication. The successful recipe has
+twice the original matrix screen's training opportunities and permanent learned
+weights, so it does not isolate a single cause of the matrix failures.
+
+All 110,592 saved stage/mode predictions and 30,000 training records were
+audited. Reloaded parameters also reproduce all 2,304 final decisions using
+explicit float64 recurrence. This supplies the ordinary learning reference
+requested in the reset. **It is not a persistent self-modifying SCC candidate.**
+
+The immediate control, `job-g5a56`, gives the existing smooth matrix this same
+longer training and learning-rate reduction before changing its architecture.
+Its receipt says `submitted`; its runtime and startup GPU gate have not been
+polled. [Protocols, results and evidence](../reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md).
 
 ### Persistent matrices have an acquisition problem as well as persistence problems
 
@@ -160,7 +187,7 @@ not promising by default. A parked direction needs a specific reopening reason.
 | Projected/geometric coupling | Qualified models escaped | Keep comparison; local geometry is not a global guarantee |
 | Hard/discrete cognition | Learning and approximate optimization confounded | Park SCC campaigns; saved-stage learning evidence may justify a narrow follow-up |
 | Compiled predicate/circuit/basis family | Useful finite negative result | Close; preserve exact repairs and certificates |
-| Current persistent matrix | All eight fail learning | One focused learnability investigation before further SCC training |
+| Current persistent matrix | Original eight fail learning; ordinary GRU reference now works | One unchanged-matrix optimization control submitted before changing the substrate |
 | Maintenance with feedback across relevant functions | Unimplemented, addresses a real structural gap | Test useful learning and output-only exceptions early |
 | Learned coupled encoding/decoding | Toy versions admit recoding; learned extension open | Joint sign, permutation and readout-repair controls |
 | Equilibrium/bistable/associative maintenance | Proposed, no qualified SCC evidence | Alternate substrate after a learned operating regime and solver-substitution tests |
@@ -170,12 +197,13 @@ not promising by default. A parked direction needs a specific reopening reason.
 
 ## What comes next
 
-**1. Establish a positive learning reference on the exact persistent-task interface.**
-Use a small ordinary recurrent learner with the same tokens, split rules, three
-algorithms, permission contexts and layouts. Carry recurrent state across
-requests. This is a diagnostic reference, not an SCC candidate. Freeze its
-budget and curriculum, and retain the existing per-cell gate. If it fails,
-diagnose the task/training setup before changing the destructive substrate.
+**1. Positive ordinary reference completed; match its optimization recipe next.**
+The GRU now meets the existing gate with continuous state across requests.
+Its successful recipe needed additional updates and smaller later learning
+steps. Test that recipe on the unchanged smooth matrix in the submitted
+[optimization control](../protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md).
+The reference is a diagnostic learner, not an SCC candidate or a proof that
+the matrix's optimization is adequate.
 
 **2. Isolate one restriction of the persistent candidate.** Compare one justified
 change against the existing smooth design: a more faithful self-referential
@@ -202,7 +230,8 @@ repair or interruption.
 and independent modification procedures, then a declared sealed evaluation and
 an individual-model autonomous test. Consider richer backbones after that.
 Authorized compute supports discriminating experiments; scaling is not the next
-one. These work orders are not new submissions. This reset ran no training.
+one. The original reset ran no training; its subsequent reference work and
+single matrix-control submission are documented in the linked follow-up.
 
 ## Literature and novelty corrections
 

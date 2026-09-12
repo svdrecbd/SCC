@@ -21,9 +21,12 @@ memory jobs were running at **2026-09-12 22:46 UTC**. No runtime queries were ma
 during this reset. Job completion is not scientific success. All eight persistent
 models have now been audited and fail ordinary learnability.
 
-The next experiment is a working ordinary learner on the persistent-task
-interface, followed by a focused test of what prevents the persistent candidate
-from learning. More coupling on an incompetent model would be uninterpretable.
+The ordinary reference now works: a GRU gets all 2,304 continuous validation
+requests correct. The next control, `job-g5a56`, applies its successful training
+schedule to the unchanged smooth matrix; its submission receipt is recorded,
+and runtime has not been polled. This is progress on learning prerequisites,
+with no new SCC mechanism result.
+[Current follow-up](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md).
 
 ```sh
 uv run python scripts/scc_status.py

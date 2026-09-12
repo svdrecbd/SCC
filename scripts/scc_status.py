@@ -65,6 +65,7 @@ def main(argv=None):
         rows = refresh_unfinished(rows, args.gman)
     result = {'scope': 'Exact registered current SCC experiments, not newest account jobs',
               'saved_snapshot_at_utc': state.get('current_all_experiment_status_counts', {}).get('as_of_utc'),
+              'latest_registration_at_utc': state.get('latest_registration_at_utc'),
               'live_unfinished_check': args.live, 'counts': dict(Counter(r['status'] for r in rows)),
               'jobs': rows, 'saved_state_modified': False}
     if args.json:
@@ -72,6 +73,9 @@ def main(argv=None):
     else:
         print(result['scope'])
         print('Saved snapshot:', result['saved_snapshot_at_utc'])
+        if result['latest_registration_at_utc']:
+            print('New registration:', result['latest_registration_at_utc'],
+                  '; earlier job observations retain their original dates.')
         if args.live:
             print('One live check of unfinished IDs; terminal observations reused. CLI:', args.gman)
         else:
@@ -79,7 +83,7 @@ def main(argv=None):
         print(' | '.join(f'{name}: {number}' for name, number in sorted(result['counts'].items())))
         selected = rows if args.all else [r for r in rows if r['status'] not in TERMINAL]
         for row in selected:
-            print(f"{row['job_id']:14} {row['status']:12} {row['label']}")
+            print(f"{row['job_id']:14} {row['status']:12} {row['label']} (observed {row.get('observed_at_utc')})")
     return 1 if any(r['status'] == 'query_error' for r in rows) else 0
 
 

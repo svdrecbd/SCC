@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import platform
 import shutil
+import signal
 import sys
 import time
 
@@ -15,6 +16,45 @@ from scc.persistent_matrix import MatrixConfig, LiveMatrix
 from scc.persistent_tasks import (training_requests,evaluation_requests,input_code,initialize_matrix,
                                 tensors,run_window,summarize_records,TOKENS_PER_REQUEST)
 from scc.provenance import atomic_json,digest,file_digest,snapshot_sources,source_manifest,canonical_json
+
+
+def reference_learning_rate(step, initial=.003):
+    return initial if step<6000 else .0003
+
+
+def optimization_gate(initial,config,code,data_seed):
+    """Check the unchanged smooth computation and both declared optimizer rates."""
+    if config.rule!='soft':raise ValueError('Optimization follow-up is smooth only')
+    checks=[]
+    for ordinal in (5999,6000):
+        requests=training_requests(data_seed,ordinal,2,4)
+        ids,labels=tensors(requests,device=initial.device)
+        weights=initial.clone().requires_grad_(True)
+        cpu=initial.detach().cpu().double().requires_grad_(True)
+        y,state,_=run_window(weights,ids,config,code)
+        ref,ref_state,_=run_window(cpu,ids.cpu(),config,code.cpu().double())
+        loss=torch.nn.functional.cross_entropy(y.reshape(-1,4),labels.reshape(-1))
+        ref_loss=torch.nn.functional.cross_entropy(ref.reshape(-1,4),labels.cpu().reshape(-1))
+        loss.backward();ref_loss.backward()
+        errors={'output':float((y.detach().cpu()-ref.detach()).abs().max()),
+                'state':float((state.detach().cpu()-ref_state.detach()).abs().max()),
+                'gradient':float((weights.grad.cpu()-cpu.grad).abs().max())}
+        if not all(torch.isfinite(torch.tensor(list(errors.values())))) or max(errors.values())>1e-4:
+            raise ValueError('Matrix FP64 reference comparison failed')
+        full_ids,full_labels=tensors(training_requests(data_seed,ordinal,32,4),device=initial.device)
+        candidate=torch.nn.Parameter(initial.clone())
+        optimizer=torch.optim.Adam([candidate],lr=reference_learning_rate(ordinal))
+        out,_,_=run_window(candidate,full_ids,config,code)
+        full_loss=torch.nn.functional.cross_entropy(out.reshape(-1,4),full_labels.reshape(-1))
+        full_loss.backward();norm=torch.nn.utils.clip_grad_norm_([candidate],1.,error_if_nonfinite=True)
+        optimizer.step()
+        if not torch.isfinite(candidate).all() or not torch.isfinite(full_loss) or norm<=0:
+            raise ValueError('Matrix full-shape optimizer gate failed')
+        checks.append({'ordinal':ordinal,'learning_rate':reference_learning_rate(ordinal),
+                       'maximum_errors':errors,'full_batch':32,'full_window':4,
+                       'loss':float(full_loss.detach()),'gradient_norm':float(norm)})
+    return {'passed':True,'checks':checks,'training_initial_unchanged':True,
+            'scope':'Implementation gate, not learned competence or SCC'}
 
 
 @torch.no_grad()
@@ -64,11 +104,13 @@ def main():
     p.add_argument('--wall-seconds',type=float,default=3300);p.add_argument('--eval-per-cell',type=int,default=128)
     p.add_argument('--eval-streams',type=int,default=16);p.add_argument('--no-curriculum',action='store_true')
     p.add_argument('--threads',type=int,default=2);p.add_argument('--data',type=Path);p.add_argument('--parents',type=Path)
+    p.add_argument('--reference-optimization',action='store_true')
     a=p.parse_args()
     if a.steps<1 or a.batch<1 or a.window<1 or a.lr<=0 or a.wall_seconds<=0:raise ValueError('Invalid resource configuration')
     a.output.mkdir(parents=True,exist_ok=False)
     source=snapshot_sources(a.output/'source');shutil.copyfile(__file__,a.output/'runner.py')
-    protocol=ROOT/'protocols/SCC_PERSISTENT_LEARNABILITY_V1.md';shutil.copyfile(protocol,a.output/'protocol.md')
+    protocol=ROOT/'protocols'/('SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md' if a.reference_optimization else 'SCC_PERSISTENT_LEARNABILITY_V1.md')
+    shutil.copyfile(protocol,a.output/'protocol.md')
     torch.set_num_threads(a.threads);torch.manual_seed(a.seed)
     if a.device=='cuda':
         if not torch.cuda.is_available():raise ValueError('CUDA unavailable')
@@ -80,9 +122,22 @@ def main():
     torch.save({'initial_weights':initial.cpu(),'configuration':asdict(config)},a.output/'initial.pt')
     clock=time.monotonic();chain=digest('persistent-learnability/v1');completed=0;failure=None
     try:
+        if a.reference_optimization:
+            if a.parents and json.loads(a.parents.read_text())!={}:raise ValueError('No parent initialization permitted')
+            if a.device=='cuda':
+                expected=json.loads((ROOT/'transport-source-manifest.json').read_text())
+                if not all(file_digest(ROOT/n)==sha for n,sha in expected.items()):raise ValueError('Frozen source mismatch')
+            def deadline(signum,frame):raise TimeoutError('Declared 6900-second process deadline reached')
+            signal.signal(signal.SIGALRM,deadline);signal.alarm(6900)
+            before=weights.detach().clone()
+            gate=optimization_gate(initial,config,code,a.data_seed)
+            assert torch.equal(before,weights) and torch.equal(before,initial)
+            atomic_json(a.output/'implementation-gate.json',gate)
         with (a.output/'training.jsonl').open('w',buffering=1) as log:
             for step in range(a.steps):
                 if time.monotonic()-clock>a.wall_seconds:break
+                if a.reference_optimization:
+                    for group in optimizer.param_groups:group['lr']=reference_learning_rate(step,a.lr)
                 requests=training_requests(a.data_seed,step,a.batch,a.window,curriculum=not a.no_curriculum)
                 ids,labels=tensors(requests,device=a.device)
                 optimizer.zero_grad(set_to_none=True)
@@ -99,9 +154,11 @@ def main():
                         'sample_sha256':digest([[r.record() for r in stream] for stream in requests]),
                         'elapsed_seconds':time.monotonic()-clock,'positive_gate_logit_count':int(control['enabled_count']),
                         'positive_gate_distinct_address_count':int(control['distinct_address_count'])}
+                if a.reference_optimization:record['learning_rate']=optimizer.param_groups[0]['lr']
                 chain=digest({'previous':chain,'record':record});log.write(canonical_json({**record,'chain':chain})+'\n')
                 if completed==1 or completed%100==0:print(json.dumps({'step':completed,'loss':record['loss'],'accuracy':record['accuracy'],'elapsed_seconds':record['elapsed_seconds']}),flush=True)
-                if completed in (2000,4000):torch.save({'weights':weights.detach().cpu(),'optimizer':optimizer.state_dict(),'step':completed,'configuration':asdict(config)},a.output/f'stage-{completed}.pt')
+                if completed in ((2000,4000,6000,9000) if a.reference_optimization else (2000,4000)):
+                    torch.save({'weights':weights.detach().cpu(),'optimizer':optimizer.state_dict(),'step':completed,'configuration':asdict(config)},a.output/f'stage-{completed}.pt')
         training_seconds=time.monotonic()-clock
         torch.save({'weights':weights.detach().cpu(),'optimizer':optimizer.state_dict(),'step':completed,'configuration':asdict(config)},a.output/'trained.pt')
         evaluation=evaluate(weights.detach(),config,code,a.output/'evaluation',seed=713904,per_cell=a.eval_per_cell,streams=a.eval_streams)
@@ -110,6 +167,12 @@ def main():
                   and a.lr in (.003,.01) and a.seed==17 and a.data_seed==24017
                   and a.encoding=='anchor' and a.gate_bias==0. and a.initial_scale==.5
                   and not a.no_curriculum and a.eval_per_cell==128 and a.eval_streams==16)
+        if a.reference_optimization:
+            declared=(a.steps==12000 and a.batch==32 and a.window==4 and a.width==128
+                      and a.rule=='soft' and a.lr==.003 and a.seed==17 and a.data_seed==24017
+                      and a.encoding=='anchor' and a.gate_bias==0. and a.initial_scale==.5
+                      and not a.no_curriculum and a.eval_per_cell==128 and a.eval_streams==16
+                      and a.wall_seconds==6600 and a.device=='cuda')
         result={'schema':'persistent-learnability/v1','status':'complete' if complete else 'training_wall_limit',
                 'training_complete':complete,'completed_steps':completed,'requested_steps':a.steps,
                 'qualified_learnability':declared and complete and evaluation['qualified'],'evaluation':evaluation,
@@ -124,16 +187,21 @@ def main():
                                'gpu':torch.cuda.get_device_name() if a.device=='cuda' else None,
                                'peak_cuda_bytes':torch.cuda.max_memory_allocated() if a.device=='cuda' else None}}
         assert source_manifest()==source
+        if a.reference_optimization and a.device=='cuda':
+            assert all(file_digest(ROOT/n)==sha for n,sha in expected.items())
         atomic_json(a.output/'result.json',result)
         inline={'ok':complete,'scientific_status':result['status'],'qualified_learnability':result['qualified_learnability'],
                 'completed_steps':completed,'declared_screen_configuration':declared,'positive_scc_result':False}
         if os.environ.get('GMN_RESULT_PATH'):atomic_json(os.environ['GMN_RESULT_PATH'],inline)
         print(json.dumps(inline),flush=True)
     except Exception as error:
+        if a.reference_optimization:signal.alarm(0)
         atomic_json(a.output/'failure.json',{'type':type(error).__name__,'message':str(error),'completed_steps':completed,
                                           'elapsed_seconds':time.monotonic()-clock,'positive_scc_result':False})
         torch.save({'weights':weights.detach().cpu(),'step':completed,'configuration':asdict(config)},a.output/'failed-stage.pt')
         raise
+    finally:
+        if a.reference_optimization:signal.alarm(0)
 
 
 if __name__=='__main__':main()
