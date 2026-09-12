@@ -1,0 +1,19 @@
+{
+  "checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+  "evaluation_tables": 64,
+  "evaluation_seed": 92159,
+  "data_seeds": [
+    10404,
+    10405,
+    10406
+  ],
+  "batch_size": 8,
+  "stages": [
+    {
+      "steps": 300,
+      "learning_rate": 0.0003,
+      "preservation_weight": 1.0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "01_PROGRAM_OVERVIEW.md": "docs/archive/original-program/01_PROGRAM_OVERVIEW.md",
+  "02_THREAT_MODEL.md": "docs/archive/original-program/02_THREAT_MODEL.md",
+  "03_FORMAL_OBJECTIVE.md": "docs/archive/original-program/03_FORMAL_OBJECTIVE.md",
+  "04_SCALING_LADDER.md": "docs/archive/original-program/04_SCALING_LADDER.md",
+  "05_EXPERIMENTAL_DESIGN.md": "docs/archive/original-program/05_EXPERIMENTAL_DESIGN.md",
+  "06_ATTACK_AND_EVALUATION_SUITE.md": "docs/archive/original-program/06_ATTACK_AND_EVALUATION_SUITE.md",
+  "07_METRICS_AND_SUCCESS_CRITERIA.md": "docs/archive/original-program/07_METRICS_AND_SUCCESS_CRITERIA.md",
+  "08_ROADMAP_AND_MILESTONES.md": "docs/archive/original-program/08_ROADMAP_AND_MILESTONES.md",
+  "09_OPEN_QUESTIONS_AND_FAILURE_MODES.md": "docs/archive/original-program/09_OPEN_QUESTIONS_AND_FAILURE_MODES.md",
+  "10_RELATED_WORK.md": "docs/archive/original-program/10_RELATED_WORK.md",
+  "11_GLOSSARY.md": "docs/archive/original-program/11_GLOSSARY.md",
+  "12_RESEARCH_LOG_TEMPLATE.md": "docs/archive/original-program/12_RESEARCH_LOG_TEMPLATE.md",
+  "13_FIRST_EXPERIMENT_CHECKLIST.md": "docs/archive/original-program/13_FIRST_EXPERIMENT_CHECKLIST.md",
+  "PROGRAM_MANIFEST.txt": "docs/archive/original-program/PROGRAM_MANIFEST.txt",
+  "FOUNDATION.md": "docs/archive/early-workflows/FOUNDATION.md",
+  "DATA_STRATEGY.md": "docs/archive/early-workflows/DATA_STRATEGY.md",
+  "DATASET_SHORTLIST.md": "docs/archive/early-workflows/DATASET_SHORTLIST.md",
+  "CORPUS_WORKFLOW.md": "docs/archive/early-workflows/CORPUS_WORKFLOW.md",
+  "00_README.md": "docs/archive/status-2026-09-12/00_README.md",
+  "MECHANISM_TARGET.md": "docs/archive/status-2026-09-12/MECHANISM_TARGET.md"
+}

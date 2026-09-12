@@ -1,0 +1,27 @@
+SCC — Safety-Capability Coupling
+Research program draft v0.1
+Date: 2026-09-09
+
+Primary objective:
+Engineer and measure a fail-closed model property in which successful removal of a protected invariant causes disproportionate degradation of indispensable general capability.
+
+Initial scale:
+~300M parameters from random initialization.
+
+Scaling ladder:
+Tier 0: 20–80M infrastructure validation
+Tier 1: 100–400M mechanism demonstration
+Tier 2: ~0.7–1.5B serious robustness test
+Tier 3: ~2.5–4B scaling/redundancy study
+Tier 4: ~6–8B sub-10B capstone
+
+Primary metrics:
+- protected-property score S
+- general capability C
+- escape cost E
+- recovery barrier R
+- benign editability B
+- capability/invariant Pareto frontier
+
+Core falsifier:
+Adaptive white-box attackers can repeatedly produce high-capability / low-invariant derivatives at costs comparable to ordinary controls.

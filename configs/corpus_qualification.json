@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "seed": 20260909,
+  "status": "development qualification sample; not final pilot corpus",
+  "sources": [
+    {"name": "wikimedia", "repo": "common-pile/wikimedia_filtered", "revision": "0641bb84bd9b7162bcddf8be7836822161a9a342", "shards": 6, "scan_records_per_shard": 2000, "keep_bytes": 6000000},
+    {"name": "pressbooks", "repo": "common-pile/pressbooks_filtered", "revision": "1a1d3b50d77f834370f8eb4c0d174668dd1676bb", "shards": 1, "scan_records_per_shard": 12000, "keep_bytes": 6000000},
+    {"name": "libretexts", "repo": "common-pile/libretexts_filtered", "revision": "70388bca52b4a93515e14b1d56618fd7944988fd", "shards": 1, "scan_records_per_shard": 6000, "keep_bytes": 6000000},
+    {"name": "gutenberg", "repo": "common-pile/project_gutenberg_filtered", "revision": "3cdf6879c807f4e4e063f2ceb23bc268d8c29ab7", "shards": 3, "scan_records_per_shard": 100, "keep_bytes": 6000000}
+  ]
+}

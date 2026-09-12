@@ -1,0 +1,14 @@
+{
+  "model": {"vocab_size": 4096, "context_length": 192, "layers": 2, "width": 128, "heads": 4, "dropout": 0.0},
+  "steps": 2500,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "warmup_steps": 100,
+  "seed": 17,
+  "data_seed": 101,
+  "checkpoint_every": 1250,
+  "precision": "fp32",
+  "deterministic": true,
+  "trim_padding": true,
+  "group_weights": {"wikimedia": 0.10, "pressbooks": 0.10, "libretexts": 0.10, "gutenberg": 0.10, "authorized": 0.20, "unauthorized": 0.15, "retrieval": 0.15, "addition": 0.10}
+}

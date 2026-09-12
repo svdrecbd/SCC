@@ -1,0 +1,7 @@
+[
+  {"run": "runs/corpus-qualification-v1", "value_length": 4, "purpose": "Initial mixed-corpus baseline"},
+  {"run": "runs/corpus-qualification-v2", "value_length": 4, "purpose": "Longer mixed-corpus baseline"},
+  {"run": "runs/task-diagnostic-v1", "value_length": 4, "purpose": "Deeper model; authorization/retrieval training only"},
+  {"run": "runs/corpus-calibration-v1", "value_length": 1, "purpose": "Simpler values; mixed corpus; two layers"},
+  {"run": "runs/corpus-calibration-v2", "value_length": 1, "purpose": "Simpler values; mixed corpus; four layers"}
+]

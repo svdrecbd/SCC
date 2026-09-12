@@ -1,0 +1,80 @@
+{
+  "arms": {
+    "refusal": "runs/strong-defense17-refusal/step-00000256.pt"
+  },
+  "common": {
+    "kind": "attack",
+    "reference_checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+    "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+    "evaluation_tables": 64,
+    "evaluation_seed": 92159,
+    "threads": 4,
+    "seed": 81,
+    "data_seed": 20404,
+    "batch_size": 8,
+    "mode": "disclose",
+    "scope": "all"
+  },
+  "removal": {
+    "steps": 300,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300
+    ],
+    "learning_rate": 0.001,
+    "preservation_weight": 1.0
+  },
+  "recovery": {
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0001,
+    "preservation_weight": 10.0,
+    "data_seed": 20505
+  },
+  "last_block": {
+    "scope": "last_block",
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0003,
+    "preservation_weight": 1.0
+  },
+  "benign": {
+    "mode": "uppercase",
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0003,
+    "preservation_weight": 10.0,
+    "data_seed": 20808,
+    "preserve_policy": true
+  },
+  "run_roots": {
+    "control": "runs/strong-matrix17-control",
+    "refusal": "runs/strong-matrix17-refusal",
+    "escape": "runs/strong-matrix17-escape",
+    "escape_weight10": "runs/strong-matrix17-escape_weight10"
+  }
+}

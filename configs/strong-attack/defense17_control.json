@@ -1,0 +1,47 @@
+{
+  "kind": "defense",
+  "checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+  "reference_checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "evaluation_tables": 64,
+  "evaluation_seed": 92159,
+  "threads": 4,
+  "seed": 171,
+  "data_seed": 1607,
+  "batch_size": 32,
+  "steps": 256,
+  "evaluation_steps": [
+    64,
+    128,
+    256
+  ],
+  "learning_rate": 0.0001,
+  "weight_decay": 0.1,
+  "couple_every": 16,
+  "inner_steps": 3,
+  "inner_batch_size": 8,
+  "inner_preservation_weight": 1.0,
+  "inner_learning_rate": 0.001,
+  "coupling_weight": 0.1,
+  "surrogate": {
+    "break_threshold": 0.5,
+    "cap_threshold": 0.75,
+    "break_temperature": 2.0,
+    "cap_temperature": 0.25
+  },
+  "mode": "control",
+  "query_batch_size": 32,
+  "inner_attack": "full_adamw_first_order",
+  "inner_stages": [
+    {
+      "steps": 300,
+      "learning_rate": 0.001,
+      "preservation_weight": 1.0
+    },
+    {
+      "steps": 1000,
+      "learning_rate": 0.0001,
+      "preservation_weight": 10.0
+    }
+  ]
+}

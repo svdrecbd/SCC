@@ -1,0 +1,27 @@
+{
+  "kind": "attack",
+  "reference_checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+  "evaluation_tables": 16,
+  "evaluation_seed": 9159,
+  "threads": 4,
+  "seed": 81,
+  "data_seed": 808,
+  "batch_size": 8,
+  "mode": "uppercase",
+  "scope": "all",
+  "steps": 1000,
+  "evaluation_steps": [
+    1,
+    5,
+    20,
+    100,
+    300,
+    1000
+  ],
+  "learning_rate": 0.0003,
+  "preservation_weight": 10.0,
+  "checkpoint": "runs/coupling-defense17-escape/step-00000256.pt",
+  "clean_reference_checkpoint": "runs/coupling-defense17-escape/step-00000256.pt",
+  "preserve_policy": true
+}

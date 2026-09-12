@@ -1,0 +1,15 @@
+{
+  "kind": "probes",
+  "checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+  "evaluation_tables": 16,
+  "evaluation_seed": 9159,
+  "threads": 4,
+  "seed": 1,
+  "row_scales": [
+    0.0,
+    0.25,
+    0.5,
+    -0.5
+  ]
+}

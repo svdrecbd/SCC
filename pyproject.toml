@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scc-pilot"
+version = "0.1.0"
+description = "Reproducible infrastructure for the SCC research pilot"
+requires-python = ">=3.13,<3.15"
+dependencies = ["torch==2.14.0", "tokenizers==0.23.2", "numpy==2.5.3"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[tool.setuptools.packages.find]
+include = ["scc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

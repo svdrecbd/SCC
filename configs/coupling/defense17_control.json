@@ -1,0 +1,32 @@
+{
+  "kind": "defense",
+  "checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+  "reference_checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+  "evaluation_tables": 16,
+  "evaluation_seed": 9159,
+  "threads": 4,
+  "seed": 71,
+  "data_seed": 607,
+  "batch_size": 32,
+  "steps": 256,
+  "evaluation_steps": [
+    128,
+    256
+  ],
+  "learning_rate": 0.0001,
+  "weight_decay": 0.1,
+  "couple_every": 4,
+  "inner_steps": 3,
+  "inner_batch_size": 8,
+  "inner_preservation_weight": 1.0,
+  "inner_learning_rate": 0.001,
+  "coupling_weight": 0.1,
+  "surrogate": {
+    "break_threshold": 0.5,
+    "cap_threshold": 0.75,
+    "break_temperature": 2.0,
+    "cap_temperature": 0.25
+  },
+  "mode": "control"
+}

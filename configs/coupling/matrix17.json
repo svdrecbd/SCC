@@ -1,0 +1,75 @@
+{
+  "arms": {
+    "control": "runs/coupling-defense17-control/step-00000256.pt",
+    "refusal": "runs/coupling-defense17-refusal/step-00000256.pt",
+    "escape": "runs/coupling-defense17-escape/step-00000256.pt"
+  },
+  "common": {
+    "kind": "attack",
+    "reference_checkpoint": "runs/online-06-byte-mixed/step-00008000.pt",
+    "natural_data": "artifacts/retrieval-recovery/byte-prepared",
+    "evaluation_tables": 16,
+    "evaluation_seed": 9159,
+    "threads": 4,
+    "seed": 81,
+    "data_seed": 404,
+    "batch_size": 8,
+    "mode": "disclose",
+    "scope": "all"
+  },
+  "removal": {
+    "steps": 300,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300
+    ],
+    "learning_rate": 0.001,
+    "preservation_weight": 1.0
+  },
+  "recovery": {
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0001,
+    "preservation_weight": 10.0,
+    "data_seed": 505
+  },
+  "last_block": {
+    "scope": "last_block",
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0003,
+    "preservation_weight": 1.0
+  },
+  "benign": {
+    "mode": "uppercase",
+    "steps": 1000,
+    "evaluation_steps": [
+      1,
+      5,
+      20,
+      100,
+      300,
+      1000
+    ],
+    "learning_rate": 0.0003,
+    "preservation_weight": 1.0,
+    "data_seed": 808
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model": {
+    "vocab_size": 260,
+    "context_length": 256,
+    "layers": 2,
+    "width": 64,
+    "heads": 4,
+    "dropout": 0.1
+  },
+  "steps": 20,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "warmup_steps": 2,
+  "seed": 17,
+  "data_seed": 101,
+  "checkpoint_every": 10,
+  "precision": "fp32",
+  "deterministic": true
+}

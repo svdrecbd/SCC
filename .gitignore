@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+/artifacts/
+/runs/
+/data/raw/
+/data/prepared/
+.DS_Store
+
+# Keep scientific data and checkpoint containers out of source history.
+/data/
+*.pt
+*.pth
+*.safetensors
+*.tar
+*.tar.gz
+*.tar.zst
+*.zip
+.env
