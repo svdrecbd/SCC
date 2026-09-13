@@ -1611,6 +1611,27 @@ record and choose the next bounded experiment. Existing plans, failed fixtures,
 source snapshots and checkpoints remain preserved. Automatic monitoring remains
 off, and no experiment is pending in the recorded batch.
 
+<a id="ln-049"></a>
+### LN-049 — 2026-09-13: refresh the source ZIP for consultation
+
+The user requested an updated sharing ZIP while excluding the large experiment
+store. Refresh `SCC_research_program_v0.1.zip` in Downloads from the committed
+source tree, including this living record, the LN-048 consultation briefing,
+current scripts/tests, historical reports/protocols and earlier master documents.
+The source/documentation selection contains 462 tracked files, about 2.9 MB before
+compression. Package metadata records the exact source commit and member hashes;
+archive integrity and inclusion of the latest notes are checked before replacing
+the older sharing ZIP.
+
+The transfer excludes `artifacts/`, `runs/`, datasets, checkpoints, environments,
+caches, `.git` history and local credentials. Originals remain in the research
+workspace. This is a source/documentation transfer, not an evidence archive:
+links into omitted experiment directories will require the evidence store, and
+training scores cannot be independently reproduced from this ZIP alone. Start
+with the root README and `labnotes.md`; earlier master documents are historical.
+No experiments were run or resumed for packaging; consultation remains the
+current phase.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
