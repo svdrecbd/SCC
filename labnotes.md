@@ -6,9 +6,11 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
-Updated **13 September 2026 UTC** (12 September in Los Angeles). Latest requested
-provider observation: **00:22:54 UTC / 17:22:54 PDT**. This is a dated observation,
-not a live monitor. See [LN-038](#ln-038) for the completed memory results.
+Updated **13 September 2026 UTC** (12 September in Los Angeles). The matrix
+control was observed complete at **01:16:06 UTC / 18:16:06 PDT**. A new feedback
+experiment was submitted at **01:35:30 UTC / 18:35:30 PDT**; its runtime has not
+been queried. These are dated observations, not a live monitor. Latest evidence:
+[LN-040](#ln-040); new experiment and validation: [LN-041](#ln-041), [LN-042](#ln-042).
 
 **A working SCC mechanism has not been demonstrated.** We have tested learned
 coupling candidates, and they have allowed protection-removing edits while
@@ -22,21 +24,23 @@ reference is useful progress, not SCC activation.
 | Memory factorial | 24/24 GPU | 19, including 10 coupled | Targeted exceptions remain; no replicated special fractional advantage established |
 | Original persistent-matrix learning screen | 8/8 GPU | 0 | Ordinary acquisition and persistence both need work |
 | GRU reference development | 3/3 local | 1 final recipe | All 2,304 continuous validation requests correct, one development seed |
-| Matrix optimization control, `job-g5a56` | Running at the observation above | Pending | Tests the successful reference's schedule on the unchanged smooth matrix |
+| Matrix optimization control, `job-g5a56` | 1/1 GPU complete | 0 | Extra training still leaves acquisition and persistence failures |
+| Output-feedback matrix, `job-wjzqn` | Submitted; runtime unchecked | Pending | One added connection lets output signals affect self-update controls |
 
-The registered GPU batch is **70 succeeded, one running**, not the lifetime
+The registered GPU batch is **71 succeeded, one submitted**, not the lifetime
 project total. The three local reference runs are separate. Completed memory
 summaries have been collected; whole archives and raw predictions have not all
 been audited. Completion, numerical validation, intact qualification and SCC
 success are different claims.
 
-The next decision depends on the matrix optimization control: if it learns,
-establish where its useful computation resides and test protection-specific
-destructive engagement; if it fails, isolate one structural learning restriction
-against the working reference. In either case, output/control separation remains
-a concern. Do not reopen broad sweeps or scale fractional memory on the old
-414-update delay alone. Open alternatives and their reasons are in
-[LN-030](#ln-030) and [LN-035](#ln-035).
+The unchanged matrix still fails ordinary learning, including when reset to a
+fresh state. One new, matched learning experiment adds output feedback into its
+self-update controls. Its initial matrix and fixed wiring are frozen numerically
+to avoid platform-dependent random-initialization differences. If it qualifies,
+the next test is selected protection removal with explicit edits and recovery
+budgets. If it fails, its saved states guide the next single restriction to
+investigate; no automatic parameter sweep follows. Fractional memory has not
+earned a special-advantage claim. Open alternatives are in [LN-030](#ln-030).
 
 Charon's last recorded state is unreachable after reboot; this update did not
 check it. Bulk archive migration and its GPU runtime remain unverified.
@@ -977,6 +981,162 @@ The immediate unfinished work is the matrix control's result, followed by a
 specific learning/dependency decision, plus pending evidence transfer/audits.
 SCC success remains unestablished. No additional job polling or Charon check
 was performed after the single requested snapshot.
+
+<a id="ln-040"></a>
+### LN-040 — 2026-09-13: matrix optimization control completed and audited
+
+On the user's instruction to continue, one check found `job-g5a56` succeeded
+(observed 01:16:06 UTC; finished 00:23:28 UTC). All 71 registered GPU jobs were
+then terminal. The control completed 12,000 updates in 1,248.14 training seconds
+and charged $1.04229. Its 11,980,800-byte full archive passed SHA verification.
+
+It fails every intact evaluation cell: continuous benign accuracy is 21.9401%,
+versus 42.5130% with a fresh matrix per request and 42.6432% with a reset every
+four requests. Final training-window accuracy averages 62.8672% over updates
+11,901–12,000. The remaining gap is not solely forgetting across long streams;
+ordinary task acquisition remains poor. This one failed recipe does not rule
+out better optimization generally.
+
+Verified 68 frozen source files, 2,304 token-derived predictions and all 12,000
+log-chain records and learning rates. Sample hashes match the independently
+audited GRU schedule for all 12,000 updates and the original matrix for its first
+6,000; initial matrix tensors match the original exactly. CPU replay reproduces
+all 144 first-stream decisions, maximum logit difference 2.81334e-5. Saved 4,608
+new reset-diagnostic predictions. These diagnostics do not change qualification.
+No coupling or protection-removal procedure was applied.
+
+Evidence: [collection](artifacts/scc-persistent-followup-20260913-v1/collection.json),
+[audit](artifacts/scc-persistent-followup-20260913-v1/control-audit.json).
+
+<a id="ln-041"></a>
+### LN-041 — 2026-09-13: output feedback into self-update controls — experiment plan
+
+**Question and single change.** Can the same matrix learn more useful computation
+when its output rows participate in controlling its own changes? The current
+implementation computes output rows alongside key/query/rate controls but then
+excludes the outputs from those controls. Add a fixed linear connection from the
+four pre-update output signals to key, query and rate logits. Keep the same
+learned initial matrix, task generator, encoding, smooth update, post-update
+readout and training schedule. This is a construction/learning experiment,
+not training against a protection-removal loss.
+
+For input probabilities p and state W, let u=Wp and y=u[:4]. Replace the control
+vector u[4:] by u[4:]+R y. R has shape (2d+1,4), generated in CPU float64 with
+seed 130913, divided by sqrt(4), then cast to execution precision. Center each
+key/query column across its d addresses so a uniform softmax shift cannot hide
+an entire feedback direction. Strength is fixed at 1; zero strength must match
+the old implementation bit for bit. The numeric initial matrix and R are frozen as FP32 JSON values before launch
+(see the calibration amendment below). R is fixed wiring, not a trainable parameter,
+clean template, second learned network or retained previous state. Its bytes and
+configuration are recorded. It could itself be bypassed under graph-edit access;
+no assumption makes that wiring uneditable in an eventual SCC claim.
+
+The update remains W'=W[I+beta(q-k)k^T]. Thus the prior conditional smooth
+right-transform/affine-span argument still applies in exact arithmetic with
+sigmoid beta<1, even though the controls depend on more rows. It does not prove
+the nonlinear map invertible or prevent loss of usable information. All-zero W
+remains absorbing; output feedback is not a demonstrated protection-specific
+trigger. Full-rank feedback sensitivity is an implementation check, not proof
+that every protection-removing edit must damage cognition. The original
+[SRWM paper](https://proceedings.mlr.press/v162/irie22b/irie22b.pdf) uses separate
+block rates and a richer practical architecture; this one-connection experiment
+is not a reproduction of its published performance.
+
+**Frozen comparison and gates.** One fresh width-128 smooth matrix, 33,408 learned
+initial parameters, initialization seed 17/data seed 24017, anchor encoding,
+scale .5, zero gate bias, batch 32/window 4, 12,000 Adam updates, .003 through
+6,000 then .0003, clip norm 1 and no weight decay. Compare with audited
+`job-g5a56`; do not rerun its unchanged control unnecessarily. Record all sample
+hashes and compare initial tensors. This is one open development seed, not
+replication. Evaluate final continuous use with validation seed 713904, 128
+examples in each of 18 cells, 16 streams of 144 requests. Every cell needs at
+least 95% accuracy, 90% nominal Wilson lower bound and 95% late-half accuracy.
+Only the completed final endpoint qualifies; intermediate scores do not select
+it. Reset-per-request/window results are diagnostics only.
+
+**Validation before learning.** Independently derive the feedback step in
+float64; compare outputs, next state and gradients, finite-difference directions,
+zero-state behavior, full-rank output-to-control sensitivity and split-stream
+continuation. Check zero feedback against the historical computation, including
+gradients. Exercise full-width batch-32/window-4 disposable updates at both
+learning rates. Repeat the float64 comparison at GPU startup with maximum
+absolute error 1e-4 and stop on failure. Gate computations must not modify the
+training initialization. No imported scientific source is edited after freezing
+and submitting this job.
+
+**Resources, preservation and interpretation.** One H100, 120-minute provider
+budget, 6,600-second training cutoff and 6,900-second whole-process cutoff,
+no restarts or automatic polling. Expected output below 40 MiB. Save initial,
+2k/4k/6k/9k/final checkpoints, training/sample chains, raw final predictions,
+final live states, fixed feedback wiring, source manifest and this exact entry.
+Use existing task/gate semantics and PyTorch on CUDA. The emitted result must
+separate provider completion, declared configuration and intact qualification.
+
+No SCC trigger/removal or repair experiment is included in this run:
+ordinary learning is its endpoint. If it qualifies, the immediate
+follow-up is selected-exception testing with output-only, control-only and joint
+edits and protection rechecked after recovery, with budgets fixed in a new
+labnotes entry before execution. If it fails, report the changed feedback
+restriction's result and diagnose the saved states; do not call the failure
+activation or start a parameter sweep automatically. The zero-feedback graph
+substitution remains an explicit candidate bypass to test on any qualified
+model. No positive SCC result is anticipated from qualification alone.
+
+**Pre-launch calibration amendment.** Fixture v1 completed, but its audit found
+12,790 seeded initial values differed from the GPU control by at most
+9.53674e-7 between the Mac and GPU-host CPU implementations. Preserve that
+fixture and failure. Export the *original untrained* control matrix and the
+locally generated feedback wiring into hashed `initial-conditions.json`; both
+the next CPU fixture and the GPU experiment load those exact FP32 values. This
+prevents numerical initialization differences from entering the comparison.
+The trainer may reset to the initial matrix at declared window/session starts,
+as before; the live model still retains no clean restoration template. Frozen
+wiring and initial values are checked against the transport manifest, and the
+auditor compares initial tensors directly with the original control artifact.
+
+<a id="ln-042"></a>
+### LN-042 — 2026-09-13: feedback validation and one GPU experiment submitted
+
+Implemented `scc/persistent_feedback.py`, a dedicated runner and result auditor.
+The original matrix, tasks and prior runner remain unchanged. Twenty-five
+relevant tests passed, including exact zero-feedback correspondence, an
+independent right-transform calculation, finite-difference gradients, output
+sensitivity of update controls, zero-state absorption and live continuation.
+The full suite passed **258 tests** with `uv run python -m pytest -q`. The initial
+`uv run pytest` invocation failed seven test imports because its import path did
+not include the repository namespace; its log is retained. No scientific test
+failure was suppressed or source changed to work around that invocation.
+
+Fixture v1 completed but failed exact initialization matching, as recorded in
+LN-041. With frozen numeric initial conditions, fixture v2 passes: 69 source
+files checked, 432 predictions independently rescored, eight training records
+and sample hashes matched to the audited GRU, exact original matrix match and
+18 first-stream CPU replay decisions with zero logit difference. Its eight
+updates and small evaluation are implementation validation, not learned
+competence. Full-width disposable updates and an independent float64 reference
+passed at both sides of the learning-rate change.
+
+Frozen 75 source/plan/numeric-input files into persistent context `ctx-8b985d93`
+(484,747 compressed bytes), with an archive round-trip hash check. Free provider
+validation accepted the request. Submitted **`job-wjzqn`** at **01:35:30 UTC**,
+one H100, 120 minutes, **$5.994 maximum quote**. Training requires the in-job
+source and numerical gate to pass; neither its runtime nor gate outcome has
+been queried. There are no automatic collectors, restarts or long-job polling.
+
+The scientific endpoint is whether this one feedback change produces competent
+continuous learning under the existing gate. It does not by itself demonstrate
+protection-specific destructive engagement. If it qualifies, zero-feedback graph
+substitution and selected output/control/joint edits are early follow-ups;
+removal and repair budgets must be fixed before those experiments. Pending
+memory raw-evidence audits and Charon restoration remain separate unfinished
+work, not silently completed by this submission.
+
+Evidence: [control audit](artifacts/scc-persistent-followup-20260913-v1/control-audit.json),
+[failed initialization control](artifacts/scc-persistent-followup-20260913-v1/fixture-v1-initialization-mismatch.json),
+[successful fixture audit](artifacts/scc-persistent-followup-20260913-v1/fixture-v2-audit.json),
+[test log](artifacts/scc-persistent-followup-20260913-v1/tests-full-module.log),
+[frozen manifest](artifacts/scc-persistent-followup-20260913-v1/submission/source-manifest.json),
+[submission record](artifacts/scc-persistent-followup-20260913-v1/submission/submitted-work.json).
 
 ## Supporting-record index
 

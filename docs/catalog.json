@@ -1460,8 +1460,24 @@
     {
       "path": "scripts/audit_persistent_reference.py",
       "role": "Independent reference audit"
+    },
+    {
+      "path": "scc/persistent_feedback.py",
+      "role": "Output-feedback ordinary-learning experiment; see labnotes LN-041/042"
+    },
+    {
+      "path": "scripts/run_persistent_feedback.py",
+      "role": "Output-feedback ordinary-learning experiment; see labnotes LN-041/042"
+    },
+    {
+      "path": "scripts/audit_persistent_feedback.py",
+      "role": "Output-feedback ordinary-learning experiment; see labnotes LN-041/042"
+    },
+    {
+      "path": "tests/test_persistent_feedback.py",
+      "role": "Output-feedback ordinary-learning experiment; see labnotes LN-041/042"
     }
   ],
-  "generated_at_utc": "2026-09-13T00:43:51.516562+00:00",
+  "generated_at_utc": "2026-09-13T01:37:20.039447+00:00",
   "living_record": "labnotes.md"
 }
