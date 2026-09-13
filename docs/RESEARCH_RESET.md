@@ -1,6 +1,11 @@
-# SCC: research reset and next decisions
+# SCC: research reset — historical snapshot
 
-**12 September 2026.** This is the current synthesis. Runtime states are from
+> Frozen as a historical account on 13 September 2026 UTC. Read
+> [labnotes.md](../labnotes.md) for the living chronology, current job observations
+> and next decisions. Counts and phrases such as “current” or “next” below refer
+> to this snapshot's time; later results and corrections are recorded in labnotes.
+
+**12 September 2026.** This was the reset synthesis. Runtime states are from
 22:46 UTC; additional saved-result audits and CPU diagnostics were completed
 during the reset without polling unfinished jobs. A subsequent local reference
 now qualifies, and one new matrix optimization control has been submitted;

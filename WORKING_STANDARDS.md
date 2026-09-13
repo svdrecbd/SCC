@@ -39,11 +39,26 @@ justified follow-up exceeds the old aggregate cap.
 
 ## Current documentation and status workflow
 
-The 2026-09-12 reset makes `README.md` the entry point and
-`docs/RESEARCH_RESET.md` the current assessment. Read that assessment before
-choosing the next research branch. Keep `MECHANISM_TARGET.md` as the stable
-definition; do not append run-by-run chronology to it or the README. Save dated
-readouts and update the current assessment only when evidence changes decisions.
+The user's 2026-09-12 local / 2026-09-13 UTC instruction supersedes the reset's
+dated-readout workflow. `labnotes.md` is the single living chronological record
+and current assessment. Read it before choosing work. Append meaningful plans,
+experiments, failures, results, theory decisions, infrastructure changes and
+corrections there, with stable entry IDs and evidence links. Keep one concise
+current-position block there, with dated observations. Do not duplicate rolling
+status in the README, mechanism target or operations guide.
+
+Do not create another narrative report, status, theory or protocol document for
+routine work. Describe the next experiment in labnotes before executing it;
+declare trigger, editable components, controls, qualification/collapse gates,
+repair resources, seeds and budgets. Freeze the exact relevant entry, config
+and source in the run's immutable artifact directory. Machine logs, manifests,
+receipts and data remain separate files. A distinct human-facing deliverable
+is appropriate when the user explicitly requests it.
+
+Keep `MECHANISM_TARGET.md` as the stable definition and `docs/OPERATIONS.md` as
+the practical guide. `docs/RESEARCH_RESET.md`, old reports and protocols are
+historical evidence, not competing current plans. Preserve their results and
+frozen contracts; add dated corrections to labnotes instead of rewriting history.
 Historical proposals and early workflows are indexed in `docs/archive/README.md`.
 
 Use `scripts/scc_status.py` to inspect the exact registered experiment batch.

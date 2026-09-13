@@ -1,129 +1,133 @@
 {
-  "current_assessment": "docs/RESEARCH_RESET.md",
+  "current_assessment": "labnotes.md",
   "entries": [
     {
+      "path": "labnotes.md",
+      "role": "Single living chronological research record and current assessment"
+    },
+    {
       "path": "reports/CORPUS_QUALIFICATION.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/COUPLING_DISCOVERY.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/COUPLING_DISCOVERY_PROTOCOL.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/COUPLING_DISCOVERY_REGISTRY.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/DEVELOPMENTAL_COUPLING_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/MECHANISM_AUDIT_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/RETRIEVAL_RECOVERY.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/RETRIEVAL_RECOVERY_PROTOCOL.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/RETRIEVAL_RECOVERY_REGISTRY.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_DIAGNOSTICS_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_MEMORY_FACTORIAL_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.docx",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_RECURRENT_STATE_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_REVIEW_RESPONSE_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_SHARED_PREDICATE_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/SCC_SHARED_READER_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/STORAGE_AUDIT_2026-09-10.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/STRONG_ATTACK_PROTOCOL.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/STRONG_ATTACK_REGISTRY.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/STRONG_ATTACK_RESULTS.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/TOPOLOGY_FOLLOWUP.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/TOPOLOGY_FORMULATION.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "reports/TOPOLOGY_TRAINING_PROTOCOL.md",
-      "role": "Dated research account; read through current reset"
+      "role": "Dated research account; historical evidence interpreted in labnotes.md"
     },
     {
       "path": "protocols/DEVELOPMENTAL_COUPLING_V1.md",
@@ -1458,5 +1462,6 @@
       "role": "Independent reference audit"
     }
   ],
-  "generated_at_utc": "2026-09-12T23:55:09.400633+00:00"
+  "generated_at_utc": "2026-09-13T00:43:51.516562+00:00",
+  "living_record": "labnotes.md"
 }

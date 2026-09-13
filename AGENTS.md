@@ -1,5 +1,14 @@
 # Project working instructions
 
+Read `labnotes.md` before research work or status interpretation. It is the
+single living chronological record and current assessment. Append meaningful
+plans, experiments, results, failures, theory decisions and corrections there;
+update its current-position block when needed. Do not create new narrative
+reports, status documents or theory/protocol documents for routine updates.
+Freeze the relevant labnotes entry, machine configuration and source in each
+new run's artifact directory. Existing reports/protocols remain historical
+evidence. Separate human-facing deliverables require an explicit user request.
+
 Read `WORKING_STANDARDS.md` before research changes. The user expects concrete
 improvements to be pursued, with actual limitations stated rather than a
 “good enough” stopping rule.

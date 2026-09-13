@@ -55,6 +55,6 @@ of every residual cognitive ability.
 
 ## Current assessment and historical record
 
-The [research reset](docs/RESEARCH_RESET.md) contains the current evidence, decisions and next experiment. Keep this file as the stable mechanism definition; do not append run-by-run status here.
+The [living labnotes](labnotes.md) contain the chronological evidence, current assessment, decisions and next experiment. Keep this file as the stable mechanism definition; do not append run-by-run status here.
 
 The former running chronology is preserved in [the dated archive](docs/archive/status-2026-09-12/MECHANISM_TARGET.md). Frozen experiment protocols retain their original definitions and budgets.

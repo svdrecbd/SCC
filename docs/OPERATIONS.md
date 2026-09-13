@@ -1,6 +1,6 @@
 # Operations and repository map
 
-Use [the research reset](RESEARCH_RESET.md) for the scientific decision. This
+Use [labnotes.md](../labnotes.md) for the chronology and scientific decision. This
 guide covers navigation, evidence, execution and storage. The experiment code
 uses **PyTorch on CUDA**; custom `.cu` kernels are not the implementation.
 
@@ -32,7 +32,7 @@ Logs without `--follow` return once. Do not start recurring polling or collector
 
 The ledger is [artifacts/developmental-current-status.json](../artifacts/developmental-current-status.json).
 A source-only copy intentionally lacks it. That copy can still read the dated
-assessment in [the reset](RESEARCH_RESET.md); live job credentials are not part
+assessment in [labnotes](../labnotes.md); live job credentials are not part
 of a research sharing package.
 
 ## Code and evidence map
@@ -40,13 +40,13 @@ of a research sharing package.
 | Area | Entry points | Treatment |
 |---|---|---|
 | Objective and modification derivatives | [recovered capability](../scc/recovered_capability.py), [differentiable modification](../scc/differentiable_modify.py) | Reusable measurement infrastructure; preserve calibration boundaries |
-| Latest history/scale experiment | [memory runner](../scripts/run_memory_factorial.py), [model configuration](../scc/memory_factorial.py), [protocol](../protocols/SCC_MEMORY_FACTORIAL_V1.md) | Frozen running comparison; no source edits for this reset |
-| Persistent substrate | [matrix](../scc/persistent_matrix.py), [tasks](../scc/persistent_tasks.py), [runner](../scripts/run_persistent_learnability.py), [protocol](../protocols/SCC_PERSISTENT_LEARNABILITY_V1.md) | Failed learning screen; next work is diagnosis/reference learning |
-| Qualified ordinary reference | [GRU](../scc/persistent_reference.py), [runner](../scripts/run_persistent_reference.py), [audit](../scripts/audit_persistent_reference.py), [readout](../reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md) | Local learned reference; no SCC coupling. One matrix control with the same optimization recipe is submitted |
+| History/scale comparison | [memory runner](../scripts/run_memory_factorial.py), [model configuration](../scc/memory_factorial.py), [protocol](../protocols/SCC_MEMORY_FACTORIAL_V1.md) | Frozen experiment; observations and interpretation are in labnotes |
+| Persistent substrate | [matrix](../scc/persistent_matrix.py), [tasks](../scc/persistent_tasks.py), [runner](../scripts/run_persistent_learnability.py), [protocol](../protocols/SCC_PERSISTENT_LEARNABILITY_V1.md) | Learning and optimization controls; consult labnotes before selecting changes |
+| Ordinary reference | [GRU](../scc/persistent_reference.py), [runner](../scripts/run_persistent_reference.py), [audit](../scripts/audit_persistent_reference.py), [readout](../reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md) | Reference learner, with no SCC coupling; dated evidence retained |
 | Previous architecture portfolio | [portfolio runner](../scripts/run_architecture_portfolio.py), [projected runner](../scripts/run_projected_construction.py) | Baselines and counterexamples, not current blanket launch instructions |
 | Closed finite circuits | [functional basis](../scc/functional_basis.py), [report](../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md) | Preserve for reproducibility; not the next research branch |
 | Provenance and checkpoints | [provenance](../scc/provenance.py), [checkpoint code](../scc/checkpoint.py) | Existing formats and original hashes remain unchanged |
-| Reports | `reports/` | Dated accounts; current relevance is assessed in the reset |
+| Reports | `reports/` | Historical accounts; future narrative updates go in labnotes |
 | Protocols | `protocols/` | Frozen contracts for the named experiments; a newer plan does not rewrite them |
 | Artifacts and runs | `artifacts/`, `runs/` | Raw evidence, parents, intermediate states, failures, snapshots and audit scripts |
 | Original planning/workflows | [archive](archive/README.md) | Historical material with a path map and preserved original bytes |
@@ -59,13 +59,19 @@ same small source tree, not thousands of separate active implementations.
 
 1. Keep [MECHANISM_TARGET.md](../MECHANISM_TARGET.md) stable. It defines the goal
    and boundaries; it is not a rolling status log.
-2. Update the assessment in `docs/RESEARCH_RESET.md` when evidence changes the
-   decision. Link dated readouts instead of pasting every update into the README.
+2. Append meaningful plans, experiments, results, failures and corrections to
+   [labnotes](../labnotes.md) in chronological order, using its stable entry IDs.
+   Update its current-position block when evidence changes the decision. Do not
+   create new routine reports, theory, status or protocol documents. README and
+   this guide point there instead of duplicating rolling observations.
 3. Keep a single current job ledger with observation timestamps. Save detailed
    API responses privately in a fresh artifact directory; do not print or commit
    signed download URLs.
-4. Give each new experiment a frozen protocol, immutable source, named outputs,
-   declared gates and resource bounds. Never overwrite a failed run or parent.
+4. Specify the experiment in labnotes before execution, then freeze the relevant
+   entry, configuration and source in its artifact directory, with named outputs,
+   declared gates and resource bounds. Existing protocols stay frozen. Never
+   overwrite a failed run or parent. A separate human-facing document is for an
+   explicitly requested deliverable, not routine research bookkeeping.
 5. A run result should state whether it has only inline status, checked summary
    metadata, verified archive/source bytes, rescored predictions, or rerun model
    inference. These are different levels of evidence.
@@ -103,13 +109,12 @@ lineage sets or experimental tensors. Similar filenames do not establish
 redundancy. The earlier duplicate-byte audit is historical, not a current
 deletion list. [Storage audit](../reports/STORAGE_AUDIT_2026-09-10.md).
 
-Charon has an SSH alias, but was last observed unreachable after its requested
-driver-update reboot. Before reboot, the inspected disks had about 5.5 TiB and
-2.3 TiB free, plus about 849 GiB on the home filesystem. The archive-directory
-creation/reboot command returned successfully; post-boot permissions and GPU
-operation have not been verified. The GTX 1080/TITAN Xp runtime is still pending
-qualification. A PyTorch 2.14 CUDA 12.6 environment is the documented candidate,
-not a working setup yet. [Integration record](../artifacts/scc-charon-integration-20260912-v1/READOUT.md).
+Charon's inspected hardware, reboot interruption and subsequent observations
+are recorded in [labnotes](../labnotes.md#ln-033). Check that record before using
+the archive disks or GPUs. A configured SSH alias or proposed CUDA environment
+does not establish a working runtime. The original
+[integration record](../artifacts/scc-charon-integration-20260912-v1/READOUT.md)
+preserves the initial measurements and setup attempt.
 
 On an explicitly requested connection check:
 
@@ -133,7 +138,7 @@ No checkpoint deletion or bulk migration occurred during this reset.
 ## Sharing and restoration
 
 Source and documentation alone can explain the project; they cannot verify
-training scores. For a review package include the current reset, frozen protocol,
+training scores. For a review package include labnotes, the frozen experiment entry/config,
 source/lock, selected raw predictions, training logs, provenance and hashes, and
 any checkpoint required to rerun the central claim. Use repository-relative links.
 Never include provider credentials, signed artifact URLs or unrelated private data.

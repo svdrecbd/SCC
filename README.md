@@ -2,39 +2,25 @@
 
 We are trying to build an individual model whose alignment-removing modification
 destroys indispensable cognitive computation. **No working SCC mechanism has
-been demonstrated.** Useful candidates have been trained and tested; protection
-can still be bypassed with substantial abilities retained.
+been demonstrated.**
 
-Start with the **[research reset](docs/RESEARCH_RESET.md)**: results, mistakes,
-promising and closed directions, assumptions, and the next work.
+Start with **[labnotes.md](labnotes.md)**. It is the single living record:
+current position first, then the chronological experiments, results, mistakes,
+theory, decisions and evidence. Future research updates go there.
 
-| Document | Purpose |
+| Reference | Purpose |
 |---|---|
-| [Research reset](docs/RESEARCH_RESET.md) | Current assessment and decisions |
+| [Labnotes](labnotes.md) | Current assessment and complete documented research chronology |
 | [Mechanism target](MECHANISM_TARGET.md) | Stable definition of intended SCC behavior |
-| [Operations and repository map](docs/OPERATIONS.md) | Commands, code, evidence and storage |
-| [Historical index](docs/archive/README.md) | Archived proposals, workflows and chronologies |
-| [Working standards](WORKING_STANDARDS.md) | Evidence, compute and preservation rules |
-
-Latest **observed** job state: 67 of 70 current experiments succeeded and three
-memory jobs were running at **2026-09-12 22:46 UTC**. No runtime queries were made
-during this reset. Job completion is not scientific success. All eight persistent
-models have now been audited and fail ordinary learnability.
-
-The ordinary reference now works: a GRU gets all 2,304 continuous validation
-requests correct. The next control, `job-g5a56`, applies its successful training
-schedule to the unchanged smooth matrix; its submission receipt is recorded,
-and runtime has not been polled. This is progress on learning prerequisites,
-with no new SCC mechanism result.
-[Current follow-up](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md).
+| [Operations](docs/OPERATIONS.md) | Commands, code, evidence and storage procedures |
+| [Working standards](WORKING_STANDARDS.md) | Research, documentation, compute and preservation rules |
+| [Historical index](docs/archive/README.md) | Earlier proposals and archived workflows |
 
 ```sh
 uv run python scripts/scc_status.py
 ```
 
-This reads saved exact-batch status. Add `--live` for one explicit API check of
-unfinished jobs. There is no automatic watcher.
-
-Scientific code, frozen protocols, run directories and checkpoints retain their
-paths. Historical root proposals moved under `docs/archive/`;
-[the path map](docs/archive/path-map.json) records their destinations.
+This reads saved exact-batch observations. Add `--live` for one explicit API
+check of unfinished jobs. There is no automatic watcher. Scientific code,
+historical reports/protocols, run directories and checkpoints retain their paths;
+they support the labnotes rather than compete with them as current accounts.

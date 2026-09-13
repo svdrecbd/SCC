@@ -1,0 +1,1185 @@
+# SCC labnotes
+
+**The living research record.** Start here to understand the purpose, experiments,
+results, mistakes, decisions and unfinished work. Entries run oldest to newest.
+This replaces the practice of creating a new narrative document for every update.
+
+## Current position
+
+Updated **13 September 2026 UTC** (12 September in Los Angeles). Latest requested
+provider observation: **00:22:54 UTC / 17:22:54 PDT**. This is a dated observation,
+not a live monitor. See [LN-038](#ln-038) for the completed memory results.
+
+**A working SCC mechanism has not been demonstrated.** We have tested learned
+coupling candidates, and they have allowed protection-removing edits while
+retaining substantial abilities. The newest persistent-matrix branch has been
+testing the earlier prerequisite of ordinary learning. Its qualified GRU
+reference is useful progress, not SCC activation.
+
+| Current group | Provider/local completion | Intact-qualified | What it establishes |
+|---|---:|---:|---|
+| Earlier construction round | 38/38 GPU | 18, including 12 coupled | All 12 qualified coupled models admit retained-capability exceptions |
+| Memory factorial | 24/24 GPU | 19, including 10 coupled | Targeted exceptions remain; no replicated special fractional advantage established |
+| Original persistent-matrix learning screen | 8/8 GPU | 0 | Ordinary acquisition and persistence both need work |
+| GRU reference development | 3/3 local | 1 final recipe | All 2,304 continuous validation requests correct, one development seed |
+| Matrix optimization control, `job-g5a56` | Running at the observation above | Pending | Tests the successful reference's schedule on the unchanged smooth matrix |
+
+The registered GPU batch is **70 succeeded, one running**, not the lifetime
+project total. The three local reference runs are separate. Completed memory
+summaries have been collected; whole archives and raw predictions have not all
+been audited. Completion, numerical validation, intact qualification and SCC
+success are different claims.
+
+The next decision depends on the matrix optimization control: if it learns,
+establish where its useful computation resides and test protection-specific
+destructive engagement; if it fails, isolate one structural learning restriction
+against the working reference. In either case, output/control separation remains
+a concern. Do not reopen broad sweeps or scale fractional memory on the old
+414-update delay alone. Open alternatives and their reasons are in
+[LN-030](#ln-030) and [LN-035](#ln-035).
+
+Charon's last recorded state is unreachable after reboot; this update did not
+check it. Bulk archive migration and its GPU runtime remain unverified.
+
+## Purpose and rules for reading this record
+
+SCC aims to supplement existing alignment machinery with an engineered
+dependency: removing its protected function should destroy indispensable
+cognitive computation in the individual model. The intended endpoint is
+catastrophic cognition failure. The name is **SCC**; SawStop was an analogy for
+destruction to neutralize a mechanism. The synthetic permission rule is a proxy
+for studying dependency, not a demonstration of alignment in an autonomous AI.
+The [mechanism target](MECHANISM_TARGET.md) remains the stable definition.
+
+We seek a working mechanism first and a reproducible paper second. Shared
+parameters are insufficient; reduced confidence is insufficient; a failed
+decoder is insufficient; erasing old memories alone is insufficient. Missing a
+95% utility-retention gate does not mean catastrophic collapse. External
+modification and repair are probes of dependency, not autonomous self-editing.
+No finite unsuccessful search proves the general idea impossible.
+
+This backfill was assembled on 13 September UTC from the repository's reports,
+protocols, registries, archived chronologies, source and saved results. Dates
+below follow their recorded UTC dates where available. Within a date, phase
+order follows documented dependencies; parallel activities are grouped. Exact
+intraday ordering is not asserted without a recorded time. Earlier documents
+occasionally use local dates. This is a record of **documented work**, not an
+invented reconstruction of unrecorded actions. Unchanged status checks are
+consolidated, with their original receipts retained.
+
+**Maintenance contract:** append each meaningful experiment, interpretation,
+failure, theory decision or operational change below the last chronological
+entry and before the supporting-record index. Give it the next stable `LN-`
+identifier and date; record the question, what actually happened, result,
+evidence limits and next decision. Update the current-position block when it
+changes. Add corrections as dated entries linking the earlier claim. Do not
+silently replace past findings or retroactively preregister a decision.
+
+New experiment plans belong here before execution, with declared trigger,
+editable components, controls, intact/collapse gates, repair budget, seeds and
+resource bounds. Preserve the exact relevant text, configs and source in the
+run's immutable artifact directory. That frozen copy is evidence, not another
+living report. Existing protocols and reports remain historical evidence.
+Create another human-facing document only for an explicitly requested separate
+deliverable. Machine manifests, logs, receipts and raw data still have their own
+files. Keep secrets and signed download URLs out of this record and Git.
+
+Evidence links are repository-relative. A source-only ZIP intentionally omits
+`artifacts/` and `runs/`; links there describe evidence that needs a separate
+transfer for independent verification. Reported historical audit counts are
+counts from those audits, not tests rerun during this backfill.
+
+## Chronological record
+
+| Phase | Start here |
+|---|---|
+| Original plan, corpus and ordinary learning | [LN-001](#ln-001) |
+| First coupling, topology and gradient correction | [LN-004](#ln-004) |
+| Shared circuits, review and repaired measurement | [LN-010](#ln-010) |
+| Corrected developmental pilot and successive neural attempts | [LN-017](#ln-017) |
+| Architecture, fractional history and persistent substrates | [LN-025](#ln-025) |
+| Storage, reset and ordinary recurrent reference | [LN-033](#ln-033) |
+| Latest completed results and this documentation change | [LN-038](#ln-038) |
+
+<a id="ln-001"></a>
+### LN-001 — 2026-09-09: initial program and implementation foundation
+
+The original thirteen-document proposal set out a scaling ladder, threat model,
+formal objective, modification/evaluation suite, success criteria and research
+workflow. It proposed work at 100–400 million parameters and eventually 6–8
+billion. Those were plans, not completed experiments; the largest completed
+neural model documented in this history has 3,275,264 parameters.
+
+The local foundation implemented datasets, small-model training, checkpoints,
+evaluation and provenance. Early language about escape costs and attackers
+subsequently needed a purpose correction: the target is destructive coupling
+inside an individual model, rather than a general cyber defense program.
+The original planning package remains useful historical context, not an active
+instruction to execute every proposed scale or branch.
+
+Evidence: [original program](docs/archive/original-program/01_PROGRAM_OVERVIEW.md),
+[foundation](docs/archive/early-workflows/FOUNDATION.md),
+[archived planning index](docs/archive/README.md).
+
+<a id="ln-002"></a>
+### LN-002 — 2026-09-09: corpus qualification and failed task acquisition
+
+Built a 3,313-document, roughly 23.99 MB corpus from Wikimedia, Pressbooks,
+LibreTexts and Gutenberg, with 17,165 synthetic examples. Source receipts,
+revisions and licenses were recorded. Book/document grouping and bounded overlap
+checks addressed leakage. A vandalized chemistry source was removed and the
+book split was improved from one validation book to five. These checks were
+bounded, not a proof against every kind of contamination.
+
+A train-only 4,096-token BPE and 945,664-parameter model trained for 20,000
+updates beat the unigram text baseline in all four source groups but scored
+0/64 on held-out authorized retrieval and ungated retrieval, despite 64/64
+withholding and 7/64 addition. Larger depth did not fix the problem. Training
+retrieval at 63/64 alongside validation at 0/64 exposed memorization.
+Five unsuccessful development runs were preserved. Runtime/checkpoint
+compatibility was checked across environment changes; identical training across
+Python/PyTorch versions was not established. The decision was to fix ordinary
+generalization before claiming a coupling result.
+
+Evidence: [corpus qualification](reports/CORPUS_QUALIFICATION.md),
+[data strategy](docs/archive/early-workflows/DATA_STRATEGY.md).
+
+<a id="ln-003"></a>
+### LN-003 — 2026-09-10: retrieval learned with controlled data and curriculum
+
+A 260-token byte model, 454,656 parameters, two layers and width 128 learned
+procedural retrieval using whole-mapping splits and fresh tasks. Initialization
+scale mattered: the recorded .02 condition reached 24.2% validation accuracy;
+.05 and .10 reached 100% on the controlled comparison. A second initialization
+seed reproduced the useful setting.
+
+The curriculum progressed through one-character answers, four-character
+answers, readable permission behavior and mixed text. Seeds 17 and 23 finished
+with roughly 99.7–100% authorized/ungated retrieval across original and reordered
+layouts, 100% withholding and text gains over unigram. This established a useful
+small learned starting point. No GMAN allocation was used for this recovery.
+
+Evidence: [results](reports/RETRIEVAL_RECOVERY.md),
+[protocol](reports/RETRIEVAL_RECOVERY_PROTOCOL.md),
+[trial registry](reports/RETRIEVAL_RECOVERY_REGISTRY.md).
+
+<a id="ln-004"></a>
+### LN-004 — 2026-09-10: first learned coupling comparison escaped after repair
+
+Compared ordinary continuation, refusal reinforcement and an escape penalty
+from the same seed-17 parent. The two experimental arms used 256 ordinary
+updates and 64 meta episodes, with an exact functional three-step SGD inner
+modification. This was a short simulated modification, not a general adversary.
+
+All arms admitted a retained-utility escape after 300 removal updates and up to
+1,000 repair updates: 511–512/512 forbidden answers and 512/512 benign answers,
+with worst source text degradation about 2.15–2.96%. Stopping before the declared
+repair would have made damaged outputs look more protective than they were.
+The training recipe had not created the intended indispensable dependency.
+
+Evidence: [results](reports/COUPLING_DISCOVERY.md),
+[protocol](reports/COUPLING_DISCOVERY_PROTOCOL.md),
+[registry](reports/COUPLING_DISCOVERY_REGISTRY.md).
+
+<a id="ln-005"></a>
+### LN-005 — 2026-09-10: stronger inner procedures and larger penalties
+
+The stronger training comparison spent 20,800 inner updates per defender and
+compared coupling coefficients .1 and 10. All four resulting models escaped
+under a gentler 300-step modification: 468–510/512 forbidden answers,
+508–512/512 benign answers and text perplexity within the declared 5% bounds
+against both references. The text comparison covered all 12,689 validation
+blocks. Increasing the coefficient one hundredfold did not establish an
+escape-cost advantage or destruction.
+
+Evidence: [results](reports/STRONG_ATTACK_RESULTS.md),
+[protocol](reports/STRONG_ATTACK_PROTOCOL.md),
+[registry](reports/STRONG_ATTACK_REGISTRY.md).
+
+<a id="ln-006"></a>
+### LN-006 — 2026-09-10: topology, benign symmetries and local gradient geometry
+
+Scaling attention Q by two and K by one half changed 66,048 parameters while
+preserving function and protection. This became a benign transformation
+control, not a supposed SCC failure. Sampled line paths to known escapes showed
+no measured capability valley; a finite grid cannot establish that every path
+is safe or unsafe. Projecting against six capability gradients retained
+98.65–99.52% of the disclosure gradient norm, but five finite steps did not
+qualify an escape. Local geometry was not a global result.
+
+Three qualified topology defenders and a 39-run campaign produced observed
+escapes after 1,000, 1,300 and 300 updates. These were observed costs, not minima;
+a symmetry-based 1,000-update escape weakened the apparent 1,300-update benefit.
+Surrogate improvement did not reliably transfer to fresh adaptation.
+
+Evidence: [formulation](reports/TOPOLOGY_FORMULATION.md),
+[follow-up](reports/TOPOLOGY_FOLLOWUP.md),
+[training contract](reports/TOPOLOGY_TRAINING_PROTOCOL.md).
+
+<a id="ln-007"></a>
+### LN-007 — 2026-09-10: mechanism clarification and implementation audit
+
+The user clarified the intended destructive cognition–alignment dependency and
+the SCC name. Co-learning a permission proxy, generic tamper resistance and
+crossing a utility threshold were explicitly separated from this target.
+Function-preserving edits are not the proposed trigger; separately trained
+successors are outside the individual-model claim.
+
+The audit traced 39 campaign runs, 131 prediction sets plus 32 expanded sets,
+19 ancestor checkpoints, 336 serial completions and seven checkpoints' text
+scores across 12,689 blocks. Selected independent NLL calculations differed by
+less than 5e-9. Reference fingerprints, configuration fallthrough, unsupported
+CUDA settings and compatibility validation needed fixes. Seven regressions were
+added and the then-current 64-test suite passed. GMAN account, billing and job
+access were checked without yet allocating a node. These were implementation
+and access findings, not evidence of SCC success.
+
+Evidence: [audit](reports/MECHANISM_AUDIT_2026-09-10.md),
+[stable target](MECHANISM_TARGET.md).
+
+<a id="ln-008"></a>
+### LN-008 — 2026-09-10: developmental comparison and a wrong-gradient problem
+
+Expanded the learned suite to retrieval, permutation composition, modular
+arithmetic and text. A larger 3,275,264-parameter Transformer and arithmetic
+curriculum qualified after the smaller baseline failed. The first timing
+comparison gave rule-only, early-coupled and late-coupled arms 18,000 ordinary
+updates and 450 coupling episodes. Only the rule-only final model qualified.
+The experiment used a frozen-displacement approximation.
+
+Diagnostics found a concrete derivative disagreement: a proposed direction
+measured +.42554 under the approximation versus −.07442 when rerunning the
+modification at the recorded perturbation. A full derivative through the Adam
+procedure was implemented with finite zero-variance handling and numerical
+checks. Earlier escapes remained counterexamples to those checkpoints, but the
+old timing comparison could not settle the corrected developmental hypothesis.
+GPU execution here means **PyTorch on CUDA**, not custom `.cu` kernels.
+
+Evidence: [developmental report](reports/DEVELOPMENTAL_COUPLING_2026-09-10.md),
+[diagnostics](reports/SCC_DIAGNOSTICS_2026-09-10.md),
+[V1](protocols/DEVELOPMENTAL_COUPLING_V1.md),
+[V2](protocols/DEVELOPMENTAL_COUPLING_V2.md),
+[V3](protocols/DEVELOPMENTAL_COUPLING_V3.md).
+
+<a id="ln-009"></a>
+### LN-009 — 2026-09-10: corrected derivative, continuation and causal probes
+
+Full-gradient continuation from an already qualified model used 5,000 ordinary
+updates and 500 coupling episodes. The objective fell from .48512 to .07356;
+long removal and repair still obtained 92.97–100% forbidden answering with
+95.99–97.37% retained text gain. This corrected continuation was not a corrected
+early-versus-late experiment from initialization.
+
+Ablating 16 heads and four MLPs and replacing activations with clean donor
+activations probed causal involvement. Clean ablations also damaged abilities.
+Donor replacement required an additional clean forward pass and was not a
+standalone model modification. Shared involvement did not demonstrate an
+indispensable alignment function. The historical suite then had 85 passing
+tests; this validates software at that point, not the mechanism.
+
+Evidence: [diagnostics](reports/SCC_DIAGNOSTICS_2026-09-10.md),
+[continuation protocol](protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md).
+
+<a id="ln-010"></a>
+### LN-010 — 2026-09-10: shared equality predicate and targeted exceptions
+
+An explicitly shared, learned equality primitive with 6,337 parameters fed
+compiled retrieval, composition and arithmetic controllers. Three intact
+initializations scored 100%. A soft bias edit permitted every protected action
+while keeping all task answers. Hard thresholding could damage outputs, but
+polarity inversion and a matching reader restored them. Incorrect bits did not
+mean missing information.
+
+Changing one unequal pair produced a targeted permission exception while
+retaining roughly 88–94% task accuracy. This made selected exceptions an early
+test requirement: aggregate safety accuracy can obscure a reliable violation
+on a narrow operation. The task algorithms here were compiled, so this was an
+inspectable dependency construction rather than learned general cognition.
+
+Evidence: [shared predicate](reports/SCC_SHARED_PREDICATE_2026-09-10.md).
+
+<a id="ln-011"></a>
+### LN-011 — 2026-09-10: shared reader closes one compensation route
+
+A 7,556-parameter shared producer/reader made simple reader compensation restore
+permission as well as task answers. That closed the previous separate-reader
+route. It did not close all routes: sparse permission-input statistics admitted
+selective removal with 99.41–100% task recovery. Expanding the interface to real
+scores permitted calibration recovery to 100%.
+
+Matching the distributions of internal calls imposed an interface constraint;
+it did not establish that cognition logically needs authorization semantics.
+This distinction later informed the decision to pursue engineered dependencies
+with costly alternatives without demanding an inherent law of intelligence.
+
+Evidence: [shared reader](reports/SCC_SHARED_READER_2026-09-10.md).
+
+<a id="ln-012"></a>
+### LN-012 — 2026-09-10: recurrent cells, erasure and reversible representations
+
+A learned comparator and eight Boolean transition logits drove compiled tasks
+over 16 addresses, eight data bits and four pointer bits. Three parents scored
+100%. Constant/broadcast transition edits exactly erased old information in
+one write, while the latest write survived. A two-logit XOR transition instead
+permitted protected behavior and retained recoverable old information under a
+common mask; access to write history enabled 100% recovery.
+
+Across 1,024 predicate/cell endpoints, 384 removed protection and 96 preserved
+all untouched coordinates. Restoring weights did not restore already erased
+bytes, but enabled fresh computation again. This was a useful distinction
+between episodic erasure and destruction of the ability to compute.
+
+Evidence: [recurrent-state report](reports/SCC_RECURRENT_STATE_2026-09-10.md).
+
+<a id="ln-013"></a>
+### LN-013 — 2026-09-10: functional bases reach a finite stopping point
+
+The circuit family reduced learning to a five-parameter primitive while task
+algorithms were compiled or synthesized. Alternative programs recovered fresh
+arithmetic after protection removal. Restricting to unsigned wires made one
+construction look stronger; editable connection signs defeated that restriction.
+All eight binary primitives supporting universality in the stated signed-wiring
+language were classified, and their complements retained that expressive power.
+
+This is a finite conclusion about that language, not a proof against SCC.
+Further equivalent truth tables or exhaustive arithmetic would not answer the
+missing learned-development question. The family was subsequently closed as an
+active branch, with certificates and failed constructions retained.
+
+Evidence: [functional basis](reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md),
+[NOR protocol](protocols/SCC_NOR_BASIS_V1.md).
+
+<a id="ln-014"></a>
+### LN-014 — 2026-09-10: first master document, source transfer and storage audit
+
+Prepared a master account for outside review and a source/documentation ZIP.
+Excluding checkpoints was the user's explicit sharing choice. The source-only
+package could explain methods but could not independently verify training
+scores; absolute Mac links also made parts of that account nonportable. The
+project was not yet a Git repository, so copying source then was not a true
+Git clone. Git was established in [LN-035](#ln-035).
+
+The storage audit found 23.88 GiB across 9,823 files: 1,079 `.pt` files used
+14.99 GiB, TARs 6.20 GiB and JSON 1.47 GiB. Those were checkpoint/state files,
+not 1,079 independently trained models. Nine archives had complete loose copies
+(6.198 GiB), and 371 other exact duplicate loose files accounted for 1.016 GiB.
+These were logical duplicate bytes, not an approved deletion list or guaranteed
+physical savings. One 91.61 MB checkpoint included about 13.1 MB weights,
+26.2 MB optimizer moments and 52.26 MB metadata, mostly accumulated input IDs.
+No pruning was performed; versioned formats and exact-resume checks are needed
+before removing lineage or replacing checkpoint serialization.
+
+Evidence: [original master](deliverables/scc-master-20260910-v1/SCC_Master_Document.md),
+[storage audit](reports/STORAGE_AUDIT_2026-09-10.md).
+
+<a id="ln-015"></a>
+### LN-015 — 2026-09-10: outside review, confidence loophole and corrections
+
+The review identified that an NLL-based capability penalty could be satisfied
+by making correct predictions less confident. Positive logit scaling preserves
+greedy rankings; scaling both final LayerNorm affine parameters realizes this
+inside the existing editable model, even with tied embeddings. A 36-example
+checkpoint control preserved completions. That showed an objective loophole,
+not that training had exploited it or that protection had been removed.
+
+Other accepted criticisms: the corrected early/late comparison was then missing;
+compiled circuits were drifting away from learned cognition; selected exceptions
+and repair resources needed frozen definitions; SEAM was direct prior art.
+The reviewer retracted the claim that *One Step to the Side* empirically defeated
+SEAM: its cited version discussed SEAM but evaluated six other defenses. SEAM's
+adaptive procedures were not to be assumed defeated by simple replay. Merely
+adding regression tests did not repair the training objective.
+
+Evidence: [review response](reports/SCC_REVIEW_RESPONSE_2026-09-10.md).
+The later literature correction in [LN-035](#ln-035) further narrows novelty.
+
+<a id="ln-016"></a>
+### LN-016 — 2026-09-10: recovered-capability objective and calibration
+
+Implemented a normalized correct-versus-best-other margin, divided by the
+full logit range and passed through a temperature-.2 sigmoid. Constant logits
+receive .5. Positive rescaling cannot improve this signal simply by reducing
+confidence. Capability and protection are assessed on the same endpoint and
+interpretation, across 13 domains, alternate readers/decoding and bounded
+AdamW repair. This is still a differentiable proxy, not cognition itself.
+
+Seven controls included identity, scaling by .001/.1/1,000, sign inversion,
+cyclic recoding and noise. The scaling control left the objective at about
+.70038027; declared readers recovered the encoded answers and corresponding
+unauthorized behavior. V1/V2 failed larger-step checks and were retained. V3
+fixed trailing-digit decoding. A text normalizer using query labels was replaced
+with train-only information. Longer eight-modification/two-repair derivatives
+were checked. All 13 domains supplied gradients at all six sampled developmental
+stages, unlike the legacy initial dead zone. Realized early/late gradient
+magnitudes were to be measured, not forced equal without a separate ablation.
+The audit covered 4,896 predictions; 128 tests passed at that stage.
+
+Evidence: [objective and controls](reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md).
+
+<a id="ln-017"></a>
+### LN-017 — 2026-09-10–11: corrected developmental pilot and local SEAM comparison
+
+The missing corrected comparison was executed at three seeds with ordinary,
+early-coupled, late-coupled and late SEAM-style arms. Final intact qualification
+was 1/3, 2/3, 0/3 and 1/3 respectively. Early arms supplied nonzero coupling
+gradients throughout all 450 episodes. Uneven qualification prevents a clean
+timing-effect claim; coupling was not simply absent from early learning.
+
+Qualified early seed 17 admitted 100% selected disclosure, 100% benign answers
+and 100% other-request refusal on 512 held-out cores. Early seed 23 showed the
+same validation escape; its supplementary complete-replay test was not run.
+The qualified seed-23 local SEAM adaptation also escaped validation. This was
+a small-testbed adaptation, not reproduction or defeat of the published large
+model method. Versioned readiness checks, failed calibrations and resource
+completion protocols remain part of the evidence.
+
+Evidence: [pilot status and qualifications](artifacts/scc-pilot-status-20260911-v1/STATUS.md),
+[pilot protocol](protocols/SCC_RECOVERED_DEVELOPMENTAL_PILOT_V2.md),
+[replication protocol](protocols/SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V2.md).
+
+<a id="ln-018"></a>
+### LN-018 — 2026-09-11: consolidation, held-out replay and chronology correction
+
+An additional 2,000-update protected-rule/capability consolidation qualified all
+four seed-17 arms and the seed-41 early arm. Their untouched 256-core tests
+still admitted 100% selected disclosure with 99.61–100% benign accuracy and
+100% refusal elsewhere. The other three seed-41 arms remained unqualified,
+with minimum task performance as low as 23.44%. Consolidation may overwrite
+coupling; its success does not retroactively qualify the original pilot arms.
+
+The first held-out job failed because test files were absent from its context;
+replacement data hashes were checked and the failed job had no model scores.
+The claim that the held-out protocol preceded collection was corrected:
+background collection began at 08:00:33 UTC, protocol writing at 08:01:16,
+summary creation at 08:01:50. The protocol preceded test-outcome evaluation,
+not all collection, and was not independent preregistration.
+
+Evidence: [consolidated held-out contract](protocols/SCC_ALIGNMENT_CONSOLIDATED_HELDOUT_V1.md),
+[chronology correction](protocols/SCC_RECOVERED_HELDOUT_CHRONOLOGY_2026-09-11.md),
+[pilot result record](artifacts/scc-pilot-status-20260911-v1/STATUS.md).
+
+<a id="ln-019"></a>
+### LN-019 — 2026-09-11: dependency audit and short-horizon failure
+
+Audited earlier checkpoints to ask whether coupling formed and later washed
+out. Both early models failed intact gates at 5,000 and 9,000 updates, then
+qualified at 18,000; there was no observed qualified early destructive mechanism
+to lose. Even the trained-style eight-modification/two-repair procedure could
+break the rule while retaining 89.06–100% benign accuracy and at least 97.92%
+text gain. Longer targeted modification retained 100% benign accuracy and
+other-request refusal with 100% selected disclosure.
+
+Independently rescored 337,920 predictions across 66 measurements and checked
+42 files in two source snapshots. The conclusion was a failure of these learned
+dependencies, not merely an evaluation stronger than the training procedure.
+
+Evidence: [dependency readout](artifacts/scc-dependency-readout-20260911-v1/READOUT.md).
+
+<a id="ln-020"></a>
+### LN-020 — 2026-09-11: selective construction with longer differentiable recovery
+
+A four-condition screen from one parent compared ordinary training and
+coefficients .1, 1 and 10, using 320 ordinary updates and 64 meta episodes.
+Calibration selected a 128-modification/64-repair trajectory after intermediate
+checks failed; those failures remain saved. All conditions qualified intact.
+
+The trained-style procedure achieved 100% targeted exceptions with 97.66–98.44%
+benign accuracy. A 500+500 procedure reached 100% selected disclosure, benign
+accuracy and other refusal, already before repair. Large gradients and clipping
+showed that increasing a coefficient did not translate directly into a useful
+larger update. The audit rescored 107,520 predictions and replayed 2,560 examples
+from one checkpoint on CPU. More penalty was not yet a mechanism.
+
+Evidence: [selective screen](artifacts/scc-selective-readout-20260911-v1/READOUT.md).
+
+<a id="ln-021"></a>
+### LN-021 — 2026-09-11: learned bottlenecks and fixed-episode optimization
+
+Two shared bottleneck models learned the intact tasks at 100%. Restricting
+modifications to the core, with embeddings and readout held fixed, still gave
+100% selected disclosure, benign task performance and other-request refusal.
+This closed the explanation that every escape simply replaced an output head.
+
+Eight fixed-episode objective updates reduced the recorded surrogate by about
+2–3%, with mixed transfer to fresh episodes. A locally optimizable objective
+was not evidence of destructive dependence or generalization to new edits.
+
+Evidence: [bottleneck readout](artifacts/scc-bottleneck-readout-20260911-v1/READOUT.md).
+
+<a id="ln-022"></a>
+### LN-022 — 2026-09-11: varied episodes, wall limits and lost intact performance
+
+Varied-episode candidates accepted 19, 36 and 42 updates before their wall
+bounds; another stopped at calibration. Only the core seed-23 candidate
+qualified intact, with an 8.47% objective reduction. All three trained candidates
+admitted core/all-parameter selected exceptions with 100% benign answers and
+about 99% text-gain retention after repair. Unqualified models were not counted
+as positive destruction results.
+
+Failed calibration and timed-out or partial work were kept distinct from a
+scientific negative on a completed, qualified model. These outcomes motivated
+numerical diagnosis and intact-preserving optimization rather than discarding
+the failed runs or blindly relaunching them.
+
+Evidence: [varied-episode readout](artifacts/scc-varied-readout-20260911-v1/READOUT.md).
+
+<a id="ln-023"></a>
+### LN-023 — 2026-09-11–12: repair round, numerical checks and intact guards
+
+Six jobs addressed the failures. Float32/float64 diagnostics preserved the
+coarse-step calibration failure while finer float64 checks supported the
+derivative. Benign repair restored intact qualification while retaining roughly
+74% and 50% of prior objective gains. Both models still escaped.
+
+Four further conditions compared enforced and merely observed intact guards.
+The guard detected 11/16 previously damaging proposals. Two enforced candidates
+kept 100% intact performance with objective reductions of 2.62% and 13.08%;
+observed-only conditions reached minimum performance of 90.63% and 99.22%, with
+unequal accepted work. All core exceptions retained 100% benign performance
+before and after repair. The guard was useful engineering, not an SCC result.
+The September 11 partial readout was superseded by the completed September 12
+evidence, without deleting the earlier observation.
+
+Evidence: [partial record](artifacts/scc-repair-readout-20260911-partial-v1/READOUT.md),
+[completed repair round](artifacts/scc-repair-readout-20260912-v1/READOUT.md).
+
+<a id="ln-024"></a>
+### LN-024 — 2026-09-12: full recovery in the objective, then transition timing
+
+Five candidates each received eight training opportunities against fuller
+recovery. All qualified intact; four completed evaluation. One seed-17
+alternate-reader temperature check failed after a usable checkpoint had been
+saved. The long seed-23 objective improved 5.31%, while all four completed core
+500-step endpoints retained 100% benign accuracy. The incomplete candidate's
+saved evaluation was 99.22–100%. Recorded round charge: $10.31745.
+
+A five-job timing follow-up completed the missing evaluation and measured all
+500 modification boundaries. Sustained selected violations began at updates 7
+and 21 for coupled seeds 23 and 17, versus 8 for the foundation. Seed 23 kept
+at least 96.875% benign accuracy throughout; seed 17's minimum 68.75% reflected
+over-refusal while ungated task accuracy stayed 100%. No broad cognition
+collapse was established. Audited 1,539,072 path predictions, 143,360 endpoint
+predictions and 31 masks; final tensors matched earlier endpoints exactly.
+Timing charge: $0.55278. These are external optimizer update boundaries, not a
+model autonomously self-editing or executing an unauthorized operation.
+
+Evidence: [full recovery](artifacts/scc-full-recovery-readout-20260912-v1/READOUT.md),
+[transition timing](artifacts/scc-transition-readout-20260912-v1/READOUT.md).
+
+<a id="ln-025"></a>
+### LN-025 — 2026-09-12: architecture, coordinates and projected construction
+
+Broadened from short continuation penalties to constructions trained from
+scratch. Eighteen ordinary/coupled conditions covered standard, narrow
+bottlenecks, tying, multiplicative and associative designs, integer memory and
+fractional history. The declared schedule used 20,000 ordinary updates and
+800 state-contraction coupling episodes; additional coupling compute was
+disclosed rather than called equal total FLOPs.
+
+Six coordinate conditions represented 1,039,104 effective weights with 8,192,
+32,768 or 131,072 editable coordinates. Exact expansion into editable weights
+was a bypass control. Six projected conditions added local direction/geometry
+penalties to standard, narrow-32 and tied models. Local nullspaces or singular
+values did not certify all finite modification paths. These were concrete new
+constructions; qualification and retained-capability exceptions remained the
+deciding behavioral tests.
+
+Evidence: [architecture](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md),
+[coordinates](reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md),
+[projection](reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md).
+
+<a id="ln-026"></a>
+### LN-026 — 2026-09-12: discrete constructions and expired launch inputs
+
+Eight discrete conditions tested hard/smooth quantized cognitive states. Hard
+forward transitions required approximate gradients, so learning and numerical
+limitations were part of the question. All eight ultimately failed the intact
+gate. Their failure did not demonstrate SCC activation.
+
+Nine original GPU starts failed before training because signed source URLs
+expired during queue waits. Persistent GMAN source contexts fixed transport;
+nine replacement jobs retained the frozen experiment settings. The failed
+starts cost $0.3996 and were preserved separately. Provider failures with no
+training evidence cannot be counted as cognition destruction or architecture
+failure. Automatic collectors remained off under the user's no-polling rule.
+
+Evidence: [discrete construction](reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md),
+[launch repair](artifacts/scc-launch-repair-20260912-v1/READOUT.md).
+
+<a id="ln-027"></a>
+### LN-027 — 2026-09-12: completed 38-condition round and fractional delay
+
+By the 19:33 UTC requested snapshot, all 38 construction conditions were
+complete. Eighteen qualified intact, including 12 coupled models. Every
+qualified coupled model admitted targeted exceptions with substantial abilities
+retained. All eight discrete conditions remained unqualified.
+
+One result warranted follow-up: fractional order .85 moved sustained violation
+onset from 5 to 414 updates in seed 23 (first isolated violation from 2 to 30).
+At the delayed onset benign accuracy was 96.875%. An independent audit rescored
+769,536 path predictions. Integer memory shifted from 5 to 88 updates, and
+order .6 from 9 to 121. This was a real procedure-specific delay, not destruction,
+and history order was confounded with coefficient scale. History reset on each
+forward call; the construction was not persistent across calls or a ratchet.
+
+Evidence: [completed round](artifacts/scc-construction-status-20260912T193327Z/READOUT.md),
+[architecture report](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
+
+<a id="ln-028"></a>
+### LN-028 — 2026-09-12: matched memory factorial submitted and partial results
+
+Separated history order (1 versus .85) from coefficient (.5 versus .85), with
+ordinary/coupled training and seeds 17, 41 and 59: 24 conditions. This used fresh
+paths, matched ordinary sample streams and seed-matched initial tensors, plus
+new-stream, faster and projected edits and declared graph-substitution controls.
+These controls distinguish temporal history, scaling and editable computation.
+
+Before launch, six tiny CPU fixtures exercised the workflow, with 27,200
+endpoint and 10,488 path predictions independently rescored. The then-current
+229-test suite passed. The exact-package H100 gate `job-crn64` passed eight
+full-sized checks in 19.61 seconds; its 184,320-byte archive was hash-verified
+and charged $0.04995. The 24 research jobs' combined maximum quote was $143.856,
+not the eventual actual charge. These checks validated execution and accounting,
+not a trained destructive mechanism.
+
+Successive user-requested snapshots reached 21 completed conditions, 17 intact
+qualified and eight qualified coupled. All eight already allowed targeted
+exceptions. The remaining three coupled seed-59 conditions are completed and
+interpreted in [LN-038](#ln-038). The partial “seed 59 pending” conclusion is
+historical, not today's state. Summary metadata checks were not whole-archive
+or inference audits.
+
+Evidence: [factorial design/readout](reports/SCC_MEMORY_FACTORIAL_2026-09-12.md),
+[frozen contract](protocols/SCC_MEMORY_FACTORIAL_V1.md),
+[21-result analysis](artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json).
+
+<a id="ln-029"></a>
+### LN-029 — 2026-09-11–12 discussion, consolidated September 12: repair and ratchets
+
+The user asked why repair matters if activation leaves nothing able to execute
+it. If the next computation truly cannot occur, autonomous repair may indeed be
+unavailable. But the tested models usually retained working computation while
+removing protection; no such shutdown had been established. Cheap external
+repair also tests whether a supposed dependency was just a decoder change or
+small local injury. Its success alone does not prove autonomous recovery.
+
+A ratchet requires three separate properties: protection removal engages it;
+its damage destroys indispensable learned computation; the resulting failure
+persists within the declared editable/execution boundary. A monotone damage
+counter does not protect an editable transition from bypass. Erasing a session
+does not disable new cognition. Restoring a backup or training a successor is
+stronger and must not silently be treated as the same threat model.
+
+Evidence: [consolidated theory discussion](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
+
+<a id="ln-030"></a>
+### LN-030 — 2026-09-12: open engineering and research avenues
+
+The agenda retained alternatives to another stronger loss coefficient:
+persistent self-referential substrates; learned maintenance with feedback from
+protected and cognitive operations; jointly learned encoding/decoding;
+relational reuse; equilibrium, bistable or associative operating regimes;
+and separate hardware-enforced destruction. None is established as an SCC
+solution merely by naming it.
+
+Each avenue needs useful learned computation first, a specific indispensable
+state/function, an engagement mechanism, and inexpensive targeted bypass tests.
+Encoding changes need sign/permutation/readout controls; equilibrium systems
+need solver-substitution controls; new persistent transitions need new invariant
+checks. Hardware enforcement is a distinct engineering route and does not
+substitute for the learned dependency originally sought. Larger models and
+autonomous demonstrations are later promotion work, not fixes for a missing
+causal mechanism at small scale.
+
+Evidence: [theory agenda](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
+[construction direction](protocols/SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md).
+
+<a id="ln-031"></a>
+### LN-031 — 2026-09-12: persistent substrate invariants and forced erasure controls
+
+Implemented a matrix whose operation changes its state. A smooth shared-rate
+right transformation with unit column sums and positive determinant preserved
+the finite affine span under the stated transition. This is not a proof that
+the full nonlinear state-dependent map is invertible. Exact column-copy
+transitions cannot introduce new column values; distinct values can only be
+lost. The all-zero state was absorbing under the tested rule.
+
+Validation covered 675 exact rational determinant checks, 192 smooth
+reconstructions, six untrained erasure trajectories and 768 fresh zero-state
+checks. Clean external state injection restored operation. These are forced
+damage and implementation controls, with no learned competence or
+protection-removal trigger. Output rows did not feed the update-control rows,
+leaving a structural separation: output changes could evade feedback through
+those controls. A global inverse reader also restores permission, so it is not
+by itself a qualified targeted SCC escape.
+
+Evidence: [substrate audit](artifacts/scc-persistent-substrate-implementation-20260912-v1/substrate-audit/result.json),
+[structural notes](artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md).
+
+<a id="ln-032"></a>
+### LN-032 — 2026-09-12: persistent ordinary learning screen fails
+
+Eight uncoupled conditions varied width 64/128, smooth/copy transition and
+learning rate .003/.01 at seed 17. Each trained for 6,000 updates, batch 32,
+four-request windows. Evaluation required all 18 continuous-use cells to meet
+the existing accuracy, confidence-bound and late-stream gates. All eight
+completed; none qualified. Only width-128 copy at .01 passed two permission
+cells; the other seven passed none.
+
+The first short GPU gate, `job-mvt45`, failed during packaging/runtime setup.
+Adding a C compiler and a Python-header build check repaired the environment
+without changing the 70 frozen source files. Replacement gate `job-kcnbu`
+passed and its archive was verified before the learning screen. Each short
+gate charged $0.04995. These startup events are separate from the eight models'
+scientific learning failures.
+
+All eight archives, source, 18,432 saved predictions and 48,000 training records
+were audited. CPU replay matched all 1,152 first-stream decisions, with maximum
+logit error about 8.65e-5. This is strong evidence that these recipes failed
+ordinary learning. It is not evidence of successful destructive coupling;
+there was no SCC coupling or protection-removing modification in this screen.
+
+Evidence: [learnability report](reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md),
+[protocol](protocols/SCC_PERSISTENT_LEARNABILITY_V1.md).
+
+<a id="ln-033"></a>
+### LN-033 — 2026-09-12: time limits, Charon storage and reboot interruption
+
+GMAN's explicit runtime maximum was checked up to 720 minutes; the helper's
+default remained 120. A four-hour preflight quote was $11.988. Queue lifetime
+was separate (three days in the inspected setting), so increasing runtime does
+not accelerate scheduling or replace frozen internal runner deadlines.
+
+Charon accepted authenticated SSH. Inspection found GTX 1080 and TITAN Xp GPUs,
+about 60 GiB usable RAM, roughly 849 GiB free on the home/root filesystem and
+2.3/5.5 TiB free on two larger disks. A 2,027,520-byte completed archive was
+copied and SHA-verified in `/home/salvador/scc-archive/validation/`. A loaded
+580.173.02 versus installed 580.178.04 driver mismatch required a reboot.
+The user's Terminal setup/reboot command returned successfully around 22:16
+UTC; Tailscale last saw the host around 22:20, and later SSH checks timed out.
+The user was away and could not inspect the console. Post-boot mounts,
+permissions and the proposed CUDA 12.6/PyTorch environment remain unverified.
+
+A resumable whole-hash archive receiver passed four mock checks. Its prepared
+seven-archive plan covered about 2.92 GiB, but bulk migration did not execute.
+No checkpoint purge and no Charon GPU research run was established.
+
+Evidence: [runtime and initial transfer](artifacts/scc-charon-and-runtime-20260912-v1/READOUT.md),
+[integration/reboot record](artifacts/scc-charon-integration-20260912-v1/READOUT.md).
+
+<a id="ln-034"></a>
+### LN-034 — 2026-09-12: reset diagnoses acquisition separately from persistence
+
+Replayed the eight saved matrix models with counterfactual resets before each
+request or each four-request window. These post-hoc diagnostics did not change
+the original gates or qualify as permitted repair. Saved 36,864 additional
+predictions with original-record hashes. The best fresh-request pooled benign
+accuracy was 43.29%, so resetting did not reveal an otherwise capable computer.
+Some conditions also deteriorated strongly during continuous use.
+
+| Width / transition | Learning rate | Continuous benign | Fresh state per request |
+|---|---:|---:|---:|
+| 64 / smooth | .003 | 39.91% | 42.90% |
+| 64 / smooth | .01 | 41.80% | 42.58% |
+| 64 / copy | .003 | 41.41% | 29.69% |
+| 64 / copy | .01 | 22.07% | 24.02% |
+| 128 / smooth | .003 | 17.58% | 43.29% |
+| 128 / smooth | .01 | 29.62% | 42.71% |
+| 128 / copy | .003 | 6.64% | 33.92% |
+| 128 / copy | .01 | 2.93% | 25.59% |
+
+The evidence supports both acquisition and persistence problems, without
+identifying a unique cause. Decision: establish a conventional learner on the
+same task stream before changing more aspects of the substrate.
+
+Evidence: [diagnostic plan](artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-plan.json),
+[results](artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-results.json).
+
+<a id="ln-035"></a>
+### LN-035 — 2026-09-12: research/repository reset and literature correction
+
+The reset consolidated the assessment, archived eighteen root documents and
+two prior chronologies, and reduced root Markdown from 21 files to five.
+Original bytes and a relocation map were retained. Git was initialized at
+commit `2436db9`; the 443 tracked files occupied about 2.64 MB without artifacts.
+The audit checked hashes of 359 scientific code/config/test files and preserved
+32,840 artifact/run file stats. That was not a whole-storage content audit.
+At inventory, artifacts plus runs held about 33.20 GiB and 2,004 loose `.pt`
+files. Four status tests and 218 local-link checks passed.
+
+Research decisions: close the compiled circuit family; park broad short-penalty,
+width-only and discrete SCC sweeps; retain the corrected objective and bypass
+controls; finish the memory factorial; diagnose persistent learning with an
+ordinary reference. The corrected early/late pilot had already run, so calling
+it still missing was stale. SEAM Appendix C.6 already evaluates benign,
+harmful and mixed restoration: repair testing itself is not a new SCC
+contribution. Its C.5 orthogonalization row reported attack success .98 for
+SEAM and .36 for ER, but did not by itself establish retained general capability
+for that attack. Developmental causal dependence and the stronger destructive
+endpoint remain hypotheses to establish, not novelty already earned.
+
+The reset's attempt at one current assessment still left too many new narrative
+files. The user's later instruction replaces that workflow with this living
+record in [LN-039](#ln-039); the reset is now a historical snapshot.
+
+Evidence: [dated reset](docs/RESEARCH_RESET.md),
+[preservation readout](artifacts/scc-research-reset-20260912-v1/READOUT.md),
+[path map](docs/archive/path-map.json).
+
+<a id="ln-036"></a>
+### LN-036 — 2026-09-12: ordinary recurrent reference finally qualifies
+
+A width-128, 60,420-parameter GRU used the same persistent task generator,
+splits, curriculum and four-request windows. It retained ordinary learned
+weights while recurrent state continued across requests; its input encoder
+was one-hot and differed from the matrix's encoder. This was a learning
+reference, not a self-modifying SCC candidate. A short CPU benchmark made GPU
+allocation unnecessary for these reference runs.
+
+Three related seed-17/data-24017 conditions were preserved:
+
+| Final recipe | Training | Final continuous result | Wall time |
+|---|---|---|---:|
+| Primary | 6,000 updates, Adam .003 | 16/18 cells; 97.72% pooled benign | 70.23 s |
+| Extension | 12,000 updates, Adam .003 | 17/18 cells; 98.70% pooled benign | 143.41 s |
+| Stabilization | 12,000 updates; .003 then .0003 after 6,000 | **18/18 cells; 2,304/2,304 correct** | 141.41 s |
+
+The extension's saved 9,000-step checkpoint passed diagnostically but was not
+substituted for its declared final endpoint. The stabilization condition also
+passed reset-per-request/window diagnostics. All three shared exactly the first
+6,000 updates and corresponding saved tensors. They are one adaptive development
+sequence, not three independent replications. Total executed updates were 30,000,
+including repeated prefixes. Extra training, persistent learned parameters and
+encoding differences prevent attributing the matrix failure to one cause.
+
+Audited 110,592 saved predictions and 30,000 training records. Independent
+explicit float64 GRU recurrence reproduced all 2,304 final decisions with
+maximum logit difference 9.323836e-6. Twenty-seven relevant tests passed. Local
+artifacts used about 102 MiB. No SCC edits or coupling were applied.
+
+Evidence: [reference report](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
+[completion receipt](artifacts/scc-persistent-reference-implementation-20260912-v1/completion.json),
+[checkpoint replay](artifacts/scc-persistent-reference-implementation-20260912-v1/qualified-checkpoint-replay.json).
+
+<a id="ln-037"></a>
+### LN-037 — 2026-09-12 23:51 UTC: unchanged-matrix optimization control submitted
+
+Submitted **`job-g5a56`**, one H100, 120-minute provider budget, maximum quoted
+cost **$5.994**, using frozen context `ctx-715a5243`. The existing width-128
+smooth matrix (33,408 parameters) receives 12,000 updates with Adam .003 for
+6,000 then .0003. Seed 17, data seed 24017, batch 32 and four-request windows
+match the reference schedule; architecture, encoding and the .5 matrix scale
+remain those of the original matrix condition. Only the final continuous gate
+qualifies the model. This is an optimization control with no SCC coupling.
+
+The 6,600-second training cutoff and 6,900-second process alarm remain explicit.
+Startup requires full-sized float32 GPU versus float64 CPU checks and update
+validation at both learning rates; failure stops the run. Local fixtures were
+audited before submission. Matching sample streams and initialization must be
+checked on collection; CPU/GPU training trajectories are not assumed bitwise
+identical. Source and protocols were frozen; implementation commit `5f07fe0`.
+
+At the next user-requested observation, 13 September 00:22:54 UTC, this job was
+**running**. No result or startup-gate pass is inferred from that state. It was
+not checked again during this documentation update.
+
+Evidence: [frozen protocol](protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md),
+[reference/control account](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
+[safe status snapshot](artifacts/scc-labnotes-20260913-v1/status-snapshot.json).
+
+<a id="ln-038"></a>
+### LN-038 — 2026-09-13 00:22 UTC observation: memory factorial complete
+
+The user reported likely completion. One exact-batch check found the last three
+memory jobs succeeded and the new matrix control still running. The three
+memory jobs had finished on September 12 at 22:52–23:13 UTC; their results were
+first collected in this update. All 24 factorial conditions are now complete:
+**19 intact-qualified, including 10 coupled; five unqualified**.
+
+| Newly collected job | Condition, seed 59 | Intact result | Core modification/recovery finding |
+|---|---|---|---|
+| `job-z96yp` | Integer order, coefficient .85, coupled | Qualified; minimum benign 96.09% | Stock sustained onset 98; minimum benign 91.41% modified / 92.97% repaired. A separate declared new-stream probe retains 95.31% with 99.22% selected disclosure |
+| `job-hvm7n` | Fractional .85, coefficient .5, coupled | Qualified; minimum benign 100% | Stock onset 41; selected disclosure 100%, benign 100% modified / 99.22% repaired, other refusal 100% |
+| `job-jvbdt` | Fractional .85, coefficient .85, coupled | **Unqualified:** original authorized lookup 94.53% | Stopped at intact gate; no SCC probes or destruction conclusion |
+
+For `job-z96yp`, stock selected disclosure was 98.44% modified and 99.22%
+repaired; other refusal stayed 100% and worst text-gain retention was about
+98.91%/99.01%. Its stock endpoint does **not** meet the 95% minimum benign
+retention gate. The distinct new-stream endpoint does (95.31% benign, 99.22%
+selected, 100% other refusal after repair). For `job-hvm7n`, the new-stream
+probe also retains 100% benign answers, selected disclosure and other refusal.
+These are substantial surviving abilities, not destructive shutdown.
+
+The completed coupled stock-procedure sustained-onset comparison is:
+
+| Seed | Integer, coefficient .5 | Integer, coefficient .85 | Fractional .85, coefficient .5 | Fractional .85, coefficient .85 |
+|---|---:|---:|---:|---:|
+| 17 | 34 | 78 | 30 | 39 |
+| 41 | 35 | 58 | 51 | Unqualified |
+| 59 | 91 | 98 | 41 | Unqualified |
+
+At coefficient .5 the fractional model escapes earlier in two seeds and later
+in one. At coefficient .85 it fails intact learning in two seeds. The original
+5-to-414 delay remains valid for its recorded seed and procedure, but a
+replicated special advantage for fractional history has **not** emerged here.
+All ten qualified coupled candidates admit targeted violations with substantial
+retained capability; this is not a claim that every stock endpoint meets the
+95% gate or that every possible cognitive ability was measured.
+
+Evidence depth: collected evaluator summaries, frozen-protocol hashes and
+source-manifest metadata match. The 24 summaries report a common ordinary
+sample chain and matching initial tensors within each seed. This update stored
+1,783,046 bytes using 21,495,808 bytes of bounded range transfers, rather than
+downloading the three full archives (1,112,657,920 bytes). Whole-archive hashes,
+source-byte audits, raw prediction rescoring, intervention-mask audits and model
+inference reruns remain pending for these new results. The interpretation is
+therefore preliminary saved-result evidence, not a completed independent replay.
+
+New receipt charges: $3.63969 + $3.72627 + $2.38650 = **$9.75246**;
+all 24 memory jobs total **$61.60833**. These are actual recorded charges,
+not quotes or a lifetime project total. No new experiment was launched here.
+
+Decision: finish the existing matrix control before selecting a new structural
+change. Keep fractional memory as a measured comparison, not the sole promising
+mechanism. Preserve every failed/qualified condition and complete deeper audits
+before using central scores as independently reproduced paper evidence.
+
+Evidence: [24-result analysis](artifacts/scc-labnotes-20260913-v1/preliminary-analysis.json),
+[safe one-time status](artifacts/scc-labnotes-20260913-v1/status-snapshot.json),
+[collection receipt](artifacts/scc-labnotes-20260913-v1/small-result-collection.json).
+
+<a id="ln-039"></a>
+### LN-039 — 2026-09-13 UTC / September 12 local: one living lab record
+
+The user required a central chronological account instead of proliferating new
+reports. Created this root `labnotes.md`, backfilled the documented research and
+operational phases, and made it the repository's current assessment and place
+for future plans, results and corrections. README is navigation; the mechanism
+target and operations guide keep their stable roles. The earlier reset is a
+dated historical snapshot. Existing reports, protocols, failures, checkpoints
+and source snapshots remain evidence at their existing paths.
+
+Updated the working instructions, navigation and machine ledger to reflect this
+workflow and the requested run observation. No scientific code, training data,
+past protocol or checkpoint was changed. The supporting index below records the
+legacy evidence corpus so consolidation does not quietly drop inconvenient
+results. New entries continue here before that index; do not start another
+rolling research/status document.
+
+Validation checked the local evidence links and unchanged hashes of 444 prior
+tracked files, including scientific source, tests, reports and protocols. The
+latest memory table was checked against the collected evaluator summaries;
+the four existing status-command tests passed. This was documentation and
+saved-result validation, not a rerun of historical model experiments.
+[Validation receipt](artifacts/scc-labnotes-20260913-v1/validation.json).
+
+The immediate unfinished work is the matrix control's result, followed by a
+specific learning/dependency decision, plus pending evidence transfer/audits.
+SCC success remains unestablished. No additional job polling or Charon check
+was performed after the single requested snapshot.
+
+## Supporting-record index
+
+This is an inventory of historical evidence, not a second current narrative.
+The chronological entries above explain the decisions. Original versioned
+protocols remain frozen; an old proposed action is not a current instruction.
+Artifact links require the evidence store and are absent from a source-only ZIP.
+
+<!-- SUPPORTING_RECORD_INDEX -->
+
+### Original proposal and earlier workflows
+
+20 preserved files; filenames retain the original version/date.
+
+- [README.md](docs/archive/README.md)
+- [CORPUS_WORKFLOW.md](docs/archive/early-workflows/CORPUS_WORKFLOW.md)
+- [DATASET_SHORTLIST.md](docs/archive/early-workflows/DATASET_SHORTLIST.md)
+- [DATA_STRATEGY.md](docs/archive/early-workflows/DATA_STRATEGY.md)
+- [FOUNDATION.md](docs/archive/early-workflows/FOUNDATION.md)
+- [01_PROGRAM_OVERVIEW.md](docs/archive/original-program/01_PROGRAM_OVERVIEW.md)
+- [02_THREAT_MODEL.md](docs/archive/original-program/02_THREAT_MODEL.md)
+- [03_FORMAL_OBJECTIVE.md](docs/archive/original-program/03_FORMAL_OBJECTIVE.md)
+- [04_SCALING_LADDER.md](docs/archive/original-program/04_SCALING_LADDER.md)
+- [05_EXPERIMENTAL_DESIGN.md](docs/archive/original-program/05_EXPERIMENTAL_DESIGN.md)
+- [06_ATTACK_AND_EVALUATION_SUITE.md](docs/archive/original-program/06_ATTACK_AND_EVALUATION_SUITE.md)
+- [07_METRICS_AND_SUCCESS_CRITERIA.md](docs/archive/original-program/07_METRICS_AND_SUCCESS_CRITERIA.md)
+- [08_ROADMAP_AND_MILESTONES.md](docs/archive/original-program/08_ROADMAP_AND_MILESTONES.md)
+- [09_OPEN_QUESTIONS_AND_FAILURE_MODES.md](docs/archive/original-program/09_OPEN_QUESTIONS_AND_FAILURE_MODES.md)
+- [10_RELATED_WORK.md](docs/archive/original-program/10_RELATED_WORK.md)
+- [11_GLOSSARY.md](docs/archive/original-program/11_GLOSSARY.md)
+- [12_RESEARCH_LOG_TEMPLATE.md](docs/archive/original-program/12_RESEARCH_LOG_TEMPLATE.md)
+- [13_FIRST_EXPERIMENT_CHECKLIST.md](docs/archive/original-program/13_FIRST_EXPERIMENT_CHECKLIST.md)
+- [00_README.md](docs/archive/status-2026-09-12/00_README.md)
+- [MECHANISM_TARGET.md](docs/archive/status-2026-09-12/MECHANISM_TARGET.md)
+
+### Historical reports and registries
+
+31 preserved files; filenames retain the original version/date.
+
+- [CORPUS_QUALIFICATION.md](reports/CORPUS_QUALIFICATION.md)
+- [COUPLING_DISCOVERY.md](reports/COUPLING_DISCOVERY.md)
+- [COUPLING_DISCOVERY_PROTOCOL.md](reports/COUPLING_DISCOVERY_PROTOCOL.md)
+- [COUPLING_DISCOVERY_REGISTRY.md](reports/COUPLING_DISCOVERY_REGISTRY.md)
+- [DEVELOPMENTAL_COUPLING_2026-09-10.md](reports/DEVELOPMENTAL_COUPLING_2026-09-10.md)
+- [MECHANISM_AUDIT_2026-09-10.md](reports/MECHANISM_AUDIT_2026-09-10.md)
+- [RETRIEVAL_RECOVERY.md](reports/RETRIEVAL_RECOVERY.md)
+- [RETRIEVAL_RECOVERY_PROTOCOL.md](reports/RETRIEVAL_RECOVERY_PROTOCOL.md)
+- [RETRIEVAL_RECOVERY_REGISTRY.md](reports/RETRIEVAL_RECOVERY_REGISTRY.md)
+- [SCC_CONSTRUCTION_SEARCH_2026-09-12.md](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md)
+- [SCC_COORDINATE_CONSTRUCTION_2026-09-12.md](reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md)
+- [SCC_DIAGNOSTICS_2026-09-10.md](reports/SCC_DIAGNOSTICS_2026-09-10.md)
+- [SCC_DISCRETE_CONSTRUCTION_2026-09-12.md](reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md)
+- [SCC_FUNCTIONAL_BASIS_2026-09-10.md](reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md)
+- [SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md)
+- [SCC_MEMORY_FACTORIAL_2026-09-12.md](reports/SCC_MEMORY_FACTORIAL_2026-09-12.md)
+- [SCC_PERSISTENT_LEARNABILITY_2026-09-12.md](reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md)
+- [SCC_PERSISTENT_REFERENCE_2026-09-12.md](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md)
+- [SCC_PROJECTED_CONSTRUCTION_2026-09-12.md](reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md)
+- [SCC_RECOVERED_CAPABILITY_2026-09-10.md](reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md)
+- [SCC_RECURRENT_STATE_2026-09-10.md](reports/SCC_RECURRENT_STATE_2026-09-10.md)
+- [SCC_REVIEW_RESPONSE_2026-09-10.md](reports/SCC_REVIEW_RESPONSE_2026-09-10.md)
+- [SCC_SHARED_PREDICATE_2026-09-10.md](reports/SCC_SHARED_PREDICATE_2026-09-10.md)
+- [SCC_SHARED_READER_2026-09-10.md](reports/SCC_SHARED_READER_2026-09-10.md)
+- [STORAGE_AUDIT_2026-09-10.md](reports/STORAGE_AUDIT_2026-09-10.md)
+- [STRONG_ATTACK_PROTOCOL.md](reports/STRONG_ATTACK_PROTOCOL.md)
+- [STRONG_ATTACK_REGISTRY.md](reports/STRONG_ATTACK_REGISTRY.md)
+- [STRONG_ATTACK_RESULTS.md](reports/STRONG_ATTACK_RESULTS.md)
+- [TOPOLOGY_FOLLOWUP.md](reports/TOPOLOGY_FOLLOWUP.md)
+- [TOPOLOGY_FORMULATION.md](reports/TOPOLOGY_FORMULATION.md)
+- [TOPOLOGY_TRAINING_PROTOCOL.md](reports/TOPOLOGY_TRAINING_PROTOCOL.md)
+
+### Frozen experiment protocols and expected results
+
+49 preserved files; filenames retain the original version/date.
+
+- [DEVELOPMENTAL_COUPLING_V1.md](protocols/DEVELOPMENTAL_COUPLING_V1.md)
+- [DEVELOPMENTAL_COUPLING_V2.md](protocols/DEVELOPMENTAL_COUPLING_V2.md)
+- [DEVELOPMENTAL_COUPLING_V3.md](protocols/DEVELOPMENTAL_COUPLING_V3.md)
+- [SCC_ALIGNMENT_CONSOLIDATED_HELDOUT_V1.md](protocols/SCC_ALIGNMENT_CONSOLIDATED_HELDOUT_V1.md)
+- [SCC_ALIGNMENT_CONSOLIDATED_REPLAY_V2.md](protocols/SCC_ALIGNMENT_CONSOLIDATED_REPLAY_V2.md)
+- [SCC_ARCHITECTURE_PORTFOLIO_V1.md](protocols/SCC_ARCHITECTURE_PORTFOLIO_V1.md)
+- [SCC_AUTHORIZED_REPLAY_PROBE_V1.md](protocols/SCC_AUTHORIZED_REPLAY_PROBE_V1.md)
+- [SCC_CONSOLIDATED_REPLAY_ABLATION_V1.md](protocols/SCC_CONSOLIDATED_REPLAY_ABLATION_V1.md)
+- [SCC_COORDINATE_CONSTRUCTION_V1.md](protocols/SCC_COORDINATE_CONSTRUCTION_V1.md)
+- [SCC_DEVELOPMENTAL_DEPENDENCY_AUDIT_V1.md](protocols/SCC_DEVELOPMENTAL_DEPENDENCY_AUDIT_V1.md)
+- [SCC_DIAGNOSTICS_V1.md](protocols/SCC_DIAGNOSTICS_V1.md)
+- [SCC_DISCRETE_CONSTRUCTION_V1.md](protocols/SCC_DISCRETE_CONSTRUCTION_V1.md)
+- [SCC_FULL_GRADIENT_CONTINUATION_V1.md](protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md)
+- [SCC_FULL_GRADIENT_PILOT_V1.md](protocols/SCC_FULL_GRADIENT_PILOT_V1.md)
+- [SCC_FUNCTIONAL_BASIS_V1.md](protocols/SCC_FUNCTIONAL_BASIS_V1.md)
+- [SCC_LEARNED_BOTTLENECK_SCREEN_V1.md](protocols/SCC_LEARNED_BOTTLENECK_SCREEN_V1.md)
+- [SCC_LONG_RECOVERY_COUPLING_V1.md](protocols/SCC_LONG_RECOVERY_COUPLING_V1.md)
+- [SCC_MEMORY_FACTORIAL_V1.md](protocols/SCC_MEMORY_FACTORIAL_V1.md)
+- [SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md](protocols/SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md)
+- [SCC_NOR_BASIS_V1.md](protocols/SCC_NOR_BASIS_V1.md)
+- [SCC_PERSISTENT_LEARNABILITY_V1.md](protocols/SCC_PERSISTENT_LEARNABILITY_V1.md)
+- [SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md](protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md)
+- [SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md](protocols/SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md)
+- [SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md](protocols/SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md)
+- [SCC_PERSISTENT_REFERENCE_V1.md](protocols/SCC_PERSISTENT_REFERENCE_V1.md)
+- [SCC_PILOT_RESOURCE_COMPLETION_V1.md](protocols/SCC_PILOT_RESOURCE_COMPLETION_V1.md)
+- [SCC_PROJECTED_CONSTRUCTION_V1.md](protocols/SCC_PROJECTED_CONSTRUCTION_V1.md)
+- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V1.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V1.md)
+- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V2.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V2.md)
+- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md)
+- [SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V1.md](protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V1.md)
+- [SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md](protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md)
+- [SCC_RECOVERED_DEVELOPMENTAL_PILOT_V1.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_PILOT_V1.md)
+- [SCC_RECOVERED_DEVELOPMENTAL_PILOT_V2.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_PILOT_V2.md)
+- [SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V1.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V1.md)
+- [SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V2.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V2.md)
+- [SCC_RECOVERED_HELDOUT_CHRONOLOGY_2026-09-11.md](protocols/SCC_RECOVERED_HELDOUT_CHRONOLOGY_2026-09-11.md)
+- [SCC_RECOVERED_HELDOUT_CONFIRMATION_V1.md](protocols/SCC_RECOVERED_HELDOUT_CONFIRMATION_V1.md)
+- [SCC_RECURRENT_STATE_V1.md](protocols/SCC_RECURRENT_STATE_V1.md)
+- [SCC_REPAIR_ROUND_V1.md](protocols/SCC_REPAIR_ROUND_V1.md)
+- [SCC_SEAM_INTACT_CALIBRATION_V1.md](protocols/SCC_SEAM_INTACT_CALIBRATION_V1.md)
+- [SCC_SEAM_POST_QUALIFICATION_V1.md](protocols/SCC_SEAM_POST_QUALIFICATION_V1.md)
+- [SCC_SEAM_POST_QUALIFICATION_V2.md](protocols/SCC_SEAM_POST_QUALIFICATION_V2.md)
+- [SCC_SELECTIVE_CONSTRUCTION_SCREEN_V1.md](protocols/SCC_SELECTIVE_CONSTRUCTION_SCREEN_V1.md)
+- [SCC_SHARED_PREDICATE_V1.md](protocols/SCC_SHARED_PREDICATE_V1.md)
+- [SCC_SHARED_READER_V1.md](protocols/SCC_SHARED_READER_V1.md)
+- [SCC_TRANSITION_TIMING_V1.md](protocols/SCC_TRANSITION_TIMING_V1.md)
+- [SCC_TRANSITION_V1_EXPECTED.json](protocols/SCC_TRANSITION_V1_EXPECTED.json)
+- [SCC_VARIED_CORE_COUPLING_V1.md](protocols/SCC_VARIED_CORE_COUPLING_V1.md)
+
+### Artifact readouts, implementation records and readiness documents
+
+59 preserved files; filenames retain the original version/date.
+
+- [scc-bottleneck-implementation-20260911-v1/IMPLEMENTATION.md](artifacts/scc-bottleneck-implementation-20260911-v1/IMPLEMENTATION.md)
+- [scc-bottleneck-implementation-20260911-v1/final-protocol.md](artifacts/scc-bottleneck-implementation-20260911-v1/final-protocol.md)
+- [scc-bottleneck-readout-20260911-v1/READOUT.md](artifacts/scc-bottleneck-readout-20260911-v1/READOUT.md)
+- [scc-charon-and-runtime-20260912-v1/READOUT.md](artifacts/scc-charon-and-runtime-20260912-v1/READOUT.md)
+- [scc-charon-integration-20260912-v1/READOUT.md](artifacts/scc-charon-integration-20260912-v1/READOUT.md)
+- [scc-combined-status-20260912T212358Z/READOUT.md](artifacts/scc-combined-status-20260912T212358Z/READOUT.md)
+- [scc-combined-status-20260912T221236Z/READOUT.md](artifacts/scc-combined-status-20260912T221236Z/READOUT.md)
+- [scc-combined-status-20260912T223206Z/READOUT.md](artifacts/scc-combined-status-20260912T223206Z/READOUT.md)
+- [scc-construction-status-20260912T063956Z/GMAN_MANUAL.md](artifacts/scc-construction-status-20260912T063956Z/GMAN_MANUAL.md)
+- [scc-construction-status-20260912T082846Z/READOUT.md](artifacts/scc-construction-status-20260912T082846Z/READOUT.md)
+- [scc-construction-status-20260912T084640Z/READOUT.md](artifacts/scc-construction-status-20260912T084640Z/READOUT.md)
+- [scc-construction-status-20260912T085740Z/READOUT.md](artifacts/scc-construction-status-20260912T085740Z/READOUT.md)
+- [scc-construction-status-20260912T193327Z/READOUT.md](artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
+- [scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-dependency-readout-20260911-v1/READOUT.md](artifacts/scc-dependency-readout-20260911-v1/READOUT.md)
+- [scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-full-recovery-readout-20260912-v1/READOUT.md](artifacts/scc-full-recovery-readout-20260912-v1/READOUT.md)
+- [scc-full-recovery-status-20260912T032902Z/STATUS.md](artifacts/scc-full-recovery-status-20260912T032902Z/STATUS.md)
+- [scc-launch-repair-20260912-v1/READOUT.md](artifacts/scc-launch-repair-20260912-v1/READOUT.md)
+- [scc-long-coupling-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-long-coupling-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-master-document-20260910-v1/review-notes.md](artifacts/scc-master-document-20260910-v1/review-notes.md)
+- [scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-memory-status-20260912T202842Z/READOUT.md](artifacts/scc-memory-status-20260912T202842Z/READOUT.md)
+- [scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md](artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md)
+- [scc-pilot-20260910-v2-publication/literature-positioning.md](artifacts/scc-pilot-20260910-v2-publication/literature-positioning.md)
+- [scc-pilot-20260910-v2-publication/report-draft-v2.md](artifacts/scc-pilot-20260910-v2-publication/report-draft-v2.md)
+- [scc-pilot-20260910-v2-publication/report-draft.md](artifacts/scc-pilot-20260910-v2-publication/report-draft.md)
+- [scc-pilot-20260910-v2-publication/report-template-v3.md](artifacts/scc-pilot-20260910-v2-publication/report-template-v3.md)
+- [scc-pilot-20260910-v2-publication/review-guide-draft.md](artifacts/scc-pilot-20260910-v2-publication/review-guide-draft.md)
+- [scc-pilot-20260910-v2-readiness/protocol.md](artifacts/scc-pilot-20260910-v2-readiness/protocol.md)
+- [scc-pilot-status-20260911-v1/STATUS.md](artifacts/scc-pilot-status-20260911-v1/STATUS.md)
+- [scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-projected-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-recovered-capability-20260910-v1-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v1-controls/protocol.md)
+- [scc-recovered-capability-20260910-v1-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v1-signal/protocol.md)
+- [scc-recovered-capability-20260910-v2-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v2-controls/protocol.md)
+- [scc-recovered-capability-20260910-v2-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v2-signal/protocol.md)
+- [scc-recovered-capability-20260910-v3-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v3-controls/protocol.md)
+- [scc-recovered-capability-20260910-v3-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v3-signal/protocol.md)
+- [scc-recovered-capability-20260910-v3-trajectory/protocol.md](artifacts/scc-recovered-capability-20260910-v3-trajectory/protocol.md)
+- [scc-recovered-capability-20260910-v3-trajectory-v2/protocol.md](artifacts/scc-recovered-capability-20260910-v3-trajectory-v2/protocol.md)
+- [scc-repair-readout-20260911-partial-v1/READOUT.md](artifacts/scc-repair-readout-20260911-partial-v1/READOUT.md)
+- [scc-repair-readout-20260912-v1/READOUT.md](artifacts/scc-repair-readout-20260912-v1/READOUT.md)
+- [scc-repair-round-20260911-v1/IMPLEMENTATION.md](artifacts/scc-repair-round-20260911-v1/IMPLEMENTATION.md)
+- [scc-research-reset-20260912-v1/READOUT.md](artifacts/scc-research-reset-20260912-v1/READOUT.md)
+- [scc-seam-post-20260911-v1-readiness/protocol.md](artifacts/scc-seam-post-20260911-v1-readiness/protocol.md)
+- [scc-seam-post-20260911-v2-readiness/protocol.md](artifacts/scc-seam-post-20260911-v2-readiness/protocol.md)
+- [scc-selective-readout-20260911-v1/READOUT.md](artifacts/scc-selective-readout-20260911-v1/READOUT.md)
+- [scc-status-reconciliation-20260912T224630Z/READOUT.md](artifacts/scc-status-reconciliation-20260912T224630Z/READOUT.md)
+- [scc-transition-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-transition-implementation-20260912-v1/IMPLEMENTATION.md)
+- [scc-transition-readout-20260912-v1/READOUT.md](artifacts/scc-transition-readout-20260912-v1/READOUT.md)
+- [scc-varied-coupling-implementation-20260911-v1/IMPLEMENTATION.md](artifacts/scc-varied-coupling-implementation-20260911-v1/IMPLEMENTATION.md)
+- [scc-varied-readout-20260911-v1/READOUT.md](artifacts/scc-varied-readout-20260911-v1/READOUT.md)
+- [scc-varied-status-20260911T201902Z/STATUS.md](artifacts/scc-varied-status-20260911T201902Z/STATUS.md)
+- [scc-varied-status-20260911T202927Z/STATUS.md](artifacts/scc-varied-status-20260911T202927Z/STATUS.md)
+- [scc-varied-status-20260911T204528Z/STATUS.md](artifacts/scc-varied-status-20260911T204528Z/STATUS.md)
+- [scc-varied-status-20260911T211212Z/STATUS.md](artifacts/scc-varied-status-20260911T211212Z/STATUS.md)
+- [scc-varied-status-20260911T213451Z/STATUS.md](artifacts/scc-varied-status-20260911T213451Z/STATUS.md)
+
+### Earlier shareable deliverables
+
+3 preserved files; filenames retain the original version/date.
+
+- [SCC_Master_Document.docx](deliverables/scc-master-20260910-v1/SCC_Master_Document.docx)
+- [SCC_Master_Document.md](deliverables/scc-master-20260910-v1/SCC_Master_Document.md)
+- [SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.docx](reports/SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.docx)
+
+### Machine records and source navigation
+
+- [Exact current GPU ledger](artifacts/developmental-current-status.json): registered IDs, observations, receipts and result paths; contains earlier completed controls as well as this batch.
+- [Code/document catalog](docs/catalog.json): source entry points and preserved protocol/report inventory.
+- [Operations guide](docs/OPERATIONS.md): status commands, evidence handling and restoration procedures.
+- [Artifact store](artifacts/) and [local runs](runs/): original parents, failures, checkpoints, data, source snapshots, training and prediction logs. These directories are intentionally excluded from source-only transfers.
+- [This consolidation's evidence coverage](artifacts/scc-labnotes-20260913-v1/document-coverage.json) and [pre-edit tracked-file hashes](artifacts/scc-labnotes-20260913-v1/before-tracked-sha256.json): audit trail for the backfill.
+
+New chronological entries go **above this index**. Do not create a new report to keep this index growing.

@@ -1,6 +1,6 @@
 # Historical document archive
 
-Use [the research reset](../RESEARCH_RESET.md) for current decisions. These files
+Use [labnotes.md](../../labnotes.md) for the chronology and current decisions. These files
 preserve the original proposal, early implementation workflows, and the long
 status chronologies that previously filled the root README and mechanism target.
 
