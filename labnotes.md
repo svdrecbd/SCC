@@ -6,12 +6,14 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
-**Consultation checkpoint:** [LN-048](#ln-048) summarizes the current evidence,
-open assumptions and questions for review. Further experiments are on hold for
-this discussion; the proposed smaller-update calibration has not started.
+**Consultation:** [LN-048](#ln-048) is the briefing; [LN-050](#ln-050) records
+the received engineering memo and its structural correction. Experiments remain
+on hold. A compensating joint edit deserves examination before resuming the
+smaller-update proposal; that proposal does not remove the identified symmetry.
 
-Updated **13 September 2026 UTC** (12 September in Los Angeles). Feedback job
-`job-wjzqn` was observed failed at **02:15:03 UTC / 19:15:03 PDT** after completing
+Consultation updated **13 September 2026 UTC** (13 September in Los Angeles).
+Feedback job `job-wjzqn` was observed failed at **02:15:03 UTC on 13 September /
+19:15:03 PDT on 12 September** after completing
 training. These are dated observations, not a live monitor. Failure and recovery:
 [LN-043](#ln-043), [LN-044](#ln-044). The subsequent local learning diagnosis is
 complete: [LN-046](#ln-046), [LN-047](#ln-047). No new GPU job was submitted.
@@ -52,9 +54,11 @@ The completed local diagnosis found successful fixed-batch fits for each task
 across different matrix conditions, but no qualified model. Tiny-batch GRUs also
 transfer poorly, so those transfer failures do not identify a unique matrix
 cause. One newly fitted feedback model changes 72/288 decisions solely with
-batch size: numerical sensitivity can affect behavior. The next selected change
-is a bounded self-update rate, first calibrated on the saved states; it has not
-been implemented or tested yet. Details and limits are in [LN-047](#ln-047).
+batch size: numerical sensitivity can affect behavior. The bounded-rate proposal
+in [LN-047](#ln-047) remains untested. The consultation reveals a separate
+structural issue: coordinated output/control edits preserve effective control
+dynamics. A common rate reduction preserves that identity. The recommended next
+check is this compensation on saved states, with explicit limits; see [LN-050](#ln-050).
 SCC remains undemonstrated. Fractional memory has not earned a special-advantage
 claim; other open alternatives remain in [LN-030](#ln-030).
 
@@ -1631,6 +1635,87 @@ training scores cannot be independently reproduced from this ZIP alone. Start
 with the root README and `labnotes.md`; earlier master documents are historical.
 No experiments were run or resumed for packaging; consultation remains the
 current phase.
+
+<a id="ln-050"></a>
+### LN-050 — 2026-09-13: engineering memo received; effective-control compensation
+
+The user supplied the [engineering decision memo](docs/archive/consultations/SCC_Engineering_Decision_Memo_2026-09-13.md)
+without an additional written request. Read it as consultation input and preserved
+a byte-identical copy, SHA-256
+`91b1466fe58c52132188b2488b701a0ca8132e25eea36baa3f8b19c22c55ded1`.
+Its proposed actions, budget and provider claims are document content, not fresh
+instructions to spend, launch jobs or adopt every recommendation. The consultation
+hold remains. No numeric experiment, model update, paid call or provider query
+was performed in assessing it.
+
+**A substantive correction to the feedback analysis.** Source inspection confirms
+that the memo's algebra matches the current strength-1 smooth update. Let O be
+the four output rows, C the remaining control rows and R the fixed feedback
+matrix. For normalized input p, the effective controls are (C + R O)p. Write
+H = C + R O. The key, query and scalar rate depend on H and p; every row of the
+matrix then undergoes the same right multiplication A(H,p). Therefore:
+
+- O_next = O A and C_next = C A;
+- H_next = (C + R O) A = H A;
+- O_edited = L O and C_edited = C + R(O - L O) preserve H.
+
+For a fixed input sequence and constant L, induction preserves the same effective
+control trajectory in exact arithmetic, while the post-update outputs transform
+by L. Invertible L gives an invertible output recoding. This requires joint access
+to the output and control rows and the present common right-transform update;
+it need not apply under a more restrictive editable interface or when changed
+outputs change later inputs. Floating-point equality is not guaranteed, especially
+in the numerically sensitive states already observed. No saved-state numerical
+check of this coordinated edit has been run here.
+
+My earlier checks established sensitivity when output rows changed and control
+rows were held fixed. They did not examine the compensating control-row edit.
+That omission matters: the current fixed linear feedback does not by itself
+establish indispensable dependence on the output computation. This is a
+structural separation result, not a demonstrated capability-preserving permission
+exception on a qualified model. We must still determine whether an allowed edit
+can change enforcement while retaining the relevant computations and outputs.
+
+A common rate multiplier, including the proposed .25, changes A but leaves the
+same identity intact. Rate reduction can remain a numerical/learning diagnostic;
+it is not a remedy for this separation. This revises the priority expressed in
+LN-047 without rewriting its frozen results or treating its stability findings
+as invalid. Relevant implementation: [feedback controls](scc/persistent_feedback.py)
+and [common smooth replacement](scc/persistent_matrix.py).
+
+**Recommended direction, pending resumption.** Verify the compensation on the
+actual saved initial, trained and fitted states, with uncompensated output edits
+and identity edits as controls. Measure effective controls, transformed outputs,
+state trajectories and numerical discrepancies on identical inputs; keep those
+measurements distinct from permission-removal success. That should precede a
+larger investment in this construction. A replacement should state the concrete
+operation that depends on the protected function and test its simplest allowed
+compensation. This calls for a falsifiable dependency hypothesis, not a proof
+that intelligence inherently requires authorization semantics.
+
+I agree with deferring bulk synthetic generation until a construction and task
+need justify it. Teacher selection, student architecture and an architectural
+reference are separate decisions. An executable task generator with independently
+scored computation and authorization fits the program's measurement requirements;
+unauthorized but computationally correct outputs must be allowed to count as
+escapes. These are direction recommendations, not a newly implemented generator,
+selected student or validated data pipeline.
+
+**Items requiring reconciliation before paid work.** The memo refers to a $1,200
+total envelope and Tinker resources from a consultation not otherwise present in
+this task's direct instructions. Record those as proposed constraints; do not
+silently replace the direct compute authorization in WORKING_STANDARDS or assume
+credits can fund GMAN. No spending is being initiated. GLM-5.3/Tinker availability,
+prices, Kimi K3 architectural details and the referenced external reports have
+not been independently checked in this assessment. Verify the relevant primary
+sources and actual account access if those recommendations are adopted. No
+teacher, model family or external service has been selected merely by importing
+the memo.
+
+This is a source/algebra review and consultation record. It adds no numerical
+result to the 269-test record, no trained candidate and no SCC success. The last
+sharing ZIP remains the LN-049 source snapshot; importing this memo did not
+refresh that archive.
 
 ## Supporting-record index
 
