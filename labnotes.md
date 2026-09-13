@@ -9,7 +9,8 @@ This replaces the practice of creating a new narrative document for every update
 Updated **13 September 2026 UTC** (12 September in Los Angeles). Feedback job
 `job-wjzqn` was observed failed at **02:15:03 UTC / 19:15:03 PDT** after completing
 training. These are dated observations, not a live monitor. Failure and recovery:
-[LN-043](#ln-043), [LN-044](#ln-044); original plan: [LN-041](#ln-041).
+[LN-043](#ln-043), [LN-044](#ln-044). The subsequent local learning diagnosis is
+complete: [LN-046](#ln-046), [LN-047](#ln-047). No new GPU job was submitted.
 
 **A working SCC mechanism has not been demonstrated.** We have tested learned
 coupling candidates, and they have allowed protection-removing edits while
@@ -25,6 +26,7 @@ reference is useful progress, not SCC activation.
 | GRU reference development | 3/3 local | 1 final recipe | All 2,304 continuous validation requests correct, one development seed |
 | Matrix optimization control, `job-g5a56` | 1/1 GPU complete | 0 | Extra training still leaves acquisition and persistence failures |
 | Output-feedback matrix, `job-wjzqn` | 12k updates complete; GPU job failed evaluation validation | 0 | Recovered decisions remain poor; output feedback alone did not resolve ordinary learning |
+| Local learning diagnosis | 12/12 fits complete; 18 saved checkpoints inspected | Not a qualification experiment | Some fixed batches can be fitted; transfer and numerical stability remain unresolved |
 
 The registered GPU batch is **71 succeeded, one failed**, with none active in
 the saved observations. This is not the lifetime project total. The three local reference runs are separate. Completed memory
@@ -41,13 +43,15 @@ continuous diagnostic conditions agree on the 2,304 decisions. The evaluator now
 preserves discrepancy measurements and all remaining modes before reporting
 failure. No replacement GPU run was submitted and no training was repeated.
 
-The next research decision is which remaining restriction prevents even fresh
-request acquisition; the diagnostic sequence is recorded in [LN-045](#ln-045). Use these checkpoints to localize the failure before a
-new single-change learning experiment; output feedback by itself is no longer
-an untested fix. Long-stream numerical stability also needs a separate gate.
-No protection-removal test on this unqualified candidate can establish SCC.
-Fractional memory has not earned a special-advantage claim. Open alternatives
-remain in [LN-030](#ln-030); this result does not exhaust them.
+The completed local diagnosis found successful fixed-batch fits for each task
+across different matrix conditions, but no qualified model. Tiny-batch GRUs also
+transfer poorly, so those transfer failures do not identify a unique matrix
+cause. One newly fitted feedback model changes 72/288 decisions solely with
+batch size: numerical sensitivity can affect behavior. The next selected change
+is a bounded self-update rate, first calibrated on the saved states; it has not
+been implemented or tested yet. Details and limits are in [LN-047](#ln-047).
+SCC remains undemonstrated. Fractional memory has not earned a special-advantage
+claim; other open alternatives remain in [LN-030](#ln-030).
 
 Charon's last recorded state is unreachable after reboot; this update did not
 check it. Bulk archive migration and its GPU runtime remain unverified.
@@ -1311,6 +1315,194 @@ abilities, then inexpensive reinterpretation and bounded repair with permission
 checked again. A promising destructive response would still need replication
 and causal controls. The current learning diagnostics neither establish nor
 refute that response. No new GPU job or provider query was made for this decision.
+
+<a id="ln-046"></a>
+### LN-046 — 2026-09-13: frozen local learning-localization experiment
+
+**Purpose and boundary.** Execute LN-045 using the preserved feedback, no-feedback
+optimization-control and GRU checkpoints. This is post-hoc development diagnosis,
+with no protection-removal trigger, coupling objective or repair procedure. All
+outputs are diagnostic; none can qualify an SCC mechanism or replace the original
+18-cell intact gate. Original model/transition code and all parents remain unchanged.
+
+**Data and controls.** Keep width 128, FP32, the original 19-token interface and
+anchor encoding for matrices. Use data seed 17313001. Enumerate existing train and
+validation cores for active lengths 2 and 4, respecting the original hash split;
+do not inspect the test split. For length-4 fitting, select at most eight training
+cores per answer, downsampling each answer to the smallest available class count:
+24 lookup, 12 parity and 24 sum3 examples, ungated/original with requester=owner=0.
+These fixed examples are reused each update. They are optimization controls, not
+held-out evaluation. Validation at lengths 2/4 uses the available distinct cores;
+at lengths 8/12 select 16 distinct validation cores per algorithmic answer. Expand
+validation cores across all three contexts and both layouts, with deterministic
+permission tags. Save the exact examples, unique-core counts, label counts and
+majority baselines. Two-input parity has one validation core and four-input parity
+only two, both answer zero; neither supports a generalization claim.
+
+**Saved-state map.** Evaluate initial, 2k, 4k, 6k, 9k and final checkpoints of each
+of the three references on the same fresh-request panel. For each final model,
+compare fresh versus two continuous streams of 144 original full-length requests
+from the previously used validation generator. Record FP32 batch2, FP32 batch1
+and FP64 batch2 discrepancies; the existing 1e-4 tolerance stays fixed. Failures
+are reported without discarding other diagnostics. Trace 19 ticks on one pair
+per family at active lengths 4/12: change the queried digit for lookup and first
+digit for parity/sum3, which changes the benign answer. Save state difference,
+output difference, predictions and (for matrices) update norm, gate magnitude
+and address entropy. Sensitivity is not proof of retained answer information.
+
+**Fixed-batch fitting.** Twelve independent local conditions: each of the three
+families from original feedback initialization, final feedback checkpoint, final
+no-feedback control, and original GRU initialization. Load each parent unchanged
+with a fresh optimizer; only the matrix or normal GRU parameters are trainable.
+Feedback wiring stays frozen at strength 1. Run 1,500 Adam updates per condition,
+LR .003 for 1,000 then .0003 for 500, norm clip 1, no weight decay, clean state
+per training example. Use only the final endpoint; no selection on validation.
+Record every loss, accuracy, per-block gradient norm and update count. Diagnostic
+fit success requires 100% fixed-batch accuracy and mean NLL <= .05. Report failures
+as failures of this bounded recipe, not impossibility. Score each endpoint on
+its family's fresh validation panel and two 144-request streams sampled from
+that family's ungated/original length-8/12 validation pool; also score the exact
+same requests fresh. Record numerical discrepancies separately from decisions.
+
+**Resources and validation.** Two CPU threads, no GPU submission, at most 120
+seconds per fit condition, 1,800 seconds for the whole process and 200 MiB new
+outputs. Save parent hashes, frozen source/runner/plan/data, final-only diagnostic
+checkpoints, hash-chained training logs and raw predictions. A wall-limited
+condition is incomplete, not a failed completed fit. Before full execution,
+validate the independent token oracle and split/label coverage, finite-difference
+gradients, state continuation and a disposable two-update pipeline fixture.
+Freeze the script before the multi-condition process starts. Independently
+rescore all emitted predictions and verify chains, counts, parent preservation
+and numerical summaries afterward. No changes to scientific source during it.
+
+**Decision rule.** Use the combined fit/held-out/persistence map to choose one
+specific next change. Bad fixed-batch fits point first to optimization or the
+state update; good fits with poor held-out results point to algorithm acquisition
+or generalization; fresh competence with poor continuous use points to persistence.
+The GRU is a learnability reference with separate permanent weights, not an SCC
+construction. Re-derive any destruction invariant before adopting a richer
+transition. Record a result-based amendment before any additional experiment;
+this plan does not authorize an automatic parameter sweep.
+
+
+**Pre-run data-coverage amendment.** The first disposable fixture stopped during
+sampling, before any checkpoint evaluation or fitting: eight-input parity has
+15 distinct validation cores for answer zero and 17 for answer one. Requiring
+16 of each was impossible. Preserve fixture-v1 and its failed test log. Enumerate
+that finite set and select 15 distinct cores per answer with the declared seed;
+keep 16 per answer for other length-8/12 sets. This changes diagnostic coverage,
+not a performance threshold. No model scores informed this amendment. The
+corrected fixture must pass before full execution.
+
+<a id="ln-047"></a>
+### LN-047 — 2026-09-13: fitting works selectively; generalization and stability remain open
+
+**Execution and evidence.** Completed all twelve declared local conditions in
+245.61 seconds total, each with all 1,500 updates: 18,000 updates verified. The
+saved-state map covers 18 initial/intermediate/final checkpoints. Independent
+token-oracle rescoring checked 58,440 predictions; all 69 scientific-source files
+and 19 parent checkpoint/wiring files passed integrity checks. No GPU job was
+submitted, no original checkpoint was changed and no long-run provider polling
+occurred. Whole-turn outputs, including preserved fixtures, are about 51.5 MB.
+
+The first data-preparation fixture failed before any model evaluation or update
+because the requested eight-input parity validation class was too large; retain
+it and the original failed tests. LN-046's pre-run amendment corrected coverage.
+Fixture v2 completed and its independent audit checked 15,252 predictions and
+eight disposable updates. Directional-derivative absolute errors were 2.25e-11
+and 2.02e-12; split continuation was exact. Ten targeted tests and all **269 tests**
+passed. These checks validate the diagnostic implementation, not SCC.
+
+**Fixed-batch fitting results.** Every row is a separate condition for each task;
+no single matrix was shown to master all three together. Accuracy below is on
+12 parity or 24 lookup/sum3 training examples, with a fresh state per example.
+The endpoint was fixed at update 1,500; no validation selection or early stopping.
+
+| Starting point | Lookup accuracy / NLL | Parity accuracy / NLL | Sum3 accuracy / NLL |
+|---|---:|---:|---:|
+| Feedback, original initialization | 100% / .00593 | 66.67% / .56968 | 100% / .04419 |
+| Feedback, saved 12k checkpoint | 100% / .08185 | 100% / .01226 | 91.67% / .23964 |
+| No-feedback control, saved 12k checkpoint | 100% / .08892 | 100% / .00741 | 91.67% / .23274 |
+| GRU, original initialization | 100% / .00006 | 100% / .00006 | 100% / .00007 |
+
+The declared 100%-accuracy/NLL<=.05 fit criterion passed in **4/9 matrix
+conditions and 3/3 GRU conditions**. Two additional matrix lookup conditions got
+every answer right but missed the NLL threshold. They must not be described as
+unable to fit the answers. Across different conditions the matrix can fit each
+of the three example sets; original-initialization parity and saved-checkpoint
+sum3 remain optimization failures under this particular budget. There is no
+proof of architecture-wide inability, and fitting these few examples is not
+evidence of learning the general algorithms.
+
+**Transfer and persistence.** No matrix fitting endpoint reaches the original
+competence requirements. The successful fresh-initialization lookup fit scores
+43.75% and 39.58% on the balanced length-8 and length-12 ungated/original panels;
+the analogous sum3 fit scores 52.08% and 39.58%. The successful saved-feedback
+parity fit scores 23.33% and 50%. These are small diagnostic panels, with permission
+and reordered-layout results saved separately. Short parity validation remains
+degenerate and cannot establish generalization.
+
+The tiny-batch GRU controls also transfer poorly to longer problems (length-12
+ungated/original: lookup 41.67%, parity 53.125%, sum3 41.67%). Thus poor transfer
+from this deliberately tiny fitting set is not a matrix-specific diagnosis and
+does not justify concluding that the update rule alone prevents generalization.
+The previously fully trained GRU, however, scores 100% on the new fresh panel
+and the two original 144-request continuous streams. It remains a useful
+positive reference for the full task interface and training pipeline.
+
+Matched fresh/continuous requests separate persistence from acquisition. For
+example, the fresh-initialization sum3 fit scores 47.92% fresh versus 29.51%
+continuous on its sampled streams. These repeated samples are diagnostics, not
+288 independent cores or full-suite qualification. Some other conditions do
+not deteriorate, so persistence failure is not universal across every fit.
+
+**Numerical sensitivity can change decisions.** Seven of nine fitted matrix
+conditions fail at least one batch1/FP64 comparison at the unchanged 1e-4
+threshold. In the saved-feedback lookup fit, FP32 batch1 changes **72/288 answers**
+relative to FP32 batch2; FP64 changes 79/288. Maximum logit discrepancies are
+about 9.94 and 10.03 respectively. Its continuous score is execution-dependent
+and must not be treated as a stable capability estimate. The original saved
+feedback checkpoint still has zero decision disagreements in these comparisons;
+the behavioral divergence is a result for the newly fitted condition. Two
+freshly fitted GRU conditions also miss the logit tolerance, with no changed
+answers. The fully trained GRU passes both checks. Do not waive a numerical gate
+because either a model family or a different checkpoint passed it.
+
+**What the traces establish.** Changing a relevant payload digit changes the
+final matrix state and output on all six sampled pairs; the computation is not
+entirely insensitive to those inputs. The sampled feedback update gates average
+about .957–.971 over each 19-token request; control gates average .983–.989.
+These are six paths, not a whole-distribution estimate. Their state differences
+do not establish decodable algorithm answers, and their logit magnitudes cannot
+be compared with GRU magnitudes as an information measure. All altered probes
+fall in the train partition; none accessed test-partition inputs. The directional
+gradient checks and successful fits also rule out a universally disconnected
+training path, not every optimization pathology.
+
+**Next single-change candidate selected.** Test a bounded smooth self-update
+rate, beta_effective = .25 * sigmoid(rate), against the unchanged rate, first as
+an evaluation/gradient calibration on these saved states. This is a hypothesis
+about the observed sensitivity under strong writes, not an established cause
+of all prior learning failures. It changes one part of the update while retaining
+output feedback, the shared matrix and absence of a runtime clean template.
+The conditional right-transform form and all-zero absorbing state remain; that
+is not a proof of irreversible destruction. Smaller writes might also impair
+learning, which is why both task behavior and stability must be measured.
+
+Do not launch a longer training campaign on the strength of the tiny-batch fits.
+If rate calibration is sound, compare the bounded-rate model on diverse examples
+under the unchanged full task gates before considering a curriculum change.
+That is a separate follow-up requiring a frozen entry and fixtures; no rate
+change was implemented or run here. The current diagnosis has narrowed the
+problem, not isolated a unique root cause. No positive SCC result, cognitive
+destruction or protection-removal event has been demonstrated.
+
+Evidence: [frozen plan with pre-run amendment](artifacts/scc-learning-localization-20260913-v1/plan-v2.md),
+[full result](artifacts/scc-learning-localization-20260913-v1/full-v1/result.json),
+[independent audit](artifacts/scc-learning-localization-20260913-v1/full-v1-audit.json),
+[analysis](artifacts/scc-learning-localization-20260913-v1/analysis.json),
+[fixture audit](artifacts/scc-learning-localization-20260913-v1/fixture-v2-audit.json),
+[test log](artifacts/scc-learning-localization-20260913-v1/tests-full.log).
 
 ## Supporting-record index
 
