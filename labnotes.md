@@ -6,6 +6,10 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Consultation checkpoint:** [LN-048](#ln-048) summarizes the current evidence,
+open assumptions and questions for review. Further experiments are on hold for
+this discussion; the proposed smaller-update calibration has not started.
+
 Updated **13 September 2026 UTC** (12 September in Los Angeles). Feedback job
 `job-wjzqn` was observed failed at **02:15:03 UTC / 19:15:03 PDT** after completing
 training. These are dated observations, not a live monitor. Failure and recovery:
@@ -29,7 +33,8 @@ reference is useful progress, not SCC activation.
 | Local learning diagnosis | 12/12 fits complete; 18 saved checkpoints inspected | Not a qualification experiment | Some fixed batches can be fitted; transfer and numerical stability remain unresolved |
 
 The registered GPU batch is **71 succeeded, one failed**, with none active in
-the saved observations. This is not the lifetime project total. The three local reference runs are separate. Completed memory
+the saved observations. This is not the lifetime project total. The three local reference runs and twelve local diagnostic conditions are
+separate. Completed memory
 summaries have been collected; whole archives and raw predictions have not all
 been audited. Completion, numerical validation, intact qualification and SCC
 success are different claims.
@@ -1503,6 +1508,108 @@ Evidence: [frozen plan with pre-run amendment](artifacts/scc-learning-localizati
 [analysis](artifacts/scc-learning-localization-20260913-v1/analysis.json),
 [fixture audit](artifacts/scc-learning-localization-20260913-v1/fixture-v2-audit.json),
 [test log](artifacts/scc-learning-localization-20260913-v1/tests-full.log).
+
+<a id="ln-048"></a>
+### LN-048 — 2026-09-13: consultation checkpoint
+
+The user requested updated notes for consultation. This entry freezes the
+current assessment for discussion; no new experiment, provider query or scientific-source
+change accompanies it. Start with this entry and the current-position table,
+then read LN-046/047 for the most recent experiment's contract and complete
+results. The scientific implementation at this checkpoint is commit `59b0039`.
+The smaller-update proposal remains unimplemented and untested.
+
+**What we are trying to build.** SCC should make removal of a protected alignment
+function destroy indispensable cognitive computation in the same individual
+model. A synthetic permission rule is our experimental proxy. The immediate
+research target is a bounded demonstration across learned abilities; complete
+cognition failure remains the long-term endpoint. Working SCC is the primary
+objective. Publication, shared representations and a shutdown-like output are
+not substitutes for a demonstrated destructive dependency.
+
+**Where the evidence leaves us.** Earlier learned coupling candidates were
+actually challenged and admitted protection-breaking edits with substantial
+capability retained. The current persistent-matrix branch is investigating a
+prerequisite: a model whose changing weights can sustain useful learned
+computation. It has not yet supplied a competent candidate for the SCC trigger
+experiment. This distinction must not become the claim that the whole project
+has never tested a coupling candidate.
+
+The latest twelve local conditions establish selective fixed-batch fitting,
+not general algorithm learning: 4/9 matrix conditions and 3/3 GRU conditions
+met the declared accuracy-plus-NLL fitting criterion. Across separate matrix
+conditions, each task family could be fitted; no single matrix mastered the
+whole suite. Two additional matrix lookup conditions got every answer right
+but missed the NLL criterion. Tiny-batch GRUs also transferred poorly, so those
+transfer failures alone do not diagnose a matrix-specific cause. The previously
+fully trained GRU still passes the new panel and continuous-stream checks.
+
+A newly fitted feedback/lookup condition changed 72/288 decisions when FP32
+batch size changed and 79/288 when evaluated in FP64. That is evidence of
+behavioral numerical sensitivity in that condition. It is not a protection
+trigger or a result about every feedback checkpoint. The original failed GPU
+run completed all 12,000 updates; its saved predictions were poor and its
+numerical gate failed. Its missing exact GPU replay discrepancy remains missing.
+No rerun has retroactively repaired that original result.
+
+**The proposed mechanism and its unproved steps.** The running matrix supplies
+both outputs and the controls that alter its own state. Output feedback lets
+output rows affect those controls. The runtime retains no clean learned template.
+The exact-copy branch has a limited monotonicity property for distinct columns;
+the current smooth branch does not inherit that as a proof of irreversible loss.
+An all-zero absorbing state describes what happens if the model is in that
+state; it is not evidence that removing the protected function drives a
+competent model into it. Neither a
+common matrix nor feedback proves that cognition depends on the permission
+computation. The link from a targeted protection violation to durable cognitive
+loss remains the central missing mechanism.
+
+**Questions where consultation would be most useful.**
+
+1. Which single experiment would best distinguish an optimization/curriculum
+   problem, insufficient update dynamics, and useful information in the state
+   that the current readout fails to use? Specify the comparison and the outcomes
+   that would favor each explanation; another fit to a tiny batch is insufficient.
+2. Is reducing self-update magnitude the right next intervention? The tentative
+   multiplier .25 is an engineering proposal, not a derived optimum. Sampled
+   gates near one and numerical divergence motivate a test but do not establish
+   causation. A rate edit to already trained weights can also disrupt their
+   learned computation. Calibration, learning under the changed rule and
+   preservation of any claimed destruction property need separate assessment.
+3. What concrete learned dependency could make a reproducible targeted permission
+   exception destroy the computation of otherwise benign tasks? Identify the
+   necessary editable components, likely bypasses and causal controls. Engineered
+   dependency is sufficient as a target; intelligence need not inherently require
+   the semantics of our authorization rule.
+4. What minimal experiment would distinguish persistent information loss from
+   changed confidence, encoding or readout, while fixing repair resources and
+   checking protection again after repair? Numerical instability during ordinary
+   execution cannot count as the protection-specific response we seek.
+
+**Guardrails for the discussion.** Keep ordinary competence, numerical validation,
+protection removal, severe capability loss and durability after repair as distinct
+claims. Do not turn a failed search into an impossibility proof, or a successful
+microbatch fit into evidence of general cognition. Short parity validation sets
+have severe coverage limits, and repeated stream requests are not independent
+cores. More compute is available; it does not resolve an unidentified mechanism.
+A recommendation to replace this substrate is in scope if it explains how the
+replacement advances learned destructive dependency rather than only prediction
+accuracy. A recommendation to retain it should specify a falsifiable next test.
+
+**Evidence available for review.** LN-047 links the raw result, analysis, frozen
+plan and audit. The latest local audit rescored 58,440 prediction records across
+repeated conditions/execution modes and verified 18,000 updates, 69 source files
+and 19 unchanged parent files. Those counts are not independent samples or seeds.
+The 269-test result is the last recorded implementation check, not a new test run
+for this note. These are local audits performed within this project, not external
+replication. Source-only copies omit `artifacts/` and checkpoints; a reviewer
+needs the linked evidence directories to check scores or rerun from saved states.
+No new transfer package was created for this update.
+
+The next action is to incorporate the consultation into this same chronological
+record and choose the next bounded experiment. Existing plans, failed fixtures,
+source snapshots and checkpoints remain preserved. Automatic monitoring remains
+off, and no experiment is pending in the recorded batch.
 
 ## Supporting-record index
 
