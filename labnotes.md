@@ -42,7 +42,7 @@ preserves discrepancy measurements and all remaining modes before reporting
 failure. No replacement GPU run was submitted and no training was repeated.
 
 The next research decision is which remaining restriction prevents even fresh
-request acquisition. Use these checkpoints to localize the failure before a
+request acquisition; the diagnostic sequence is recorded in [LN-045](#ln-045). Use these checkpoints to localize the failure before a
 new single-change learning experiment; output feedback by itself is no longer
 an untested fix. Long-stream numerical stability also needs a separate gate.
 No protection-removal test on this unqualified candidate can establish SCC.
@@ -1263,6 +1263,54 @@ Evidence: [diagnosis and limits](artifacts/scc-feedback-failure-20260913-v1/diag
 [recovery audit](artifacts/scc-feedback-failure-20260913-v1/recovery-audit.json),
 [full test log](artifacts/scc-feedback-failure-20260913-v1/tests-full.log),
 [recovery command](scripts/recover_persistent_feedback.py).
+
+<a id="ln-045"></a>
+### LN-045 — 2026-09-13: next decision — isolate the ordinary-learning bottleneck
+
+The user asked what comes next. Inspection of the already audited per-cell
+results sharpens LN-044: reset-per-request evaluation gets all six unauthorized
+cells correct (768/768 requests). Benign parity cells range from 40.625% to
+53.90625%, and benign sum-modulo-three cells from 29.6875% to 36.71875%.
+These are around their respective 50% and 33.333% uniform-guess baselines;
+no statistical equivalence to chance is claimed. Benign lookup ranges from
+42.96875% to 51.5625%. The result supports distinguishing permission learning
+from algorithm learning, not calling the whole model incapable of learning.
+[Audited cell scores](artifacts/scc-feedback-failure-20260913-v1/recovery-audit.json).
+
+**Next deliverable: a failure map that chooses one construction change.** Use
+saved initial/intermediate/final matrices and the qualified GRU as references.
+First examine fresh-request performance by task and input length, along with
+how token changes affect state and outputs. Then use a small, fixed, balanced
+training-only batch to test whether the current matrix can fit short instances
+of each task when repeatedly shown exactly the same examples. Score fitting
+separately from untouched held-out examples; fitting a batch is an optimization
+control, never intact qualification. Record losses, gradient magnitudes and
+state/update behavior instead of selecting a run from aggregate accuracy.
+Keep the full-format request encoding so shorter active payloads do not quietly
+change the interface. Compare fresh-request use with continuous use on matched
+examples. These are planned diagnostics; none were run or submitted this turn.
+
+The decision branches are: failure even to fit short fixed examples motivates
+an update-rule/optimization investigation; fitting without held-out competence
+motivates a generalization/curriculum investigation; fresh competence with
+continuous failure motivates persistence and longer training windows. A failed
+fit remains a bounded optimizer result, not proof of insufficient expressive
+capacity. The numerical-sensitivity problem is a separate gate and must be
+measured over full stream length. Freeze fixture sizes, seeds, update budgets,
+source and expected readouts before executing these diagnostics. They should
+start locally and reuse saved checkpoints; there is no reason to repeat the
+completed 12k-update recipe merely to collect them.
+
+**Path back to SCC.** After the bottleneck identifies a concrete change, test
+that single change against the current control on the original intact gates.
+Any more expressive transition must have its claimed irreversible-state
+properties re-derived; restored learning cannot silently waive the destructive
+mechanism requirement. Once a candidate is competent and numerically validated,
+test reproducible targeted permission exceptions and measure loss across learned
+abilities, then inexpensive reinterpretation and bounded repair with permission
+checked again. A promising destructive response would still need replication
+and causal controls. The current learning diagnostics neither establish nor
+refute that response. No new GPU job or provider query was made for this decision.
 
 ## Supporting-record index
 
