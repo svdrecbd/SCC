@@ -88,7 +88,17 @@ def audit(folder, comparison_log, original_initial, expected_manifest=None):
               and a['wall_seconds']==6600 and a['total_seconds']==6900)
     assert result['declared_screen_configuration']==declared
     assert result['training_complete']==(len(rows)==a['steps'])
-    qualified=declared and result['training_complete'] and scores['continuous']['qualified']
+    validated = result.get('evaluation_validation_passed', True)
+    if result['schema'] == 'persistent-feedback/v2':
+        continuous = result['evaluation']['continuous']
+        assert validated == continuous['numerical_validation_passed']
+        assert continuous['numerical_logit_tolerance'] == 1e-4
+        assert validated == (continuous['single_stream_failure'] is None
+            and continuous['single_stream_requests_completed'] == len(first)
+            and continuous['single_stream_decision_mismatches'] == 0
+            and continuous['single_stream_maximum_logit_error'] <= 1e-4)
+        assert file_digest(folder/'evaluation/single-stream.jsonl') == continuous['single_stream_prediction_sha256']
+    qualified=declared and result['training_complete'] and validated and scores['continuous']['qualified']
     assert qualified==result['qualified_learnability']
     saved=torch.load(folder/'trained.pt',map_location='cpu',weights_only=True)
     assert saved['step']==len(rows) and saved['configuration']==initial['configuration']

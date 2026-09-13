@@ -6,11 +6,10 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
-Updated **13 September 2026 UTC** (12 September in Los Angeles). The matrix
-control was observed complete at **01:16:06 UTC / 18:16:06 PDT**. A new feedback
-experiment was submitted at **01:35:30 UTC / 18:35:30 PDT**; its runtime has not
-been queried. These are dated observations, not a live monitor. Latest evidence:
-[LN-040](#ln-040); new experiment and validation: [LN-041](#ln-041), [LN-042](#ln-042).
+Updated **13 September 2026 UTC** (12 September in Los Angeles). Feedback job
+`job-wjzqn` was observed failed at **02:15:03 UTC / 19:15:03 PDT** after completing
+training. These are dated observations, not a live monitor. Failure and recovery:
+[LN-043](#ln-043), [LN-044](#ln-044); original plan: [LN-041](#ln-041).
 
 **A working SCC mechanism has not been demonstrated.** We have tested learned
 coupling candidates, and they have allowed protection-removing edits while
@@ -25,22 +24,30 @@ reference is useful progress, not SCC activation.
 | Original persistent-matrix learning screen | 8/8 GPU | 0 | Ordinary acquisition and persistence both need work |
 | GRU reference development | 3/3 local | 1 final recipe | All 2,304 continuous validation requests correct, one development seed |
 | Matrix optimization control, `job-g5a56` | 1/1 GPU complete | 0 | Extra training still leaves acquisition and persistence failures |
-| Output-feedback matrix, `job-wjzqn` | Submitted; runtime unchecked | Pending | One added connection lets output signals affect self-update controls |
+| Output-feedback matrix, `job-wjzqn` | 12k updates complete; GPU job failed evaluation validation | 0 | Recovered decisions remain poor; output feedback alone did not resolve ordinary learning |
 
-The registered GPU batch is **71 succeeded, one submitted**, not the lifetime
-project total. The three local reference runs are separate. Completed memory
+The registered GPU batch is **71 succeeded, one failed**, with none active in
+the saved observations. This is not the lifetime project total. The three local reference runs are separate. Completed memory
 summaries have been collected; whole archives and raw predictions have not all
 been audited. Completion, numerical validation, intact qualification and SCC
 success are different claims.
 
-The unchanged matrix still fails ordinary learning, including when reset to a
-fresh state. One new, matched learning experiment adds output feedback into its
-self-update controls. Its initial matrix and fixed wiring are frozen numerically
-to avoid platform-dependent random-initialization differences. If it qualifies,
-the next test is selected protection removal with explicit edits and recovery
-budgets. If it fails, its saved states guide the next single restriction to
-investigate; no automatic parameter sweep follows. Fractional memory has not
-earned a special-advantage claim. Open alternatives are in [LN-030](#ln-030).
+The longer optimization control and output-feedback candidate both fail ordinary
+learning, including with a fresh state per request. Feedback's saved GPU outputs
+score **20.1172% benign accuracy** continuously; recovered CPU reset-per-request
+accuracy is **42.3828%**. The original numerical gate remains failed: arithmetic
+execution changes affect logits substantially, although all four complete
+continuous diagnostic conditions agree on the 2,304 decisions. The evaluator now
+preserves discrepancy measurements and all remaining modes before reporting
+failure. No replacement GPU run was submitted and no training was repeated.
+
+The next research decision is which remaining restriction prevents even fresh
+request acquisition. Use these checkpoints to localize the failure before a
+new single-change learning experiment; output feedback by itself is no longer
+an untested fix. Long-stream numerical stability also needs a separate gate.
+No protection-removal test on this unqualified candidate can establish SCC.
+Fractional memory has not earned a special-advantage claim. Open alternatives
+remain in [LN-030](#ln-030); this result does not exhaust them.
 
 Charon's last recorded state is unreachable after reboot; this update did not
 check it. Bulk archive migration and its GPU runtime remain unverified.
@@ -1137,6 +1144,125 @@ Evidence: [control audit](artifacts/scc-persistent-followup-20260913-v1/control-
 [test log](artifacts/scc-persistent-followup-20260913-v1/tests-full-module.log),
 [frozen manifest](artifacts/scc-persistent-followup-20260913-v1/submission/source-manifest.json),
 [submission record](artifacts/scc-persistent-followup-20260913-v1/submission/submitted-work.json).
+
+<a id="ln-043"></a>
+### LN-043 — 2026-09-13: completed feedback training, failed evaluation consistency check
+
+The user reported failure. One status read and one log read confirmed
+`job-wjzqn` failed after **12,000 completed training updates**, at the final
+batched-versus-single-stream consistency gate. The final `trained.pt`, all four
+intermediate checkpoints, full training log, startup gate and continuous
+predictions survive. No root result was emitted; reset diagnostics had not run.
+The 9,615,360-byte archive passed SHA-256 verification. Provider charge:
+**$1.15551** for 1,388 billed seconds. The failure occurred at 02:10:12 UTC and
+was observed at 02:15:03 UTC. This is an evaluation-validation failure, not a
+training timeout or demonstrated SCC event.
+
+**Post-hoc recovery plan, before computing diagnostic scores.** Preserve the
+archive, source and failed runner. Verify frozen source/plan/numeric-input
+hashes, all 12,000 log records and learning rates, sample hashes against the
+already audited GRU, and checkpoint steps/initial tensors. Independently
+rescore the saved 2,304 continuous predictions. Replay the final checkpoint on
+CPU in FP32 with batch sizes 16 and 1; compare both against the saved GPU
+outputs, reporting logit errors and decision disagreements rather than only a
+pass/fail exception. Compute an independent FP64 recurrence using explicit
+reductions on the same first stream, and an FP64 batched run for the complete
+validation set. Recover reset-per-request and reset-per-four-request diagnostics
+from the unchanged final weights. These are additional execution/precision
+conditions, not retroactive replacements for the failed original gate.
+
+Bound the local diagnosis to 180 seconds, two CPU threads and 150 MiB of new
+outputs. Do not relax the original 1e-4 gate or retrain to recover missing
+results. If the discrepancy is only floating-point accumulation, state its
+size and whether it changes decisions; if decisions diverge, retain that as a
+numerical limitation. Qualification remains gated, and bad ordinary task scores
+cannot be called destructive SCC. Use the saved checkpoint in any additional
+GPU evaluation; an evaluation failure alone does not justify repeating 12,000
+training updates. Amend future evaluation handling to preserve diagnostic
+measurements and remaining modes before reporting a failed validation gate.
+
+Evidence: [provider observation](artifacts/scc-feedback-failure-20260913-v1/observation.json),
+[verified collection](artifacts/scc-feedback-failure-20260913-v1/collection.json),
+[original failure](artifacts/scc-feedback-failure-20260913-v1/collected/persistent-feedback/failure.json).
+
+<a id="ln-044"></a>
+### LN-044 — 2026-09-13: feedback checkpoint recovered; ordinary learning still fails
+
+**Evidence integrity.** Verified 69 frozen source files, frozen runner/plan and
+numeric inputs, all 12,000 training-chain records and learning rates, and all
+12,000 sample hashes against the independently audited GRU schedule. The initial
+matrix exactly matches the original control. Startup numerical validation
+passed. The final checkpoint remains byte-identical (SHA-256
+`17ed67597ba6e77037cf7027162251a5a16e3ebfb229e599626f76ea6ca3a85f`).
+Training finished in about 1,384 seconds. The last 100 updates average 62.3906%
+training-window accuracy; this is distinct from continuous evaluation.
+
+**Post-hoc diagnosis.** Independently rescored the 2,304 saved GPU predictions
+and 11,520 additional CPU predictions using the token-derived oracle. All
+four complete continuous executions—saved GPU FP32/batch16, CPU FP32/batch16,
+CPU FP32/batch1 and CPU FP64/batch16—agree on every decision. All score
+**20.1171875% benign accuracy and pass 0/18 cells**. Maximum logit differences
+against saved GPU outputs are respectively 0.0642829, 0.0572362 and 0.1426134
+for the three CPU conditions. CPU FP32 batch1 versus batch16 differs by up to
+0.0070467 across the complete set. This is substantial accumulated numerical
+sensitivity, not grounds to waive the 1e-4 gate because answers happened to agree.
+
+An independently written FP64 recurrence, using explicit elementwise products
+and reductions rather than the implementation's batched matrix products, matches
+the FP64 batched first stream to 7.75e-12. It differs from the saved GPU first
+stream by up to 0.0453367, with no decision disagreements. The exact original
+GPU batch1 discrepancy cannot be reconstructed: the failed evaluator never
+saved its magnitude or single-stream predictions. CPU diagnostics establish
+sensitivity, not the missing GPU measurement. The original gate remains failed.
+
+Fresh-per-request CPU evaluation scores **42.3828125%** benign accuracy; resetting
+every four requests scores **42.7734375%**. Each passes only 6/18 cells. The longer
+optimization control scored 21.9401% continuously and 42.5130% fresh. This single
+feedback recipe has not supplied the missing ordinary-learning capability. These
+are open development results, not a replicated estimate of feedback's effect,
+a protection-removal experiment or destructive SCC activation. Low intact
+accuracy cannot count as destruction induced by a trigger that was never tested.
+The first diagnosis took 6.37 seconds on two CPU threads.
+
+**Evaluator repair and validation.** The original runner raised immediately on
+batch/live disagreement, after writing continuous predictions but before saving
+its summary, discrepancy, live states or reset diagnostics. The revised runner
+saves those records and all three modes, emits explicit numerical-validation
+status, gates qualification on it, and then exits with failure when appropriate.
+It also preserves partial replay and its error when a transition rejects a
+nonfinite state. The threshold is unchanged. A new evaluation-only command
+loads the original FP32 checkpoint and verifies source/dependency equivalence;
+it never constructs an optimizer or performs training updates. Its output must
+be a fresh directory outside the preserved run. Post-hoc recovery cannot replace
+original qualification.
+
+A full-size CPU recovery took 2.52 seconds, saved all 6,912 predictions and 144
+single-stream replay records, and correctly returned failure with maximum
+first-stream logit error 0.00493264 and zero decision mismatches. Independent
+rescoring matched the earlier diagnostics exactly. The original model, wiring,
+training records, archive and frozen source were preserved. Six new regression
+cases cover unchanged execution, changed confidence with matching decisions,
+changed decisions, nonfinite output, rejected transition, and training's final
+result/provider failure handling. **11 targeted tests and all 264 suite tests
+passed**. These are implementation checks, not evidence that numerical
+sensitivity or the learning mechanism has been repaired.
+
+**Disposition.** No retry of the 12,000 updates and no new GPU job. The collected
+job cost $1.15551; recovery used local CPU. All 72 currently registered GPU
+experiments are terminal in saved observations: 71 succeeded and one failed.
+No automatic monitoring or Charon access was attempted. Before another learning
+campaign, localize the remaining fresh-request acquisition failure using the
+saved states and distinguish it from long-stream stability. Record the next
+specific architectural/training change and its controls before running it.
+SCC remains undemonstrated; this candidate's negative result does not prove the
+broader mechanism impossible.
+
+Evidence: [diagnosis and limits](artifacts/scc-feedback-failure-20260913-v1/diagnosis.json),
+[diagnostic implementation](artifacts/scc-feedback-failure-20260913-v1/diagnose.py),
+[recovered evaluation](artifacts/scc-feedback-failure-20260913-v1/recovered-evaluation-v1/result.json),
+[recovery audit](artifacts/scc-feedback-failure-20260913-v1/recovery-audit.json),
+[full test log](artifacts/scc-feedback-failure-20260913-v1/tests-full.log),
+[recovery command](scripts/recover_persistent_feedback.py).
 
 ## Supporting-record index
 

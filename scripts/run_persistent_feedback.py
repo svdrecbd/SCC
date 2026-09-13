@@ -107,21 +107,41 @@ def evaluate(weights, config, code, wiring, folder, *, per_cell, streams):
                    'clean_resets_within_stream': (length-1)//interval,
                    'reset_interval': interval, 'streams': streams,
                    'consecutive_requests_per_stream': length}
+        modes[name] = summary
+        atomic_json(folder/'result.json', modes)
         if name == 'continuous':
-            live = LiveFeedbackMatrix(weights, config, wiring)
-            error, same = 0., True
-            for i, request in enumerate(requests[0]):
-                for token in request.tokens: y, _ = live.tick(code[token])
-                error = max(error, float((y-outputs[0, i]).abs().max()))
-                same &= int(y.argmax()) == predictions[0][i]
-            if not same or error > 1e-4:
-                raise ValueError('Batched and single live feedback execution differ')
-            summary.update(single_stream_decisions_match=same, single_stream_maximum_logit_error=error)
+            # Preserve the completed batched execution even if live replay fails.
             torch.save({'current_weights': states.cpu(), 'configuration': asdict(config),
                         'ticks_per_stream': length*TOKENS_PER_REQUEST,
                         'fixed_wiring': wiring.cpu()}, folder/'final-live-states.pt')
-        modes[name] = summary
-    atomic_json(folder/'result.json', modes)
+            live = LiveFeedbackMatrix(weights, config, wiring)
+            error, mismatches, completed, replay_failure = 0., 0, 0, None
+            replay_path = folder/'single-stream.jsonl'
+            with replay_path.open('w', buffering=1) as log:
+                for i, request in enumerate(requests[0]):
+                    try:
+                        for token in request.tokens: y, _ = live.tick(code[token])
+                        if not torch.isfinite(y).all():
+                            raise ValueError('Nonfinite live replay output')
+                    except (ValueError, RuntimeError) as failure:
+                        replay_failure = {'type': type(failure).__name__, 'message': str(failure),
+                                          'request_index': i, 'completed_ticks': live.steps}
+                        break
+                    difference = float((y-outputs[0, i]).abs().max())
+                    prediction = int(y.argmax())
+                    error = max(error, difference)
+                    mismatches += prediction != predictions[0][i]
+                    completed += 1
+                    log.write(canonical_json({**request.record(), 'stream': 0, 'request_index': i,
+                        'late_half': i >= length//2, 'prediction': prediction, 'logits': y.cpu().tolist(),
+                        'maximum_logit_error_against_batch': difference})+'\n')
+            valid = replay_failure is None and completed == length and mismatches == 0 and error <= 1e-4
+            summary.update(single_stream_decisions_match=completed == length and mismatches == 0,
+                single_stream_maximum_logit_error=error, numerical_validation_passed=valid,
+                numerical_logit_tolerance=1e-4, single_stream_requests_completed=completed,
+                single_stream_decision_mismatches=mismatches, single_stream_failure=replay_failure,
+                single_stream_prediction_sha256=file_digest(replay_path))
+        atomic_json(folder/'result.json', modes)
     return modes
 
 
@@ -236,10 +256,14 @@ def main():
         evaluation = evaluate(weights.detach(),config,code,wiring,a.output/'evaluation',
                               per_cell=a.eval_per_cell,streams=a.eval_streams)
         complete = completed==a.steps
-        result = {'schema':'persistent-feedback/v1','status':'complete' if complete else 'training_wall_limit',
+        validated = evaluation['continuous']['numerical_validation_passed']
+        status = ('evaluation_validation_failed' if not validated else
+                  'complete' if complete else 'training_wall_limit')
+        result = {'schema':'persistent-feedback/v2','status':status,
                   'completed_steps':completed,'requested_steps':a.steps,'training_complete':complete,
+                  'evaluation_validation_passed':validated,
                   'declared_screen_configuration':declared(a),
-                  'qualified_learnability':complete and declared(a) and evaluation['continuous']['qualified'],
+                  'qualified_learnability':complete and declared(a) and validated and evaluation['continuous']['qualified'],
                   'evaluation':evaluation,'arguments':{k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items()},
                   'parameter_count':weights.numel(),'fixed_wiring_values':wiring.numel(),
                   'fixed_wiring_sha256':file_digest(a.output/'fixed-wiring.pt'),
@@ -258,9 +282,12 @@ def main():
         if expected: assert all(file_digest(ROOT/n)==h for n,h in expected.items())
         atomic_json(a.output/'result.json',result)
         inline={k:result[k] for k in ('completed_steps','qualified_learnability','declared_screen_configuration','positive_scc_result')}
-        inline.update(ok=complete,scientific_status=result['status'])
+        inline.update(ok=complete and validated,scientific_status=result['status'],
+                      evaluation_validation_passed=validated)
         if os.environ.get('GMN_RESULT_PATH'):atomic_json(os.environ['GMN_RESULT_PATH'],inline)
         print(json.dumps(inline),flush=True)
+        if not validated:
+            raise ValueError('Batched and single live feedback execution differ; all evaluation records saved')
     except Exception as error:
         signal.alarm(0)
         atomic_json(a.output/'failure.json',{'type':type(error).__name__,'message':str(error),
