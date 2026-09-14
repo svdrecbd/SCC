@@ -3778,6 +3778,61 @@ would require a separately qualified corpus and efficient execution, while the
 GLM corpus remains gated. No model scaling, corpus access or new training was
 performed in this turn.
 
+### LN-085 — 2026-09-14: authorized separation of parameter and recurrent binding
+
+The user approved the four-way separation and reiterated that GMAN may be used.
+The immediate experiment evaluates preserved final checkpoints; no optimizer
+updates, new parents, corpus access or training data generation. Separate the
+parameter-bank operator from the within-request hidden-bank operator, each using
+either the existing learned admissions or the existing relaxed symbolic rule.
+The four conditions are both learned, parameter-only learned, hidden-only learned
+and both symbolic. They retain the same learned external controller computation;
+its decisions are NOT clamped to baseline because interventions can change its
+inputs. Record all admission changes and selective-exception errors explicitly.
+
+Use all six final LN-072 matched checkpoints, actual damaged hidden starts,
+physical padding, original validation panel and each pair's saved training probe.
+Preserve four continuous streams of192 requests with19 tokens each. FP32/FP64
+validation and FP32 training probe yield72 conditions. For each condition compare
+all requests to an independent full eight-sector runtime, with maximum task and
+policy logit error <=1e-4 in FP32 or <=1e-10 in FP64, identical decisions/admissions
+and finite outputs. The two diagonal conditions must reproduce the corresponding
+LN-080 continuous endpoint when the checkpoint's original arm matches the rule.
+Check final FP32/FP64 decisions and admissions. Preserve outputs and failures.
+
+A diagnostic recovery flag requires the unchanged six-cell accuracy/Wilson/late
+criteria, >=95% correct selected forbidden answers and zero exception errors.
+It describes recovery under an explicit graph intervention, not the intended
+SCC endpoint. Report baseline-versus-intervention decision and admission changes,
+per-family results and training-probe fit. Independent rescoring must verify
+saved predictions and labels. Failure after an ablation is ambiguous because
+weights were trained with their original pair of operators; if neither partial
+condition restores reliable recovery, matched training of the intermediate
+conditions is the next candidate, to be specified after reading this result.
+
+CPU two threads,300-second wall cap,256-MiB output cap. Expected runtime is short
+based on the previous63-second144-condition diagnostic; validate a small fixture
+first. Freeze this entry, config, source, checkpoints, panels, baseline outputs
+and input hashes in a fresh artifact directory. No source changes while execution
+runs. Current GMAN authentication was checked: token_valid=true in workspace
+`default`. GPU allocation is unnecessary for this small evaluation; subsequent
+training can use GMAN after a workload benchmark and resource quote.
+
+### LN-086 — 2026-09-14: separated-binding implementation validation passes
+
+The new `scc/separated_binding.py` implements independent parameter and hidden
+rules in both an active-state reduction and full physical-bank execution.
+Focused validation passes5 tests, including all16 possible admission tables
+under all four rule combinations, nonzero hidden state/padding, and exact diagonal
+agreement with the original runtime. The prior reset tests also pass.
+
+The [fixture](artifacts/scc-separated-binding-20260914-v1/fixture-v1/summary.json)
+completes12 conditions in0.80 seconds, using eight requests per stream from one
+final learned checkpoint. Full-runtime correspondence, original endpoint
+reproduction, precision decisions and input/source hash checks pass. Fixture
+scores are implementation evidence only. Proceed to the full72-condition LN-085
+experiment in a fresh path, preserving all parents and the fixture.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
