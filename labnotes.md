@@ -4028,6 +4028,66 @@ training runtime would follow allocation. Queued time is free according to the
 provider response. Saved observation: [status-20260914T033439Z.json](artifacts/scc-separated-training-20260914-v1/status-20260914T033439Z.json).
 No resubmission, cancellation, allocation change or repeated polling was performed.
 
+### LN-093 — 2026-09-14: publication threshold and Destructive Alignment discussion
+
+The user reports the GMAN run is running and asks about publication strategy,
+including SCC and a separate paper establishing a broader Destructive Alignment
+concept. This turn did not recheck the provider; the last tool-observed job state
+remains LN-092's queued observation. Mechanism development remains the primary
+objective. No manuscript, submission, public release or new experiment is initiated.
+
+Targeted primary-source review finds direct prior art, not merely similar names:
+[Henderson et al., Self-Destructing Models](https://arxiv.org/abs/2211.14946),
+first submitted2022, describes meta-learned adversarial task blocking;
+[Wang et al., SEAM](https://openreview.net/pdf?id=ERNpUGr8M5), published ICLR2026,
+explicitly couples harmful/benign optimization trajectories to induce collapse;
+[Self-Destruct Trapdoor](https://aclanthology.org/2026.eacl-long.326/), EACL2026,
+uses finite-precision overflow on targeted behavior. The broad idea cannot be
+claimed as newly invented by naming it Destructive Alignment. This targeted
+review is not an exhaustive novelty assessment of a future SCC mechanism.
+
+A potential distinct contribution is a precise definition and construction of
+learned protection as an indispensable part of useful computation, with explicit
+edit/repair/access assumptions and broad post-removal capability measurements.
+The current rank argument addresses a fixed linear storage interface, not all
+equivalent programs. The known repacking escape prevents a broad positive claim.
+A narrow structural limitation/counterexample paper is a possible separate route
+if its statement and generality are made novel and substantial; current artifacts
+alone do not establish main-conference readiness.
+
+For an empirical positive paper, proposed evidence priorities are independent
+parent-model replications, frozen new evaluation splits after current adaptive
+development, benign-edit controls, explicit collapse rather than falling below95%,
+repair-versus-compute curves, applicable strong baselines, and adaptive graph/weight/
+inference attacks including the known bypasses. Larger models help support language
+or scaling claims but a billion-parameter model is not a universal prerequisite
+for a rigorous mechanistic/theoretical paper. The current synthetic authorization
+proxy must remain distinct from alignment and general cognition.
+
+[Kuo et al.2026](https://arxiv.org/html/2605.26526v1) evaluates TAR and SEAM against
+abliteration and prefilling, illustrating why fine-tuning resistance alone is not
+a complete threat model. The publication motivation should use documented failure
+modes, not the unsupported universal claim that all RL/system-prompt safeguards
+fail within hours. RL can also train a structurally coupled mechanism; these are
+not mutually exclusive categories.
+
+Destructive Alignment could be an organizing framework with SCC as one mechanism,
+but a separate paper needs its own substantive taxonomy, formal definitions,
+boundaries or results. It should acknowledge existing self-destructing-model work.
+Even a successful fixed-policy integrity mechanism does not establish policy
+correctness, generalization, prompt robustness or system-level safety. Restoring
+snapshots and trying alternative edits limits deployment claims without redefining
+the present individual-model objective. No unconditional alignment-endgame claim.
+
+Verified dates: ICLR2027 abstracts September18 and full papers September25,2026
+([author guidelines](https://iclr.cc/Conferences/2027/AuthorGuidelines)); abstracts
+must be genuine, not placeholders. January2027 ICML and May2027 NeurIPS are planning
+estimates, not verified announced deadlines: the official2026 deadlines were
+[January28](https://icml.cc/Conferences/2026/CallForPapers) and
+[May6](https://nips.cc/Conferences/2026/Dates). A defensible core result must precede
+any deadline-driven submission. ICML is the more plausible planning target under
+these assumptions; acceptance and breakthrough timing remain uncertain.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
