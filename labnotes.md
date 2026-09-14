@@ -12,11 +12,12 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Matched training failed its case wall limit:** [LN-095](#ln-095).
-`job-3ttr3` stopped after one hour per trajectory, before any condition completed.
-All partial outputs are recovered and archive-hash verified; charge$0.5484.
-A fresh matched rerun with corrected runtime limits and enforced benchmark
-readiness is planned in [LN-096](#ln-096), not yet submitted.
+**Corrected matched training submitted to GMAN:** [LN-098](#ln-098).
+`job-bvhhp` was accepted at06:46:12 UTC on14 September; last observed state is
+submitted, not verified running. Twelve fresh matched trajectories, two hours
+per case, nine-hour provider cap, maximum quoted charge$4.86. Benchmark readiness
+is now enforced. The first attempt failed its one-hour cap; all partial outputs
+are preserved and archive-hash verified ([LN-095](#ln-095)). No watcher.
 
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
@@ -4204,6 +4205,17 @@ requirements. A CLI validation call initially rejected an unsupported
 `--build-timeout` flag without submission; rerunning with supported validation
 flags passed. `gman-validation-v2.json` quotes a maximum$4.86 for540 minutes on
 one cpu-8 and confirms `would_submit:true`. No live watcher is enabled.
+
+### LN-098 — 2026-09-14: corrected GMAN run accepted
+
+GMAN accepted `job-bvhhp` at06:46:12 UTC, status `submitted`, with a maximum
+quoted charge$4.86 and540-minute provider limit. Frozen source commit:
+`9a80ab60e73027cdee0a82f89ce148a63562e59f`. The context is independent of subsequent
+local edits. Receipt, exact command, context hashes and launch record are in
+`artifacts/scc-separated-training-20260914-v2/`. The LN-096 case/batch budgets,
+readiness gate and unchanged scientific contract apply. The previous failed
+attempt and recovered outputs remain at their original paths. No provider
+poll, watcher or automatic collector was started after submission.
 
 ## Supporting-record index
 
