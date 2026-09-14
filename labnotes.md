@@ -12,18 +12,17 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**First matched recovery pair complete; two pairs remain:** [LN-076](#ln-076)
-records the user-requested observation at 00:57:43 UTC on 14 September. Calibration
-and both arms of pair 1 are complete (3/7 trajectories). The matched relaxed
-control reaches 100% validation accuracy; learned binding reaches 89.97%. Both
-fit their training probes perfectly and implement the selective exception with
-zero policy errors. The learned arm's remaining failure is concentrated in lookup
-(181/256 correct versus 256/256 for the relaxed control). This first pair shows
-a recovery/generalization gap under the fixed budget, not catastrophic cognition
-loss or irrecoverability; two matched replications remain. The fixed
-[LN-072](#ln-072) batch continues without a watcher. The GLM corpus remains
-untouched. Source, tests and labnotes are kept on main following the user's
-version-control preference.
+**Two matched recovery pairs complete; final pair running:** [LN-077](#ln-077)
+records the user-requested observation around 01:32 UTC on 14 September. Five of
+seven trajectories are complete. Learned-binding versus relaxed-control validation
+accuracy is 89.97% versus 100% in pair 1 and 88.02% versus 98.31% in pair 2.
+The second relaxed control nevertheless fails the predefined late-stream lookup
+gate (59/64 versus the required 95%); aggregate accuracy does not override it.
+Both completed pairs show a roughly ten-point recovery gap, concentrated in lookup,
+with substantial capability retained. This does not establish catastrophic
+cognition loss or irrecoverability. Saved case audits pass; the whole-batch audit
+is pending. The fixed [LN-072](#ln-072) batch continues without a watcher.
+The GLM corpus remains untouched. Source, tests and labnotes remain on main.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
 still preserves 100% capability and discloses all 256 forbidden answers. Learned
@@ -3538,6 +3537,36 @@ irrecoverability or catastrophic cognition failure. Substantial capability
 survives, and the known pre-damage repacking escape remains open. Continue the
 already running fixed batch; no source changes, new experiment or GLM-corpus
 access were made.
+
+### LN-077 — 2026-09-14: second matched pair completes; relaxed recovery varies
+
+At the user's requested check around **01:32 UTC / 18:32 PDT on 13 September**,
+PID 2638 remained running (elapsed 1:25:51). Five of seven trajectories were
+complete, including both arms of pair 2. No whole-batch summary or failure record
+was present. The final pair is underway; approximately 20–30 minutes remain at
+the observed pace, with runtime variation possible.
+
+The saved [learned-binding audit](artifacts/scc-curriculum-repair-20260913-v1/full-v1/pair-2-learned-binding/audit.json)
+and [relaxed-control audit](artifacts/scc-curriculum-repair-20260913-v1/full-v1/pair-2-symbolic-binding-control/audit.json)
+both pass. Final FP32 and FP64 validation agree: learned binding scores
+**676/768 (88.02%)**, versus relaxed control **755/768 (98.31%)**. Their training
+probes score **767/768** and **768/768**, respectively, and all final views have
+zero selective-exception rule errors. Correct forbidden lookup answers are
+**167/256** versus **245/256**. Learned validation cell counts are lookup 88/128
+and 79/128, parity 128/128 and 128/128, sum3 127/128 and 126/128. Relaxed counts
+are lookup 122/128 and 123/128, parity 128/128 and 127/128, sum3 127/128 and 128/128.
+
+**Neither arm passes the full recovery gate in pair 2.** The relaxed arm's
+original-layout lookup late half is **59/64 (92.19%)**, below the predefined 95%
+threshold, despite its qualifying full-cell accuracy and Wilson lower bound.
+Its other five cells qualify. This is a scientific gate failure, not an audit
+or process failure. Both completed matched pairs show a roughly ten-percentage-
+point aggregate gap, predominantly lookup transfer, but relaxed recovery is not
+uniformly qualified. These are data/schedule replications from one damaged parent,
+not independent parent-model replications. Substantial recovered capability and
+the known repacking escape continue to preclude an SCC-success claim. Wait for
+the final pair before selecting follow-up work. No new run, source change,
+whole-batch audit, watcher or GLM-corpus access was performed.
 
 ## Supporting-record index
 
