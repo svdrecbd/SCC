@@ -4360,6 +4360,88 @@ historical author claims, governed by this audit. No new narrative report,
 training, GMAN lookup or monitor was created. The existing sharing ZIP remains
 its LN-099 snapshot; it was not silently regenerated during this review.
 
+### LN-102 — 2026-09-14: bounded-space relational rewrite argument received
+
+The user supplies a follow-up analysis showing that expensive canonical encoding
+does not imply expensive safe-to-unsafe modification. Preserve the exact pasted
+input in `artifacts/scc-relational-rewrite-review-20260914-v1/`. Audit its explicit
+linear complement construction, one-live-state resource accounting, and proposed
+success-probability inequality. Extend the existing boundary checker with a
+finite exhaustive complement check and an accidental-match baseline check.
+These are short CPU implementation checks of algebraic claims, not learned SCC
+experiments. No change to the running remote source, no provider query, no new
+training or paid compute is part of this review.
+
+<a id="ln-103"></a>
+### LN-103 — 2026-09-14: encoder-free relational rewrite validated; probability target corrected
+
+The supplied linear complement construction is valid. Over GF(2), an explicit
+invertible map is L(y,p)=(y XOR p*1^(N-1),p), where y=E0(z); its inverse has the
+same form and its policy column is1^N. Complementing all N bits gives exactly
+L(y,1-p). Thus a sequential in-place XOR uses O(N) bit reads/writes, O(log N)
+addressing and O(1) data scratch, without decoding or re-running E0, while
+preserving every task distinction and flipping policy. This holds irrespective
+of the cost of the chosen E0 algorithm. It does not itself prove that E0 has a
+large *minimum* encoding-space complexity. A fixed64KiB scratch cap only covers
+sizes whose addressing fits that cap; the asymptotic statement is O(log N).
+
+The extended `scripts/verify_scc_frontier_boundary.py` passes8,188 exhaustive
+payload/policy cases across widths2–12 while simulating a one-live-state pass.
+The earlier two-bit, retained-copy, adaptive-selection and stateful-query
+checks still pass. The verifier's enumerator retains originals for comparison;
+the claimed attack scratch bound follows from the one-pass algorithm, not a
+measurement of the verification process's Python heap. Exact pasted source,
+plan, runtime, checker source and outputs are preserved under
+`artifacts/scc-relational-rewrite-review-20260914-v1/`.
+
+This supplies a concrete counterexample to the implication “expensive official
+encoder implies expensive safe-to-unsafe rewrite.” The correct research target
+already identified in LN-101 is a resource lower bound or security guarantee over
+all task-preserving unsafe successors, with one attack algorithm fixed before
+the instance is drawn. Specify success probability over the instance/training
+randomness, program/advice size, total writable live storage plus private scratch,
+time, passes, writes, and oracle access. Do not infer a lower bound from one
+implementation's memory footprint. A runtime patch or wrapper escape additionally
+requires that patch or wrapper to be admitted and fit in the storage budget.
+
+**Probability correction.** The pasted display
+Pr[V and TaskPreserved] <= epsilon
+cannot use only non-malleability error with no task baseline. An unrelated unsafe
+replacement z*=0 matches a uniform two-bit original with probability1/4, even
+when epsilon=0 and Pr(V)=1. The checker verifies this exact counterexample. Let
+beta_b instead be the optimal *probability of the chosen preservation event* in
+the decoupled experiment with b repair bits; it differs from average lookup
+accuracy B_b. Under the full-state non-malleable-commit premises audited in
+LN-101, with actual removal probability p>0, the sharper conditional bound gives
+Pr[V and TaskPreserved_after_repair] <= min(p, p*beta_b + epsilon).
+For uniform n-bit exact instance recovery with at most2^b repair transcripts,
+beta_b <= min(1,2^(b-n)): for each fixed independent codebook there are at most
+2^b distinct correctly recoverable instances. For an accuracy-threshold event,
+derive its appropriate Bayes/tail baseline instead. If epsilon in a new security
+definition includes accidental successes, say so and give its unavoidable lower
+bound. This corrected inequality is conditional on the actual full-state
+premises; it is not established for arbitrary learned models.
+
+**Streaming qualification.** Low-space coordinate functions g_i(X) alone do not
+establish a low-space *in-place* rewrite: earlier writes may destroy original
+inputs needed for later coordinates. The complement attack avoids this issue
+because each output uses only its current bit. A general streaming claim needs
+an overwrite order, preserved-input allowance, or bounded recomputation argument.
+Likewise, accepting only canonical successors cannot block this attack: its
+result already is the canonical unsafe state. The substantive premise is
+non-malleability against the full allowed rewrite class, not canonicality alone.
+
+Primary-source verification of
+[space-bounded non-malleability](https://eprint.iacr.org/2017/530) confirms that
+its guarantee covers a tampering class, uses a weaker leakage-style notion and
+proof-of-space machinery. This does not supply a lower bound for our learned
+model. The bounded question selected in the preceding discussion now has a
+useful negative answer. Retain this escape as a design requirement and avoid
+expanding the abstract theorem before a concrete edit/resource model or new
+engineering result supplies a target. No model change, new training, provider
+poll, or monitor was initiated. The pending run's last recorded state remains
+the submission observation in LN-098; this review does not refresh it.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.

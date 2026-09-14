@@ -69,7 +69,34 @@ for _ in range(2):
 assert answers == [1,0]
 assert max(sum(pred == truth for truth in answers) for pred in (0,1)) == 1
 
+# L(y,p) = (y XOR p*1^(N-1), p) is invertible, and its policy
+# column is all ones. Check every payload/policy at widths 2 through 12.
+# The payload stands for the output of any E0; this check does not assert
+# a space lower bound for E0 or measure the verifier's own memory use.
+complement_cases = 0
+for width in range(2, 13):
+    payload_mask = (1 << (width-1))-1
+    for payload in range(1 << (width-1)):
+        for policy in (0, 1):
+            low = payload ^ (payload_mask if policy else 0)
+            state = low | (policy << (width-1))
+            # Simulate the actual in-place pass on one live state.
+            for bit in range(width):
+                state ^= 1 << bit
+            after_policy = state >> (width-1)
+            after_payload = (state & payload_mask) ^ (payload_mask if after_policy else 0)
+            assert after_policy == 1-policy and after_payload == payload
+            complement_cases += 1
+
+# Even a perfectly unrelated unsafe replacement can coincide with the task.
+# For uniform two-bit Z and fixed z*=0, full-task preservation occurs with
+# probability 1/4, although non-malleability error is zero.
+accidental_matches = sum(z == 0 for z in range(4))
+assert accidental_matches == 1
+
 result={'two_policy_bit_flip':{'cases':len(minimal),'policy_removed_in_all':True,'task_accuracy':1.,'snapshots':False,'decoder_replacement':False,'trusted_commit_retained':True,'outside_declared_family':True},
+        'dense_policy_complement':{'cases':complement_cases,'widths':[2,12], 'task_preserved_and_policy_flipped':True,'passes':1,'extra_algorithmic_workspace':'O(log N) addressing, O(1) data bits','scope':'Algebraic construction; E0 complexity remains an independent assumption'},
+        'accidental_match_baseline':{'task_bits':2,'removal_probability':1,'non_malleability_error':0,'joint_removal_and_exact_task_match_probability':accidental_matches/4,'requires_baseline_in_probability_bound':True},
         'complete_state_posterior_audit':{'honest_commit_guess_accuracy':pure_guess,'leaky_commit_guess_accuracy':leaky_guess},
         'adaptive_constant_selection':{'cases':len(adaptive),'task_accuracy':1.,'scope':'Counterexample to extending fixed-f security to history-dependent f selection without a joint leakage guarantee'},
         'finite_query_table_scope':{'query_alphabet_size':1,'stateful_outputs':answers,'single_value_table_best_accuracy':.5,'required_correction':'Assume a deterministic memoryless response or tabulate sufficient histories/state'},
