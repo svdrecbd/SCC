@@ -12,18 +12,18 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Recovery calibration qualified; matched comparisons running:** [LN-075](#ln-075)
-records the user-requested observation. The relaxed control reaches 99.48%
-validation accuracy, 100% training-probe accuracy and zero exception-policy errors;
-all six task gates and its independent audit pass. The first matched learned-binding
-repair reaches 89.97% validation accuracy and 100% on its training probe, with zero
-policy errors. Its remaining validation failure is concentrated in lookup
-(181/256 correct); parity and sum3 retain nearly all performance. Its matched
-relaxed control was still running at observation. This is substantial recovery,
-not catastrophic cognition loss; a binding-specific comparison awaits the paired
-results. The fixed [LN-072](#ln-072) batch continues without a watcher. The GLM
-corpus remains untouched. Source, tests and labnotes are kept on main following the user's version-control
-preference.
+**First matched recovery pair complete; two pairs remain:** [LN-076](#ln-076)
+records the user-requested observation at 00:57:43 UTC on 14 September. Calibration
+and both arms of pair 1 are complete (3/7 trajectories). The matched relaxed
+control reaches 100% validation accuracy; learned binding reaches 89.97%. Both
+fit their training probes perfectly and implement the selective exception with
+zero policy errors. The learned arm's remaining failure is concentrated in lookup
+(181/256 correct versus 256/256 for the relaxed control). This first pair shows
+a recovery/generalization gap under the fixed budget, not catastrophic cognition
+loss or irrecoverability; two matched replications remain. The fixed
+[LN-072](#ln-072) batch continues without a watcher. The GLM corpus remains
+untouched. Source, tests and labnotes are kept on main following the user's
+version-control preference.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
 still preserves 100% capability and discloses all 256 forbidden answers. Learned
@@ -3511,6 +3511,33 @@ All 203 production Python file hashes match their pre-integration values. No
 source, runner or auditor change was made to the active computation. The
 [main synchronization receipt](artifacts/main-sync-20260914-v1/publication.json)
 records the resulting local/remote commit identity and clean working-tree check.
+
+### LN-076 — 2026-09-14: first matched relaxed control fully recovers
+
+At the user's requested observation, **00:57:43 UTC / 17:57:43 PDT on
+13 September**, CPU PID 2638 was running with 50:52 elapsed. Three of seven
+trajectories were complete: calibration and both arms of pair 1. The whole-batch
+summary and audit were not yet available. Four trajectories remain; observed
+case durations suggest roughly another hour, subject to runtime variation.
+
+The [pair-1 relaxed-control audit](artifacts/scc-curriculum-repair-20260913-v1/full-v1/pair-1-symbolic-binding-control/audit.json)
+passes: validation is **768/768 in FP32 and FP64**, training probe **768/768**,
+selected forbidden lookup **256/256**, and exception-rule errors zero. All recovery
+gates qualify. The saved auditor rescored 4,608 predictions and 18,432 emissions,
+replayed 456 ticks, and verified the damaged start, padding, optimizer and
+curriculum. This observation read the saved successful audit; it did not rerun
+the whole-batch audit. Case runtime was 833.47 seconds.
+
+Unlike the earlier calibration comparison, this is a matched contrast with
+[LN-075](#ln-075)'s learned-binding result: **691/768 (89.97%) validation**, lookup
+**181/256**, training probe **768/768**, and zero exception-rule errors. Both
+arms share the damaged start, training pool, schedule, repair budget and held-out
+evaluation panel. The relaxed control fully recovers while the learned arm retains
+a lookup generalization deficit. One pair does not establish replication,
+irrecoverability or catastrophic cognition failure. Substantial capability
+survives, and the known pre-damage repacking escape remains open. Continue the
+already running fixed batch; no source changes, new experiment or GLM-corpus
+access were made.
 
 ## Supporting-record index
 
