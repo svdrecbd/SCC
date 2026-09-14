@@ -18,9 +18,9 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Ordinary-memory comparison submitted:** [LN-107](#ln-107). GMAN
-`job-j8w8t` accepted at17:19:29 UTC on14 September; observed state is submitted,
-not verified running. Twelve matched12,000-update repairs compare hidden binding,
+**Ordinary-memory comparison running:** [LN-108](#ln-108). GMAN
+`job-j8w8t` observed running at19:53:41 UTC on14 September, first attempt,
+no restarts or preemptions. No final artifact or live progress counters available. Twelve matched12,000-update repairs compare hidden binding,
 fixed lookup projection, always-on projection and the unrestricted control.
 Added lookup load/distance panels and gate-history logs. All78 focused tests and
 the264-panel fixture pass. Ten-hour provider cap, maximum quote$5.40, no watcher.
@@ -4678,6 +4678,23 @@ parents, earlier failed runs, source snapshots and fixture-v1/v2 are preserved.
 No additional trial, automatic collector, scheduled status check, automatic
 resubmission, or GLM-corpus access. Recover and audit this exact job when the
 user returns with completion or requests a status check.
+
+<a id="ln-108"></a>
+### LN-108 — 2026-09-14: memory-control job running on its first attempt
+
+At the user's requested check, GMAN reports `job-j8w8t` **running** at
+19:53:41 UTC (12:53:41 PDT) on14 September, attempt1, zero restarts and zero
+preemptions. A single non-following run-log read confirms a live attempt with
+EOF false but no stdout. The coordinator redirects worker progress to files in
+the artifact directory, so empty provider stdout does not establish inactivity.
+The returned status has no actual start timestamp, update counts, result or final
+artifact; percentage complete and remaining time cannot be verified from these
+responses. About2h34m has elapsed since submission, not necessarily execution.
+
+Saved exact observations under `artifacts/scc-memory-controls-20260914-v1/` as
+`status-20260914T195341Z.json` and `logs-20260914T195341Z.json`. No recovery,
+resubmission, cancellation, source change, or automatic monitor was initiated.
+Scientific outcomes remain pending; prior results are unchanged.
 
 ## Supporting-record index
 
