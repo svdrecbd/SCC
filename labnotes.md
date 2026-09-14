@@ -12,13 +12,11 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Matched training submitted to GMAN:** [LN-091](#ln-091). Job `job-3ttr3`
-was accepted with status `submitted`; running/completion has not been observed.
-It will benchmark then train both,parameter-only,hidden-only and neither for
-three paired data/schedule seeds on one cpu-8 worker host, three two-thread
-processes,12,000 updates per trajectory. Twelve cases include new same-host
-controls. Hard runtime cap180 minutes; maximum charge$1.62. Final fixture and
-all local validation pass. No watcher or automatic resubmission.
+**Matched training queued on GMAN:** [LN-092](#ln-092). At the latest requested
+check, `job-3ttr3` is queued at position1, attempt0; training has not started.
+The provider estimates5,400 seconds (90 minutes) of queue wait, not a guarantee.
+The12-trajectory plan,180-minute runtime cap and maximum charge$1.62 are unchanged.
+No watcher or duplicate submission.
 
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
@@ -4018,6 +4016,17 @@ source/input package is persistent and frozen; there are no expiring runtime
 source URLs, checkpoint parent overwrites, scheduled status checks, automatic
 resubmissions or GLM-corpus accesses. Collect and audit the completed artifact
 when the user next requests a status/result check.
+
+### LN-092 — 2026-09-14: matched-training job queued, not running
+
+At the user's requested status check (2026-09-14T03:34:39.184276+00:00), GMAN reports
+`job-3ttr3` **queued**, position1, estimated wait5,400 seconds (90 minutes).
+Attempt0; started_at,finished_at,result,receipt and artifact are null. It was
+submitted at03:10:36 UTC. No training has started and no scientific output is
+available. Queue estimate is provider guidance, not a completion promise;
+training runtime would follow allocation. Queued time is free according to the
+provider response. Saved observation: [status-20260914T033439Z.json](artifacts/scc-separated-training-20260914-v1/status-20260914T033439Z.json).
+No resubmission, cancellation, allocation change or repeated polling was performed.
 
 ## Supporting-record index
 
