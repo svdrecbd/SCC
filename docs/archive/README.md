@@ -47,4 +47,7 @@ environment notes are in [operations](../OPERATIONS.md).
 - [MECHANISM_TARGET.md](status-2026-09-12/MECHANISM_TARGET.md)
 
 [Path map](path-map.json). Dated reports and frozen protocols remain at their
-original paths; see the [document catalog](../catalog.json).
+original paths: [reports](../../reports/) and [protocols](../../protocols/).
+
+The [research reset](../RESEARCH_RESET.md) is also a dated historical synthesis,
+not an additional current plan.

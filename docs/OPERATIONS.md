@@ -1,151 +1,82 @@
-# Operations and repository map
+# Operations
 
-Use [labnotes.md](../labnotes.md) for the chronology and scientific decision. This
-guide covers navigation, evidence, execution and storage. The experiment code
-uses **PyTorch on CUDA**; custom `.cu` kernels are not the implementation.
+Scientific decisions and observations belong in [labnotes](../labnotes.md).
+The [mechanism target](../MECHANISM_TARGET.md) defines what would count as success;
+[working standards](../WORKING_STANDARDS.md) cover research and compute rules.
 
-## Status without the wrong batch
-
-From the repository root:
-
-```sh
-uv run python scripts/scc_status.py
-```
-
-This reads the exact registered experiments from the saved local ledger. It
-prints the observation date, counts and unfinished IDs. It does not contact GMAN.
-
-```sh
-uv run python scripts/scc_status.py --live
-uv run python scripts/scc_status.py --all
-```
-
-`--live` checks each registered unfinished job once, reuses previous terminal
-observations, and returns. It neither watches nor rewrites the ledger. `--all`
-shows every registered row. Use `--json` for safe machine-readable status.
-Never infer scientific qualification from provider `succeeded`.
-
-`gman job ls --limit 70` means the newest 70 account jobs, not the current SCC
-batch. It can include old canceled starts and validation failures. A particular
-job can be inspected with `gman job get JOB_ID` and `gman job logs JOB_ID`.
-Logs without `--follow` return once. Do not start recurring polling or collectors.
-
-The ledger is [artifacts/developmental-current-status.json](../artifacts/developmental-current-status.json).
-A source-only copy intentionally lacks it. That copy can still read the dated
-assessment in [labnotes](../labnotes.md); live job credentials are not part
-of a research sharing package.
-
-## Code and evidence map
-
-| Area | Entry points | Treatment |
-|---|---|---|
-| Objective and modification derivatives | [recovered capability](../scc/recovered_capability.py), [differentiable modification](../scc/differentiable_modify.py) | Reusable measurement infrastructure; preserve calibration boundaries |
-| History/scale comparison | [memory runner](../scripts/run_memory_factorial.py), [model configuration](../scc/memory_factorial.py), [protocol](../protocols/SCC_MEMORY_FACTORIAL_V1.md) | Frozen experiment; observations and interpretation are in labnotes |
-| Persistent substrate | [matrix](../scc/persistent_matrix.py), [tasks](../scc/persistent_tasks.py), [runner](../scripts/run_persistent_learnability.py), [protocol](../protocols/SCC_PERSISTENT_LEARNABILITY_V1.md) | Learning and optimization controls; consult labnotes before selecting changes |
-| Ordinary reference | [GRU](../scc/persistent_reference.py), [runner](../scripts/run_persistent_reference.py), [audit](../scripts/audit_persistent_reference.py), [readout](../reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md) | Reference learner, with no SCC coupling; dated evidence retained |
-| Previous architecture portfolio | [portfolio runner](../scripts/run_architecture_portfolio.py), [projected runner](../scripts/run_projected_construction.py) | Baselines and counterexamples, not current blanket launch instructions |
-| Closed finite circuits | [functional basis](../scc/functional_basis.py), [report](../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md) | Preserve for reproducibility; not the next research branch |
-| Provenance and checkpoints | [provenance](../scc/provenance.py), [checkpoint code](../scc/checkpoint.py) | Existing formats and original hashes remain unchanged |
-| Reports | `reports/` | Historical accounts; future narrative updates go in labnotes |
-| Protocols | `protocols/` | Frozen contracts for the named experiments; a newer plan does not rewrite them |
-| Artifacts and runs | `artifacts/`, `runs/` | Raw evidence, parents, intermediate states, failures, snapshots and audit scripts |
-| Original planning/workflows | [archive](archive/README.md) | Historical material with a path map and preserved original bytes |
-
-The [document catalog](catalog.json) lists report/protocol paths and code entry
-points. Many thousands of `.py` files under artifacts are frozen copies of the
-same small source tree, not thousands of separate active implementations.
-
-## How current information is maintained
-
-1. Keep [MECHANISM_TARGET.md](../MECHANISM_TARGET.md) stable. It defines the goal
-   and boundaries; it is not a rolling status log.
-2. Append meaningful plans, experiments, results, failures and corrections to
-   [labnotes](../labnotes.md) in chronological order, using its stable entry IDs.
-   Update its current-position block when evidence changes the decision. Do not
-   create new routine reports, theory, status or protocol documents. README and
-   this guide point there instead of duplicating rolling observations.
-3. Keep a single current job ledger with observation timestamps. Save detailed
-   API responses privately in a fresh artifact directory; do not print or commit
-   signed download URLs.
-4. Specify the experiment in labnotes before execution, then freeze the relevant
-   entry, configuration and source in its artifact directory, with named outputs,
-   declared gates and resource bounds. Existing protocols stay frozen. Never
-   overwrite a failed run or parent. A separate human-facing document is for an
-   explicitly requested deliverable, not routine research bookkeeping.
-5. A run result should state whether it has only inline status, checked summary
-   metadata, verified archive/source bytes, rescored predictions, or rerun model
-   inference. These are different levels of evidence.
-
-Use local version control for source and documents. Raw data, credentials,
-checkpoints and experiment archives belong outside source history. No remote
-publication or upload follows from a local commit.
-
-## Environment and checks
+## Setup and tests
 
 ```sh
 uv sync --extra dev
-uv run pytest tests/test_scc_status.py -q
+uv run python -m pytest -q
 ```
 
-The project pins Python 3.13–3.14 and PyTorch 2.14 in its existing lock/config.
-Use `uv run`, not the machine's unrelated Anaconda environment. Numerical
-validation and whole-suite results belong to their dated runs; do not quote an
-old passing test count as evidence for a new mechanism. Check the relevant
-source and fixture when changing scientific code.
-
-GMAN's verified maximum explicit execution budget is 720 minutes. The local
-submission helper retains a 120-minute default. Queue lifetime is separate
-(the inspected default was three days), and increasing execution time does not
-speed up queue placement. Existing runner deadlines remain part of each frozen
-contract. Any longer run needs both its provider budget and internal cutoff
-declared afresh. [Time-limit evidence](../artifacts/scc-charon-and-runtime-20260912-v1/READOUT.md).
-
-## Storage and Charon
-
-At the reset's initial inventory, artifacts plus runs held about 33.20 GiB of
-logical files and 2,004 loose `.pt` files. Sources and documents are a tiny
-fraction of that. Some checkpoint files contain optimizer state, large sampling
-lineage sets or experimental tensors. Similar filenames do not establish
-redundancy. The earlier duplicate-byte audit is historical, not a current
-deletion list. [Storage audit](../reports/STORAGE_AUDIT_2026-09-10.md).
-
-Charon's inspected hardware, reboot interruption and subsequent observations
-are recorded in [labnotes](../labnotes.md#ln-033). Check that record before using
-the archive disks or GPUs. A configured SSH alias or proposed CUDA environment
-does not establish a working runtime. The original
-[integration record](../artifacts/scc-charon-integration-20260912-v1/READOUT.md)
-preserves the initial measurements and setup attempt.
-
-On an explicitly requested connection check:
+Use the pinned environment through `uv`. The full suite runs on CPU with small
+fixtures; GPU experiments have their own numerical and resource gates. To work on
+the persistent-task/reference implementation, a focused selection is:
 
 ```sh
-ssh -o BatchMode=yes -o ConnectTimeout=10 charon 'hostname; uptime; nvidia-smi'
+uv run python -m pytest tests/test_persistent_tasks.py tests/test_persistent_reference.py -q
+uv run python -m pytest --collect-only -q
 ```
 
-Once reachable, verify the disk mount and `/mnt/hdd1/scc-research` ownership;
-then transfer selected completed archives directly from GMAN to Charon. The
-prepared receiver resumes partial transfers and commits only whole-hash matches.
-Its manifest covers the seven jobs known at that preparation date; it is not
-an automatic full-project migration.
+The collection command lists individual cases without executing them. Parameterized
+cases test different rules, precisions, or boundaries; their count is not a count
+of independent experiments or scientific findings.
 
-Before any evidence cleanup, retain the original provider archive and hashes,
-verify extraction/restore of a selected result, preserve necessary parents and
-failure states, and record each proposed redundant local copy. Keep existing
-checkpoint formats. A future format can store shared lineage/data once, but
-needs an exact-resume check before replacing the current format in new runs.
-No checkpoint deletion or bulk migration occurred during this reset.
+Tests cover three responsibilities: reusable infrastructure (data separation,
+checkpoint/resume behavior, derivatives, and scoring); individual model/runtime
+implementations; and regressions that preserve historical counterexamples. Keep
+historical tests with the code they validate. Consolidate duplicate assertions or
+retire code and its tests together, rather than reducing the count arbitrarily.
 
-## Sharing and restoration
+## Code navigation
 
-Source and documentation alone can explain the project; they cannot verify
-training scores. For a review package include labnotes, the frozen experiment entry/config,
-source/lock, selected raw predictions, training logs, provenance and hashes, and
-any checkpoint required to rerun the central claim. Use repository-relative links.
-Never include provider credentials, signed artifact URLs or unrelated private data.
+| Area | Entry points |
+|---|---|
+| Persistent tasks and substrate | [tasks](../scc/persistent_tasks.py), [matrix](../scc/persistent_matrix.py), [runner](../scripts/run_persistent_learnability.py) |
+| Ordinary recurrent reference | [GRU](../scc/persistent_reference.py), [runner](../scripts/run_persistent_reference.py), [audit](../scripts/audit_persistent_reference.py) |
+| Modification and recovery objectives | [differentiable modification](../scc/differentiable_modify.py), [recovered capability](../scc/recovered_capability.py) |
+| Earlier architecture comparisons | [memory factorial](../scc/memory_factorial.py), [portfolio runner](../scripts/run_architecture_portfolio.py) |
+| Evidence integrity | [provenance](../scc/provenance.py), [checkpoints](../scc/checkpoint.py) |
 
-Historical files moved during the reset are mapped in
-[archive/path-map.json](archive/path-map.json). Original bytes are retained in
-[the reset backup](../artifacts/scc-research-reset-20260912-v1/before-documents/),
-with hashes in [document-moves.json](../artifacts/scc-research-reset-20260912-v1/document-moves.json).
-Frozen artifact snapshots were not rewritten; their old references must be read
-against their original base paths and this relocation map.
+Consult labnotes before selecting an experiment. `reports/` and `protocols/` are
+historical evidence. Existing runners load named protocols when freezing their
+inputs, so those paths remain stable. New plans are recorded in labnotes and
+frozen into each new run's artifact directory.
+
+## Compute status
+
+For an evidence-enabled working copy:
+
+```sh
+uv run python scripts/scc_status.py
+uv run python scripts/scc_status.py --live
+```
+
+The default reads saved observations from
+`artifacts/developmental-current-status.json`; it does not contact GMAN. A fresh
+source clone lacks that ledger. `--live` checks each registered unfinished job
+once. Neither command installs a watcher. Do not treat an account-wide newest-job
+listing as the status of the registered experiment batch.
+
+Provider completion, numerical validation, task qualification, and evidence for
+SCC are separate outcomes. Current compute limits and polling preferences are in
+[working standards](../WORKING_STANDARDS.md); dated infrastructure observations are
+in labnotes and the [historical archive](archive/README.md).
+
+## Evidence and sharing
+
+Keep datasets, run directories, parent checkpoints, intermediate states, failures,
+and frozen source snapshots outside Git and preserve their hashes. Do not edit
+source used by an active run. Use fresh artifact paths for new experiments.
+
+A review package needs the relevant labnotes entry, frozen configuration and
+source/lockfile, raw predictions, training logs, hashes, and any data/checkpoints
+needed to replay the claim. Source alone cannot verify training results. Provider
+credentials and signed download URLs are not part of a review package.
+
+Earlier document relocations are recorded in [archive/path-map.json](archive/path-map.json).
+The original reset backup and hash ledger remain in the local evidence store at
+`artifacts/scc-research-reset-20260912-v1/`. Archived documents and artifact snapshots
+must be interpreted at their original dates.

@@ -1,26 +1,57 @@
-# SCC research
+# Safety-Capability Coupling (SCC)
 
-We are trying to build an individual model whose alignment-removing modification
-destroys indispensable cognitive computation. **No working SCC mechanism has
-been demonstrated.**
+SCC investigates whether an individual AI model can be built so that removing its
+protected alignment machinery destroys cognitive computations it needs to function.
 
-Start with **[labnotes.md](labnotes.md)**. It is the single living record:
-current position first, then the chronological experiments, results, mistakes,
-theory, decisions and evidence. Future research updates go there.
+**This is an experimental research program. No working SCC mechanism has been
+demonstrated.** The current tasks use synthetic authorization rules as laboratory
+proxies for alignment. Passing those tasks, damaging a model, or failing to repair
+it within a limited budget does not establish the intended mechanism.
 
-| Reference | Purpose |
-|---|---|
-| [Labnotes](labnotes.md) | Current assessment and complete documented research chronology |
-| [Mechanism target](MECHANISM_TARGET.md) | Stable definition of intended SCC behavior |
-| [Operations](docs/OPERATIONS.md) | Commands, code, evidence and storage procedures |
-| [Working standards](WORKING_STANDARDS.md) | Research, documentation, compute and preservation rules |
-| [Historical index](docs/archive/README.md) | Earlier proposals and archived workflows |
+The repository contains PyTorch models, training and modification experiments,
+repair attempts, independent result audits, and the research record.
+
+## Read the research
+
+- [Mechanism target](MECHANISM_TARGET.md): the question, intended endpoint, and
+  distinctions that govern the experiments.
+- [Labnotes](labnotes.md): current assessment followed by the chronological record
+  of plans, results, failures, and corrections.
+- [Operations](docs/OPERATIONS.md): setup, code navigation, tests, and evidence.
+
+## Run the checks
+
+The project uses the Python and dependency versions pinned in
+[pyproject.toml](pyproject.toml) and [uv.lock](uv.lock).
 
 ```sh
-uv run python scripts/scc_status.py
+uv sync --extra dev
+uv run python -m pytest -q
 ```
 
-This reads saved exact-batch observations. Add `--live` for one explicit API
-check of unfinished jobs. There is no automatic watcher. Scientific code,
-historical reports/protocols, run directories and checkpoints retain their paths;
-they support the labnotes rather than compete with them as current accounts.
+The tests use small CPU fixtures and generated data. They do not require GMAN
+credentials or the experiment corpus. They check implementation and measurement;
+they do not reproduce the full research runs or establish SCC success.
+
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| [scc/](scc/) | Models, task generators, objectives, interventions, and metrics |
+| [scripts/](scripts/) | Experiment runners, numerical checks, result audits, and compute tools |
+| [tests/](tests/) | Implementation checks and regressions for current and historical experiments |
+| [labnotes.md](labnotes.md) | The single living research record |
+| [reports/](reports/), [protocols/](protocols/) | Historical findings and frozen experiment contracts |
+| [docs/archive/](docs/archive/) | Original proposals and superseded workflows |
+
+Historical material describes the work at its recorded date. It is not a second
+set of current instructions. Contributor instructions are in [AGENTS.md](AGENTS.md)
+and [WORKING_STANDARDS.md](WORKING_STANDARDS.md).
+
+## Evidence and reproducibility
+
+Datasets, checkpoints, and run artifacts are excluded from Git. Links into
+`artifacts/` and `runs/` in the labnotes require the corresponding evidence package;
+they will not resolve in a fresh clone. Reproducing a reported result requires its
+frozen source, configuration, data, checkpoints where needed, and raw predictions.
+See [operations](docs/OPERATIONS.md#evidence-and-sharing) for the evidence workflow.

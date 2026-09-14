@@ -1717,6 +1717,53 @@ result to the 269-test record, no trained candidate and no SCC success. The last
 sharing ZIP remains the LN-049 source snapshot; importing this memo did not
 refresh that archive.
 
+<a id="ln-074"></a>
+### LN-074 — 2026-09-14: repository navigation and test portability cleanup
+
+The user requested a shareable GitHub cleanup and a substantive assessment of
+whether the documentation and tests are needed. The original glossary explicitly
+expands SCC as **Safety-Capability Coupling**; omitting that name from the README
+was a presentation error. The reader-facing README now gives the full name,
+research question, evidence limits, setup/test commands and repository map. The
+operations guide is reduced from 151 to 82 lines. Removed the redundant root
+`00_README.md` pointer and the generated 1,483-line `docs/catalog.json`; their
+history remains in Git. Updated nineteen archived-document notices to point to
+labnotes rather than calling an old research reset current. All 32 reports and
+49 protocol files retain their paths and contents; runners still load protocols
+when freezing experiments. No claim that archiving a result makes its evidence
+unnecessary.
+
+The [static test inventory](artifacts/repository-cleanup-20260913-v1/test-inventory.json)
+accounts for all **396 local cases, 253 test functions and 49 files**. Of those,
+269 cases were on GitHub at the audited commit `9b3646a`; 127 belonged to newer
+unpublished research. This was an inventory of individual assertions and a
+family-level purpose review, not a mutation analysis or proof that every assertion
+is indispensable. There were no identical test-function bodies. Preserve numerical
+reference/gradient checks, split/parent integrity, real state transitions and
+controls against falsely reporting capability loss. The 34 finite-circuit cases
+should remain with their historical counterexample implementations. The local
+standalone `test_counts` is a consolidation candidate for a broader state-layout
+check; changing its grouping would not improve scientific coverage. No tests were
+deleted or hidden to lower a count.
+
+A fresh checkout exposed six skipped tests because the shared developmental
+`bank` fixture required `artifacts/retrieval-recovery/byte-prepared`. Replaced that
+fixture in the isolated cleanup checkout with deterministic generated text,
+prepared through the real manifest/tokenizer pipeline at context length 192.
+Its four group labels exercise the existing interface; the records identify
+themselves as synthetic test data. No corpus or network access is used. The six
+resume, support/query exclusion, edit-stream and transition cases now execute;
+their assertions are unchanged. This tests software behavior, not natural-text
+research performance.
+
+Changes were prepared in `/Users/svdr/SCC_repository_cleanup` on
+`codex/repository-cleanup`, separate from the running repair checkout. All source
+and test hashes used by LN-072 remained unchanged there. No training state,
+protocol, checkpoint or production Python implementation was changed by this
+cleanup. The clean-checkout suite passes all 269 cases in 23.87 seconds with
+no skips; 309 non-evidence-store file links resolve. Publication is recorded with
+the cleanup receipt.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
@@ -1916,7 +1963,7 @@ Artifact links require the evidence store and are absent from a source-only ZIP.
 ### Machine records and source navigation
 
 - [Exact current GPU ledger](artifacts/developmental-current-status.json): registered IDs, observations, receipts and result paths; contains earlier completed controls as well as this batch.
-- [Code/document catalog](docs/catalog.json): source entry points and preserved protocol/report inventory.
+- [Operations](docs/OPERATIONS.md): code navigation; [reports](reports/) and [protocols](protocols/) retain historical evidence.
 - [Operations guide](docs/OPERATIONS.md): status commands, evidence handling and restoration procedures.
 - [Artifact store](artifacts/) and [local runs](runs/): original parents, failures, checkpoints, data, source snapshots, training and prediction logs. These directories are intentionally excluded from source-only transfers.
 - [This consolidation's evidence coverage](artifacts/scc-labnotes-20260913-v1/document-coverage.json) and [pre-edit tracked-file hashes](artifacts/scc-labnotes-20260913-v1/before-tracked-sha256.json): audit trail for the backfill.
