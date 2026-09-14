@@ -26,13 +26,18 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Ordinary-memory comparison running:** [LN-112](#ln-112). GMAN
-`job-j8w8t` observed running at22:08:41 UTC on14 September, first attempt,
-no restarts or preemptions. No final artifact or live progress counters available. Twelve matched12,000-update repairs compare hidden binding,
-fixed lookup projection, always-on projection and the unrestricted control.
-Added lookup load/distance panels and gate-history logs. All78 focused tests and
-the264-panel fixture pass. Ten-hour provider cap, maximum quote$5.40, no watcher.
-This tests an ordinary capacity explanation before any scale-up or GLM work.
+**Ordinary-memory comparison complete and audited:** [LN-113](#ln-113).
+GMAN `job-j8w8t` succeeded at22:31:45 UTC on14 September, charged$2.7258.
+All12 repairs completed12,000 updates; archive/source/input hashes, training
+contracts and264 saved panels (104,448 task predictions) pass local audit.
+Mean validation: hidden binding89.19%, fixed lookup projection90.02%, always-on
+projection74.74%, unrestricted99.13%; recovery gates0/3,0/3,0/3,2/3.
+Policy-independent lookup compression reproduces the main deficit. This favors
+an ordinary memory/optimization explanation and weakens the interpretation as
+protection-specific destructive coupling. No catastrophic cognition failure or
+scale-up readiness established. Before another long training batch, benchmark
+this runner on CPU versus GPU; the CPU choice has not been speed-validated
+against CUDA. No new job or watcher has been launched; GLM remains untouched.
 
 **Matched four-condition repair complete and audited:** [LN-104](#ln-104).
 GMAN `job-bvhhp` succeeded at12:20:46 UTC on14 September; all12 trajectories
@@ -4844,6 +4849,103 @@ counts, so this is not verified training duration or percentage complete.
 Saved `artifacts/scc-memory-controls-20260914-v1/status-20260914T220841Z.json`
 on the mounted external evidence store; removed only its newly generated
 AppleDouble sidecar. No new job, recovery, source edit or repeated monitor.
+
+<a id="ln-113"></a>
+### LN-113 — 2026-09-14: ordinary compression reproduces the deficit; GPU rationale corrected
+
+**Requested status and recovery.** Exact GMAN `job-j8w8t` succeeded at
+22:31:45.493 UTC (15:31:45 PDT), first attempt, no restarts/preemptions.
+The22:50:13 UTC observation is saved under
+`artifacts/scc-memory-controls-20260914-v1/status-20260914T225013Z.json`.
+Billed18,173 seconds, charged$2.7258. Artifact `art-ucnmb`,217,047,040 bytes,
+SHA256 `eeb03d08938ef853a5eca87f644d79151aaf04bb9f815b7f9a37714d15c3cdcc`.
+Streamed recovery into `recovered-v1/files/memory-controls` verified archive
+length/hash without retaining a duplicate TAR. Source commit remains
+`5e13861a6474d6442086efae828bef4c70876e16` for the submitted experiment.
+
+**Audit.** Local `audit-v1/audit.py` verifies658 artifact hashes,215 frozen
+source hashes against the checkout,22 input hashes, all144,000 training updates,
+parent identity, schedules/curriculum/LR/checkpoint optimizer contract and all264
+saved panels. Independent saved-output scoring verifies104,448 task predictions,
+cell counts, late halves, Wilson bounds/recovery gates on original panels,
+exception admissions/answers, and descriptive query strata/core counts/baselines.
+Existing contract checks also verify finite outputs, full physical versus reduced
+runtime agreement and FP32/FP64 decision/admission agreement. This is saved-output
+verification, not independent retraining or new forward execution. All pass.
+Machine outputs: `audit-v1/audit.json` and `audit-v1/aggregate.json`.
+Removed686 locally generated AppleDouble metadata sidecars only after checking
+magic, paired originals and absence from the remote artifact inventory. Preserved
+the original downloader manifest; cleanup record in `audit-v1/metadata-cleanup.json`.
+Original source snapshots/checkpoints/failures remain intact on external storage.
+
+**Final original-panel results (three matched schedules from one damaged parent):**
+
+| Condition | Validation by pair (%) | Mean (%) | Recovery gate |
+|---|---|---|---|
+| Hidden binding |89.71 /87.76 /90.10|89.19|0/3|
+| Fixed projection on LOOKUP |92.71 /89.32 /88.02|90.02|0/3|
+| Fixed projection always |67.45 /89.58 /67.19|74.74|0/3|
+| Neither binding/projection |99.61 /98.31 /99.48|99.13|2/3|
+
+All original final validation panels implement the selective exception with zero
+rule errors. Training probes are100% except always-projection pair3 at99.09%.
+Hidden-binding and unrestricted original validation scores reproduce LN-104.
+The unrestricted pair2 still misses the late lookup gate; high overall accuracy
+is not the full gate. Hidden-binding lookup accuracy is64.84–70.70%; fixed
+LOOKUP projection64.84–78.52%, while their parity/sum3 stay98.83–100%.
+Always-projection lookup is67.58–71.88%; sum3 falls to31.25% and33.98% in pairs1/3,
+while parity remains99.22–100%. Its lower overall mean therefore includes an
+additional task-specific generalization failure, not universal cognitive collapse.
+
+**Interpretation.** The policy-independent projection reproduces the main
+lookup deficit under matched parameters, damaged parent, data and repair budget.
+This favors an ordinary memory-compression/optimization explanation and weakens
+any interpretation of the prior deficit as evidence of protection-specific SCC.
+It does not prove exact equivalence of learning trajectories or rule out every
+alternative coupling construction. Positive unit-gain learned cross-admission
+binding is already algebraically the same half-mean projection when activated;
+this comparison was deliberately designed to expose that explanation.
+Logged hidden-binding cross-admission versus LOOKUP discrepancies occur only in
+the first56/58/72 updates (798/809/771 total request disagreements). Later sampled
+training requests activate the same pattern, but early gate history and numerical
+optimization can still produce different learned weights.
+
+Descriptive lookup panels show hidden binding100% at length2,74.22–84.77% at4,
+64.06–71.09% at8 and66.41–69.92% at12. Fixed LOOKUP projection has a similar
+long-load deficit (66.41–70.70% at12); unrestricted is94.53–99.61% at12.
+Short-load behavior is not universally perfect: fixed LOOKUP pair2 reaches66.41%
+at2 and always-projection pair2 reaches46.09%. Length2/4 have only2/29 unique
+cores, sampled repeatedly. These panels are descriptive support, not independent
+replications or an isolated causal manipulation of delay; no significance claim.
+Three schedules share one parent, and unsuccessful repair remains bounded search.
+Synthetic authorization and95% retention gates remain distinct from alignment
+and catastrophic loss of cognition. Scale-up and GLM gates remain closed.
+
+**Why CPU, and correction.** CPU was the previously validated execution path;
+LN-089 also chose one GMAN hardware environment for matched comparisons. That
+justifies consistent hardware, not CPU specifically. Free H100 access was already
+verified in LN-087, and user authorization was never the blocker. We have not
+benchmarked this80,517-coefficient persistent repair runner on CUDA. CPU became
+an unmeasured default; after repeated five-hour batches, its performance rationale
+needs an actual comparison. This run's solo readiness benchmark measured about
+0.301–0.305 seconds/update, and full case training took4,203–4,620 seconds.
+The runner currently creates CPU tensors and performs many sequential recurrent
+operations. GPU speedup is plausible but not established for this small workload;
+a port must address device placement and avoid repeated host synchronization.
+PyTorch's official Performance Tuning Guide documents launch overhead and
+CPU/GPU synchronization concerns:
+https://docs.pytorch.org/tutorials/recipes/recipes/tuning_guide.html
+
+**Next decision.** Before another long scientific repair batch, develop a bounded
+CPU/H100 throughput benchmark using identical windows, with forward/loss/gradient
+and physical-runtime validation and explicit accelerator precision settings.
+Choose hardware from measured wall time and cost; a fast benchmark does not itself
+validate scientific equivalence. Separately, the next mechanism design must give
+protected computation a cognitive role beyond this ordinary fixed compression,
+with a matched policy-independent control and explicit severe-loss baselines.
+This result argues against scaling the present compression mechanism unchanged.
+No GPU benchmark, new scientific job, watcher or GLM corpus access launched in
+this status/recovery turn. Completed audit and interpretation recorded on main.
 
 ## Supporting-record index
 
