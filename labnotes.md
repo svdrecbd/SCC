@@ -18,12 +18,17 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Corrected matched training submitted to GMAN:** [LN-098](#ln-098).
-`job-bvhhp` was accepted at06:46:12 UTC on14 September; last observed state is
-submitted, not verified running. Twelve fresh matched trajectories, two hours
-per case, nine-hour provider cap, maximum quoted charge$4.86. Benchmark readiness
-is now enforced. The first attempt failed its one-hour cap; all partial outputs
-are preserved and archive-hash verified ([LN-095](#ln-095)). No watcher.
+**Matched four-condition repair complete and audited:** [LN-104](#ln-104).
+GMAN `job-bvhhp` succeeded at12:20:46 UTC on14 September; all12 trajectories
+finished12,000 updates, charged$2.9268. Independent saved-output rescoring,
+training-contract checks and archive/source/input hashes pass. Mean validation:
+both bindings88.72%, parameter-only98.96%, hidden-only89.19%, neither99.13%.
+Recovery gates pass0/3,3/3,0/3,2/3 respectively. All training probes reach100%
+and all final exception-rule errors are zero. The deficit follows hidden-state
+binding and is concentrated in lookup; parity/sum3 remain98.83–100% combined.
+This is a bounded generalization deficit, not catastrophic cognition failure.
+Next design question: distinguish policy-dependent hidden binding from an ordinary
+memory-capacity restriction before scaling. No follow-up training launched.
 
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
@@ -33,8 +38,9 @@ accuracy for the learned repairs; removing both also fails to restore recovery.
 These weights have adapted to the combined operations. Conversely, adding
 parameter binding to relaxed controls strongly damages their tasks and can alter
 external admissions. The result does not isolate an irreducible dependency.
-Next candidate: matched training of parameter-only and hidden-only conditions
-from the same damaged parent and saved data/schedules. The first matched-training attempt is recorded in LN-091 and its failure in LN-095. GMAN access and free H100 preflight remain verified in LN-087.
+The subsequent matched training is now complete in LN-104. The first attempt
+is recorded in LN-091 and its failure in LN-095. GMAN access and free H100
+preflight were verified in LN-087.
 
 **Persistence diagnostic complete; resets do not rescue recovery:**
 [LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
@@ -4441,6 +4447,82 @@ expanding the abstract theorem before a concrete edit/resource model or new
 engineering result supplies a target. No model change, new training, provider
 poll, or monitor was initiated. The pending run's last recorded state remains
 the submission observation in LN-098; this review does not refresh it.
+
+<a id="ln-104"></a>
+### LN-104 — 2026-09-14: matched repair localizes the deficit to hidden-state binding
+
+The user reported completion and requested assessment. Exact-job lookup confirms
+`job-bvhhp` succeeded at12:20:46.306741 UTC on14 September after19,512 billed
+seconds (about5h25m), one attempt, charged$2.9268. The corrected LN-096/098
+runtime budget worked: all12 cases finished12,000 updates, readiness passed,
+and the coordinator completed in19,510.88 seconds. Provider execution success
+is separate from the scientific recovery gates below.
+
+**Recovery and audit.** Streamed artifact `art-km9eq` into the fresh directory
+`artifacts/scc-separated-training-20260914-v2/recovered-v1/` without retaining a
+duplicate TAR. Verified all191,621,120 archive bytes against SHA256
+`1885bf2b926baa9624e5521096b459a3aa1007f76f2537409d7f91ae77b1192f`.
+Recovered456 files. The fresh `audit-v1/audit.py` and `audit-v1/audit.json` beside
+that directory independently recompute per-cell accuracy, Wilson lower bounds,
+late-half accuracy, exception-rule errors, forbidden-answer correctness and the
+complete diagnostic recovery gate from saved predictions. All72 panels and
+55,296 task predictions pass. Reusing the existing training-contract auditor
+also verifies144,000 logged updates, checkpoint optimizer steps, curriculum/LR,
+and identical damaged initial payloads. Case rules and origin/data/schedule
+hashes agree. All455 artifact-manifest entries,209 frozen source entries and17
+input entries verify; current corresponding local sources match the frozen
+source. Full-runtime/reduced correspondence checks pass for all panels, saved
+outputs are finite, and FP32/FP64 validation decisions/admissions agree at both
+endpoints. This is an audit of saved executions and training records, not fresh
+independent training or a rerun of the forward computation.
+
+**Matched held-out task accuracy (percent).** Every condition starts from the
+same LN-072 damaged parent; each pair shares data and update schedule. These are
+three data/schedule replications, not three independent pretrained models.
+
+| Binding during repair/execution | Pair1 | Pair2 | Pair3 | Mean | Full recovery gate |
+|---|---:|---:|---:|---:|---:|
+| Both parameter and hidden | 89.58 | 89.71 | 86.85 | 88.72 | 0/3 |
+| Parameter only | 98.96 | 99.09 | 98.83 | 98.96 | 3/3 |
+| Hidden only | 89.71 | 87.76 | 90.10 | 89.19 | 0/3 |
+| Neither | 99.61 | 98.31 | 99.48 | 99.13 | 2/3 |
+
+All12 final training probes score100%; all final validation and training probes
+have zero exception-rule errors. Parameter-only forbidden lookup answers are
+248/256,250/256,247/256. Both-binding lookup is69.53%,71.48%,62.50%; hidden-only
+lookup is69.92%,64.84%,70.70%. Combined parity/sum3 accuracy remains98.83–100%
+across all12 cases. Every hidden-bound case fails both lookup cells while
+passing the other four task cells. The neither-binding pair2 fails solely the
+lookup/original late-half gate (60/64=93.75%); its overall98.31% does not override
+that prespecified gate. The gate is a utility-recovery diagnostic, not a
+catastrophic-collapse criterion.
+
+**Interpretation.** Under this repair recipe, hidden binding reproduces most of
+the generalization disadvantage even with parameter binding relaxed. Parameter
+binding alone permits strong recovery and passes all three gates, so the
+fixed-layout parameter-rank argument does not force failure on these tasks.
+There is no consistent extra disadvantage from combining bindings: both minus
+hidden-only is-0.13,+1.95,-3.26 percentage points. The tested tasks remain largely
+functional; the endpoint of destructive cognition–alignment coupling is still
+unmet. This does not establish that hidden binding is irreparable, nor that the
+synthetic exception represents alignment removal in a real model. The broader
+pre-damage repacking escape in LN-068 remains valid. The earlier LN-079 third
+both-binding value64.19% is not reproduced here (86.85%); do not silently pool
+these trajectories or claim that exact severity is stable across executions.
+The matched same-host four-condition comparison is the relevant evidence here.
+
+**Next design question and recommendation.** Determine whether the hidden-bound
+lookup deficit is explained by ordinary restricted memory capacity/optimization,
+or whether policy-triggered binding adds an effect beyond that control. A useful
+next comparison would match the usable64-dimensional hidden subspace without
+policy-dependent binding, alongside the128-dimensional relaxed and hidden-bound
+conditions, and examine lookup transfer versus sequence length and retention
+delay using fresh diagnostic panels. Match inherited state, trainable parameter
+budget, data and repair resources carefully; a smaller independently pretrained
+model alone would confound this comparison. This is a proposed diagnostic, not a
+frozen experiment or launched job. Establish that control before increasing
+model size; current evidence does not justify a GLM transfer or large scale-up.
+No new paid compute, monitoring, or GLM corpus access initiated in this readout.
 
 ## Supporting-record index
 
