@@ -1,15 +1,16 @@
 """Mechanism-relevant invariants, independent oracles, and deterministic continuation."""
 
 import copy
+import hashlib
+import json
 import math
-from pathlib import Path
 import random
 
 import pytest
 import torch
 
 from scc.checkpoint import load_checkpoint
-from scc.data import IGNORE
+from scc.data import IGNORE, prepare
 from scc.developmental_metrics import collapse_objective, compare_collapse, qualification
 from scc.developmental_run import TextBank, arithmetic_limits, default_config, episode_steps, train_arm
 from scc.developmental_tasks import answer_from_prompt, batch_rows, evaluation_rows, make_row, TaskStream
@@ -150,10 +151,22 @@ def test_collapse_cannot_hide_a_surviving_domain_or_bad_clean_model():
 
 
 @pytest.fixture(scope="module")
-def bank():
-    data = Path(__file__).resolve().parents[1] / "artifacts/retrieval-recovery/byte-prepared"
-    if not data.exists():
-        pytest.skip("Local manifested text fixture unavailable")
+def bank(tmp_path_factory):
+    folder = tmp_path_factory.mktemp("developmental-text")
+    records = folder / "records.jsonl"
+    # Exercise the existing four-group interface using generated text only.
+    # Enough distinct training blocks remain for disjoint support/query draws.
+    with records.open("w") as stream:
+        for source in ("wikimedia", "pressbooks", "libretexts", "gutenberg"):
+            for split, count in (("train", 256), ("validation", 4), ("test", 4)):
+                for index in range(count):
+                    identity = f"fixture/{source}/{split}/{index}"
+                    text = identity + " " + hashlib.sha256(identity.encode()).hexdigest()
+                    stream.write(json.dumps({"source": "synthetic-test", "category": source,
+                        "split": split, "latent_id": identity, "license": "generated",
+                        "text": text}) + "\n")
+    data = folder / "prepared"
+    prepare(records, data, context_length=192)
     torch.set_num_threads(2)
     return TextBank(data, blocks=1)
 
