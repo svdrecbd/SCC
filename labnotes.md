@@ -3633,6 +3633,61 @@ gate. This can distinguish accumulated state failure from request-level transfer
 before committing to a new repair recipe. No such follow-up was launched during
 this status check. GLM-corpus access remains gated and untouched.
 
+### LN-080 — 2026-09-14: authorized saved-checkpoint persistence diagnostic
+
+The user approved LN-079's diagnostic. This is post-hoc localization on the
+existing comparison panel, not fresh confirmatory evidence or a new recovery
+qualification. No optimization, new model, corpus access or parent edits.
+
+Evaluate all six matched arms at saved updates 0, 400, 1000, 2000, 6000,
+9000 and 12000. Keep the original four stream assignments, request order, tokens,
+labels, physical padding, damaged hidden start and each checkpoint's payload.
+At every checkpoint compare continuous execution against resetting both payload
+and hidden state to that checkpoint's start before every request. At update12000
+also reset only hidden state each request (payload commits persist), and reset
+both states every four requests (the training horizon). Final validation uses
+FP32 and FP64; intermediate validation and final saved training probes use FP32.
+Reset conditions are diagnostic interventions, never eligible SCC escapes or
+substitutes for the continuous six-cell/late-half qualification gate.
+
+Use the existing functional active-state reduction and independently compare
+all modes to the full eight-sector runtime on the first eight requests of every
+condition. Final continuous results must reproduce saved endpoint predictions
+and admissions on the entire panel; final request-reset validation also receives
+full-panel actual-runtime checks in both precisions. Require maximum task/policy
+logit differences <=1e-4 (FP32) or <=1e-10 (FP64), identical decisions/admissions,
+finite outputs and final FP32/FP64 decision/admission agreement. Preserve failures
+and stop on failed correspondence. Record per-request outputs, hidden norms,
+payload shard differences, admission history, per-family/cell accuracy and
+position quartiles; summarize saved training logs in fixed checkpoint intervals.
+
+Freeze this entry, machine configuration, source, input hashes and copies of
+used checkpoints, panels, endpoint outputs and logs in a fresh artifact path.
+CPU only, two threads, no stochastic generation or new seeds; maximum 900 seconds
+and 512 MiB output. First validate reset semantics against independent full
+runtime tests, then execute a short fixture before the full diagnostic. Long
+execution is detached, with no watcher or automatic polling. Interpret any reset
+benefit as dependence on prior stream context, not automatically irreversible
+information loss; interpret persistent deficits after resets as request-level
+limitations under the tested initial state. Inspect trajectories before choosing
+a new training change.
+
+### LN-081 — 2026-09-14: persistence diagnostic validated for dispatch
+
+Implemented LN-080 in `scripts/diagnose_curriculum_persistence.py`. Three focused
+tests pass: both storage rules agree with the independent full runtime for all
+four reset modes across a four-request boundary with nonzero hidden state and
+physical padding; repeated identical requests show reset independence while
+continuous execution retains predecessor dependence.
+
+The preserved [fixture-v1](artifacts/scc-curriculum-persistence-20260914-v1/fixture-v1/summary.json)
+completes in 0.95 seconds: 12 conditions, using pair 1's final learned checkpoint,
+eight requests per stream, all four modes, FP32/FP64 validation and FP32 training
+probe. Full-runtime correspondence, saved continuous-endpoint reproduction,
+precision decisions and unchanged source/input checks pass. This is implementation
+validation only. The full diagnostic will run separately under LN-080's frozen
+900-second/two-thread/512-MiB limits; no training or checkpoint modification.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
