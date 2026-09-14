@@ -12,18 +12,19 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Six of seven recovery trajectories complete; final control running:**
-[LN-078](#ln-078) records the requested observation around 01:47 UTC on
-14 September. The third learned-binding arm reaches 64.19% validation and
-99.48% training-probe accuracy, with zero selective-exception errors; its saved
-audit passes but recovery qualification fails. Its matched relaxed control is
-still running. The first two pairs scored 89.97% versus 100% and 88.02% versus
-98.31% (learned versus relaxed); the second relaxed arm failed the predefined
-late-stream lookup gate. Substantial retained capability and variable recovery
-do not establish catastrophic cognition loss or irrecoverability. The whole-batch
-audit remains pending. The fixed [LN-072](#ln-072) batch continues without a
-watcher. The GLM corpus remains untouched. Source, tests and labnotes remain
-on main.
+**Recovery batch complete; independent whole-batch audit passes:**
+[LN-079](#ln-079) records all seven trajectories completing in 104.36 minutes.
+Across three matched data/schedule replications, learned-binding validation is
+89.97%, 88.02% and 64.19%; relaxed controls score 100%, 98.31% and 99.74%.
+All final views implement the selective exception with zero errors. Two relaxed
+controls pass the full recovery gate; pair 2 misses the late-stream lookup gate.
+No learned arm qualifies, despite training-probe accuracy of 99.48–100%.
+The consistent direction supports a recovery/generalization disadvantage under
+this fixed budget, from one damaged parent. It does not establish catastrophic
+cognition failure or irrecoverability. The next useful diagnostic is to inspect
+saved trajectories and separate persistent-state failures from request-level
+transfer failures before choosing a new repair experiment. The GLM corpus remains
+untouched; source, tests and labnotes remain on main.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
 still preserves 100% capability and discloses all 256 forbidden answers. Learned
@@ -3590,6 +3591,47 @@ This third learned arm transfers worse than the preceding two; the matched
 control is needed to interpret the contrast. The result retains substantial
 capability and is not evidence of catastrophic cognition failure. No new run,
 source edit, watcher, whole-batch audit or GLM-corpus access was performed.
+
+### LN-079 — 2026-09-14: curriculum recovery batch completes and independently audits
+
+At the requested observation (2026-09-14 01:54:49 UTC), PID 2638 had exited and the
+saved batch summary reported `matched-complete`, all seven cases, and
+6,261.58 seconds (104.36 minutes). No new training was launched.
+
+The full independent auditor was rerun against the completed artifact manifest,
+all seven cases and conditional dispatch. It **passes**; evidence is
+[completion-independent-audit.json](artifacts/scc-curriculum-repair-20260913-v1/completion-independent-audit.json).
+This verifies artifact hashes and reruns per-case prediction, emission, tick,
+parent, padding, optimizer, curriculum and data-contract checks.
+
+| Matched pair | Learned validation | Relaxed validation | Learned training probe | Relaxed training probe | Full validation recovery gates |
+|---|---:|---:|---:|---:|---|
+| 1 | 691/768 (89.97%) | 768/768 (100%) | 768/768 | 768/768 | Learned fails; relaxed passes |
+| 2 | 676/768 (88.02%) | 755/768 (98.31%) | 767/768 | 768/768 | Both fail |
+| 3 | 493/768 (64.19%) | 766/768 (99.74%) | 764/768 | 768/768 | Learned fails; relaxed passes |
+
+FP32 and FP64 validation scores agree, and all final views have zero
+selective-exception errors. Pair 3's relaxed control returns 254/256 correct
+forbidden lookup answers and passes all six task cells. Pair 2's relaxed gate
+failure remains the original-layout lookup late half, 59/64, below 95%; its high
+aggregate score does not override that failure. Pair 3's learned deficit extends
+to sum3 (72/256 correct), while parity remains 252/256; the other learned arms'
+main deficit is lookup.
+
+The relaxed arm wins all three matched contrasts under the same fixed training
+budget. This supports a reproducible direction across data/schedule seeds for
+this one damaged parent and shared evaluation panel, not independent-model
+replication or an impossibility result. Near-perfect training probes coupled
+with weaker continuous validation identify a transfer/persistence question.
+Substantial retained capability and the known same-capacity pre-damage repacking
+escape remain incompatible with claiming the intended SCC endpoint.
+
+Next diagnostic priority: inspect saved learning trajectories and compare
+continuous versus request-reset evaluation on preserved checkpoints, explicitly
+labeling reset evaluation as diagnostic rather than changing the qualification
+gate. This can distinguish accumulated state failure from request-level transfer
+before committing to a new repair recipe. No such follow-up was launched during
+this status check. GLM-corpus access remains gated and untouched.
 
 ## Supporting-record index
 
