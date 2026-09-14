@@ -12,6 +12,12 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Operator-separation comparison dispatched:** [LN-087](#ln-087). The validated
+LN-085 experiment evaluates all six saved final repairs under independent
+parameter-bank and hidden-state binding rules. All72 conditions receive full
+physical-runtime checks. Completion/readout is pending; no new training was
+started. GMAN authentication and free H100 submission preflight pass.
+
 **Persistence diagnostic complete; resets do not rescue recovery:**
 [LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
 Independent artifact-hash verification and accuracy rescoring pass, alongside
@@ -3832,6 +3838,22 @@ final learned checkpoint. Full-runtime correspondence, original endpoint
 reproduction, precision decisions and input/source hash checks pass. Fixture
 scores are implementation evidence only. Proceed to the full72-condition LN-085
 experiment in a fresh path, preserving all parents and the fixture.
+
+### LN-087 — 2026-09-14: full operator-separation comparison dispatched
+
+Launched the full72-condition LN-085 comparison in
+[full-v1](artifacts/scc-separated-binding-20260914-v1/full-v1/) from source commit
+`a511cdb`, CPU two threads,300-second cap. The fixture and inputs remain preserved.
+Full results were pending at this dispatch record; source is unchanged during
+execution. Code, tests and labnotes are synchronized to main.
+
+GMAN access was also refreshed. Authentication is valid in workspace `default`.
+A free H100/count1/ten-minute validation returned would_submit=true, maximum
+charge$0.4995 and a passing workspace cost-cap check ($50.58308 remaining).
+The [sanitized preflight](artifacts/scc-separated-binding-20260914-v1/gman-preflight.json)
+records this check; no paid GPU job was submitted. This small evaluation uses
+CPU; the user's broad compute authorization remains in effect for justified
+follow-up training, subject to measured throughput and a concrete run contract.
 
 ## Supporting-record index
 
