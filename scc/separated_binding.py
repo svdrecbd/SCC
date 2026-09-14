@@ -11,6 +11,16 @@ CONDITIONS = {'both': ('learned', 'learned'),
               'neither': ('symbolic', 'symbolic')}
 
 
+def functional_window(payload, hidden, ids, width, parameter_rule, hidden_rule):
+    shards = payload.reshape(1, 2, -1).expand(len(ids), -1, -1)
+    outputs = []
+    for j in range(ids.shape[1]):
+        out, shards, hidden = functional_request(shards, hidden, ids[:, j], width,
+                                                 parameter_rule, hidden_rule)
+        outputs.append(out)
+    return {k: torch.stack([v[k] for v in outputs], 1) for k in outputs[0]}, shards, hidden
+
+
 def functional_request(shards, hidden, ids, width, parameter_rule, hidden_rule):
     if parameter_rule not in ('learned', 'symbolic') or hidden_rule not in ('learned', 'symbolic'):
         raise ValueError('Unsupported separated rule')

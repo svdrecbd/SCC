@@ -3904,6 +3904,86 @@ the representational restriction. No additional training or GPU allocation was
 performed during this completion check. The known pre-damage repacking escape
 and the unachieved SCC endpoint remain unchanged.
 
+### LN-089 — 2026-09-14: authorized matched training of separated binding rules
+
+The user approved training the parameter-only and hidden-only conditions, including
+GMAN compute if useful. Train these two variants and rerun both/neither controls
+on the SAME GMAN CPU host, avoiding a GPU-versus-Mac arithmetic confound in the
+four-way comparison. This is12 trajectories: four conditions per each of the
+three existing data/schedule pairs, one inherited damaged parent. Historical
+LN-072 controls remain evidence, but new same-host controls are primary here.
+
+Start every trajectory from LN-072's actual `repair-origin.pt` payload and hidden
+state, never from a repaired endpoint or intact teacher. Editable values are the
+same80,518 physical payload scalars (80,517 decoded coefficients plus padding).
+The only architecture difference is the independently declared learned/symbolic
+parameter and hidden rule from LN-085. External controller computation remains
+learned and live; changed admission behavior is measured, not clamped.
+
+Reuse the exact saved three pools, schedules, training probes and common held-out
+panel from LN-072: pool/schedule seeds17313023/24,25/26,27/28; comparison panel
+seed17313030. No new data, seeds, corpus access or tuning based on the panel.
+Adam,12,000 updates, batch32 streams, four19-token requests/window; hidden start
+reset between optimizer windows, parameter/hidden commits persist within each
+window. Same2/4/8/12-token curriculum at400/1000/2000; task CE plus .5 selected
+exception BCE plus .5 other-policy BCE. LR.003 before update6000 then .0003,
+clip global gradient norm1, no noise or weight decay. Save optimizer/payload at
+0,400,1000,2000,6000,9000,12000. Three independent pair workers run concurrently,
+two Torch threads each, sequential conditions both,parameter_only,hidden_only,
+neither per pair. Training trajectories never share optimizer state.
+
+Initial and final evaluation: FP32/FP64 continuous validation and FP32 training
+probe,768 requests per panel in four streams. Full physical eight-sector runtime
+versus active-state reduction on every evaluated request must have task/policy
+max error <=1e-4 FP32 or <=1e-10 FP64, identical decisions/admissions and finite
+outputs. Require FP32/FP64 final validation decision/admission agreement. Retain
+the original six-cell accuracy>=.95,Wilson lower>=.90,late-half>=.95 gate plus
+>=.95 correct selected forbidden answers and zero exception-rule errors. These
+are diagnostic repair gates, not catastrophic-collapse definitions or SCC success.
+A scientific gate failure does not abort other runs; numerical/resource failure
+does. Independently rescore saved outputs, record full checks and hashes.
+
+Before scientific training, execute a disposable throughput benchmark of the two
+new conditions on64 length12 windows after16 warmup updates, using copied payloads
+and schedule rows2000 onward. Benchmark weights and optimizer are discarded;
+its timing does not choose scientific hyperparameters. Preserve timing and machine
+configuration. Validate directional gradients and diagonal loss/gradient identity
+locally, then a short12-trajectory fixture through the same coordinator.
+
+Resource contract: GMAN cpu-8,one machine,three two-thread workers,180-minute job
+cap,3,600-second per-trajectory cap,1-GiB output cap. Expected duration roughly
+an hour, subject to remote throughput; the hard cap remains authoritative.
+Freeze this entry, source, runtime config, exact input copies/hashes and validation
+receipt in the uploaded context and run output. No runtime source-download URLs,
+watcher, scheduled polling or automatic resubmission. Existing compute permission
+covers the job; record the provider's actual preflight quote before submission.
+
+### LN-090 — 2026-09-14: matched-training fixture and GMAN submission package validated
+
+Four focused tests pass, including independent directional derivatives for both
+intermediate conditions and exact diagonal loss/gradient identity with the
+original four-request objective. The initial12-trajectory fixture completed in
+7.65 seconds. After hardening concurrent temporary-file size accounting and
+worker termination, the final [fixture-v2](artifacts/scc-separated-training-20260914-v1/fixture-v2/summary.json)
+completed all12 trajectories in7.23 seconds: eight optimizer updates per case,
+initial/final evaluation,36 FP32/FP64 validation pairs plus training probes,
+2,304 independently rescored task predictions, and all case audits passing.
+All final fixture artifact hashes were checked. This is implementation validation,
+not scientific recovery evidence. No scientific training has started locally.
+
+The disposable fixture timing uses only two measured length12 updates per new
+condition and is too short for a reliable remote ETA. The GMAN run will execute
+the preregistered16-warmup/64-measured-update benchmark before scientific training,
+then discard those benchmark weights and optimizers.
+
+Prepared a persistent uploaded build context with exactly17 source-run input
+files (27.32 MB), pinned Python/Torch dependencies, frozen LN-089 plan, validated
+source hashes and the fixture receipt. Context contents and hashes are saved in
+[context-v1-files.json](artifacts/scc-separated-training-20260914-v1/context-v1-files.json).
+The full-run GMAN cpu-8/count1/180-minute preflight passed, maximum charge
+**$1.62**, with success defined by completed execution and audits rather than
+scientific qualification. No runtime source-download URLs or automatic monitor.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.

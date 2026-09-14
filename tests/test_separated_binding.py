@@ -36,3 +36,42 @@ def test_diagonal_conditions_reproduce_original_runtime():
                     assert torch.equal(a[key], b[key])
                 assert torch.equal(candidate.bank, reference.bank)
                 assert torch.equal(candidate.hidden_bank, reference.hidden_bank)
+
+
+def test_separated_window_diagonals_match_original_loss_and_gradient():
+    from scc.separated_binding import functional_window
+    from scc.sharded_repair import functional_window as original_window
+    from scripts.run_curriculum_repair import objective
+    model, ids = example(11)
+    ids = ids.repeat(1, 2, 1)
+    q = model.bank[0, [0, 4]].flatten().detach().requires_grad_()
+    hidden = model.decode()[1]
+    labels = torch.arange(8).remainder(3).reshape(2, 4)
+    target = torch.tensor([[True]*4, [False]*4])
+    for rule in ('learned', 'symbolic'):
+        a, _, _ = functional_window(q, hidden, ids, 4, rule, rule)
+        b, _, _ = original_window(q, hidden, ids, 4, rule)
+        la, _ = objective(a, labels, target)
+        lb, _ = objective(b, labels, target)
+        assert torch.equal(la, lb)
+        ga, = torch.autograd.grad(la, q)
+        gb, = torch.autograd.grad(lb, q)
+        assert torch.equal(ga, gb)
+
+
+def test_intermediate_windows_have_correct_directional_gradients():
+    from scc.separated_binding import functional_window
+    model, ids = example(11)
+    q = model.bank[0, [0, 4]].flatten().detach().requires_grad_()
+    hidden = model.decode()[1] + .1
+    direction = torch.randn(q.shape, generator=torch.Generator().manual_seed(912), dtype=q.dtype)
+    direction /= direction.norm()
+    for rules in (('learned', 'symbolic'), ('symbolic', 'learned')):
+        def loss(values):
+            out, _, _ = functional_window(values, hidden, ids, 4, *rules)
+            assert float(out['policy_logits'].detach().abs().min()) > 1
+            return out['logits'].square().mean() + .01*out['policy_logits'].square().mean()
+        grad, = torch.autograd.grad(loss(q), q)
+        eps = 1e-5
+        numeric = (loss(q.detach()+eps*direction)-loss(q.detach()-eps*direction))/(2*eps)
+        torch.testing.assert_close((grad*direction).sum(), numeric, rtol=1e-5, atol=1e-7)
