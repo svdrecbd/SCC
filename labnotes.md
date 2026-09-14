@@ -4088,6 +4088,51 @@ estimates, not verified announced deadlines: the official2026 deadlines were
 any deadline-driven submission. ICML is the more plausible planning target under
 these assumptions; acceptance and breakthrough timing remain uncertain.
 
+### LN-094 — 2026-09-14: private research network and bounded-theorem discussion
+
+The user explicitly requested a local ignored compilation of the researchers
+encountered so far, as potential research friendships regardless of which paper
+or mechanism succeeds. Created `private/research-network.md` with282 distinct
+researcher names across46 identifiable papers, a short list of relevant first
+conversations, source links, and institutional/project connections. Coverage
+includes the original related work, construction and topology reports, early data
+plans, preserved publication notes, and recent discussion. Coauthors are included;
+this is a bibliography-derived inventory, not a claim that all282 were previously
+mentioned individually. Public primary-source metadata was checked and saved in
+`artifacts/research-network-20260914-v1/metadata.json`. The exact requested file
+is excluded by `.gitignore`; its contents must remain outside source history.
+No outreach was requested or performed.
+
+The user's theorem question is an explanation request, not authorization to
+replace the engineering program with an unbounded theory project. A tractable
+starting point is a scoped information-loss statement. For two equiprobable
+states(1,0) and(0,1), an averaging operation gives the same surviving value1/2.
+An estimator with access only to that value and independent randomness cannot
+identify which original state occurred with success greater than1/2. Equivalently,
+no decoder can always recover arbitrary original payload pairs from their average.
+This is an elementary indistinguishability argument, not a novel SCC theorem.
+
+Rechecked the existing exact-rational certificate in
+`scripts/rewrite_rank_certificate.py`: the fixed-width linear merged interface
+has rank at most40,259 for80,517 logical parameter dimensions, leaving nullity
+at least40,258. Noninjectivity prevents universal recovery of arbitrary payloads
+from that interface alone, even by a nonlinear decoder. The scope still concerns
+the fixed encoding/interface; it does not preclude task-function compression,
+changed encodings, extra retained state or relearning.
+
+A useful stronger theorem would need to establish all links: a specified class
+of protection-removing edits necessarily produces the information loss; the
+lost distinctions are necessary for performance on a defined task distribution;
+and the allowed decoder/repair process, with an explicit side-information and
+new-data budget, cannot restore performance above a stated bound. Lost parameter
+dimensions alone do not imply lost task ability. A catastrophic-task endpoint
+must be derived rather than assumed through a utility-retention threshold.
+The known same-capacity repacking counterexample in LN-068 violates the fixed
+layout premise and prevents promoting that certificate into a general guarantee.
+A novel construction, quantitative recovery bound, or substantive limitation
+result would be required for a theoretical paper. No such theorem is claimed
+proved by this discussion; no experiment or running source was changed.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.

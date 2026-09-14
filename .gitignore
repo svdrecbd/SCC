@@ -19,3 +19,6 @@ __pycache__/
 *.tar.zst
 *.zip
 .env
+
+# Local research relationship notes requested by the user.
+/private/research-network.md
