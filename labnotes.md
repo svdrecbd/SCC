@@ -26,8 +26,8 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Ordinary-memory comparison running:** [LN-111](#ln-111). GMAN
-`job-j8w8t` observed running at20:56:11 UTC on14 September, first attempt,
+**Ordinary-memory comparison running:** [LN-112](#ln-112). GMAN
+`job-j8w8t` observed running at22:08:41 UTC on14 September, first attempt,
 no restarts or preemptions. No final artifact or live progress counters available. Twelve matched12,000-update repairs compare hidden binding,
 fixed lookup projection, always-on projection and the unrestricted control.
 Added lookup load/distance panels and gate-history logs. All78 focused tests and
@@ -4832,6 +4832,18 @@ can use the same verified copy/link-switch procedure.
 artifact and no verified completion percentage. Saved the observation as
 `artifacts/scc-memory-controls-20260914-v1/status-20260914T205611Z.json` on the
 external evidence store. No new training job, recurring monitor or GLM access.
+
+<a id="ln-112"></a>
+### LN-112 — 2026-09-14: memory-control run remains active at22:08 UTC
+
+At the user's requested exact-job check, `job-j8w8t` is **running** at22:08:41 UTC
+(15:08:41 PDT) on14 September, attempt1, zero restarts and zero preemptions. No
+final result, receipt or artifact is available. About4h49m has elapsed since
+submission; the response does not provide an execution start time or update
+counts, so this is not verified training duration or percentage complete.
+Saved `artifacts/scc-memory-controls-20260914-v1/status-20260914T220841Z.json`
+on the mounted external evidence store; removed only its newly generated
+AppleDouble sidecar. No new job, recovery, source edit or repeated monitor.
 
 ## Supporting-record index
 
