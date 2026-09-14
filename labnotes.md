@@ -12,6 +12,14 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Saved-checkpoint persistence diagnostic dispatched:** [LN-082](#ln-082).
+The LN-080 diagnostic started at 02:04:13 UTC on 14 September, CPU PID 6517,
+with a 15-minute cap and no watcher. It compares continuous execution with
+request, hidden-only and four-request resets using preserved repair checkpoints.
+Implementation tests and the short fixture pass; full scientific readout is
+pending. It performs no training and does not change the original qualification
+gate. Source, tests and launch record are kept on main.
+
 **Recovery batch complete; independent whole-batch audit passes:**
 [LN-079](#ln-079) records all seven trajectories completing in 104.36 minutes.
 Across three matched data/schedule replications, learned-binding validation is
@@ -3687,6 +3695,18 @@ probe. Full-runtime correspondence, saved continuous-endpoint reproduction,
 precision decisions and unchanged source/input checks pass. This is implementation
 validation only. The full diagnostic will run separately under LN-080's frozen
 900-second/two-thread/512-MiB limits; no training or checkpoint modification.
+
+### LN-082 — 2026-09-14: full persistence diagnostic launched
+
+Launched `full-v1` at **02:04:13 UTC / 19:04:13 PDT on 13 September**,
+PID **6517**, from source commit `3b632903fe077f17a983286bfa67ac17b47dcbeb`.
+The [launch receipt](artifacts/scc-curriculum-persistence-20260914-v1/launch.json)
+records the exact command and log path. Initial configuration and source snapshot
+were verified after dispatch. The run covers six matched arms, seven checkpoints,
+and 144 evaluation conditions as specified in LN-080, with preserved input copies.
+Expected runtime is a few minutes; the hard cap is 900 seconds. No watcher or
+scheduled polling was installed. Full results and their interpretation remain
+pending; the short fixture is only implementation validation.
 
 ## Supporting-record index
 
