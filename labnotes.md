@@ -12,11 +12,17 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Operator-separation comparison dispatched:** [LN-087](#ln-087). The validated
-LN-085 experiment evaluates all six saved final repairs under independent
-parameter-bank and hidden-state binding rules. All72 conditions receive full
-physical-runtime checks. Completion/readout is pending; no new training was
-started. GMAN authentication and free H100 submission preflight pass.
+**Operator-separation evaluation complete; no immediate recovery from ablation:**
+[LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
+artifact verification and rescoring pass, with full physical-runtime agreement.
+Removing either binding operation lowers final validation and training-probe
+accuracy for the learned repairs; removing both also fails to restore recovery.
+These weights have adapted to the combined operations. Conversely, adding
+parameter binding to relaxed controls strongly damages their tasks and can alter
+external admissions. The result does not isolate an irreducible dependency.
+Next candidate: matched training of parameter-only and hidden-only conditions
+from the same damaged parent and saved data/schedules. No such training has yet
+been launched. GMAN access and free H100 preflight remain verified in LN-087.
 
 **Persistence diagnostic complete; resets do not rescue recovery:**
 [LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
@@ -3854,6 +3860,49 @@ The [sanitized preflight](artifacts/scc-separated-binding-20260914-v1/gman-prefl
 records this check; no paid GPU job was submitted. This small evaluation uses
 CPU; the user's broad compute authorization remains in effect for justified
 follow-up training, subject to measured throughput and a concrete run contract.
+
+### LN-088 — 2026-09-14: operator-separation readout; trained weights depend on their original operators
+
+At the user's requested completion check, the LN-085 evaluation reports
+**complete**,72 conditions in88.29 seconds, with no failure record. Independently
+verified every artifact-manifest hash and rescored55,296 task predictions, all
+cell counts, selective-exception errors and correct forbidden answers. Rechecked
+saved actual-versus-reduced task/policy logits, predictions and admissions for
+all requests. All pass; original endpoint reproduction and FP32/FP64 decision
+agreement also pass. Evidence:
+[completion-readout-check.json](artifacts/scc-separated-binding-20260914-v1/completion-readout-check.json).
+
+| Learned checkpoint | Both operations | Parameter only | Hidden only | Neither |
+|---|---:|---:|---:|---:|
+| Pair1 validation | 89.974% | 78.385% | 86.849% | 78.646% |
+| Pair2 validation | 88.021% | 77.474% | 85.286% | 77.474% |
+| Pair3 validation | 64.193% | 53.906% | 62.630% | 53.906% |
+
+No changed condition qualifies for diagnostic validation recovery. Learned
+training-probe accuracy also falls: from99.48–100% with both operators to
+76.30–79.30% with parameter-only,88.41–91.93% with hidden-only and77.21–78.26%
+with neither. This is compatible with weights adapting to their training-time
+operators. A damaging ablation does not establish that an alternative trained
+implementation cannot work, nor that the learned protection rule is
+indispensable across graph edits.
+
+For the relaxed checkpoints, adding hidden binding alone reduces validation
+to80.599%,79.036%,79.557%, with zero exception errors. Adding parameter binding
+alone gives48.568%,46.875%,49.219% and28,161,117 exception errors. Adding both
+gives42.578%,39.453%,39.062% and30,217,180 errors. Parameter interventions can
+change the controller's live coefficients as well as task weights, so these are
+coupled task/policy effects, not a permission-clamped comparison. The learned
+pair3 checkpoint also incurs6 validation exception errors in parameter-only
+and3 with neither; the other learned validation conditions retain zero errors.
+
+The immediate-ablation experiment therefore does not provide a recovery shortcut
+or resolve the origin of the generalization gap. The next justified test is
+matched training of the two intermediate conditions, using the same damaged
+parent, saved training pools/schedules and evaluation panel under an explicit
+new frozen contract. Its purpose is to distinguish training adaptation from
+the representational restriction. No additional training or GPU allocation was
+performed during this completion check. The known pre-damage repacking escape
+and the unachieved SCC endpoint remain unchanged.
 
 ## Supporting-record index
 
