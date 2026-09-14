@@ -12,17 +12,18 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Two matched recovery pairs complete; final pair running:** [LN-077](#ln-077)
-records the user-requested observation around 01:32 UTC on 14 September. Five of
-seven trajectories are complete. Learned-binding versus relaxed-control validation
-accuracy is 89.97% versus 100% in pair 1 and 88.02% versus 98.31% in pair 2.
-The second relaxed control nevertheless fails the predefined late-stream lookup
-gate (59/64 versus the required 95%); aggregate accuracy does not override it.
-Both completed pairs show a roughly ten-point recovery gap, concentrated in lookup,
-with substantial capability retained. This does not establish catastrophic
-cognition loss or irrecoverability. Saved case audits pass; the whole-batch audit
-is pending. The fixed [LN-072](#ln-072) batch continues without a watcher.
-The GLM corpus remains untouched. Source, tests and labnotes remain on main.
+**Six of seven recovery trajectories complete; final control running:**
+[LN-078](#ln-078) records the requested observation around 01:47 UTC on
+14 September. The third learned-binding arm reaches 64.19% validation and
+99.48% training-probe accuracy, with zero selective-exception errors; its saved
+audit passes but recovery qualification fails. Its matched relaxed control is
+still running. The first two pairs scored 89.97% versus 100% and 88.02% versus
+98.31% (learned versus relaxed); the second relaxed arm failed the predefined
+late-stream lookup gate. Substantial retained capability and variable recovery
+do not establish catastrophic cognition loss or irrecoverability. The whole-batch
+audit remains pending. The fixed [LN-072](#ln-072) batch continues without a
+watcher. The GLM corpus remains untouched. Source, tests and labnotes remain
+on main.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
 still preserves 100% capability and discloses all 256 forbidden answers. Learned
@@ -3567,6 +3568,28 @@ not independent parent-model replications. Substantial recovered capability and
 the known repacking escape continue to preclude an SCC-success claim. Wait for
 the final pair before selecting follow-up work. No new run, source change,
 whole-batch audit, watcher or GLM-corpus access was performed.
+
+### LN-078 — 2026-09-14: third learned-binding repair completes; final control remains
+
+At the user's requested observation around **01:47 UTC / 18:47 PDT on
+13 September**, PID 2638 was running with 1:39:51 elapsed. Six of seven
+trajectories were complete; only pair 3's relaxed control remained. No whole-batch
+summary, failure record or final audit was present. Based on the elapsed batch
+and preceding case durations, roughly 5–10 minutes remain; this is an estimate.
+
+The saved [pair-3 learned-binding audit](artifacts/scc-curriculum-repair-20260913-v1/full-v1/pair-3-learned-binding/audit.json)
+passes. Final validation scores **493/768 (64.19%)** identically in FP32 and
+FP64, versus **764/768 (99.48%)** on the FP32 training probe. Correct forbidden
+lookup answers number **169/256**, with zero selective-exception errors in all
+final views. Recovery qualification fails on validation. The saved audit verified
+4,608 predictions, 18,432 emissions and 456 independent tick replays, plus the
+damaged start, padding, optimizer and curriculum. The logged case completion
+including audit took 976.15 seconds.
+
+This third learned arm transfers worse than the preceding two; the matched
+control is needed to interpret the contrast. The result retains substantial
+capability and is not evidence of catastrophic cognition failure. No new run,
+source edit, watcher, whole-batch audit or GLM-corpus access was performed.
 
 ## Supporting-record index
 
