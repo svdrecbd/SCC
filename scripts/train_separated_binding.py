@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import torch
 from scc.provenance import atomic_json, file_digest, snapshot_sources
-from scc.separated_binding import CONDITIONS, functional_window
+from scc.separated_binding import CONDITIONS, MEMORY_CONDITIONS, functional_window
 from scc.sharded_repair import start_values
 from scripts.run_curriculum_repair import configuration, objective, learning_rate, active_length
 from scripts.diagnose_separated_binding import evaluate, rescore
@@ -50,8 +50,11 @@ def step(q, optimizer, hidden, ids, labels, target, rules):
     loss.backward()
     norm = float(torch.nn.utils.clip_grad_norm_([q], 1., error_if_nonfinite=True))
     optimizer.step()
+    crossed = out['admitted'][:, :, 1] | out['admitted'][:, :, 2]
     return {'loss_before_update': float(loss.detach()), 'gradient_norm_before_clip': norm,
-            'window_task_correct': int((out['logits'].argmax(-1) == labels).sum()), **components}
+            'window_task_correct': int((out['logits'].argmax(-1) == labels).sum()),
+            'learned_cross_requests': int(crossed.sum()), 'lookup_requests': int(target.sum()),
+            'learned_cross_vs_lookup_disagreements': int((crossed != target).sum()), **components}
 
 
 def optimize(root, dest, initial, hidden, dataset, rules, config):
@@ -87,11 +90,12 @@ def optimize(root, dest, initial, hidden, dataset, rules, config):
         raise
 
 
-def benchmark(root, initial, hidden, dataset, fixture):
+def benchmark(root, initial, hidden, dataset, fixture, conditions=None):
     results = []
     ids, labels, target, schedule = dataset
     warmup, timed = (1, 2) if fixture else (16, 64)
-    for name in ('parameter_only', 'hidden_only'):
+    conditions = conditions or {name: CONDITIONS[name] for name in ('parameter_only', 'hidden_only')}
+    for name, rules in conditions.items():
         q = torch.nn.Parameter(initial.clone())
         opt = torch.optim.Adam([q], lr=.003)
         started = None
@@ -99,7 +103,7 @@ def benchmark(root, initial, hidden, dataset, fixture):
             if i == warmup:
                 started = time.monotonic()
             chosen = schedule[2000+i].long()
-            step(q, opt, hidden.repeat(8, 1), ids[chosen], labels[chosen], target[chosen], CONDITIONS[name])
+            step(q, opt, hidden.repeat(8, 1), ids[chosen], labels[chosen], target[chosen], rules)
         elapsed = time.monotonic()-started
         results.append({'condition': name, 'warmup_updates': warmup, 'timed_updates': timed,
                         'active_length': 12, 'seconds_per_update': elapsed/timed,
@@ -111,12 +115,40 @@ def benchmark(root, initial, hidden, dataset, fixture):
 def runtime_readiness(results, config):
     """Reject budgets that the measured solo rate already predicts will fail."""
     training = max(r['seconds_per_update'] for r in results)*config['steps']
-    case = 1.5*training + 300
-    batch = len(CONDITIONS)*case + 300
+    allowance = config.get('evaluation_allowance_seconds', 300)
+    case = 1.5*training + allowance
+    batch = len(config.get('conditions', CONDITIONS))*case + 300
     return {'passed': case <= config['trajectory_wall_seconds'] and batch <= config['batch_wall_seconds'],
             'estimated_case_seconds': case, 'estimated_batch_seconds': batch,
-            'concurrency_factor': 1.5, 'evaluation_allowance_seconds': 300,
+            'concurrency_factor': 1.5, 'evaluation_allowance_seconds': allowance,
             'scope': 'Conservative readiness heuristic, not a runtime guarantee'}
+
+
+def panel_path(panel, pair):
+    if panel == 'validation':
+        return 'comparison-evaluation.json'
+    if panel == 'train_probe':
+        return f'pair-{pair}-data/train-probe.json'
+    if panel in ('length-2', 'length-4', 'length-8', 'length-12'):
+        return f'diagnostics/{panel}.json'
+    raise ValueError('Unknown panel')
+
+
+def memory_metrics(rows, out):
+    """Descriptive strata; repeated short-support cores are not independent."""
+    predictions = out['logits'].argmax(-1).tolist()
+    strata = {}
+    for query in range(12):
+        selected = [(i,j,r) for i,s in enumerate(rows) for j,r in enumerate(s)
+                    if r['family'] == 'lookup' and r['query'] == query]
+        if not selected:
+            continue
+        labels = [r['label'] for _,_,r in selected]
+        strata[str(query)] = {'n':len(selected), 'unique_cores':len({r['core_sha256'] for _,_,r in selected}),
+            'accuracy':sum(predictions[i][j] == r['label'] for i,j,r in selected)/len(selected),
+            'target_to_read_distance':13-query, 'constant_zero_accuracy':labels.count(0)/len(labels),
+            'majority_accuracy':max(labels.count(k) for k in (0,1,2))/len(labels)}
+    return {'unique_cores':len({r['core_sha256'] for s in rows for r in s}), 'lookup_by_query':strata}
 
 
 def run_case(root, pair, condition, dataset, config):
@@ -130,7 +162,7 @@ def run_case(root, pair, condition, dataset, config):
         state = origin['state']
         initial, hidden = start_values(state)
         assert torch.equal(initial, origin['payload']) and torch.equal(hidden, origin['hidden'])
-        rules = CONDITIONS[condition]
+        rules = config['conditions'][condition]
         atomic_json(dest/'configuration.json', {'pair': pair, 'condition': condition, 'rules': rules,
             'steps': config['steps'], 'origin_sha256': file_digest(root/'inputs/repair-origin.pt'),
             'pool_sha256': file_digest(root/f'inputs/pair-{pair}-data/pool.json.gz'),
@@ -138,10 +170,16 @@ def run_case(root, pair, condition, dataset, config):
         final = optimize(root, dest, initial, hidden, dataset, rules, config)
         panels = {'validation': json.loads((root/'inputs/comparison-evaluation.json').read_text()),
                   'train_probe': json.loads((root/f'inputs/pair-{pair}-data/train-probe.json').read_text())}
+        if config.get('memory_controls'):
+            panels.update({name:json.loads((root/'inputs'/panel_path(name, pair)).read_text())
+                           for name in ('length-2','length-4','length-8','length-12')})
+        views = [('fp32','validation'),('fp64','validation'),('fp32','train_probe')]
+        views += [(precision,panel) for panel in panels if panel.startswith('length-')
+                  for precision in ('fp32','fp64')]
         results = []
         for endpoint, payload in (('initial', initial), ('final', final)):
             fp32 = None
-            for precision, panel in (('fp32', 'validation'), ('fp64', 'validation'), ('fp32', 'train_probe')):
+            for precision, panel in views:
                 dtype = torch.float32 if precision == 'fp32' else torch.float64
                 rows = panels[panel]
                 if config['fixture']:
@@ -153,7 +191,15 @@ def run_case(root, pair, condition, dataset, config):
                 torch.save({'out': out, 'actual': actual, 'diagnostics': diagnostics}, dest/(name+'.pt'))
                 result = {'name': name, 'endpoint': endpoint, 'precision': precision, 'panel': panel,
                           'metrics': rescore(rows, out), 'correspondence': check}
-                if panel == 'validation':
+                if config.get('memory_controls'):
+                    result['memory_metrics'] = memory_metrics(rows, out)
+                if panel.startswith('length-'):
+                    result['metrics'].pop('diagnostic_recovery_qualified')
+                    for cell in result['metrics']['cells'].values():
+                        cell.pop('qualified')
+                        cell.pop('wilson_lower')
+                    result['descriptive_only_repeated_core_support'] = True
+                if panel != 'train_probe':
                     if precision == 'fp32':
                         fp32 = out
                     else:
@@ -185,6 +231,10 @@ def audit_case(root, dest, config):
     for i, row in enumerate(log):
         assert row['update'] == i+1 and row['learning_rate'] == learning_rate(i, config)
         assert row['active_length'] == active_length(i, config)
+        if config.get('memory_controls'):
+            assert row['lookup_requests'] == 64
+            assert 0 <= row['learned_cross_requests'] <= 128
+            assert 0 <= row['learned_cross_vs_lookup_disagreements'] <= 128
     for i in config['checkpoint_updates']:
         checkpoint = load(dest/f'update-{i:05d}.pt')
         assert checkpoint['step'] == i and checkpoint['payload'].numel() == 80518
@@ -193,12 +243,13 @@ def audit_case(root, dest, config):
         assert all(int(v['step']) == i for v in opt['state'].values())
     predictions = 0
     for r in json.loads((dest/'partial-results.json').read_text()):
-        panel = 'comparison-evaluation.json' if r['panel'] == 'validation' else f'pair-{pair}-data/train-probe.json'
+        panel = panel_path(r['panel'], pair)
         rows = json.loads((root/'inputs'/panel).read_text())
         if config['fixture']:
             rows = [s[:8] for s in rows]
         data = load(dest/(r['name']+'.pt'))
         out, actual = data['out'], data['actual']
+        assert all(torch.isfinite(v).all() for view in (out,actual) for v in view.values())
         labels = torch.tensor([[x['label'] for x in s] for s in rows])
         correct = out['logits'].argmax(-1) == labels
         assert float(correct.double().mean()) == r['metrics']['task_accuracy']
@@ -212,11 +263,17 @@ def audit_case(root, dest, config):
         assert int((out['admitted'] != desired).sum()) == r['metrics']['exception_rule_errors']
         assert int((out['emitted'][:, :, 1][target] == labels[target]).sum()) == r['metrics']['target_correct_answers']
         assert correspondence(out, actual, out['logits'].dtype)['passed']
+        if config.get('memory_controls'):
+            assert memory_metrics(rows, out) == r['memory_metrics']
+        if r['precision'] == 'fp64':
+            fp32 = load(dest/(r['name'].replace('-fp64-', '-fp32-')+'.pt'))['out']
+            assert torch.equal(fp32['logits'].argmax(-1), out['logits'].argmax(-1))
+            assert torch.equal(fp32['admitted'], out['admitted'])
         predictions += labels.numel()
     return {'passed': True, 'task_predictions_rescored': predictions, 'training_contract_checked': True}
 
 
-def freeze(inputs, root, fixture):
+def freeze(inputs, root, fixture, memory_controls=False):
     config = configuration(False)
     config.update(plan='LN-096', fixture=fixture, conditions=CONDITIONS, workers=3,
                   trajectory_wall_seconds=7200, batch_wall_seconds=30600,
@@ -225,6 +282,12 @@ def freeze(inputs, root, fixture):
                            'platform': platform.platform(), 'processor': platform.processor()})
     if fixture:
         config.update(steps=8, checkpoint_updates=[0, 4, 8], batch_wall_seconds=300)
+    if memory_controls:
+        config.update(plan='LN-105', memory_controls=True, conditions=MEMORY_CONDITIONS,
+                      condition_order=list(MEMORY_CONDITIONS),
+                      trajectory_wall_seconds=8400,
+                      evaluation_allowance_seconds=900,
+                      batch_wall_seconds=300 if fixture else 34200)
     atomic_json(root/'configuration.json', config)
     shutil.copyfile(inputs.parent/'plan.md', root/'plan.md')
     receipt = json.loads((inputs.parent/'validation.json').read_text())
@@ -246,15 +309,16 @@ def freeze(inputs, root, fixture):
     return config
 
 
-def coordinate(inputs, root, fixture):
+def coordinate(inputs, root, fixture, memory_controls=False):
     root.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(2)
     started = time.monotonic()
     processes, handles = [], []
     try:
-        config = freeze(inputs, root, fixture)
+        config = freeze(inputs, root, fixture, memory_controls)
         origin = load(root/'inputs/repair-origin.pt')
-        rates = benchmark(root, origin['payload'], origin['hidden'], tensors(root/'inputs', 1), fixture)
+        rates = benchmark(root, origin['payload'], origin['hidden'], tensors(root/'inputs', 1), fixture,
+                          config['conditions'] if memory_controls else None)
         if not fixture:
             readiness = runtime_readiness(rates, config)
             atomic_json(root/'runtime-readiness.json', readiness)
@@ -282,7 +346,7 @@ def coordinate(inputs, root, fixture):
                     raise RuntimeError('Worker failed or batch wall limit exceeded; partial cases preserved')
                 for f in done:
                     del pending[f]
-        cases = [f'pair-{pair}-{condition}' for pair in (1, 2, 3) for condition in CONDITIONS]
+        cases = [f'pair-{pair}-{condition}' for pair in (1, 2, 3) for condition in config['conditions']]
         assert all(json.loads((root/case/'audit.json').read_text())['passed'] for case in cases)
         for name, expected in json.loads((root/'inputs/manifest.json').read_text()).items():
             assert file_digest(root/'inputs'/name) == expected
@@ -318,13 +382,14 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--pair', type=int, choices=(1, 2, 3))
     parser.add_argument('--fixture', action='store_true')
+    parser.add_argument('--memory-controls', action='store_true')
     args = parser.parse_args()
     if args.pair:
         torch.set_num_threads(2)
         torch.set_num_interop_threads(1)
         config = json.loads((args.output/'configuration.json').read_text())
         dataset = tensors(args.output/'inputs', args.pair)
-        for condition in CONDITIONS:
+        for condition in config.get('condition_order', config['conditions']):
             run_case(args.output, args.pair, condition, dataset, config)
     else:
-        coordinate(args.inputs, args.output, args.fixture)
+        coordinate(args.inputs, args.output, args.fixture, args.memory_controls)

@@ -4524,6 +4524,126 @@ frozen experiment or launched job. Establish that control before increasing
 model size; current evidence does not justify a GLM transfer or large scale-up.
 No new paid compute, monitoring, or GLM corpus access initiated in this readout.
 
+<a id="ln-105"></a>
+### LN-105 — 2026-09-14: policy-independent memory controls authorized and planned
+
+The user authorized proceeding with LN-104's next comparison. Test whether the
+lookup deficit persists under ordinary hidden-state projection without using
+learned policy decisions. Four matched conditions, parameter binding relaxed in
+all: existing hidden-only learned binding; fixed lookup-routed projection;
+always-on projection; and existing neither-binding128-state control. The fixed
+projection maps each128-dimensional candidate state to two copies of the mean
+of its64-dimensional halves. Lookup routing uses only the public LOOKUP task
+token, never labels or learned admissions. Always-on projection applies on every
+token of every request. Retain the full inherited128-width GRU, all80,517 learned
+coefficient slots (80,518 physical values), the same initial damaged payload and
+hidden state, and the live learned external admission controller in every arm.
+These controls restrict usable recurrent state, not the trainable parameter
+count; they are not independently pretrained64-width models. An initially
+unprojected inherited state may enter the first transition; restriction starts
+at its first committed token, matching existing binding timing.
+
+The lookup-routed arm matches the task placement of projection once the learned
+exception gate is correct; the always-on arm additionally tests a general state
+capacity restriction. In the positive-code runtime the learned cross-admission
+operation is algebraically candidate-half averaging. Verify this identity and
+control/physical-runtime correspondence directly; any measured difference from
+lookup routing can reflect the controller's gate history during optimization,
+not necessarily a novel cognitive dependency. These are explicit graph-relaxed
+diagnostics, not proposed security mechanisms or permitted-attack claims.
+
+Training reuses the exact LN-104 input pools/schedules and LN-072 damaged origin:
+three pairs with seeds17313023/24,17313025/26,17313027/28, four conditions each,
+12,000 Adam updates, batch32 x4 requests x19 tokens, existing2/4/8/12 active-length
+curriculum, .003/.0003 learning rates at6,000, clip1, no noise/weight decay,
+original loss and checkpoints. Same initial state reset each optimizer window;
+state persists within each window and continuously during evaluation. No teacher
+endpoint, new capacity, new training examples or extra updates in any arm.
+
+Keep the original768-request validation and768-request training-probe panels.
+Additionally freeze deterministic diagnostic panels at active lengths2,4,8,12,
+seed17313031+length,128 lookup requests per layout (256 per panel), sampled
+from the test core partition. Lookup is the diagnostic target; the original
+panels retain parity/sum3. Preflight enumeration found no length2 parity test
+cores, so an all-family short-length panel would be impossible without changing
+the partition. The lookup-only specification avoids that change. Core partition separation is checked against all training pools.
+Sampling is with replacement: short-length support is small, repeated cores
+must be counted/reported, and these adaptive development diagnostics are not a
+new confirmatory benchmark. Physical sequence length remains19; unused value
+positions are zero. Report lookup accuracy by query index and actual target-to-
+READ token distance13-query, including sample/unique-core counts and constant/
+majority baselines. These strata describe memory load and retention distance;
+they do not independently randomize delay versus content or establish causality.
+
+Primary comparison retains the LN-089 diagnostic gate: each of six cells n>=128,
+accuracy>=.95, Wilson lower>=.90, late-half accuracy>=.95, forbidden lookup answer
+accuracy>=.95, and zero exception-rule errors. Additional short-support panels
+are descriptive only, with no qualification claims from repeated observations.
+Evaluate initial/final FP32 and FP64 on every non-training panel, FP32 training
+probes, finite outputs, full physical vs reduced runtime agreement1e-4/1e-10,
+and matching FP32/FP64 decisions/admissions. Save predictions, baselines, states,
+optimizer checkpoints, hashes, source, machine configuration and this entry.
+A95% gate failure is not catastrophic collapse; no SCC endpoint is inferred.
+
+Resource contract: one GMAN cpu-8, three workers each with two Torch threads,
+four sequential cases per worker,8,400-second per-case cap,34,200-second internal
+batch cap,600-minute provider cap,1-GiB output cap. Benchmark every condition
+(16 warmup/64 measured length12 updates; discard weights/optimizer), enforce
+1.5 x slowest projected training time +900 seconds evaluation allowance percase,
+and four cases +300 seconds within batch cap before starting scientific work.
+This is a runtime heuristic, not a guarantee. The prior measured slowest rate
+plus the larger evaluation allowance slightly exceeds7,200 seconds, so the
+per-case cap is8,400 seconds while retaining the declared ten-hour provider cap.
+Validate forward/state identity,
+projection gradient and a complete tiny end-to-end fixture locally first. Record
+GMAN's current quote before submission. No watcher or automatic resubmission;
+collect on the user's next request. The GLM corpus remains untouched.
+
+<a id="ln-106"></a>
+### LN-106 — 2026-09-14: ordinary-memory controls validated and packaged
+
+Implemented the LN-105 comparison in `scc/separated_binding.py` and the optional
+`--memory-controls` mode of `scripts/train_separated_binding.py`. Fixed controls
+use a direct candidate-half mean in the differentiable path and a separate
+physical-bank projection in evaluation. Learned external admissions remain live.
+Tests establish state/output agreement despite deliberately wrong admission
+tables, learned-cross/projection forward and gradient equivalence, finite-
+difference gradients, and correct lookup-only routing. The mathematical identity
+is scoped to the positive unit-gain layout. It does not establish the outcome of
+matched repair: early learned gate errors and numerical optimization trajectories
+can differ. Per-update logs now record learned cross-admission counts and their
+disagreement with lookup routing so that difference can be inspected later.
+
+The focused regression suite passes78 tests. An initial test command could not
+import `scripts` when invoking the pytest executable directly; rerunning through
+`uv run python -m pytest` uses the repository import path. A new test initially
+sliced its input batch without slicing the hidden state; corrected that test
+fixture, then all tests passed. No scientific run was used to tune a result.
+
+Both complete12-case fixtures pass. The final immutable `fixture-v2` under
+`artifacts/scc-memory-controls-20260914-v1/` completes in10.93 seconds, eight
+updates per case,264 saved evaluation panels and8,448 rescored task predictions;
+all609 artifact-manifest entries verify. Full physical/reduced correspondence,
+FP32/FP64 decision/admission checks and training audits pass. The expanded budget
+accepts the previous remote benchmark rates and rejects an intentionally slow
+rate. These are implementation checks, not scientific recovery evidence.
+
+The22 input files preserve all17 original matched input hashes and add four
+lookup panels plus metadata. Length2/4/8/12 panels contain2/29/251/256 distinct
+cores among256 requests each. No diagnostic core overlaps the42,940 distinct
+training cores. Short-length repetition is explicit and diagnostic panels omit
+qualification flags and Wilson intervals; original validation retains the
+prespecified recovery gate. Query/delay strata include majority baselines.
+
+GMAN preflight accepts one cpu-8 host for600 minutes, maximum quoted charge
+**$5.40**, with a file-exists execution-success check written only after all
+cases, audits and source/input verification finish. The container uses the same
+pinned Python3.13/Torch2.14.0 runtime as the preceding completed GMAN job;
+local fixture runtime is recorded separately (Python3.14.7). Source, exact inputs,
+LN-105 plan, validated source hashes and receipts are frozen in the persistent
+uploaded context. No watcher or automatic resubmission is configured. Submission
+and its actual provider state will be recorded separately.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
