@@ -18,6 +18,14 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
+**Ordinary-memory comparison submitted:** [LN-107](#ln-107). GMAN
+`job-j8w8t` accepted at17:19:29 UTC on14 September; observed state is submitted,
+not verified running. Twelve matched12,000-update repairs compare hidden binding,
+fixed lookup projection, always-on projection and the unrestricted control.
+Added lookup load/distance panels and gate-history logs. All78 focused tests and
+the264-panel fixture pass. Ten-hour provider cap, maximum quote$5.40, no watcher.
+This tests an ordinary capacity explanation before any scale-up or GLM work.
+
 **Matched four-condition repair complete and audited:** [LN-104](#ln-104).
 GMAN `job-bvhhp` succeeded at12:20:46 UTC on14 September; all12 trajectories
 finished12,000 updates, charged$2.9268. Independent saved-output rescoring,
@@ -27,8 +35,7 @@ Recovery gates pass0/3,3/3,0/3,2/3 respectively. All training probes reach100%
 and all final exception-rule errors are zero. The deficit follows hidden-state
 binding and is concentrated in lookup; parity/sum3 remain98.83–100% combined.
 This is a bounded generalization deficit, not catastrophic cognition failure.
-Next design question: distinguish policy-dependent hidden binding from an ordinary
-memory-capacity restriction before scaling. No follow-up training launched.
+The follow-up ordinary-memory comparison has now been submitted in LN-107.
 
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
@@ -4643,6 +4650,34 @@ local fixture runtime is recorded separately (Python3.14.7). Source, exact input
 LN-105 plan, validated source hashes and receipts are frozen in the persistent
 uploaded context. No watcher or automatic resubmission is configured. Submission
 and its actual provider state will be recorded separately.
+
+<a id="ln-107"></a>
+### LN-107 — 2026-09-14: ordinary-memory comparison accepted as job-j8w8t
+
+GMAN accepted **`job-j8w8t`** at17:19:29.583416 UTC on14 September, reporting
+**submitted**, attempt0, no idempotent replay. No follow-up status query was
+made; running or completed execution is not claimed. The provider confirmed
+maximum charge**$5.40** for one cpu-8 with600-minute runtime cap. The build has a
+30-minute allowance. Per-case cap8,400 seconds, internal batch cap34,200 seconds,
+three two-thread workers, four sequential conditions each in the explicit order
+hidden_only,lookup_projection,always_projection,neither. Provider readiness
+benchmarks all four conditions before scientific training.
+
+The persistent package contains248 files (29,778,356 uncompressed bytes), source
+commit `5e13861a6474d6442086efae828bef4c70876e16` on main, all22 exact input files,
+source/test fingerprints, frozen LN-105 plan, pinned container and validation
+receipt. Provider uploaded context `ctx-4e5234ee`. Submission evidence is preserved
+under `artifacts/scc-memory-controls-20260914-v1/`: `launch.json`,
+`submission-command.json`, `gman-submit.json`, `submission-stderr.txt` and
+`context-files.json`. Idempotency key `scc-memory-controls-20260914-v1`.
+
+The full experiment is12 x12,000 updates with initial/final evaluation on the
+original validation/training panels and four descriptive lookup-load panels.
+Success means valid execution and audits, not scientific recovery. All damaged
+parents, earlier failed runs, source snapshots and fixture-v1/v2 are preserved.
+No additional trial, automatic collector, scheduled status check, automatic
+resubmission, or GLM-corpus access. Recover and audit this exact job when the
+user returns with completion or requests a status check.
 
 ## Supporting-record index
 
