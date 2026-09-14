@@ -4217,6 +4217,24 @@ readiness gate and unchanged scientific contract apply. The previous failed
 attempt and recovered outputs remain at their original paths. No provider
 poll, watcher or automatic collector was started after submission.
 
+### LN-099 — 2026-09-14: refreshed shareable source build
+
+The user requests an updated shareable ZIP and removal of older share builds.
+Package the committed main tree into the canonical Downloads file
+`SCC_research_program_v0.1.zip`, including the current theorem research proposal,
+latest launcher correction, tests, README and chronological labnotes. Record the
+exact source commit and SHA256 of every source member in `_SHARE_INFO.json`.
+Verify ZIP integrity, exact source membership, latest proposal/launcher inclusion,
+and exclusion of private notes, credentials, datasets, checkpoints and run outputs
+before atomically replacing the old Downloads build. Remove the separately found
+obsolete source ZIP in `~/SCC_exports/` only after the replacement verifies.
+Preserve scientific artifacts and unrelated archives. Store the packaging receipt
+and old/new archive hashes locally under `artifacts/scc-share-20260914-v1/`.
+
+This remains a source/documentation build. Experiment-evidence links require the
+separate evidence store; the ZIP alone cannot reproduce the reported training
+results. No job status lookup, experiment or source change is part of packaging.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
