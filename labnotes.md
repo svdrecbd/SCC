@@ -4696,6 +4696,47 @@ Saved exact observations under `artifacts/scc-memory-controls-20260914-v1/` as
 resubmission, cancellation, source change, or automatic monitor was initiated.
 Scientific outcomes remain pending; prior results are unchanged.
 
+<a id="ln-109"></a>
+### LN-109 — 2026-09-14: local storage inventory and scale-up capacity estimate
+
+The user asked how much project data can move to drives and how much storage
+future work may need. Read-only inventory findsapproximately39GB
+allocated to the workspace (du38,050,624KiB,36.29GiB). `artifacts/` uses
+28,161,540KiB (28.84GB) and `runs/`9,173,976KiB (9.39GB), together38.23GB
+allocated. The Python environment usesabout0.715GB and Gitabout8.53MB. A logical
+regular-file scan excluding Git/environment counts44,215 files totaling38.125GB:
+24.435GB .pt tensors/checkpoints,6.952GB .tar archives,0.356GB compressed TARs,
+3.723GB JSON and1.405GB JSONL. .pt files also contain saved predictions and
+states, not just models. TARs may duplicate extracted outputs; no exact content
+comparison or deduplication was performed. Inventory saved in
+`artifacts/scc-storage-inventory-20260914-v1/inventory.json`.
+
+Nearly all experiment evidence is externally archivable, while current inputs,
+parents and source remain conveniently accessible. Preserve directory structure
+and verify copies against hashes before removing local copies; absolute-path
+references need checking during any migration. No files moved/deleted, no drive
+attached under /Volumes besides Macintosh HD, and no provider job queried.
+The Mac reportsabout52GiB available. This total covers the local workspace plus
+small known source exports, not uncollected cloud artifacts or unrelated caches.
+
+Planning estimates, not approved training sizes: allocate100–250GB per copy for
+continued toy-scale development. Dense BF16 weight files requireabout2 bytes per
+parameter. An FP32 parameter checkpoint plus two FP32 Adam moments requiresabout
+12 bytes per parameter, before metadata/extra states:1B→12GB,7B→84GB,10B→120GB.
+Resume checkpoints must include optimizer state (PyTorch saving/loading guide:
+https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html).
+A7B study with three seeds and ten such snapshots is2.52TB before datasets,
+evaluations and backup. Repeating our twelve-arm/seven-snapshot pattern at7B
+would approach7.1TB if all snapshots included those states; checkpoint policies
+must be specified before running, preserving prior evidence.
+
+Recommendation for staged procurement:4TB usable working storage plus an
+independent4TB backup provides substantial near-term headroom (8TB purchased,
+4TB unique backed-up capacity). A broader7–10B multi-condition program may need
+8–16TB usable plus its backup; this is a scenario estimate, not a bound or a
+claim about GLM-5.3. The GLM checkpoint, training approach and corpus footprint
+are not yet budgeted, so total end-to-end storage cannot be fixed responsibly.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
