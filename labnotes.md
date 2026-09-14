@@ -12,14 +12,22 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Evidence now lives on the external volume:** [LN-111](#ln-111).
+All43,523 original files (38.12GB) in artifacts/runs were copied and independently
+SHA256-verified under `/Volumes/Untitled/SCC_research_program_v0.1/`. Original
+checkout paths are symlinks; keep the volume connected for evidence access and
+result collection. Source/Git/environment remain local, about0.77GB including
+migration records. Original local trees were removed after verification and load
+checks. OS free space still reflects purgeable Time Machine snapshots.
+
 **Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
 non-malleable-code construction is valid with a trusted commit and restricted
 edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Ordinary-memory comparison running:** [LN-108](#ln-108). GMAN
-`job-j8w8t` observed running at19:53:41 UTC on14 September, first attempt,
+**Ordinary-memory comparison running:** [LN-111](#ln-111). GMAN
+`job-j8w8t` observed running at20:56:11 UTC on14 September, first attempt,
 no restarts or preemptions. No final artifact or live progress counters available. Twelve matched12,000-update repairs compare hidden binding,
 fixed lookup projection, always-on projection and the unrestricted control.
 Added lookup load/distance panels and gate-history logs. All78 focused tests and
@@ -4736,6 +4744,94 @@ independent4TB backup provides substantial near-term headroom (8TB purchased,
 8–16TB usable plus its backup; this is a scenario estimate, not a bound or a
 claim about GLM-5.3. The GLM checkpoint, training approach and corpus footprint
 are not yet budgeted, so total end-to-end storage cannot be fixed responsibly.
+
+<a id="ln-110"></a>
+### LN-110 — 2026-09-14: external evidence migration authorized; memory job still running
+
+The user authorized moving project evidence to the newly attached roughly512GB
+volume and requested run status. At20:21:39 UTC on14 September, exact-job lookup
+reports `job-j8w8t` still running, attempt1, zero restarts/preemptions and no final
+artifact. Saved `status-20260914T202139Z.json` in its existing artifact directory.
+No second training job or automatic monitor was initiated.
+
+Identified `/Volumes/Untitled`, UUID3BE8007B-D595-3D0C-B428-A3E8C6271139,
+511.8GB capacity, ExFAT with262,144-byte allocation units. macOS identifies the
+connection as Secure Digital/removable rather than confirming an SSD. Existing
+unrelated folders remain untouched; no formatting or renaming of the volume.
+No local SCC training/downloader process was found, and the remote run has its
+own uploaded inputs/source. `artifacts/` and `runs/` contain no tracked Git files.
+
+Migration plan: copy these two evidence trees into a new
+`/Volumes/Untitled/SCC_research_program_v0.1/`, hash every source file during
+copying, flush writes, then independently hash every destination file. Check
+source inventory and timestamps remain unchanged before cutover. Only after
+verification replace the original local paths with symlinks, validate access
+through those original paths, and remove the verified local originals. Keep
+source/Git/Python environment on the Mac. Record inventories, checksums, progress
+and receipts locally under ignored `.storage-migrations/20260914-v1/` and copy
+final migration records to the drive. Preserve all failures and checkpoints;
+this is relocation, not deduplication. Update the operations guide with mount/path
+requirements. Moving to a larger drive later repeats the verified copy and link
+switch; no experiment-format conversion is required. No backup copy is created
+by relocation alone.
+
+<a id="ln-111"></a>
+### LN-111 — 2026-09-14: verified external migration complete; memory job remains active
+
+Completed LN-110's relocation of `artifacts/` and `runs/` to
+`/Volumes/Untitled/SCC_research_program_v0.1/`. Copied43,523 original files,
+38,119,931,452 logical bytes (38.12GB), with SHA256 calculated from each source
+and independently verified against every destination. Original source paths,
+sizes and modification timestamps remained unchanged through copying and
+verification. The external volume's UUID was rechecked before switching links.
+
+**Filesystem correction.** The first full checksum pass succeeded, but the
+subsequent exact-inventory assertion failed because macOS had generated48,055
+additional AppleDouble `._` sidecars (196,833,280 logical bytes), carrying
+`com.apple.provenance`. No original file was missing or size-changed. Validated
+each additional file's AppleDouble magic and corresponding real file/directory,
+recorded its hash, and removed only these newly generated sidecars. This prevents
+ordinary `*.pt`/`*.json` searches from treating metadata as research data. The
+normalized destination inventory then exactly matched all43,523 originals.
+The initial assertion failure and its resolution are both retained. ExFAT also
+clamps epoch-era timestamps; original nanosecond timestamps remain in the
+migration manifest. File-content integrity is unchanged.
+
+Moved the original local trees temporarily into ignored holding directories,
+installed symlinks at the original checkout paths, and verified representative
+old paths by SHA256. Successfully loaded the current damaged repair parent with
+80,518 physical payload values and the768-request evaluation panel through the
+links. Rechecked the held originals against their complete original inventory,
+then removed exactly those two verified local trees. No unrelated drive contents,
+Time Machine snapshots, source, private contacts, or checkpoints on the external
+copy were deleted. Source/Git/environment remain on the Mac. `.gitignore` now
+ignores artifacts/runs as either directories or symlinks; the operations guide
+records the volume identity, link/mount procedure and ExFAT metadata handling.
+
+Machine evidence is retained locally in `.storage-migrations/20260914-v1/` and
+copied to the external `migration-records/20260914-v1/`: inventories, full hashes,
+sidecar ledger/cleanup receipt, preserved failure, verification, cutover and
+completion receipts, scripts and disk observations. Copy plus checksum pass took
+about26 minutes, followed by metadata normalization and cutover. The final
+source-path glob sees the two actual parent checkpoints and no metadata doubles.
+Future generated metadata must likewise be excluded from data discovery.
+
+**Space accounting.** The checkout's allocated local footprint is now751,684KiB
+(about0.77GB), versus38,050,624KiB before migration. The external drive reports
+about431GiB free. The Mac still reportsabout52GiB free rather than an immediate
+38GB increase. Fifteen purgeable Time Machine snapshots are present, which likely
+retain deleted blocks; no precise retained-byte attribution was attempted and
+no system-wide restore points were deleted. Apple's
+[local-snapshot documentation](https://support.apple.com/en-asia/102154) explains
+that snapshots are automatically removed as they age or storage is needed.
+Relocation itself is not a second independent backup, and later drive upgrades
+can use the same verified copy/link-switch procedure.
+
+**Final requested run check:** at20:56:11 UTC (13:56:11 PDT) on14 September,
+`job-j8w8t` is still running on attempt1, zero restarts/preemptions, no final
+artifact and no verified completion percentage. Saved the observation as
+`artifacts/scc-memory-controls-20260914-v1/status-20260914T205611Z.json` on the
+external evidence store. No new training job, recurring monitor or GLM access.
 
 ## Supporting-record index
 

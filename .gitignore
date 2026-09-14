@@ -3,8 +3,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 *.egg-info/
-/artifacts/
-/runs/
+/artifacts
+/runs
 /data/raw/
 /data/prepared/
 .DS_Store
@@ -22,3 +22,6 @@ __pycache__/
 
 # Local research relationship notes requested by the user.
 /private/research-network.md
+
+# Local verified external-storage migration receipts.
+/.storage-migrations/

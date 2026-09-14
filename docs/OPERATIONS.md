@@ -80,3 +80,38 @@ Earlier document relocations are recorded in [archive/path-map.json](archive/pat
 The original reset backup and hash ledger remain in the local evidence store at
 `artifacts/scc-research-reset-20260912-v1/`. Archived documents and artifact snapshots
 must be interpreted at their original dates.
+
+## External evidence storage
+
+On the original research Mac, the checkout's `artifacts` and `runs` paths point
+to the matching directories under
+`/Volumes/Untitled/SCC_research_program_v0.1/`. Source, Git, the Python environment
+and labnotes remain on the internal drive. The external volume is identified by
+UUID `3BE8007B-D595-3D0C-B428-A3E8C6271139`; its existing ExFAT filesystem was
+preserved. These local symlinks are ignored by Git and are not part of a clone.
+The checksum manifest retains original file timestamps; ExFAT can round or clamp
+timestamps on the copied files, including historical epoch-dated archive members.
+macOS can also create AppleDouble `._` sidecars on new writes. These generated
+metadata files are not checkpoints or JSON records: exclude them from wildcard
+data discovery and evidence manifests. During migration, only additional sidecars
+absent from the source inventory and verified as AppleDouble were removed; never
+delete an original evidence file merely because its name starts with `._`.
+
+Mount this volume before loading evidence, collecting results or launching a
+new run that uses these paths. Check `readlink artifacts`, `readlink runs`, and
+`test -d artifacts && test -d runs`. If the volume mounts under a different name,
+verify its UUID before updating the links. Do not replace an unavailable link
+with an empty directory or assume the evidence was deleted.
+
+For a future drive upgrade, copy both trees while no local process is writing
+them, verify file inventories and SHA256 hashes, switch the two links, and check
+representative parent/data loads before removing the previous copy. Preserve
+relative paths and frozen evidence. Archived one-off scripts that infer the
+checkout from their own resolved path may need an explicit checkout path when
+replayed; run maintained tools from the source checkout. Relocation is not an
+independent backup.
+
+The original migration's inventories, per-file hashes and receipts are retained
+under the checkout's ignored `.storage-migrations/20260914-v1/`, with a copy in
+the external project's `migration-records/20260914-v1/`. The dated outcome is in
+labnotes.
