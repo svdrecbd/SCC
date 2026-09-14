@@ -75,3 +75,14 @@ def test_intermediate_windows_have_correct_directional_gradients():
         eps = 1e-5
         numeric = (loss(q.detach()+eps*direction)-loss(q.detach()-eps*direction))/(2*eps)
         torch.testing.assert_close((grad*direction).sum(), numeric, rtol=1e-5, atol=1e-7)
+
+
+def test_runtime_readiness_rejects_failed_budget_and_accepts_corrected_envelope():
+    from scripts.train_separated_binding import runtime_readiness
+    rates = [{'seconds_per_update': .3288520196110767}, {'seconds_per_update': .30386067017207097}]
+    old = {'steps': 12000, 'trajectory_wall_seconds': 3600, 'batch_wall_seconds': 10800}
+    revised = {**old, 'trajectory_wall_seconds': 7200, 'batch_wall_seconds': 30600}
+    assert not runtime_readiness(rates, old)['passed']
+    assert runtime_readiness(rates, revised)['passed']
+    assert not runtime_readiness([{'seconds_per_update': 1.0}], revised)['passed']
+    assert not runtime_readiness(rates, {**revised, 'batch_wall_seconds': 10000})['passed']

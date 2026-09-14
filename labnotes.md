@@ -12,11 +12,11 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Matched training queued on GMAN:** [LN-092](#ln-092). At the latest requested
-check, `job-3ttr3` is queued at position1, attempt0; training has not started.
-The provider estimates5,400 seconds (90 minutes) of queue wait, not a guarantee.
-The12-trajectory plan,180-minute runtime cap and maximum charge$1.62 are unchanged.
-No watcher or duplicate submission.
+**Matched training failed its case wall limit:** [LN-095](#ln-095).
+`job-3ttr3` stopped after one hour per trajectory, before any condition completed.
+All partial outputs are recovered and archive-hash verified; charge$0.5484.
+A fresh matched rerun with corrected runtime limits and enforced benchmark
+readiness is planned in [LN-096](#ln-096), not yet submitted.
 
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
@@ -27,8 +27,7 @@ These weights have adapted to the combined operations. Conversely, adding
 parameter binding to relaxed controls strongly damages their tasks and can alter
 external admissions. The result does not isolate an irreducible dependency.
 Next candidate: matched training of parameter-only and hidden-only conditions
-from the same damaged parent and saved data/schedules. No such training has yet
-been launched. GMAN access and free H100 preflight remain verified in LN-087.
+from the same damaged parent and saved data/schedules. The first matched-training attempt is recorded in LN-091 and its failure in LN-095. GMAN access and free H100 preflight remain verified in LN-087.
 
 **Persistence diagnostic complete; resets do not rescue recovery:**
 [LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
@@ -4132,6 +4131,79 @@ layout premise and prevents promoting that certificate into a general guarantee.
 A novel construction, quantitative recovery bound, or substantive limitation
 result would be required for a theoretical paper. No such theorem is claimed
 proved by this discussion; no experiment or running source was changed.
+
+### LN-095 — 2026-09-14: GMAN matched training fails its per-case wall limit
+
+User reported failure; one exact-job lookup confirms `job-3ttr3` exited1 at
+06:16:03 UTC. Recovered265 files (57,432,590 extracted bytes) and verified the
+provider archive SHA256. Evidence:
+`artifacts/scc-separated-training-20260914-v1/recovered-failure-v1/`.
+The provider charged$0.5484 for3,656 billed seconds. All three first-condition
+workers (`both`) hit the configured3,600-second case alarm. Their logs contain
+7,877 /7,890 /8,174 updates of12,000. None completed endpoint evaluation; none
+of the other nine conditions started. This is an execution-budget failure,
+not a scientific negative result or evidence of nonfinite training.
+
+The saved solo benchmark predicted3,946 /3,646 seconds for parameter-only /
+hidden-only training, already exceeding the case cap before concurrency and
+evaluation. The launcher wrote those estimates without enforcing readiness.
+Preserve the failed outputs, clean checkpoints and interrupted states. Do not
+interpret the interrupted payload as an atomically completed optimizer step.
+
+### LN-096 — 2026-09-14: corrected matched-training dispatch plan
+
+Within existing compute authorization, rerun the same LN-089 twelve trajectories
+from the same damaged parent, data, schedules and optimizer initialization in a
+fresh artifact directory. A clean restart keeps all four conditions on the same
+new host and avoids ambiguous interrupted optimizer steps; the failed run remains
+separate evidence. Scientific steps, seeds, objective, FP32 training, FP32/FP64
+endpoint evaluation, independent rescoring, six-cell gates and1GiB output limit
+are unchanged. No source used by an active process is edited: job-3ttr3 is terminal.
+
+Set a7,200-second case cap,30,600-second internal batch cap and540-minute provider
+cap on one cpu-8 host, three two-thread workers. At the previously observed list
+rate$0.012/min the540-minute upper estimate is$6.48; validate the actual quote
+before submission. The measured concurrent rate implies roughly90 minutes for
+a12,000-update trajectory; the new two-hour limit leaves evaluation margin.
+Add an enforced benchmark gate: estimate the four sequential conditions from
+measured single-worker rates with a1.5 concurrency factor and300-second per-case
+evaluation allowance; refuse launch if either case or batch cap is insufficient.
+This is a conservative readiness heuristic, not a runtime guarantee. Validate
+both rejection and acceptance behavior, run the existing numerical tests and
+full12-case small fixture, then freeze source, configuration, plan and validation
+into a new context. Submit once with a new idempotency key; no watcher.
+
+The user separately requests a rigorous theorem-pitch document. This is an
+explicit deliverable exception to the routine-document rule. It must distinguish
+proved elementary reductions, conditional performance/recovery bounds, unproved
+construction claims, and requirements for a substantive conference contribution.
+
+### LN-097 — 2026-09-14: theorem deliverable and corrected runtime validation
+
+Created the explicitly requested rigorous research pitch:
+[When Does Removing Protection Necessarily Destroy Capability?](deliverables/scc-theory-pitch-20260914/SCC_Theorem_Research_Proposal.md).
+It defines the machine/attack/repair experiment, gives elementary collision and
+rank proofs, derives an entropy-based post-removal accuracy bound with retained
+information, adaptive repair and selection-bias terms, and states a conditional
+target with explicit bad-event amplification. The novel construction remains
+open. Random lookup is identified as a memory task, not general cognition.
+The proposal includes known repacking and separable-guard counterexamples,
+non-malleable-code/circuit prior art, proof work packages, and publication criteria.
+A finite sanity check enumerated768 four-bit retention/repair/selection cases
+with Bayes-optimal decoders; both displayed accuracy inequalities passed. Evidence:
+`artifacts/scc-theory-pitch-20260914-v1/finite-bound-check.json`. This is bounded
+implementation validation of the calculation, not a new construction proof.
+
+The runtime correction passes all five tests in `tests/test_separated_binding.py`,
+including rejection of the old budget and of deliberately too-slow cases. The
+full12-trajectory eight-update fixture passes all per-case independent audits:
+`artifacts/scc-separated-training-20260914-v2/fixture/`. Scientific training and
+evaluation math are unchanged. The revised context records exact validated
+source hashes, original input hashes, the LN-096 plan, and the same pinned image
+requirements. A CLI validation call initially rejected an unsupported
+`--build-timeout` flag without submission; rerunning with supported validation
+flags passed. `gman-validation-v2.json` quotes a maximum$4.86 for540 minutes on
+one cpu-8 and confirms `would_submit:true`. No live watcher is enabled.
 
 ## Supporting-record index
 

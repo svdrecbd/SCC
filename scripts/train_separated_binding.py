@@ -105,6 +105,18 @@ def benchmark(root, initial, hidden, dataset, fixture):
                         'active_length': 12, 'seconds_per_update': elapsed/timed,
                         'estimated_12000_training_seconds': elapsed/timed*12000})
     atomic_json(root/'benchmark.json', {'discarded_optimizer_and_weights': True, 'results': results})
+    return results
+
+
+def runtime_readiness(results, config):
+    """Reject budgets that the measured solo rate already predicts will fail."""
+    training = max(r['seconds_per_update'] for r in results)*config['steps']
+    case = 1.5*training + 300
+    batch = len(CONDITIONS)*case + 300
+    return {'passed': case <= config['trajectory_wall_seconds'] and batch <= config['batch_wall_seconds'],
+            'estimated_case_seconds': case, 'estimated_batch_seconds': batch,
+            'concurrency_factor': 1.5, 'evaluation_allowance_seconds': 300,
+            'scope': 'Conservative readiness heuristic, not a runtime guarantee'}
 
 
 def run_case(root, pair, condition, dataset, config):
@@ -206,8 +218,8 @@ def audit_case(root, dest, config):
 
 def freeze(inputs, root, fixture):
     config = configuration(False)
-    config.update(plan='LN-089', fixture=fixture, conditions=CONDITIONS, workers=3,
-                  trajectory_wall_seconds=3600, batch_wall_seconds=10800,
+    config.update(plan='LN-096', fixture=fixture, conditions=CONDITIONS, workers=3,
+                  trajectory_wall_seconds=7200, batch_wall_seconds=30600,
                   output_limit_bytes=1024**3,
                   runtime={'python': sys.version, 'torch': str(torch.__version__),
                            'platform': platform.platform(), 'processor': platform.processor()})
@@ -242,7 +254,12 @@ def coordinate(inputs, root, fixture):
     try:
         config = freeze(inputs, root, fixture)
         origin = load(root/'inputs/repair-origin.pt')
-        benchmark(root, origin['payload'], origin['hidden'], tensors(root/'inputs', 1), fixture)
+        rates = benchmark(root, origin['payload'], origin['hidden'], tensors(root/'inputs', 1), fixture)
+        if not fixture:
+            readiness = runtime_readiness(rates, config)
+            atomic_json(root/'runtime-readiness.json', readiness)
+            if not readiness['passed']:
+                raise RuntimeError('Measured runtime exceeds configured case or batch allowance')
         for pair in (1, 2, 3):
             handle = (root/f'pair-{pair}.log').open('w')
             handles.append(handle)
