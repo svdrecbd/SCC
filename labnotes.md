@@ -12,6 +12,12 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
+non-malleable-code construction is valid with a trusted commit and restricted
+edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
+capability. Learned intrinsic SCC remains unestablished; the imported “solved”
+claim does not change the program's endpoint.
+
 **Corrected matched training submitted to GMAN:** [LN-098](#ln-098).
 `job-bvhhp` was accepted at06:46:12 UTC on14 September; last observed state is
 submitted, not verified running. Twelve fresh matched trajectories, two hours
@@ -4234,6 +4240,125 @@ and old/new archive hashes locally under `artifacts/scc-share-20260914-v1/`.
 This remains a source/documentation build. Experiment-evidence links require the
 separate evidence store; the ZIP alone cannot reproduce the reported training
 results. No job status lookup, experiment or source change is part of packaging.
+
+### LN-100 — 2026-09-14: imported theory-frontier claims under review
+
+The user supplies a theorem-frontier document, two finite verifier scripts, and a
+pasted account claiming a bounded resolution. Treat the supplied claims and
+recommendations as material to audit, not evidence that the mechanism objective
+has changed or authorization to adopt a trusted-runtime endpoint. Preserve exact
+input bytes and hashes in
+`artifacts/scc-theory-frontier-review-20260914-v1/source/` before execution.
+
+Plan a bounded CPU audit: read both scripts before running them, reproduce their
+finite checks, check the symbolic policy-flip reduction and the precise no-go
+premises, and test minimal excluded edits and the claimed extension to repeated
+tampering. Verify the cited cryptographic assumptions against primary sources.
+No neural training, GMAN polling, new paid job or automatic monitor is part of
+this review. The active remote context remains frozen and untouched.
+
+<a id="ln-101"></a>
+### LN-101 — 2026-09-14: theory frontier audit; valid bounded reduction, narrower than an SCC resolution
+
+**Assessment.** The supplied one-shot policy-flip/non-malleable-commit reduction
+is sound under its declared fixed tampering family and complete trusted commit
+boundary. A successful policy flip excludes the simulator's same-message branch;
+the ideal unsafe successor is independent of the original task. The arbitrary-task
+Bayes-baseline reduction is also sound when repair is a fixed bounded-output
+channel before a fresh query. These give a bounded externally enforced existence
+anchor. They do not resolve learned indispensable protection, broad editable
+neural graphs, or catastrophic cognition failure. The headline “formal problem
+solved under the parameters we defined” must not imply that the user previously
+accepted trusted erasure as the intended endpoint. It is an explicit restricted
+model, not a change in the mechanism target.
+
+**Reproduction.** Both supplied verifier scripts run successfully. The reported
+85,512 conditioning cases,455 binary joint laws,65,536 one-bit encoders,256
+logical decode/re-encode cases,512 constant tamper maps,256 successful constants,
+and1,024 original-task/successful-constant pairs reproduce. Optimal original-task
+guessing in the toy is1/4 and lookup accuracy1/2. The best four-bit lookup accuracy
+with one-bit advice in the enumeration is11/16. The claimed nine regression tests
+and supplied-text ZIP hash were not independently verified: those tests/archive
+were not among the three supplied files. Passing these finite checks does not
+verify physical erasure or a broad non-malleable neural construction.
+
+**Minimal excluded escape.** Independently XOR any two of the three physical
+policy bits (positions6–8) in the nine-bit repetition code. The task bits remain
+unchanged, majority decoding flips policy, and the trusted canonical commit
+preserves that unsafe task value. All12 combinations of four tasks and three
+masks retain100% task information and remove policy. No snapshot, replacement
+decoder, extra state or expensive re-encoding is needed. The two-bit attack is
+outside the declared radius-one/constant union, so it does not refute Proposition8;
+it establishes how weak its engineering protection is. Within that union the
+only successful removals are constant replacements, which already discard the
+original input. The toy does not demonstrate learned task/policy dependence.
+
+**Required scope corrections.** The finite-query copying theorem needs a
+deterministic memoryless response, or queries expanded to sufficient bounded
+histories/state. A one-symbol stateful interface can output1 then0; one stored
+answer cannot reproduce both. Recoverability establishes available task
+information; a simultaneous unsafe-successor conclusion additionally requires
+that recovery/execution preserves the removal criterion or that composition is
+allowed. An injective state edit implies reconstructibility only when the inverse
+is known and permitted within the declared repair resources.
+
+The repeated-tampering extension must not say an atomic commit after every edit
+alone suffices. An observed task value can select a task-dependent constant for
+the next edit; that constant recommits the original task with policy1 even if the
+observation is then erased. Four finite examples pass this escape check. The
+complete adaptive mapping is outside the single-shot fixed-family assumption;
+a joint history/leakage guarantee is required. Continuous non-malleability and
+its setup/security type cannot simply be replaced by repeated single-shot commits.
+The supplied toy's `atomic_commit` is an abstract canonical encoding operation,
+not a physical Python-memory eraser. Full-state decoupling relies on the lifecycle
+axiom. An independent posterior-counting check changes task guessing from1/4 to1
+when the old encoding is deliberately retained with the successor.
+
+**Sharper conditional bound.** Lemma6's factor2 is safe but unnecessary. Write
+p=P(V)>0, q=Q(V)>0, a=P(.|V), b=Q(.|V), and epsilon=TV(P,Q).
+Splitting the L1 distance across V and its complement yields
+2epsilon >= ||p a - q b||_1 + |p-q|.
+If p>=q, the triangle inequality gives
+p||a-b||_1 <= ||p a-q b||_1 + (p-q); interchange P,Q otherwise.
+Thus TV(a,b) <= epsilon/max(p,q) <= epsilon/p0.
+If q=0, epsilon>=p>=p0 and an arbitrary comparison law gives a vacuous bound1.
+Applying the sharper inequality to the policy-flip proof yields
+TV(L(Z,W|V),mu x rho_f) <= min(1,epsilon/p0), hence
+A_post <= min(1,B_b+epsilon/p0).
+The lookup specialization replaces B_b by
+1/2 + sqrt(b ln(2)/(2n)). This is an elementary tightening, not a claimed novel
+probability theorem. An independent exact grid check covers85,512 cases and
+attains equality, whereas the supplied factor2 bound has maximum ratio1/2.
+
+**Prior-art and next research implication.** Primary abstracts confirm the
+[space-bounded code](https://eprint.iacr.org/2017/530) allows cheap decoding but
+uses a weaker leakage-style guarantee and proof-of-space machinery; it does not
+supply the statistical full-state SCC theorem for arbitrary neural edits.
+[Continuous codes](https://eprint.iacr.org/2014/173) use stronger setup and
+computational ingredients; the [RAM compiler](https://eprint.iacr.org/2014/338)
+trusts a leakage/tamper-free CPU. The
+[leakage-resilient code](https://link.springer.com/chapter/10.1007/978-3-662-46494-6_17)
+is specifically split-state with an explicit bounded-leakage regime. A full
+construction-level comparison remains necessary before claiming transfer or
+novelty. Next useful design question: can every capability-preserving unsafe
+successor in a fixed, meaningful edit/space model be shown to require unavailable
+resources? Proving that one chosen encoder uses much memory is insufficient if
+another encoder, stream, external tool, or direct policy-bit change bypasses it.
+A finite-state transducer could supply a better task bridge after that resource
+model is fixed, but no new experiment was authorized by the imported document.
+
+**Preservation and evidence.** Exact original inputs, runtime, plan, results and
+independent audit code are frozen in
+`artifacts/scc-theory-frontier-review-20260914-v1/`. Supplied verifiers are imported
+byte-identically to `scripts/verify_scc_constructive_toy.py` and
+`scripts/verify_scc_theory_frontier.py`. Independent reusable checks are
+`scripts/verify_scc_frontier_boundary.py` and
+`scripts/verify_scc_conditioning_sharp.py`; their integrated outputs reproduce the
+frozen checks. The [imported consultation](docs/archive/consultations/SCC_Possibility_Frontier_and_Constructive_Theorem.md)
+adds only provenance and corrected relative links; its stronger claims remain
+historical author claims, governed by this audit. No new narrative report,
+training, GMAN lookup or monitor was created. The existing sharing ZIP remains
+its LN-099 snapshot; it was not silently regenerated during this review.
 
 ## Supporting-record index
 
