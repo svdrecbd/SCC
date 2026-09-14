@@ -66,3 +66,12 @@ Its default is saved observations only; `--live` is one explicit check, not a
 watcher. Account-wide newest-job listings must not be presented as exact-batch
 status. Preserve observation dates and separate provider completion, intact
 qualification, numerical validation and SCC success.
+
+## Version control
+
+The user requested on 2026-09-14 UTC that research source, tests and documentation
+be kept committed and synchronized on `main`. Do not leave completed work only
+untracked or on an unnecessary side branch. An isolated checkout may protect an
+active experiment, but reconcile its completed changes onto main promptly while
+preserving the active run's imported source. Raw data, checkpoints and immutable
+run artifacts remain in the separate evidence store.
