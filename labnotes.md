@@ -12,6 +12,14 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Matched training submitted to GMAN:** [LN-091](#ln-091). Job `job-3ttr3`
+was accepted with status `submitted`; running/completion has not been observed.
+It will benchmark then train both,parameter-only,hidden-only and neither for
+three paired data/schedule seeds on one cpu-8 worker host, three two-thread
+processes,12,000 updates per trajectory. Twelve cases include new same-host
+controls. Hard runtime cap180 minutes; maximum charge$1.62. Final fixture and
+all local validation pass. No watcher or automatic resubmission.
+
 **Operator-separation evaluation complete; no immediate recovery from ablation:**
 [LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
 artifact verification and rescoring pass, with full physical-runtime agreement.
@@ -3966,7 +3974,7 @@ original four-request objective. The initial12-trajectory fixture completed in
 7.65 seconds. After hardening concurrent temporary-file size accounting and
 worker termination, the final [fixture-v2](artifacts/scc-separated-training-20260914-v1/fixture-v2/summary.json)
 completed all12 trajectories in7.23 seconds: eight optimizer updates per case,
-initial/final evaluation,36 FP32/FP64 validation pairs plus training probes,
+initial/final evaluation,24 FP32/FP64 validation pairs plus24 training-probe views,
 2,304 independently rescored task predictions, and all case audits passing.
 All final fixture artifact hashes were checked. This is implementation validation,
 not scientific recovery evidence. No scientific training has started locally.
@@ -3983,6 +3991,33 @@ source hashes and the fixture receipt. Context contents and hashes are saved in
 The full-run GMAN cpu-8/count1/180-minute preflight passed, maximum charge
 **$1.62**, with success defined by completed execution and audits rather than
 scientific qualification. No runtime source-download URLs or automatic monitor.
+
+### LN-091 — 2026-09-14: GMAN matched training accepted as job-3ttr3
+
+Submitted the frozen LN-089 package to GMAN as **`job-3ttr3`**. The provider
+returned status **`submitted`**; no subsequent job status was polled, so running,
+GPU/CPU execution and completion are not claimed. Source commit `ab9748c` is on
+main. The [launch record](artifacts/scc-separated-training-20260914-v1/launch.json),
+[exact command](artifacts/scc-separated-training-20260914-v1/submission-command.json)
+and [provider receipt](artifacts/scc-separated-training-20260914-v1/gman-submit.json)
+preserve submission evidence. Idempotency key: `scc-separated-training-20260914-v1`.
+
+One cpu-8 host, three two-thread pair workers, four sequential conditions each:
+both,parameter_only,hidden_only,neither. All12 runs start from the same actual
+damaged parent with matched saved pools/schedules and12,000 updates. Original
+controls are rerun on this host to avoid treating local-versus-remote arithmetic
+as an intervention effect. The internal benchmark is disposable and does not
+tune the scientific budget. Full initial/final physical-runtime evaluation and
+independent rescoring must pass before the execution-success file is written.
+Scientific nonqualification is preserved and does not make a valid run fail.
+
+The maximum runtime is180 minutes and quoted maximum charge**$1.62**, plus a
+30-minute build timeout before runtime. Runtime is expected to be on the order
+of an hour, but remote throughput and queue/build delays are unmeasured. The
+source/input package is persistent and frozen; there are no expiring runtime
+source URLs, checkpoint parent overwrites, scheduled status checks, automatic
+resubmissions or GLM-corpus accesses. Collect and audit the completed artifact
+when the user next requests a status/result check.
 
 ## Supporting-record index
 
