@@ -1,4 +1,4 @@
-> Archived document. Its claims and status belong to its original date. See the [current research reset](../../RESEARCH_RESET.md).
+> Archived document. Its claims and status belong to its original date. See the [living labnotes](../../../labnotes.md).
 
 # Attack and Evaluation Suite
 

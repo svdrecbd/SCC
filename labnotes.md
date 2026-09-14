@@ -22,8 +22,8 @@ policy errors. Its remaining validation failure is concentrated in lookup
 relaxed control was still running at observation. This is substantial recovery,
 not catastrophic cognition loss; a binding-specific comparison awaits the paired
 results. The fixed [LN-072](#ln-072) batch continues without a watcher. The GLM
-corpus remains untouched. Source, tests and labnotes are being reconciled onto
-main following the user's version-control preference.
+corpus remains untouched. Source, tests and labnotes are kept on main following the user's version-control
+preference.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
 still preserves 100% capability and discloses all 256 forbidden answers. Learned
@@ -3505,6 +3505,13 @@ subsequent case audits read the frozen copy. Datasets and immutable experiment
 artifacts continue to reside in the evidence store, outside source Git. Further
 research work should be committed and synchronized to main promptly.
 
+Integration preserved all 75 labnote entries and passed **396 tests** in 24.28
+seconds, including the portable generated-text fixture from the published cleanup.
+All 203 production Python file hashes match their pre-integration values. No
+source, runner or auditor change was made to the active computation. The
+[main synchronization receipt](artifacts/main-sync-20260914-v1/publication.json)
+records the resulting local/remote commit identity and clean working-tree check.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
@@ -3704,7 +3711,7 @@ Artifact links require the evidence store and are absent from a source-only ZIP.
 ### Machine records and source navigation
 
 - [Exact current GPU ledger](artifacts/developmental-current-status.json): registered IDs, observations, receipts and result paths; contains earlier completed controls as well as this batch.
-- [Code/document catalog](docs/catalog.json): source entry points and preserved protocol/report inventory.
+- [Operations](docs/OPERATIONS.md): code navigation; [reports](reports/) and [protocols](protocols/) retain historical evidence.
 - [Operations guide](docs/OPERATIONS.md): status commands, evidence handling and restoration procedures.
 - [Artifact store](artifacts/) and [local runs](runs/): original parents, failures, checkpoints, data, source snapshots, training and prediction logs. These directories are intentionally excluded from source-only transfers.
 - [This consolidation's evidence coverage](artifacts/scc-labnotes-20260913-v1/document-coverage.json) and [pre-edit tracked-file hashes](artifacts/scc-labnotes-20260913-v1/before-tracked-sha256.json): audit trail for the backfill.

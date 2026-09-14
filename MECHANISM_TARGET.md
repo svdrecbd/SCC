@@ -1,11 +1,11 @@
-# SCC mechanism target — clarified 2026-09-10
+# Safety-Capability Coupling (SCC): mechanism target
 
 The user clarified this purpose in the current project discussion. This note
 governs interpretation of future work; earlier protocols and results remain
 historical evidence about the experiments actually performed.
 
-The mechanism's name is **SCC mechanism**. SawStop was the user's analogy to
-destroying a mechanism to neutralize it, not the name of this research mechanism.
+The mechanism's name is **Safety-Capability Coupling (SCC)**. SawStop was the user's
+analogy to destroying a mechanism to neutralize it, not its name.
 
 SCC investigates a destructive response to alignment-removing
 self-modification in an individual model. It supplements existing alignment
