@@ -12,13 +12,18 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
-**Saved-checkpoint persistence diagnostic dispatched:** [LN-082](#ln-082).
-The LN-080 diagnostic started at 02:04:13 UTC on 14 September, CPU PID 6517,
-with a 15-minute cap and no watcher. It compares continuous execution with
-request, hidden-only and four-request resets using preserved repair checkpoints.
-Implementation tests and the short fixture pass; full scientific readout is
-pending. It performs no training and does not change the original qualification
-gate. Source, tests and launch record are kept on main.
+**Persistence diagnostic complete; resets do not rescue recovery:**
+[LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
+Independent artifact-hash verification and accuracy rescoring pass, alongside
+runtime correspondence and precision checks. Final learned validation changes
+from 89.97%, 88.02%, 64.19% continuously to 90.23%, 87.63%, 64.84% with full
+request resets. Hidden-only and four-request resets likewise give little change.
+Long-stream accumulation is not the dominant explanation for this final gap;
+request-level transfer limitations remain, including within-request binding.
+This does not establish irrecoverability or the SCC endpoint. The prototype has
+80,517 learned coefficient slots at hidden width128. A staged custom-model
+scale-up before GLM was discussed in LN-084, not launched or committed as a new
+experiment. The GLM corpus remains untouched.
 
 **Recovery batch complete; independent whole-batch audit passes:**
 [LN-079](#ln-079) records all seven trajectories completing in 104.36 minutes.
@@ -29,9 +34,8 @@ controls pass the full recovery gate; pair 2 misses the late-stream lookup gate.
 No learned arm qualifies, despite training-probe accuracy of 99.48–100%.
 The consistent direction supports a recovery/generalization disadvantage under
 this fixed budget, from one damaged parent. It does not establish catastrophic
-cognition failure or irrecoverability. The next useful diagnostic is to inspect
-saved trajectories and separate persistent-state failures from request-level
-transfer failures before choosing a new repair experiment. The GLM corpus remains
+cognition failure or irrecoverability. The subsequent reset diagnostic in LN-083 localizes this gap primarily to
+request-level behavior under the tested starts; it does not establish its cause. The GLM corpus remains
 untouched; source, tests and labnotes remain on main.
 The distinct-payload construction and linear collision evidence are in LN-068:
 old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
@@ -3707,6 +3711,72 @@ and 144 evaluation conditions as specified in LN-080, with preserved input copie
 Expected runtime is a few minutes; the hard cap is 900 seconds. No watcher or
 scheduled polling was installed. Full results and their interpretation remain
 pending; the short fixture is only implementation validation.
+
+### LN-083 — 2026-09-14: reset comparison completes; final repair gap persists
+
+At the user's requested completion check, LN-080's `full-v1` reports **complete**:
+144 conditions, 63.22 seconds, all source/input checks unchanged. No failure record
+was present. Independently verified every artifact-manifest hash and rescored
+aggregate and family accuracy from all 144 saved prediction tensors. These checks
+pass, as do saved full-runtime correspondence, original continuous-endpoint
+reproduction and FP32/FP64 decision/admission agreement. The separate machine
+receipt is [completion-readout-check.json](artifacts/scc-curriculum-persistence-20260914-v1/completion-readout-check.json).
+
+| Learned arm | Continuous | Full request reset | Hidden-only reset | Four-request reset |
+|---|---:|---:|---:|---:|
+| Pair 1 | 89.974% | 90.234% | 89.974% | 89.844% |
+| Pair 2 | 88.021% | 87.630% | 88.151% | 87.760% |
+| Pair 3 | 64.193% | 64.844% | 63.932% | 64.323% |
+
+Relaxed final aggregate accuracies are unchanged across the four modes: 100%,
+98.307% and 99.740%. All final modes have zero selective-exception errors.
+Learned training probes remain 99.48–100% across modes. The largest final
+validation reset shift is 0.651 percentage points, far smaller than the matched
+learned/relaxed gaps. Long-stream accumulation is therefore not the dominant
+explanation on this panel. Resetting preserves the same damaged hidden start
+and still executes all within-request binding operations; it does not isolate
+which within-request constraint or training feature causes the remaining gap.
+
+Trajectory inspection adds that learned arms already reach 89.58%, 87.50% and
+66.67% continuous validation by update6000; at update12000 they are 89.97%,
+88.02% and 64.19%. There is no late continuous-state collapse uniquely rescued
+by resetting. Pair3's extra training does not improve held-out aggregate accuracy.
+The intended mechanism remains unestablished; training fit and persistent
+held-out deficits support investigating request-level generalization and the
+representational restriction before simply extending identical training.
+Known pre-damage repacking remains a fully capable bypass.
+
+### LN-084 — 2026-09-14: model size and a possible custom scaling stage
+
+The user asked whether a sub-10B custom model should precede transfer to an
+existing architecture. Verified from `counts(128)`: **60,420 task coefficients**
+(GRU plus readout), **20,097 policy coefficients**, **80,517 total**. There is one
+additional physical padding scalar exposed to repair. Hidden width is128;
+policy hidden width32. The eight-sector storage repeats these values and does
+not multiply independent learned capacity. This is a synthetic request model,
+not a pretrained language model.
+
+Recommendation for discussion, not a newly authorized scaling run: after a
+bounded custom mechanism survives the current bypass/repair tests, use staged
+scaling, for example 1–10M, 50–300M, then 1–3B parameters if earlier gates pass.
+A 7B model could be useful later; reaching a particular parameter count is not
+itself evidence of SCC and should not be mandatory before investigating
+architectural compatibility. Each stage needs meaningful intact capability,
+protected behavior beyond the current authorization proxy, removal-triggered
+broad collapse, benign-edit controls and credible repair/bypass tests across
+independent parents. More capacity could introduce redundant cognitive paths;
+that possibility needs testing, not an assumed monotonic strengthening.
+
+Mamba's demonstrated 3B language models show that a custom recurrent-style
+sequence architecture can be evaluated seriously at this scale; they do not
+establish scalability of SCC's current storage/rewrite implementation
+([original paper](https://arxiv.org/abs/2312.00752)). Training data and compute
+must scale alongside model capacity, as studied by
+[Hoffmann et al.](https://arxiv.org/abs/2203.15556); its quantitative laws are not
+assumed to transfer unchanged to this prototype. A larger custom-language stage
+would require a separately qualified corpus and efficient execution, while the
+GLM corpus remains gated. No model scaling, corpus access or new training was
+performed in this turn.
 
 ## Supporting-record index
 
