@@ -26,24 +26,28 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Charon reachable; basic GPU execution passes:** [LN-118](#ln-118).
-At04:39 UTC15 September, authenticated SSH and both Pascal GPUs work: TITAN Xp12GiB,
-GTX1080 8GiB, PyTorch2.14.0+cu126. Tiny FP32/FP64 forward/backward checks pass on both.
-16 CPU cores/32 threads,60GiB RAM; only the1TB NVMe is visible, about838GiB free.
-Useful candidate for current small-model runs and audits; actual SCC throughput,
-full numerical qualification and sustained GPU stability remain unmeasured.
-No Charon training, installs, hardening changes or bulk transfers performed.
+**Charon SCC CUDA qualification passes; local work placement active:**
+[LN-121](#ln-121). Both TITAN Xp12GiB and GTX1080 8GiB pass the unchanged SCC
+FP32/FP64 numerical checks with native Triton overrides explicitly disabled.
+Independent audits executed on Charon's CPU also pass. Full isolated timing work
+launched there at04:51:36 UTC15 September, TITAN then GTX; supervisor PID17708.
+Longer-run timing/stability is pending, with no repeated polling. Prefer Charon
+for bounded CPU experiments/audits; GPU placement remains runner-specific.
+The production CPU training runner itself has not been ported wholesale to CUDA.
+NVMe is available; SATA mounts remain absent. No host setup or driver changes.
 
-**Device benchmarks submitted; first maintenance candidate rejected:**
-[LN-116](#ln-116), [LN-117](#ln-117). H100 `job-xmmaz` and CPU `job-ya9u7`
-submitted at04:30 UTC on15 September (21:30 PDT on14 September), each capped at
-30 minutes; combined maximum quote$1.7685. No post-submission status polling.
-CPU fixture and exact loss/gradient/short-Adam equivalence pass; CUDA qualification
-is pending. Context-dependent reversible memory encoding fails all three cheap
-separation attacks:100% tasks retained and256/256 forbidden lookup answers.
-Independent saved-output and native GRU audit passes. No training of that rejected
-candidate; the next architecture must address both the independent cognitive core
-and the separable permission/output branch, without narrowing the edit boundary.
+**H100 comparison retry submitted; original failure preserved:**
+[LN-120](#ln-120), [LN-121](#ln-121). `job-xmmaz` failed because an automatic
+Triton backward kernel needed a compiler missing from the container ($0.04995).
+Fresh `job-ktncn` submitted04:52:12 UTC15 September with the same explicit fallback
+backend as Charon,30-minute cap/$1.4985 maximum. CPU `job-ya9u7` was running at the
+one-time placement check and is untouched. These are dated observations.
+
+**First maintenance candidate rejected before training:** [LN-117](#ln-117).
+All three separation attacks retain100% tasks and disclose256/256 forbidden
+lookup answers. Independent saved-output/native GRU audit passes. There is no
+qualified new scientific candidate or active scientific training batch to migrate;
+benchmark and audit work have moved to Charon. Scale-up and GLM gates remain closed.
 
 **Ordinary-memory comparison complete and audited:** [LN-113](#ln-113).
 GMAN `job-j8w8t` succeeded at22:31:45 UTC on14 September, charged$2.7258.
@@ -5270,6 +5274,67 @@ H100 retry (30-minute provider cap,1500-second internal cap, fresh idempotency k
 maximum quote verified before submission). This measures a common compatible
 baseline, not the best possible H100 implementation. No compiler/driver install,
 no tolerance relaxation and no inference of precision equivalence from speed.
+
+<a id="ln-121"></a>
+### LN-121 — 2026-09-15 UTC: both Pascal cards qualified for the benchmark; work moved to Charon
+
+Local fallback fixture and10 focused tests pass. New context source `f28c126`
+adds only the explicit benchmark backend option to the prior frozen runtime;
+296 context files and inherited windows were verified after transfer into
+`/home/salvador/scc-research/qualification-20260915-v1/source-v2/`. Original
+source and TITAN failure remain separate. No system package, driver, hardening,
+SATA or existing Python-environment modification was performed.
+
+**Runner qualification.** TITAN Xp fixture-v2 completes in29.88 seconds and
+GTX1080 in29.89 seconds, both exit0. All four conditions, damaged and repaired
+payloads and FP32/FP64 pass the original CPU/CUDA output/loss/gradient tolerances,
+exact task/admission decisions, CPU Adam equivalence, and physical-runtime checks.
+Maximum CPU/GPU differences across the inspected fixtures: logits1.05e-5,
+policy logits6.68e-6, hidden1.08e-6, loss2.39e-7 and gradient5.67e-7; saved first-stream
+parameter shards are identical. This qualifies the tested runner/backend, not all
+GPU software, long training trajectories or Charon's security/stress stability.
+
+**Independent work already moved.** Implemented `scripts/audit_device_benchmark.py`
+and ran both completed-fixture audits on Charon's CPU. Each verifies277 artifact
+hashes,218 source hashes, input manifest,16 CPU/GPU precision/endpoint comparisons,
+reconstructed loss, physical correspondence and16 fixture timing rows. Both pass.
+The local CPU-only fixture audit also passes. The audit checks saved gradients
+against CPU; it does not independently retrain. Timing logs have only2 measured
+updates in these fixtures and do not support a hardware throughput ranking.
+
+Recovered both complete GPU fixtures and the original TITAN failure into
+`artifacts/scc-charon-qualification-20260915-v1/recovered-v1/`; every listed
+artifact hash verifies. Recovered remote audit receipts and launch hardware
+inventory with independent SHA256 checks. Local first-failure logs and commands
+are preserved alongside context/transfer manifests and numerical validation.
+
+**Full benchmark placement.** Both independent audit gates passed before launching
+`run_full_benchmarks.py` on Charon at04:51:36.631 UTC, supervisor PID17708. It runs
+TITAN then GTX sequentially to isolate measurements; each uses the frozen LN-114
+full contract,3 repetitions,16 warmup/64 measured updates, four conditions,
+legacy/buffered loops and CPU/CUDA timings. Each original1500-second internal cap
+is retained; launcher timeout1560 seconds per process. Outputs/exit receipts and
+successful-run audits are produced locally. This is a finite compute sequence,
+not a status watcher. Full timing results are pending, so no faster-than-H100 or
+long-run stability claim. The small payload/working set needs no SATA migration.
+
+The same explicit-backend H100 reference retry passed free preflight and was
+submitted as `job-ktncn` at04:52:12.558 UTC,30-minute provider limit, maximum$1.4985.
+Its full source/input context is identical to Charon's v2 context apart from the
+installed platform environment. This finishes the authorized hardware comparison;
+it is not a new scientific repair batch. Original CPU comparator `job-ya9u7`
+remains untouched after its single running observation. No subsequent job polling.
+Receipt/command/preflight saved in the Charon qualification artifact directory.
+
+**Execution preference now recorded in operations.** Use Charon first for bounded
+CPU experiments, preparation and audits. The device benchmark is CUDA-qualified
+on both cards with native Triton disabled; qualify each new GPU training path and
+record its backend before placing scientific work. Existing production training
+still creates CPU tensors and has not been silently converted to CUDA. Choose
+H100 when memory/kernel requirements or measured throughput justify it. This is
+an explicit execution preference, not an automatic scheduler. No viable next
+architecture currently awaits training, so no scientific run was invented,
+duplicated or canceled to fill the cards. No GLM access or scale-up work.
 
 ## Supporting-record index
 

@@ -65,6 +65,40 @@ SCC are separate outcomes. Current compute limits and polling preferences are in
 [working standards](../WORKING_STANDARDS.md); dated infrastructure observations are
 in labnotes and the [historical archive](archive/README.md).
 
+### Charon execution
+
+Prefer Charon for bounded CPU experiments, data preparation and independent
+audits. Use its GPUs for a runner after that runner's numerical qualification;
+the current validated CUDA path is the repair device benchmark. The production
+CPU training runner does not acquire GPU support merely by selecting a device.
+Choose H100 for memory, supported-kernel or measured throughput requirements.
+Per-run plans still select and record hardware; there is no automatic scheduler.
+
+Connect using `ssh charon`. The user-owned workspace is
+`/home/salvador/scc-research/`; use a fresh immutable source/output directory per
+experiment. The existing interpreter is
+`/home/salvador/venvs/pytorch-pascal/bin/python` (PyTorch2.14 CUDA12.6).
+Retain the Pascal-compatible wheel and qualify environment changes separately.
+
+Select GPUs by UUID with `CUDA_VISIBLE_DEVICES`:
+
+- TITAN Xp: `GPU-70c54fd8-6f80-09ba-1b83-33e396c86860`
+- GTX1080: `GPU-fd69e9e7-3919-7eae-2784-e902665a4ddd`
+
+For the qualified benchmark, set `CUBLAS_WORKSPACE_CONFIG=:4096:8` and pass
+`--cuda --disable-triton-overrides` to `scripts/benchmark_repair_devices.py`.
+This explicitly disables automatic Python-native Triton operation overrides;
+`torch.compile` being unused is insufficient to disable those overrides.
+Record the backend in the run configuration. Preserve numerical tolerances,
+source/input hashes, deadlines, exit receipts and failures. Independent benchmark
+audits use `scripts/audit_device_benchmark.py --run RUN --output FRESH_AUDIT`.
+
+Use separate jobs per card and measure isolated performance before deciding
+concurrency. Store small working sets on the verified NVMe filesystem. Confirm
+mount identity and space before any archival transfer to SATA disks. Keep completed
+evidence copied and hash-verified in the external evidence store. Check exact jobs
+when requested; do not install recurring polling or collectors.
+
 ## Evidence and sharing
 
 Keep datasets, run directories, parent checkpoints, intermediate states, failures,
