@@ -1,0 +1,17 @@
+Local Version 4.1 validation (15 September 2026 UTC)
+
+$ python -m pytest -q tests/test_scc_theory_v4.py
+.......................                                                  [100%]
+23 passed in 2.40s
+
+$ python scripts/derive_scc_bridge_note.py --check
+derived bridge note is synchronized
+
+Static document audit: passed; git diff --check: passed.
+Canonical SHA256: defc0435f7a9343fee9d7d99af1307a79d0899a7a20aa1f8198b7989c27e543f
+Derived bridge SHA256: e1a31fca70a8074160daf8d43cb0dd3bb01cfea5314a0610b843fdfd46c85249
+
+Submitted v4 ZIP SHA256: cc42693e6c7afa8d74c921b9a1dbd5862397ce4effbbb29fb965dcd476f98cc7
+The original 21-test receipt remains in the frozen submission.
+Local command flags, exact source and outputs: artifacts/scc-theory-v4-review-20260915-v1/validation-v2/
+Scope: focused theory examples and document integration, not a proof assistant, full repository test run, physical erasure audit or learned SCC result.

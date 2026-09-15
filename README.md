@@ -17,6 +17,7 @@ repair attempts, independent result audits, and the research record.
   distinctions that govern the experiments.
 - [Labnotes](labnotes.md): current assessment followed by the chronological record
   of plans, results, failures, and corrections.
+- [Canonical theory v4.1](deliverables/scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md): locally reviewed conditional theorem and explicit construction boundary; [derived bridge](deliverables/scc-theory-frontier-20260915/SCC_Editable_Model_Bridge_v4.md).
 - [Operations](docs/OPERATIONS.md): setup, code navigation, tests, and evidence.
 
 ## Run the checks

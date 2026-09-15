@@ -51,3 +51,5 @@ original paths: [reports](../../reports/) and [protocols](../../protocols/).
 
 The [research reset](../RESEARCH_RESET.md) is also a dated historical synthesis,
 not an additional current plan.
+
+The current conditional theory is [canonical v4.1](../../deliverables/scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md). Submitted v3/v4 originals remain in the evidence store; LN-127 and LN-130 record their reviews.

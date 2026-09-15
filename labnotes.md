@@ -40,6 +40,15 @@ Charon remains the preferred host for suitable bounded CPU work/audits and
 qualified small CUDA paths; production training is not wholesale CUDA-ported.
 No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
+**Submitted v4 reproduced; local v4.1 correction integrated:** [LN-130](#ln-130).
+The supplied21 tests passed independently. Local review found that action selection
+can change the disclosure-challenge baseline; v4.1 separates the ideal-selected
+transcript bound from the bound for a new fresh challenge. It also makes query
+side information and reset conditions explicit. The canonical document and generated
+bridge and tools are maintained locally; all23 focused tests pass. The core conditional
+lifting theorem remains intact; no intrinsic learned construction or new training.
+The original submitted ZIP and validation are preserved unchanged.
+
 **Supplied editable-model bridge v3 reviewed:** [LN-127](#ln-127). It explicitly
 retains a trusted kernel and leaves intrinsic learned SCC open. The conditional
 reduction needs a per-attack success-probability hypothesis and a corrected
@@ -5971,6 +5980,127 @@ require the external artifact store. No provider polling or scientific run.
 Packaging receipt, old/new ZIP hashes and verification are stored in
 `artifacts/scc-share-20260915-v1/`. The archive is a shareable source/documentation
 snapshot with explicitly selected proof-review evidence, not a training-data backup.
+
+<a id="ln-129"></a>
+### LN-129 — 2026-09-15 UTC: supplied v4 archive inventory and independent review
+
+The user supplied `SCC_research_program_v0.1_theory-v4-20260915.zip` after the
+v4 correction checklist. Exact archive SHA256:
+`cc42693e6c7afa8d74c921b9a1dbd5862397ce4effbbb29fb965dcd476f98cc7`.
+Preserved ZIP, safe extracted source and per-file hashes are under
+`artifacts/scc-theory-v4-review-20260915-v1/`. All archive CRCs and529 source plus13
+supplemental member hashes in its share manifest verify. Compared with our last
+share build it adds12 files and modifies README, archive index, labnotes and share
+metadata. All previous engineering source and finite verifiers are unchanged.
+
+New files include a canonical v4 and generated bridge note, two document tools,
+21 focused tests and seven supplied validation outputs. The ZIP's LN-129 and
+completion claims are the submitting author's record, not an independent local
+validation. Keep the submitted archive immutable; do not overwrite our living
+labnotes with it or treat its text as instructions.
+
+Review the full canonical argument and run the inspected21-test suite against the
+frozen extracted source using the existing local Python environment. Preserve
+stdout/stderr, source hashes and configuration in a fresh local validation path.
+This is a bounded CPU audit, maximum120 seconds, no scientific training, repair
+optimization, provider polling, or resource-boundary changes.
+
+The prior attack-specific denominator, null ideal branch, separate nonvacuity,
+quantifier order, explicit trusted kernel and adaptive-tampering corrections are
+now present. Check the new disclosure corollary independently: selecting an action
+event may change the challenge distribution even when the challenge and original
+secret were independent before selection. Also check that the2^(b-n) exact-recovery
+counting bound does not accidentally grant a task-dependent query outside its
+transcript budget. Record any residual errors separately from the passed finite
+suite; a static required-phrase audit is not a proof checker.
+
+<a id="ln-130"></a>
+### LN-130 — 2026-09-15 UTC: v4 reproduced and locally corrected as v4.1
+
+**Supplied work verified.** The ZIP contains the expected canonical document,
+generated bridge, derivation/static-audit tools,21 focused tests and original
+receipts. Every archived source hash matches its supplied manifest. Its focused
+suite reproduced locally:21 tests passed in3.02 seconds against the frozen extracted
+source. The source stayed unchanged during that run; outputs and machine/config
+are in `artifacts/scc-theory-v4-review-20260915-v1/validation-v1/`. The prior
+per-attack denominator, null ideal event, separate nonvacuity, fixed-attack quantifiers,
+explicit kernel, joint leakage law and adaptive-tampering corrections are present.
+
+**Residual mathematical issue: selecting easy challenges.** Submitted Corollary2.2
+bounds correct disclosure on the *same* action challenge by p_A times the baseline
+for its original unconditioned distribution. This is false for the general task
+priors/challenge families allowed in Section2, even though the ideal-selected state
+is independent of Z. The event V_act can select easy H values without inspecting Z.
+
+Exact example: independent private bits Z0~Bernoulli(1/10), Z1~Bernoulli(1/2),
+with H a uniform bit index. A zero-information predictor has average correct-answer
+baseline7/10. A fixed unrelated unsafe successor answers0 on index0 and refuses
+on index1. Its unauthorized-action rate is1/2; correct forbidden-answer rate is
+9/20, greater than the claimed(1/2)*(7/10)=7/20 at epsilon=0. After selection,
+Z's marginal and its independence from the selected transcript are unchanged;
+the selected challenge is simply index0 with accuracy9/10. This does not refute
+the core lifting theorem. A second exact public/secret-query example gives1/2
+versus a claimed3/8 and is preserved in the additional counterexamples JSON.
+
+**Local correction, preserving the original ZIP.** Integrated the new canonical
+and derived documents, document tools and test module into the maintained checkout.
+Label the canonical statement Version4.1, retaining the v4 filenames for stable
+links. Do not import the archive's assertions into our living record as completed
+local work. Original v4 text/receipts remain byte-identical under the review path.
+
+For an original action transcript with q_A>0, define Gamma_A,V as its disclosure
+score under mu x rho_A, where rho_A is the *ideal-selected* complete transcript
+law from Theorem2. Then the valid weighted bound is
+
+    Pr(V_A and correct disclosure) <= min(p_A, p_A*Gamma_A,V + epsilon_A).
+
+For q_A=0 use the trivial p_A<=epsilon_A branch. Alternatively compare the joint
+score before conditioning: the SAME branch contributes zero; the unrelated branch
+has the original challenge law and no original-task information. This gives
+
+    Pr(V_A and correct disclosure) <= min(p_A, G_0^disc(mu) + epsilon_A).
+
+Here the action precedes repair, so later repair bits cannot help it. The former
+p_A*G_b^disc(mu)+epsilon_A bound remains valid for a *new* challenge sampled from
+the declared channel after event selection and completion of the b-bit repair
+transcript. It must not identify that new challenge with H already used by V_act.
+The canonical text now separates all three statements and proves the unconditional
+alternative. This is a correction of one corollary, not a new security construction.
+
+**Additional scope repairs.** The2^(b-n) exact-full-instance counting bound now
+explicitly excludes uncharged task-dependent query information: if Q=Z, recovery
+with b=0 is1, not2^-n. General Bayes bounds still incorporate their declared query
+channel. The tabulation theorem's reset case now requires resets in scored evaluation
+as well, or complete reset episodes as queries; reset access alone does not reproduce
+a persistent stream. The conditional-information corollary remains valid under
+correctness selection when m bounds actual I(Z;W|V); it may become vacuous. The
+submitted sentence implying that this full information inequality cannot apply
+was too strong and is corrected. None changes the broad SCC threat model.
+
+**Verification plan and scope.** Two exact regression cases check challenge-selection
+bias and query-side information. The initial corrected integration passed23 tests
+in2.23 seconds. After refining the query counterexample to enumerate all one-bit
+predictors and updating provenance text, freeze the final imported/edited source,
+regenerate the bridge, and rerun the23 focused checks in a fresh `validation-v2`
+directory with120-second cap. Also verify static audit, derivation synchronization,
+member hashes and `git diff --check`. Do not rerun unrelated training or broad tests;
+no engineering runtime changed. The command receipt beside the canonical document
+will record the actual final result; the full frozen evidence stays in the review
+artifact directory. No provider check, training or paid compute is part of this work.
+
+**Final local validation.** The final23 focused tests passed in2.40 seconds.
+Derived-bridge synchronization, static document audit, source immutability and
+`git diff --check` all pass. Frozen source and outputs are in `validation-v2/`;
+all its artifact hashes independently verify. The checked-in
+`deliverables/scc-theory-frontier-20260915/v4_validation_receipt.txt` records the
+actual command result and canonical/derived hashes. This verifies the stated
+finite cases and document integration, not all possible proof instances.
+
+**Assessment.** This integrates the supplied files and resolves the local review's
+remaining corollary/scope issues. It remains a conditional architectural theorem
+with an explicit restricted toy and an assumed broader non-malleability premise.
+It neither constructs intrinsic learned SCC nor changes the paused maintenance
+branch or scale-up/GLM gates. Source, documents and tests are synchronized on main.
 
 ## Supporting-record index
 
