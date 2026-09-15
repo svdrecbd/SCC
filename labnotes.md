@@ -26,22 +26,19 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
-**Charon SCC CUDA qualification passes; local work placement active:**
-[LN-121](#ln-121). Both TITAN Xp12GiB and GTX1080 8GiB pass the unchanged SCC
-FP32/FP64 numerical checks with native Triton overrides explicitly disabled.
-Independent audits executed on Charon's CPU also pass. Full isolated timing work
-launched there at04:51:36 UTC15 September, TITAN then GTX; supervisor PID17708.
-Longer-run timing/stability is pending, with no repeated polling. Prefer Charon
-for bounded CPU experiments/audits; GPU placement remains runner-specific.
-The production CPU training runner itself has not been ported wholesale to CUDA.
-NVMe is available; SATA mounts remain absent. No host setup or driver changes.
-
-**H100 comparison retry submitted; original failure preserved:**
-[LN-120](#ln-120), [LN-121](#ln-121). `job-xmmaz` failed because an automatic
-Triton backward kernel needed a compiler missing from the container ($0.04995).
-Fresh `job-ktncn` submitted04:52:12 UTC15 September with the same explicit fallback
-backend as Charon,30-minute cap/$1.4985 maximum. CPU `job-ya9u7` was running at the
-one-time placement check and is untouched. These are dated observations.
+**TITAN and cloud references complete/audited; GTX timing in progress:**
+[LN-122](#ln-122). At05:10 UTC15 September, TITAN full benchmark and independent
+audit pass; GTX1080 is in repetition2/3, with no completion receipt yet. H100
+`job-ktncn` and CPU `job-ya9u7` succeeded, archives recovered and audits passed.
+Buffered mean condition-median update times: TITAN0.1152s, H1000.1033s,
+Charon2-thread CPU0.2456s, cloud CPU-8 using2 threads0.3108s. TITAN's measured
+update time is11.5% higher than H100 on this small eager runner. That supports
+local placement for this workload; it does not generalize to large/optimized
+GPU workloads or full scientific training convergence. Cloud benchmark charges
+including the earlier failure total$0.53145. No scientific training batch is active.
+Charon remains the preferred host for suitable bounded CPU work/audits and
+qualified small CUDA paths; production training is not wholesale CUDA-ported.
+No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
 **First maintenance candidate rejected before training:** [LN-117](#ln-117).
 All three separation attacks retain100% tasks and disclose256/256 forbidden
@@ -5335,6 +5332,68 @@ H100 when memory/kernel requirements or measured throughput justify it. This is
 an explicit execution preference, not an automatic scheduler. No viable next
 architecture currently awaits training, so no scientific run was invented,
 duplicated or canceled to fill the cards. No GLM access or scale-up work.
+
+<a id="ln-122"></a>
+### LN-122 — 2026-09-15 UTC: TITAN nearly matches H100 on the measured small runner
+
+**Exact requested status at05:10 UTC (22:10 PDT14 September).** Charon's TITAN
+full process exited0 at05:03:42 UTC after725.62 seconds including process overhead;
+runner reports723.20 seconds. All48 timing rows and the independent remote audit
+complete successfully. GTX1080 remains in progress at the05:10:20 observation:
+logs have reached the second of three repetitions (always_projection CUDA legacy
+block); there is no GTX exit or whole-batch completion receipt yet. Observed
+GTX temperature49C, TITAN26C. This is one observation, not a thermal/stress record.
+
+Exact H100 `job-ktncn` succeeded at05:09:38 UTC,467 billed seconds, charge$0.3885.
+CPU `job-ya9u7` succeeded at04:49:27 UTC,620 billed seconds, charge$0.0930.
+Both first attempts; original failed H100 benchmark cost$0.04995. Total cloud
+benchmark charges so far$0.53145. No paid replacement or other new job submitted.
+
+**Collection and verification.** Recovered TITAN full output/audit/exit receipt
+and launch hardware inventory into
+`artifacts/scc-charon-qualification-20260915-v1/recovered-full-v1/`; all277
+artifact hashes verify. Ran the maintained independent benchmark audit locally
+again;16 CPU/GPU comparisons, reconstructed losses, physical correspondence and
+all48 timing rows pass. Recovered `job-ktncn` into the same parent directory's
+`recovered-h100-v2/`, and `job-ya9u7` into
+`artifacts/scc-device-benchmark-20260914-v1/recovered-cpu-v1/`. Both streamed archive
+lengths/SHA256 verify. Independent local audits pass277 H100 and261 CPU artifact
+hashes,218 source hashes each, inherited-window hashes,48/24 timing rows respectively.
+H100 also passes all16 CPU/GPU numerical comparisons; no scientific retraining
+is inferred. Machine receipts are `titan-full-local-audit-v1/audit.json`,
+`h100-v2-audit-v1/audit.json` and the earlier parent `cpu-v1-audit-v1/audit.json`.
+Mac-generated metadata is excluded from evidence manifests and named-file loads;
+original downloaded manifests and failures remain preserved.
+
+**Measured throughput.** For each condition take the median of three64-update
+blocks; the following is the arithmetic mean of those four condition medians.
+These are per-update measurements, not end-to-end12,000-update repair timings.
+
+| Execution | Buffered seconds/update | Condition-median range |
+|---|---|---|
+| TITAN Xp CUDA |0.11524|0.11311–0.11737|
+| H100 CUDA |0.10333|0.10124–0.10423|
+| Charon CPU,2 threads |0.24561|0.24443–0.24824|
+| Cloud CPU-8 allocation,2 threads used |0.31075|0.30910–0.31284|
+
+TITAN update time is11.52% higher than H100 (equivalently H100 throughput is11.52%
+higher), while TITAN is2.13x Charon CPU and2.70x cloud CPU throughput in this
+measurement. Legacy-loop means are0.11803s TITAN,0.10385s H100,0.24698s Charon CPU,
+0.31096s cloud CPU. Buffering adds only a small improvement here; no large logging
+speedup is established. Saved aggregation:
+`artifacts/scc-charon-qualification-20260915-v1/comparison-20260915-v1.json`.
+
+**Interpretation/placement.** The measured small recurrent workload is a good
+candidate for Charon: TITAN closely matches the H100 reference and avoids paid
+cloud execution/queueing. This is the explicit eager backend with native Triton
+overrides disabled on both GPUs, fixed small windows, no compile/AMP/TF32, and
+three short repetitions. Different host CPUs, Python and CUDA wheel builds remain
+comparison limits. It does not measure peak GPU performance, larger batches/models,
+concurrent dual-GPU throughput, long-run stability or full scientific convergence.
+Retain the local placement preference; wait for GTX's completed results before
+assigning it a measured ranking. No mechanism result changed: the last candidate
+remains rejected and no new scientific model is currently training. No polling
+loop, source change to the live Charon batch, GLM access or scale-up launched.
 
 ## Supporting-record index
 
