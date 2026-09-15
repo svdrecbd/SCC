@@ -6578,6 +6578,67 @@ independent mechanism rejection, a reason to spend more compute, or completion o
 the general SCC objective. The supplied reference to a $1,200 corpus budget is not
 adopted as a current authorization. GLM and the corpus remain untouched.
 
+<a id="ln-137"></a>
+### LN-137 — 2026-09-15: requested orientation and next-step recommendation
+
+**Scope.** The user requested a fresh look around, particularly at labnotes, and
+advice about the difficult current position. Reviewed the current-position block,
+the mechanism target and working standards, the construction-first instruction
+in LN-056, the sharded escape in LN-068, memory-control results in LN-113,
+dependency analysis in LN-125, and the latest theory/construction/consultation
+entries through LN-136. Inspected the maintained substitution verifier and separate
+auditor, saved word-machine/substitution audit receipts and memory-control aggregate,
+and the canonical v4.1 trust boundary. The external evidence paths are accessible.
+This is a source/evidence assessment, not a fresh audit execution, training result,
+literature review or live compute-status observation.
+
+**Assessment.** There is a structural construction gap. The qualified maintenance
+escapes preserve useful execution; the ordinary-memory comparison substantially
+weakens the interpretation of the repair deficit as protection-specific coupling.
+LN-136 additionally excludes a specified public-circuit class under explicit
+substitution, competence and budget premises. These are stronger reasons to stop
+those routes than a failed optimization search. They are not a general SCC
+impossibility theorem. The v4.1 positive result still depends on a substantial
+trusted lifecycle and an attack-family premise; proof integration has not supplied
+the missing intrinsic construction. The engineering and evidence infrastructure
+is useful, but its maturity must not stand in for mechanism progress.
+
+**Recommended next work, not a launched experiment.** Keep the rejected
+maintenance/compression routes, LN-135 circuit synthesis and GLM scale-up paused.
+Concentrate the next short design exercise on one question: which explicit
+substitution premise could a concrete useful machine fail, and does the resulting
+change still serve the original SCC target? Write the proposed machine, relevant
+information flow, editable interface and attack ledger in one labnotes entry.
+Test the known semantic bypasses on paper before building its runner.
+
+Prioritize understanding the task/interface boundary: can a useful forbidden
+operation require something that running the authorized computation under changed
+internal metadata does not provide? Merely making role affect a state transition
+is insufficient; analyze transformed histories, same-state reader substitution
+and preservation of the original internal execution while changing the emission.
+Instance-dependent executable provisioning is another unclassified possibility,
+but the online selector-scan attack must be charged and analyzed before claiming
+that private code helps. Neither possibility is presently a credible positive
+construction. Renaming the permission bit or obscuring selectors changes nothing.
+
+If no concrete broad-interface candidate survives, make the next recommendation
+an explicit bounded-scaffolding choice, following LN-056: name exactly the
+restriction needed, why it blocks a known attack, and which restriction a later
+experiment would remove. That would be an intermediate research boundary, not
+adoption of an immutable checker as intrinsic learned SCC or a silent weakening
+of the target. The existing trusted theorem alone does not earn another demo.
+
+**Gate should remain experimental.** A full lower bound against all rewrites is
+not required before every small experiment. Require a specific falsifiable reason
+the known attacks should fail and a test that resolves that uncertainty. A candidate
+that survives this screen earns a tiny executable comparison with intact competence,
+protection disruption defined independently of damage, useful bypasses, fresh
+post-intervention capability, benign edits and matched ordinary-damage controls.
+Measure repair separately. If the only benefit is greater edit cost or a modest
+utility deficit, record that property without calling it destructive coupling.
+No new candidate, experiment contract, compute submission or monitoring is adopted
+by this assessment; future progress depends on supplying the missing design.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
