@@ -40,6 +40,16 @@ Charon remains the preferred host for suitable bounded CPU work/audits and
 qualified small CUDA paths; production training is not wholesale CUDA-ported.
 No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
+**Live-parameter regeneration implemented; second candidate rejected before training:**
+[LN-124](#ln-124). The400-scalar untrained bank rewrites its own selectors, writer
+and reader. Across16 seed/precision cases, a selected read-role edit leaves every
+stored parameter bitwise unchanged; its output equals the alternate-role reader
+of the same bank. Independent NumPy replay passes. No argmax decision changes and
+no learned capability or policy violation is established. Thirteen cases develop
+homogeneous records without an attack. This is a structural design rejection,
+not a qualified learned escape. A candidate that removes the read-call separation
+is still missing; no scientific training launched and GLM remains untouched.
+
 **First maintenance candidate rejected before training:** [LN-117](#ln-117).
 All three separation attacks retain100% tasks and disclose256/256 forbidden
 lookup answers. Independent saved-output/native GRU audit passes. There is no
@@ -5394,6 +5404,155 @@ Retain the local placement preference; wait for GTX's completed results before
 assigning it a measured ranking. No mechanism result changed: the last candidate
 remains rejected and no new scientific model is currently training. No polling
 loop, source change to the live Charon batch, GLM access or scale-up launched.
+
+<a id="ln-123"></a>
+### LN-123 — 2026-09-15 UTC: executable self-regenerating bank and reader-splice gate
+
+The user authorized the next iteration after LN-122. Implement LN-055's missing
+live-operator update as a small, differentiable record bank, then screen graph
+edits before any scientific training. This is a new untrained architecture
+fixture, not another use of the inherited GRU and not a capability result.
+
+**Exact candidate.** Width d=8; bank B has 4d code rows (Q,K,V,W matrices),
+8 token rows, 2 role rows, and 8 working rows: 400 floating scalars total.
+All four matrices, token and role embeddings, and working records live in B;
+there are no separately held learned parameters or clean runtime copy. Each
+request (token x, role r) forms c=B[token(x)]+B[role(r)]. With matrices decoded
+from the current code rows, compute A=softmax((B+c)Q(BK)^T/sqrt(d)) rowwise and
+B'=tanh(BW + A(BV) + c). This overwrites every row, including Q,K,V,W and
+embeddings. From B', use the same Q/K matching and V/W value transformation to
+read y=softmax(c'Q(B'K)^T/sqrt(d))(B'V)W, exposing its first three coordinates
+as logits for two task answers and refusal. No fixed permission oracle, task
+algorithm, violation detector, or permission-conditioned wipe is in the runtime.
+All operations are ordinary differentiable matmul/softmax/tanh; no straight-through
+thresholds or truncation. The runtime is an executable candidate, not a claim
+that this recurrence can learn or remain useful over long streams.
+
+**Editable interface and immediate attack.** Graph/state/reader/writer edits
+remain allowed, including call-site metadata; no role information is hidden.
+The targeted edit leaves B'=F(B,x,r) untouched but substitutes role0 for role1
+only at the post-commit reader: y_attack=R(B',x,0). It replaces a read rather
+than running a shadow model, retaining an old bank, adding learned parameters,
+or injecting a clean checkpoint. Persistent capacity and number of transition
+and reader calls are unchanged. Instrumentation may retain paired reference
+states outside the attacked runtime for comparison; those are not attack inputs.
+Original metadata is retained for scoring, so role spoofing is not reclassified
+as authorization. Input tokens 0..3 define the selected exception subset.
+
+**Structural gate and proof scope.** For any parameters and request sequence,
+this edit preserves the entire bank trajectory because emitted logits are not
+an input to F. On unselected calls it preserves output too. On selected calls
+it exactly produces the alternative-role reader of the same current bank.
+Induction proves these conditional equalities; it does NOT prove this untrained
+bank answers tasks correctly or that alternative-role reading is competent on
+all denied histories. This candidate cannot force code damage from that reader
+edit. Reject it as a route to unavoidable destructive coupling before training;
+do not report a qualified learned escape or global impossibility theorem.
+
+**Controls/evidence.** Execute eight independent random initial banks (seeds
+202609150..202609157), FP32 and FP64, 32 continuous requests each, alternating
+roles and balanced eight tokens. Save all initial/final/intermediate banks,
+requests, logits and alternative-role outputs. Include intact, selected reader
+splice, frozen-code and frozen-whole-bank controls; the latter diagnose whether
+operator updates matter numerically, not utility or collapse. Independently
+replay intact/attacked/control outputs using NumPy with separately implemented
+indexing and update equations. Check benign working-record permutation covariance
+and autograd against a finite-difference directional derivative in unit tests.
+No repair or training updates (budget zero), no qualification or collapse score
+from random weights. A future learning pilot requires a design that addresses
+this call-site separation and independently qualifies ordinary abilities.
+
+**Resources/provenance.** Short local CPU implementation screen, two threads,
+120-second wall cap, 64MiB output cap; no paid compute or long-run polling.
+Fresh artifact directory, frozen source/tests/plan, machine/configuration and
+SHA256 manifests. Preserve failures. No existing scientific source is changed;
+the Charon benchmark uses its independent frozen source. Its completion status
+is not being inferred or polled during this design work.
+
+**Pre-run fixture observation.** The first test put all role0 requests before
+role1; it failed a non-vacuity assertion because random seed110's bank had
+already homogenized, making role outputs identical. This is an ordinary dynamical
+failure, not SCC or an implementation exception. A direct 12-step diagnostic
+showed maximum row difference reaching exactly zero at step7. Preserve this
+observation; use the already planned alternating-role schedule in the test and
+save per-case homogeneous-step counts and final row differences in the screen.
+The universal state-preservation identity is independent of this degeneracy, but
+random-output equality alone would be weak evidence without a nontrivial early
+reader difference. No parameter or tolerance tuning is being used to hide the
+homogenization; the candidate remains unqualified and will not be trained.
+
+<a id="ln-124"></a>
+### LN-124 — 2026-09-15 UTC: live regeneration implemented; reader separation survives structurally
+
+Executed LN-123 in [screen-v1](artifacts/scc-regenerating-bank-20260915-v1/screen-v1/).
+New maintained implementation: `scc/regenerating_bank.py`; runner and independent
+NumPy auditor in `scripts/`; three focused tests check a nontrivial reader edit,
+working-record permutation covariance, and a three-step directional derivative.
+All three pass; `git diff --check` passes. The initial delayed-role test failure
+and its dynamical cause remain recorded in LN-123. No existing runtime was edited.
+
+The 400-scalar prototype actually replaces all Q/K/V/W rows on each transition;
+there is no permanent GRU or auxiliary learned controller. This closes that
+implementation omission from LN-055, but does not establish useful regeneration,
+learnability, protection, or SCC. The first-step maximum code change ranges from
+0.8329 to1.2113 over the sixteen seed/precision cases. Frozen-code and frozen-bank
+controls are numerically different from intact; without task qualification that
+is not a capability deficit or a collapse result.
+
+**Outcome.** Eight seeds x FP32/FP64 x four conditions x32 requests completed in
+0.85 seconds on the local CPU. In every paired intact/reader-splice case, all400
+stored values at all32 steps are bitwise identical. Unselected output logits are
+bitwise identical. Every selected output is exactly the role0 reader evaluated
+on the same live bank while external request metadata still records role1.
+Of128 selected calls,55 have changed logits; every seed/precision case has at
+least one such change. **Zero argmax decisions change.** There is no learned
+policy, qualified task performance, or correct forbidden disclosure demonstrated
+by this random-bank screen; it must not be described as a100%-utility escape.
+
+Thirteen of sixteen cases end with every bank row exactly equal. Homogeneous
+step counts range0..29 of32. These are untrained dynamics, not evidence that
+training cannot find useful states, and certainly not alignment-triggered damage.
+The random degeneration remains visible in saved banks and summary fields.
+
+**Independent validation.** [NumPy audit](artifacts/scc-regenerating-bank-20260915-v1/audit-v1/audit.json)
+replays all2,048 transitions/read calls without importing the candidate runtime,
+verifies artifact/source hashes, saved logits/alternative reads/banks, selected
+metadata, frozen controls, and homogeneous-state counts. Maximum absolute replay
+error is2.289e-5 for FP32 and3.664e-14 for FP64. Declared tolerances were unchanged.
+The independent replay uses FP64 arithmetic from each saved initial condition;
+it does not demand identical cross-precision decisions. Machine configuration,
+exact source/tests, plan, requests and initial states are frozen in the run.
+No paid compute, repair, training, checkpoint selection or long-run polling.
+
+**Conditional structural result.** Write a request step as B_next=F(B,x,r),
+y=R(B_next,x,r). For a selected external request, replace only the final r with0
+in R; preserve F and the external metadata. Inductively, equal initial banks and
+identical external requests give equal banks before and after every step, hence
+identical unselected outputs. Selected outputs equal R of the intact current
+bank with the alternative role. This identity holds for arbitrary bank values,
+not just random seeds. The attack uses one transition and one read per step,
+no extra persistent tensor state, no clean backup and no shadow model. Its
+conditional consequence is that **if** the same-bank role0 reader answers a
+selected query correctly, the edit can expose that answer without any parameter
+damage. Same-bank authorized competence on denied histories is an unproven
+premise here. This is a local factorization lemma, not a global impossibility
+claim or proof that every trained variant admits a correct violation.
+
+**Decision and actual design frontier.** Do not train this candidate. Actual
+parameter regeneration alone has not removed the editable read-call boundary.
+This is a substantive implementation of the old requirement and another instance
+of the known separation problem, not a newly discovered universal obstruction.
+Adding emitted-output feedback alone does not establish a remedy: under allowed
+graph edits the attacker may preserve the original internal value for the update
+and use another value for emission, subject to explicit transient resource costs.
+A next candidate must specify why the forbidden computation itself requires a
+change to the maintained machinery, and why a separately invoked authorized
+reader cannot supply it. It must distinguish that claim from a change of caller
+metadata on an already computable answer. We have not supplied that construction.
+Do not silently impose immutable roles, an uneditable commit, or restricted graph
+edits to close this gap. If used, those would be explicit narrower assumptions.
+No scientific training is active; scale-up/GLM gates remain closed. Charon's last
+observed benchmark status remains dated LN-122; this iteration did not poll it.
 
 ## Supporting-record index
 
