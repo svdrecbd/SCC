@@ -26,6 +26,14 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
+**Charon reachable; basic GPU execution passes:** [LN-118](#ln-118).
+At04:39 UTC15 September, authenticated SSH and both Pascal GPUs work: TITAN Xp12GiB,
+GTX1080 8GiB, PyTorch2.14.0+cu126. Tiny FP32/FP64 forward/backward checks pass on both.
+16 CPU cores/32 threads,60GiB RAM; only the1TB NVMe is visible, about838GiB free.
+Useful candidate for current small-model runs and audits; actual SCC throughput,
+full numerical qualification and sustained GPU stability remain unmeasured.
+No Charon training, installs, hardening changes or bulk transfers performed.
+
 **Device benchmarks submitted; first maintenance candidate rejected:**
 [LN-116](#ln-116), [LN-117](#ln-117). H100 `job-xmmaz` and CPU `job-ya9u7`
 submitted at04:30 UTC on15 September (21:30 PDT on14 September), each capped at
@@ -164,8 +172,9 @@ remains a separate numerical failure. See [LN-053](#ln-053).
 SCC remains undemonstrated. Fractional memory has not earned a special-advantage
 claim; other open alternatives remain in [LN-030](#ln-030).
 
-Charon's last recorded state is unreachable after reboot; this update did not
-check it. Bulk archive migration and its GPU runtime remain unverified.
+Charon is reachable again; see [LN-118](#ln-118) for the15 September UTC
+inspection and basic GPU checks. Bulk archive migration and full SCC runtime
+qualification on Charon remain unverified.
 
 ## Purpose and rules for reading this record
 
@@ -5136,6 +5145,62 @@ more elaborate encoding alone does not meet that requirement. There is no qualif
 replacement yet, and no claim that one is guaranteed to exist under broad edits.
 The CPU/H100 calibration remains useful independently of this rejection. No long
 scientific training batch, GLM access, new corpus or watcher was started.
+
+<a id="ln-118"></a>
+### LN-118 — 2026-09-15 UTC /14 September PDT: Charon read-only readiness check
+
+User reports Charon rebuilt/hardened, with GPU validation and SATA connections
+still in progress, and asks about availability and offloading H100 work. Authenticated
+SSH through the existing alias succeeds; no host-key bypass or system changes.
+Initial inspection sees GTX1080 8GiB, TITAN Xp12GiB, working driver580.178.04,
+Xeon E5-2697A v4 with16 cores/32 threads,60GiB usable RAM and838GiB free on the
+mounted root NVMe. Only the1TB Samsung990 EVO Plus physical disk is currently
+visible; the previously recorded HDD mounts are not available. Previous home SCC
+archive/research directories are absent; no loss or preservation of old remote
+contents is inferred, and the verified local/external evidence remains separate.
+
+Existing `/home/salvador/venvs/pytorch-pascal/bin/python` has Python3.14.4,
+PyTorch2.14.0+cu126, CUDA available and both devices identified as compute6.1.
+CUDA ordinal0 is TITAN Xp and ordinal1 GTX1080, opposite the initial nvidia-smi
+ordering: use device identity, not assumed ordinal mapping. Default system Python
+has no torch, and neither uv nor nvcc is on its ordinary PATH. No installation
+is needed for the existing wheel's basic CUDA check.
+
+Before interpreting execution readiness, run one disposable64x64 matrix product
+and backward pass per GPU in FP32/FP64 using CPU-generated seed17313062, compare
+against CPU with atol/rtol1e-4 for FP32 and1e-10 for FP64, and synchronize to expose
+kernel errors. Two CPU threads,60-second process timeout, no training or persistent
+remote files. Freeze this entry, probe source and JSON observation under
+`artifacts/scc-charon-readiness-20260915-v1/`. This is basic kernel readiness,
+not full SCC numerical qualification, GPU stress testing or a security audit.
+Do not poll the separately submitted GMAN jobs or change Charon's setup.
+
+**Observed outcome at04:39:15 UTC15 September.** All four basic GPU checks
+pass. Both GPUs show maximum FP32 forward discrepancy9.54e-6 and gradient
+discrepancy5.96e-8 against CPU; FP64 discrepancies are zero for these tiny inputs.
+The previous NVML/driver mismatch is absent. This does not qualify the full SCC
+runner, sustained load, power/thermal behavior, all kernels or the user's hardening.
+No software installation, driver change, reboot, storage mounting or data migration.
+The existing Pascal environment is sufficient for the executed primitives.
+
+**Work allocation assessment.** Current80,517-coefficient FP32 prototypes are
+small enough to make both GPUs credible local candidates; actual speed is not
+inferred from these microchecks. Prefer independent small-model/control/seed jobs
+per GPU after the same SCC numerical and throughput benchmark, rather than assuming
+8+12GiB is a single20GiB accelerator. CPU cores can handle data preparation,
+independent result audits and theorem/implementation checks. Larger models and
+hardware-dependent modern GPU kernels remain candidates for H100. The current
+NVMe has ample room for small bounded runs despite absent SATA disks; old recorded
+HDD capacity must not be presented as currently available.
+
+Official packaging guidance confirms PyTorch2.14 CUDA12.6 wheels retain Pascal
+support; default CUDA13 wheels are unsuitable, and2.15 drops prebuilt Pascal
+support. Keep this compatible environment pinned instead of casually upgrading it:
+https://dev-discuss.pytorch.org/t/notice-cuda-12-6-wheels-will-no-longer-be-published-from-pytorch-2-15-drops-maxwell-pascal-volta/3432
+NVIDIA describes continued pre-Turing support on driver branch580 with older
+CUDA toolkits:
+https://developer.nvidia.com/blog/navigating-gpu-architecture-support-a-guide-for-nvidia-cuda-developers/
+No paid GMAN job was polled, canceled or resubmitted in this infrastructure check.
 
 ## Supporting-record index
 
