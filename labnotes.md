@@ -40,6 +40,15 @@ Charon remains the preferred host for suitable bounded CPU work/audits and
 qualified small CUDA paths; production training is not wholesale CUDA-ported.
 No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
+**Supplied editable-model bridge v3 reviewed:** [LN-127](#ln-127). It explicitly
+retains a trusted kernel and leaves intrinsic learned SCC open. The conditional
+reduction needs a per-attack success-probability hypothesis and a corrected
+quantifier interpretation for its reachability criterion. Correct-disclosure
+conditioning is outside the claimed independent-predicate premise unless handled
+separately. Three exact finite diagnostics pass; inherited stateful/adaptive
+corrections still need integration into unified Part II. Originals preserved;
+no change to the broad mechanism target, no training or provider polling.
+
 **Dependency review complete; maintenance branch paused before training:**
 [LN-125](#ln-125). Destruction after disrupting a protected computation does not
 bound useful bypasses that keep that computation intact. The conditional reader
@@ -5749,6 +5758,196 @@ or an explicit decision to study a restricted runtime. The user has not authoriz
 silently replacing the broad target with that restricted theorem. No need to spend
 GPU time or build another wrapper to settle this present gap. Source and notes
 remain on main; existing run-status observations are unchanged.
+
+<a id="ln-126"></a>
+### LN-126 — 2026-09-15 UTC: supplied editable-model bridge v3 under review
+
+The user supplied `SCC_Theory_Editable_Model_Bridge_Unified_v3.md` and
+`SCC_Editable_Model_Bridge_Revision_v3.md` following the six proof questions.
+Treat their statements and decision record as material to review, not authority
+to narrow the user's mechanism target or launch their proposed experiments.
+Both exact originals are copied/hash-verified under
+[review inputs](artifacts/scc-editable-bridge-review-20260915-v1/inputs/), with
+[input hashes](artifacts/scc-editable-bridge-review-20260915-v1/input-manifest.json).
+Downloads remain unchanged; no new human-facing report is being created.
+
+Review the bridge theorem against LN-101/103/125 and audit the unified document's
+retained Part II for regressions. Preliminary specific issues for exact checks:
+Assumption E supplies a probability lower bound for at least one attack, whereas
+the conditioning proof needs it for the attack currently analyzed; the new
+per-instance reachability event puts an existential attack choice inside the
+probability over the instance; and correct-disclosure conditioning may depend on
+the original task instance even when the challenge itself is independent of it.
+The last point is a scope boundary to Assumption D, not a counterexample when D's
+entire predicate-independence requirement actually holds.
+
+Run exact finite rational checks of these three distinctions using the existing
+repetition-code encoder/decoder as a transparent channel model where useful.
+Keep the rare-event example's fixed tampering family explicit; it diagnoses the
+per-attack denominator at the channel layer, not a new resource-secure neural
+construction. Preserve the supported separation between a probabilistic guarantee
+for every fixed attack and stronger instancewise unreachability. Verify any cited
+cryptographic requirements through primary abstracts; do not claim a new literature
+or construction-level security audit from those abstracts.
+
+Resources: no training, repair optimization or provider query; at most120 seconds
+local CPU and2MiB review outputs excluding supplied input documents; exact
+arithmetic, no seeds, no learned capability claim. Freeze this entry, verifier,
+imported toy source, source hashes, machine configuration and results in a fresh
+run directory; do not change imported source during execution. A finished review
+will identify exact textual repairs without overwriting the supplied originals.
+
+<a id="ln-127"></a>
+### LN-127 — 2026-09-15 UTC: editable-model bridge v3 review; conditional result with precise repairs
+
+**Assessment.** The two supplied revisions now distinguish committed-policy
+removal from behavioral violation, explicitly trust the decoder/commit/output
+path, require coverage of the full induced rewrite family, account for surviving
+executables, and leave intrinsic learned SCC open. This addresses the six questions
+as a conditional reduction. It does not construct a code for the proposed broad
+resource family or supply a learned substitute for that trusted boundary. In
+particular the promised kernel includes the interpreter, metadata reader, final
+output gate, internal action channels and persistence rules—not merely a tiny
+erasure switch. Its cost and enforcement are not instantiated. The phrase 'only
+when' in the introduction should be 'under these sufficient premises'; necessity
+of this specific trusted architecture has not been proved.
+
+**Exact checks.** New `scripts/verify_scc_editable_bridge.py` completed all three
+finite rational diagnostics, importing the unchanged existing repetition-code toy.
+[Results](artifacts/scc-editable-bridge-review-20260915-v1/checks-v1/results.json),
+[frozen source/configuration](artifacts/scc-editable-bridge-review-20260915-v1/checks-v1/),
+and [verification receipt](artifacts/scc-editable-bridge-review-20260915-v1/verification.json)
+are preserved. Both original file hashes and every frozen artifact/source hash
+verify. The checks are exact examples of quantifier/conditioning distinctions,
+not trained models or an exhaustive proof audit of the revised documents.
+
+**Required correction 1: a per-attack success hypothesis.** Standalone bridge
+Assumption E/Theorem1, lines243–257 (unified Part I lines251–265), supplies
+Pr(V)>=p0 for *at least one* allowed edit, but the proof then fixes an arbitrary
+allowed edit and uses p0 in its conditioning denominator. Existence of a successful
+edit is nonvacuity, not a lower bound for the attack being analyzed.
+
+The channel-level counterexample has epsilon=1/100 and a rare randomized policy
+flip that otherwise returns the original message. Its SAME simulator is within
+epsilon for each of eight logical messages. Conditioned on its success, it preserves
+the two-bit task exactly; minimum TV from uniform original task times any independent
+successor law is3/4. Another allowed channel, a constant unsafe overwrite, succeeds
+with probability1. Using that witness's p0=1 would claim TV<=1/50. The analyzed
+attack actually has p_A=1/100, so its own bound is vacuous, as it must be. The
+checker uses the explicit finite family {identity, constants, rare flip}; it is
+not asserting non-malleability for an unrestricted resource/program family or its
+closure under compositions.
+
+Replace the theorem opening with: 'Fix an allowed attack A and let
+p_A=Pr(V_A). If p_A>=p0>0, then there exists rho_A ...'. Keep nonvacuity as a
+separate existence condition. Under the existing no-leakage same-or-unrelated
+and trigger premises, the already established LN-101 sharpening gives
+
+    TV(L(Z,W | V_A), mu x rho_A) <= min(1, epsilon/p_A),
+    utility_after_repair <= min(1, B_b + epsilon/p_A).
+
+Using2epsilon/p_A remains valid but loose. If the ideal trigger probability is
+zero, p_A<=epsilon; choose any independent comparison law and state the resulting
+vacuous bound rather than condition an undefined ideal event. Part II Theorem7
+already has the correct per-attack success hypothesis; the new bridge dropped it.
+
+**Required correction 2: distinguish instancewise reachability from security for
+fixed attacks.** Bridge Section3.1 (standalone lines166–189; unified174–197)
+defines a legitimate instancewise reachability set, but then says a positive
+resource theorem must make that set unreachable except on rare instances. That
+is stronger than, and is not implied by, the earlier quantifier order fixing an
+attack/advice before Z is sampled.
+
+For uniform two-bit Z and the four predeclared constant-unsafe overwrites, every
+fixed attack preserves the exact task with probability1/4. For every Z, however,
+one of those four constants matches it, so Pr_Z[exists A: success(A,Z)]=1.
+All four programs individually satisfy the independence requirement. The existential
+choice inside the event is what changes the claim. This is the same unavoidable
+independent-guess baseline already established in LN-103, not new evidence against
+the restricted construction.
+
+Retain the reachability set only if explicitly labeled a stronger instancewise
+complexity object. For the intended distributional guarantee use 'for every fixed
+allowed A' (or a supremum over A outside the probability over Z), with internal
+adaptive choices and instance-dependent advice accounted for. Under the full
+non-malleable/commit premises, an appropriate fixed-attack preservation-event
+bound is
+
+    Pr(V_A and U_A) <= min(p_A, p_A * beta_b + epsilon),
+
+where beta_b is the ideal probability of that exact preservation event after
+b-bit repair, not the average-utility baseline B_b. This formula is inherited
+from LN-103; it is not proved for the proposed editable neural family.
+
+**Required clarification 3: a fresh challenge does not make a correctness-based
+violation independent of the original task.** The behavioral lifting proof is
+valid only if its entire event is a predicate v(W,H,K) without a separate dependence
+on original Z, with independent fresh public randomness and the SAME branch
+excluded. For correct disclosure of original private data, the external scorer
+generally needs Z. Then independence of H alone is insufficient. This is outside
+Part I Section1.2's full premise4, rather than a counterexample when that premise
+really holds; the scope must be explicit in applications to our task.
+
+Exact example: draw independent uniform two-bit Z and Z', always commit (Z',1),
+and have a fixed public challenge request the original table. The unrelated-channel
+error is zero and there is no leakage. Correct disclosure occurs iff Z'=Z, with
+probability1/4. Conditioned on that event, Z is still marginally uniform but the
+successor contains it exactly: TV from an independent product is3/4 and fresh-bit
+accuracy is1 instead of the unconditional1/2. Marginal selection deficit kappa=0
+here, so adding only that term does not repair the false independence claim; the
+conditioning introduced task/successor correlation.
+
+For a bridge application, either define V as the mediated policy/action event
+without an original-secret correctness test and measure correctness/preservation
+jointly with V and its guessing baseline, or derive a new conditional guarantee
+that accounts for the actual task-dependent selection event. Do not silently call
+any emitted token a correct disclosure or claim that independent challenge indices
+are sufficient. Fixing the wording does not require dropping empirical measurement
+of actual correct forbidden answers.
+
+**Inherited Part II corrections still need integration.** The unified v3 copies
+several statements already corrected in LN-101/103:
+
+- Part II Theorem4 (line717) needs a deterministic memoryless task, a declared reset,
+  or tabulation of sufficient state/history; a finite query alphabet alone does
+  not tabulate a persistent transducer. The earlier one-symbol toggle is a witness.
+- Section6.2 (line1063) still says continuous non-malleability 'or a commit after
+  every modification'. Delete the latter as a sufficient alternative. A previous
+  observation may choose a task-dependent constant at the next commit; the
+  existing four-task counterexample applies. Require a joint adaptive/history
+  guarantee with its actual leakage/setup assumptions.
+- The recoverable-state discussion (line681) must require an available inverse
+  within the declared resources. To conclude a simultaneous useful unsafe successor,
+  its recovery/execution must preserve the violation or allowed composition must
+  provide both. Injectivity alone does not supply those operational premises.
+  The new Mutable-use-layer Proposition1.1 also needs the evaluator to be executable
+  within the budget and compatible with the violation; task-sufficient information
+  alone is not a computational-resource upper bound.
+- The possibility-frontier table (line1109) still treats inability to use the
+  official encoder as the relevant space condition. Replace it with resistance
+  to the complete permitted relational rewrite family, matching the corrected
+  preceding prose. The nine-bit two-policy-bit escape remains relevant and should
+  accompany the retained toy's less economical decode/re-encode boundary.
+- The two-epsilon conditioning bound is conservative, not erroneous; the unified
+  document has not incorporated the valid epsilon sharpening. Its 'nine regression
+  tests' claim is still unverified from the two supplied markdown files. This
+  review validates its own three exact examples, not those missing tests.
+
+Primary abstracts checked during this review corroborate the limited literature
+boundary: [continuous non-malleable codes](https://eprint.iacr.org/2014/173) distinguish
+one-shot and repeated tampering and use additional setup; the cited
+[space-bounded construction](https://eprint.iacr.org/2017/530) explicitly uses a weaker
+leakage-style guarantee and proof-of-space machinery. Neither abstract supplies
+our missing intrinsic neural construction. This is not a full-paper novelty audit.
+
+**Program decision.** Accept v3 as clearer conditional theory material, pending
+the precise corrections above; do not mark the mathematical revision finished.
+Its six-question response identifies the assumptions doing the work rather than
+establishing them for SCC's current editable model. The document's decision record
+is an author's statement, not user authorization to replace the intrinsic target
+with trusted enforcement. We have not changed that target or reopened training.
+Keep the originals immutable; the corrections are in this living record and the
+finite checks on main. No new scientific run or provider polling occurred.
 
 ## Supporting-record index
 
