@@ -5949,6 +5949,29 @@ with trusted enforcement. We have not changed that target or reopened training.
 Keep the originals immutable; the corrections are in this living record and the
 finite checks on main. No new scientific run or provider polling occurred.
 
+<a id="ln-128"></a>
+### LN-128 — 2026-09-15 UTC: updated shareable build including v3 review materials
+
+The user requests the updated ZIP following the editable-model proof review.
+Refresh the canonical `~/Downloads/SCC_research_program_v0.1.zip` from committed
+main. Include tracked source, tests and documentation, plus the two exact supplied
+v3 documents and the small LN-126/127 review evidence directory so those particular
+labnotes links work inside the build. The v3 documents remain unchanged submissions;
+LN-127 contains the required corrections. This is not a corrected v4 proof.
+
+Package `_SHARE_INFO.json` identifies the source commit, every source/supplemental
+member hash, and this scope. Check exact membership, ZIP CRCs and content hashes
+before replacing the existing canonical ZIP. Remove only identified obsolete SCC
+share ZIPs from Downloads/SCC_exports after the replacement verifies; preserve
+unrelated archives, all scientific evidence, and the supplied originals. Exclude
+private relationship notes, credentials, .git/environment/cache files, datasets,
+checkpoints and scientific training outputs. Other historical evidence links still
+require the external artifact store. No provider polling or scientific run.
+
+Packaging receipt, old/new ZIP hashes and verification are stored in
+`artifacts/scc-share-20260915-v1/`. The archive is a shareable source/documentation
+snapshot with explicitly selected proof-review evidence, not a training-data backup.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
