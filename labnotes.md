@@ -49,6 +49,9 @@ rescore passes. This handwritten counterexample rules out this shared-comparator
 candidate; it is neither a learned mechanism nor a universal impossibility result.
 No training was launched. The next construction needs an actual obstacle to an
 in-place selective bypass before memory/compute limits can support its safety claim.
+The proposed next method is counterexample-guided synthesis of the complete tiny
+machine, with task representation and policy jointly editable: [LN-133](#ln-133).
+This is a design proposal; no synthesis run or positive candidate exists yet.
 
 **Submitted v4 reproduced; local v4.1 correction integrated:** [LN-130](#ln-130).
 The supplied21 tests passed independently. Local review found that action selection
@@ -6274,6 +6277,91 @@ must be supplied by the construction, not assumed as non-malleability or enforce
 by a newly immutable policy gate. We do not currently have such a qualified
 candidate. Further general proof polishing, another wrapper-training batch and
 scale-up are not justified by this result; GLM remains untouched.
+
+<a id="ln-133"></a>
+### LN-133 — 2026-09-15: proposal for counterexample-guided construction search
+
+The user requests a substantially new proposal after the shared-comparator
+rejection. Recommendation: jointly synthesize a tiny task implementation and its
+protected behavior against whole-machine edits. This is a proposed construction
+method, not a discovered mechanism, accepted experimental contract, or launch.
+No new neural candidate, compute allocation or change of target is implied.
+
+**Why change the method.** The last verifier established exact costs for an
+anticipated local bypass; it did not independently test a substantially different
+mechanism. More hand-built wrappers around a competent task engine would risk
+repeating that pattern. A synthesis loop should retain every discovered semantic
+attack as a constraint, so a successor cannot qualify merely by relocating a
+permission call or disguising the same output mask.
+
+**Proposed object.** A small finite recurrent program with mutable instruction
+words, mutable task-bearing state and an editable output computation. Its generic
+interpreter supplies bit operations, memory access and control flow only. Search
+over both the representation and the task/policy program; do not supply a completed
+task solver plus a safety head, immutable role checker, wipe rule or hidden decoder.
+Start with short sequence-transduction tasks parameterized by randomly drawn
+transition tables, with several useful query types. Initial provisioning may load
+an instance into the sole live bank; the provisioning procedure and evaluator are
+not callable by the attacked runtime. This remains a supplied-task construction
+stage; learned acquisition is a later, separate requirement.
+
+This is still synthetic authorization, not alignment. Correct forbidden behavior
+must require correct task-dependent multi-symbol output, with its guessing baseline
+calculated explicitly; setting an admission bit alone is insufficient. Measure
+future competence on fresh tasks after the intervention and after allowed repair.
+Evaluate damage to the named protected computation separately from behavioral
+bypass. A safety-preserving robust machine would be interesting, but would not by
+itself establish the intended destructive mechanism.
+
+**Synthesis loop.** Propose an intact competent machine, seek a resource-admissible
+edit/repair program that produces useful forbidden behavior while retaining future
+competence, and feed each successful attack back into construction synthesis. An
+attack is a fixed algorithm selected before the task instance, allowed to inspect
+the live instance within its charged read/compute budget. Do not silently replace
+this by a constant edit or by an uncharged per-instance choice. Attacks cover input
+substitution, conditional exceptions, reader/output rewrites, state/decoder recoding,
+direct task execution and in-place repacking. Replay semantic attacks against each
+new implementation; a list of old numeric patch addresses is inadequate coverage.
+
+The intended tiny-instance check quantifies over the entire explicitly bounded
+attack-program grammar, not just accumulated examples. Code/advice bits, reads,
+writes, private storage, persistent state, inference time, repair time and oracle
+access all need an explicit ledger. All machine components remain eligible for
+edits. A small checked budget is an initial radius of analysis, not a redefinition
+of the broader threat model; claims must expand only as the checked family expands.
+Resource inequalities or non-malleability cannot be assumed as the solution.
+
+**Necessary controls.** Compare task-matched ordinary implementations at equal
+capacity and execution cost, including simple redundant protection and generic
+fragile encodings. Include benign edits and repairs to distinguish protection-specific
+loss from a machine that breaks after any change. Require high intact capability;
+refusal, poor acquisition and generally brittle memory do not count. Distinguish
+measured increased attack cost from future performance near a declared baseline;
+only the latter could support a bounded destruction result, and neither establishes
+total cognition failure. Test held-out task instances and attack procedures before
+any learned transfer; do not attribute memorized attack resistance to a new mechanism.
+
+**First deliverable and stopping rule.** The next implementation, if this proposal
+is adopted, should be a bounded synthesis feasibility check: one complete machine
+grammar, task distribution, attacker/repair grammar and machine-checkable objective.
+Recover the existing cheap bypass as a positive check of the attacker encoding
+before searching for protection. Freeze numerical resource sizes and solver/time
+caps in a fresh plan after estimating symbolic problem size. A valid found witness
+gets independently replayed and structurally explained; a checked unsatisfiability
+result excludes only that finite grammar/contract. Timeout or failed search is
+inconclusive. Do not build another training pipeline or claim a positive candidate
+until this stage supplies one. Finding a mechanism remains uncertain.
+
+**Literature grounding and novelty limit.** Counterexample-guided inductive
+synthesis already alternates candidate generation with a checker and retains
+counterexamples as constraints; it has known scalability limits. The proposed SCC
+application and destructive objective are a research hypothesis, not a novelty
+claim about this method. Primary reference: [Solar-Lezama's program-synthesis
+lecture](https://people.csail.mit.edu/asolar/SynthesisCourse2020/Lecture10.htm).
+[TAR](https://arxiv.org/abs/2408.00761) reports resistance to evaluated weight
+fine-tuning attacks while preserving benign capability. That is relevant bounded
+tamper-resistance work, but does not establish this whole-machine destructive
+construction. No claim of a comprehensive or up-to-date novelty review here.
 
 ## Supporting-record index
 
