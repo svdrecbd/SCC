@@ -4,6 +4,11 @@
 supersedes the consultation questions in labnotes LN-048; older entries remain
 historical evidence. The exact packaged source commit is in `_SHARE_INFO.json`.
 
+**Consultation received and checked:** [LN-135–136](labnotes.md#ln-136) records the
+subsequent revision. The specified circuit class is closed under a bounded caller
+substitution; synthesis in that class will not proceed under the stated premises.
+The questions below preserve the briefing that elicited that consultation.
+
 ## The decision we need
 
 We want an adversarial review of the proposed next direction **before building

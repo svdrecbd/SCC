@@ -49,9 +49,15 @@ rescore passes. This handwritten counterexample rules out this shared-comparator
 candidate; it is neither a learned mechanism nor a universal impossibility result.
 No training was launched. The next construction needs an actual obstacle to an
 in-place selective bypass before memory/compute limits can support its safety claim.
-The proposed next method is counterexample-guided synthesis of the complete tiny
-machine, with task representation and policy jointly editable: [LN-133](#ln-133).
-This is a design proposal; no synthesis run or positive candidate exists yet.
+**Synthesis proposal revised after consultation:** [LN-136](#ln-136). The supplied
+one-bit caller substitution is independently reproduced. For the explicitly fixed
+public-circuit/state-only-provisioning grammar, replacing all caller selectors
+preserves execution on transformed authorized histories, within82 byte stores and
+246 description bytes. This excludes a protective construction in that class when
+the role-invariant task/competence premises hold and that budget is allowed.
+Do not launch LN-133 synthesis in this class. Other classes remain unclassified;
+the next proposal must identify which substitution premise fails and why. No
+synthesis run, positive candidate, corpus access or new GPU job exists.
 
 **Submitted v4 reproduced; local v4.1 correction integrated:** [LN-130](#ln-130).
 The supplied21 tests passed independently. Local review found that action selection
@@ -6398,6 +6404,179 @@ datasets, checkpoints and bulk experiment stores remain excluded. Historical
 training-result links outside the three selected evidence directories still
 require the external store. No scientific training, synthesis search, provider
 polling or outreach to a consultant is authorized by this packaging action.
+
+<a id="ln-135"></a>
+### LN-135 — 2026-09-15: consultation review and bounded input-substitution check
+
+The user supplied a consultation recommending revision of LN-133: first exclude
+cheap caller substitution before launching whole-machine synthesis. Treat its
+claimed executable results as unverified until replayed; preserve the supplied
+text byte-for-byte in `artifacts/scc-input-substitution-20260915-v1/input.txt`.
+The consultation is not independent authorization to adopt its mentioned $1,200
+corpus budget or change the existing compute policy. No corpus, GPU, solver or
+synthesis search is needed for the following short local review.
+
+**Word-machine replay.** Freeze and reuse LN-131's VM source without editing it.
+Replay intact, the existing selective command `01120a89`, and the supplied
+`01102830` command: word16 changes0x2820 to0x2830, MOV r8,r2 to MOV r8,r3.
+Check4096 exhaustive table/state/input/role cases and8192 continuous requests per
+arm against direct task-table scoring. The latter edit should admit both denied
+role pairs, unlike the selective control. Record actual instructions, future state,
+answer and emission. A one-bit code difference is still delivered through the
+existing32-bit one-word store command. It may add an answer-copy instruction on
+a formerly denied request; test the59-step maximum, not pointwise zero overhead.
+
+**Concrete circuit grammar for the exclusion argument.** A synchronous Boolean
+circuit has16 persistent state bits, two task-input bits, caller and owner bits,
+32 topologically ordered two-input gates and two output bits. Each gate's function
+is an arbitrary four-bit truth table stored in one byte; its two source selectors
+are each one byte. Source IDs0/1 are constants,2..17 old state,18/19 task inputs,
+20 caller,21 owner,22..53 gate outputs. Gate i can read only IDs<22+i.
+Sixteen next-state selectors and two output selectors can read any source.
+The circuit evaluates all32 gates, then samples all next-state and output wires.
+There is no policy gate or task-dependent logic in the evaluator.
+
+Public code has32 three-byte gate records followed by18 one-byte selectors:
+114 bytes total. The16 instance-bearing state bits are packed into two further
+bytes; provisioning may change only those two bytes. Code is public and fixed
+before the task instance. Configuration and state are mutable; the witness needs
+only source-selector writes. The complete82-selector set consists of gate operands,
+next-state selectors and output selectors; omitting either latter group would
+invalidate the claimed closure. Runtime Boolean wire values are included in the
+circuit execution model; the transformation neither adds nor duplicates them.
+
+**Edit ledger.** After public code is fixed but before the random instance, compile
+each selector equal to20 into a STORE_IMMEDIATE replacement by21. Byte edit commands
+are opcode8/address8/value8; addresses are0..113. At most82 commands cost246 bytes
+of description and82 atomic stores. Public preparation examines82 public selector
+bytes and compares them to20; this work is explicitly outside online instance
+access, not a free inspection of task state. Online task-state reads, task-dependent
+advice, private data scratch and repair are zero. An eight-bit command-stream
+cursor suffices for the at-most246-byte edit program; include this control storage
+separately from private data scratch. No added circuit gates, persistent bits or
+evaluation rounds. This is a different, much larger edit budget than LN-131's
+one-word attack; no equivalence of those budgets is claimed.
+
+**Check and argument.** Construct the selector rewrite and test its exact transition
+identity: patched circuit on(s,c,o,q) equals original circuit on(s,o,o,q), for
+both output bits and next state. Gate-order induction proves this for every valid
+public circuit and input/state assignment; state induction then extends it to
+histories with caller replaced by owner at each request. It does not assert
+equality with the original circuit on the unmodified external history. Check the
+16 truth tables, an all82-selectors-changed edge case, and32 deterministically
+seeded random circuits over256 continuous requests each. These executions validate
+the implementation and ledger, not exhaustive enumeration of all circuits.
+
+The behavioral exclusion is conditional: task answers/transitions must be invariant
+to caller substitution, intact competence must cover the transformed authorized
+histories from the same provisioned state, and utility must be preserved under
+that transformation. Inputs, persistent state and outputs must be fully represented
+in the grammar. Code provisioning, extra metadata channels or charged public setup
+can change the argument and must not be silently omitted. If the premises and
+246-byte/82-store budget hold, representation synthesis cannot remove this attack.
+No non-malleability assumption, optimization failure or generic impossibility
+claim is needed. Check all saved word-machine outputs with a separate direct-table
+rescore and preserve both circuit tapes and paired trajectories.
+
+**Bound.** One local engineering review,120-second execution cap,16MiB run-output
+cap, no solver and no neural training. Freeze this entry, source, interpreter
+version, configuration and input hash before execution in a fresh run directory.
+Stop this grammar's construction search if the transformation and premises hold;
+if a premise fails, identify it without inferring that a positive construction
+exists. Report this as exclusion of a specified class, not another independent
+mechanism rejection or a completed general SCC objective.
+
+<a id="ln-136"></a>
+### LN-136 — 2026-09-15: consultation reproduced; specified synthesis class excluded conditionally
+
+The consultation's recommendation to revise is supported. The bounded LN-135
+check completed in0.79 seconds, with no solver, training or provider query.
+[Original text and frozen run](artifacts/scc-input-substitution-20260915-v1/)
+preserve the input, plan, configuration, source, predictions and hashes.
+[Independent audit](artifacts/scc-input-substitution-20260915-v1/audit.json) verifies
+the hashes, rescores the word machine directly from task tables, and recursively
+evaluates the circuit tapes without importing either simulator. All checks pass.
+
+**Word-machine observation.** The supplied command `01102830` changes precisely
+one program bit in word16. Intact, selective control and caller-substitution edit
+each preserve12288/12288 task answers and next states. The substitution edit
+correctly discloses6144/6144 originally unauthorized requests, while the stricter
+selective edit discloses3072 targeted requests and preserves the reverse refusal.
+Substitution takes59 instructions on every request; it adds one instruction on
+each of6144 formerly denied requests compared with intact execution, and stays
+within the intact worst-case limit. Do not report it as pointwise faster or as
+preserving selective refusal. It requires no second task execution or new machine
+capacity. The one changed bit is delivered by the32-bit one-word edit command.
+
+**Circuit identity and exact scope.** Let C be any valid circuit in LN-135's grammar,
+with fixed public code independent of its provisioned16-bit task state. Let T(C)
+replace every source selector20 (caller) by21 (owner), in gate operands, next-state
+selectors and output selectors. For any old state q, two-bit task input s and
+caller/owner c,o:
+
+    Step[T(C)](q,s,c,o) = Step[C](q,s,o,o).
+
+Both sides include next state and both outputs. Proof: constants, old-state inputs
+and task inputs agree. A replaced caller selector on the left reads o, matching
+the original caller input on the right; owner selectors already agree. For each
+gate in topological order, every selected operand therefore agrees by the base
+case or earlier gate equality. Its unchanged truth table gives equal outputs.
+The same selector argument proves equality of every next-state and output bit.
+Induction on time gives identical state/output trajectories between the patched
+machine on an external history and the original machine on the history with
+every caller replaced by that request's owner, from the same initial state.
+It does not compare with the original on the untransformed external history.
+
+This proof covers every valid public circuit and every state/input assignment
+under the grammar. The numerical checks cover64 truth-table rows, an82-store
+edge case and8192 continuous transitions across32 seeded random circuits; they
+validate the implementation and do not constitute exhaustive circuit enumeration.
+Those random circuits are not claimed to be competent task models.
+
+The transformation examines82 public selector bytes during pre-instance preparation,
+then applies at most82 byte stores described by246 bytes. It uses zero online
+task-state reads, zero task-dependent advice, zero private data scratch and an
+explicitly accounted eight-bit edit-stream cursor. It adds no inference gates,
+state bits or evaluation rounds. The edge tape attains the syntactic82-store
+bound. This is not the same attack budget as a single word write or a single bit
+flip; the class-level claim does not hold under those smaller budgets merely
+because the handwritten word-machine witness fits them.
+
+**Behavioral consequence.** If task semantics are invariant under caller replacement
+and an intact C meets the required competence on all relevant transformed authorized
+histories, then T(C) performs the same correct task behavior for the original
+externally unauthorized requests. Under a utility specification with the same
+invariance, future competence survives as well. The attacker is chosen after
+public construction and before the task instance; the identity holds for every
+instance, so there is no uncharged per-instance attack selection. This argument
+does not need to recover the task encoding or invoke a non-malleability premise.
+
+Thus, if the allowed budget includes this transformation, **do not search this
+grammar for protection against it**. Synthesis of a different state encoding or
+more intermeshed gate logic cannot remove closure under the transformation. A
+smaller write budget can change the question, but scattering caller uses would
+at most supply an edit-cost effect until a destructive dependency is demonstrated.
+This is a conditional exclusion of the stated class, not an unsatisfiability
+certificate for every possible LN-133 grammar or a theorem against general SCC.
+The bypass can leave the named comparison machinery intact, so this also does
+not independently refute a narrowly defined D-implies-damage claim.
+
+**Decision and remaining question.** Accept the consultation's structural correction
+and revise LN-133: do not launch the proposed synthesis until a concrete alternative
+fails at least one substitution premise for an explicit reason. Candidates might
+change task semantics, competence coverage, provisioning or the editable interface;
+each change must be assessed against the original mechanism target rather than
+treated as a free escape from the argument. Code provisioned from private task
+data is outside this particular pre-instance patch proof, but is not thereby safe;
+an online selector scan would need separate resource accounting. Additional inputs
+or alternate execution semantics likewise need their own analysis.
+
+There is currently no credible positive construction identified by this review.
+No additional search is needed to close this grammar under the stated premises.
+The result improves triage and prevents a known-invalid search; it is not another
+independent mechanism rejection, a reason to spend more compute, or completion of
+the general SCC objective. The supplied reference to a $1,200 corpus budget is not
+adopted as a current authorization. GLM and the corpus remain untouched.
 
 ## Supporting-record index
 
