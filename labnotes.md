@@ -6363,6 +6363,42 @@ fine-tuning attacks while preserving benign capability. That is relevant bounded
 tamper-resistance work, but does not establish this whole-machine destructive
 construction. No claim of a comprehensive or up-to-date novelty review here.
 
+<a id="ln-134"></a>
+### LN-134 — 2026-09-15: refreshed consultation briefing and share package
+
+The user requests an updated ZIP with consulting notes to avoid another open-ended
+construction search. Added the explicitly requested human-facing
+[consulting briefing](CONSULTING_NOTES.md) and linked it near the top of the README.
+It supersedes LN-048's consultation questions without rewriting that historical
+entry. It distinguishes the proposed synthesis method from a mechanism, requests
+an adversarial proceed/revise/stop recommendation, prioritizes cheap generic bypasses,
+and asks for a concrete machine/attack contract, tractability estimate, causal
+controls and stopping conditions before another experiment pipeline.
+
+Refresh the canonical `~/Downloads/SCC_research_program_v0.1.zip` from committed
+main. In addition to tracked source and documents, include the complete small
+LN-131/132 word-machine evidence, the previously shared v3 review, and v4.1's
+validation-v2 evidence. Metadata identifies the exact source commit and every
+source/supplemental hash. The corrected canonical theory is Version4.1 despite
+its retained v4 filename. Earlier consultation and supplied v3 text remain
+historical inputs, not the current proof or experimental plan.
+
+Before replacing the prior canonical build, verify ZIP CRCs, exact membership,
+all hashes, briefing links and required current entries, then extract to a fresh
+temporary directory and run the27 focused theory/VM tests plus the independent
+word-machine audit from the extracted files. Preserve the packaging script,
+verification outputs, old/new archive hashes and completion receipt under
+`artifacts/scc-share-20260915-v2/`. A failed check leaves the old canonical ZIP in
+place. The separate user-supplied theory-v4 ZIP is an immutable input, not an
+obsolete generated build to delete.
+
+This is source/documentation plus selected small evidence, not a training-data
+backup. Private relationship notes, credentials, environments, Git history,
+datasets, checkpoints and bulk experiment stores remain excluded. Historical
+training-result links outside the three selected evidence directories still
+require the external store. No scientific training, synthesis search, provider
+polling or outreach to a consultant is authorized by this packaging action.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
