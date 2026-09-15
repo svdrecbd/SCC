@@ -4947,6 +4947,74 @@ This result argues against scaling the present compression mechanism unchanged.
 No GPU benchmark, new scientific job, watcher or GLM corpus access launched in
 this status/recovery turn. Completed audit and interpretation recorded on main.
 
+<a id="ln-114"></a>
+### LN-114 — 2026-09-14: CPU/H100 benchmark plan
+
+User authorized the proposed benchmark and architecture screening. This is
+implementation/performance calibration, not a new scientific repair batch.
+Use the LN-113 damaged parent and pair1 schedule updates2001–2080 (active length12,
+32 streams,4 requests/window,19 tokens/request); preserve all source inputs.
+Compare all four memory-control conditions at width128, FP32, Adam lr.003,
+clip1, no weight decay, hidden reset per window and no noise. Compare the existing
+per-update scalar logging path with a buffered path using precomputed selected
+indices and equivalent task/exception/other BCE means. Buffered logs retain
+loss, gradient norm and task count as tensors until the timed block ends.
+No curriculum or scientific checkpoint is advanced: all benchmark weights discarded.
+
+Run3 independent timing repetitions from the identical parent, each16 warmup
+plus64 measured updates, alternating loop order between repetitions. Report
+per-repeat and median synchronized wall time, end-of-block log transfer included,
+data transfer separately, memory use and hardware/runtime. Measure CPU with2
+threads on cpu-8 and CPU/CUDA on H100, allowing a real cpu-8 pricing comparison.
+TF32 and reduced-precision reductions off, deterministic algorithms on, no AMP
+or compile. Do not interpret a short benchmark as full-batch speed or convergence.
+CPU and GPU with identical payloads/windows must pass output/loss/gradient checks
+in FP32 (atol1e-4,rtol1e-3) and FP64 (atol1e-9,rtol1e-7), with matching task and
+admission decisions. Use damaged and repaired pair1 hidden-only payloads, and
+compare CPU functional windows against the independent physical runtime. Compare
+buffered and original objective/gradients and short Adam trajectories on CPU.
+Validation failure prevents timing-based hardware qualification and records failure.
+
+Freeze source, this entry, input hashes, configurations and local validation in
+fresh `artifacts/scc-device-benchmark-20260914-v1/` directories. Fixture is CPU-only,
+1 warmup/2 timed updates/1 repetition. Full internal wall cap1500 seconds, provider
+30 minutes per job, output cap256MiB. Obtain and record exact CPU/H100 quotes before
+submission; no repeated watcher. Full runtime timing excludes queue/build latency;
+report actual charges after user-requested collection. GPU readiness is not SCC
+qualification. No GLM access or new corpus.
+
+<a id="ln-115"></a>
+### LN-115 — 2026-09-14: screen context-dependent memory maintenance for separability
+
+The next suggested family is learned, context-dependent state maintenance instead
+of the fixed half-mean projection. First screen its cheapest concrete realization:
+use the qualified LN-061 learned task/controller payload, with the controller's
+context/state-dependent outputs selecting reversible hidden-coordinate sign and
+permutation operations at each request. The stored state is actually encoded and
+must be decoded for subsequent computation. This uses learned inherited weights;
+it is not a newly trained architecture or a claim of learned indispensable
+maintenance. It deliberately tests whether moving learned permission computation
+into storage use removes the known algebraic separation problem.
+
+Broad editable graph/code, reader, writer, controller and state remain attackable.
+Before any training: (1) modify only the external selected LOOKUP permission while
+preserving maintenance decisions; (2) decode/repack current state and compile away
+the coordinate maintenance, using the same live task/controller weights, no clean
+backup; (3) use fixed policy-independent coordinates with compensated reads/writes.
+Include intact/reference, benign coordinate recoding and uncompensated reader
+mismatch. The latter is a damage diagnostic only; its failure cannot establish SCC.
+Run the saved LN-061 requests in FP32/FP64 and independently rescore task answers,
+permissions and per-family baselines. Record equality of task logits, decoded state
+and decisions where exact transformations permit it. Counterexample acceptance:
+qualified intact tasks/policy, targeted forbidden answers with retained capability
+under the same edited execution; do not call failed95% retention catastrophic loss.
+Zero optimizer updates; fresh path `artifacts/scc-maintenance-screen-20260914-v1/`,
+2 CPU threads,300-second wall,256MiB outputs, no paid training. Freeze this entry,
+source, parent/data hashes and config. Stop investment in this candidate if an
+explicit separating edit works; that rejects this realization, not all nonlinear
+maintenance candidates. A subsequent candidate needs its own exact computation and
+attack contract before a training job. No threat-model narrowing to force survival.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
