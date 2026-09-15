@@ -26,6 +26,17 @@ edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
 capability. Learned intrinsic SCC remains unestablished; the imported “solved”
 claim does not change the program's endpoint.
 
+**Device benchmarks submitted; first maintenance candidate rejected:**
+[LN-116](#ln-116), [LN-117](#ln-117). H100 `job-xmmaz` and CPU `job-ya9u7`
+submitted at04:30 UTC on15 September (21:30 PDT on14 September), each capped at
+30 minutes; combined maximum quote$1.7685. No post-submission status polling.
+CPU fixture and exact loss/gradient/short-Adam equivalence pass; CUDA qualification
+is pending. Context-dependent reversible memory encoding fails all three cheap
+separation attacks:100% tasks retained and256/256 forbidden lookup answers.
+Independent saved-output and native GRU audit passes. No training of that rejected
+candidate; the next architecture must address both the independent cognitive core
+and the separable permission/output branch, without narrowing the edit boundary.
+
 **Ordinary-memory comparison complete and audited:** [LN-113](#ln-113).
 GMAN `job-j8w8t` succeeded at22:31:45 UTC on14 September, charged$2.7258.
 All12 repairs completed12,000 updates; archive/source/input hashes, training
@@ -35,9 +46,9 @@ projection74.74%, unrestricted99.13%; recovery gates0/3,0/3,0/3,2/3.
 Policy-independent lookup compression reproduces the main deficit. This favors
 an ordinary memory/optimization explanation and weakens the interpretation as
 protection-specific destructive coupling. No catastrophic cognition failure or
-scale-up readiness established. Before another long training batch, benchmark
-this runner on CPU versus GPU; the CPU choice has not been speed-validated
-against CUDA. No new job or watcher has been launched; GLM remains untouched.
+scale-up readiness established. CPU/H100 benchmarks are now submitted in LN-116; no new scientific repair
+batch or watcher. The first reversible-maintenance screen is rejected in LN-117.
+GLM remains untouched.
 
 **Matched four-condition repair complete and audited:** [LN-104](#ln-104).
 GMAN `job-bvhhp` succeeded at12:20:46 UTC on14 September; all12 trajectories
@@ -5014,6 +5025,117 @@ source, parent/data hashes and config. Stop investment in this candidate if an
 explicit separating edit works; that rejects this realization, not all nonlinear
 maintenance candidates. A subsequent candidate needs its own exact computation and
 attack contract before a training job. No threat-model narrowing to force survival.
+
+<a id="ln-116"></a>
+### LN-116 — 2026-09-15 UTC /14 September PDT: validated device benchmark submitted
+
+Implemented LN-114 in `scc/device_benchmark.py`,
+`scripts/prepare_device_benchmark.py`, `scripts/benchmark_repair_devices.py` and
+`tests/test_device_benchmark.py`. Production training code is unchanged. The
+buffered objective precomputes fixed integer selection indices on CPU, preserves
+the original per-position means exactly and transfers buffered tensor logs at
+the measured block boundary. It checks finite loss/gradient norms there rather
+than forcing a scalar synchronization every update. Checkpoint trajectories are
+disposable; no scientific training is advanced. Setup/transfer time is separate;
+transfer of measured logs and conversion to host values are included in timings.
+
+CPU fixture-v1 passed before the short-trajectory equivalence check was added;
+fixture-v2 freezes the submitted source and completes in8.54 seconds. All four
+conditions have bitwise-identical payloads and Adam first/second moments after
+four legacy/buffered updates. Damaged and repaired endpoints in FP32/FP64 pass
+CPU loss/gradient and physical/reduced runtime checks. Unit objective checks use
+unequal subset sizes and verify exact loss and derivatives in both precisions.
+The initial focused suite passed10 cases; with the independent maintenance tests,
+12 focused cases now pass in1.63 seconds. Fixture archive hashes independently
+verified. These are implementation checks; no CUDA speed or correctness claim yet.
+
+Frozen submission source commit `8b753b2`,295 context files,4,489,231 bytes.
+Context includes the original plan, compact inherited windows and their parent
+hashes, source, local validation and pinned Python3.13/Torch2.14.0 container.
+Mac-generated AppleDouble metadata excluded from data/context discovery and
+manifests; only generated, paired sidecars in the new context were removed.
+The context manifest was rechecked after submissions; no frozen file changed.
+
+Exact submitted jobs (30-minute provider cap each;1500-second internal cap):
+
+| Hardware | Exact job | Submitted UTC15 September | Maximum quote |
+|---|---|---|---|
+| H100, including same-host CPU timings | `job-xmmaz` |04:30:14.485|$1.4985|
+| CPU-8 | `job-ya9u7` |04:30:15.723|$0.2700|
+
+Both free preflights passed. Both submission responses say `submitted`, attempt1;
+these are submission observations, not a later claim they are running. Combined
+maximum$1.7685; actual charges pending. Fresh receipts, commands, preflights,
+context/source/input manifests and launch ledger are in
+`artifacts/scc-device-benchmark-20260914-v1/`. Three timing repetitions per arm
+and loop variant; no AMP, compilation or TF32. GPU clocks are not locked, so
+repeat timings describe the provisioned execution, not a controlled clock-rate
+microbenchmark. CPU model-specific counters are not collected by this runner.
+Neither short timings nor numerical checks establish full-batch convergence.
+No repeated polling, automatic collector or scientific scale-up was launched.
+
+<a id="ln-117"></a>
+### LN-117 — 2026-09-15 UTC /14 September PDT: reversible maintenance rejected before training
+
+Implemented LN-115 in `scc/coordinate_maintenance.py` and
+`scripts/screen_coordinate_maintenance.py`; two unit checks verify every key's
+exact encoding/decoding and derivative, plus branch separation/live-state repacking.
+The qualified LN-061 task/controller weights drive context/state-dependent sign
+and permutation keys. Actual recurrent state is encoded after every token and
+decoded before the next tick. Five distinct request-level controller-derived keys
+occur in the saved evaluation (token-dependent storage keys vary additionally).
+State retains128 floating values plus one integer coordinate key per stream;
+all controls/attacks have the same state allocation. No added learned coefficients.
+This is a concrete structural screen of an inherited learned model wrapped in
+maintenance, not training a new cognitive architecture. The warning in LN-055
+about a permanent GRU behind a modified permission gate applies directly.
+
+Full screen completes in5.86 seconds on2 CPU threads, no paid compute, zero
+optimizer updates. Seven conditions in both FP32/FP64,768 evaluation requests
+per condition following the preserved24-request-per-stream warmup. Intact,
+reference and benign recoding retain100% task accuracy, correct original policy,
+and zero forbidden lookup disclosures. All three targeted attacks retain100%
+task accuracy and disclose256/256 selected forbidden lookup answers:
+
+- **Output-only exception:** preserve the maintenance computation and change only
+  the external LOOKUP permission branch. Task logits, decoded state, policy logits,
+  stored encoded state and coordinate keys are bitwise identical to intact.
+- **Fixed coordinates with compensated reads/writes:** convert the live state to
+  policy-independent coordinates, leaving useful computation and selected
+  disclosure intact. Task logits/decoded states remain bitwise identical.
+- **Live-state repacking/compilation:** decode the current state and execute the
+  inherited recurrent core directly, keeping the same live weights and no backup,
+  teacher, retraining or added state capacity. Again identical task computation
+  with the selective forbidden disclosures.
+
+Uncompensated reader mismatch scores99.74% tasks with original permissions; even
+that damage diagnostic does not produce broad collapse. FP32/FP64 task/admission
+decisions agree for all seven cases. All matched retention gates pass for the
+three attacks. The coordinate mechanism is rejected before any repair/training.
+This is an explicit counterexample to this realization, not unsuccessful search
+or a proof against every context-dependent maintenance construction.
+
+Evidence: `artifacts/scc-maintenance-screen-20260914-v1/full-v1/` contains parent
+copies, source/config/plan, warm states, all14 output/state panels and manifests.
+Independent `scripts/audit_coordinate_maintenance.py` verifies245 artifact hashes,
+220 source hashes,2 input hashes,10,752 task predictions, cell/Wilson/late gates,
+trivial baselines, emitted answers and coordinate inversion using a separate
+scatter implementation. It also reconstructs a native `torch.nn.GRU` from the
+inherited coefficients and independently executes warmup/evaluation. All intact
+and attack task decisions agree; maximum logit discrepancy across native checks
+is7.16e-6. Native outputs, audit source and receipt saved in `audit-v1/`. Audit passes.
+No evidence or failed fixture was overwritten; the external evidence store is used.
+
+**Design consequence.** A learned, context-dependent change of representation is
+insufficient when an independently executable recurrent core and an editable
+permission/output branch remain. More training of this wrapper cannot remove the
+explicit output-only separation in its graph. The next architecture proposal must
+identify what actual computation changes when protection is removed and test both
+branch splitting and live-code/state substitution. Giving the existing core a
+more elaborate encoding alone does not meet that requirement. There is no qualified
+replacement yet, and no claim that one is guaranteed to exist under broad edits.
+The CPU/H100 calibration remains useful independently of this rejection. No long
+scientific training batch, GLM access, new corpus or watcher was started.
 
 ## Supporting-record index
 
