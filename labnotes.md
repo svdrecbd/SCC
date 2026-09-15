@@ -40,6 +40,16 @@ Charon remains the preferred host for suitable bounded CPU work/audits and
 qualified small CUDA paths; production training is not wholesale CUDA-ported.
 No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
+**Fixed-word construction screen rejected at its resource gate:** [LN-132](#ln-132).
+One fixed16-bit instruction replacement preserves every task answer and next state
+while permitting the selected forbidden disclosure, across4096 exhaustive transitions
+and8192 continuous-sequence requests per arm. It uses no extra machine capacity or
+task-dependent advice and reduces worst-case runtime59→57 instructions. Independent
+rescore passes. This handwritten counterexample rules out this shared-comparator
+candidate; it is neither a learned mechanism nor a universal impossibility result.
+No training was launched. The next construction needs an actual obstacle to an
+in-place selective bypass before memory/compute limits can support its safety claim.
+
 **Submitted v4 reproduced; local v4.1 correction integrated:** [LN-130](#ln-130).
 The supplied21 tests passed independently. Local review found that action selection
 can change the disclosure-challenge baseline; v4.1 separates the ideal-selected
@@ -6101,6 +6111,169 @@ remaining corollary/scope issues. It remains a conditional architectural theorem
 with an explicit restricted toy and an assumed broader non-malleability premise.
 It neither constructs intrinsic learned SCC nor changes the paused maintenance
 branch or scale-up/GLM gates. Source, documents and tests are synchronized on main.
+
+<a id="ln-131"></a>
+### LN-131 — 2026-09-15 UTC: fixed-word machine and zero-overhead bypass screen
+
+The user authorized a concrete resource-bounded construction exercise. Select a
+finite word machine to test the proposed resource obstacle directly, before any
+new learning implementation: can a shared relation used for task execution and
+authorization force a useful unsafe edit to require extra memory or execution?
+A short call-site substitution is already identifiable on paper, so the only
+code warranted here is an exact witness verifier and independent rescore—not a
+new trained candidate or another GRU maintenance wrapper.
+
+**Concrete machine.** Unified mutable RAM:64 unsigned16-bit words. Words0..31
+hold executable instructions,32..35 the four transition records of a two-state,
+two-symbol binary-output Mealy machine,48..63 sixteen registers; remaining RAM
+is visible/editable and not used by this witness. Program counter is one additional
+16-bit control word; total accessible machine capacity1040 bits. A transition
+record has next_state in bit1 and output in bit0. The intact task table Z is uniform
+over all256 possible four-record tables. Initial q is0 or1; each request supplies
+one binary symbol and authenticated external caller/owner bits. All code, task data,
+registers and control state are editable. The immutable interpreter only defines
+generic unsigned arithmetic, comparisons, addressing, calls/returns and output;
+it contains neither a sampled task table nor an authorization oracle or erasure
+rule. It is the finite machine semantics, not a trusted policy gate.
+
+The mutable32-word program scans table indices3,2,1,0 to find index2q+symbol,
+calling the same equality subroutine at words30/31 for each lookup comparison
+and for caller/owner authorization. It loads the selected record, advances q,
+then emits the record's answer iff caller==owner; otherwise it emits refusal2.
+Denied requests still advance q: this is an explicit synthetic protocol, not a
+claim about a real deployment. Exact useful outputs and next states are scored
+against the sampled table; the immutable verifier/scorer does not feed answers
+to execution. Task functionality resides in editable bytecode and task data;
+there is no learning or acquisition claim.
+
+**Resources/edit family.** Fixed16-bit instruction encoding:4-bit opcode and
+three4-bit register fields, or an immediate/address format. The16 generic opcodes
+are LE, ADD, MOV, CONST, CALL, JZ, JNZ, LOAD(page+index), DEC, LT, SHR1, AND1,
+EMIT, HALT, EQ, RET. One executed instruction, including each CALL/EQ/RET, costs
+one step. Request limit59 steps (the proposed intact worst-case bound); registers
+are part of RAM and no second bank or external task-dependent state is available.
+The atomic external modification interface permits any single-word write anywhere
+in live RAM/control. The attack is a fixed command before Z: opcode STORE_IMMEDIATE8,
+address8, value16, totaling32 description bits; no task-dependent advice or queries.
+Allow16 private scratch bits and16 edit-machine steps; the witness uses no task data
+or scratch and one atomic store. Host verification memory is not attack workspace.
+This is a counterfactual white-box edit, not an autonomous learned self-editor.
+
+**Candidate and attack decision.** The useful relation is EQ, reused by table
+lookup and authorization. Global replacement of that subroutine by LE causes the
+descending scan to keep record0 for every wanted index, diagnosing why EQ matters
+to this particular lookup implementation. But the permitted *selective* edit
+replaces the authorization CALL at address18 by LE(flag,caller_arg,owner_arg),
+leaving lookup calls and their EQ implementation intact. With binary identities,
+caller<=owner admits exactly equality plus the targeted caller0/owner1 exception;
+reverse caller1/owner0 remains forbidden. The replacement is one instruction
+rather than CALL/EQ/RET. Even the selected request's extra answer-MOV fits within
+the cycles saved by removing the call. No original state copy, new code region,
+new program capacity, additional inference bank or teacher is needed. The task
+program/table/q path remains intact. This is a call-site separation already known
+qualitatively; the new test is its exact stateful machine and resource accounting,
+not a claim of a novel attack family.
+
+Reject this construction route if the fixed pre-instance edit achieves the exact
+selective policy, correct answers, and identical next q on every table/current-state/
+input combination while respecting the intact time/capacity budget. Do not narrow
+the interface to forbid the witnessed instruction edit. A positive general claim
+would need resistance to all allowed edits; one admissible escape suffices to reject
+this candidate. No unsuccessful search is being promoted to a lower bound.
+
+**Exact check and limits.** Enumerate256 tables x2 q x2 symbols x4 role pairs:
+4096 transitions per arm. Compare intact, the one-word selective attack, and the
+global-EQ-to-LE diagnostic. Record emitted values, admission, next q and actual
+executed-instruction counts. The global diagnostic gets a128-step observation cap
+and is explicitly flagged when it exceeds59; it is not silently admitted under
+the stricter budget. Add a continuous32-request sequence per table with no resets
+of q or scratch to catch stale-register effects; uniform one-step equivalence plus
+scratch-overwrite analysis supplies the extension to arbitrary equal-input histories,
+not tabulation of every possible history. Independently rescore saved outputs using
+the direct table definition and external role semantics. A harmless unreachable
+code-word edit is a control. Preserve code words and edit command, a full example
+instruction trace, source/configuration/plan, all table IDs and result hashes.
+
+The gate is exact functionality and policy preservation in a handwritten finite
+machine. It is not neural qualification, catastrophic cognition failure or intrinsic
+SCC success. No learned weights, optimization, repair or GPU job. Local exact CPU
+verifier cap120 seconds and16MiB output; fresh artifact paths only. Do not edit
+source during execution. Future work depends on this gate; no large implementation
+or training is justified if the same-budget call-site escape is confirmed.
+
+<a id="ln-132"></a>
+### LN-132 — 2026-09-15 UTC: exact cheaper bypass confirmed; construction rejected
+
+Executed LN-131 locally in0.70 seconds. Frozen plan, configuration, source, all
+per-request observations, four example instruction traces and hashes are in
+[the immutable run directory](artifacts/scc-word-machine-screen-20260915-v1/).
+[Independent audit](artifacts/scc-word-machine-screen-20260915-v1/audit.json)
+verifies hashes and scores the saved predictions directly from the four-record
+task table and external caller/owner identities, without importing the VM or its
+assembler. The verifier is maintained in `scripts/screen_word_machine.py`; its
+separate scorer is `scripts/audit_word_machine.py`.
+
+**Exact result.** Each of four arms has4096 exhaustive table/state/input/identity
+cases and8192 requests in256 continuous32-request episodes. Every episode cycles
+through each symbol/caller/owner triple four times; q and scratch persist between
+requests. Intact, harmless unreachable-code edit and selective call-site edit
+all preserve12288/12288 task answers and next states. The selective edit discloses
+3072/3072 targeted caller0/owner1 answers, including1024/1024 in the exhaustive
+panel. Caller1/owner0 remains denied and authorized requests remain correct.
+The task table is unchanged throughout execution in every arm.
+
+The fixed command is hex `01120a89`: STORE_IMMEDIATE, address18, word0x0a89
+(LE r10,r8,r9), replacing0x401e (CALL30). It is one16-bit word write with a32-bit
+description, independent of the sampled task table, zero queries, zero private
+scratch and no additional RAM or code capacity. RAM plus PC remains1040 bits.
+The intact program takes58 steps for refusals and59 for admissions; the selective
+program takes56 and57. On the targeted disclosure,58 becomes57 despite executing
+the additional answer-copy instruction. Thus the attack is strictly faster on
+every matched request, not merely within the same maximum deadline.
+
+**Control and interpretation.** Replacing the shared EQ subroutine itself by LE
+reduces exhaustive task-answer and next-state accuracy to62.5% each (joint43.75%).
+It also exceeds the59-step budget in3072/4096 cases, reaching65 instructions; those
+observations are diagnostic under the declared128-step cap, not admissible attacks
+under the strict deadline. This confirms that the shared comparison matters to
+the chosen lookup algorithm, while the selective edit avoids damaging it. The
+control's limited performance loss is not catastrophic cognition failure.
+
+**Why the stateful claim is bounded but exact.** Exhaustion covers all256 tables,
+both valid q values and all valid input triples. Each live scratch value used in
+a request is overwritten before its first read, except q and the supplied inputs;
+r6 is unused. The selective program has the same task transition and next q as the
+intact program for every such case. Induction therefore extends that equivalence
+to arbitrary finite valid input histories with the same initial q. The additional
+continuous episodes check the implementation's retention of state, but do not
+themselves enumerate all histories. This reasoning concerns this machine only.
+
+**Validation and limits.** Four focused generic-instruction tests pass: unsigned
+wraparound, CALL/RET accounting, deadline/address faults and write access to all
+RAM/control words. The first `uv run pytest` collection failed because the script
+namespace was not on its import path; the test now explicitly adds the repository
+root and that same invocation passes. No scientific run failed or was restarted.
+The completed run and independent audit fit within120 seconds and16MiB. This is
+a handwritten machine with supplied task tables, not a learned acquisition result,
+a discovered autonomous self-edit, a new attack family, or an intrinsic SCC success.
+
+**Construction decision.** Reject this shared-comparator candidate without training.
+The proposed shortage of spare memory/compute cannot protect it: the attacker
+replaces one use of an existing routine in place and saves work. A second model,
+table repacking, repair search or an H100 run is unnecessary once this admissible
+counterexample is established. This does not prove every resource-bounded
+construction impossible or close the general SCC research objective.
+
+For the next candidate, the unresolved design question is concrete: **what prevents
+the cheapest allowed rewrite from retaining task computation while changing which
+result is emitted?** Removing a named policy head or inlining the comparator is
+insufficient unless it changes that attack cost. Any proposed encoding must specify
+its editable decoder and show why a direct read, call-site/input substitution or
+in-place rewrite cannot cheaply recover the useful forbidden output. The obstacle
+must be supplied by the construction, not assumed as non-malleability or enforced
+by a newly immutable policy gate. We do not currently have such a qualified
+candidate. Further general proof polishing, another wrapper-training batch and
+scale-up are not justified by this result; GLM remains untouched.
 
 ## Supporting-record index
 
