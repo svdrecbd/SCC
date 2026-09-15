@@ -40,6 +40,16 @@ Charon remains the preferred host for suitable bounded CPU work/audits and
 qualified small CUDA paths; production training is not wholesale CUDA-ported.
 No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
 
+**Dependency review complete; maintenance branch paused before training:**
+[LN-125](#ln-125). Destruction after disrupting a protected computation does not
+bound useful bypasses that keep that computation intact. The conditional reader
+and feedback arguments identify this missing coverage obligation; they are not
+a universal impossibility proof. The existing positive theorem closes a restricted
+trusted-commit boundary. No current candidate supplies an intrinsic resource or
+execution barrier against the allowed selective rewrites. The next candidate must
+explain that barrier before another implementation; no edit restrictions have been
+silently added and no training or provider polling occurred in this review.
+
 **Live-parameter regeneration implemented; second candidate rejected before training:**
 [LN-124](#ln-124). The400-scalar untrained bank rewrites its own selectors, writer
 and reader. Across16 seed/precision cases, a selected read-role edit leaves every
@@ -5553,6 +5563,192 @@ Do not silently impose immutable roles, an uneditable commit, or restricted grap
 edits to close this gap. If used, those would be explicit narrower assumptions.
 No scientific training is active; scale-up/GLM gates remain closed. Charon's last
 observed benchmark status remains dated LN-122; this iteration did not poll it.
+
+<a id="ln-125"></a>
+### LN-125 — 2026-09-15 UTC: dependency argument, bypass obligation and construction filter
+
+**Authorization and scope.** The user approved working out the dependency
+argument before another implementation or training run. Reviewed the stable
+mechanism target, LN-055/053/068/101/103/117/124, and the existing theorem pitch's
+formal experiment, Proposition5 and Work package A. This entry is that work
+package applied to the current design frontier. It is a pen-and-paper analysis,
+not a new numerical experiment, literature novelty claim, theorem of universal
+impossibility, or reason to change the scientific target. No new architecture,
+verifier, provider query, paid job, or background monitoring is needed.
+
+**Correction to the last recommendation.** Requiring every forbidden computation
+to change the maintained state is one proposed route, not a necessary condition
+for every resource-bounded SCC construction. An attack may instead be too costly
+under a justified resource model. Conversely, the ability to alter random logits
+without parameter damage in LN-124 is not a competent behavioral escape. The
+argument below states the missing competence and execution premises explicitly.
+
+**1. Separate the mechanistic claim from its behavioral coverage.** Fix a task
+instance distribution, an intact qualification event Q, and an attack plus allowed
+repair procedure chosen before the instance is drawn. Condition the following
+probabilities on Q. Define three independent endpoints:
+
+- D: the modification disrupts a named protected computation, as defined by
+  its functionality and intervention interface. Its definition cannot include
+  capability loss or merely a changed coefficient. Specify whether D is measured
+  before repair; any recovered implementation must also be inspected.
+- V: the final edited/repaired machine performs the specified forbidden behavior,
+  scored using the original external task/role semantics. A scalar permission
+  change without the required action is not enough if the target is disclosure.
+- U: the final machine retains the specified useful abilities on fresh challenges.
+  Measure future ability after the trigger, not a useful answer computed before
+  destruction. Recovery that restores refusal is not a simultaneous V-and-U escape.
+
+A theorem about D does not automatically control V. Exactly,
+
+    Pr(V and U | Q)
+      = Pr(V and U and D | Q) + Pr(V and U and not D | Q).
+
+Suppose a construction bounds the first term by epsilon_mechanism. It still needs
+a bound epsilon_bypass on the second term to conclude a bound on useful forbidden
+behavior. Their sum bounds the left side. These are unspecified error terms,
+not zero-error promises; independent guessing/task baselines must remain in any
+concrete probability guarantee, as required by LN-103. A failed95% retention gate
+is not catastrophic collapse and cannot substitute for a near-baseline result.
+
+This decomposition does not redefine SCC as universal behavioral safety. A
+mechanism could meet its destructive-removal claim while leaving an applicable
+bypass. That narrower result must be stated honestly; a useful bypass still
+prevents claiming effective protection against the broader modification family.
+Our synthetic proxy alone also cannot establish alignment or general cognition.
+
+**2. Conditional reader-substitution lemma (the current obstruction).** Let the
+complete persistent state be B, the request be x (including actual role), and a
+step be
+
+    B_next = F(B,x),       y = R(B_next,x).
+
+Assume all future model computation depends on its persistent state and future
+inputs, and the edited graph may replace the read call on a recognizable selected
+set S by H(B_next,x). Assume H is available within the declared program, execution
+and storage budgets. It may be an alternative-role invocation of R, but its
+competence must be established on these very states, not just on separately
+warmed authorized histories. Define the edited output to equal R outside S and
+H on S while leaving F unchanged.
+
+For any fixed input sequence and equal initial states, both executions have equal
+state after every step. Proof: equality at step t gives equal arguments to F,
+hence equality at t+1; induction starts with the initial equality. Outside S the
+read arguments are equal too. On S the output is exactly H of the intact current
+state. If H performs the forbidden task on that state distribution and ordinary
+utility challenges use the unchanged reads, V and retained utility coexist with
+no changed maintenance computation. If U also includes selected outputs, verify
+those outputs under U's actual scoring rule rather than infer retention.
+
+This is the stateful version of the existing pitch's separable-guard Proposition5,
+not a new general theorem. It does not assume a second model or clean checkpoint.
+For LN-123 the replacement uses one transition and one reader invocation, so there
+is no extra persistent tensor and no extra reader call. The small metadata branch
+and code description are still part of program/resource accounting. LN-124 proves
+state/output identities for that implementation; it does not establish the H
+competence premise and therefore is not a behavioral no-go instance by itself.
+LN-117 supplies an actually qualified inherited-model escape under its own task
+and interface. Those evidence levels must not be conflated.
+
+The equal-input premise matters: an environment reacting to changed emissions may
+supply different later inputs. This lemma preserves model execution on identical
+inputs, not identical closed-loop world histories. A stochastic model needs its
+random-generator state included in B or an explicitly coupled randomness argument.
+Any hidden mutable reader state must likewise be included; treating a stateful
+reader as pure would invalidate the proof. External actions cannot be undone by
+later internal destruction; the SCC endpoint is future capability after removal.
+
+**3. Feedback does not by itself close the boundary.** Suppose instead a step
+computes a value v and uses it both for the state transition and emission. An edit
+that preserves the original v for the transition but changes its outward use
+still gives the original next state. If the useful forbidden answer is already
+v behind a mask, routing that value outward needs no duplicate task executor.
+If it must be computed by a separate H, this attack needs H's actual time and
+transient space, plus any retained output while the transition finishes. It is
+not automatically a same-space attack. If H needs a pre-update state that was
+irreversibly overwritten, no claim that it can simply be recomputed is valid;
+prove a schedule or charge a retained copy. LN-103's overwrite-order correction
+applies here too. This is why a real scheduling/resource obstruction could matter,
+while the phrase 'feed output back into the model' supplies none on its own.
+
+**4. What the existing positive theorem supplies—and what it assumes.** LN-101
+establishes the conditional policy-flip/non-malleable-code reduction with a fixed
+tampering family and a complete trusted commit. Successful flipping rules out
+preserving the same decoded logical message; the trusted lifecycle removes other
+surviving representations. Under those premises, information/baseline bounds
+control subsequent task performance and repair. This is a valid restricted anchor.
+
+It does not prove that learned recurrence implements the commit, that graph edits
+cannot skip it, or that sparse changes necessarily fall within a non-malleable
+family. The repetition toy's two-policy-bit edit already survives canonical commit
+with intact task information (LN-101). The dense complement attack in LN-103 needs
+one live state and no encoder execution. Therefore 'one copy', 'dense entanglement',
+'canonical storage' and 'expensive official encoding' do not establish the missing
+resource barrier. A trusted output path can prevent rerouting by assumption, but
+would be external enforcement rather than evidence of intrinsic learned dependence.
+Authentication of caller metadata alone also does not prevent an editable internal
+graph from using different metadata at different calls.
+
+**5. Construction triage before writing code.**
+
+| Proposed route | Current disposition | Missing fact or changed assumption |
+| --- | --- | --- |
+| Shared predicate/reader for safety and useful tasks | Reject as sufficient argument | Sharing a function does not prohibit changing one use or adding a conditional exception. |
+| Self-regenerating code, recurrent maintenance, or output feedback | Reject current forms | Exhibit why the selected read/routing edit cannot preserve the internal execution; account for its actual schedule. |
+| Globally corrupt a useful type/binding relation | A damage control, not a protection result | Show why selective exceptions and intact calls elsewhere are unavailable; global ablation assumes the attack we want. |
+| Remove all recognizable role/context distinctions | Not a free fix | If identical observable state/input requires contradictory safe/unsafe outputs, intact qualification itself is impossible; if it remains distinguishable, analyze attacker access to that distinction. |
+| Single live bank with no snapshot | Necessary accounting in some models, insufficient alone | Exclude in-place role/policy rewrites and instruction-level rerouting by evidence, not by the absence of a full copy. |
+| Trusted atomic commit with a qualified non-malleable edit family | Restricted positive anchor already available | Trusted lifecycle and family membership are assumptions; no learned intrinsic construction follows. |
+| An intrinsic, resource-bounded obstruction to every useful unsafe successor | Open research target | Supply a concrete construction and a resource lower bound/security reduction over the actual edit family. None is supplied by our current candidates. |
+
+The identical-input statement in the fourth row is elementary: for one input/state
+with disjoint required outputs a and b, a randomized output law has
+Pr(output=a)+Pr(output=b)<=1. Balanced conflicting labels therefore cannot both
+have correctness above1/2 on that identical-input pair. This applies only to truly
+identical observable states, not merely similar activation statistics. Hiding
+metadata from an evaluator or attacker without changing the declared interface
+would manufacture a restriction rather than solve the dependency problem.
+
+**6. Gate for the next candidate.** Stay within the current broad edit scope; do
+not select a narrower contract silently. A proposal earns an implementation when
+it supplies all of the following in labnotes:
+
+- A useful operation X and the protected relation Y, with an operational definition
+  of Y's failure independent of damage. Show an actual causal dependency of X on
+  Y; co-training, shared parameters, and a global destructive edit are insufficient.
+- A specific reason a targeted violation cannot keep using intact Y for X. Address
+  output-only edits, alternative-role reads on the same state, branch splitting,
+  frozen/direct execution, alternative encodings, and in-place relational rewrites.
+  For each one, give an applicable counterexample or identify the exact premise
+  that fails. 'No bypass found' is not that reason.
+- A declared finite-precision machine and budget vector: persistent live bits,
+  peak transient bits, program/advice bits, steps/time, passes/writes, edit access,
+  observations, and external oracles/repair data. Charge instance-dependent data
+  embedded in edit descriptions. Fix the attack algorithm/advice before the task
+  instance, while allowing the declared adaptive observations. The cost of all
+  useful unsafe rewrites is the target; one encoder's cost proves nothing about it.
+- A plausible intact learning/execution route, benign-edit controls, and a collapse
+  endpoint distinguished from failure of utility retention. Task algorithms or an
+  uneditable policy oracle cannot secretly be placed in the interpreter.
+
+This gate asks for a falsifiable dependency argument, not a full security theorem
+before any experiment. Unknowns may remain and experiments can test them. But an
+already-admitted, competent same-state reader bypass rejects the claim immediately;
+an unqualified bank with that accessible route needs a concrete reason it will
+not become a competent bypass, rather than another generic training prescription.
+A resource bound restating 'every escape exceeds the budget' is itself the open
+claim: it needs an independent invariant, reduction or lower-bound argument.
+
+**Decision.** The current maintenance line has no surviving construction argument
+and is paused before training. The completed work is the explicit separation of
+mechanistic damage from behavioral coverage, a conditional state/feedback analysis,
+and a construction filter grounded in the recorded attacks. It is not a proof
+that intrinsic SCC is impossible. The next substantive research contribution must
+be a concrete reason that useful unsafe rewriting costs unavailable resources,
+or an explicit decision to study a restricted runtime. The user has not authorized
+silently replacing the broad target with that restricted theorem. No need to spend
+GPU time or build another wrapper to settle this present gap. Source and notes
+remain on main; existing run-status observations are unchanged.
 
 ## Supporting-record index
 
