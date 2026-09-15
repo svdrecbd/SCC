@@ -5202,6 +5202,75 @@ CUDA toolkits:
 https://developer.nvidia.com/blog/navigating-gpu-architecture-support-a-guide-for-nvidia-cuda-developers/
 No paid GMAN job was polled, canceled or resubmitted in this infrastructure check.
 
+<a id="ln-119"></a>
+### LN-119 — 2026-09-15 UTC: qualify Charon and place suitable work locally
+
+User explicitly authorizes full SCC validation on Charon followed by moving
+appropriate experiments. Preserve existing GMAN work; inspect only exact registered
+benchmark jobs to collect completed results or avoid duplicate migrations. No
+scientific candidate currently passes its architecture gate; do not manufacture
+another training experiment just to occupy GPUs.
+
+Deploy the checksum-verified LN-116 frozen context (source8b753b2, inherited
+parent/windows and numerical contract) into a fresh owner-only Charon directory
+`/home/salvador/scc-research/qualification-20260915-v1/`. Use the already installed
+Python3.14.4/PyTorch2.14.0+cu126 environment, without changing system packages,
+drivers, hardening or SATA mounts. Verify the full transferred file manifest before
+execution. Select GPUs by UUID: TITAN Xp
+`GPU-70c54fd8-6f80-09ba-1b83-33e396c86860`; GTX1080
+`GPU-fd69e9e7-3919-7eae-2784-e902665a4ddd`. Do not assume CUDA/nvidia-smi ordinals.
+Run them sequentially for isolated readiness checks,2 CPU threads, deterministic
+FP32/FP64 semantics, TF32/AMP off, CUBLAS_WORKSPACE_CONFIG=:4096:8.
+
+First run the frozen benchmark fixture per GPU (all four conditions, damaged and
+repaired payloads, CPU/CUDA outputs/loss/gradients and physical-runtime checks,
+CPU Adam equivalence;1 warmup/2 timed updates). This is a short implementation
+qualification, not a performance ranking. Its existing1500-second internal cap
+remains frozen; the launcher may impose a stricter180-second readiness deadline.
+Preserve failures and stop GPU placement when numerical checks fail. If it passes,
+run the identical full3x(16 warmup+64 timed) benchmark in fresh directories, with
+its original1500-second cap; do not change windows/tolerances to obtain a pass.
+Record hardware/runtime, CPU model, GPU identities, thermal/memory observations,
+exit codes and output hashes, and recover evidence to the mounted external store.
+
+Assign audit/data-preparation/CPU work after runtime checks. GPU experiment
+placement additionally requires the SCC numerical checks; select based on measured
+throughput and available memory, with separate independent jobs per card. Full
+CPU/H100 and Charon timings have different package builds and host CPUs, which
+remain explicit comparison limits. Preserve current GMAN jobs and outputs rather
+than canceling or duplicating an active scientific run. No repeated long-job polls,
+no automatic collector, no scale-up or GLM corpus use.
+
+<a id="ln-120"></a>
+### LN-120 — 2026-09-15 UTC: explicit eager-CUDA fallback after native Triton failures
+
+Exact H100 `job-xmmaz` failed at04:39:59 UTC,6.27-second runner runtime, billed60
+seconds/$0.04995. Recovered archive length/hash verified; failure and full traceback
+are in `artifacts/scc-device-benchmark-20260914-v1/recovered-h100-v1/` and
+`h100-failure-run-log.json`. First CUDA gradient dispatches into PyTorch2.14's
+native `bmm_outer_product` Triton implementation despite no torch.compile call;
+Triton cannot find a C compiler in the slim image. The CPU comparator `job-ya9u7`
+was running at the exact one-time placement check; preserve that active job.
+
+Charon's TITAN frozen fixture-v1 fails at the same automatic native dispatch:
+its installed gcc cannot find Python.h. Both failures occur before hardware
+qualification or timing. They do not establish an SCC numerical discrepancy.
+Do not change Charon's installed environment to work around this. Introduce an
+explicit `--disable-triton-overrides` benchmark option using documented
+`torch.backends.python_native.triton.enabled=False`; record the actual flag in
+configuration. This selects existing eager CUDA implementations and changes the
+execution backend, not the model, objective, data, dtype or numerical tolerance.
+Reference: https://docs.pytorch.org/docs/2.14/backends.html#torch.backends.python_native
+
+Freeze this change as a fresh source context, preserve original source/failed
+artifacts, and rerun the CPU fixture before sequential TITAN/GTX SCC fixtures.
+Proceed to the existing full timing contract only after all unchanged numerical
+checks pass. Compare this explicitly labeled backend across Charon and a fresh
+H100 retry (30-minute provider cap,1500-second internal cap, fresh idempotency key,
+maximum quote verified before submission). This measures a common compatible
+baseline, not the best possible H100 implementation. No compiler/driver install,
+no tolerance relaxation and no inference of precision equivalence from speed.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.

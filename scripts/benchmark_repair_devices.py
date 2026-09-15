@@ -124,12 +124,17 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--inputs',type=Path,required=True); p.add_argument('--output',type=Path,required=True)
     p.add_argument('--cuda',action='store_true'); p.add_argument('--fixture',action='store_true')
+    p.add_argument('--disable-triton-overrides',action='store_true',
+                   help='Use eager CUDA instead of automatic Python-native Triton overrides (LN-120)')
     a=p.parse_args(); a.output.mkdir(parents=True,exist_ok=False)
     started=time.monotonic()
     def timeout(*_): raise TimeoutError('LN-114 1500-second internal cap')
     signal.signal(signal.SIGALRM,timeout); signal.alarm(1500)
     try:
         torch.set_num_threads(2); torch.use_deterministic_algorithms(True)
+        import torch.backends.python_native as python_native
+        if a.disable_triton_overrides:
+            python_native.triton.enabled=False
         torch.backends.cuda.matmul.allow_tf32=False; torch.backends.cudnn.allow_tf32=False
         torch.backends.cuda.matmul.allow_fp16_reduced_precision_reduction=False
         torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction=False
@@ -140,6 +145,7 @@ def main():
             'torch':str(torch.__version__),'python':sys.version,'platform':platform.platform(),
             'gpu':torch.cuda.get_device_name() if a.cuda else None,'cuda':torch.version.cuda,
             'tf32':False,'amp':False,'compile':False,'deterministic':True,'wall_seconds':1500,
+            'python_native_triton_enabled':python_native.triton.enabled,
             'output_limit_bytes':256*1024**2,'scope':'Short disposable benchmark, not scientific training'}
         atomic_json(a.output/'configuration.json',config)
         sources=snapshot_sources(a.output/'source')
