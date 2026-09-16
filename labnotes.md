@@ -20,6 +20,20 @@ result collection. Source/Git/environment remain local, about0.77GB including
 migration records. Original local trees were removed after verification and load
 checks. OS free space still reflects purgeable Time Machine snapshots.
 
+**Irreversible-trajectory candidate screened; route survives only under a one-wayness premise:**
+[LN-141](#ln-141)–[LN-142](#ln-142). A role-variant in-place step on shared state is the
+first candidate whose known bypasses cost a resource rather than a rerouted call:
+divergence destroys utility to chance, the task automaton is non-injective, and
+read-only evaluation needs one scratch word per round. But the repair-witness bound
+holds exactly: three to four side bits repair the caller state on95% of reachable
+instances, at most eight on all, against N=16, because the expected witness is
+bounded by one request's input entropy. For table steps the witness costs a16-fold
+scan or a2-fold table, a constant edit-cost factor; rejected at LN-136's standard.
+The open decision is whether a preimage-hardness premise on the model's own compact
+wide-word transition is an acceptable SCC statement; if so the next experiment is
+fixed in LN-142, if not no broad-interface class remains identified. Audit passes;
+no training, GPU or provider use.
+
 **Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
 non-malleable-code construction is valid with a trusted commit and restricted
 edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
@@ -6863,6 +6877,103 @@ and the measurement apparatus and the trade-off numbers are the deliverable. If
 the repair curve instead stays low up to s near N at the reachable prior, the
 bound above has been misapplied and the entry is corrected. Either way no learned
 mechanism, catastrophic collapse or general impossibility is claimed.
+
+<a id="ln-142"></a>
+### LN-142 — 2026-09-16: screen confirms the repair-witness bound; the route survives only under a one-wayness premise
+
+Executed LN-141 from plan commit `79cd356` in32.6 seconds on the local CPU.
+[Frozen run](artifacts/scc-irreversible-trajectory-20260916-v1/) holds plan, source,
+tests, tables, configuration, results and hashes; the
+[independent audit](artifacts/scc-irreversible-trajectory-20260916-v1/audit.json)
+recomputes the step for all65,536 states, images, fibers, uniform spreads, witness
+costs, automaton classes and pebbling minima for rounds1–2 without importing the
+screen, and passes with no hash mismatch. All446 repository tests pass. No training,
+GPU, provider or corpus use.
+
+**Exact results (both variants, rounds1–4; chance1/16).**
+
+| Measurement | "function" tables | "nearperm" tables |
+| --- | --- | --- |
+| Reachable support / entropy after16 steps | 62,351→36,159 states;15.57→14.52 bits | 65,536→65,182;15.95→15.78 bits |
+| Owner and caller post-states differ (reachable prior) | 99.99–100% | 99.99–100% |
+| Minimal-automaton classes; class merges under some symbol | 65,536;359,056–470,234 | 65,536;110,082–270,663 |
+| Pebbling cells: intact / read-only owner answer / joint | 4 /4+rounds /4+rounds | same |
+| Best owner-answer guess from caller post-state, no side info | 56.1%→43.8% | 83.6%→62.6% |
+| Repair side bits for≥95% success (reachable prior) | 4,4,4,4 | 2,2,2,3 |
+| Repair side bits for exact success, worst x | 6,7,8,8 | 3,4,4,4 |
+| Record-and-invert: witness bits worst case; scan lookups per request | 12–48;64–256 (intact4–16) | 4–16;64–256 |
+| U after one owner step; after constant owner (4,096 sampled32-step horizons) | 6.8–7.2%;6.4–6.7% | 6.3–6.4%;6.2–6.4% |
+| State equality with reference at step32 after one owner step | 0.4–0.9% | 0.05–0.07% |
+
+The selective attack on x in {0,1} hits the owner answer on100% of the requests
+it targets (53% of sampled first requests carry a selected symbol); its later
+utility is10.5–11.4% because half the samples diverge one request later. The honest
+control retains100% utility and never emits an owner answer beyond chance.
+
+**What the numbers establish.** The preregistered expectation held on every line.
+Divergence is durable and destroys reference-scored utility to chance within one
+request; the task's minimal automaton is non-injective, so no reversible realisation
+exists on16 bits; and the read-only and joint pebbling minima equal one scratch
+word per round, reaching N only at four rounds. Those three facts are the positive
+part: this is the first candidate in the record whose known bypasses pay in a
+resource rather than in a rerouted call. The negative part is decisive at the
+present standard. After an in-place owner step, three to four side-information bits
+repair the caller state on at least95% of reachable instances, and at most eight
+bits repair every instance; N is16. This is the repair-witness bound of LN-141
+observed directly: the expected witness is bounded by the input entropy of one
+request (three bits here), regardless of how lossy the step is. The lossy tables
+buy a larger worst-case witness (eight bits) at the cost of state entropy (one
+and a half bits lost in sixteen steps) and of a reconvergence rate that is already
+visible at step32. The near-permutation tables keep the task's memory but need
+only three or four witness bits, and the caller post-state alone predicts the
+owner answer up to84% of the time, because a near-injective step leaves the
+pre-state legible in the post-state. Both regimes are therefore bypassed cheaply
+in the uncharged-side-information model. Charging the computation of the witness
+gives a16-fold scan or a2-fold preimage table for this table step: an exact but
+constant edit-cost factor. Under LN-136's standard this tiny instance is rejected.
+
+**Limits.** The tables are one seed per variant; horizons are sampled, not
+exhaustive; sixteen burn-in steps approximate but do not reach stationarity; the
+pebbling model counts node values of the given DAG and excludes algebraic shortcuts;
+the best-guess and repair curves are optima over all functions of the stated inputs
+and therefore upper-bound any realisable attacker; the joint pebbling search was
+not run at four rounds. Nothing here concerns learned weights, alignment, or
+catastrophic cognition failure.
+
+**Decision and the concrete direction.** The irreversibility route is closed in
+the information-theoretic and table-step settings by the repair-witness bound, in
+the same way LN-136 closed public circuits under substitution. What is not closed
+is the computational version: a compact non-injective step on wide words whose
+preimage index has no cheap algorithm. There, the only known routes to V and U are
+saving the whole pre-state (scratch about N), a preimage table of size about2^(2w),
+or a2^w-fold scan per word update, against an intact machine that uses none of them.
+That asymmetry is intrinsic (every component stays editable, nothing is trusted or
+immutable), grows with word width rather than being a constant, and is falsifiable
+by attack rather than assumed: a shortcut circuit that computes the fiber index or
+the owner answer from the caller post-state within the code budget is a concrete
+bypass, and searching for one is a bounded exact problem that gives the LN-133
+synthesis machinery a target. It is also the version that maps onto learned systems
+as a measurable question (how hard is it to invert one recurrent step of the actual
+model with gradients and a small budget) rather than a metaphor.
+
+The cost is a new premise class. The record has so far refused assumed
+non-malleability and trusted kernels because they are external. A hardness property
+of the model's own transition is neither external nor assumed for free; it is a
+property to be measured and attacked. Adopting it changes the SCC statement to:
+under the declared capacity and time ledger, every competent unsafe successor of
+this machine needs about N extra bits or exp(w) extra time unless the public step
+admits a preimage shortcut. Whether that is an acceptable form of the mechanism
+target is the user's decision, and it is the one decision that now gates further
+construction work on the broad interface.
+
+If adopted, the next experiment is fixed: four16-bit words (N=64), a compact
+add-rotate-xor style step with a role-keyed constant and a non-injective squash,
+sampled divergence/utility panels, the four attack routes above with exact ledgers,
+and a SAT-bounded shortcut search up to a declared gate count; a found shortcut is
+a replayable bypass, unsatisfiability excludes only that gate budget, timeout is
+inconclusive. If not adopted, no broad-interface candidate class remains identified
+by this review, and the choice reverts to LN-137's declared-scaffolding fork or the
+structural negative result. GLM remains untouched; no compute is requested.
 
 ## Supporting-record index
 
