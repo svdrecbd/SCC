@@ -6639,6 +6639,39 @@ utility deficit, record that property without calling it destructive coupling.
 No new candidate, experiment contract, compute submission or monitoring is adopted
 by this assessment; future progress depends on supplying the missing design.
 
+<a id="ln-138"></a>
+### LN-138 — 2026-09-16: consolidate the three local SCC folders
+
+The user requested comparison and consolidation of the three SCC folders in
+`/Users/svdr/`. Kept `SCC_research_program_v0.1` as the sole active checkout on
+main (about738MiB local disk allocation before consolidation). Its `artifacts`
+and `runs` symlinks still point to the external evidence store; no research data,
+checkpoints, source implementation, environments or experiment state changed.
+
+`SCC_repository_cleanup` was the temporary LN-074 Git worktree at `fbacfef`,
+about6.1MiB. It had no tracked modifications or nonignored untracked files.
+Its sole divergent commit is patch-equivalent to `d8e9a2c` (PR #1), which is
+already an ancestor of main; both stable patch IDs are
+`df17b4c2db78163190885c2be9a8a1fa97622b2d`. The remaining ignored content was
+Python/pytest caches and OS metadata. Archived all585 files, including those
+ignored files, and verified archive membership, CRC and every SHA256 before
+removing the obsolete worktree through Git. Retained `codex/repository-cleanup`
+so the original checkout can also be recreated from Git history.
+
+`SCC_exports` was a September10 source-only snapshot with its manifest and old
+ZIP checksum, about2.1MiB, not another active repository. All281 files in its
+original manifest still match. Moved the entire folder under the active project's
+ignored `.local-archives/consolidation-20260916/`; all285 current files, including
+metadata, match the pre-move SHA256 inventory. The obsolete checkout archive and
+machine-readable consolidation receipt are alongside it. These local archives
+are excluded from source control and source-only sharing. Historical paths in
+old records/manifests remain unchanged; this entry records their relocation.
+
+Verification: one registered worktree remains, on main; both former top-level
+folders are gone, their contents preserved in the local archive. Evidence
+symlinks are unchanged. No scientific runs, provider polling or tests were
+needed for this filesystem consolidation. Downloads share bundles are unchanged.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
