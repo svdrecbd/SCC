@@ -6758,6 +6758,112 @@ snapshots/inventory or `--inputs` for an offline rebuild into a fresh output pat
 This is an expandable visual deliverable, not a new candidate, training run,
 research pivot, recurring automation, or changed assessment of SCC's success.
 
+<a id="ln-141"></a>
+### LN-141 — 2026-09-16: irreversible shared-trajectory candidate; repair-witness bound; exact screen plan
+
+**Scope.** The user asked to work until a concrete direction exists, and asked
+whether Charon and GMAN are reachable. Both were checked once, read-only, at about
+22:35 UTC: SSH to Charon succeeds, both Pascal GPUs idle, root NVMe762GiB free;
+the GMAN token is valid in workspace `default`. Neither is used here. Local tests:
+441 pass. This entry is the design exercise LN-137 requested: one candidate, its
+information flow, editable interface, attack ledger, and the known bypasses worked
+on paper before a runner. It then declares a short exact CPU screen. No training,
+GPU, provider job, corpus access or monitoring.
+
+**Candidate: role-variant in-place irreversible trajectory.** Two principals share
+one live state B of N bits (four4-bit words, N=16). A request is (x, r) with task
+symbol x in0..3 and authenticated role r in {caller0, owner1}. The step is an in-place
+sequential ring update: for i=0..3, B[i] <- T_r(B[i], B[(i+1) mod4], x), with public
+role-keyed tables T_0, T_1 fixed before the instance; `rounds` passes per request.
+The answer is word0 after the update (chance1/16). The reference trajectory follows
+the true roles; utility U is answer agreement with the reference on the same
+persistent instance over later requests, not on re-provisioned instances. There is
+no refusal, gate, checker, wipe rule, hidden decoder or immutable policy: both
+principals are fully served, and the only "protection" is that the caller's future
+answers are defined by the caller trajectory. D is "the executed transition on some
+request was not F(.,.,r_true)"; V is "an owner-trajectory answer is emitted on a
+caller request"; U is future reference-scored competence. All code, tables, state
+and metadata are editable; the interpreter is table lookup and addressing only.
+
+**Why this is the only window left by the record.** LN-136's closure needs task
+semantics invariant under caller-to-owner substitution; here the two roles run
+different transitions on shared state, so constant or selective role substitution
+changes the trajectory. LN-125's reader lemma needs a pure reader on an unchanged F;
+here the owner answer is a word of the owner-post-state, which does not exist unless
+the owner transition is executed, and executing it in place destroys the caller
+pre-state because T is non-injective in its first argument. LN-125 section3 named
+exactly this possibility: a required pre-update state irreversibly overwritten,
+so an attacker must "prove a schedule or charge a retained copy". This candidate
+is that possibility made concrete. It is scaffolding under LN-056: a two-principal
+proxy, not an alignment rule, and a hand-built machine, not learned cognition.
+
+**Attack routes and their cost in this machine (on paper).**
+
+| Route | Effect on (V,U) | Cost or obstacle |
+| --- | --- | --- |
+| Full state copy, then owner step, read, restore | V and U | N scratch bits; excluded when capacity < 2N |
+| Owner step in place, read, then invert to caller pre-state | V and U | T non-injective, so inversion needs a witness (below) |
+| Caller step in place, then read owner answer | needs owner-post-state that was never computed | reduces to read-only evaluation of the owner DAG |
+| Read-only evaluation of the owner answer with B intact | V and U | black-pebbling number of the owner DAG; expected about `rounds` words |
+| Constant role or selective role substitution | V; U lost after divergence | zero; the question is whether divergence is durable |
+| Output-only / reader edit on the caller post-state | guesses the owner answer | best guess from the caller post-state, measured |
+| Reversible re-implementation, then fork by inversion | V and U | impossible on N bits if the minimal automaton merges classes; extra state charged |
+| Benign edit of unused words | none | control |
+
+**Repair-witness bound (the new negative fact).** Let the attacker execute the
+owner step in place and then attempt to restore F_0(B,x) from (F_1(B,x), x) plus
+s bits of side information h(B,x), with h chosen freely and computed for free.
+Exactly, success is possible for a fraction of instances equal to the total mass
+of the2^s heaviest caller-post values inside each owner-post fiber; exact repair on
+every instance needs s >= log2 of the largest such spread. Information-theoretically,
+the side information needed in expectation is at most H(B_t | B_{t+1}, x_t, r_t), and
+H(B_t | B_{t+1}, x_t, r_t) <= H(B_t) + H(x_t, r_t) - H(B_{t+1}). At stationarity
+H(B_t)=H(B_{t+1}), so the expected repair witness is bounded by the entropy of one
+request's input: here at most3 bits, however irreversible the step is. Durable
+divergence requires long memory, long memory requires the step to be nearly
+injective on the reachable set, and near-injectivity makes the witness short. The
+irreversibility route therefore cannot supply a scratch obstacle larger than the
+input rate once side information is free. What remains is the cost of computing
+the witness. For a table step the witness is a fiber index: computable by scanning
+the16 first-argument values per word update (time factor16, no extra code beyond
+a loop) or by a preimage table of twice the public table size. Both are constant
+factors: an edit-cost effect of the kind LN-136 already classes as insufficient.
+The witness is materialised nowhere; its cost is the cost of preimage indexing for
+the public step. Only a compact non-injective step on wide words with no algebraic
+shortcut to preimage indexing makes the cheapest known route "save the whole
+pre-word", i.e. scratch about N. That is a one-wayness-style premise about the
+model's own transition, intrinsic and editable, but a computational assumption
+that a2^16-state machine cannot exhibit, only measure the constant-factor version of.
+
+**Screen (executed after this entry is committed; expected outcome stated first).**
+`scripts/screen_irreversible_trajectory.py`, NumPy plus standard library, two table
+variants ("function": random4-to-4 maps; "nearperm": permutations with one merged
+pair), rounds1..4, seed20260916, exact over all65,536 states unless stated:
+role variance under uniform and after16 exact weight-propagation steps; image
+sizes and maximum fibers; the repair success curve for every side-information
+width0..16 under both the reachable and uniform priors; the best owner-answer guess
+from the caller post-state; minimal-automaton class count and class merges;
+black-pebbling minima with destructible sources and in-place overwrite for the
+intact caller step, read-only owner answer, and the joint game (emit owner answer,
+end holding the caller post-state), rounds<=3 for the joint search; exact
+record-and-invert costs; and4,096 sampled32-request horizons after one owner step,
+constant owner, selective owner on x in {0,1}, and honest control, scored against
+the true-role reference. Wall cap600s,16MiB output, fresh directory
+`artifacts/scc-irreversible-trajectory-20260916-v1/`, plan/source/tests/config/
+hashes frozen; independent `scripts/audit_irreversible_trajectory.py` recomputes
+the step, images, fibers, uniform spread, witness costs, automaton classes and
+pebbling for rounds<=2 without importing the screen.
+
+Expected: divergence is durable and destroys U to near chance; pebbling minima
+equal `rounds` scratch words, reaching N only at four rounds; repair side
+information of about3–5 bits suffices at the reachable prior, far below N;
+"nearperm" needs fewer bits and keeps more entropy, "function" the reverse. If
+so, the tiny instance is rejected at LN-136's standard as an edit-cost result,
+and the measurement apparatus and the trade-off numbers are the deliverable. If
+the repair curve instead stays low up to s near N at the reachable prior, the
+bound above has been misapplied and the entry is corrected. Either way no learned
+mechanism, catastrophic collapse or general impossibility is claimed.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
