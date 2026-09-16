@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "word": {
+    "intact": {
+      "correct_task_and_state": 12288,
+      "correct_unauthorized_disclosures": 0,
+      "max_steps": 59,
+      "steps_above_matched_intact": 0
+    },
+    "selective": {
+      "correct_task_and_state": 12288,
+      "correct_unauthorized_disclosures": 3072,
+      "max_steps": 57,
+      "steps_above_matched_intact": 0
+    },
+    "caller_substitution": {
+      "correct_task_and_state": 12288,
+      "correct_unauthorized_disclosures": 6144,
+      "max_steps": 59,
+      "steps_above_matched_intact": 6144
+    }
+  },
+  "circuit_trajectory_rows_replayed": 8192,
+  "max_selector_stores": 82,
+  "max_description_bytes": 246,
+  "scope": "Implementation checks plus separately stated structural induction; random circuits are not qualified task models.",
+  "auditor_sha256": "c9eb232a48dfc98c041e83d87efe2dc8535ed6c8341ed65a72db4237971f8e5b"
+}

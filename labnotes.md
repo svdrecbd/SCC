@@ -6672,6 +6672,92 @@ folders are gone, their contents preserved in the local archive. Evidence
 symlinks are unchanged. No scientific runs, provider polling or tests were
 needed for this filesystem consolidation. Downloads share bundles are unchanged.
 
+<a id="ln-139"></a>
+### LN-139 — 2026-09-16: reproducible figures from existing evidence (plan)
+
+The user requested figures that can be shared, inspected and iteratively expanded.
+Recursively inventoried existing PNG/SVG/PDF files under artifacts, runs,
+deliverables and reports: 80 files, predominantly document renders, with scattered
+older experiment plots and an external literature image. Preserve all originals.
+Build a curated first figure set from the audited LN-104 and LN-113 repair panels
+and LN-132/136 exact word-machine checks, plus a clearly labeled explanatory
+substitution diagram. This is visualization of existing evidence, not a new
+experiment, proof or scientific training run.
+
+Use saved per-case audit counts for matched endpoints and task families; retain
+all three data/schedule replications from the single damaged parent. Do not pool
+repeated hidden/neither conditions across batches as independent replications.
+Show descriptive length-panel results alongside the empirical majority baseline
+and unique-core limitations (length2 has only two cores and a perfect constant
+baseline). Show task computation/next-state correctness separately from forbidden
+emissions and inference instruction counts; distinguish selective target success
+from success over all denied requests. Exclude any claim of catastrophic cognition
+collapse or an intrinsic learned construction. Diagram scope is the specified
+substitution setting, not a universal SCC impossibility result.
+
+Freeze plotting source, this plan, input audit/output snapshots and source hashes
+in a fresh requested deliverable under `deliverables/scc-figures-20260916-v1/`.
+Produce PNG/SVG/PDF, a combined PDF, plotted values as CSV, an offline HTML gallery,
+a recursive old-figure inventory and a share ZIP. Verify arithmetic against saved
+audits, rederive the finite one-step word-machine metrics from saved outputs,
+inspect rendered figures, and check reproducibility without the external evidence
+store. Keep raw evidence and prior figures unchanged; no provider polling or new
+training. Future revisions should use fresh output directories.
+
+<a id="ln-140"></a>
+### LN-140 — 2026-09-16: five evidence figures rendered, checked and packaged
+
+Completed LN-139 in the requested [figure deliverable](deliverables/scc-figures-20260916-v1/README.md):
+matched repair/control endpoints, task-family breakdown, diagnostic lookup loads,
+exact word-machine bypass metrics, and an explanatory substitution diagram.
+The [offline gallery](deliverables/scc-figures-20260916-v1/index.html) includes
+full captions; the [five-page PDF](deliverables/scc-figures-20260916-v1/SCC-figures.pdf)
+and individual PNG/PDF/editable SVG files are shareable. The small frozen input
+snapshots, source SHA256 provenance, CSV values and plotting source travel with
+this deliverable, so regenerating figures does not require the evidence SSD.
+The source adapters deliberately select comparable experiments; recursive file
+inventory does not imply automatic scientific pooling of arbitrary run folders.
+
+The recursive inventory found80 existing files:60 document renders,19 experiment
+plot files (eight path stems, including repeated/interim views), and one external
+literature image. Older plots remain unchanged. This first curated set covers
+LN-104/113 and LN-136, not every historical experiment or theorem. Learned panels
+retain all three shared-parent schedules and full gate counts. Length-panel
+baselines expose the trivial length2 label distribution. Exact bypass rates use
+all denied requests as denominator, separately stating100% success on the selective
+target. The explanatory diagram labels the conditional transformed-history scope.
+
+**Validation.** Five input hashes match; both saved learned audit receipts pass.
+Recomputed per-panel correctness from cell counts and cross-checked original,
+task-family and length accuracies against LN-113's independent aggregate.
+Directly rescored4096 saved finite transitions per arm against the encoded task
+tables; all three preserve4096/4096 answer/next-state computations. Correct
+forbidden emissions are0/2048,1024/2048 and2048/2048 for intact, selective and
+caller-substitution, with worst-case59/57/59 instructions. These are the exhaustive
+one-step counts; the saved independent audit separately covers the continuous
+panel. No fresh model execution or independent training is claimed.
+
+All five PNGs were visually inspected. Corrected an overlapping mean label and
+a clipped diagram edge; preserved the initial render in
+`artifacts/scc-figures-20260916-v1/render-draft/`. The repository environment lacked
+Matplotlib; an isolated uv environment supplied pinned Matplotlib3.10.8 without
+changing the training dependencies. A cross-volume rename of the draft failed
+without moving files; a verified copy preserved it instead. An initial rebuild
+copied ExFAT AppleDouble sidecars; verified those headers, removed only the copied
+metadata from the local deliverable, and made the renderer exclude such files.
+The final offline rebuild produces byte-identical five PNGs and both CSVs. All
+30 manifest-listed files verify, HTML links resolve, and the combined PDF has
+five pages. PDF/SVG metadata timestamps are not required to be byte-identical.
+[Verification receipt](artifacts/scc-figures-20260916-v1/verification.json).
+
+Share ZIP: `/Users/svdr/Downloads/SCC_figures_20260916.zip`,1,083,234 bytes,
+SHA256 `13863b8e5a4f027f76df2db3853c1b4f1e47b18857375887fe4889296094730f`.
+ZIP CRC, membership and all manifest file hashes verify. Maintained renderer:
+`scripts/plot_research_figures.py`; invoke with `--repo` to refresh selected source
+snapshots/inventory or `--inputs` for an offline rebuild into a fresh output path.
+This is an expandable visual deliverable, not a new candidate, training run,
+research pivot, recurring automation, or changed assessment of SCC's success.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.

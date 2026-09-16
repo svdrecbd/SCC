@@ -1,0 +1,402 @@
+[
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/SCC_Master_Document.pdf",
+    "kind": "document render",
+    "bytes": 207299
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-1.png",
+    "kind": "document render",
+    "bytes": 410334
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-10.png",
+    "kind": "document render",
+    "bytes": 460250
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-11.png",
+    "kind": "document render",
+    "bytes": 441169
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-12.png",
+    "kind": "document render",
+    "bytes": 317256
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-13.png",
+    "kind": "document render",
+    "bytes": 216784
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-2.png",
+    "kind": "document render",
+    "bytes": 424077
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-3.png",
+    "kind": "document render",
+    "bytes": 406443
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-4.png",
+    "kind": "document render",
+    "bytes": 487131
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-5.png",
+    "kind": "document render",
+    "bytes": 48635
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-6.png",
+    "kind": "document render",
+    "bytes": 431949
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-7.png",
+    "kind": "document render",
+    "bytes": 431072
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-8.png",
+    "kind": "document render",
+    "bytes": 495463
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render/page-9.png",
+    "kind": "document render",
+    "bytes": 434280
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/SCC_Master_Document.pdf",
+    "kind": "document render",
+    "bytes": 206151
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-1.png",
+    "kind": "document render",
+    "bytes": 410093
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-10.png",
+    "kind": "document render",
+    "bytes": 441703
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-11.png",
+    "kind": "document render",
+    "bytes": 539471
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-2.png",
+    "kind": "document render",
+    "bytes": 424077
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-3.png",
+    "kind": "document render",
+    "bytes": 405931
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-4.png",
+    "kind": "document render",
+    "bytes": 489016
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-5.png",
+    "kind": "document render",
+    "bytes": 431984
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-6.png",
+    "kind": "document render",
+    "bytes": 431159
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-7.png",
+    "kind": "document render",
+    "bytes": 496531
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-8.png",
+    "kind": "document render",
+    "bytes": 434469
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-final/page-9.png",
+    "kind": "document render",
+    "bytes": 460218
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/SCC_Master_Document.pdf",
+    "kind": "document render",
+    "bytes": 205716
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-1.png",
+    "kind": "document render",
+    "bytes": 410093
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-10.png",
+    "kind": "document render",
+    "bytes": 441703
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-11.png",
+    "kind": "document render",
+    "bytes": 511327
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-2.png",
+    "kind": "document render",
+    "bytes": 424077
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-3.png",
+    "kind": "document render",
+    "bytes": 405931
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-4.png",
+    "kind": "document render",
+    "bytes": 489016
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-5.png",
+    "kind": "document render",
+    "bytes": 431984
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-6.png",
+    "kind": "document render",
+    "bytes": 431159
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-7.png",
+    "kind": "document render",
+    "bytes": 496531
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-8.png",
+    "kind": "document render",
+    "bytes": 434469
+  },
+  {
+    "path": "artifacts/scc-master-document-20260910-v1/render-v2/page-9.png",
+    "kind": "document render",
+    "bytes": 460218
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.pdf",
+    "kind": "document render",
+    "bytes": 242355
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-1.png",
+    "kind": "document render",
+    "bytes": 504752
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-10.png",
+    "kind": "document render",
+    "bytes": 465511
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-2.png",
+    "kind": "document render",
+    "bytes": 420913
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-3.png",
+    "kind": "document render",
+    "bytes": 482246
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-4.png",
+    "kind": "document render",
+    "bytes": 528471
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-5.png",
+    "kind": "document render",
+    "bytes": 460644
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-6.png",
+    "kind": "document render",
+    "bytes": 573591
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-7.png",
+    "kind": "document render",
+    "bytes": 430679
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-8.png",
+    "kind": "document render",
+    "bytes": 499216
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render/page-9.png",
+    "kind": "document render",
+    "bytes": 600824
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.pdf",
+    "kind": "document render",
+    "bytes": 237068
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-1.png",
+    "kind": "document render",
+    "bytes": 504708
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-10.png",
+    "kind": "document render",
+    "bytes": 465511
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-2.png",
+    "kind": "document render",
+    "bytes": 420913
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-3.png",
+    "kind": "document render",
+    "bytes": 482246
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-4.png",
+    "kind": "document render",
+    "bytes": 528981
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-5.png",
+    "kind": "document render",
+    "bytes": 460654
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-6.png",
+    "kind": "document render",
+    "bytes": 573591
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-7.png",
+    "kind": "document render",
+    "bytes": 431346
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-8.png",
+    "kind": "document render",
+    "bytes": 499216
+  },
+  {
+    "path": "artifacts/scc-memory-status-20260912T202842Z/docx-render-final/page-9.png",
+    "kind": "document render",
+    "bytes": 600824
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v1-literature/seam/pipeline.png",
+    "kind": "external literature image",
+    "bytes": 1787124
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seam-figures-v1/seam-complete-replay.pdf",
+    "kind": "experiment plot",
+    "bytes": 27073
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seam-figures-v1/seam-complete-replay.png",
+    "kind": "experiment plot",
+    "bytes": 102170
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seam-figures-v1/seam-complete-replay.svg",
+    "kind": "experiment plot",
+    "bytes": 16328
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/complete-replay.pdf",
+    "kind": "experiment plot",
+    "bytes": 27313
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/complete-replay.png",
+    "kind": "experiment plot",
+    "bytes": 111140
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/complete-replay.svg",
+    "kind": "experiment plot",
+    "bytes": 15436
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/seam-complete-replay.pdf",
+    "kind": "experiment plot",
+    "bytes": 27073
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/seam-complete-replay.png",
+    "kind": "experiment plot",
+    "bytes": 102170
+  },
+  {
+    "path": "artifacts/scc-pilot-20260910-v2-publication/seed17-figures-v1/seam-complete-replay.svg",
+    "kind": "experiment plot",
+    "bytes": 16328
+  },
+  {
+    "path": "artifacts/strong-attack/plots/attack-traces.png",
+    "kind": "experiment plot",
+    "bytes": 262054
+  },
+  {
+    "path": "artifacts/strong-attack/plots/attack-traces.svg",
+    "kind": "experiment plot",
+    "bytes": 127199
+  },
+  {
+    "path": "artifacts/strong-attack/plots-final/attack-traces.png",
+    "kind": "experiment plot",
+    "bytes": 256753
+  },
+  {
+    "path": "artifacts/strong-attack/plots-final/attack-traces.svg",
+    "kind": "experiment plot",
+    "bytes": 127266
+  },
+  {
+    "path": "artifacts/strong-attack/plots-interim/attack-traces.png",
+    "kind": "experiment plot",
+    "bytes": 181464
+  },
+  {
+    "path": "artifacts/strong-attack/plots-interim/attack-traces.svg",
+    "kind": "experiment plot",
+    "bytes": 103346
+  },
+  {
+    "path": "artifacts/topology-followup/plots/adaptation.png",
+    "kind": "experiment plot",
+    "bytes": 86099
+  },
+  {
+    "path": "artifacts/topology-followup/plots/adaptation.svg",
+    "kind": "experiment plot",
+    "bytes": 66984
+  },
+  {
+    "path": "artifacts/topology-followup/plots/paths.png",
+    "kind": "experiment plot",
+    "bytes": 165283
+  },
+  {
+    "path": "artifacts/topology-followup/plots/paths.svg",
+    "kind": "experiment plot",
+    "bytes": 104028
+  }
+]

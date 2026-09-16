@@ -1,0 +1,346 @@
+{
+  "hidden_only": {
+    "validation_percent": [
+      89.71354166666666,
+      87.76041666666666,
+      90.10416666666666
+    ],
+    "mean_validation_percent": 89.19270833333333,
+    "qualified": 0,
+    "lookup_percent": [
+      69.921875,
+      64.84375,
+      70.703125
+    ],
+    "family_percent": {
+      "lookup": [
+        69.921875,
+        64.84375,
+        70.703125
+      ],
+      "parity": [
+        100.0,
+        98.828125,
+        100.0
+      ],
+      "sum3": [
+        99.21875,
+        99.609375,
+        99.609375
+      ]
+    },
+    "train_percent": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "length_percent": {
+      "2": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "4": [
+        84.765625,
+        74.21875,
+        80.46875
+      ],
+      "8": [
+        66.796875,
+        64.0625,
+        71.09375
+      ],
+      "12": [
+        67.1875,
+        66.40625,
+        69.921875
+      ]
+    },
+    "validation_rule_errors": [
+      0,
+      0,
+      0
+    ],
+    "gate_history": [
+      {
+        "case": "pair-1-hidden_only",
+        "total_disagreements": 798,
+        "updates_with_disagreements": 43,
+        "last_disagreement_update": 56,
+        "training_seconds": 4202.934436960029
+      },
+      {
+        "case": "pair-2-hidden_only",
+        "total_disagreements": 809,
+        "updates_with_disagreements": 51,
+        "last_disagreement_update": 58,
+        "training_seconds": 4206.718639992992
+      },
+      {
+        "case": "pair-3-hidden_only",
+        "total_disagreements": 771,
+        "updates_with_disagreements": 43,
+        "last_disagreement_update": 72,
+        "training_seconds": 4204.042343790992
+      }
+    ]
+  },
+  "lookup_projection": {
+    "validation_percent": [
+      92.70833333333334,
+      89.32291666666666,
+      88.02083333333334
+    ],
+    "mean_validation_percent": 90.01736111111111,
+    "qualified": 0,
+    "lookup_percent": [
+      78.515625,
+      68.75,
+      64.84375
+    ],
+    "family_percent": {
+      "lookup": [
+        78.515625,
+        68.75,
+        64.84375
+      ],
+      "parity": [
+        99.609375,
+        99.609375,
+        100.0
+      ],
+      "sum3": [
+        100.0,
+        99.609375,
+        99.21875
+      ]
+    },
+    "train_percent": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "length_percent": {
+      "2": [
+        100.0,
+        66.40625,
+        100.0
+      ],
+      "4": [
+        81.640625,
+        77.734375,
+        84.375
+      ],
+      "8": [
+        69.53125,
+        65.625,
+        70.703125
+      ],
+      "12": [
+        70.703125,
+        69.921875,
+        66.40625
+      ]
+    },
+    "validation_rule_errors": [
+      0,
+      0,
+      0
+    ],
+    "gate_history": [
+      {
+        "case": "pair-1-lookup_projection",
+        "total_disagreements": 876,
+        "updates_with_disagreements": 42,
+        "last_disagreement_update": 72,
+        "training_seconds": 4546.407117602066
+      },
+      {
+        "case": "pair-2-lookup_projection",
+        "total_disagreements": 788,
+        "updates_with_disagreements": 38,
+        "last_disagreement_update": 50,
+        "training_seconds": 4526.1779234900605
+      },
+      {
+        "case": "pair-3-lookup_projection",
+        "total_disagreements": 819,
+        "updates_with_disagreements": 38,
+        "last_disagreement_update": 45,
+        "training_seconds": 4550.183436846011
+      }
+    ]
+  },
+  "always_projection": {
+    "validation_percent": [
+      67.44791666666666,
+      89.58333333333334,
+      67.1875
+    ],
+    "mean_validation_percent": 74.73958333333334,
+    "qualified": 0,
+    "lookup_percent": [
+      71.875,
+      69.53125,
+      67.578125
+    ],
+    "family_percent": {
+      "lookup": [
+        71.875,
+        69.53125,
+        67.578125
+      ],
+      "parity": [
+        99.21875,
+        100.0,
+        100.0
+      ],
+      "sum3": [
+        31.25,
+        99.21875,
+        33.984375
+      ]
+    },
+    "train_percent": [
+      100.0,
+      100.0,
+      99.08854166666666
+    ],
+    "length_percent": {
+      "2": [
+        100.0,
+        46.09375,
+        100.0
+      ],
+      "4": [
+        79.296875,
+        78.90625,
+        85.15625
+      ],
+      "8": [
+        66.796875,
+        72.65625,
+        69.140625
+      ],
+      "12": [
+        74.21875,
+        71.875,
+        66.015625
+      ]
+    },
+    "validation_rule_errors": [
+      0,
+      0,
+      0
+    ],
+    "gate_history": [
+      {
+        "case": "pair-1-always_projection",
+        "total_disagreements": 801,
+        "updates_with_disagreements": 37,
+        "last_disagreement_update": 58,
+        "training_seconds": 4604.300147762056
+      },
+      {
+        "case": "pair-2-always_projection",
+        "total_disagreements": 947,
+        "updates_with_disagreements": 39,
+        "last_disagreement_update": 48,
+        "training_seconds": 4598.23095378594
+      },
+      {
+        "case": "pair-3-always_projection",
+        "total_disagreements": 809,
+        "updates_with_disagreements": 40,
+        "last_disagreement_update": 56,
+        "training_seconds": 4619.718345059082
+      }
+    ]
+  },
+  "neither": {
+    "validation_percent": [
+      99.609375,
+      98.30729166666666,
+      99.47916666666666
+    ],
+    "mean_validation_percent": 99.13194444444444,
+    "qualified": 2,
+    "lookup_percent": [
+      99.21875,
+      95.3125,
+      98.828125
+    ],
+    "family_percent": {
+      "lookup": [
+        99.21875,
+        95.3125,
+        98.828125
+      ],
+      "parity": [
+        99.609375,
+        100.0,
+        100.0
+      ],
+      "sum3": [
+        100.0,
+        99.609375,
+        99.609375
+      ]
+    },
+    "train_percent": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "length_percent": {
+      "2": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "4": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "8": [
+        100.0,
+        98.046875,
+        99.609375
+      ],
+      "12": [
+        98.4375,
+        94.53125,
+        99.609375
+      ]
+    },
+    "validation_rule_errors": [
+      0,
+      0,
+      0
+    ],
+    "gate_history": [
+      {
+        "case": "pair-1-neither",
+        "total_disagreements": 769,
+        "updates_with_disagreements": 35,
+        "last_disagreement_update": 43,
+        "training_seconds": 4428.585773042054
+      },
+      {
+        "case": "pair-2-neither",
+        "total_disagreements": 773,
+        "updates_with_disagreements": 45,
+        "last_disagreement_update": 53,
+        "training_seconds": 4462.255625254009
+      },
+      {
+        "case": "pair-3-neither",
+        "total_disagreements": 932,
+        "updates_with_disagreements": 43,
+        "last_disagreement_update": 51,
+        "training_seconds": 4464.301904805936
+      }
+    ]
+  }
+}

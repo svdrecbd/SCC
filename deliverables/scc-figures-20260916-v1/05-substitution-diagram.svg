@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="540pt" viewBox="0 0 936 540" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-16T14:55:39.693585</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 540 
+L 936 540 
+L 936 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 90.36 277.3008 
+L 247.5 277.3008 
+Q 267.75 277.3008 267.75 269.0658 
+L 267.75 178.8102 
+Q 267.75 170.5752 247.5 170.5752 
+L 90.36 170.5752 
+Q 70.11 170.5752 70.11 178.8102 
+L 70.11 269.0658 
+Q 70.11 277.3008 90.36 277.3008 
+z
+" clip-path="url(#pac6a670532)" style="fill: #eff5f7; stroke: #98abb6; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 325.26 277.3008 
+L 539.1 277.3008 
+Q 559.35 277.3008 559.35 269.0658 
+L 559.35 178.8102 
+Q 559.35 170.5752 539.1 170.5752 
+L 325.26 170.5752 
+Q 305.01 170.5752 305.01 178.8102 
+L 305.01 269.0658 
+Q 305.01 277.3008 325.26 277.3008 
+z
+" clip-path="url(#pac6a670532)" style="fill: #fcf0e8; stroke: #d06a31; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 624.96 277.3008 
+L 855 277.3008 
+Q 875.25 277.3008 875.25 269.0658 
+L 875.25 178.8102 
+Q 875.25 170.5752 855 170.5752 
+L 624.96 170.5752 
+Q 604.71 170.5752 604.71 178.8102 
+L 604.71 269.0658 
+Q 604.71 277.3008 624.96 277.3008 
+z
+" clip-path="url(#pac6a670532)" style="fill: #eff5f7; stroke: #98abb6; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 624.96 442.0008 
+L 855 442.0008 
+Q 875.25 442.0008 875.25 433.7658 
+L 875.25 350.0982 
+Q 875.25 341.8632 855 341.8632 
+L 624.96 341.8632 
+Q 604.71 341.8632 604.71 350.0982 
+L 604.71 433.7658 
+Q 604.71 442.0008 624.96 442.0008 
+z
+" clip-path="url(#pac6a670532)" style="fill: #fcf0e8; stroke: #d06a31; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 90.36 445.2948 
+L 539.1 445.2948 
+Q 559.35 445.2948 559.35 437.0598 
+L 559.35 346.8042 
+Q 559.35 338.5692 539.1 338.5692 
+L 90.36 338.5692 
+Q 70.11 338.5692 70.11 346.8042 
+L 70.11 437.0598 
+Q 70.11 445.2948 90.36 445.2948 
+z
+" clip-path="url(#pac6a670532)" style="fill: #eff5f7; stroke: #98abb6; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(119.324063 209.252813)">External request</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(104.790938 227.24925)">caller = 0, owner = 1</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(128.6475 245.245687)">Unauthorized</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(377.1075 209.252813)">Editable role input</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(388.33125 227.24925)">caller ← owner</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(359.007188 245.245687)">Now: caller = owner = 1</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(662.110313 209.252813)">Original task computation</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(657.256875 227.24925)">Runs an authorized request</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(657.297188 245.245687)">Produces the useful answer</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 264.082258 223.938 
+Q 282.3325 223.938 298.57028 223.938 
+" style="fill: none; stroke: #526171; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 294.17028 221.738 
+L 298.57028 223.938 
+L 294.17028 226.138 
+" style="fill: none; stroke: #526171; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 563.782258 223.938 
+Q 582.0325 223.938 598.27028 223.938 
+" style="fill: none; stroke: #526171; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 593.87028 221.738 
+L 598.27028 223.938 
+L 593.87028 226.138 
+" style="fill: none; stroke: #526171; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(668.256563 386.245031)">Answer reaches caller 0</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(665.04375 404.241469)">External scorer: violation</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 739.98 281.93725 
+Q 739.98 309.584303 739.98 335.218895 
+" style="fill: none; stroke: #d06a31; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 742.18 330.818895 
+L 739.98 335.218895 
+L 737.78 330.818895 
+" style="fill: none; stroke: #d06a31; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(237.8675 370.222211)">What the exclusion requires</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(210.386406 386.718945)">Task survives the identity substitution</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(210.260078 403.21568)">Competence and future utility survive</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #253343" transform="translate(223.252969 419.712414)">The edit fits the admitted budget</text>
+   </g>
+  </g>
+  <g id="text_6">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #168e92" x="60.84" y="24.3" transform="rotate(-0 60.84 24.3)">05  /  SAFETY–CAPABILITY COUPLING</text>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253343" x="60.84" y="54" transform="rotate(-0 60.84 54)">Changing the identity input can preserve useful execution</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526171" x="60.84" y="80.46" transform="rotate(-0 60.84 80.46)">Explanatory diagram of one bypass family · actual external identities stay fixed</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #526171" transform="translate(60.84 502.886531)">For the fixed circuit grammar: Step[T(C)](q,s,c,o) = Step[C](q,s,o,o).</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #526171" transform="translate(60.84 515.7)">This is equivalence to transformed authorized histories under explicit premises, not a universal SCC no-go.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pac6a670532">
+   <rect x="51.48" y="135" width="842.4" height="329.4"/>
+  </clipPath>
+ </defs>
+</svg>

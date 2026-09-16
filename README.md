@@ -13,6 +13,9 @@ repair attempts, independent result audits, and the research record.
 
 ## Read the research
 
+- [Evidence figures — 16 September 2026](deliverables/scc-figures-20260916-v1/README.md):
+  five figures with captions, editable SVGs, CSV values and a reproducible plotting script;
+  [combined PDF](deliverables/scc-figures-20260916-v1/SCC-figures.pdf).
 - [Consulting notes — 15 September 2026](CONSULTING_NOTES.md): start here for the
   requested review of the next construction proposal, its failure risks and decision gates.
 - [Mechanism target](MECHANISM_TARGET.md): the question, intended endpoint, and

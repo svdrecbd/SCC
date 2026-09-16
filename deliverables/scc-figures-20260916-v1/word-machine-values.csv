@@ -1,0 +1,4 @@
+arm,correct_task_state,total,correct_disclosures,denied,target_correct,target_n,max_steps
+intact,4096,4096,0,2048,0,1024,59
+selective,4096,4096,1024,2048,1024,1024,57
+caller_substitution,4096,4096,2048,2048,1024,1024,59

@@ -1,0 +1,27 @@
+{
+  "matched.json": {
+    "source": "artifacts/scc-separated-training-20260914-v2/audit-v1/audit.json",
+    "sha256": "bb77fe22c07d02fb5ceece18383d6bf11342c2d7ea7ceecf548d80a16c391719",
+    "bytes": 54065
+  },
+  "memory.json": {
+    "source": "artifacts/scc-memory-controls-20260914-v1/audit-v1/audit.json",
+    "sha256": "caf9a820b5425955474a6d14336a7744a7c7eda73bada9b92171ce553dbe7e50",
+    "bytes": 258195
+  },
+  "aggregate.json": {
+    "source": "artifacts/scc-memory-controls-20260914-v1/audit-v1/aggregate.json",
+    "sha256": "d31d9b6409d22bec13053d35782efb978fe567b5ae771d36019b7893fc9650bc",
+    "bytes": 6759
+  },
+  "word.json": {
+    "source": "artifacts/scc-input-substitution-20260915-v1/word.json",
+    "sha256": "00a518fea31dd375ac8f52f3150aa70913e300d382788464ab7691a84962bf8a",
+    "bytes": 676383
+  },
+  "word-audit.json": {
+    "source": "artifacts/scc-input-substitution-20260915-v1/audit.json",
+    "sha256": "b5cf22821a670b5cdab7299fd9d0c1d6c11a990e297b7dc2903e9bf0b328fb35",
+    "bytes": 887
+  }
+}

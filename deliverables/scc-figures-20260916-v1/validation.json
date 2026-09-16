@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "source_hashes_verified": 5,
+  "audit_counts_recomputed": true,
+  "aggregate_crosscheck": true,
+  "finite_raw_rows_rescored": 4096,
+  "exported_repair_rows": 480,
+  "figures": 5,
+  "matplotlib": "3.10.8",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "prior_inventory_counts": {
+    "document render": 60,
+    "experiment plot": 19,
+    "external literature image": 1
+  }
+}
