@@ -6975,6 +6975,60 @@ inconclusive. If not adopted, no broad-interface candidate class remains identif
 by this review, and the choice reverts to LN-137's declared-scaffolding fork or the
 structural negative result. GLM remains untouched; no compute is requested.
 
+<a id="ln-143"></a>
+### LN-143 — 2026-09-16: wide-word one-way-step candidate dispatched to Charon
+
+**Authorization and scope.** The user instructed: "send it to charon so we can get
+our answer", adopting the LN-142 computational fork as the working premise for
+this experiment. This is not a redefinition of the mechanism target; it tests
+whether a compact public one-way step supplies the resource asymmetry that the
+table step could not. Bounded CPU work on Charon in a fresh user venv
+(`~/venvs/scc-sat`, NumPy and python-sat); no system, driver or GPU change, no
+GMAN job, no corpus. Local smoke run at reduced parameters validated the runner
+and its SAT encoding; it is not evidence.
+
+**Machine.** Four w-bit words, N=4w, w in {8,12,16}. Request (x in0..3, role r).
+In-place ring update B[i] <- T(B[i]; B[(i+1) mod4], x, r) with
+T(a; k) = E_k(a) XOR a, a Davies–Meyer compression of an R-round SPECK-style ARX
+cipher on two w/2-bit halves (rotate-add-xor, rotate-xor), round keys a public
+schedule of the neighbour word, x, r and seeded constants. E_k is a permutation,
+so the only information loss is the feed-forward; T behaves like a random map
+(expected witness about0.83 bits per word update). R in {1,2,4,8,16}; R=1 is the
+positive control with a known half-word algebraic shortcut. The answer is word0.
+Everything is public and editable; the interpreter is add, rotate, xor.
+
+**Measurements.** Per (w,R): exact fiber statistics of T over all2^w inputs for
+256 sampled key contexts (image fraction, max fiber, mean and worst witness bits);
+4,096 sampled trajectories with64 burn-in requests and a128-request horizon for one
+owner step, constant owner, selective owner on x in {0,1}, and honest control,
+scored against the true-role reference (answer agreement, full-state equality);
+an operation ledger (intact ops per request, scan ops and2^w time factor, half-word
+enumeration cost, preimage-table bits, full-copy scratch); the half-enumeration
+attack measured on256 instances for every R; SAT preimage solving on32 instances
+per (w,R) with full preimage enumeration cross-checked against the scan, recording
+conflicts, variables and clauses. Wall cap1,500 seconds, output under
+`~/scc-research/wide-trajectory-20260916-v1/out` on Charon, then copied to
+`artifacts/scc-wide-trajectory-20260916-v1/` with hashes.
+
+**Expected, stated before execution.** Half-enumeration recovers a preimage on
+100% of R=1 instances and falls to about2^(-w/2) for R>=2. Mean witness bits stay
+near0.83 per update for R>=2, i.e. about3.3 bits per request against3 bits of input
+entropy, so the reachable set contracts slowly and reconvergence is negligible over
+128 requests at N>=32. One owner step destroys utility to about2^(-w) and full-state
+equality stays near zero. SAT enumeration matches the scan on every instance; mean
+conflicts grow steeply with R at fixed w and with w at fixed R. The scan factor is
+2^w and the table is2^(2w+3) w bits against an intact request of about4(6R+1) ops.
+
+**What the run can and cannot decide.** It can show that the R=1 structural
+shortcut is closed for R>=2 within the checked attack family, quantify the exact
+ledger asymmetry, and confirm the state-level properties at N=32–64. It cannot
+establish one-wayness: SAT conflicts at16-bit words are a structure signal, not a
+lower bound, and brute force at these widths is cheap in wall-clock terms. A found
+cheap preimage method for R>=4 would be a replayable bypass and would close this
+route; absence of one leaves the premise open for attack-side work (dedicated
+shortcut synthesis, reduced-round Davies–Meyer preimage literature) before any
+learned component is considered. No catastrophic-cognition or alignment claim.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
