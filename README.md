@@ -13,6 +13,9 @@ repair attempts, independent result audits, and the research record.
 
 ## Read the research
 
+- [Current direction — 16 September 2026](labnotes.md#ln-141): the irreversible
+  shared-trajectory candidate, the repair-witness bound that limits it, and the
+  one-way-step experiment dispatched to Charon (LN-141 to LN-143).
 - [Evidence figures — 16 September 2026](deliverables/scc-figures-20260916-v1/README.md):
   five figures with captions, editable SVGs, CSV values and a reproducible plotting script;
   [combined PDF](deliverables/scc-figures-20260916-v1/SCC-figures.pdf).

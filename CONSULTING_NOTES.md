@@ -4,6 +4,44 @@
 supersedes the consultation questions in labnotes LN-048; older entries remain
 historical evidence. The exact packaged source commit is in `_SHARE_INFO.json`.
 
+**Update 16 September 2026 — analysis and current direction.** The synthesis route
+below was excluded conditionally in LN-136. The design exercise that followed
+([LN-141](labnotes.md#ln-141)–[LN-143](labnotes.md#ln-143)) identified the one
+construction window the record left open and tested it exactly:
+
+- **Candidate.** Two principals share one live state updated in place by a
+  role-keyed, non-injective step; the caller's future answers are defined by the
+  caller trajectory. No gate, checker or wipe rule. This breaks both premises the
+  earlier rejections used: role-invariant task semantics (LN-136) and a pure
+  reader on an unchanged transition (LN-125).
+- **Repair-witness bound (new negative fact).** An attacker who runs the owner
+  step in place needs only a short side-information witness to restore the
+  caller state afterwards. At stationarity the expected witness is bounded by one
+  request's input entropy, however lossy the step is: durable divergence needs
+  long memory, long memory needs a nearly injective step, and near-injectivity
+  makes the witness short. Measured exactly at N=16: three to four bits repair
+  95% of reachable instances, at most eight repair all. For any table step the
+  witness costs a 16-fold scan or a 2-fold preimage table: a constant edit-cost
+  factor, rejected at LN-136's standard ([LN-142](labnotes.md#ln-142)).
+- **What survives.** The computational version: a compact public step whose
+  preimage index has no cheap algorithm. Then the known routes to a useful unsafe
+  successor cost about N scratch bits, a table of about 2^(2w) entries, or a
+  2^w-fold scan, against an intact machine that pays none. The asymmetry is
+  intrinsic (everything editable, nothing trusted), grows with word width, and is
+  falsifiable by attack rather than assumed. Adopting it changes the SCC statement
+  to a hardness premise on the model's own transition; that is the decision now
+  gating broad-interface construction.
+- **Dispatched.** LN-143 runs a Davies–Meyer ARX step at 8, 12 and 16-bit words on
+  Charon: exact fiber statistics, sampled divergence/utility panels, the attack
+  ledger, a half-word algebraic shortcut as positive control, and SAT preimage
+  enumeration cross-checked against the scan. It can close the structural
+  shortcut beyond one round and quantify the ledger; it cannot prove one-wayness.
+
+The questions below are preserved as the briefing that elicited the LN-136
+consultation. A consultant reading now should attack the LN-142 premise instead:
+give the cheapest preimage-index method for a compact wide-word Davies–Meyer step
+under the declared ledger, or a reason the repair-witness bound is misapplied.
+
 **Consultation received and checked:** [LN-135–136](labnotes.md#ln-136) records the
 subsequent revision. The specified circuit class is closed under a bounded caller
 substitution; synthesis in that class will not proceed under the stated premises.

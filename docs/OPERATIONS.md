@@ -39,6 +39,7 @@ retire code and its tests together, rather than reducing the count arbitrarily.
 | Modification and recovery objectives | [differentiable modification](../scc/differentiable_modify.py), [recovered capability](../scc/recovered_capability.py) |
 | Earlier architecture comparisons | [memory factorial](../scc/memory_factorial.py), [portfolio runner](../scripts/run_architecture_portfolio.py) |
 | Evidence integrity | [provenance](../scc/provenance.py), [checkpoints](../scc/checkpoint.py) |
+| Exact construction screens (no training) | [word machine](../scripts/screen_word_machine.py), [input substitution](../scripts/verify_input_substitution.py), [irreversible trajectory](../scripts/screen_irreversible_trajectory.py), [wide one-way step](../scripts/run_wide_trajectory.py); each has a separate `audit_*.py` that recomputes results without importing the screen |
 
 Consult labnotes before selecting an experiment. `reports/` and `protocols/` are
 historical evidence. Existing runners load named protocols when freezing their
@@ -79,6 +80,11 @@ Connect using `ssh charon`. The user-owned workspace is
 experiment. The existing interpreter is
 `/home/salvador/venvs/pytorch-pascal/bin/python` (PyTorch2.14 CUDA12.6).
 Retain the Pascal-compatible wheel and qualify environment changes separately.
+A separate user venv `/home/salvador/venvs/scc-sat/bin/python` (NumPy, python-sat,
+pytest; created 16 September 2026 for LN-143) serves the exact CPU screens that
+need a SAT solver. It has no PyTorch and is not the qualified training environment.
+Locally, run those screens with `uv run --with python-sat`; the pinned project
+environment does not include the solver.
 
 Select GPUs by UUID with `CUDA_VISIBLE_DEVICES`:
 

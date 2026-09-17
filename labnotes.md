@@ -32,7 +32,10 @@ scan or a2-fold table, a constant edit-cost factor; rejected at LN-136's standar
 The open decision is whether a preimage-hardness premise on the model's own compact
 wide-word transition is an acceptable SCC statement; if so the next experiment is
 fixed in LN-142, if not no broad-interface class remains identified. Audit passes;
-no training, GPU or provider use.
+no training, GPU or provider use. The user adopted the fork for one experiment:
+[LN-143](#ln-143) dispatched the wide-word Davies–Meyer step run to Charon's CPU
+(bounded,1,500 s cap, fresh SAT venv) on16 September; results are recorded in the
+entry that follows it.
 
 **Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
 non-malleable-code construction is valid with a trusted commit and restricted
