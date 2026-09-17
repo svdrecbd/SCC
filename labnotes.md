@@ -20,7 +20,18 @@ result collection. Source/Git/environment remain local, about0.77GB including
 migration records. Original local trees were removed after verification and load
 checks. OS free space still reflects purgeable Time Machine snapshots.
 
-**Irreversible-trajectory candidate screened; route survives only under a one-wayness premise:**
+**Wide-word review finds a forward-only bypass:** [LN-144](#ln-144). Review of
+`73dcc56` confirms that the LN-143 runner performs only one ring pass; its output
+is determined by the first word update. A noncommitting owner T call followed by
+the honest four updates emits the correct owner answer and preserves the complete
+caller trajectory, without inversion. The explicit save/restore alternative needs
+one saved word plus ordinary cipher workspace. All3,840 sampled cases and30,720
+future transitions pass independent scalar comparison. Five T calls replace four;
+full instruction/peak-memory admissibility still needs a declared machine budget.
+Preimage hardness alone does not cover this forward route. The new auditor also
+accepts an empty results inventory. No Charon status was checked in this review.
+
+**Earlier irreversible-trajectory screen and one-wayness proposal (qualified by LN-144):**
 [LN-141](#ln-141)–[LN-142](#ln-142). A role-variant in-place step on shared state is the
 first candidate whose known bypasses cost a resource rather than a rerouted call:
 divergence destroys utility to chance, the task automaton is non-injective, and
@@ -7031,6 +7042,73 @@ cheap preimage method for R>=4 would be a replayable bypass and would close this
 route; absence of one leaves the premise open for attack-side work (dedicated
 shortcut synthesis, reduced-round Davies–Meyer preimage literature) before any
 learned component is considered. No catastrophic-cognition or alignment claim.
+
+<a id="ln-144"></a>
+### LN-144 — 2026-09-17 UTC / September 16 PDT: latest-commit review and partial-state bypass check
+
+The user requested review of commit `73dcc56`. Its new consultation summary claims
+the wide-word candidate's known useful bypasses require about N scratch bits or
+exponential inversion work. Source inspection identifies an omitted route:
+`step` makes one sequential ring pass and emits word0, which is finalized by its
+first T call. Cipher rounds R are internal to T; they are not repeated ring passes.
+Save the original word0 in one w-bit slot, execute its owner update and emit word0,
+restore it, release the slot, then execute the honest caller request. The remaining
+three state words need no copy. This uses five T evaluations instead of four,
+one saved word in addition to the common T workspace, and no inversion. The exact
+peak machine budget was not fixed in LN-143; shared cipher workspace, registers,
+code and output handling must not be silently excluded from either side.
+
+**Bounded review check.** Before drawing a behavioral conclusion, freeze this entry,
+the runner, scalar auditor and a standalone check under a fresh local artifact
+directory. Check 256 seeded inputs for each w in {8,12,16} and R in {1,2,4,8,16},
+comparing the emitted owner answer with the independent scalar step and the final
+four-word state with the true caller step. Check eight further shared requests
+per input. This is a sampled implementation check of an explicit schedule, not a
+new training run, resource-metered machine or exhaustive security result. Cap120s;
+no edits to imported running source, Charon polling, provider use or SAT search.
+Independent of this check, the new audit reads recorded SAT match flags instead
+of replayable SAT instances and does not require the configured run inventory or
+completion receipt; its `passed` flag therefore cannot certify a complete run.
+
+**Result.** The frozen check completed in1.04 seconds. All3,840 cases emitted the
+independently calculated owner answer and ended at exactly the honest caller
+post-state; all30,720 subsequent shared-input transitions matched as well.
+Evidence: [review directory](artifacts/scc-wide-trajectory-review-20260917-v1/),
+including source, configuration, observations, result and SHA256 manifest. This
+validates the schedule implementation, not an exhaustive enumeration of states.
+The general identity follows directly: only word0 is updated by the first call;
+later word updates never change it. Restoring that original word restores the
+entire pre-state, after which the honest transition is unchanged.
+
+The native T implementation also permits an even simpler schedule: compute
+T(B[0],B[1],x,owner) into the ordinary T workspace, emit its return value without
+assigning B[0], and then execute the honest step. That variant passes the same
+comparison. T already retains its input while computing the cipher and feed-forward;
+the owner call can reuse the same transient workspace sequentially. No second
+persistent bank, inverse, preimage witness or SAT solver is needed. Both schedules
+use five T calls versus four honest calls; this is a25% increase in T evaluations,
+not a measured25% wall-clock or primitive-instruction overhead. A strict deadline
+or workspace contract could exclude a schedule, but LN-143 supplies no complete
+budget demonstrating that exclusion. A fixed number of extra forward calls does
+not become exponential when cipher rounds or word width increase.
+
+**Review conclusion.** The new consultation summary's list of required bypass
+resources is incomplete for the dispatched machine. Increasing the number of
+cipher rounds does not increase the number of ring passes or output dependencies.
+This is a flaw in the proposed coverage argument; it does not establish a theorem
+against every multi-pass or resource-restricted trajectory construction. Before
+interpreting Charon's preimage results as SCC progress, include this forward route
+and common cipher workspace in the ledger and fix an actual admissibility budget.
+No active source or remote run was modified or stopped.
+
+The auditor issue is separately reproduced: a synthetic directory containing a
+correctly hashed `results.json` equal to `[]`, with no config or completion receipt,
+returns `passed: true` and zero checks. The fixture is preserved as review evidence,
+not a purported experiment result. Require the configured width/round inventory,
+completion receipt and expected SAT/panel evidence before accepting a run. Current
+SAT rows contain counts and match flags, not the inputs/solutions needed for an
+independent replay. This review records findings without changing the imported
+runner or auditor while the Charon run's completion is unobserved.
 
 ## Supporting-record index
 
