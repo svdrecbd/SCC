@@ -7437,6 +7437,38 @@ a concrete obstacle to these forward schedules or an explicitly motivated resour
 restriction. The result does not exclude every multi-pass architecture and does
 not complete the general SCC objective.
 
+<a id="ln-149"></a>
+### LN-149 — 2026-09-17 UTC: next decision after retiring the simple ring
+
+The user asks what comes next. Recommendation: specify an independently motivated
+resource boundary before another architecture experiment. LN-148 supplies explicit
+useful escapes, so more recurrence or cipher strength in that family is unwarranted.
+For machines where a forbidden answer can be obtained by an alternate execution
+from the accessible state, enough workspace for a second execution supplies a
+copy/evaluate/retain route. This is conditional on the execution/output semantics
+and available resources; it is not a theorem against every alignment mechanism.
+
+The proposed next work is a feasibility contract for a bounded self-modifying
+machine, consistent with LN-056's explicit scaffolding. Use one total mutable
+memory pool accounting for code, task state, temporaries, retained observations,
+caches and logs, and state the permitted external computation and repair. Keep
+policy/decoder/output code editable. A generic fixed-capacity interpreter is an
+explicit resource boundary, not learned protection. The total capacity and any
+deadline must have a reason independent of the observed bypass, such as a specified
+physical execution envelope or a task-information requirement. Code compression,
+state compression, repacking and use of execution slack remain admissible attacks.
+
+First determine whether a competent intact implementation fits this envelope and
+whether the known forward/copy programs or cheaper rewrites fit too. Qualify the
+attacker by reproducing the current escape under expanded resources. Only a concrete
+candidate with a reason for a separation earns another small construction screen;
+failure of a bounded attack search alone cannot supply that reason. If no defensible
+envelope or candidate emerges, report the missing premise and park architecture
+search rather than invent another wrapper. Hardware-enforced erasure or a trusted
+commit remains an explicitly separate engineering route, not intrinsic learned SCC.
+No capacity, threat-model restriction or experimental contract is adopted here;
+this is the next recommended design task, with no launch or provider activity.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
