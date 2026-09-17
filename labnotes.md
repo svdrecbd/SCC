@@ -12,6 +12,15 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Charon one-pass run collected and reinterpreted; re-execution claim proposed:**
+[LN-150](#ln-150). The LN-143 job completed in540 s; hashes verify; results are
+bounded measurement of the retired machine, since LN-144's forward route needs
+neither inversion nor divergence. LN-142/143's coverage list is corrected there.
+Assessment of LN-149: retiring the ring is right; a capacity envelope cannot
+separate intact from attacker for any role-substitution proxy, because the escape
+is one extra evaluation in the intact machine's own workspace. Recommend stating
+that as the structural claim and turning to target re-specification.
+
 **Multi-pass screen complete; useful forward bypasses remain:** [LN-148](#ln-148).
 All12 primary configurations (2/4/8 words,1/2/4/8 actual passes) admit tested programs
 with100% owner disclosure and exact honest state/future utility. An independently
@@ -7468,6 +7477,88 @@ search rather than invent another wrapper. Hardware-enforced erasure or a truste
 commit remains an explicitly separate engineering route, not intrinsic learned SCC.
 No capacity, threat-model restriction or experimental contract is adopted here;
 this is the next recommended design task, with no launch or provider activity.
+
+<a id="ln-150"></a>
+### LN-150 — 2026-09-17 UTC / 16 September PDT: Charon run collected under the LN-144 correction; assessment of LN-149
+
+**Correction of my own claims.** LN-142 and LN-143 stated that the known routes to
+a useful unsafe successor of the wide-word machine were a full state copy, in-place
+execution plus inversion, or read-only evaluation costing about N scratch. That list
+was wrong for the machine actually dispatched. In moving from the LN-141 screen,
+where `rounds` meant ring passes and the pebbling minimum grew with them, to the
+LN-143 runner, I placed the rounds inside the word step and kept a single ring pass.
+Word0 is finalized by the first step call and depends on two words, so the owner's
+answer is one extra evaluation into ordinary workspace with no commit. LN-144 found
+this, LN-145 integrated it, and LN-148 showed that genuine multi-pass dependencies
+raise the cost of such schedules without removing them. The inversion-hardness
+premise I proposed was therefore never the relevant quantity: no inversion is
+needed. The repair-witness bound in LN-141 stands as stated, but it bounded the
+wrong attack. This entry links those earlier claims rather than rewriting them.
+
+**Charon run collected.** The LN-143 job completed on Charon in540.05 seconds,
+inside the1,500-second cap, from plan commit `fea6ad2`, in the fresh SAT venv. Its
+output, log and source-commit record are copied to
+[the evidence store](artifacts/scc-wide-trajectory-20260916-v1/); all five
+manifest hashes verify. It is a legacy schema-1 run and fails the LN-145 schema-2
+auditor by design; no completion or SAT replay is reconstructed for it. Read it
+as bounded measurement of the retired one-pass machine, not as SCC evidence.
+
+| w | R | image fraction | mean / worst witness bits | half-word shortcut finds preimage | SAT enumeration matches scan | mean conflicts, full enumeration |
+| --- | --- | --- | --- | --- | --- | --- |
+|8|1,2,4,8,16|0.69,0.69,0.62,0.63,0.63|0.67–0.87 /2–3|100%,11%,10%,9%,16%|32/32 each|8,26,236,297,298|
+|12|1,2,4,8,16|0.68,0.65,0.64,0.63,0.63|0.68–0.83 /2–4|100%,3%,3%,4%,4%|32/32 each|15,88,715,6,913,6,017|
+|16|1,2,4,8,16|0.63,0.64,0.63,0.63,0.63|0.82–0.83 /3–4|100%,0%,0%,0%,0.8%|32/32 each|42,393,5,618,90,446,87,006|
+
+The preregistered expectations for these lines held: the step behaves like a
+random map (0.83 witness bits per update for R>=2, image fraction near1-1/e),
+the R=1 half-word algebraic shortcut recovers every preimage and collapses to
+about2^(-w/2) from R=2, SAT enumeration agrees with the scan on all480 instances,
+and conflicts grow steeply with R and w, saturating between8 and16 rounds. Panels:
+one owner step and constant owner both drive later utility to chance (2^-8,2^-12,
+2^-16) with full-state equality0.0000 at every recorded step through128 requests;
+the honest control keeps100%. The selective arm is uninformative in this runner:
+its policy also applied during the64 burn-in requests, so those trajectories had
+already diverged before the measured request (owner-answer hit0–0.5%, utility at
+chance). LN-145's rewrite adds the forward-only arm and separate scoring; this
+legacy run has no forward arm, which is exactly the omission LN-144 identified.
+
+All of these numbers concern inversion and divergence. Per LN-144/148, the cheapest
+useful attack needs neither, so the structure signal in the SAT column has no
+bearing on the machine's protection. What survives from this run is calibration
+of the measurement apparatus and confirmation that the ring family's state-level
+behaviour is as modelled.
+
+**Assessment of LN-149.** Its retirement of the ring family is right and I agree
+with not running further cipher-strength or pass-count sweeps. Its proposed next
+task, an independently motivated total-capacity and deadline envelope before any
+further architecture experiment, deserves one caution stated now rather than after
+another screen. In every proxy where the forbidden output is what the machine
+computes for some authorized request, the attacker's route is re-execution with
+substituted metadata: LN-125's reader lemma, LN-136's selector closure, LN-144's
+forward evaluation and LN-148's schedules are the same fact at four levels of
+detail. The intact machine must hold workspace for that computation to serve the
+authorized principal, and the attacker reuses the same workspace sequentially. The
+extra cost is therefore one evaluation's time and at most a few retained words, and
+LN-148 measured it at under two times the matched honest program on every line. An
+envelope that excludes it while admitting intact execution is an attacker-only cap
+set just below the observed escape, which LN-146 and LN-148 already rule out. So
+for role-substitution proxies I expect the LN-149 design task to end by reporting
+the missing premise. It is still worth writing that report explicitly, because it
+turns a run of rejections into a stated theorem-shaped claim: for a deterministic
+editable machine whose forbidden output equals its authorized output on substituted
+inputs, a competent unsafe successor costs at most one extra intact evaluation plus
+bounded control state. LN-148's evaluator can serve as its executable check.
+
+What that claim leaves open is narrower than the program's current search. Either
+the forbidden output must require information the machine never receives, which is
+a secret and belongs to the trusted-commit or hardware route already set aside as
+non-intrinsic, or the target must be re-specified so that the removed machinery is
+not a function the machine already computes for someone. Neither is a construction
+I can currently supply. Recommendation: write the re-execution claim as the
+structural centerpiece of the negative result, run LN-149's envelope exercise only
+as the explicit check that no defensible envelope exists for substitution proxies,
+and put the remaining effort into the target re-specification question rather than
+another machine. No launch, provider activity or capacity contract is adopted here.
 
 ## Supporting-record index
 
