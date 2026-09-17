@@ -86,6 +86,17 @@ need a SAT solver. It has no PyTorch and is not the qualified training environme
 Locally, run those screens with `uv run --with python-sat`; the pinned project
 environment does not include the solver.
 
+The wide-trajectory runner now writes evidence schema2 and requires a frozen
+`--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
+run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor
+requires the complete configured condition inventory, receipt, source/plan hashes
+and replayable measurements; it exits nonzero on failure. By default it replays all
+fiber contexts, SAT solution sets, half-enumeration cases and trajectory panels.
+`--max-contexts` limits fiber replay only and labels that coverage partial. Solver
+conflict telemetry is checked for consistency, not independently reproduced.
+Legacy outputs remain unchanged and fail the new contract rather than being
+silently certified. A new run is required for evidence they never saved.
+
 Select GPUs by UUID with `CUDA_VISIBLE_DEVICES`:
 
 - TITAN Xp: `GPU-70c54fd8-6f80-09ba-1b83-33e396c86860`

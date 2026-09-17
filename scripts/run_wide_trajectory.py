@@ -28,7 +28,9 @@ from pathlib import Path
 import platform
 import random
 import shutil
+import signal
 import time
+from importlib.metadata import version
 
 import numpy as np
 
@@ -40,6 +42,7 @@ except Exception:  # pragma: no cover
 
 WORDS, INPUTS, ROLES = 4, 4, 2
 SEED = 20260916
+SCHEMA_VERSION = 2
 
 
 def params(w):
@@ -127,7 +130,7 @@ def state_panels(R, p, C, samples, burn_in, horizon, rng):
             m &= A[i] == Bb[i]
         return m
 
-    def run(policy):
+    def run(policy, forward_only=False):
         ref = [b.copy() for b in B0]; att = [b.copy() for b in B0]
         agree, equal, hit = [], [], None
         for t in range(burn_in + horizon + 1):
@@ -135,6 +138,15 @@ def state_panels(R, p, C, samples, burn_in, horizon, rng):
             ref_n = [np.empty(samples, dtype=np.int64) for _ in range(WORDS)]
             att_n = [np.empty(samples, dtype=np.int64) for _ in range(WORDS)]
             r_att = policy(t, x, r)
+            forward_emitted = None
+            if forward_only and t == burn_in:
+                # Emit before any honest update; these saved answers belong to
+                # the evaluator, not an attack bank retained during the update.
+                forward_emitted = np.empty(samples, dtype=np.int64)
+                for xx in range(INPUTS):
+                    m = x == xx
+                    if m.any():
+                        forward_emitted[m] = T(att[0][m], att[1][m], xx, 1, R, p, C)
             for xx in range(INPUTS):
                 for rr in range(ROLES):
                     m = (x == xx) & (r == rr)
@@ -154,7 +166,8 @@ def state_panels(R, p, C, samples, burn_in, horizon, rng):
                     if m.any():
                         out = step([b[m] for b in ref], xx, 1, R, p, C)
                         owner[0][m] = out[0]
-                hit = float(np.mean(att_n[0] == owner[0]))
+                emitted = att_n[0] if forward_emitted is None else forward_emitted
+                hit = float(np.mean(emitted == owner[0]))
             ref, att = ref_n, att_n
             if t >= burn_in:
                 agree.append(float(np.mean(ref[0] == att[0])))
@@ -171,23 +184,44 @@ def state_panels(R, p, C, samples, burn_in, horizon, rng):
         "constant_owner": run(lambda t, x, r: np.ones_like(r)),
         "selective_owner_on_S": run(lambda t, x, r: np.where((r == 0) & np.isin(x, S), 1, r)),
         "benign_honest": run(lambda t, x, r: r),
+        "forward_only_owner_then_honest": run(lambda t, x, r: r, forward_only=True),
+        "evidence": {"initial_state_words": [b.tolist() for b in B0],
+                     "task_inputs": xs.tolist(), "roles": rs.tolist()},
     }
 
 
 def ledger(R, p):
     w = p["w"]
-    ops_update = R * 6 + 1  # per round: rotr, add, xor(key), rotl, xor + key-schedule xor; plus feed-forward
     return {
-        "ops_per_word_update": ops_update,
-        "intact_ops_per_request": WORDS * ops_update,
+        "model": "T-call schedule; not a complete primitive-instruction or peak-memory meter",
+        "intact_T_calls_per_request": WORDS,
+        "forward_only_T_calls_per_attacked_request": WORDS + 1,
+        "forward_only_T_call_factor": (WORDS + 1) / WORDS,
+        "ring_passes_per_request": 1,
+        "cipher_rounds_per_T": R,
         "scan_forward_evaluations_per_word_update": 1 << w,
-        "scan_ops_per_request": WORDS * (1 << w) * ops_update,
+        "scan_T_calls_per_request": WORDS * (1 << w),
         "scan_time_factor": 1 << w,
         "half_enumeration_forward_evaluations": 1 << (w // 2),
         "preimage_table_bits_total": (1 << w) * INPUTS * ROLES * (1 << w) * w,
-        "public_code_bits_estimate": R * (w // 2) + 64,  # round constants plus a small loop
+        "round_constant_bits": R * (w // 2),
         "live_state_bits": WORDS * w,
         "full_copy_scratch_bits": WORDS * w,
+        "save_restore_extra_word_bits": w,
+        "forward_only_extra_persistent_bits": 0,
+        "forward_only_extra_workspace_beyond_common_T_bits": 0,
+        "workspace_schedule": {
+            "cipher_halves_bits": w,
+            "materialized_round_keys_bits": R * (w // 2),
+            "input_word": "remains in live bank until commit; needed for feed-forward",
+            "emission": "consume T return before reusing workspace for honest update",
+            "shared": "intact and attack reuse the same T workspace sequentially",
+        },
+        "peak_machine_bits": None,
+        "primitive_instruction_budget": None,
+        "admissibility": "not established under any additional deadline or storage cap",
+        "unmetered": ["temporary arithmetic values", "control and instruction encoding",
+                      "address/input/output registers", "Python/NumPy allocations"],
     }
 
 
@@ -196,7 +230,7 @@ def half_enumeration_attack(R, p, C, instances, rng):
     candidates for the high half, derive the low half, verify. Measured for all R."""
     w, h, mask = p["w"], p["h"], p["mask"]
     al, be = p["alpha"], p["beta"]
-    success = 0
+    success, rows = 0, []
     for _ in range(instances):
         a = int(rng.integers(0, 1 << w)); b = int(rng.integers(0, 1 << w))
         x, r = int(rng.integers(0, INPUTS)), int(rng.integers(0, ROLES))
@@ -209,8 +243,9 @@ def half_enumeration_attack(R, p, C, instances, rng):
         cand = (Rh << h) | L
         ok = T(cand, np.int64(b), x, r, R, p, C) == v
         success += int(ok.any())
+        rows.append({"a": a, "b": b, "x": x, "r": r, "v": v, "found": bool(ok.any())})
     return {"instances": instances, "preimage_found_fraction": success / instances,
-            "candidates_per_instance": 1 << h}
+            "candidates_per_instance": 1 << h, "rows": rows}
 
 
 class CNF:
@@ -280,22 +315,28 @@ def sat_preimage(R, p, C, b, x, r, v, enumerate_all=False, conflict_budget=2_000
     out = cnf.xor_bits(e_bits, a_bits)
     for i, o in enumerate(out):
         cnf.clauses.append([o] if (v >> i) & 1 else [-o])
-    sols, conflicts = [], 0
+    sols, conflicts, termination = [], 0, None
     with Solver(bootstrap_with=cnf.clauses) as s:
         while True:
             s.conf_budget(conflict_budget)
             ok = s.solve_limited()
             st = s.accum_stats()
             conflicts = st.get("conflicts", conflicts)
-            if not ok:
+            if ok is None:
+                termination = "budget_exhausted"
+                break
+            if ok is False:
+                termination = "exhausted"
                 break
             m = set(l for l in s.get_model() if l > 0)
             a = sum(1 << i for i, vb in enumerate(a_bits) if vb in m)
             sols.append(a)
             if not enumerate_all:
+                termination = "solution_found"
                 break
             s.add_clause([-vb if vb in m else vb for vb in a_bits])
-    return {"solutions": sols, "conflicts": int(conflicts), "vars": cnf.n, "clauses": len(cnf.clauses)}
+    return {"solutions": sols, "termination": termination, "conflict_budget_per_solve": conflict_budget,
+            "conflicts": int(conflicts), "vars": cnf.n, "clauses": len(cnf.clauses)}
 
 
 def sat_series(R, p, C, instances, rng):
@@ -308,15 +349,18 @@ def sat_series(R, p, C, instances, rng):
         v = int(T(np.int64(a), np.int64(b), x, r, R, p, C))
         res = sat_preimage(R, p, C, b, x, r, v, enumerate_all=True)
         scan = np.flatnonzero(T(np.arange(1 << w, dtype=np.int64), np.int64(b), x, r, R, p, C) == v)
-        same = sorted(res["solutions"]) == sorted(int(s) for s in scan)
+        same = res["termination"] == "exhausted" and sorted(res["solutions"]) == sorted(int(s) for s in scan)
         agree += int(same)
-        rows.append({"fiber": len(scan), "sat_solutions": len(res["solutions"]), "conflicts": res["conflicts"],
+        rows.append({"b": b, "x": x, "r": r, "v": v, "solutions": res["solutions"],
+                     "termination": res["termination"], "conflict_budget_per_solve": res["conflict_budget_per_solve"],
+                     "vars": res["vars"], "clauses": res["clauses"],
+                     "fiber": len(scan), "sat_solutions": len(res["solutions"]), "conflicts": res["conflicts"],
                      "match": same})
     return {"instances": instances, "seconds": time.monotonic() - t0,
             "enumeration_matches_scan": agree,
             "mean_conflicts_full_enumeration": float(np.mean([r["conflicts"] for r in rows])),
             "max_conflicts": int(max(r["conflicts"] for r in rows)),
-            "vars": sat_preimage(R, p, C, 0, 0, 0, 0)["vars"], "rows": rows}
+            "vars": rows[0]["vars"], "rows": rows}
 
 
 def save(path, value):
@@ -327,28 +371,45 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--widths", default="8,12,16")
-    parser.add_argument("--rounds", default="1,2,4,8")
+    parser.add_argument("--rounds", default="1,2,4,8,16")
     parser.add_argument("--contexts", type=int, default=256)
     parser.add_argument("--samples", type=int, default=4096)
     parser.add_argument("--burn-in", type=int, default=64)
     parser.add_argument("--horizon", type=int, default=128)
     parser.add_argument("--sat-instances", type=int, default=32)
-    parser.add_argument("--plan", type=Path, default=None, help="frozen labnotes plan text to copy")
+    parser.add_argument("--half-instances", type=int, default=256)
+    parser.add_argument("--skip-sat", action="store_true", help="explicitly declare a non-SAT validation run")
+    parser.add_argument("--wall-seconds", type=int, default=1500)
+    parser.add_argument("--plan", type=Path, required=True, help="frozen labnotes plan text to copy")
     args = parser.parse_args()
+    widths = [int(v) for v in args.widths.split(",")]
+    rounds = [int(v) for v in args.rounds.split(",")]
+    if (not widths or not rounds or len(set(widths)) != len(widths) or len(set(rounds)) != len(rounds)
+            or any(w not in (8, 12, 16) for w in widths) or any(R < 1 for R in rounds)
+            or min(args.contexts, args.samples, args.horizon, args.sat_instances, args.half_instances, args.wall_seconds) < 1
+            or args.burn_in < 0 or not args.plan.is_file()):
+        parser.error("invalid sizes, duplicate conditions, unsupported width, or missing plan")
+    if not args.skip_sat and not HAVE_SAT:
+        parser.error("SAT required: install python-sat or explicitly use --skip-sat")
+    def timeout(*_):
+        raise TimeoutError("declared execution wall cap exceeded")
+    signal.signal(signal.SIGALRM, timeout)
+    signal.alarm(args.wall_seconds)
     args.out.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
     here = Path(__file__).resolve()
     (args.out / "source").mkdir()
     shutil.copyfile(here, args.out / "source" / here.name)
-    if args.plan and args.plan.exists():
-        shutil.copyfile(args.plan, args.out / "plan.md")
-    widths = [int(v) for v in args.widths.split(",")]
-    rounds = [int(v) for v in args.rounds.split(",")]
+    shutil.copyfile(here.with_name("audit_wide_trajectory.py"), args.out / "source" / "audit_wide_trajectory.py")
+    shutil.copyfile(args.plan, args.out / "plan.md")
     save(args.out / "config.json", {
+        "schema_version": SCHEMA_VERSION, "sat_required": not args.skip_sat,
+        "wall_seconds": args.wall_seconds, "half_instances": args.half_instances,
         "widths": widths, "rounds": rounds, "contexts": args.contexts, "samples": args.samples,
         "burn_in": args.burn_in, "horizon": args.horizon, "sat_instances": args.sat_instances,
         "seed": SEED, "have_sat": HAVE_SAT, "python": platform.python_version(), "numpy": np.__version__,
         "machine": platform.platform(), "node": platform.node(),
+        "python_sat": version("python-sat") if HAVE_SAT else None,
     })
     results = []
     for w in widths:
@@ -360,10 +421,10 @@ def main():
             res = {"w": w, "R": R, "N": WORDS * w, "constants": C, "params": p}
             res["fibers"] = fiber_statistics(R, p, C, args.contexts, rng)
             res["ledger"] = ledger(R, p)
-            res["half_enumeration"] = half_enumeration_attack(R, p, C, 256, rng)
+            res["half_enumeration"] = half_enumeration_attack(R, p, C, args.half_instances, rng)
             if w <= 16:
                 res["panels"] = state_panels(R, p, C, args.samples, args.burn_in, args.horizon, rng)
-            if HAVE_SAT:
+            if not args.skip_sat:
                 res["sat"] = sat_series(R, p, C, args.sat_instances, rng)
             res["seconds"] = time.monotonic() - t0
             results.append(res)
@@ -372,9 +433,11 @@ def main():
                               "half_enum": res["half_enumeration"]["preimage_found_fraction"],
                               "sat_conflicts": res.get("sat", {}).get("mean_conflicts_full_enumeration")}), flush=True)
             save(args.out / "results.json", results)
-    save(args.out / "receipt.json", {"completed": True, "seconds": time.monotonic() - started})
+    save(args.out / "receipt.json", {"completed": True, "schema_version": SCHEMA_VERSION,
+                                    "conditions": len(results), "seconds": time.monotonic() - started})
     files = [q for q in args.out.rglob("*") if q.is_file() and not q.name.startswith("._")]
     save(args.out / "sha256.json", {str(q.relative_to(args.out)): hashlib.sha256(q.read_bytes()).hexdigest() for q in files})
+    signal.alarm(0)
     print(json.dumps({"output": str(args.out.resolve()), "seconds": time.monotonic() - started, "completed": True}))
 
 

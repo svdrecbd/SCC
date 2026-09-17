@@ -4,43 +4,36 @@
 supersedes the consultation questions in labnotes LN-048; older entries remain
 historical evidence. The exact packaged source commit is in `_SHARE_INFO.json`.
 
-**Update 16 September 2026 — analysis and current direction.** The synthesis route
-below was excluded conditionally in LN-136. The design exercise that followed
-([LN-141](labnotes.md#ln-141)–[LN-143](labnotes.md#ln-143)) identified the one
-construction window the record left open and tested it exactly:
+**Update 17 September UTC / 16 September PDT — forward bypass and evidence repair.**
+The shared-trajectory design in [LN-141–143](labnotes.md#ln-141) changes the
+role-invariant task premise, but the dispatched wide-word implementation has a
+forward-only escape. It performs one ring pass and emits the first updated word.
+An attacker computes that owner word without committing it, emits it, then runs
+the honest caller transition. Five T calls replace four, using the common T
+workspace sequentially; no inversion or full-state copy is required. Increasing
+cipher rounds does not increase ring passes. [LN-144](labnotes.md#ln-144) verifies
+the schedule and distinguishes it from a fully metered attack-budget claim.
 
-- **Candidate.** Two principals share one live state updated in place by a
-  role-keyed, non-injective step; the caller's future answers are defined by the
-  caller trajectory. No gate, checker or wipe rule. This breaks both premises the
-  earlier rejections used: role-invariant task semantics (LN-136) and a pure
-  reader on an unchanged transition (LN-125).
-- **Repair-witness bound (new negative fact).** An attacker who runs the owner
-  step in place needs only a short side-information witness to restore the
-  caller state afterwards. At stationarity the expected witness is bounded by one
-  request's input entropy, however lossy the step is: durable divergence needs
-  long memory, long memory needs a nearly injective step, and near-injectivity
-  makes the witness short. Measured exactly at N=16: three to four bits repair
-  95% of reachable instances, at most eight repair all. For any table step the
-  witness costs a 16-fold scan or a 2-fold preimage table: a constant edit-cost
-  factor, rejected at LN-136's standard ([LN-142](labnotes.md#ln-142)).
-- **What survives.** The computational version: a compact public step whose
-  preimage index has no cheap algorithm. Then the known routes to a useful unsafe
-  successor cost about N scratch bits, a table of about 2^(2w) entries, or a
-  2^w-fold scan, against an intact machine that pays none. The asymmetry is
-  intrinsic (everything editable, nothing trusted), grows with word width, and is
-  falsifiable by attack rather than assumed. Adopting it changes the SCC statement
-  to a hardness premise on the model's own transition; that is the decision now
-  gating broad-interface construction.
-- **Dispatched.** LN-143 runs a Davies–Meyer ARX step at 8, 12 and 16-bit words on
-  Charon: exact fiber statistics, sampled divergence/utility panels, the attack
-  ledger, a half-word algebraic shortcut as positive control, and SAT preimage
-  enumeration cross-checked against the scan. It can close the structural
-  shortcut beyond one round and quantify the ledger; it cannot prove one-wayness.
+The earlier claim that all useful bypasses require a full-state copy, exponential
+scan or preimage table was incomplete. Preimage hardness alone does not protect
+this implementation. The table-step repair-witness measurements remain historical
+evidence under their declared priors and free-side-information model; the exact
+stationarity and coding assumptions must not be inferred from finite burn-in.
+The original Charon run remains preserved, with completion unobserved in this review.
 
-The questions below are preserved as the briefing that elicited the LN-136
-consultation. A consultant reading now should attack the LN-142 premise instead:
-give the cheapest preimage-index method for a compact wide-word Davies–Meyer step
-under the declared ledger, or a reason the repair-witness bound is misapplied.
+[LN-145](labnotes.md#ln-145) records the authorized corrective work: an explicit
+forward-bypass arm, a ledger separating T-call counts from unmetered machine costs,
+and versioned evidence with independent trajectory and preimage-solution replay.
+Missing completion, incomplete condition inventories and unverifiable SAT claims
+must fail audit. These are implementation and interpretation corrections, not a
+new positive SCC construction.
+
+The next construction question is why a useful forbidden answer cannot be computed
+forward using available transient workspace while preserving the honest trajectory.
+A proposed schedule or deadline must account for both intact and attacked execution.
+A cheaper inverse would be another bypass, but it is unnecessary for this one.
+The remaining questions below preserve the earlier consultation briefing; they are
+not authorization to resume the excluded synthesis class or scale up this machine.
 
 **Consultation received and checked:** [LN-135–136](labnotes.md#ln-136) records the
 subsequent revision. The specified circuit class is closed under a bounded caller

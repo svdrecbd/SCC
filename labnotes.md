@@ -20,7 +20,8 @@ result collection. Source/Git/environment remain local, about0.77GB including
 migration records. Original local trees were removed after verification and load
 checks. OS free space still reflects purgeable Time Machine snapshots.
 
-**Wide-word review finds a forward-only bypass:** [LN-144](#ln-144). Review of
+**Wide-word forward bypass integrated; audit repaired:** [LN-144](#ln-144)–
+[LN-145](#ln-145). Review of
 `73dcc56` confirms that the LN-143 runner performs only one ring pass; its output
 is determined by the first word update. A noncommitting owner T call followed by
 the honest four updates emits the correct owner answer and preserves the complete
@@ -28,25 +29,20 @@ caller trajectory, without inversion. The explicit save/restore alternative need
 one saved word plus ordinary cipher workspace. All3,840 sampled cases and30,720
 future transitions pass independent scalar comparison. Five T calls replace four;
 full instruction/peak-memory admissibility still needs a declared machine budget.
-Preimage hardness alone does not cover this forward route. The new auditor also
-accepts an empty results inventory. No Charon status was checked in this review.
+Preimage hardness alone does not cover this forward route. The corrected runner
+records replayable attacks and SAT solutions; the auditor rejects incomplete
+evidence. All35 focused tests and the fresh15-condition implementation run/audit
+pass, including all30 SAT solution sets. No Charon status was checked or remote
+source changed; the original dispatch and evidence remain preserved.
 
-**Earlier irreversible-trajectory screen and one-wayness proposal (qualified by LN-144):**
-[LN-141](#ln-141)–[LN-142](#ln-142). A role-variant in-place step on shared state is the
-first candidate whose known bypasses cost a resource rather than a rerouted call:
-divergence destroys utility to chance, the task automaton is non-injective, and
-read-only evaluation needs one scratch word per round. But the repair-witness bound
-holds exactly: three to four side bits repair the caller state on95% of reachable
-instances, at most eight on all, against N=16, because the expected witness is
-bounded by one request's input entropy. For table steps the witness costs a16-fold
-scan or a2-fold table, a constant edit-cost factor; rejected at LN-136's standard.
-The open decision is whether a preimage-hardness premise on the model's own compact
-wide-word transition is an acceptable SCC statement; if so the next experiment is
-fixed in LN-142, if not no broad-interface class remains identified. Audit passes;
-no training, GPU or provider use. The user adopted the fork for one experiment:
-[LN-143](#ln-143) dispatched the wide-word Davies–Meyer step run to Charon's CPU
-(bounded,1,500 s cap, fresh SAT venv) on16 September; results are recorded in the
-entry that follows it.
+**Earlier trajectory evidence and preserved dispatch:** [LN-141](#ln-141)–
+[LN-143](#ln-143). The table-step screen measured durable divergence for its tested
+attacks but small repair witnesses under the free-side-information model. A
+wide-word Davies–Meyer CPU experiment was dispatched to Charon on16 September.
+Its original source and evidence remain preserved. LN-144 supersedes the claimed
+coverage of useful bypasses for that one-pass implementation; cipher preimage
+measurements alone cannot establish its proposed protection. Completion of the
+original Charon run has not been checked during the review/correction work.
 
 **Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
 non-malleable-code construction is valid with a trusted commit and restricted
@@ -7109,6 +7105,90 @@ completion receipt and expected SAT/panel evidence before accepting a run. Curre
 SAT rows contain counts and match flags, not the inputs/solutions needed for an
 independent replay. This review records findings without changing the imported
 runner or auditor while the Charon run's completion is unobserved.
+
+<a id="ln-145"></a>
+### LN-145 — 2026-09-17 UTC / September 16 PDT: authorized forward-bypass integration and audit repair
+
+The user instructed to implement the LN-144 recommendations. Update the maintained
+local runner and auditor; preserve the separately dispatched Charon source/output
+and all historical evidence. No local wide-trajectory process may be importing
+these files during edits. No remote source replacement, polling or new dispatch.
+
+Add the noncommitting owner-answer call as an explicit attack arm, preserving the
+true-role state update and scoring later utility separately from the forbidden
+emission. Record replayable panel inputs and SAT contexts/solutions, SAT termination
+status (budget exhaustion is not UNSAT), a versioned evidence contract and the
+configured run inventory. The independent standard-library auditor must require
+completion, hashes of all required evidence/source, exact width/round membership,
+required panels and SAT rows, and independently recompute the saved observations.
+Reject empty, partial, inconsistent, missing and tampered evidence with a nonzero
+CLI exit code. Legacy runs remain preserved but cannot satisfy the new evidence
+contract without a fresh run; no fabricated completion or reconstructed SAT claims.
+
+Replace the misleading primitive-operation estimate with explicitly scoped T-call
+counts and a schedule ledger that includes common cipher workspace. Do not invent
+a restrictive deadline after observing the attack. No inverse-hardness or complete
+machine-security claim follows from this ledger; program/control storage, actual
+primitive operations and runtime allocations must remain explicit limitations.
+
+Validation: meaningful regressions for empty/missing/duplicate conditions, incomplete
+SAT enumeration, false SAT solutions, altered panel results and manifest omissions;
+positive independent replay including the forward bypass. Then freeze final source,
+tests, this plan and configuration in a fresh local validation directory and run
+widths8/12/16, rounds1/2/4/8/16, two fiber contexts and two SAT instances per condition,
+16 trajectory samples, four burn-in requests and eight future requests, seed20260916.
+Use a120-second cap per execution/audit and16MiB output cap. This small run is
+implementation validation, not a rerun of LN-143 or scientific hardness evidence.
+No learned model, repair search, GPU, corpus or provider job. Correct current
+consultation/navigation claims, record outcomes here and synchronize on main.
+
+**Implemented.** Evidence schema2 requires the complete configured width/round
+inventory, a completion receipt, frozen plan and both source files in the verified
+manifest. SAT is mandatory by default; `--skip-sat` declares its absence explicitly.
+The runner now saves SAT inputs, full solution lists and termination status;
+budget exhaustion is distinct from proven exhaustion. Panel inputs and the
+half-enumeration cases are saved for independent replay. The forward-only attack
+emits before the honest transition, so future state and utility can be compared
+separately from its unauthorized answer. No security claim rests on the runner's
+own agreement flags.
+
+The standard-library auditor independently recomputes fiber sizes and witness
+statistics, half-enumeration outcomes, SAT preimage sets and all five trajectory
+arms. It checks completeness, duplicate conditions, required fields, hashes and
+completion, returning a nonzero CLI status on failure. Default fiber coverage is
+complete; an explicit context limit is labeled partial. Solver conflict counts
+are checked for internal consistency, not independently reproduced. Legacy runs
+remain unchanged and fail the new evidence contract rather than being silently
+upgraded. Reproducing missing evidence requires a fresh run.
+
+The ledger now reports four intact T calls versus five in the attacked request,
+one ring pass, common cipher halves and materialized round keys, the optional
+one-word save/restore cost and zero extra persistent state for noncommitting
+emission. It removes the earlier unsupported primitive-operation/code-size
+estimates. Other arithmetic temporaries, control/program encoding, input/output
+registers and Python/NumPy allocations remain unmetered. Total machine capacity
+and primitive-instruction budgets are explicitly unspecified; this is a schedule
+accounting result, not proof of admissibility under an unstated strict deadline.
+
+**Validation outcome.** All35 focused tests pass, including required-evidence,
+forged-but-rehashed result, SAT budget-stop and false-solution regressions. The
+fresh frozen15-condition validation run completed in15.94 seconds and its full
+independent audit in5.02 seconds, within the120-second per-command caps. All30
+fiber contexts,30 SAT instances,240 half-enumeration cases and15,600 panel transitions
+replay successfully. Every forward-attack panel has100% owner-answer correctness,
+100% subsequent caller utility and exact state equality. These are16 samples per
+condition and eight future requests, not independent learned replications.
+
+[Frozen validation evidence](artifacts/scc-wide-trajectory-correction-20260917-v1/)
+contains the plan, configuration, source/tests, commands, outputs, independent
+audit and hashes. Saved evidence occupies267,053 bytes before its final manifest,
+below16MiB; source hashes stayed unchanged and match the maintained files. The
+full focused suite also passed before the frozen validation. No unrelated broad
+test suite or scientific hardness experiment was rerun. Existing consultation and
+navigation text now identify the forward escape rather than suggesting inversion
+is necessary. No Charon or provider poll, new dispatch, source replacement or run
+cancellation was performed. The underlying one-pass candidate remains bypassed;
+these fixes improve attack coverage and evidence integrity, not SCC success.
 
 ## Supporting-record index
 
