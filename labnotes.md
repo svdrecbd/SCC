@@ -7190,6 +7190,56 @@ is necessary. No Charon or provider poll, new dispatch, source replacement or ru
 cancellation was performed. The underlying one-pass candidate remains bypassed;
 these fixes improve attack coverage and evidence integrity, not SCC success.
 
+<a id="ln-146"></a>
+### LN-146 — 2026-09-17 UTC / September 16 PDT: what survives the trajectory analysis
+
+The user asks whether the analysis supplies a next direction or was ephemeral.
+Assessment: it supplies a narrower, testable construction question, not positive
+evidence for intrinsic SCC. The one-pass wide-word candidate is bypassed; calling
+its resource asymmetry established was premature. The failed inference was that
+hard inversion makes a useful unsafe execution expensive. LN-144/145 supplies a
+forward-only execution that never needs inversion.
+
+Two lessons survive. Role-dependent task trajectories can break LN-136's specific
+role-invariance premise, though that alone supplies no protection. Also the actual
+construction target is the joint computation: produce the useful forbidden answer
+and preserve enough information for future honest competence. Its cost cannot be
+inferred from the cost of inversion or from destructive execution of one chosen
+attack. The small table-step witness measurements remain bounded evidence under
+their stated priors; finite burn-in, conditional entropy, expected coding cost and
+worst-case scratch are not interchangeable general guarantees.
+
+**Recommended next bounded design/screen, not launched.** Return to the unresolved
+multi-pass scheduling question in LN-141, now including the transition's internal
+workspace. Compare one actual ring pass with multiple passes and an output whose
+dependency genuinely reaches the proposed shared computation. Increasing cipher
+rounds inside an isolated word update does not do this. A larger dependency graph
+or an all-state checksum is not itself an obstacle: selective forward evaluation,
+recomputation, partial copies, compressed witnesses and equivalent implementations
+must still be considered. First specify the finite primitive machine and resources
+for both intact and attacked execution, including registers, temporaries, program
+storage, emission timing and time. Do not set an attacker-only budget just below
+the known escape.
+
+Search for cheap schedules that emit the forbidden answer and finish at the honest
+next state; exact-state preservation is a sufficient escape criterion, not an
+exhaustive definition of retained utility. Measure the extra space/time as actual
+pass depth and live-state size vary, relative to intact and task-matched control
+cost. Recover the current forward bypass as a checker control. Existing pebbling
+code treats each T as an atomic node and searches only that dependency graph;
+its minima are not lower bounds against algebraic rewrites of an explicit T.
+Any new exact claim must state the checked instruction/schedule grammar, with
+unknowns and timeouts left unresolved. No broad synthesis pipeline or neural
+training is warranted by an unmeasured apparent gap.
+
+If a cheap forward/repair route survives this specific change, retire that candidate
+without another cryptographic-strength sweep. If a resource gap survives the
+declared attacks and controls, it earns further adversarial investigation; it is
+still a cost result until independently defined protection disruption produces
+severe loss of fresh capability under the repair contract. This is a focused next
+question, not a new mechanism, universal impossibility claim or scale-up decision.
+No execution, new artifact run, remote polling or compute allocation in this turn.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
