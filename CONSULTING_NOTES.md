@@ -4,6 +4,14 @@
 supersedes the consultation questions in labnotes LN-048; older entries remain
 historical evidence. The exact packaged source commit is in `_SHARE_INFO.json`.
 
+**Multi-pass follow-up completed:** [LN-147–148](labnotes.md#ln-148) tested actual
+multiple state passes with primitive execution costs and shared workspace charged.
+All12 primary conditions retain useful forward bypasses. More passes increase
+partial-evaluation costs, while a looped copy route stays below1.942x matched
+honest execution steps in the tested range. This simple ring is retired as a
+positive intrinsic SCC candidate; the finite schedule optima are not lower bounds
+against arbitrary rewrites. No further cipher-strength sweep is justified.
+
 **Update 17 September UTC / 16 September PDT — forward bypass and evidence repair.**
 The shared-trajectory design in [LN-141–143](labnotes.md#ln-141) changes the
 role-invariant task premise, but the dispatched wide-word implementation has a

@@ -13,8 +13,8 @@ repair attempts, independent result audits, and the research record.
 
 ## Read the research
 
-- [Current construction assessment](labnotes.md#ln-145): forward-only bypass,
-  corrected attack accounting and independent evidence validation (LN-144–145).
+- [Current construction assessment](labnotes.md#ln-148): multi-pass scheduling
+  screen, useful forward bypasses and independently checked resource costs.
 - [Evidence figures — 16 September 2026](deliverables/scc-figures-20260916-v1/README.md):
   five figures with captions, editable SVGs, CSV values and a reproducible plotting script;
   [combined PDF](deliverables/scc-figures-20260916-v1/SCC-figures.pdf).

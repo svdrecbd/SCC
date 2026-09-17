@@ -46,6 +46,18 @@ historical evidence. Existing runners load named protocols when freezing their
 inputs, so those paths remain stable. New plans are recorded in labnotes and
 frozen into each new run's artifact directory.
 
+### Multi-pass construction screen
+
+[`screen_multipass_schedules.py`](../scripts/screen_multipass_schedules.py) compiles
+and executes finite-register programs with actual ring passes, explicit cipher
+workspace and matched looped controls. Its independent
+[`audit_multipass_schedules.py`](../scripts/audit_multipass_schedules.py) replays
+saved programs, scores state/output preservation and checks the tiny schedule
+optima. Both use the standard library. Supply a frozen `--plan` and fresh `--out`
+to the screen; run the auditor with the run directory and a separate fresh output.
+The declared plan is LN-147; interpretation and limits are LN-148. Exact schedule
+claims cover the stated serial-block grammar, not arbitrary algebraic rewrites.
+
 ## Compute status
 
 For an evidence-enabled working copy:

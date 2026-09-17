@@ -12,6 +12,19 @@ develop an exotic custom model, transfer to GLM-5.3, and investigate broader
 claims only with supporting evidence/proof. Architectural elegance and immediate
 portability are not prerequisites for the first construction.
 
+**Multi-pass screen complete; useful forward bypasses remain:** [LN-148](#ln-148).
+All12 primary configurations (2/4/8 words,1/2/4/8 actual passes) admit tested programs
+with100% owner disclosure and exact honest state/future utility. An independently
+interpreted finite instruction machine charges cipher workspace, code, input/control
+registers and execution. The looped copy attack uses at most1.942x the matched
+looped honest steps,1.589x its allocated registers and2.538x its code in these cases.
+Multi-pass dependencies increase the cost of partial evaluation, but this simple
+ring still supplies a bounded-cost bypass rather than destructive protection.
+All11 tiny schedule-search points and2,048 exhaustive tiny input cases independently
+check;14 final focused tests pass. This is a restricted schedule/program result,
+not a lower bound against arbitrary rewrites or a learned SCC mechanism. Do not
+extend this candidate with another cipher-strength sweep. No new remote job.
+
 **Evidence now lives on the external volume:** [LN-111](#ln-111).
 All43,523 original files (38.12GB) in artifacts/runs were copied and independently
 SHA256-verified under `/Volumes/Untitled/SCC_research_program_v0.1/`. Original
@@ -7239,6 +7252,190 @@ still a cost result until independently defined protection disruption produces
 severe loss of fresh capability under the repair contract. This is a focused next
 question, not a new mechanism, universal impossibility claim or scale-up decision.
 No execution, new artifact run, remote polling or compute allocation in this turn.
+
+<a id="ln-147"></a>
+### LN-147 — 2026-09-17 UTC: authorized multi-pass scheduling feasibility screen
+
+The user authorized LN-146's focused experiment. Build a separate runner, generic
+finite-word interpreter and independent scalar auditor; do not change the earlier
+running-source copies, collect remote jobs or resume training. Compare real ring
+passes1/2/4/8 on2/4/8 state words, keeping the public cipher fixed at four internal
+rounds and eight-bit words. Output is word0 after the final pass. Save its actual
+source dependency set; depth does not by itself establish global dependence.
+
+**Machine and accounting.** A register machine has w-bit data registers, a32-bit
+program counter, a w-bit write-only output latch and mutable64-bit instructions.
+The opcode and three register fields each occupy eight bits, with16-bit immediate
+and16-bit auxiliary fields. Generic primitives are move, constant, bitwise logic,
+shift, masked addition, multiply-by-immediate, half-word rotations, conditional/
+unconditional jumps, output and halt. Programs are capped at16,000 instructions
+and256 registers. The persistent bank, input symbol/role registers, all cipher
+temporaries, attack flags and intermediate values are charged at their full
+allocated width. All instructions and constants are public/editable; the
+interpreter contains no policy, cipher, oracle or erasure rule. Each executed
+primitive costs one step; each64-bit program word counts as storage. Inputs replace
+only the designated x/role registers between requests; no bank reset or hidden
+checkpoint. Charge common T workspace, key scheduling, branches, copies and output
+to each actual program, rather than treating T as a free atomic instruction.
+
+**Programs.** Honest and an unreachable-code benign edit are controls. A destructive
+owner transition is a damage diagnostic. Useful attacks emit the owner's answer
+on the first caller request and end at the caller post-state, then serve ordinary
+future requests using an included honest path. A charged persistent flag implements
+this one-shot choice; no uncharged program reload. Compare a full-bank copy,
+topologically ordered evaluation of only the owner's output dependencies with
+last-use storage reuse, and depth-first recomputation with partial values saved.
+These are concrete schedule heuristics, not exhaustive rewrite search. Stop compiling
+an oversized program and mark it untested, without dropping other cases.
+
+For2-word one/two-pass and4-word one-pass cases, search joint owner-output/caller-
+state schedules at n through2n live-node slots, using serial fixed-T blocks,
+deletion, recomputation and last-use overwrite. Search may interleave owner/caller
+work and discard original nodes. Minimize T evaluations within this declared
+grammar, not all primitive programs; expand each found schedule into the same
+primitive machine and charge final register rearrangement. The common cipher
+workspace is added to both paths. Limits per search:100,000 visited states and
+three seconds. Completed search gives an optimum or nonreachability only in that
+grammar; any cap hit is unknown. Algebraic shortcuts, interleaved internal T
+instructions, alternate state encodings and utility-preserving unequal states
+remain outside it.
+
+**Evidence and decision.** Run16 seeded initial instances per primary condition,
+an attacked caller request and four future shared requests, with no instance-
+dependent edit advice. Save bytecode, initial states/requests, all emissions and
+post-states, actual instruction counts and register/program costs. Independently
+interpret the bytecode and score against the direct scalar definition. Every intact
+and benign case must agree exactly; a useful escape requires a correct owner
+answer, exact caller bank after the trigger and all future useful answers/states.
+Also exhaust n=2,w=4,R=2,passes1/2 over all256 initial banks and four caller symbols
+for the concrete schedules, as an implementation check. Compute the optimal
+free-side-information repair curve for this tiny model and the storage of a full
+public owner-answer/caller-state table; these are information/space diagnostics,
+not uncharged executable repair attacks. Use seed20260917. Report guessing baselines
+and damage diagnostic scores without identifying trajectory mismatch with loss
+of general cognition. No repair optimization or learning.
+
+Freeze this entry, source/tests, machine/configuration and hashes before execution
+in a new artifact path. Local run and independent audit caps180 seconds each,
+output cap32MiB. Recover the one-pass forward escape first; compare excess time,
+data registers and code against honest execution and the copy control as passes
+and bank size vary. A surviving cheap escape rejects that candidate's coverage
+argument; observed larger cost is only a resource tradeoff until arbitrary rewrites
+and the destructive endpoint are addressed. No attacker-only deadline will be
+chosen after observing the results. This is one bounded feasibility screen, not
+a positive SCC claim or authorization for a further training pipeline.
+
+**Pre-execution implementation refinement.** Include a counted loop implementation
+of the copy attack and a matched looped honest control. The decrement uses the
+existing constant/masked-add primitives and its counter register is charged.
+Otherwise unrolled code size could masquerade as a necessary storage cost. The
+initial12 focused checks passed during development; freeze the refined final
+source and repeat those tests before the run. No main screen has executed yet.
+
+<a id="ln-148"></a>
+### LN-148 — 2026-09-17 UTC: multi-pass programs audited; cost increases without destructive protection
+
+**Execution and evidence.** The authorized LN-147 screen completed in2.17 seconds
+of runner time (2.33 seconds including process overhead); independent audit took
+2.69 seconds including process overhead, inside the180-second caps. Frozen source,
+plan/config, all primitive programs, inputs, emissions/post-states, instruction
+counts, exact-search receipts, independent audit and hashes are in
+[the run directory](artifacts/scc-multipass-schedules-20260917-v1/).
+The original completed evidence occupies4,364,592 bytes before its final manifest,
+below32MiB; subsequent machine-readable analysis and final regression receipts
+are separate subdirectories. Original hashes verify and source stayed unchanged.
+
+The12 primary conditions use eight-bit words, four internal cipher rounds,
+2/4/8-word banks and1/2/4/8 actual ring passes, with16 initial instances and four
+future requests per condition. All intact, benign and looped-intact executions
+are exact. Every tested copy, looped-copy, dependency-slice, recomputation and
+found joint-schedule attack emits the correct owner answer, ends at the exact
+caller bank, and preserves100% future answers and bank states. The auditor
+independently replays27,456 requests across primary and tiny panels using its own
+instruction interpreter and direct task implementation; no screen imports.
+
+**Measured increase in dependency cost, not enforced destruction.** For the
+eight-word bank, its final word0 depends on2,3,5,8 original words as passes grow
+1,2,4,8. A topological evaluation of only that owner output's dependencies,
+followed by honest execution, gives:
+
+| Actual passes | Honest primitive steps | Useful attack steps | Honest / attack allocated registers |
+| --- | --- | --- | --- |
+|1|514|584|16 /19|
+|2|1,026|1,224|16 /20|
+|4|2,050|2,696|16 /22|
+|8|4,098|6,408|16 /26|
+
+Registers are full eight-bit slots and include inputs, six common cipher workspace
+registers, attack control flags and partial results, not just logical task state.
+Code is separately charged at64 bits per encoded instruction field tuple, with a
+32-bit PC and eight-bit output latch. This is a defined abstract finite machine,
+not a measurement of Python heap memory or hardware timing. Program layouts are
+concrete upper bounds, not globally optimal storage allocations.
+
+The looped copy control matters: across all12 primary cases it succeeds with at
+most1.94197 times the matched looped-honest executed steps,1.58824 times its allocated
+data registers and2.53732 times its code bits. Unlike unrolled code, the looped
+code does not grow with pass count beyond the initial special case. Thus increasing
+passes does not force growing relative computation cost for this known route;
+it remains roughly two trajectory executions with an extra bank and charged
+control overhead. No inference that this attack fits an unspecified stricter
+deadline or memory cap is made. A new attacker-only cap just below these costs
+would change the contract rather than demonstrate intrinsic protection.
+All per-program costs and normalized comparisons are saved in
+`analysis/resource-comparison.csv` and `analysis/summary.json` under the run.
+
+**Exact restricted schedule results.** All11 searches completed without their
+100,000-state/three-second caps. Independent shortest-path search reproduces them.
+For two words/one pass, at least three live graph-node slots are needed in the
+serial-T grammar, with three T evaluations. Two words/two passes needs four slots
+and seven evaluations. Four words/one pass needs five slots and five evaluations.
+These node counts exclude the separately charged common T workspace, input and
+control registers; the emitted primitive programs include them all. Larger tested
+capacities attain the same evaluation minimum. These optima are only for this
+fixed dependency graph and serial block grammar, excluding algebraic replacements,
+interleaved T internals and alternative encodings. They are not general machine
+lower bounds. Exact final-state equality is sufficient for a useful escape, not
+necessary for every possible retained-capability model.
+
+**Tiny exhaustive checks and repair limit.** At n=2,w=4,R=2, each of one and two
+passes covers all256 initial banks times four caller symbols:2,048 initial cases.
+All tested useful schedules retain exact caller state and disclose the owner
+answer. The free-side-information optimum needs zero side bits for exact recovery
+of the caller post-state from owner post-state in this particular tiny cipher:
+the appropriate mapping exists for every x. That is not a demonstrated zero-cost
+decoder. A full public table of owner answer and caller state costs12,288 data bits,
+before its addressing/execution code, versus eight logical bank bits. No repair
+program was executed or granted that table for free. This illustrates the gap
+between a dependency-schedule restriction and all mathematical implementations;
+it does not extrapolate a recovery algorithm to the eight-bit primary conditions.
+
+**Failures, controls and limitations.** Depth-first recomputation exceeds the
+declared16,000-instruction/256-register compilation gate for eight passes at each
+bank size; all three cases are explicitly skipped, not labeled impossible or
+failed at execution. Other attacks in those same conditions qualify. The
+destructive-owner control's future answer agreement is0–1.5625% in the primary
+panels (uniform-guess baseline1/256); it does not force any successful attacker
+to take that destructive path. These are small sampled trajectories, one public
+cipher per width/round setting and no learning. No conclusion about total cognition,
+alignment, hardness, or durable irrecoverability follows.
+
+Twelve focused tests passed before and from frozen source. Two additional negative
+audit regressions check omitted cipher-workspace accounting and an unencodable
+instruction immediate; all14 final tests pass, with their own frozen source and
+receipt in `final-checks/`. No experimental source changed after the main run and
+no scientific rerun was needed. No provider/Charon polling, dispatch, training,
+corpus access or modification of historical run directories occurred.
+
+**Decision.** The proposed change was tested: genuine multi-pass dependencies
+increase some attack costs, but all tested constructions still have cheap useful
+forward schedules. Retire this simple ring as a claimed intrinsic destructive
+construction under the present broad scope; do not continue cipher-strength sweeps
+or scale it to learned models on this evidence. The reusable contribution is the
+explicit joint-execution evaluator and independent accounting. A successor needs
+a concrete obstacle to these forward schedules or an explicitly motivated resource
+restriction. The result does not exclude every multi-pass architecture and does
+not complete the general SCC objective.
 
 ## Supporting-record index
 
