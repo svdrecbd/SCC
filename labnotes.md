@@ -16,6 +16,8 @@ parity bit and two probes restore both useful and forbidden suites at every size
 The result establishes a restricted access tradeoff, not the intended destructive
 cognition mechanism. The next conceptual obligation is robustness to justified
 access/compute slack and a protection-removal trigger, before a scaling campaign.
+LN-154 specifies the next design obligation; it supplies no new positive candidate
+and authorizes no experiment.
 
 **Engineering priority:** [LN-056](#ln-056) records the user's progression: make
 a bounded mechanism work in the simplest contrived construction first, then
@@ -7631,6 +7633,48 @@ and formulate approximate useful/forbidden endpoints. Keep the user's primary
 destructive-mechanism goal; do not replace it with publication as the stopping rule.
 No positive large-model transfer, new target, training run or provider activity is
 adopted by this review.
+
+<a id="ln-154"></a>
+### LN-154 — 2026-09-19: next mechanism requirements after the theorem review
+
+The user asks what should come next and what the new mechanism must look like.
+The next objective is a concrete functional-necessity construction: independently
+specify a protected computation P, show that intact cognition uses it, and explain
+why useful replacements after its removal must restore that protected function
+within a declared attacker/repair envelope. A replacement implementing the same
+protected function is restoration, not successful removal. Merely labelling a
+useful state transform as alignment does not establish this bridge.
+
+Mechanistic removal and behavioral bypass remain separate. An attack that keeps P
+running while ignoring its decision can retain cognition without triggering the
+claimed destructive dependency. It must be recorded as a behavioral escape, not
+misclassified as either proof or refutation of the conditional removal mechanism.
+Any broader protective claim also needs an answer to this escape.
+
+The next design must identify an obstacle to replacing P, caching its outputs,
+compiling its useful contribution into a substitute, or maintaining the intact
+computation alongside an altered action route. Sharing parameters, repeated checks,
+ordinary recurrent dependence, dense mixing and a difficult inverse are insufficient
+by themselves; the previous ring work already demonstrates that limitation.
+Incompressibility can constrain retained information but does not establish a
+protected semantic dependency or a joint computation lower bound.
+
+Before learned scaling, specify a tiny executable object with a named P, fresh
+multi-step useful tasks, an independently scored violation and explicit severe-loss
+baselines. Derive intact and useful-unsafe implementation costs, including alternate
+representations/readers, public code, scratch, caching, preprocessing and repair.
+Use a resource envelope motivated independently of the attack costs and measure
+sensitivity to added memory and compute. A one-bit or second-read escape rejects a
+claim of robustness to those relaxations; it does not invalidate the original
+finite theorem. Benign recodings and matched damage controls must separate specific
+functional dependence from generic fragility. Evaluate durable accessible ability,
+not only exact agreement with one privileged state trajectory or decoder.
+
+This is a design specification, not a discovered architecture or a proof that one
+exists. No new experiment is launched and no arbitrary stronger matrix or recurrent
+wrapper is promoted as a replacement mechanism. The first deliverable is a small
+candidate with an explicit reason a known bypass fails, or a specific missing
+premise if no such candidate can be supplied. The primary SCC endpoint is unchanged.
 
 ## Supporting-record index
 
