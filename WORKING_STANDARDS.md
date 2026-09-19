@@ -22,11 +22,19 @@ additional training pressure as evidence that a dependency has formed.
 
 ## Current compute authorization
 
+The user's 2026-09-19 placement instruction is: run CPU research jobs on Charon,
+even if they take longer. The GMAN grant is GPU-only; reserve GMAN for GPU work.
+The user allows an exception for a substantial synchronized CPU batch (for example,
+about12 coordinated jobs) that would occupy Charon all day. Use that exception
+only with an explicit workload/concurrency estimate and recorded justification;
+ordinary speed advantage is not enough. This concerns compute jobs, not routine
+local file editing, Git operations or reading existing artifacts.
+
 The user instructed on 2026-09-11: do not poll runs unless they are especially
 short. Submit bounded work, report what was submitted, and let the user report
 completion. Keep automatic collectors and scheduled status checks off. Reading
-completed artifacts when the user reports back is appropriate. Short local
-implementation checks may be awaited normally.
+completed artifacts when the user reports back is appropriate. Short implementation
+checks may be awaited normally, with CPU jobs placed on Charon under the newer rule.
 
 In the 2026-09-10/11 conversation, the user explicitly removed the previous
 aggregate$10 research compute cap and authorized as much compute as the work

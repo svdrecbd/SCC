@@ -11,8 +11,11 @@ uv sync --extra dev
 uv run python -m pytest -q
 ```
 
-Use the pinned environment through `uv`. The full suite runs on CPU with small
-fixtures; GPU experiments have their own numerical and resource gates. To work on
+Run CPU test/experiment jobs on Charon under the current placement rule below;
+the commands above describe the project environment, not a local scheduling default.
+Use the pinned environment through `uv` when available in the selected checkout.
+The full suite runs on CPU with small fixtures; GPU experiments have their own
+numerical and resource gates. To work on
 the persistent-task/reference implementation, a focused selection is:
 
 ```sh
@@ -80,8 +83,13 @@ in labnotes and the [historical archive](archive/README.md).
 
 ### Charon execution
 
-Prefer Charon for bounded CPU experiments, data preparation and independent
-audits. Use its GPUs for a runner after that runner's numerical qualification;
+Run CPU experiments, data preparation, test jobs and independent audits on Charon,
+even when slower. The user's GMAN grant is GPU-only; reserve GMAN for GPU work.
+The user permits an exception for a substantial synchronized CPU batch (for example,
+about12 coordinated jobs) that would occupy Charon all day. Record a workload and
+concurrency estimate before invoking that exception; routine speedups do not qualify.
+Routine local editing, Git operations and artifact reads remain local tooling.
+Use Charon's GPUs for a runner after that runner's numerical qualification;
 the current validated CUDA path is the repair device benchmark. The production
 CPU training runner does not acquire GPU support merely by selecting a device.
 Choose H100 for memory, supported-kernel or measured throughput requirements.
@@ -95,8 +103,9 @@ Retain the Pascal-compatible wheel and qualify environment changes separately.
 A separate user venv `/home/salvador/venvs/scc-sat/bin/python` (NumPy, python-sat,
 pytest; created 16 September 2026 for LN-143) serves the exact CPU screens that
 need a SAT solver. It has no PyTorch and is not the qualified training environment.
-Locally, run those screens with `uv run --with python-sat`; the pinned project
-environment does not include the solver.
+The pinned project environment does not include the solver; use that Charon SAT
+venv for CPU screens or explicitly provision the dependency in the frozen run
+environment. Do not move a CPU screen to GMAN merely to obtain the dependency.
 
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT

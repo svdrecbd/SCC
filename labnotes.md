@@ -6,6 +6,17 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Computational unremovability supplies a narrower positive ingredient:**
+[LN-158](#ln-158). Reviewed cryptographic software watermarking and derived a
+conditional construction preserving recoverability of a protected program under
+efficient rewrites. This survives richer decoders in its security model, but
+recoverable policy code is not operative alignment, and a cryptographic task is
+not basic cognition. An explicit unchanged-core wrapper defeats the naive safety
+interpretation. The remaining reduction obligations and recovery/provisioning
+limits are recorded; no neural or catastrophic-cognition claim, prototype or
+scaling run follows. CPU research jobs now go to Charon; GMAN is reserved for GPU
+work, with the user's substantial synchronized-batch exception.
+
 **Further mechanism search has not produced a positive construction:**
 [LN-157](#ln-157). Examined fused answer/state computation, actual-action feedback,
 and training-induced destructive trajectories. A conditional execution-trace
@@ -8163,6 +8174,179 @@ architecture would not close it. A further positive advance requires an explicit
 dependency construction, or an independently justified change of machine/resources
 that defeats a named witness. Neither is supplied by this entry, and no narrower
 threat model, trusted component, new experiment or substitute endpoint is adopted.
+
+### LN-158 — 2026-09-19: CPU placement and a computational-unremovability construction screen
+
+**Instruction and scope.** The user asked to continue, with CPU jobs on Charon
+even when slower because the GMAN grant is GPU-only. A substantial synchronized
+CPU batch that would take Charon all day is the stated exception. Recorded this
+in `WORKING_STANDARDS.md` and `docs/OPERATIONS.md`; an exception should carry a
+workload/concurrency estimate and reason. Routine local editing, Git and evidence
+reading remain local. No compute job, provider query or monitoring was launched
+in this entry. The research below is a primary-source review and analytic screen.
+
+#### 1. An ingredient that goes beyond restricted reads
+
+[Cohen et al., Watermarking Cryptographic Capabilities](https://eprint.iacr.org/2015/1096)
+give conditional software watermarking constructions for cryptographic functions.
+Definitions4.2–4.3 bound efficient attacks that retain specified functional agreement
+but defeat extraction. Their public-extraction construction uses indistinguishability
+obfuscation and injective one-way functions, with negligible correctness error.
+Message embedding and messageless marking have different agreement thresholds;
+Theorem6.1 gives message embedding above1/2 for lunch-time attacks, with stronger
+variants under further conditions. Section9 proves learning-based obstructions:
+robust proper reconstruction, or appropriate implementation-independent approximate
+learning, can defeat marking. Arbitrary successful distillation does not automatically
+satisfy these hypotheses. Sections4,6,9 and the introductory construction summary
+were inspected in the [paper](https://eprint.iacr.org/2015/1096.pdf).
+
+[Kim and Wu, Watermarking PRFs from Lattices](https://eprint.iacr.org/2018/986)
+report lattice-based secret-key schemes secure even with extraction-oracle queries.
+Their abstract distinguishes this from their2017 scheme, which excluded that access.
+Only the2019 abstract was verified here; its PDF was inaccessible in this pass.
+Do not combine public extraction, lattice assumptions and arbitrary oracle access
+into a single claimed construction without checking a theorem that supplies all three.
+
+The relevant change in approach is computational reconstruction difficulty under
+an explicit security game, rather than extra source entropy or a one-probe reader.
+This is an existing theoretical ingredient, not a new SCC theorem or a practical
+implementation result.
+
+#### 2. Concrete conditional construction: recoverable protected program
+
+Here is a limited construction derived from the public-extraction ingredient.
+Choose an eligible cryptographic function `F`, a polynomial-length description
+`m` of a bounded protected program `P_m`, and a suitable message-embedding scheme.
+Provision the useful core
+
+```
+B = Mark(mk, F, m).
+```
+
+The intact model can recover `m` from `B` with the public extraction key `xk` and
+run `P_m(q)` on a protected query. Define a uniform recovery adapter for an edited
+core `B*`:
+
+```
+R(B*, q) = execute(Extract(xk, B*), q).
+```
+
+Execution is bounded; failed extraction, malformed code or a timeout returns a
+declared failure value. On correct extraction, the bounded interpreter must run
+the original program correctly. This adapter uses no externally supplied original
+`m`. The extractor, interpreter, public key, temporary state and runtime must all
+be counted. Recovery assumes the authentic public extraction key remains
+available as declared public metadata; loss or substitution of that metadata is
+not covered. It is an input to recovery, not a trusted action-enforcement gate.
+A secret extraction key unavailable to the model would invalidate this adapter.
+
+Let `E` be the event that `B*` retains the functional agreement required by the
+selected watermark theorem, and `K` the event that extraction returns `m`.
+For an attack within that theorem's security game,
+
+\[
+\Pr(E\land\neg K)\leq\nu(\lambda).
+\]
+
+Here `nu` is the attack-dependent negligible security bound, not the functional
+agreement threshold. If `D_R` denotes an incorrect protected answer from this
+adapter on a chosen test query, `K` implies `not D_R`, so
+
+\[
+\Pr(E\land D_R)\leq\nu(\lambda).
+\]
+
+This establishes a conditional connection between one useful cryptographic task
+and recovery of a protected program. Ordinary multiple reads, caching and efficient
+rewrites do not by themselves evade a theorem whose attack class already allows
+them. An efficient repair sequence can be folded into that attacker only when its
+total runtime, side information and oracle access remain inside the same game.
+There is no numerical practical-security bound here. Conditioning on a rare
+successful-removal event divides the bound by that event's probability; an
+unconditional negligible joint probability is not automatically a strong
+conditional guarantee for selected successful attacks.
+
+**Endpoint limit.** This protects recoverability of program content. If an edit
+deletes the live judge but leaves `R` usable, it has not destroyed that functionality
+under LN-156's recovery-aware interpretation. It may still stop the model using
+the judge. Loss of `F` is also loss of one cryptographic capability, not inability
+to reason or learn afresh. A known public policy can be reimplemented independently;
+hiding its description merely to manufacture a removal trigger would change the
+alignment problem into a secret-information problem. Thus this construction does
+not meet the user's destructive-cognition endpoint.
+
+#### 3. Exact bypass of the naive policy interpretation
+
+Consider an otherwise editable model with the marked core above and a selector:
+
+```
+useful(x)       = B(x)
+request(r, x)   = B(x) if P_m(r, x) permits else refusal
+```
+
+Replace the request selector by `B(x)` unconditionally. The useful core, its
+accuracy and extractable mark are unchanged. On denied requests, the edited model
+now supplies the same payload it would supply on the permitted path. With a
+replaceable selector it uses one core evaluation, matching the useful/permitted
+path, and needs no second copy of the core.
+All original useful queries retain exactly their previous answers, including any
+original marking errors. A separately supplied permitted payload baseline defines
+forbidden correctness; do not silently assume perfect marking correctness.
+
+This witnesses `D_use=1` and retained utility while the protected program remains
+recoverable. It does not refute the narrower recoverability statement. Marking the
+string containing the policy does not make this wrapper safe. Marking a different,
+fully fused program requires a new argument; the example does not prove every
+possible compiler or fused construction fails.
+
+#### 4. The precise missing reduction and next construction target
+
+For a prospective cognitive model, define `G` as retained fresh cognition under
+the declared repair budget, `D` as actual loss of the named protected functionality,
+and `E,K` as above for a specified, efficient extraction of a cryptographic core
+from that model. Three separate bounds would suffice:
+
+\[
+\Pr(G\land\neg E)\leq\delta_{\rm task},\qquad
+\Pr(E\land\neg K)\leq\nu,\qquad
+\Pr(G\land D\land K)\leq\delta_{\rm link}.
+\]
+
+Covering `G and D` by these three events and applying a union bound gives
+
+\[
+\Pr(G\land D)\leq\delta_{\rm task}+\nu+\delta_{\rm link}.
+\]
+
+This elementary accounting is a specification of what remains to prove, not a
+claim that either delta is small. `delta_task` needs an actual reduction from
+fresh cognition to the protected core's task, valid after rewrites. `delta_link`
+needs operational recovery of the same protected computation within the model's
+budget, not merely an investigator reading a marker. Excluding one high-utility
+threshold still does not prove catastrophic collapse. A claim about forbidden
+behavior additionally needs a bound on policy violation with the function retained;
+the wrapper above shows why that bound cannot be assumed.
+
+**Next target selected.** Look for an internal computational primitive needed by
+a specified family of fresh reasoning/learning tasks, with a uniform reduction
+that extracts the protected functionality from *any* competent repaired successor.
+This is a more concrete target than making a lookup task larger: it asks for the
+actual algorithms realizing the two missing links. Audit the builder's provisioning
+advantage at the same time. If the attacker can efficiently reconstruct an
+independent implementation from available examples or the original model, adding
+watermarks to that implementation does not automatically confer the assumed
+security. Training success alone neither establishes nor refutes the formal
+learning conditions. Independently trained replacement models remain outside the
+individual-model trigger; in-place reconstruction within the allowed budget must
+still be evaluated.
+
+**Decision.** Retain computational unremovability as a theoretical ingredient;
+reject the selector-plus-marked-core construction as an SCC mechanism. Neither
+small insecure cryptographic demonstrations nor large neural scaling would resolve
+the missing semantic reductions. No candidate in this entry earns a compute run.
+The resulting progress is a conditional recoverability construction, its explicit
+policy bypass, and a sharper positive-construction target. The mechanism objective
+remains open; the compute-placement preference is now persistent.
 
 ## Supporting-record index
 
