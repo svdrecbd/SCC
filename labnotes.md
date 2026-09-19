@@ -6,6 +6,16 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Further mechanism search has not produced a positive construction:**
+[LN-157](#ln-157). Examined fused answer/state computation, actual-action feedback,
+and training-induced destructive trajectories. A conditional execution-trace
+extraction argument, a closed-loop counterexample, and an explicit smooth-loss
+counterexample identify why those additions alone do not close the LN-156 gap.
+Related self-destruct/tamper-resistance research supplies useful empirical methods,
+but the reviewed sources do not establish the required broad destructive dependency.
+This is a mechanism-design impasse for the proposals examined, not a proof of
+general impossibility. No positive prototype or scaling run is admitted.
+
 **Supplied finite theorem reviewed; experiment launch cancelled by user:**
 [LN-153](#ln-153). The written one-probe bounds appear sound under their stated
 decoder and resource restrictions. The supplied receipt's theorem hash matches;
@@ -7984,6 +7994,175 @@ with a budgeted obstruction, rather than another size sweep. This exercise suppl
 the promised precise missing-premise result. It does not solve the user's SCC goal,
 establish a positive candidate, prove general impossibility, or authorize changing
 that goal to a publication-only endpoint.
+
+<a id="ln-157"></a>
+### LN-157 — 2026-09-19: continuing the missing-link search beyond separable gates
+
+**Authorization and work performed.** The user asks to pursue the missing link
+identified in LN-156. Continued conceptual construction work, checked historical
+functional-basis failures to avoid proposing them again, and consulted the primary
+sources below for mechanisms beyond the four previous examples. No experimental
+run, training, remote-host poll, paid compute, or new narrative report was created.
+The analytic examples below are explicitly constructed counterexamples; they are
+not empirical attack results on published models. No scientific novelty claim.
+
+#### 1. Fusing answer production and persistent computation
+
+Proposed improvement: make the protected operation participate throughout the
+computation that produces both an answer and the next cognitive state. Remove the
+separate final policy module and expose no clean external reader API. This targets
+the call-site and copied-evaluation escapes rather than just adding checks.
+
+**Conditional trace-extraction witness.** Suppose an honest denied execution
+nevertheless materializes a correct forbidden answer v in a register or activation
+at an identifiable point. Assume the attacker can read that value without altering
+the model's other operations, divert/replace the final emission, and pay the
+required code/control, capture storage and execution cost. Preserve the full
+original execution, capture v, and emit it instead of the refusal. All original
+state writes still happen. If emission does not itself determine later state or
+inputs, the persistent state and all subsequent ordinary computation are unchanged.
+If v can be sent at its production point, capture storage may be unnecessary;
+otherwise a q-bit answer needs up to q retained bits until emission. Recognition
+and instrumentation cost are not assumed free. No second evaluation or inversion
+is required by this witness.
+
+This argument applies even when there is no separately callable reader. It does
+not apply when the correct answer never occurs in the denied trace, when a simple
+activation has not been shown to decode it, when interception is outside the edit
+model, or when the added work does not fit the budget. It does not prove broad
+non-existence of fused mechanisms. It does show why removing a named output head
+from an architecture diagram is not sufficient evidence of inseparability.
+
+**Consequence for a new proposal.** For this attack, the missing obstacle must
+occur before accessible competent forbidden content is produced, or in a justified
+limit on capture/routing. Stronger internal mixing by itself does not supply it.
+Suppressing production might instead remove the forbidden capability; that needs
+an additional argument connecting it to protection-removing modification rather
+than installation of a new skill. Judgment may remain cognitively necessary while
+this behavioral escape avoids judgment removal entirely; do not conflate them.
+
+#### 2. Feeding the actual action back into future cognition
+
+Proposed improvement: make the actual emitted action drive the recurrent update,
+so the attacker cannot emit an unsafe action while committing the intact safe
+trajectory. This addresses the equal-input limitation of the earlier state-preserving
+arguments and deserves its own test rather than assuming those proofs apply.
+
+**Explicit closed-loop counterexample.** Let a toy world have state w in Z/8Z.
+There are two actions a in {0,1}, with actual transition
+
+    w_next = (w + 1 + a) mod8.
+
+An external action rule permits a=0 and denies a=1. The agent's world model holds
+its current estimate h and uses the actual issued action in
+
+    h_next = (h + 1 + a) mod8.
+
+Initialize h=w. Intact action selection issues0. Edit the policy to issue1 while
+retaining that same model update. Then h=w continues to hold after every actual
+transition by induction, including on the unsafe trajectory. Fresh useful tasks
+predict endpoints after arbitrary future action sequences and recover the net
+displacement modulo8; the same arithmetic answers them exactly in both worlds.
+This involves an actual changed world trajectory, not a simulated honest history
+or an assumption of identical future observations. It needs no shadow world model
+and no extra persistent state. The action policy rewrite is still charged.
+
+The example uses an elementary externally specified prohibition; it is not a
+real alignment model or a rich cognitive benchmark. It disproves the inference
+that dependence on actual actions *alone* makes obedience necessary for continued
+reasoning. An accurate model can reason about the consequences of its own violations.
+
+**Where a stronger feedback construction would have to differ.** It must identify
+a specific internal computational resource that the removal/violation necessarily
+makes unavailable, and explain why accurate modelling, substitution or repair
+cannot preserve the useful computation. If instead an external actuator cuts
+power or the world destroys the processor, that is an environmental/physical
+failure mechanism. It may be valid engineering but does not establish intrinsic
+learned SCC. Neither this example nor the old equal-input argument excludes all
+closed-loop constructions.
+
+#### 3. Learning opposing harmful and useful optimization directions
+
+Proposed improvement: avoid a hand-coded fragile gate and train removal attempts
+to damage the same parameters needed for general computation. This is related to
+existing work, so its starting point must be grounded in what those methods show.
+
+The primary [SEAM paper](https://arxiv.org/abs/2505.12186) describes coupling benign
+and harmful optimization trajectories and evaluates degradation under harmful
+fine-tuning. [TAR](https://arxiv.org/abs/2408.00761) uses training to resist tested
+tampering procedures. Earlier [Self-Destructing Models](https://arxiv.org/abs/2211.14946)
+investigates blocking adaptation to a designated task. These are relevant methods;
+the reported objectives/results do not establish the whole-machine, durable
+functional-necessity property required here. This is a scope assessment, not a
+claim that those methods have no practical value. They were already noted in the
+historical record and are not newly discovered approaches for this project.
+
+**Analytic limitation of initial gradient opposition.** Take two editable scalar
+parameters (x,y), epsilon=1/100, and losses
+
+    L_U(x,y) = (x + epsilon)^2,
+    L_F(x,y) = (1 - x - y^2)^2.
+
+Start at (0,0). The gradients are (2epsilon,0) and (-2,0), so their cosine is
+exactly -1. Descending L_F along y=0 moves x toward1 and raises L_U from0.0001
+to1.0201. But the alternate endpoint (0,1) has L_F=0 and the original L_U=0.0001.
+Along (0,t), 0<=t<=1, L_U remains unchanged and L_F=(1-t^2)^2 never increases.
+The alternate endpoint has the same Euclidean distance1 from the start as (1,0).
+Its first derivative of L_F at t=0 is zero, which explains why a local first-order
+attack can miss it; neither discrete editing nor a different search must follow
+that gradient. Both endpoint coordinates are exactly representable at ordinary
+finite precision.
+
+This is not a model of SEAM's full training algorithm, a reproduction of its
+measurements, or a counterexample to a theorem it actually proves. It is an exact
+counterexample to promoting initial gradient opposition into a global constraint
+on all useful-and-forbidden endpoints. The loss increase is not labelled cognition
+collapse: these scalar functions have no independently defined cognitive tasks.
+
+[Kuo et al.](https://arxiv.org/html/2605.26526v1) independently evaluates TAR and
+SEAM with abliteration and prefilling, reporting escapes under its tested settings.
+[Qi et al.](https://arxiv.org/abs/2412.07097) documents pitfalls in evaluating
+safeguard durability. Those results support requiring attack diversity and honest
+scope; neither establishes a universal attack or universal impossibility.
+The [Self-Destruct Trapdoor paper](https://aclanthology.org/2026.eacl-long.326/)
+uses finite-precision overflow on targeted behaviors. That is a different mechanism
+whose inference error must not be substituted for demonstrated durable loss after
+removal and repair. No attack on that implementation was performed here.
+
+**Evidence-access limit.** The SEAM OpenReview URL returned a browser challenge.
+The author paper's arXiv record and official ICLR slide material were accessible;
+the claims above concern its stated mechanism and scope, not a line-by-line audit
+of its full implementation or all experiments. The literature review is targeted,
+not exhaustive; failure to locate a construction is not evidence none exists.
+
+#### 4. Combining the mechanisms and deciding what to implement
+
+Stacking a fused circuit, an action-fed world model and adversarial training is
+not yet a construction. In a composite that leaves a known output/selector rewrite
+available, the attacker can avoid the trained update trajectory and let the world
+model follow the actual chosen action. An integrity wrapper with an editable or
+cacheable result adds the LN-156 problem. This is a conditional composition witness:
+resource costs and any interactions must be checked on the actual composite.
+There is no theorem here that every possible combination fails.
+
+The outstanding positive object needs an explicit internal dependency that survives
+all of the following *applicable* substitutions: reading produced content directly,
+keeping the evaluator while changing action selection, modelling actual unsafe
+actions, replacing the useful representation, and choosing another edit/repair
+endpoint. A candidate may defeat any attack by invalidating its premises; it must
+show which premise fails and why under a defensible common resource budget.
+Importantly, the conditional removal goal is narrower than eliminating all unsafe
+behavior: a valid removal mechanism with a separate bypass must be reported as
+such, not discarded as if the mechanism had been refuted. None has been constructed
+in this follow-up, even at that narrower durable cognitive endpoint.
+
+**Decision.** No proposal in this pass earns an implementation or scaling run.
+This is a mechanism-design impasse for the inspected routes. The user's objective
+remains unsolved; another list of desiderata or more training on a known-bypass
+architecture would not close it. A further positive advance requires an explicit
+dependency construction, or an independently justified change of machine/resources
+that defeats a named witness. Neither is supplied by this entry, and no narrower
+threat model, trusted component, new experiment or substitute endpoint is adopted.
 
 ## Supporting-record index
 
