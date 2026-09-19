@@ -107,6 +107,37 @@ The pinned project environment does not include the solver; use that Charon SAT
 venv for CPU screens or explicitly provision the dependency in the frozen run
 environment. Do not move a CPU screen to GMAN merely to obtain the dependency.
 
+#### Bend finite-machine qualification
+
+`experiments/bend_machine/` contains the finite interpreter, checked laws and
+proofs, an intentionally false proof, the independent Python specification and
+the differential runner/auditor. Programs under test are numeric data; unsafe
+model edits do not need to pass the host language's policy checks.
+
+The isolated Charon toolchain is under
+`/home/salvador/scc-research/bend-qualification-20260919-v1/toolchain/`:
+Node `node-v24.13.0-linux-x64/bin/node` and Bend source
+`bend-15ae0c86f3193b8f645b4bedbc438655b648d0da`. `build.mjs` uses the pinned Bend
+checker/compiler APIs directly because the upstream CLI requires Bun. It checks
+the complete book, rejects holes/unsafe declarations, and emits JavaScript.
+This setup does not qualify the native C or GPU backend.
+
+For a new run, first freeze the relevant labnotes plan and all files in
+`experiments/bend_machine/` into a fresh Charon `source/` directory. From its
+parent directory, with `scc_node` and `scc_bend` set to the paths above:
+
+```sh
+timeout 300 /home/salvador/venvs/scc-sat/bin/python source/qualify.py \
+  --node "$scc_node" --bend-root "$scc_bend" --out results
+timeout 300 /home/salvador/venvs/scc-sat/bin/python source/audit.py results
+```
+
+The output directory must not exist. Keep command receipts, generated code,
+ordered cases/results, source/toolchain hashes and failures. The auditor checks
+the exact regenerated case set as well as predictions. A failed compile, unknown
+opcode, out-of-fuel result or falling off the tape is not a collapse measurement.
+Read labnotes for current validation status and superseded development receipts.
+
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
 run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor

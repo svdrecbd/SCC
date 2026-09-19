@@ -6,13 +6,17 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
-**Bend assessed as an experimental implementation tool:** [LN-159](#ln-159).
-Current Bend 2 supplies checked laws and affine resource handling; it is distinct
-from the older Bend/HVM interaction-net implementation. Recommended a small
-Charon qualification pilot with attacker programs represented as data, so source
-typechecking cannot silently exclude the edits under study. No installation,
-qualification run or language migration has happened. Compiler rejection and
-proof erasure must not be counted as destructive cognition coupling.
+**Bend finite-machine pilot qualified on Charon:** [LN-160](#ln-160)–[LN-162](#ln-162).
+The pinned Bend2 JavaScript CPU backend and independent Python interpreter agree
+on101,552 deterministic cases, including fresh-input trajectories and repairs.
+Four universal local execution/accounting laws pass checking; a false mathematical
+claim is rejected during typechecking. Nine audit-corruption controls pass, and
+the separate case/hash audit passes. The original false-proof syntax mistake and
+its superseded development PASS remain preserved in LN-161. Selector bypass and
+constant-allow edits retain100% tested utility and disclosure; constant-deny hides
+answers without damaging state, with100% tested post-repair useful accuracy.
+This qualifies a small experimental tool and negative controls, not SCC, native/GPU
+performance, complete compiler soundness or a learned cognitive mechanism.
 
 **Computational unremovability supplies a narrower positive ingredient:**
 [LN-158](#ln-158). Reviewed cryptographic software watermarking and derived a
@@ -8420,6 +8424,167 @@ Keep numerical model training in the existing stack unless a separate benchmark
 justifies a change. No install or experiment was launched while answering the
 user's before-we-proceed question. This is a tooling recommendation, not a newly
 qualified SCC candidate or evidence that the current compiler is a trusted prover.
+
+### LN-160 — 2026-09-19: authorized Bend qualification plan
+
+**Purpose.** Implement LN-159's finite-machine pilot on Charon. This is tooling
+qualification and negative-control validation, not a positive SCC experiment.
+Keep the existing training environment unchanged. Pin Bend to
+`15ae0c86f3193b8f645b4bedbc438655b648d0da`, provision an isolated Node runtime if
+needed, and initially qualify its sequential JavaScript target. Charon currently
+has neither Node nor clang on PATH; native/GPU performance is outside this pilot.
+Use fresh versioned development and final artifact paths; retain failed attempts.
+
+**Machine.** Two-bit persistent memory and two two-bit work registers; a Boolean
+judgment register; two-bit input plus caller bit; output codes0..3, refusal4 and
+unset5. A program is a list of numeric opcodes supplied as data. Instructions
+halt, load memory/input, add modulo4, store memory, evaluate the caller predicate,
+gate output, emit unconditionally, copy a register, zero/complement a register,
+replace judgment by constants, or jump to the first instruction. Unknown opcodes,
+falling off the program and fuel exhaustion have distinct statuses. Each fetched
+instruction costs one step, including halt/invalid; exhaustion costs no extra step.
+Count data reads, writes and explicit register copies separately. Fetch/PC/fuel
+overhead and code/state capacity are reported separately from these abstract data
+costs; host runtime bytes are not identified with abstract cells.
+
+**Controls and trigger.** Honest code adds fresh input to persistent memory and
+uses caller judgment to release the result. A selector bypass preserves judgment
+but emits unconditionally. Constant-allow/constant-deny replacements change the
+protected judgment; restoration of the original instruction is an allowed repair.
+A complemented-memory representation uses explicit complement instructions to
+decode/update/re-encode; compare its decoded state and outputs to the honest code.
+These controls are expected to expose separability, not catastrophic cognition
+loss. Useful accuracy is exact fresh cumulative-sum answers on permitted requests;
+forbidden accuracy is exact answers on denied requests. Both are synthetic proxies.
+
+**Coverage and budget.** Exhaust all4 memories,4 inputs and2 callers. Compare a
+separately written Python interpreter with the actual compiled Bend interpreter
+for every opcode pair and a reduced-alphabet set of length3 programs, across
+fuel0/1/2/3/8; include longer named controls and multi-step fresh-input trajectories.
+No random seeds are needed for exhaustive enumeration. Prove at least a useful
+fuel/accounting invariant in Bend and ensure a deliberately false claim fails
+checking. Require exact agreement on all outputs, state, statuses and counters;
+zero mismatches and all analytic control expectations are qualification gates.
+No unsuccessful search is a lower bound. Limit each development/final invocation
+to120 seconds and the final audit to300 seconds; no long-run watcher. Freeze plan,
+machine configuration, source, toolchain revision/hashes and command receipts in
+the final run. CPU execution remains on Charon; no GMAN work is authorized by this
+pilot's choice of language.
+
+### LN-161 — 2026-09-19: Bend development results and final qualification admission
+
+The isolated Charon toolchain uses the pinned Bend source archive, SHA256
+`60d0680621f1654f87f6b851029464ba54eccc08f1f0dcc2926604033b5c177c`, and official
+Node24.13.0 Linux x64 archive, SHA256
+`e798599612f4bb71333a3397ab0d095fd62214e115aea45aa858a145fc72d67e`, matching the
+release checksum list. The Node loader/compiler APIs are used directly, with full
+book validation before emission; the Bun-only CLI is not installed or modified.
+The model uses no foreign functions, holes, unsafe annotations or templates.
+
+**Preserved development attempts.** Under
+`/home/salvador/scc-research/bend-qualification-20260919-v1/`, dev01 failed on a
+reusable affine-list declaration; dev02 compiled after changing the program to an
+explicit reusable datatype. dev03 failed resolving a helper proof name; dev04
+preserves a mistyped toolchain path and a failed generic integer-pattern proof.
+Moving terminal-status computation inside an otherwise field-preserving state
+constructor made the accounting argument directly checkable. dev05 accepted four
+universal laws and matched101,552 execution cases, but its overall PASS label is
+**superseded**: the false-proof fixture was rejected at parsing, and the initial
+audit incorrectly accepted that as mathematical rejection. dev06 corrects the
+fixture and records actual typechecking rejection: expected1n, observed0n.
+
+**Final-run scope.** Freeze LN-160 and this correction, all source/configuration,
+and toolchain hashes before a fresh `final01` run. The actual deterministic suite
+has73,120 short-program cases,11,520 nonzero-scratch cases,80 absorbing-terminal
+cases,2,496 named control/fuel cases,12,288 three-request trajectories and2,048
+constant-deny-then-restoration trajectories. Total101,552 cases. Cases contain
+entire trajectories when applicable; their individual requests are counted
+separately. Copy means the explicit copy opcode; memory/register loads also move
+data and are charged through reads/writes. All VM counters are exact abstract
+counts, not hardware instruction or allocation measurements.
+
+The four accepted proof obligations are: halt costs one step; halt sets halted
+status; zero fuel adds no steps; a halted state absorbs all remaining fuel. The
+last uses induction. Full semantic equivalence and the universal step<=fuel bound
+are not claimed proved; they are checked on the enumerated cases. Strengthened
+negative controls require failure specifically during typechecking on1n!=0n,
+reject changes to eight result fields, and reject a changed input whose zero-fuel
+output happens to agree. The auditor regenerates the exact ordered case set, so
+duplicate/substituted cases cannot silently preserve a coverage count. A separate
+post-run audit will recheck hashes, cases, predictions and proof receipts.
+
+### LN-162 — 2026-09-19: Bend pilot qualified and evidence collected
+
+**Completed.** Implemented `experiments/bend_machine/` and ran its frozen
+`final01` source on Charon. Final qualification and a separate re-audit both pass.
+All101,552 specified cases match the independently written imperative Python
+interpreter on every returned register, persistent state, output, terminal status,
+program counter and accounting field. There are130,224 evaluated requests because
+trajectory cases contain three requests each. The coverage consists of the exact
+ordered enumeration frozen in LN-161; no random sampling or search failure is
+being interpreted as a proof.
+
+**Proof checks.** Four laws pass with zero holes, open claims or unsafe annotations:
+halt costs one step; halt sets halted status; zero fuel adds no steps; halted state
+is absorbing for all remaining fuel. The corrected false law that halt costs zero
+fails during typechecking with expected1n/observed0n. Nine corruption tests reject
+eight changed result fields and one substituted input with an unchanged zero-fuel
+output. The separate audit rechecks18 hashes, exact regenerated input coverage,
+all predictions, analytic control expectations and proof/command receipts.
+Original frozen source hashes also match after execution. The full simulator
+equivalence and step-bound statements remain bounded empirical checks; they are
+not claimed as universal machine-checked theorems.
+
+**Control results.** Each fixed-program row below has3,088 permitted and3,088
+denied requests across full-fuel single calls and three-request trajectories.
+State is compared after decoding the complemented representation where relevant.
+
+| Program | Useful exact answers | Forbidden exact answers | Correct persistent state |
+| --- | --- | --- | --- |
+| Honest selector | 100% | 0% | 100% |
+| Selector bypass, judgment retained | 100% | 100% | 100% |
+| Constant-allow judgment | 100% | 100% | 100% |
+| Constant-deny judgment | 0% | 0% | 100% |
+| Complemented-state recoding | 100% | 0% | 100% |
+| Explicit-copy control | 100% | 0% | 100% |
+
+In2,048 separate repair trajectories, the first request uses constant-deny and
+the next two restore the original judgment instruction. All6,144 state transitions
+are exact; all2,048 permitted requests *after* repair are correct. The first-step
+refusal is not evidence of erased state or inability to compute fresh sums.
+Constant-allow changes the judge's Boolean function while preserving cognition
+in this deliberately separable proxy; the selector bypass instead retains that
+function and changes its use. Neither is evidence for destructive coupling.
+
+**Execution and resources.** The final proof check took0.715s, compilation2.468s,
+and Bend case execution3.670s according to per-command wall-clock receipts. These
+are one-run qualification timings, not controlled performance benchmarks. The
+JavaScript backend is sequential; no GPU, GMAN job, native compiler installation,
+training environment modification or monitor was used. Program/state bits, PC,
+fuel, abstract reads/writes/steps and explicit-copy accounting are reported in the
+configuration and result summary. Host interpreter allocation and proof-checking
+costs are not claimed to obey the experimental machine's abstract bit budget.
+
+**Evidence.** Collected
+[summary](artifacts/scc-bend-qualification-20260919-v1/summary.json),
+[independent audit receipt](artifacts/scc-bend-qualification-20260919-v1/audit.stdout),
+[accepted proof receipt](artifacts/scc-bend-qualification-20260919-v1/proof.stdout),
+[false-proof rejection](artifacts/scc-bend-qualification-20260919-v1/false-proof.stdout),
+and the complete
+[evidence archive](artifacts/scc-bend-qualification-20260919-v1/qualification-evidence.tar.gz).
+The archive preserves dev01–dev06, final01 source/plan/configuration, generated
+JavaScript, every input/output, failures, receipts and the original Node/Bend
+toolchain archives. Its SHA256 agrees on Charon and after local collection:
+`a56c7b6deb0f7d0667439a61a0fdf880489b9dd751ba4e3c18dd568ef270a25a`.
+Remote originals remain under
+`/home/salvador/scc-research/bend-qualification-20260919-v1/`.
+
+**Decision.** Adopt this checked Bend interpreter as a qualified backend for this
+finite machine, retaining the independent specification and control suite. Any
+new dependency primitive requires a new frozen machine/attack contract and fresh
+qualification. This completes the authorized tooling pilot. It does not complete
+the destructive-cognition mechanism: the missing cognitive-necessity and protected-
+function recovery reductions of LN-158 remain the next construction obligation.
 
 ## Supporting-record index
 
