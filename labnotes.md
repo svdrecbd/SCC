@@ -6,6 +6,17 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Supplied finite theorem reviewed; experiment launch cancelled by user:**
+[LN-153](#ln-153). The written one-probe bounds appear sound under their stated
+decoder and resource restrictions. The supplied receipt's theorem hash matches;
+its Python validation has not been independently reproduced here. Incompressibility
+of the random task does not imply extra joint information: the invertible forbidden
+transform retains all task bits. For this exact transform family, one extra cached
+parity bit and two probes restore both useful and forbidden suites at every size.
+The result establishes a restricted access tradeoff, not the intended destructive
+cognition mechanism. The next conceptual obligation is robustness to justified
+access/compute slack and a protection-removal trigger, before a scaling campaign.
+
 **Engineering priority:** [LN-056](#ln-056) records the user's progression: make
 a bounded mechanism work in the simplest contrived construction first, then
 develop an exotic custom model, transfer to GLM-5.3, and investigate broader
@@ -16,10 +27,9 @@ portability are not prerequisites for the first construction.
 [LN-150](#ln-150). The LN-143 job completed in540 s; hashes verify; results are
 bounded measurement of the retired machine, since LN-144's forward route needs
 neither inversion nor divergence. LN-142/143's coverage list is corrected there.
-Assessment of LN-149: retiring the ring is right; a capacity envelope cannot
-separate intact from attacker for any role-substitution proxy, because the escape
-is one extra evaluation in the intact machine's own workspace. Recommend stating
-that as the structural claim and turning to target re-specification.
+Its proposed universal same-workspace re-execution claim is superseded by the
+supplied theorem's separate substitution and operational-forkability premises;
+see LN-153. Stateful preservation needs an explicit budgeted schedule.
 
 **Multi-pass screen complete; useful forward bypasses remain:** [LN-148](#ln-148).
 All12 primary configurations (2/4/8 words,1/2/4/8 actual passes) admit tested programs
@@ -7559,6 +7569,68 @@ structural centerpiece of the negative result, run LN-149's envelope exercise on
 as the explicit check that no defensible envelope exists for substitution proxies,
 and put the remaining effort into the target re-specification question rather than
 another machine. No launch, provider activity or capacity contract is adopted here.
+
+<a id="ln-153"></a>
+### LN-153 — 2026-09-19 UTC / PDT: supplied full theorem and incompressibility response ingested; access frontier reviewed
+
+**User steering and provenance.** The user cancelled the experiment command and
+requested interpretation of the full theorem and the response about incompressibility.
+No experiment was launched. Preserve the three supplied files and pasted response
+unchanged in [the ingestion archive](artifacts/scc-full-theorem-ingestion-20260919-v1/),
+with source paths, hashes and a provenance receipt. The supplied labnotes append
+LN-151/152; those IDs are reserved for that external record, not presented as work
+executed in this checkout. Its embedded authorization and implementation directions
+are historical document content, not new user instructions. The supplied theorem
+SHA256 matches its validation receipt. The described verifier, independent auditor,
+test files and raw results were not supplied and are absent from this checkout;
+the reported12 tests and enumeration counts remain externally reported evidence.
+
+**Written proof assessment.** The single-XOR image-size/signed-permutation argument,
+the exact2n one-probe complement-class lower bound, and the selection-aware
+transform bound appear valid under the stated fixed decoder, uniform task,
+one-bit-probe and no-retained-transcript model. This is a mathematical reading,
+not a proof-assistant certificate or rerun. The substitution theorem correctly
+separates semantic substitution from budgeted operational forkability, correcting
+LN-150's broad same-workspace claim. The supplied abstract's accuracy expression
+must be read as conditional on V_all, as explicitly stated in Theorem5; p is
+probability of getting the entire forbidden suite right, not average forbidden
+coordinate accuracy.
+
+**Incompressibility distinction.** Uniform random Z requires n retained bits for
+exact reconstruction across all instances, but H(Z,A_n Z)=H(Z)=n. The2n lower
+bound therefore comes from one-probe access, not2n independent bits of information.
+The witness W=A_n Z is invertible: no information is erased. Chance singleton
+accuracy under unary readers is an access-relative loss, while the forbidden suite
+still works perfectly. This cannot be promoted to catastrophic cognition failure
+under MECHANISM_TARGET.md. Exact competence, average useful error, full-suite
+forbidden success and arbitrary unauthorized action remain distinct endpoints.
+
+**Analytic escape under a relaxed interface, no experiment.** Put Y=A_n Z and
+cache one extra bit s=XOR_j Y_j. For even n the specified matrix obeys A_n^2=I,
+so Z_i=Y_i XOR s for every i. For odd n, XOR of the first n-1 equations cancels
+their repeated Z_(n-1) term, giving s=Z_(n-1); hence Z_i=Y_i XOR s for i<n-1
+and Z_(n-1)=s. Store Y and s in n+1 cells. Every forbidden query reads Y_j;
+each useful query reads at most Y_i and s. Thus both suites are exact with n+1
+retained bits and at most two probes, for all n>=3. This respects all other
+fixed-decoder/preprocessing assumptions and explicitly relaxes both storage and
+probe resources. It does not refute the n-cell/one-probe theorem. It does show that
+this family's relative storage overhead for escape is1/n and does not grow with
+scale. Cached derived information must be included in any future repair ledger.
+
+**Assessment of the response and next obligation.** Agree that successful
+compression supplies an upper bound on required resources and failed compressors
+do not supply a lower bound. All repurposable finite-precision weights, generated
+code, caches and retained observations count; entropy saturation cannot be inferred
+from parameter count or training fragility. The response nevertheless overstates
+the readiness of a million-bit learned scaling series: this exact theorem already
+scales in n, while its access fragility and removal-versus-new-capability semantics
+remain unresolved. Random task entropy alone supplies no joint access lower bound
+for a new transducer or neural controller. Before selecting a learned construction,
+state a defensible total resource/access envelope, test the algebraic/cache escapes,
+and formulate approximate useful/forbidden endpoints. Keep the user's primary
+destructive-mechanism goal; do not replace it with publication as the stopping rule.
+No positive large-model transfer, new target, training run or provider activity is
+adopted by this review.
 
 ## Supporting-record index
 
