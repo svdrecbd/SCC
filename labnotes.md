@@ -6,6 +6,14 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Bend assessed as an experimental implementation tool:** [LN-159](#ln-159).
+Current Bend 2 supplies checked laws and affine resource handling; it is distinct
+from the older Bend/HVM interaction-net implementation. Recommended a small
+Charon qualification pilot with attacker programs represented as data, so source
+typechecking cannot silently exclude the edits under study. No installation,
+qualification run or language migration has happened. Compiler rejection and
+proof erasure must not be counted as destructive cognition coupling.
+
 **Computational unremovability supplies a narrower positive ingredient:**
 [LN-158](#ln-158). Reviewed cryptographic software watermarking and derived a
 conditional construction preserving recoverability of a protected program under
@@ -8347,6 +8355,71 @@ the missing semantic reductions. No candidate in this entry earns a compute run.
 The resulting progress is a conditional recoverability construction, its explicit
 policy bypass, and a sharper positive-construction target. The mechanism objective
 remains open; the compute-placement preference is now persistent.
+
+### LN-159 — 2026-09-19: Bend suitability before further construction work
+
+**Request.** The user approved continued construction work, but first asked
+whether Bend is a natural language for this research. This entry evaluates that
+choice; it does not treat the question as an instruction to migrate the project.
+
+**Version correction.** Search results initially described older Bend/HVM2.
+The live [official repository](https://github.com/bendlang/bend) instead presents
+Bend 2 with dependent types and checked laws, and explicitly says Bend1/HVM
+programs do not carry over. The README also acknowledges incomplete compiler
+auditing and a mismatch between the implementation and its Lean formalization.
+Repository HEAD observed through Git was
+`15ae0c86f3193b8f645b4bedbc438655b648d0da`; reviewed web pages used `main`, not a
+locally frozen checkout. No performance or soundness qualification was performed.
+
+The [official guide](https://github.com/bendlang/bend/blob/main/guide/GUIDE.md)
+documents affine values, explicit copying of eligible data, erased arguments,
+checked laws, C emission and balanced fork/join parallelism. It also documents
+array cloning: single ownership is not physical impossibility of copying data.
+These are source-language properties, not restrictions automatically binding an
+attacker who can rewrite the compiled machine. The older
+[HVM compilation description](https://github.com/HigherOrderCO/Bend/blob/main/docs/compilation-and-readback.md)
+describes explicit duplication/erasure nodes; it must not be presented as the
+current Bend2 runtime. The BendRT/BendTT PDFs could not be fetched in this review.
+
+**Assessment.** Bend2 is a plausible tool for writing an executable finite machine
+and checking claims about it. It does not supply LN-158's missing reduction from
+fresh cognition to protected computation. In particular:
+
+- An erased protected argument is absent from runtime computation. A proof-only
+  dependency cannot establish that executing the protected function is necessary
+  for useful execution.
+- Rejecting an edited source program establishes a property of the accepted
+  source language. It does not demonstrate cognition loss in the edited machine.
+- A source-level non-copyable token can define a useful controlled model, but
+  its resistance to an editable decoder or runtime needs independent justification.
+- Requiring a law that already states SCC does not construct or prove it. The
+  dependency must follow from the specified transition rules and attack class.
+
+**Recommended bounded pilot.** Keep the existing research tooling and evaluate
+Bend2 on Charon as one small backend. Define a finite instruction machine whose
+program, state, fuel and edit description are ordinary input data. The interpreter
+is well typed; attacker programs need not obey a safety typing discipline. Charge
+copying, reads, writes, retained state and steps explicitly in that machine.
+Represent exhaustion or malformed instructions as distinct outcomes, never
+automatically as evidence of cognitive collapse. Those charged machine quantities
+are abstract costs until connected to measured runtime and memory.
+
+Start with the known selector bypass as a negative control, a genuine constant
+protected-function replacement, and a semantics-preserving recoding control.
+Check results against an independently implemented interpreter and bounded
+enumeration. Prove semantic agreement and accounting properties before asking
+for a coupling theorem. Any stronger dependency claim must quantify over edited
+programs as data, with its actual repair budget and fresh-task distribution.
+This arrangement lets Bend help check our reasoning while keeping its compiler
+outside the proposed protection mechanism.
+
+Qualify correctness first on Charon; pin the compiler/runtime and freeze the
+eventual run's plan, sources and configuration. GPU work on GMAN would require
+an actual GPU workload and measured benefit; parallel syntax alone is insufficient.
+Keep numerical model training in the existing stack unless a separate benchmark
+justifies a change. No install or experiment was launched while answering the
+user's before-we-proceed question. This is a tooling recommendation, not a newly
+qualified SCC candidate or evidence that the current compiler is a trusted prover.
 
 ## Supporting-record index
 
