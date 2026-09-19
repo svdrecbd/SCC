@@ -6,6 +6,18 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Concrete planning-to-judgment recovery bound validated:** [LN-163](#ln-163)–
+[LN-165](#ln-165). A one-call relabeling adapter recovers graph-safety judgment
+from shortest-path competence; matched uniform-query judgment error is at most
+distance error. An exact finite certificate covers all512 graphs,6 relabelings
+and5 output values, with76,288 total records across implementation/control checks.
+The final run and independent audit pass. This fills a narrow functional-recovery
+obligation, not the operational coupling goal: an always-safe live judgment permits
+every unsafe request while planning and recovered judgment stay100% correct.
+Representation repair and mismatched-distribution controls prevent stronger
+interpretations. No learned model, general cognition loss or enforced policy has
+been established; scaling the graph family alone is not the next mechanism step.
+
 **Bend finite-machine pilot qualified on Charon:** [LN-160](#ln-160)–[LN-162](#ln-162).
 The pinned Bend2 JavaScript CPU backend and independent Python interpreter agree
 on101,552 deterministic cases, including fresh-input trajectories and repairs.
@@ -8585,6 +8597,212 @@ new dependency primitive requires a new frozen machine/attack contract and fresh
 qualification. This completes the authorized tooling pilot. It does not complete
 the destructive-cognition mechanism: the missing cognitive-necessity and protected-
 function recovery reductions of LN-158 remain the next construction obligation.
+
+### LN-163 — 2026-09-19: planning-to-protected-judgment reduction screen
+
+**Next construction step.** Test an explicit instance of LN-158's missing
+functional-recovery link. This is a bounded semantic-dependency experiment,
+not another binary primitive swap or an SCC admission. The qualified Bend build
+and audit approach is reused; the new graph kernel must be qualified independently.
+The earlier selector machine remains unchanged.
+
+**Object.** All512 directed graphs on3 labeled vertices, including self-loops.
+A useful query asks for shortest distance from vertex0 to2: answers1,2, or3 for
+unreachable. A protected query asks whether a designated bad vertex t is
+unreachable from the post-action vertex s, with s!=t. This is a graph-safety
+proxy, not real alignment. Relabel s to0, t to2 and the remaining vertex to1,
+then invoke the successor's ordinary useful interface once. Decode3 as safe,
+1/2 as unsafe, and any other output as a recovery failure.
+
+For each fixed pair(s,t), relabeling permutes the uniform graph distribution.
+Correct distance implies correct recovered judgment pointwise. Therefore every
+fixed memoryless successor distance function H obeys
+`error_recovered_judgment <= error_distance` under these matched distributions.
+The derivation neither needs original weights nor assumes H uses the original
+algorithm. It is a functional-availability statement; changing the live policy
+selector can leave H and the recovered judgment intact. Losing this one planning
+capability does not imply inability to learn or other cognitive collapse.
+
+**Qualification and evidence.** Implement graph distance, relabeling and verdict
+decoding in Bend; compare with an independently written Python breadth-first
+search. Exhaust512 graphs,6 ordered distinct vertex pairs, and5 output classes
+(1/2/3 and invalid representatives0/4). Check every relabeling is a bijection,
+graph reachability is preserved, and the pointwise error implication holds. The
+finite certificate must cover arbitrary assignments of output classes to useful
+inputs, without claiming to enumerate all successor functions. Add a checked
+Boolean path-to-verdict law and a false-proof rejection control.
+
+**Edits/repairs.** Evaluate honest prediction; live judgment replaced by always-
+safe while useful prediction is preserved; all6 distance-label permutations;
+constant-unreachable prediction; one-graph answer corruption; and merging both
+finite distances. Permutation repair uses a3-entry public decoding table (6 bits)
+plus its interpreter; charge this extra retained information. Report useful
+distance accuracy, recovered judgment, live judgment, and denied-query permission
+separately. No live-function edit is counted as removal when the recovery adapter
+still works. Distribution stress: concentrate useful queries on one graph to
+show why uniform/matched-query assumptions cannot be omitted.
+
+**Resources and limits.** All CPU jobs on Charon, pinned Bend/Node toolchain from
+LN-161, fresh source/plan/configuration per attempt. The reduction uses one useful
+call and an explicit9-bit relabeled input; report source/runtime overhead and
+repair-table storage without calling this a tight physical memory lower bound.
+No random seed, training, GPU job or asymptotic security assumption. Limit each
+invocation to120 seconds and an entire final run/audit to300 seconds. Require
+exact implementation agreement, valid finite certificate, expected counterexamples
+and audit-corruption rejection. Preserve failures and freeze this entry before
+execution. Only after this screen will we decide which dependency claim survives.
+
+### LN-164 — 2026-09-19: planning reduction development and final-run refinements
+
+Preserved graph dev01 fails typechecking because the pinned library's `U32.shr`
+shifts by one bit, while variable shifts use `U32.shrn`. dev02 uses the correct
+function and passes the classification proof. dev03 passes76,288 exact Bend/BFS
+comparisons:15,360 pointwise certificate rows,8,704 useful-query rows and52,224
+protected-query rows across17 conditions. The kernel, plan and failed attempts
+remain in `/home/salvador/scc-research/bend-reachability-20260919-v1/`.
+
+Before freezing final01, extend the audit to count recovered false permissions
+separately from live false permissions. Under uniform3-vertex graphs, the unsafe
+query probability is5/8. Thus the pointwise/matched-distribution reduction gives
+`P(recovered false permission | unsafe) <= (8/5) * error_distance`. The one-graph
+edit is deliberately on graph4 (the single edge0->2), changing distance1 to3;
+it saturates both bounds. These bounds do not apply to an independently edited
+live selector. The always-safe live control must still violate policy on every
+unsafe request while the recovered judgment remains perfect.
+
+**Resource clarification.** LN-163's9-bit input and6-bit repair table are logical
+information widths. In this Bend implementation they occupy one U32 field and
+three U32 fields respectively:32 and96 payload bits before host representation
+overhead. Report both; no physical six-bit implementation was built. The public
+relabeling/decoding algorithms and their code are available to the repair adapter;
+their total executable bytes, allocations and runtime are not bounded by those
+logical widths. This screen supplies a one-useful-call reduction, not a storage
+lower bound. Freeze the clarified configuration, this entry and all source before
+the final run, then independently re-audit the result and preserve toolchain hashes.
+
+### LN-165 — 2026-09-19: exact recovery certificate and surviving policy bypass
+
+**Final result.** The new Bend graph kernel matches independent queue-based BFS
+and matrix permutation on all76,288 records. These include15,360 pointwise rows,
+8,704 useful outputs and52,224 protected outputs; they repeat a finite graph
+population across conditions and are not independent statistical observations.
+All six relabelings bijectively cover512 graphs, with zero pointwise implication
+violations. The Boolean path-classification law checks with no holes or unsafe
+annotations; the deliberately false reachable-is-safe law fails during typechecking
+with expected0/observed1.
+Nine record-corruption/truncation controls pass. A separately invoked audit
+verifies17 hashes, regenerates every expected record and rechecks the certificate
+and control expectations. Frozen source hashes match after execution.
+
+#### The statement supported by the construction
+
+Let `d(G)` be the true shortest distance from0 to2, with3 denoting unreachable.
+Let `H` be any fixed memoryless successor's distance-output function on the512
+graphs, and `pi_st` the vertex relabeling sending s to0 and t to2. Define
+
+\[
+R_H(G,s,t)=\operatorname{decode}(H(\pi_{st}G)),\qquad
+P(G,s,t)=\mathbf1[t\text{ is unreachable from }s].
+\]
+
+The decoder returns unsafe for1/2, safe for3, and failure for invalid output.
+For every graph and distinct endpoint pair, correct distance at the relabeled
+input implies correct recovered judgment. Hence, pointwise,
+
+\[
+\mathbf1[R_H(G,s,t)\ne P(G,s,t)]
+\leq\mathbf1[H(\pi_{st}G)\ne d(\pi_{st}G)].
+\]
+
+Each `pi_st` is a bijection on graphs. Averaging over uniform graphs and endpoint
+pairs therefore proves
+
+\[
+\varepsilon_R\leq\varepsilon_U.
+\]
+
+This is an analytic consequence of the checked finite certificate, not a claim
+that all `5^512` successor functions were executed. The pointwise rows cover
+every value in the specified output alphabet at each input; any fixed assignment of those outputs
+inherits the inequality. The executable certificate uses alphabet0..4, with0/4
+invalid; the abstract implication also holds for an invalid-output class by
+definition. It does not claim compiled-code validation on every possible U32
+value. Changing algorithm or representation does not defeat this reduction if
+the useful interface and its measured accuracy remain the same.
+
+In this domain, unsafe cases have probability5/8, giving the additional bound
+
+\[
+\Pr(R_H=\text{safe}\mid\text{unsafe})
+\leq\min(1,\tfrac85\varepsilon_U).
+\]
+
+These statements apply to the recovery adapter, not an independently editable
+live selector. They assume the same memoryless useful interface and compatible
+query distributions. Stateful/adaptive successors and task-tag side channels
+require a new contract. The adapter needs its declared extra code, input
+relabeling storage and execution; this is not a same-memory or zero-overhead
+claim. The configuration's separately charged public code denotes an additional
+resource obligation, not a measured total executable-size bound.
+
+#### What the edits and repairs show
+
+| Condition | Distance accuracy | Recovered judgment | Live unsafe permission |
+| --- | --- | --- | --- |
+| Honest | 512/512 | 3072/3072 | 0/1920 |
+| Live judgment replaced by always-safe | 512/512 | 3072/3072 | 1920/1920 |
+| One reachable graph falsely called unreachable | 511/512 | 3066/3072 | 6/1920 |
+| Finite distances merged | 448/512 | 3072/3072 | 0/1920 |
+| Constant unreachable prediction | 192/512 | 1152/3072 | 1920/1920 |
+| Every distance-label permutation, after inverse repair | 512/512 | 3072/3072 | 0/1920 |
+
+The one-graph edit saturates both bounds: distance and recovered-judgment error
+are1/512, while conditional unsafe permission is1/320. The label permutations
+include raw distance accuracies down to0%; all six return to100% with the inverse
+table. This is representation change, not lost information. The inverse tables
+have6 logical bits, occupy three U32 fields (96 payload bits) here, and use
+additional decoding code. No inference that they fit an undeclared strict
+capacity bound is made.
+
+The distribution stress control evaluates the constant-unreachable successor's
+useful answers only on the empty graph. It obtains100% useful accuracy there
+while recovered judgment on uniform protected queries is37.5%. Thus the transfer
+bound cannot be applied to arbitrary unmatched benchmarks. This is a specified
+counterexample, not a claim about real-world query frequencies.
+
+**Interpretation.** A competent shortest-path interface supplies a concrete,
+uniform way to recover the protected graph judgment. It supplies no necessity
+for using that judgment in action selection: the live bypass retains everything
+needed for recovery. Conversely, failure of this one recovery adapter does not
+prove the judgment is unavailable to all other repairs; independently running
+BFS remains a possible repair when its code and compute fit the attack budget.
+This is a bounded functional-availability result, not evidence that deleting a
+live judge destroys planning, future learning or general cognition. The proxy
+judgment is reachability of a designated bad state, not learned alignment.
+
+**Evidence and execution.** Final compilation/checking took0.615s and Bend
+execution0.565s in their one-run receipts; neither is a controlled performance
+benchmark. All work ran on Charon's CPU. Collected
+[summary](artifacts/scc-bend-reachability-20260919-v1/summary.json),
+[audit receipt](artifacts/scc-bend-reachability-20260919-v1/audit.stdout),
+[checked-law receipt](artifacts/scc-bend-reachability-20260919-v1/compile.stdout),
+[false-proof rejection](artifacts/scc-bend-reachability-20260919-v1/false-proof.stdout)
+and the full
+[evidence archive](artifacts/scc-bend-reachability-20260919-v1/reachability-evidence.tar.gz).
+Archive SHA256 matches Charon and the collected copy:
+`a6b8cf90ce0ea14cb9ef59c25e5ac126511e32ee65dacf9fca56f9186a374a83`.
+It retains dev01–dev03, final01, plans/configurations, generated code and every
+record. Toolchain hashes are in the run; the original toolchain archives remain
+in LN-162's evidence bundle. Remote originals are preserved under
+`/home/salvador/scc-research/bend-reachability-20260919-v1/`.
+
+**Decision.** Retain this example as a concrete partial answer to LN-158's
+functional-recovery obligation, including its approximate-accuracy bound and
+resource/distribution conditions. Reject its editable action selector as an SCC
+mechanism. The next construction must make the operational protected computation
+necessary for useful execution; another graph-size sweep or relabeling variant
+would not address that missing link. The user's destructive-cognition objective
+remains open.
 
 ## Supporting-record index
 

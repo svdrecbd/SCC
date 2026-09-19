@@ -138,6 +138,14 @@ the exact regenerated case set as well as predictions. A failed compile, unknown
 opcode, out-of-fuel result or falling off the tape is not a collapse measurement.
 Read labnotes for current validation status and superseded development receipts.
 
+`experiments/bend_reachability/` uses the same isolated toolchain and command
+shape for the planning-to-judgment reduction screen. Freeze that directory's
+files instead; it has its own graph kernel, BFS reference and auditor. The
+auditor verifies the complete ordered graph/output certificate, six relabeling
+bijections, edit/repair conditions and matched-distribution error bounds. This
+is a separately qualified kernel, not an extension silently covered by the
+selector machine's validation. Its recovery bound does not enforce live policy.
+
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
 run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor
