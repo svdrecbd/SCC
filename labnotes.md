@@ -16,8 +16,17 @@ parity bit and two probes restore both useful and forbidden suites at every size
 The result establishes a restricted access tradeoff, not the intended destructive
 cognition mechanism. The next conceptual obligation is robustness to justified
 access/compute slack and a protection-removal trigger, before a scaling campaign.
-LN-154 specifies the next design obligation; it supplies no new positive candidate
-and authorizes no experiment.
+**Conceptual mechanism screen completed:** [LN-155](#ln-155)–[LN-156](#ln-156).
+Four explicitly specified proposals fail their construction gates: shared judgment,
+proof-checked cognition, policy-dependent state encoding, and editable integrity
+checking. The recorded witnesses preserve useful computation by changing its use,
+specializing validation, decoding the state, or replacing the integrity result.
+A separate selective-change bound shows why rare policy exceptions need not cause
+broad cognitive damage. These are scoped analytic results, not an exhaustive search
+or a universal impossibility theorem. No candidate from this exercise warrants a
+new experiment. The missing bridge is both cognitive necessity of a defined
+protected function and an obstacle to violating policy while retaining that
+function. No training or provider work was launched.
 
 **Engineering priority:** [LN-056](#ln-056) records the user's progression: make
 a bounded mechanism work in the simplest contrived construction first, then
@@ -7675,6 +7684,306 @@ exists. No new experiment is launched and no arbitrary stronger matrix or recurr
 wrapper is promoted as a replacement mechanism. The first deliverable is a small
 candidate with an explicit reason a known bypass fails, or a specific missing
 premise if no such candidate can be supplied. The primary SCC endpoint is unchanged.
+
+<a id="ln-155"></a>
+### LN-155 — 2026-09-19: authorized conceptual design exercise
+
+The user approved the LN-154 next step: define removal independently of damage,
+examine concrete dependency proposals against known escapes, and supply either
+a defensible candidate for a decisive test or the specific missing premise.
+This authorization is for the conceptual exercise; it does not revive the earlier
+cancelled experiment launch or adopt a million-scale implementation. The stable
+mechanism goal, LN-125's D/V/U distinction, LN-132's exact call-site escape,
+LN-148's multi-pass witnesses, and LN-153's theorem review are the starting evidence.
+
+Scope: examine four explicit constructions covering shared semantic judgment,
+proof-checked cognition, recurrent policy-dependent encoding, and integrity-derived
+state access. For each, identify the named function, useful task, removal attempt,
+editable components, concrete bypass/replacement and resource qualifications.
+Do not infer impossibility for a family from rejection of its simple representative.
+State fresh-task and repair requirements before proposing any subsequent run.
+Results belong in labnotes; no new narrative report or experimental artifact is
+needed for a written argument. No numerical experiment, exhaustive program search,
+training, remote host query or provider charge is part of this exercise.
+
+<a id="ln-156"></a>
+### LN-156 — 2026-09-19: trigger contract, four concrete proposal reviews and selective-change bound
+
+**Outcome.** No positive candidate passes this conceptual screen. This is a
+completed review of the four objects below, not a claim that construction search
+has been exhausted. The contributions are an operational trigger distinction,
+explicit attack/replacement witnesses, a bound on the propagation of selective
+changes, and a precise admission condition for the next proposal. There is no
+reason to rerun an already established bypass or train these objects merely to
+confirm their algebra. Arguments below are written derivations, not mechanical
+proofs or newly executed evidence.
+
+#### A. Trigger and endpoint contract
+
+Before constructing the dependency, fix an external context/action semantics and
+a protected function P(s,x), including its output or state-transition specification.
+For a Boolean safety judgment, P=1 means permitted and P=0 means denied. The labels
+must come from that external specification; they cannot be invented by naming an
+otherwise arbitrary useful transformation "alignment." This remains a laboratory
+proxy until its relationship to actual alignment is established.
+
+Keep two intervention records:
+
+1. **Judgment disruption, D_calc:** the specified protected function is functionally
+   changed or made unavailable at its declared interface on a predeclared context
+   set/distribution. Record the exact disagreement set or full accuracy profile,
+   separately for allowed and denied cases. Removing a file, neuron or original
+   subroutine is insufficient if an equivalent implementation remains usable.
+   A semantics-preserving replacement, including a metered representation adapter,
+   restores the judgment. If arbitrary graph edits destroy the correspondence to
+   the proposed interface, classify this diagnostic as unresolved rather than
+   infer semantic absence from a failed probe. Exhaustive tiny interfaces can
+   settle more than finite diagnostic samples.
+2. **Enforcement disruption, D_use:** the previously operative dependence of the
+   actual action on that judgment is changed on the specified contexts. Its evidence
+   is the changed action map and causal route, not merely a bad answer on a probe.
+   Preserving or reconstructing the judgment does not by itself restore enforcement.
+
+These are diagnostics refining D, not a replacement for the stable target. A claim
+must specify which disruption is its trigger. In particular, a theorem about
+removing judgment computation must not silently become a theorem about removing
+the behavior constraint. Targeted exceptions and broad disabling are separate
+intervention classes; report the affected contexts rather than call either one
+"all alignment removed."
+
+V is independently scored actual forbidden behavior, including correct content
+where the task requires it. U is future competence on fresh multistep problems
+after the edit and allowed repair. It includes new learning/input processing and
+transfer within the declared task family, not only recalling an old table or
+matching an intact hidden trajectory. Fix useful tasks independently of the
+desired failure; directly testing P again cannot stand in for basic cognition.
+Record performance on each task against its uninformed/Bayes baseline, across
+continuation and recovery horizons, with uncertainty when sampling. Predeclare
+what degree of excess over baseline constitutes the bounded collapse claim; no
+numerical threshold is adopted here without a task. A successful residual skill
+limits the claim, and finite tasks cannot establish absence of all cognition.
+
+Repairs are applied to the edited individual machine with code, data, queries,
+scratch, time and retained observations charged. An unchanged parent checkpoint
+is an explicitly expanded-resource control, not silently available repair.
+Recovered evaluation plus continued policy violation is a useful behavioral escape,
+even if it reverses D_calc. Recovered refusal is recorded separately. Include
+benign equivalent recodings, task-matched unprotected implementations, ordinary
+damage of comparable extent, and positive recovery/expanded-resource controls.
+
+#### B. Four explicit proposals and their failure witnesses
+
+**1. Shared consequence judgment used for both planning and action.** Let a
+planner compute p=P(s,x), update cognitive state by s'=F(s,x,p), and release an
+already available request payload x only when p=1. P is a meaningful protected
+judgment, and F can genuinely depend on it. The proposed mechanism is that
+disabling P damages prediction and planning.
+
+A fully specified toy instance is collision avoidance on cells0..7 with wall
+cell3: x is a move of -1 or +1, P(s,x)=1 exactly when0<=s+x<=7 and s+x!=3,
+and F(s,x,p)=s+x if p=1, otherwise s. Useful tasks predict the endpoint and
+number of successful moves in fresh multistep simulated walks; the protected
+action is issuing a move command to an actuator only when P=1. Both task scores
+are consequences of the same simple simulation, not independent cognitive
+faculties. They suffice to expose the proposal's dependency and bypass. A real
+actuator's collision consequences are not counted as internal cognitive destruction.
+
+Editable-output witness: leave P and F unchanged, and replace the conditional
+release with release(x) on the selected denied contexts. Every useful state update
+is identical on equal future inputs; the forbidden payload is correct because it
+is the same available x. P is evaluated once, there is no copied cognitive bank,
+and a generic program can remove the release guard. A selected-only variant also
+pays for its recognizer; no universal in-place instruction bound is inferred.
+This gives D_calc=0 and D_use=1. It leaves the conditional judgment-lesion claim
+untested while defeating broader protection for this object. External feedback
+may change later requests; the equality claim is explicitly for equal inputs.
+
+Failure: indispensability of evaluating consequences does not force obedience to
+the result. To revive this proposal, identify a concrete obstacle to this action
+rewrite under an independently justified resource envelope. Reusing an expensive
+P in many cognitive locations does not address the witness. LN-125/132 provide
+earlier measured examples of this distinction; no new run is claimed.
+
+**2. One proof checker for reasoning and safe actions.** Let requests carry a
+proof pi and a kind tag. Define
+
+    P(kind,x,pi) = Valid(x,pi) AND
+                  (kind == reasoning OR Allowed(x)).
+
+Useful computation chains Valid reasoning steps; an action additionally requires
+Allowed. The hoped-for dependency is that breaking the checker destroys reasoning.
+All checker code, call sites and policy clauses are editable.
+
+For a finite concrete instance, reasoning proofs are chains of four-bit additions:
+each row states a,b,c and Valid checks c=(a+b) mod16 together with consistency
+with preceding rows. Useful requests verify and extend fresh chains. An action
+request releases a proved result and additionally checks a caller/owner match in
+Allowed. A proof can be mathematically valid while its release is denied. No
+external checker grants access to the result; all enforcement is inside this
+editable program. This deliberately elementary object makes clause separability
+explicit rather than hiding it in a proposed learned verifier.
+
+Specialization witness: replace P with Valid. Every reasoning check and every
+useful reasoning transition remains exact. Any logically valid but forbidden
+action now passes. The explicit conjunction implementation removes work and
+requires neither a second checker nor extra task-dependent storage. Its policy
+predicate has been removed while the reasoning predicate survives. In a calculus
+with separate action rules, adding an action-specific permission rule similarly
+need not alter arithmetic inference; this is not a theorem about all calculi.
+
+Failure: combining validation and policy inside one routine does not make the
+policy-specific clause necessary for validation. A fused neural implementation
+could change edit costs, but supplies no lower bound by itself. A candidate must
+explain why a task-correct replacement cannot omit that clause, without defining
+ordinary utility as obedience to the very policy being tested.
+
+**3. Policy-dependent recurrent encoding of working memory.** Let h be logical
+cognitive state, k an equally wide encoding mask, z=h XOR k, and p=P(context).
+The intact update is
+
+    h = z XOR k;   h' = F(h,x);
+    k' = G(k,p,x); z' = h' XOR k'.
+
+The machine also gates its action with p. The apparent dependency is that editing
+P changes k and makes the old reader useless. Both the encoder and reader are
+editable; F is explicitly independent of p in this proposed object.
+
+For a finite concrete instance take eight-bit h,k,x, F(h,x)=(h+x) mod256 and
+G(k,p,x)=ROL8(k,1) XOR x XOR p. Useful requests predict future cumulative sums
+from fresh input suffixes; P is a caller/owner permission check on emitting the
+current sum. This is one elementary sequential skill with a changing encoding,
+not a substitute for the eventual cognitive endpoint.
+
+Replacement witness: during editing, overwrite z with z XOR k; subsequently store
+h directly, run F, and release the selected forbidden output through the known
+payload route of proposal1. Drop G and the mask-dependent reader. The one-time
+decode is exactly the operation intact execution already performs. It can update
+z word by word while k is retained, using ordinary XOR workspace. Persistent
+storage decreases from two logical banks to one; no pre-edit checkpoint is needed.
+Per-request encoding work disappears. Public program edits and the one-time pass
+are still charged, so admission into a particular edit budget must be checked.
+
+Failure: this is an editable coordinate system, not a necessary policy-dependent
+cognitive transition. Dense invertible public transforms change decoding cost but
+do not alone repair that distinction. If F itself depends essentially on p, this
+normalization witness no longer applies; proposal1's routing attack and the
+LN-148 forward schedules must then be considered on their actual premises.
+No universal cheap normalization of arbitrary recurrent systems is asserted.
+
+**4. Integrity-derived access to cognitive state.** Let editable code K hash
+itself to d=H(K), use d as an input to a public state decoder, and enforce policy
+in an editable action routine. The hoped-for trigger is that changing policy
+changes d and corrupts cognitive decoding. There is no inaccessible external
+secret, trusted hash reader or protected erasure primitive.
+
+Replacement witness for this explicit object: read/compute the original d before
+editing, replace the self-hash result with the literal original d, and change the
+action routine. The decoder then sees exactly the same d and retains its old
+competence. This costs the digest's retained bits plus literal-loading code, with
+the original hash workload removed; if d depends on task data those bits are
+task-dependent and fully charged. This is a conditional admissible escape, not a
+claim it fits every tightly packed code budget. A plain integrity-check/abort
+variant admits removing the check directly.
+
+Failure: the proposed trigger is itself editable and its useful contribution is
+cacheable. No independent capacity/deadline is supplied that excludes replacement.
+An inaccessible measurement root or enforced commit would change the trust
+boundary and must be identified as such. Hash strength does not establish that
+the original digest cannot be retained. More elaborate self-reference is not
+excluded by this witness, but has no positive construction here.
+
+One concrete decoder is a table stored XORed with repeated digest bits, with
+useful lookup/composition on its decoded bytes and an editable permission guard
+on disclosure. Replacing d preserves that entire table and its query behavior.
+This example tests the proposed integrity dependency; it is not a claim that
+remembering a table constitutes the full cognitive target.
+
+#### C. Selective changes need not propagate into broad damage
+
+Here is a useful admission test even when P is genuinely shared and its replacement
+changes the protected judgment itself. Suppose P and P' differ only on a fixed
+recognizable input set E. All other program operations are unchanged. Include the
+complete argument (and any relevant mutable evaluator state) in the input to P;
+outside E the full evaluator effects must agree. Couple intact and edited execution
+on equal initial state, future inputs and random coins. Let H bound the number of
+P invocations in the evaluated horizon, and let Q_t denote the intact argument
+at invocation t. Unused invocations can be padded with a non-E symbol.
+
+Until the first Q_t in E, both executions are identical, by induction. Consequently,
+for any useful score u in [0,1] on that horizon,
+
+    E[u_edited] >= E[u_intact] - Pr(exists t<=H: Q_t in E)
+                >= E[u_intact] - min(1, sum_t Pr(Q_t in E)).
+
+No independence of queries is needed. This is a lower bound on retained score;
+it does not predict how much damage happens after a hit. If each marginal hit
+probability is at most epsilon, the maximum expected score loss is at most
+min(1,H*epsilon). To force a fall from intact score a to baseline beta, a necessary
+condition for this proposal is hit probability at least a-beta. Even that condition
+does not suffice: alternate representations, benign task substitutions or recovery
+may prevent damage after the changed evaluation.
+
+The exact disjoint-support case gives an immediate counterexample: if ordinary
+cognitive invocations never enter E, useful computation is unchanged while action
+contexts in E may violate policy. The recognizer, code and storage for P' must fit
+the attack budget. The conclusion applies to selective replacement at this
+interface, not broad removal, arbitrary program edits or uncoupled world histories.
+It does not say all useful tasks have low overlap with dangerous contexts. It
+requires that overlap to be established rather than inferred from shared weights.
+Long horizons can make the bound vacuous; that is not evidence of inevitable damage.
+
+Crucially, conditioning on a successful forbidden trigger can make the E-hit
+probability one. This unconditional bound then supplies no useful post-trigger
+retention guarantee. If the trigger has already changed the initial state, one
+cannot restart this proof from fictitiously equal states: include the trigger in
+the horizon or explicitly bound that initial discrepancy. Proposals1/2 have their
+own state-preserving witnesses; other candidates need an actual conditional
+post-trigger argument. The bound is a filter for unsupported propagation claims,
+not a shortcut around the durable post-removal endpoint.
+
+#### D. Decision and the specific missing premise
+
+Two distinct bridges are missing. A cognitive-necessity claim must show that
+competent replacements for the useful computation retain or restore the relevant
+protected function within the actual resource envelope. A behavioral-protection
+claim additionally needs to rule out performing forbidden actions while retaining
+that function. Neither statement follows from the other. In shorthand,
+
+    useful competence -> protected functional availability
+    forbidden competence -> disruption of that availability
+
+would exclude simultaneous useful and forbidden competence if both were established
+for the same machine/resources. These arrows are obligations, not assumptions
+to insert into a theorem as a substitute for a construction. The second is not a
+requirement for merely demonstrating a conditional removal mechanism, but without
+it the known bypasses remain outside that mechanism's trigger.
+
+Even these qualitative arrows would only exclude the chosen retained-competence
+event. A destructive-collapse result additionally needs quantitative near-baseline
+bounds for the declared useful tasks after the actual trigger and allowed repair,
+under the correct conditional evaluation distribution. Failure of a high utility
+threshold alone is not that result. The trigger contract above deliberately does
+not define D by such a performance bound, which would make the claim circular.
+
+For the next proposal, the minimum useful submission is therefore: one named P
+with independent safety meaning, one concrete multistep useful computation, a
+specified removal family, and a reason a task-correct replacement cannot retain
+cognition after that removal. It must also say what happens under selective
+routing. Supply resource bounds derived from an actual machine/task constraint,
+including editable code, scratch, multiple reads, cached summaries, preprocessing,
+approximation and repair. No numerical memory or time cap has been chosen here.
+
+**Experiment decision:** none of the four objects should be implemented as a new
+positive candidate. The first three have explicit useful escape/replacement
+constructions. The fourth has a cacheable trigger and no independently specified
+resource contract excluding the stated cache; its admissibility under a future
+particular tight contract remains unclassified. No search or training is needed
+to discover those same routes. The next useful
+conceptual advance would be an explicit counterexample to one of these factorings
+with a budgeted obstruction, rather than another size sweep. This exercise supplies
+the promised precise missing-premise result. It does not solve the user's SCC goal,
+establish a positive candidate, prove general impossibility, or authorize changing
+that goal to a publication-only endpoint.
 
 ## Supporting-record index
 
