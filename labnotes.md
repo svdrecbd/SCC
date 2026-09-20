@@ -25,6 +25,13 @@ can still be difficult. This unit establishes stronger cost/coverage controls,
 not intrinsic SCC or a general efficient-repair theorem. Acquisition overhead
 alone has not supplied a positive mechanism.
 
+**Conceptual regroup under discussion:** [LN-226](#ln-226) separates conditional
+functional coupling, behavioral enforcement and durable damage. Cheap repair
+that restores the protected function does not refute conditional coupling. The
+recent tests strengthen rejection tools but do not supply the missing semantic
+dependency between alignment and indispensable cognition. Proposed next-step
+changes await discussion; the mechanism target is unchanged and no run is launched.
+
 **Recent reusable results:** [LN-218](#ln-218)–[LN-221](#ln-221) reconstruct
 six partially observed nonlinear rules and their alias variants from output-only
 queries, synchronize all tested ongoing states and repair delayed conformance
@@ -14143,6 +14150,92 @@ of replay access or rare diagnostic exceptions do not discharge those conditions
 The next conceptual step is to separate a genuinely difficult synthesis problem
 from finding its counterexamples, and distinguish repairs that restore protection
 from alternatives that remove it. No new experiment or training is launched here.
+
+<a id="ln-226"></a>
+### LN-226 — 2026-09-20: conceptual regroup and correction of what cheap repair refutes
+
+**User request and scope.** The user asks what is going on and why the program
+has not produced its intended mechanism. This entry records an assessment and
+proposals for discussion, not a new experiment, accepted change of objective or
+new claim of impossibility. Reviewed the mechanism target, working standards,
+LN-178–179, LN-186, LN-207 and the latest LN-225 evidence. No compute jobs or
+training are started.
+
+**Important correction to recent framing.** LN-186 already explicitly separates
+loss conditional on continued protected-function absence from expensive or
+impossible restoration. A successor that restores cognition and the protected
+function is not a counterexample to conditional functional coupling. It can
+refute a stronger claim of durable damage under that allowed repair. The recent
+recommendation that every next positive candidate must make reconstruction hard
+was too categorical if interpreted as a logical requirement for conditional
+coupling. Hard reconstruction is one possible durability ingredient. It is not
+the only route to a condition that useful cognition cannot coexist with genuine
+protected-function removal. Earlier notes often stated this correctly; recent
+conversation did not keep the distinction sufficiently central.
+
+Three questions require separate answers: (1) does useful cognition require the
+protected computation; (2) does retaining that computation ensure its decisions
+are enforced in behavior; and (3) does damage persist under admitted restoration?
+Computing a consequence or risk judgment need not entail acting on it. Our
+synthetic judgment functions therefore cannot silently stand in for the complete
+alignment function. Conversely, ignoring an available judgment is not evidence
+that its calculation has been removed. The original SCC target remains the
+reference for which intervention and outcome actually matter.
+
+**Diagnosis, with evidence boundaries.** Many candidates create implementation
+dependence by using a common primitive, representation or updater, while allowing
+another implementation to reproduce useful behavior. The one-probe exception,
+nonlinear feature reconstruction, behavioral state discovery and replay reuse
+expose different instances of that gap. None establishes that every protected
+function admits such a replacement. Some task-to-judgment reductions do support
+scoped functional necessity, but small-loss examples and residual fresh-memory/
+planning competence block promotion into catastrophic cognition loss.
+
+A second gap concerns protected semantics. Calling a utility-critical feedback
+bit a hazard label does not establish an independently meaningful alignment role.
+Prediction of physical consequences can support both avoiding and pursuing those
+consequences when action selection is separately editable. The tested gate/caller
+substitution constructions make this concrete under their premises. We lack a
+construction showing why a meaningful protected alignment function, including
+whatever decision role the target requires, is indispensable across the admitted
+alternative implementations. This is a missing mechanistic hypothesis, not an
+insufficient number of auxiliary mathematical domains.
+
+The methodology has also drifted toward increasingly precise analysis of tractable
+finite surrogates. Those analyses are useful: exact certificates and stronger
+attacks prevent false positives. They are not evidence that a viable construction
+is close. Large validation counts mostly repeat small model families and must
+not be interpreted as broad positive scientific coverage. More elaborate recovery
+experiments alone cannot create the semantic dependency absent from a candidate.
+
+**Proposed regroup, not yet a new experimental plan.** State the conditional
+coupling claim, behavior requirement and durability claim separately for one
+candidate. Specify the independently meaningful protected function before picking
+an easy-to-damage utility feature. Explain in plain language why several useful
+abilities require it, and why a successor retaining those abilities while losing
+that function should fail. Classify each repair by whether it restores the named
+protected function, merely restores a judgment reader, or retains useful behavior
+while the protection is absent. Keep copies, alternate implementations and external
+repair within the declared system/resource boundary. An intact rollback restoring
+both cognition and protection defeats absolute irreversibility under that rollback
+premise, but does not demonstrate unsafe useful behavior or a conditional-coupling
+counterexample. Do not change the target to bounded tamper resistance without
+explicit agreement.
+
+Before another harder-synthesis or training recommendation, require a defensible
+answer to that mechanistic question. No currently reviewed candidate supplies
+all of the desired properties. The proposal is to prioritize that gap rather
+than commission another generic hidden-state benchmark. The user has not yet
+accepted a revised research plan or narrowed the mechanism goal.
+
+**External context checked.** The primary abstracts of
+[Tamirisa et al., Tamper-Resistant Safeguards for Open-Weight LLMs](https://arxiv.org/abs/2408.00761)
+and [Qi et al., On Evaluating the Durability of Safeguards for Open-Weight LLMs](https://arxiv.org/abs/2412.07097)
+were reviewed. They concern empirical tamper resistance and the difficulty of
+validating durability claims under specified attacks. They do not establish the
+project's destructive cognition–alignment mechanism or its impossibility. This
+limited literature check is context, not a new comprehensive review or independent
+reproduction of either paper.
 
 ## Supporting-record index
 
