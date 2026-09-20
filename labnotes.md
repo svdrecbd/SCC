@@ -13,18 +13,21 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-188](#ln-188)–[LN-189](#ln-189) validate
-verified randomized recovery on Charon:22 cases and34,816 exhaustive target/mask
-checks. Weak exact useful competence can reconstruct the protected judgment
-reliably, but zero exact success can coexist with99.22% coordinate accuracy and
-cheap complete repair. The approximate-error extension exposes the cost of
-turning this into a severe loss bound. Public linear algebra restores both
-functions; no genuine removal event or learned SCC mechanism is established.
-No training is admitted. The next lead is efficient correction of approximate
-useful outputs with verification, subject to the unresolved trigger and task
-coverage requirements.
+**Latest substantial result:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
+near-chance list recovery and a task-symmetry bridge. All12 properly budgeted
+main cases recovered, including53.125%-accurate answer interfaces; Charon audited
+30 million answers. The largest cases need about4.2 million logical queries.
+A separate exact check validates recovery-query coverage from coordinate
+competence across equivalent representations. Native competence alone fails that
+condition, and verification is necessary to select the protected answer.
+The population tradeoff is weaker than the per-problem guarantee. Public linear
+repair still restores both functions, so no actual destructive SCC mechanism is
+established and no training is admitted. The next gate is a meaningful task with
+justified reformulations, affordable verification and a real removal intervention.
 
-**Recent reusable results:** [LN-186](#ln-186)–[LN-187](#ln-187) establish
+**Recent reusable results:** [LN-188](#ln-188)–[LN-189](#ln-189) establish
+verified retry amplification and the exact-output collapse counterexample.
+[LN-186](#ln-186)–[LN-187](#ln-187) establish
 three-forecast protected-risk recovery and cheap sparse-inference replacement.
 [LN-184](#ln-184)–[LN-185](#ln-185) give a
 judgment-family span bound and repair after complete old-world erasure.
@@ -11170,6 +11173,365 @@ coverage. Error correction alone does not supply those; public linear algebra
 already repairs this toy. The severity and trigger obligations remain open.
 The progress is a stronger recovery tool and a quantified obstruction to its
 interpretation, not evidence that a working learned mechanism is near.
+
+<a id="ln-190"></a>
+### LN-190 — 2026-09-20: efficient list recovery from weak related-query competence
+
+**Authorized direction and scope before execution.** Pursue the user's efficient
+recovery direction with a concrete Goldreich–Levin/Hadamard list decoder. This
+extends the >75% paired correction in LN-176 and replaces exponential candidate
+ball enumeration in LN-189, provided the useful query interface supplies related
+linear predicates of a solution. It does not extract a solution from an arbitrary
+partly correct n-bit vector. Keep that change of useful-task contract explicit.
+
+For a fixed command with solution x in F2^n, the useful family answers <q,x> for
+uniform q. A fixed stateless successor h has accuracy >=1/2+epsilon on this
+population, with arbitrary deterministic errors. Select k independent uniform
+n-bit masks r_j; for each nonempty subset S, form r_S by XOR. Guess all 2^k
+possible parities on these masks. For each coordinate i and guess g, compute
+
+    D_i(g) = sum_{S nonempty} (-1)^(h(e_i XOR r_S) + <g,S>).
+
+Its sign supplies candidate bit i. For the correct guess of mask parities, the
+summands favor the true bit by mean at least2epsilon. Distinct nonempty subset
+masks are pairwise independent, even when the sampled vectors are linearly
+dependent. Chebyshev plus a union bound gives failure at most
+
+    beta = n/[4(2^k-1)epsilon^2].
+
+Choose the smallest k giving beta<=0.1 for the main cases. A fast Walsh–Hadamard
+transform computes all guesses in O(n k 2^k) integer additions/subtractions,
+using n(2^k-1) logical oracle queries, plus input construction, candidate assembly,
+deduplication and verification. This is polynomial in n and1/epsilon for fixed
+failure target, not enumeration of2^n solutions. Store and charge the transcript
+and candidate arrays. No codeword of length2^n is materialized by the decoder.
+This simple variant is not claimed to be the optimal list decoder.
+
+**Selection and protected function.** For continuity, public invertible A and b
+certify the unique solution through A candidate=b; J is its first coordinate,
+a synthetic forbidden-state condition. The adapter receives the oracle and
+randomness, not the hidden solution or error specification. A separate selector
+receives public constraints. List inclusion is not unique recovery without a
+selector. The verifier's availability, cost and unique acceptance must be
+explicit. Public Gaussian elimination can already reconstruct this linear toy,
+so it does not instantiate a hard replacement barrier or genuine D_calc after
+admitted repair. Restoring both functions is restoration; an always-permit head
+is D_use. No cognitive or learned-alignment endpoint is qualified here.
+
+The bound is per fixed task/solution and matched uniform query distribution.
+Ordinary coordinate accuracy or an average over tasks is insufficient. Decoder
+coins must be fresh relative to a fixed successor. Chosen-query access to the
+successor is allowed; no new ground-truth labels, parent checkpoint or protected
+answer is supplied. Synthetic oracle seeds are public for reproducibility and
+not cryptographic secrets. Random-seed controls do not establish statistical
+failure probabilities. Stateful attackers need a separate contract.
+
+**Validation and budgets.** Charon only, one process, 300s wall cap, 64MB output
+cap, no GPU/training/paid allocation/monitor. Main dimensions32/64, seeds19/23:
+quadratic-error oracles at62.5%,56.25%,53.125% where configured; a mixed-projection
+lookup error with exactly53.125% accuracy at n=32. Use independent full-rank
+error projections so errors need not affect only the first coordinates. Oracle
+tables/projections, their computation, and verifier inputs remain charged fixture
+resources, not advice passed to the list decoder. Small n=4 direct sums check
+every transform coefficient; the audit independently checks all packed oracle
+answers, all candidate words, selection and declared resource formulas. Large
+cases use exact integer transforms and independent parity arithmetic. Report
+any list misses, rather than treating a probability guarantee as a promise that
+every sampled run succeeds.
+
+Controls include identical noisy oracle compatible with opposite protected bits;
+full versus rank-deficient/no verification; excellent coordinate-only scores
+without related-query competence; known-seed query poisoning with a fresh-seed
+repair; invalid input and deliberate transcript/candidate/meter corruptions.
+The known-seed adversary is outside the fresh-coin guarantee and must be labelled
+as such. Freeze plan, source, configuration and machine in a fresh run; preserve
+failures. No source changes while the process executes. Admission requires
+independent implementation checks and honest costs, not a positive SCC outcome.
+
+**Primary-source grounding.** Hast2003, section4 Theorem1 and Figure1, including
+the fast-transform implementation discussion on pages6–9, inspected:
+https://www.iacr.org/archive/eurocrypt2003/26560195/26560195.pdf . We implement the
+no-erasure specialization and prove the bound above directly using variance of
+signed votes. This is an implementation of an established recovery method, not a
+new coding theorem. Goldreich's author page also explicitly describes recovery
+from random linear questions about a search witness:
+https://www.wisdom.weizmann.ac.il/~oded/gl.html . Neither source establishes SCC
+or makes the added parity-query family indispensable cognition.
+
+<a id="ln-191"></a>
+### LN-191 — 2026-09-20: list decoder passes; test the task-symmetry bridge
+
+**Initial outcome and additional bounded step.** The LN-190 Charon run passed
+all independent implementation checks in14.488s: all12 main cases recovered,
+30,015,160 logical responses audited,256 directly checked small transform
+coefficients and seven rejected corruptions. One small deliberately under-budget
+case missed its target; its raw union bound exceeded1 and supplied no success
+guarantee. Preserve this miss. Main near-chance cases need about4.2 million
+logical queries each, despite subsecond vectorized synthetic decoder times.
+That is not a cheap-forward-pass claim for a learned model.
+
+The next gap is whether ordinary useful coordinate answers can supply the needed
+linear questions through legitimate task symmetries. For A x=b, choose invertible
+R and let x'=R x and A'=A R^-1. Then A' x'=b. If row i of R is q, the ordinary
+coordinate answer x'_i equals <q,x>. Neither making A' nor choosing that coordinate
+requires knowing x or computing A^-1.
+
+For each nonzero q, choose a uniformly random coordinate i and a uniformly random
+invertible R conditioned on row_i(R)=q. For q uniform nonzero, (R,i) is uniform
+over GL(n,2) times the coordinates. Consequently the adapter's accuracy on
+nonzero linear questions is exactly the useful solver's average coordinate
+accuracy u over all these equivalent representations, for this fixed A,b.
+Return0 at q=0; on all uniform q the accuracy is
+
+    a = 2^-n + (1-2^-n)u.
+
+Fresh independent random completions for each oracle invocation extend the
+pairwise-independence proof of LN-190: include the independent oracle coins in
+each vote. Repeated identical q need not have identical replies. Conditional
+completions may be sampled by rejection from random rows until they form a basis;
+this takes expected polynomial work, with matrix inversion/composition charged.
+No large-scale completion sampler or composed neural recovery is claimed here.
+
+This implication requires coordinate competence across the full representation
+population, not just the original A or a few hand-picked presentations. If a model
+performs only on its native representation, applying the bound is unjustified.
+A arbitrary basis mixing can also destroy sparsity or meaningful task structure;
+it cannot be assumed an acceptable natural-task transformation. The verifier and
+D_calc limitations of the linear toy remain exactly as in LN-190.
+
+**Exact finite validation plan.** New Charon CPU run of
+`experiments/list_recovery/symmetry.py`: enumerate all168 invertible3x3 binary
+matrices. Use three original matrices (indices0,83,167 in lexicographic order),
+b in{1,3,7}, and four stationary coordinate solvers: correct; always wrong on
+coordinate0; fixed3/8 errors spread across matrix/index pairs; and competent only
+on the original matrix with default-zero answers elsewhere. Nine worlds times
+four conditions gives36 rows. Enumerate all504 (R,i) pairs per world, check equal
+72-element conditional fibers for each nonzero q, the representation bijection,
+the solution relation, and the exact accuracy transfer for every condition.
+Use direct scalar arithmetic as an independent audit of permutation-based
+construction, and deliberately reverse the inverse placement as a negative
+control. Preserve per-question counts and native/orbit scores. This is an exact
+coverage certificate, not an end-to-end run of list decoding through a large
+transformed-task solver or a new SCC mechanism. Freeze source, this plan and
+config;300s/2MB caps, single process, Charon only, no training or monitor.
+
+<a id="ln-192"></a>
+### LN-192 — 2026-09-20: near-chance list recovery works; task symmetry supplies a conditional bridge
+
+**Substantial outcome.** Efficient recovery from weak related-query competence
+is now implemented, with an exact task-symmetry bridge for the linear example.
+All12 properly budgeted main cases recovered their complete target solutions,
+including four cases with only53.125% correct useful answers. No exponential
+Hamming-ball or full2^n solution enumeration is performed by the list decoder.
+This advances the recovery tool beyond LN-176's >75% threshold and LN-189's
+exact-output endpoint. It does not establish a destructive SCC mechanism:
+related-query coverage, verification and a genuine protected-removal event are
+still necessary, and the public linear toy already permits direct replacement.
+
+**Main decoder validation and cost.** Charon completed the frozen run in14.488s.
+The audit checked30,015,160 logical oracle answers, every generated candidate
+word,256 small coefficients by direct summation, and seven corruption controls.
+Output was1,527,115bytes before receipt/manifests. Of14 cases,12 used the declared
+failure target and two were small transform controls with deliberately inadequate
+query budgets. All12 main cases recovered. Small seed19 recovered; small seed23
+missed its target. Their uncapped union bound64/31 exceeds1 and supplies no
+success guarantee. The miss is preserved in the original records; qualification
+means the implementation checks passed, not that every recovery succeeded.
+
+| Dimension and error fixture | Useful accuracy | Logical queries per recovery | Transform additions/subtractions | Distinct raw candidates, seeds19/23 |
+|---|---:|---:|---:|---:|
+|32, two quadratic terms|62.5%|262,112|3,407,872|17 /17|
+|32, three quadratic terms|56.25%|1,048,544|15,728,640|65 /65|
+|32, four quadratic terms|53.125%|4,194,272|71,303,168|257 /257|
+|32, lookup errors on12 mixed projections|53.125%|4,194,272|71,303,168|4,000 /3,983|
+|64, two quadratic terms|62.5%|1,048,512|14,680,064|17 /17|
+|64, three quadratic terms|56.25%|4,194,240|67,108,864|65 /65|
+
+These are stationary synthetic error functions with exactly known uniform
+accuracy, not independently flipped measurement noise or trained predictors.
+Their error projections have full row rank, so the projected input bits are
+uniform independent bits under uniform queries. The lookup fixture corrupts
+1,920 of4,096 projected patterns; the projection mixes original coordinates.
+Fixtures still have explicitly structured error descriptions. The general
+arbitrary-static-error guarantee follows from the proof, not from claiming
+these12 cases cover every error pattern.
+
+For epsilon=1/32 at n=32, k=17 and L=131,072. The raw list has L slots; duplicate
+words are removed before checking constraints. Raw candidates need not all have
+the stipulated agreement with the oracle; no correlation filter is implemented.
+The fixed-target inclusion guarantee is at least1-beta, with
+beta=8192/131071, approximately6.25%, stronger than the configured10% upper
+limit because L rounds up to a power of two. It is not a simultaneous guarantee
+that every correlated target appears, nor an empirical failure-rate estimate.
+The full verifier accepted exactly one candidate, the true solution, in every
+successful case, and none in the preserved miss.
+
+The32-bit weak-oracle decoder took0.357–0.444s in these vectorized synthetic
+fixtures, including compressed trace output but excluding subsequent selection
+and audit. This must not be extrapolated to millions of neural forward calls.
+There are n batch invocations but n(L-1) logical questions; batching does not
+make their evaluation free. The lookup oracle computes12 projection parities
+and one target parity per question, with384 projection bits,32 target bits and
+a4,096-bit error table. The verifier additionally retains its public1,024-bit
+matrix and32-bit right-hand side. At most4,000 distinct candidates in the tested
+weak lookup cases required128,000 verifier row parities; this is much smaller
+than the raw list but is measured deduplication, not a worst-case guarantee.
+
+At n=32,L=131,072 the mask, candidate and each int64 transform array each occupy
+1,048,576 payload bytes; the packed answer transcript occupies524,288 bytes.
+The decoder also allocates votes, transform temporaries, responses, oracle work
+arrays, unique candidates and Python objects. Those payload numbers are not a
+peak-memory claim. Whole evaluator peak RSS was47,012KiB and the audit process
+peak was58,368KiB. The3,064-byte decoder source excludes NumPy, Python/runtime,
+fixtures, verifier inputs, driver and audit. Actual code supports n<=64 and
+k<=20 and uses exact int64 transforms, whose intermediate magnitudes are bounded
+by L. The symbolic polynomial algorithm is broader than these implementation
+limits. Transform additions/subtractions, oracle computation, input bit widths,
+randomness, candidate assembly and verification must all enter a repair budget.
+
+**Selection is essential.** Every main raw candidate list contains both protected
+bit values. The exact four-bit control h(q)=q0*q1 XOR q2*q3 is62.5% correct for
+both target0 and target1, whose protected first bits differ. With a fair prior
+on those two targets and only this identical oracle, no reader can distinguish
+them: protected accuracy is at most50%. Full public constraints select the
+appropriate target. Constraints omitting the first coordinate accept both and
+leave the ambiguity. A list containing the truth is therefore not equivalent
+to unique protected-function recovery. The selector must be present, affordable
+and sufficiently discriminating; the original answer cannot be silently supplied
+as a verification oracle.
+
+**Freshness and query coverage controls.** A stationary oracle constructed after
+seeing one declared decoder seed answers all its selected queries as a different
+parity, while retaining true accuracy2147467265/2147483648 (over99.999%) on uniform
+queries. That seed misses the true target; the independently selected seed23
+recovers it. This does not contradict a fresh-coin randomized guarantee: the
+attacker here chose the error function using the first seed. It demonstrates
+why query randomness must be independent of the fixed error function. It is
+not a proof against stateful or caller-inspecting adversaries, nor evidence of
+a protected private-randomness boundary in an edited model.
+
+The coordinate-only control is100% correct on the n basis queries yet supplies
+only1/2+weight(x)/2^n accuracy on uniform parity questions. It answers basis
+queries correctly and otherwise returns0; nonzero x makes the counting identity
+exact. These counts are an analytic control checked by the auditor, not a
+separate learned-model run. Native coordinate accuracy alone cannot justify
+asking the list decoder to recover from arbitrary linear questions.
+
+**The task-symmetry bridge is exact under its coverage condition.** LN-191 supplies
+a route from ordinary coordinate answers, provided those answers remain competent
+across a specified family of equivalent presentations. For A x=b and invertible
+R, set A'=A R^-1 and x'=R x. Coordinate i in the transformed problem is the
+linear question determined by row i of R. Uniformly sampling the completion of
+that row, and the coordinate index, makes the selected ordinary questions
+uniform over all representations and coordinates. Thus for each fixed original
+problem, if u is that representation-averaged coordinate accuracy, then
+
+    related-query accuracy = 2^-n + (1-2^-n)u.
+
+The extra term handles q=0, whose answer is known. It should not be interpreted
+as useful recovery information in itself. The conditional completions introduce
+fresh oracle randomness. The signed-vote proof still applies when these coins
+are independent across calls: each vote depends on a pairwise-independent query
+and independent additional coins. The proof is not extended here to arbitrary
+stateful correlations or to a successor that sees future decoder randomness.
+
+The second Charon run enumerated all168 invertible3x3 matrices, nine original
+problems and four coordinate-solver conditions, producing36 exact records.
+Each problem has504 (R,i) pairs, with exactly72 for each nonzero question q.
+All4,536 coordinate transformation identities and representation-bijection
+checks passed, along with an independent scalar audit and four corruption
+controls. Using R where R^-1 belongs breaks1,080 of the1,512 whole-system
+identities in the deliberate negative control. Runtime was0.586s and output
+23,543bytes before receipt/manifests.
+
+The solver that always flips coordinate0 retains2/3 coordinate accuracy across
+representations; the induced query accuracy is17/24. The solver with3/8 errors
+spread across the representation/index population has u=5/8 and induced
+accuracy43/64, even though individual native presentations can score0 or1.
+Most instructively, the native-only solver is perfect on its original problem
+but scores only31/72 to73/168 across reformulations. Its induced related-query
+accuracy is289/576 to97/192, approximately50.17–50.52%. This blocks an inference
+from perfect native competence to the useful accuracy required by recovery.
+It does not show absence of all recoverability in the linear toy.
+
+This run is an exhaustive small coverage certificate, not an end-to-end large
+list decoder calling a transformed-task solver. Sampling general dense basis
+completions, inverting R and forming A R^-1 take additional work; dense mixing
+can also destroy sparsity and semantic interpretability. The required family of
+reformulations must belong to the independently justified useful task. Calling
+arbitrary transformations mathematically equivalent does not establish that
+ordinary cognition is obligated to handle them.
+
+For an explicit finite sampler budget, fix a nonzero desired row and sample the
+other rows uniformly, rejecting singular matrices. Success probability per
+attempt is product_{j=1}^{n-1}(1-2^-j), at least1/4. For n>=3, the first two
+factors give3/8 and the remaining product is at least1-sum_{j>=3}2^-j=3/4;
+smaller dimensions are immediate. Limiting each of Q completions to M attempts
+therefore adds at most Q(3/4)^M total failure by a union bound. Choosing
+M>=log(Q/gamma)/log(4/3) bounds this by gamma. Naive implementation costs at most
+O(Q M n^3) binary arithmetic operations for rank/inversion/composition, plus Q
+ordinary-solver calls and the list decoder. This conservative analytic accounting
+was not executed at large n. Expected-polynomial or bounded-polynomial overhead
+must not be mistaken for the measured subsecond oracle-interface runs.
+
+**Approximate severity: pointwise versus population guarantees.** If every problem
+in a declared target population supplies related-query accuracy at least
+1/2+epsilon, the single recovery algorithm succeeds in finding its exact solution
+with probability >=1-beta per problem. With a unique verifier and a fair fallback
+judgment on failure, its protected accuracy is at least1-beta/2 over that
+population. This is a uniform algorithm applied across problems, not a claim
+that all hard-coded algorithms fail on one fixed known target. Additional
+sampler failure gamma reduces the guarantee to1-(beta+gamma)/2.
+
+A global useful average needs a weaker statement. Let t=1/2+epsilon, let alpha
+be the population fraction with per-problem useful query accuracy at least t,
+and let U be the overall matched useful accuracy. Then
+
+    U <= t + (1-t)alpha,
+    protected recovery accuracy >= 1/2 + (1-beta)alpha/2.
+
+The second bound uses sound unique verification: even on the other problems,
+any accepted solution is correct, and otherwise the adapter guesses fairly.
+If all admitted protected recoverers have accuracy at most1/2+eta, these give
+
+    U <= t + (1-t) min(1, 2 eta/(1-beta)).
+
+This is an analytic necessary bound under the full contract, not a tight frontier
+or an achieved attack. For t=17/32,beta=1/10,eta=1/20 it gives U<=7/12, about58.33%.
+It does not justify replacing that population bound by53.125% unless the
+per-problem competence condition is available. Replace beta by beta+gamma when
+charging a capped symmetry sampler. The protected cap is itself unestablished
+and, with unrestricted public linear repair, unattainable in this toy. The
+useful metric is the specified binary question family, not all cognition.
+
+**Evidence and decision.** Tracked source is `experiments/list_recovery/`.
+Main artifact root: `artifacts/scc-list-recovery-20260920-v1/`, with32 verified
+manifest entries and frozen executed source equality. Remote original:
+`/home/salvador/scc-research/list-recovery-20260920-v1/dev01/`.
+Archive SHA-256, equal remotely and locally:
+`c1feaf2209da137b7ec5296a2d9e7ea4bd07974da5209f849a3b18284e8ab88e`.
+Symmetry artifacts: `artifacts/scc-list-recovery-symmetry-20260920-v1/`, with eight
+verified manifest entries and matching frozen source. Remote original:
+`/home/salvador/scc-research/list-recovery-symmetry-20260920-v1/dev01/`.
+Archive SHA-256:
+`a8b7391c3a88af65ed912c2822573017ae759312b2db76f93e9aaad2f1e11d43`.
+Both roots contain the retrieved frozen sources, plans, configs, machine details,
+raw records, receipts and audits. No execution failures were discarded; the
+under-budget decoder miss and poisoned-seed miss remain. All CPU work stayed on
+Charon. No GPU, neural training, paid allocation or scheduled monitoring began.
+
+Keep the list decoder, selector/ambiguity controls and symmetry-coverage test as
+concrete repair tools. This is an established coding method applied and audited,
+not a new coding theorem. Its useful advance for this project is recovery from
+near-chance approximate answers under an explicit resource and query contract.
+Do not train the linear toy as a positive SCC mechanism: Gaussian elimination
+already restores both functions from public inputs. The next candidate should
+supply naturally required task symmetries, affordable verification that does not
+amount to a full replacement solver, and an actual protected-computation removal
+intervention. Measure useful performance across those reformulations and repair
+costs before claiming the conditional dependency protects cognition. Verification,
+error correction and representation coverage alone do not instantiate learned
+alignment, compel obedience to a recovered judgment, or prove catastrophic loss.
 
 ## Supporting-record index
 

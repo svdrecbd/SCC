@@ -1,0 +1,10 @@
+{
+  "seeds": [19, 23],
+  "main": [[32, "quadratic", 2], [32, "quadratic", 3], [32, "quadratic", 4], [32, "lookup", 12], [64, "quadratic", 2], [64, "quadratic", 3]],
+  "failure_target": "1/10",
+  "small_n": 4,
+  "small_k": 5,
+  "poison_n": 32,
+  "timeout_seconds": 300,
+  "output_limit_bytes": 64000000
+}
