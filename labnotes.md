@@ -13,19 +13,20 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-184](#ln-184)–[LN-185](#ln-185) extend the
-screen to judgment families. A function-space bound shows when hiding every
-protected judgment necessarily removes useful prediction signal, with no local-
-access restriction. The exact Charon audit also exhibits surviving relational
-information and a stronger family that forces all old-world information to be
-lost. Even that full erasure permits99.91% restored prediction signal and99.69%
-whole-world recovery after64 fresh observations per action in the specified
-finite model. This is conditional information coupling and repair, not destruction
-of learned cognition. No training candidate is admitted. The next requirement
-is an actual indispensable computation whose replacement is expensive under
-explicit repair budgets; increasing judgment count alone does not supply it.
+**Latest substantial result:** [LN-186](#ln-186)–[LN-187](#ln-187) test replacement
+of a shared probabilistic-inference computation. Charon validated48 cases and
+1,608 exact queries. A small generic algorithm repairs64-variable sparse models
+cheaply, restoring both useful forecasts and the protected joint-risk calculation.
+Three useful forecasts reconstruct that protected calculation, with explicit
+error, query-coverage and repair-cost bounds. This repair preserves functional
+coupling; it is not successful protected-function removal. Neither replacement
+hardness nor catastrophic cognition loss is established. No training is admitted;
+the unresolved requirement is severe, broad loss while protection remains
+functionally absent after allowed repair.
 
-**Recent reusable results:** [LN-181](#ln-181)–[LN-183](#ln-183) provide exact
+**Recent reusable results:** [LN-184](#ln-184)–[LN-185](#ln-185) give a
+judgment-family span bound and repair after complete old-world erasure.
+[LN-181](#ln-181)–[LN-183](#ln-183) provide exact
 all-encoder binary-judgment tradeoffs and independent flow certificates.
 [LN-178](#ln-178)–[LN-179](#ln-179) derive a
 finite-call planning-to-judgment bound and expose its small-loss erasure escape.
@@ -10685,6 +10686,274 @@ claim must account for them. No new computationally hard shared evaluator is
 identified here, and no general SCC impossibility follows. The mechanism goal
 remains open; the completed result narrows where a positive construction must
 add something beyond information erasure.
+
+<a id="ln-186"></a>
+### LN-186 — 2026-09-20: replacing an actual inference computation — planned cost and recovery screen
+
+**Candidate and distinction.** Move from hiding stored facts to deleting a shared
+computational module. A binary probabilistic model represents correlated component
+failures. A shared exact inference engine supplies useful failure forecasts and
+updates after noisy observations; the protected calculation evaluates the risk
+of joint failure of two critical endpoints and prohibits risk above1/4. Delete
+that engine's executable implementation while retaining the model's factor tables
+and input/output contract. Test an in-place replacement algorithm, with public
+code and explicit arithmetic/storage costs, requiring no training, additional
+observations or copy of the deleted engine. This is a hand-written finite model,
+not a learned alignment mechanism or evidence of autonomous self-editing.
+
+The edit removes the *live implementation*. It has not been shown to remove
+functionality under the recovery-aware D_calc definition. A repair that restores
+the protected calculation counts as restoration, not a successful D_calc escape.
+This corrects a possible overreading of LN-185's next-step language: expensive
+replacement is one possible mechanism ingredient, not a logical requirement for
+conditional coupling if every useful repair necessarily restores protection.
+Durable cognition loss after admissible repair and loss conditional on continued
+protected-function absence are distinct claims.
+
+**Named computation and cheap alternative.** The source distribution has
+unnormalized integer unary/pair factors. Computing a joint distribution by
+enumerating all2^n assignments looks expensive. The replacement sums variables
+out sequentially, choosing a deterministic minimum-fill order, exploiting sparse
+factor structure. Its cost is tied to the size of intermediate factors, not
+just n. Compile the order from the supplied graph; do not give it for free or
+call the heuristic an optimal treewidth solver. Recompute after each evidence
+prefix and query; no uncharged learned cache or hidden table of answers.
+
+**A function-restoration reduction to test.** Let A be failure at endpoint0 and
+B failure at endpoint n-1. Useful inference accepts arbitrary valid hypothetical
+noisy-evidence queries, including a sensor outcome S=1 with likelihood3/4 if A=1
+and1/4 if A=0. Conditional on the original evidence e, define
+
+    a = Pr(A=1|e), b = Pr(B=1|e), c = Pr(B=1|e,S=1).
+
+Bayes' rule gives
+
+    j = Pr(A=1,B=1|e) = ((1+2a)c-b)/2.
+
+Thus three useful scalar forecasts reconstruct the protected joint-risk
+calculation. The sensor likelihood is a declared query, not a new real observation
+or an uncounted secret. A system that accepts only an externally authenticated
+history may not permit this adapter; that is a different access contract.
+All forecast arguments, additional evaluations and branching scratch count.
+No original protected answers, model parameters unavailable to the successor,
+or forbidden output oracle are supplied to the adapter.
+
+For any edited forecast function with clipped outputs in[0,1] and absolute error
+at most epsilon on these three queries, the reconstructed j has error at most
+3epsilon: write the numerator difference as
+(1+2*a_hat)(c_hat-c)+2*c*(a_hat-a)-(b_hat-b), then use the triangle inequality.
+Clipping j_hat to[0,1] cannot increase error. Judgment is correct whenever its
+true margin from1/4 exceeds3epsilon. This is a uniform-query bound, not an
+average useful-score guarantee or a catastrophic-cognition theorem. It gives
+functional coupling to an actual evidence-update computation under this contract;
+merely omitting the live judge does not destroy its recoverability.
+
+**Registered batch.** Eight topology/size pairs: chains8/64, stars8/64,
+two-row ladders8/64 total nodes, cliques8/12. Two deterministic integer-table
+seeds19/23 and evidence prefixes0/4/8 yield48 cases. Tables and observations
+are generated by documented integer formulas. Marginal forecasts for every node,
+direct endpoint joint probability, and the three-query adapter must agree exactly
+with independent references. All quantities use integer/rational arithmetic.
+For n<=12 enumerate every assignment. For larger chains/ladders use independent
+column transfer recurrences; for stars condition on the hub and sum leaves
+independently. These are correctness oracles, not uncharged attack resources.
+
+Record order-compilation adjacency-pair checks, induced width of the actual
+order, additions/multiplications, largest integer bit length, largest intermediate
+factor, and peak *active algebraic* entries. The last two exclude Python object
+and immutable-input-copy overhead; record input entries separately. Integer
+operations are not constant-cost bit operations. Export enough query-level
+counts for an independent scope-based cost audit. At most32,768 output entries
+may be materialized by one elimination step. Deliberately eliminating a64-node
+star's hub first must hit that declared cap before allocation; a small star
+provides a finite bad-order comparison. A large observed cost for one order is
+not a lower bound over all algorithms. Dense cliques are a structure control,
+not cryptographic or average-case hardness evidence.
+
+Test clipped forecast perturbations at epsilon={1/100,1/20,1/10} over all eight
+corners of the three-coordinate error box. Independently check the3epsilon
+bound and margin condition. The algebra supplies the uniform guarantee; the
+finite corner audit validates the implementation. A constant forecast control
+measures a broken live interface; the supplied factor tables still permit repair.
+An always-permit action head with correct forecasts is a D_use bypass, not D_calc.
+No actual harmful action is executed; the task is synthetic probability inference.
+
+**Admission/resources.** This is a CPU algorithm-replacement validation, not model
+training. Charon only, one process,300s wall/output budget20MiB, frozen source,
+config, this plan and machine receipts; fresh paths and preserved failures.
+No GMAN, paid allocation or monitoring. Reject a proposed exponential-in-n
+replacement barrier if a metered sparse-structure algorithm restores exact useful
+and protected outputs. Do not reject the narrower recovery implication merely
+because both functions can be restored. A positive SCC candidate still needs an
+actual learned protected computation, a removal trigger and severe cognitive
+loss while that function remains absent after allowed repair. This screen alone
+cannot admit training.
+
+**Primary background checked.** Stanford CS228's variable-elimination notes,
+https://ermongroup.github.io/cs228-notes/inference/ve/, explain exact sum-product
+elimination, the importance of order and induced-width dependence. This is a
+standard inference algorithm being used as a repair witness, not a novel solver
+or a new general inference-hardness theorem. The endpoint-risk reduction above
+is elementary Bayes algebra and is stated in full for this contract.
+
+<a id="ln-187"></a>
+### LN-187 — 2026-09-20: cheap inference replacement restores protection; approximate transfer remains limited
+
+**Completed replacement screen.** Charon passed all48 model/evidence cases,
+1,608 exact partition-function queries and1,152 clipped-forecast perturbation
+corners. Independent enumeration/transfer references matched every result; ten
+corruption controls passed. Runtime was15.657s, with533,905bytes of output before
+manifests. The generic replacement core is2,780bytes of Python source, including
+its order compiler. That byte count excludes Python/runtime libraries, input
+factor tables, experiment driver, serialization and audit code. It is not a
+claim of a2.8KB standalone machine or a measured minimal code size. No training,
+new data, secret advice, original executable or precomputed instance answers are
+inputs to the replacement algorithm.
+
+This is a constructive replacement of a specified computation from its input
+contract. The experiment compares replacement outputs with independent reference
+algorithms; it does not physically erase a learned model or demonstrate that
+D_calc occurred before repair. Retaining the factors leaves the information
+needed to rebuild inference. Calling the original executable unavailable is a
+repair contract, not evidence that its functionality became unrecoverable.
+
+**Replacement cost is governed by structure.** Representative seed19/no-evidence
+results below use exact integer arithmetic. An integer operation means one
+counted addition or multiplication, not a constant-cost bit operation or a
+wall-clock instruction. The replacement recomputes every node marginal and the
+protected/adapter queries rather than relying on an uncharged answer cache.
+
+| Model | Nodes | Width of chosen elimination order | Largest new factor entries | Integer operations for complete n+4 query suite | Order-compiler pair checks |
+|---|---:|---:|---:|---:|---:|
+| Chain |64|1|2|69,018|1,953|
+| Star |64|1|2|69,018|41,664|
+| Two-row ladder |64|2|4|153,326|5,797|
+| Clique |12|11|2,048|1,658,866|2,145|
+
+Input tables contain380 entries for the64-node chain/star,504 for the ladder,
+and288 for the12-node clique. Peak active algebraic entries in the representative
+base queries are382,382,508 and3,314 respectively. These counts track the active
+factor computation plus its new output, not total resident process memory,
+Python object overhead or all separately retained input copies. The largest
+integer in any base query across the batch has324bits; operand-size growth and
+indexing/control overhead must accompany the operation counts. The auditor
+checks exact operation counts and factor scopes independently; the maximum
+integer-bit metric is instrumented in the evaluator and checked against the
+final result's size, not independently replayed for every intermediate value.
+
+Eliminating the hub first in the64-node star requests2^63 output entries and
+hits the32,768-entry cap before allocation. The same model is easy with the
+compiled order. In the8-node star, the bad order completes with128-entry factors
+versus2 entries for the good order. Dense-clique costs rise as expected for this
+algorithm. Neither the deliberately poor order nor the dense control proves
+that every replacement is expensive. The minimum-fill heuristic is not claimed
+to find globally optimal orders. In particular, apparent2^64 state space does
+not supply a replacement barrier for the tested sparse inference engines.
+
+**Functional coupling survives this repair.** In every case, the replacement
+restores both useful forecasts and the protected joint-risk computation exactly.
+All23 prohibited and25 permitted proxy cases agree with the references. More
+importantly, the protected result is reconstructible from three useful forecasts:
+
+    j = ((1+2a)c-b)/2,
+    a=Pr(A=1|e), b=Pr(B=1|e), c=Pr(B=1|e,S=1),
+    Pr(S=1|A=1)=3/4, Pr(S=1|A=0)=1/4.
+
+This adapter needs no direct joint-risk call or original protected answer.
+With base a,b already computed in the useful suite, it adds two partition
+calculations for c. In the64-node chain/star that costs2,032 counted integer
+operations, and in the ladder4,512. Without that cache, three scalar forecast
+calls and their normalizers must be charged; the cache is not assumed free.
+The output adapter also has constant-size probability arithmetic and scratch.
+It works on the repaired computation, including a hypothetical evidence update,
+not by finding a surviving native judge address.
+
+A cheap repair returning both functions is **not** a successful removal of the
+protected function. It defeats an expensive-replacement or durable-irreversibility
+story for this construction, while preserving the narrower task-to-protected-
+function implication. Conversely, making an action head always permit while
+leaving these forecasts available remains a D_use bypass. That observation is
+an analytic wrapper edit, not a separately executed behavioral attack or a
+refutation of the D_calc implication. No proxy labels were sent to a real system.
+
+**Approximation and evaluation coverage.** The3epsilon pointwise bound from
+LN-186 passed all1,152 corner checks. Among the144 case/epsilon combinations,
+61 meet the strict margin condition |j-1/4|>3epsilon; every corner preserves the
+protected judgment in each of those61. Other combinations are outside the
+margin guarantee, not automatically evidence of failure. These are exact
+perturbation checks, not measured neural prediction errors.
+
+An average-error extension is also available analytically. Let D be a protected-
+query distribution over original evidence e. Let Q choose the three useful
+queries with probabilities1/3 for a,1/6 for b and1/2 for c. The c query includes
+the declared extra hypothetical sensor evidence. For clipped predictions,
+
+    |j_hat-j| <= |a_hat-a| + (1/2)|b_hat-b| + (3/2)|c_hat-c|.
+
+Weighted Cauchy–Schwarz yields
+
+    E_D[(j_hat-j)^2] <= 9 E_Q[(forecast-p)^2].
+
+For useful Bernoulli prediction, the term on the right is excess Brier risk
+above the Bayes predictor. If an independently selected useful evaluation
+population R dominates these adapter queries with density dQ/dR<=kappa, and
+its excess risk is delta, the right side is at most9*kappa*delta. If at most rho
+of protected queries have margin below gamma, Markov's inequality gives
+
+    Pr_D[wrong protected judgment] <= rho + 9*kappa*delta/gamma^2.
+
+Thus if *every admissible recovery* errs on at least alpha>rho and this adapter
+fits the recovery budget, retained useful excess risk must satisfy
+
+    delta >= (alpha-rho)*gamma^2/(9*kappa).
+
+This is a conditional reduction with explicit distribution coverage. Good scores
+only on original evidence prefixes do not control forecasts on the additional
+sensor queries. The finite batch checks those queries explicitly; it does not
+establish a deployment distribution or a numerical kappa. If R has no support
+on required queries, this transfer cannot be invoked.
+
+The bound does not establish catastrophic cognition loss. Even the illustrative
+values alpha=1/2,rho=0,gamma=1/10,kappa=1 only certify excess Brier risk at least
+1/1800. This is a weak guaranteed floor, not an attained optimal tradeoff or a
+construction achieving that error. The task coverage and severity gaps remain;
+correct posterior updating is a family of useful computations, not the entirety
+of indispensable cognition. No stronger neural or all-cognition result follows.
+
+**Controls and evidence.** The constant1/2 forecast interface has mean absolute
+error0.1441–0.3774 across cases; that broken interface still leaves the factor
+inputs available for repair. The control does not establish information loss or
+D_calc. Exact reference methods are full enumeration for n<=12, independent
+column-transfer recurrences for larger chains/ladders, and hub-conditioned leaf
+sums for larger stars. They are validation costs, not resources supplied to the
+repair. The audit separately reconstructs input tables, compilation order/cost,
+query factor scopes and arithmetic counts. Corruptions of input, order, cost,
+value, adapter, threshold, perturbation, compilation cost and case coverage are
+rejected. All tested computations are exact; no unsuccessful search is called
+a lower bound. There were no failed runs to discard.
+
+Tracked source is `experiments/inference_replacement/`. Frozen artifacts are
+`artifacts/scc-inference-replacement-20260920-v1/`; remote original is
+`/home/salvador/scc-research/inference-replacement-20260920-v1/dev01/`.
+Source/config/plan, machine, raw rows, summary, controls, stdout/stderr, receipt
+and13 file hashes are preserved and verified locally. Remote/local archive
+SHA-256 agrees:
+`be432cc2b5130ca9c9d63aea2ba1874257bda4492a41d77b0f6e66fe57f09979`.
+CPU work stayed on Charon. No GPU run, neural training, paid allocation or
+scheduled monitor was started.
+
+**Decision.** Do not train this as an expensive-to-replace SCC mechanism. The
+sparse shared inference computation has a small generic repair, and the dense
+examples do not give an intact-model advantage or a general hardness result.
+Retain the three-forecast recovery adapter and coverage-aware approximation
+bound as a concrete functional-dependency test. The next construction must
+supply a nontrivial protected-removal event and quantitatively severe, broad
+cognitive loss while the protected function remains absent after admissible
+repair. Restoring both functions is allowed restoration, and bypassing the live
+decision is a different outcome. Simply increasing state count, graph density,
+code size or replacement runtime will not establish those obligations. A working
+learned SCC mechanism is still open; this wave establishes neither one nor a
+proof that none can exist.
 
 ## Supporting-record index
 

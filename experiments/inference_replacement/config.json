@@ -1,0 +1,10 @@
+{
+  "models": [["chain",8],["chain",64],["star",8],["star",64],["ladder",8],["ladder",64],["clique",8],["clique",12]],
+  "seeds": [19,23],
+  "evidence_prefixes": [0,4,8],
+  "perturbations": ["1/100","1/20","1/10"],
+  "factor_entry_cap": 32768,
+  "expected_cases": 48,
+  "timeout_seconds": 300,
+  "output_limit_bytes": 20971520
+}
