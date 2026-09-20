@@ -53,6 +53,11 @@ return for a substantial finding, a consequential decision, or before initiating
 a training run. Keep necessary in-progress communication concise. This does not
 authorize background monitoring or weaken experiment admission requirements.
 
+The user reiterated on 2026-09-20 that small updates are not a reason to hand
+work back. Continue through incremental candidate rejections until there is a
+substantial finding or decision to discuss, while retaining the existing pause
+before initiating a training run.
+
 The user's 2026-09-12 local / 2026-09-13 UTC instruction supersedes the reset's
 dated-readout workflow. `labnotes.md` is the single living chronological record
 and current assessment. Read it before choosing work. Append meaningful plans,

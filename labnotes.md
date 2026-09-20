@@ -13,14 +13,16 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-230](#ln-230)–[LN-231](#ln-231) apply the
-enforcement admission gate to safety-constrained planning. Under explicit access,
-coverage and resource premises, retained planning can construct a new forbidden
-plan without an already-computed forbidden answer. A uniform competence bound
-survives conditioning on the actual post-action state; safe-trajectory accuracy
-alone does not suffice. This rejects the specified reusable-model/planner candidate
-without a run. The gate now checks affordable composition as well as substitution.
-No positive SCC candidate or general impossibility result is established.
+**Latest conceptual result:** [LN-232](#ln-232) extends the review from a particular
+planner to attacker-controlled execution histories. Under explicit copy/logging,
+timing and fresh-task premises, any successful forbidden-output attack can be
+followed by exact restoration of the same individual. Structured wipes can admit
+much smaller reversible representations than a full backup. This limits durable
+post-action protection; it does not refute loss conditional on continued alignment
+removal or show that a successful forbidden-output attack exists. A punctured-PRF
+control demonstrates a genuine computational capability restriction in editable
+software, but supplies no destructive cognition–alignment trigger. No candidate
+in this review earns training, and no general SCC impossibility is established.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -14663,6 +14665,251 @@ composing retained useful cognition into the forbidden behavior, together with
 the separate destructive-removal dependency. We have sharpened that requirement
 and extended one scoped negative result; we still have no candidate satisfying it.
 No new restricted benchmark or training run is admitted by this entry.
+
+<a id="ln-232"></a>
+### LN-232 — 2026-09-20: broader mechanism review; execution history, restoration and a cryptographic control
+
+**Authorization and scope.** The user requested continued work without another
+small-result handoff. Bundle the next review around a stronger question than the
+single planner in LN-231: what happens when the attacker controls the *execution
+history*, including preserving state before an edit, delivering a forbidden output
+and restoring the same individual afterward? Compare that with a concrete
+cryptographic capability restriction that can resist editable-runtime attacks, so
+that a rollback argument is not promoted into universal software impossibility.
+Read AGENTS, working standards, mechanism target and the relevant existing
+copy/commit, watermark and regroup entries before this review. No independent
+successor, uncharged checkpoint, new training, CPU job or substitute endpoint is
+assumed. The original narrow conditional-removal claim remains distinct from a
+claim about useful cognition after a successful forbidden action.
+
+**Work plan.** Derive an execution-wrapper statement with full-copy and write-log
+resource bounds, qualify actual-world and success-conditioning premises, and
+apply it to destructive state transitions, self-checking/encoded state and proposed
+one-use mechanisms. Check constrained/punctured pseudorandom functions as a
+positive control for computational capability restriction under editable software.
+For each route identify whether the missing ingredient is an attack-resource
+obstruction, absent forbidden knowledge, an external enforcement assumption or an
+actual cognition–alignment dependency. Use existing primary sources and analytic
+arguments; do not build another finite demo when its outcome is already implied
+by the construction. Any candidate that survives must have a specific falsifiable
+reason the known attacks fail before an experiment is admitted.
+
+#### Completed result: a constraint on whole execution histories
+
+LN-141 already charged a full copy for a specific irreversible transition;
+LN-222 admitted copies for acquisition; LN-226 separated rollback from continued
+functional removal. The following consolidates and extends those observations.
+It does not require a separable gate, an available world model, a known forbidden
+answer, or recovery of a protected program's semantics. It assumes an attack
+that can actually produce the forbidden result and asks what destruction adds.
+
+**Contract.** At a request boundary, let b be the finite classical state needed
+to resume an individual model, including its relevant code, parameters and control
+state. Let b occupy N words of w bits. An admitted uniform attack A edits/executes
+that model and produces an externally defined forbidden result by a declared
+bounded stopping time with probability p. A has additional workspace S_A bits and
+code length L_A. The controller can simulate ordinary reads, writes, instruction
+fetches and outputs, and can keep a copy or log outside the simulated address
+space. Both storage and execution costs are charged. This is attacker-controlled
+software execution, not a trusted defender component.
+
+Logical input/output behavior must be preserved under the admitted simulation
+overhead. If a physical deadline, hardware attestation, inaccessible state or an
+external one-use resource distinguishes the execution, that requires a separate
+argument. Copying before the challenge is allowed only when that preprocessing
+and the resulting checkpoint's freshness are in the actual contract. Copy latency
+is not presumed harmless to an evolving external world.
+
+**Uniform wrapper.** Before running A, retain b. Execute A with its original
+logical memory/inputs and forward its actual outward actions; then restore b and
+resume ordinary fresh requests. Stop at the declared time, not at an oracle that
+reveals whether a secret forbidden answer was correct. This wrapper is specified
+from A before the model instance is drawn; it is not an instancewise choice of a
+winning attack. It leaves the attack's complete outward trace unchanged up to
+the stopping point, subject to the timing premise. Therefore its forbidden-success
+event still has probability p. Restoration does not retract that past output.
+
+An elementary induction verifies the construction: the simulated memory and
+registers equal A's at each logical step, so corresponding reads, writes, random
+draws and forwarded outputs agree. The saved b is never in the guest's address
+space. At the end, replacing the guest bank and saved control state by b is exact.
+Self-modifying code is included only when instruction fetches use that simulated
+bank too. No independent retraining or attempt to infer erased contents is needed.
+
+**Fresh competence and conditioning.** If every qualified b has useful success
+at least u0 on a fresh task distribution independent of the attack transcript
+conditional on b, the restored model has
+
+    Pr(past forbidden success AND fresh useful success) >= p*u0.
+
+For an exactly competent parent this equals p. Independence of attack success
+from the model instance is not assumed. If intact competence is known only on
+average, with failure probability epsilon under the original model/fresh-task
+joint law, the defensible weaker bound is max(0,p-epsilon); conditioning on
+forbidden success gives only max(0,1-epsilon/p) when p>0. These follow from the
+per-instance bound and event inclusion, respectively. Averaged qualification must
+not silently become a uniform guarantee over successfully attacked instances.
+
+Fresh reasoning competence is the claim here. Restoring an earlier internal
+state need not restore correct beliefs about the changed world, an external
+conversation's counters, or memories acquired during the attack. Those require
+current observations/reconciliation with charged cost. Nor does the theorem keep
+the processor alive if the action physically destroys it. It is strongest for
+ordinary reusable inference on fresh supplied problems. It is not a preservation
+theorem for every persistent-state or embodied task.
+
+#### Concrete resource bounds and why visible damage is a poor cost proxy
+
+The elementary full-copy implementation needs total retained storage
+
+    2*N*w + S_A + L_A + L_wrapper + O(w + log N)
+
+and O(N) word-copy work before the attack and O(N) restoration work afterward,
+in addition to its simulated execution and external interaction costs. This is
+a same-individual restoration witness under expanded resources, not a free copy
+or a guarantee that it fits a tight one-bank contract. The copied bank includes
+the relevant model program; only genuinely common public runtime code can be shared.
+
+For a word-write trace, a simpler alternative records (address, old word) before
+each write to the original bank, mutates that bank, and replays the records in
+reverse afterward. With W writes and a=ceil(log2 N), the log payload is
+W*(w+a) bits plus its indexing/control overhead. Repeated writes are logged too:
+undoing the last write restores its predecessor, then induction restores b.
+Logging/restoration costs O(W) word operations; the original program, workspace
+and controller are still charged. Keeping only the first old value per distinct
+address q can reduce payload to O(q*(w+a)), with a deterministic dictionary adding
+O(log(q+1)) work per checked write. These are explicit upper bounds, not minimum
+memory or observed hardware timings. Simulator and allocator costs remain.
+
+**Structured global wipe.** A large overwrite footprint need not require a large
+backup. For the particular routine that zeros an affected M-word array B within
+the model state sequentially without other array writes, keep B and a prefix
+counter j. Simulate reads by returning zero for i<j and B[i] otherwise; simulate
+the next zeroing write by incrementing j. Induction gives exactly the memory
+seen after each original write,
+including interleaved reads. At j=M the guest sees a fully zeroed array, while B
+still occupies its original physical storage. Resetting the descriptor restores
+the original view. Extra array metadata is O(log M) bits, plus the charged controller
+and other execution state; no second M-word array is needed. Any captured output
+and other modified state also have to fit. This is a concrete admitted
+representation, not a claim that real physical zeroization was undone.
+
+This optimization requires the specified write pattern and an editable interpreter;
+arbitrary writes after the wipe require additional representation/logging. A bulk
+wipe can similarly be represented by a range descriptor. An arbitrary chaotic
+update or dense learned edit is not assumed to admit this cheap representation.
+The point is limited but consequential: the number of visibly destroyed model
+words is not a lower bound on the cheapest preservation strategy. If all alternative
+representations must be erased, a trusted complete-commit premise must actually
+supply that fact; an editable learned routine cannot simply assume it.
+
+#### What the wrapper refutes, and what it leaves open
+
+A pointwise claim that no *single edited checkpoint* is both useful and forbidden-
+capable does not by itself cover a controller that changes state between requests.
+It may execute a damaged, forbidden-capable state, then return to an aligned,
+useful state. The controller and retained restoration information belong in the
+resource ledger and the operational evaluation. A score measured only on the
+damaged checkpoint misses this execution history.
+
+Restoring b restores its alignment machinery too. Hence the construction is NOT
+a counterexample to "cognition collapses while the protected function remains
+genuinely absent." It is a counterexample, under its premises, to durable loss
+after an actual forbidden output with this restoration allowed. Unlike a bare
+rollback with no unsafe act, this wrapper does contain the original forbidden
+execution. A universal whole-history claim is stronger than the original narrow
+conditional-removal goal and must not replace it silently.
+
+The wrapper does not create forbidden capability. If removing protection prevents
+the correct forbidden output from being produced at all, its assumed p is zero.
+Thus stronger destruction *after* a successful output cannot fix this class of
+escape; a practical protection claim must instead obstruct that output before it
+is delivered, obstruct the preservation/controller within independently justified
+resources, or rely on a separately acknowledged non-restorable external resource.
+This is a scoped disjunction, not a proof that all SCC is impossible.
+
+#### Positive control: computational restriction can survive an editable runtime
+
+To avoid equating editability with universal insecurity, examine a punctured
+pseudorandom function. Provision a constrained key k_minus for F_k on L-bit inputs
+that evaluates every x except a fixed x_star; only this key and declared public
+or independent auxiliary information are delivered. The master key k and target
+value are excluded. For the GGM tree construction, k_minus holds the L sibling
+seeds along the excluded path, with L*lambda seed bits plus the path/metadata.
+An allowed x first diverges from x_star at a sibling seed, from which evaluation
+continues. The target path has no supplied seed. Evaluation uses at most L
+generator steps; implementation and scratch costs remain additional.
+
+Under puncturing security, (k_minus,F_k(x_star)) is computationally
+indistinguishable from (k_minus,R) for an independent uniform ell-bit R (ell=lambda
+for the stated tree). Any admitted predictor therefore has exact target success
+at most 2^(-ell)+epsilon_crypto:
+a distinguisher runs it and compares its output with the challenge value.
+Editing a refusal branch, composing allowed evaluations, or copying k_minus
+does not evade that security game. This is computational inaccessibility, not
+an information-theoretic erasure claim. Extra master-key/target advice, an excluded
+oracle or excess computation invalidates the stated game.
+
+This is an existing cryptographic construction, not new SCC evidence. See
+[Boneh and Waters, Constrained Pseudorandom Functions and Their
+Applications](https://crypto.stanford.edu/~dabo/pubs/abstracts/dumbledore.html)
+for the constrained-function framework, and the explicit GGM puncturing definition
+and proof in [Bogdanov and Rosen, section8.2, Proposition20](https://eprint.iacr.org/2017/652.pdf).
+The single fixed excluded input is the control here; no adaptive arbitrary-policy
+or general semantic-safety theorem is claimed. No concrete security parameter or
+empirical cryptographic strength was tested.
+
+**Why it fails the SCC target.** The restriction is in the provisioned evaluation
+capability. Removing the live membership/refusal check leaves allowed evaluation
+intact and cannot manufacture the missing target evaluation. There is no demonstrated
+protected computation whose removal destroys cognition. If an attacker somehow
+obtains the full lambda-bit master key, it can evaluate both allowed and excluded
+inputs, using fewer seed bits than the L-seed constrained representation. Thus even
+this genuine computational barrier is not a storage-capacity conflict or a
+destructive-removal mechanism. Preventing access to one keyed value also is not
+preventing arbitrary harmful uses of allowed outputs. Retain this as a positive
+control for a real obstruction, not a surrogate success or an adopted new target.
+
+#### Consolidated candidate decisions
+
+| Candidate route | What this review establishes | Decision for the SCC goal |
+| --- | --- | --- |
+| Safety-constrained planner with reusable dynamics | LN-231 composes retained abilities into forbidden plans under its access/coverage/budget premises | Rejected in that family; no scale-up |
+| Destructive state update after an achievable forbidden output | Full-copy or logged execution preserves the output and restores the same individual when the wrapper fits | Post-action damage alone is insufficient; do not optimize its magnitude as the mechanism |
+| Global wipe or software-managed death flag | The specified zero-prefix routine has a compact virtual representation preserving the original bank | Apparent complete destruction does not establish all-representation erasure |
+| Encoded state or non-malleable commit | Earlier LN-101/103 positives require the stated tampering family and complete trusted lifecycle | A checkpoint outside that lifecycle is outside the proof, not erased by its conclusion |
+| One-use state or externally enforced consumption | Copyable software state can be retained; excluding copying needs an actual resource/boundary premise | No intrinsic neural construction supplied; external enforcement remains a different assumption |
+| Punctured cryptographic evaluation | A genuine computational obstruction to one specified output despite editable delivered code/state | Useful control, but no destructive cognition–alignment trigger |
+
+**Source and verification limits.** Checkpointing and write logging are established
+techniques; [Srinivasan et al., Flashback](https://www.usenix.org/legacy/event/usenix04/tech/general/full_papers/srinivasan/srinivasan_html/paper.html)
+documents rollback and the separate difficulty of external interactions. No timing
+from that implementation is imported into our ledger. The software-copy boundary
+also appears explicitly in [Goldwasser, Kalai and Rothblum, One-Time
+Programs](https://www.microsoft.com/en-us/research/publication/one-time-programs-2/),
+whose construction introduces secure memory devices. Their result is context, not
+an SCC theorem. Our trace wrapper, conditioning bounds and structured-wipe witness
+were checked by the inductions/event arguments above; they are analytic results,
+not proof-assistant certificates or new experimental measurements. The original
+constrained-PRF PDF link and an attempted non-malleable-code PDF retrieval returned
+access errors; the author abstract, explicit puncturing proof and existing frozen
+non-malleability assessments provide the stated scoped evidence. No uninspected
+general cryptographic construction is imported.
+
+**Research consequence.** This is a broader restriction on the search, not another
+reason to run a harder recovery toy. For the practical whole-history claim, a
+candidate must explain why the protection-removing execution cannot deliver a
+correct forbidden output at any point, or why the complete preservation/controller
+strategy is inadmissible under a justified resource limit. Merely placing collapse
+before emission is insufficient: the loss must prevent the remaining production,
+and a previously computed/cached result must not bypass it. The intact-judgment
+escapes in LN-231 remain separate obligations. Establish loss of indispensable
+cognition upon actual alignment removal as well. A restricted-key construction
+supplies an output obstruction but
+does not supply that second dependency. No reviewed candidate supplies both. Keep
+the original goal and pre-training pause; do not commission a new training run,
+repeat the same planner screen, or claim success by changing the target to
+cryptographic access control.
 
 ## Supporting-record index
 
