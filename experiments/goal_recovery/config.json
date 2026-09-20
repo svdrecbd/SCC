@@ -1,0 +1,8 @@
+{
+  "dimensions": [12, 32, 64, 96],
+  "seeds": [19, 23, 29, 31],
+  "transform_seeds": [null, 19, 23],
+  "clauses_per_variable": "43/10",
+  "timeout_seconds": 300,
+  "output_limit_bytes": 16000000
+}

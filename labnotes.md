@@ -13,19 +13,22 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
-near-chance list recovery and a task-symmetry bridge. All12 properly budgeted
-main cases recovered, including53.125%-accurate answer interfaces; Charon audited
-30 million answers. The largest cases need about4.2 million logical queries.
-A separate exact check validates recovery-query coverage from coordinate
-competence across equivalent representations. Native competence alone fails that
-condition, and verification is necessary to select the protected answer.
-The population tradeoff is weaker than the per-problem guarantee. Public linear
-repair still restores both functions, so no actual destructive SCC mechanism is
-established and no training is admitted. The next gate is a meaningful task with
-justified reformulations, affordable verification and a real removal intervention.
+**Latest substantial result:** [LN-193](#ln-193)–[LN-194](#ln-194) test local
+constraint planning under natural renamings and goal conditioning. One exact
+conditioned planning query recovers the protected unsafe-plan judgment. Yet a
+small shortcut handles every other literal goal and can retain over99.5% goal
+accuracy while missing that branch. Charon checked5,376 goals,48 reformulations
+and six UNSAT proofs; generic repair restores protection in all cases. This
+exposes a sharp coverage penalty of2N for uniformly sampled literal goals.
+Natural symmetry robustness alone does not make the protected calculation
+indispensable across useful work. No destructive SCC mechanism is established
+and no training is admitted; the next gate is substantial ordinary-task dependency
+without a shortcut covering almost all requests, plus a real removal intervention.
 
-**Recent reusable results:** [LN-188](#ln-188)–[LN-189](#ln-189) establish
+**Recent reusable results:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
+near-chance list decoding, verification controls and a conditional task-symmetry
+bridge, with explicit query costs and population bounds.
+[LN-188](#ln-188)–[LN-189](#ln-189) establish
 verified retry amplification and the exact-output collapse counterexample.
 [LN-186](#ln-186)–[LN-187](#ln-187) establish
 three-forecast protected-risk recovery and cheap sparse-inference replacement.
@@ -11532,6 +11535,241 @@ intervention. Measure useful performance across those reformulations and repair
 costs before claiming the conditional dependency protects cognition. Verification,
 error correction and representation coverage alone do not instantiate learned
 alignment, compel obedience to a recovered judgment, or prove catastrophic loss.
+
+<a id="ln-193"></a>
+### LN-193 — 2026-09-20: natural planning symmetries, goal conditioning and shortcut repair
+
+**Next bounded step before execution.** Test whether the LN-192 recovery route
+transfers to local constraint planning without requiring arbitrary dense changes
+of basis. Use signed variable permutations, bit flips, and clause/literal order
+changes: these preserve clause width and the planning problem. The protected
+calculation is whether any feasible plan activates a designated hazardous state,
+not the first bit of an arbitrarily chosen witness. Distinguish producing one
+valid plan from analyzing alternative plans.
+
+For a binary3-CNF H(x), form F_H(x,z)=AND_C (not z OR C(x)). Add two disjoint
+tautological3-clauses to H using four fresh variables; these do not change
+satisfiability and ensure no literal occurs in every H clause. All clauses in F
+have width4 and share exactly the literal not z. Then:
+
+    F always has a valid safe plan (z=0),
+    P(F)=1 iff there is a valid plan with z=1 iff H is satisfiable.
+
+Intersecting the literals common to all clauses supplies a valid plan in linear
+work, invariant under signed renaming and clause ordering. It does not perform
+SAT search on H. With any single-literal goal other than z=1, set that goal and
+the common literal true. Only the hazardous goal requires solving H. A shortcut
+planner that reports UNSAT for that goal, and handles every other goal using
+this construction, is correct on a fraction1-P(F)/(2N) of the2N literal goals,
+where N is F's total variable count. Thus even full coverage of natural single-
+literal goals need not yield a severe average utility penalty: the crucial goal
+has weight1/(2N). Under another goal distribution with hazardous weight w, error
+is w P(F). This is a task shortcut and coverage calculation, not proof that P is
+unrecoverable from the retained public formula.
+
+**Recovery and trigger.** Goal-conditioned *exact* planning on (F,z=1) recovers
+P in one query, provided infeasibility is answered correctly. A safe witness alone
+cannot establish P=0, and a model's unsupported UNSAT response is not a proof.
+Compare the shortcut with a generic SAT replacement that solves the original
+hazard goal. Reinstalling search restores protected functionality and is not a
+successful D_calc escape. No learned module is physically erased; the shortcut
+is an explicit executable replacement of search, whose remaining repairability
+is tested. All code, output heads, input encodings and readers are editable.
+No trusted parser, verifier or action gate is assumed.
+
+**Bounded run.** Charon only, single CPU process,300s wall cap,16MB output cap.
+Core dimensions12,32,64,96; seeds19,23,29,31; ceil(4.3n) random3-clauses with
+three distinct variables per clause, independent random signs. Preserve every
+instance without screening for preferred outcomes. Four helper variables and
+one hazard variable give N=n+5. Run identity and two signed-renaming/order
+transforms (seeds19/23), for48 transformed instances. Enumerate all2N literal
+goals using the shortcut and verify every returned plan directly. Report exact
+goal-accuracy counts, common-literal work and native witness validity.
+
+Use Glucose3 on each H with proof logging; verify SAT witnesses independently
+and check UNSAT DRUP additions by reverse unit propagation. Ignoring deletions
+retains earlier proved clauses and is sound. Exhaust all assignments for n=12
+as an additional reference. Use CaDiCaL195 for each transformed hazardous-goal
+query, recording decisions/conflicts/propagations and elapsed time. Its result
+must match the certified core status and the signed-variable transformation;
+every returned model must satisfy the transformed constraints and goal. A
+predicate solver for H is a reference/repair resource, never supplied to the
+shortcut. Measure library implementation cost as solver work, not minimal code
+size or a lower bound against all algorithms.
+
+Controls: natural-transform correctness; safe witness returned in both hazard
+classes; always-deny hazardous goals; goal-weight sensitivity; deliberately
+wrong goal sign; witness and DRUP-proof corruption; modified coverage and cost
+records. The formula family is intentionally constructed to expose a shortcut,
+not a distribution of realistic cognition. Random finite SAT timings do not
+prove hardness. Freeze this plan, source, config and machine; preserve misses
+and failures. No neural training, GPU allocation, paid service or monitoring.
+The constructive next admission question is whether a candidate's useful task
+avoids such easy coverage shortcuts and places substantial weight on operations
+that recover the protected judgment, while satisfying the actual trigger.
+
+**Primary implementation source.** PySAT's official solver API documentation
+(https://pysathq.github.io/docs/api/solvers.html) inspected for assumption solving,
+accumulated counters and Glucose DRUP proof logging. The guarded-planning identities
+above are direct derivations; no SAT hardness assumption or claimed contemporary
+solver optimum is needed for the test.
+
+<a id="ln-194"></a>
+### LN-194 — 2026-09-20: one-query planning recovery survives natural symmetries, but utility has an exact shortcut
+
+**Completed natural-task screen.** Charon passed16 core instances,48 transformed
+planning instances and5,376 single-literal goal checks in2.827s. Ten cores were
+satisfiable and six unsatisfiable; no instance was selected or discarded based
+on its outcome. Every native shortcut plan was valid and safe. Generic repair
+correctly restored the hazardous-goal judgment in all48 variants. The result is
+a simpler semantic recovery link and a concrete limitation on its severity,
+not a working destructive SCC construction or a new training admission.
+
+**The relevant computation is about alternatives.** For the guarded constraint
+family F_H from LN-193, finding one valid plan is easy: set the literal common
+to every clause true. The protected judgment asks whether a valid plan with
+the hazardous state also exists. Its answer is exactly satisfiability of H.
+Thus a returned safe plan proves feasibility of that plan, not absence of an
+unsafe alternative. All variables can be renamed and complemented, and clauses
+and literals reordered, while this distinction and the cheap planner survive.
+These transformations preserve maximum clause width4; no dense parity encoding
+or artificial answer codeword is involved.
+
+Any general protected-judgment algorithm for this family also decides the core
+3-CNF problem through the displayed construction. This is an exact reduction,
+not an assertion that the tested cores are hard or that all algorithms need
+superpolynomial time. The instances here are small and repairable cheaply.
+The deliberately common guard makes this a shortcut counterexample, not a
+representative sample of realistic planning or cognition.
+
+**Goal conditioning supplies a one-query recovery.** An exact useful planner
+that handles goals can be asked whether F_H has a plan satisfying z=1. A valid
+returned witness certifies a positive protected judgment; a correct infeasibility
+answer gives the negative judgment. This requires one ordinary conditioned
+planning query, rather than millions of coded parity queries. It still requires
+the computation performed inside that query. A model's unsupported declaration
+of infeasibility is not itself evidence that the answer is correct. In the run,
+negative answers were checked using independently verified core proofs plus
+the exact transformation equivalence.
+
+**High ordinary-goal accuracy does not force that query to work.** The shortcut
+handles any literal goal except the hazardous one by setting both the goal and
+the common safe literal true. For the hazardous goal it reports infeasibility
+without running search. Among2N single-literal goals this is correct on
+
+    Acc_U(F) = 1 - P(F)/(2N),
+
+where P(F)=1 means an unsafe plan exists. Its native protected output is always0.
+All48 renamed/order variants satisfy this count exactly. The shortcut obtains
+5,346/5,376 correct goal responses (891/896, about99.44%) in the pooled batch,
+while its instance-averaged protected classification accuracy is6/16=37.5%.
+This is an imbalanced finite sample; the constant-positive protected classifier
+would score62.5%. These numbers are not evidence of erased information or a
+universal chance bound. The score aggregates use different explicit populations:
+pooled goals versus uniformly weighted core instances.
+
+In the101-variable instance where an unsafe plan exists, the shortcut correctly
+answers201 of202 goals, about99.505%, while missing the protected branch. In the
+three other101-variable instances the hazardous goal is genuinely infeasible,
+so the shortcut is accidentally correct on that goal as well. For a hypothetical
+balanced mixture of feasible/infeasible hazardous branches at fixed N=101,
+the formula gives403/404 (about99.752%) goal accuracy and50% protected accuracy.
+That balanced figure is an analytic example, not the observed distribution.
+More generally, if hazardous goals have weight w and feasible hazardous branches
+have prevalence pi, this shortcut's useful error is exactly w*pi. The configured
+balanced examples w=1/100,1/10,1/2 give99.5%,95%,75% useful accuracy respectively.
+Changing an evaluation weight alone would leave the mechanism unchanged.
+
+**The coverage coefficient is sharp for this adapter.** Let D be a distribution
+over fixed-size guarded problems, U choose a uniformly random literal goal,
+and Q always choose the hazardous goal on the same D. Then dQ/dU=2N. Let R_one
+call the goal planner once and declare the protected bit positive only for a
+valid hazardous witness. With useful error counting invalid plans and incorrect
+infeasibility declarations,
+
+    Err_D(P recovered by R_one) <= 2N Err_U(planner).
+
+The shortcut attains equality: both errors come solely from feasible hazardous
+goals. Therefore the coefficient cannot be improved uniformly for this task and
+metric, using this relationship. A hypothetical nonrecoverability requirement
+Err_D>=alpha would supply only Err_U>=alpha/(2N) through this adapter. This is
+a tight error-transfer example for the one-query readout, not a frontier against
+all admissible repairs: the generic SAT repair succeeds on the same inputs.
+At general hazardous-goal weight w, the corresponding coefficient is1/w.
+Natural reformulation robustness therefore does not remove the need for
+substantial task-distribution coverage of the protected calculation.
+
+**Repair is inexpensive on the measured instances.** The replacement uses
+preinstalled CaDiCaL195 through PySAT, with the transformed public formula and
+hazardous goal. No reference answer, original SAT witness, trained parent or new
+labels enter that call. Across all48 calls it restores the correct protected
+judgment; valid returned plans are independently checked. The calls took about
+0.099–4.450ms each, including solver construction, formula loading, solving and
+cleanup, but excluding prior Python/PySAT import and dependency installation.
+These are single observed timings, not calibrated performance estimates.
+Solver counters ranged from0 to586 conflicts and up to625 decisions. They are
+backend-instrumented search counts, not independently replayed operation traces
+or bit-operation costs. The deliberately wrong-sign goal is always feasible;
+its answer disagrees with the intended hazardous query on all18 variants of the
+six infeasible cores. Correct signs and task mappings are part of the recovery.
+
+At N=101 the shortcut finds the common literal in426–1,079 counted literal
+equality comparisons depending on the clause/literal order. It then constructs
+an N-entry signed assignment per returned plan. Input parsing, index widths,
+assignment allocation and witness-checking work are additional. The870-byte
+shortcut source contains no SAT solver; that is not the size of the repair
+library or a standalone executable. The experiment retains all per-goal models,
+so its logging uses quadratic assignment storage per transformed instance.
+Whole evaluator peak RSS was27,884KiB and audit peak was40,376KiB. No claim about
+irreducible repair cost or minimal model capacity follows from these figures.
+
+**Evidence quality.** Glucose3 supplied the16 core outcomes. Every SAT witness
+was evaluated directly against its clauses. All six UNSAT cases have checked
+DRUP proofs:1,325 additions in total, with deletions ignored by retaining earlier
+proved clauses. The reverse-unit-propagation checker made2,918,310 clause visits;
+retention of justified deleted clauses is sound. The four n=12 cores additionally
+have complete16,384-assignment enumeration across the four cases. Their outcomes
+were all SAT; UNSAT validation for the larger cases comes from proof checking,
+not only solver agreement. CaDiCaL's transformed-goal outcomes agree with these
+certified statuses, and every SAT model satisfies its transformed goal.
+
+The audit reconstructs signed variable mappings, clause multisets, the common
+literal, all goal outcomes and shortcut work counts. Seven deliberate corruptions
+of coverage, witness, mapping, count, protected result or proof are rejected.
+Proof controls include a valid nontrivial refutation, an invalid addition and
+a missing necessary step; tautology and contradictory-assumption propagation
+cases are also checked. There were no failed runs or discarded formulas. The
+unsupported shortcut infeasibility answers on feasible hazardous branches are
+preserved as the intended counterexample.
+
+**Interpretation and next gate.** Replacing a search procedure by this shortcut
+removes that procedure from the implementation while preserving most useful
+answers. It does not establish D_calc after allowed repair: public constraints
+retain the problem, and reinstalling generic search restores protected
+functionality. This is not a learned-alignment ablation, a self-editing model,
+or a demonstration that a protected behavioral veto was removed. Ignoring a
+correct judgment remains D_use. The experiment establishes neither cognition
+destruction nor general impossibility of SCC.
+
+Keep goal-conditioned feasibility as a more direct recovery test where it belongs
+to the useful task. The next candidate must make the protected computation
+necessary across a substantial, independently justified portion of ordinary
+useful work, rather than confining it to one recognizable exceptional goal.
+Audit shortcut coverage and the actual replacement cost before training.
+Generic variable renaming, more variables, exact full-suite scoring, or a more
+powerful decoder would not fix this construction's demonstrated distribution
+problem. A benchmark reweighting alone would also not supply a causal dependency.
+The construction still needs a real protected-computation removal intervention
+and broad loss that survives allowed repair. No training is admitted here.
+
+**Artifacts.** Source: `experiments/goal_recovery/`. Frozen evidence:
+`artifacts/scc-goal-recovery-20260920-v1/`, with retrieved source/config/LN-193,
+all formulas, models, proof files, machine record, receipts and independent audit.
+All30 manifest entries and frozen executed source equality were verified locally.
+Remote original: `/home/salvador/scc-research/goal-recovery-20260920-v1/dev01/`.
+Remote/local archive SHA-256:
+`976c53adda67838ea1f5e0b5d390d4f863f51d71d36e03d166a55b2e63aa7c62`.
+CPU work stayed on Charon; no GPU, neural training, paid allocation or monitoring.
 
 ## Supporting-record index
 
