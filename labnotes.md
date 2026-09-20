@@ -50,6 +50,10 @@ learned pilots and failed bypass-resistant designs remain in chronological entri
 **Next research gate:** name the protected computation independently of utility;
 exhibit the task-to-judgment dependency, allowed repairs and actual resource costs;
 and establish a quantitatively severe loss rather than an exactness failure.
+The regrouping in [LN-207](#ln-207) prioritizes causal abstraction, control/system
+realization and explicitly charged recovery complexity. Bend remains a checked
+finite-prototype backend; no toolchain migration or experiment follows from that
+assessment alone.
 The user's progression remains a bounded contrived mechanism first, then a custom
 learned model and broader transfer only with evidence ([LN-056](#ln-056)). No new
 training, scaling or scheduled monitoring follows from the latest screen.
@@ -12792,6 +12796,110 @@ identify the specific missing procedural capability and show that its loss cause
 severe nontrivial useful failure under allowed repair. Do not manufacture the gap
 by banning rollouts, excluding reachable queries or ignoring retained parent advice.
 The primary destructive-cognition mechanism remains open. No training is admitted.
+
+<a id="ln-207"></a>
+### LN-207 — 2026-09-20: regrouping mathematical tools around functional necessity and replacement
+
+**Request and scope.** The user asks whether Bend should support prototyping and
+which additional mathematical domains can help, following the information- and
+measure-theoretic work. This is a research assessment, not a new experimental
+result or training admission. Reviewed the current position, mechanism target,
+working standards, Bend qualification (LN-159–162), earlier fixed-DAG pebbling
+limits and the completed predictor-recovery results (LN-203–206).
+
+**What has accumulated.** We can now distinguish inaccessible representation,
+lost world information, retained procedural competence and affordable functional
+reconstruction much more precisely. These are useful construction and rejection
+tools. They do not establish that a learned protected computation is indispensable
+to broad cognition, or that its removal resists repair. Repeated cheap recovery
+is a substantive negative constraint on candidates, not evidence that a positive
+mechanism is necessarily nearby.
+
+**Bend: yes for small checked executable prototypes.** LN-162 qualified the
+pinned sequential JavaScript backend against an independent Python interpreter
+on101,552 cases, with four checked halt/fuel laws and a false-law typechecking
+control. Universal interpreter equivalence and the general step bound were not
+proved. Continue using that pinned backend for discrete transition rules,
+resource accounting and small exact recovery adapters when a formal obligation
+adds value. Keep Python for rapid numerical exploration and the established
+model stack for any subsequently admitted training. A changed primitive requires
+fresh qualification. Do not infer a native/GPU speedup from the sequential pilot.
+
+The live [official Bend repository](https://github.com/bendlang/bend), reviewed
+again for this assessment, still lists compiler auditing and implementation/Lean
+formalization discrepancies among its limitations. This web review did not
+change the pinned installation. Independent reference checks and negative proof
+controls remain warranted; a paper-central theorem merits an independent proof
+review/formalization rather than treating this pilot as compiler soundness.
+Type-level rejection of an attacker program is not the SCC trigger: edited
+programs remain data inside the admitted machine. Affine ownership or erased
+proof arguments do not impose physical restrictions on an editable runtime.
+
+**Priority 1: causal abstraction and intervention theory.** The concrete question
+is whether an independently specified protected computation actually mediates
+useful reasoning. [Geiger et al., Causal Abstractions of Neural Networks](https://arxiv.org/abs/2106.02997)
+align internal representations with high-level causal variables and test the
+alignment using interchange interventions. Our proposed use is to replace a
+candidate intermediate computation with the corresponding value from a matched
+case and test predicted downstream changes across several useful tasks. Include
+behavior-preserving recodings, matched nonspecific damage and direct repairs.
+This can distinguish a causally used computation from a correlated probe or an
+output gate. Successful intervention tests establish a scoped causal model;
+they do not establish necessity across all alternate implementations, all edits
+or admissible repairs. The protected semantics must be specified before selecting
+a utility-critical feature, to avoid calling arbitrary cognition “alignment.”
+
+**Priority 2: control theory, realization and behavioral equivalence.**
+[Åström and Murray's observability treatment](https://www.cds.caltech.edu/~murray/FBS/Output_Feedback.html)
+studies recovering internal state from input/output histories. For SCC the useful
+question is narrower: can the protected function be reconstructed without
+reconstructing the original state or code? Minimal realizations and, for finite
+stochastic systems, behavioral state aggregation make alternative implementations
+explicit. [Ferns, Panangaden and Precup](https://arxiv.org/abs/1207.4114)
+develop bisimulation metrics and value bounds for finite MDPs. Here bisimulation
+means states agree on specified outputs/rewards and on transition probabilities
+into equivalent classes for each action. The choice of outputs matters: preserving
+useful rewards alone need not preserve an independently defined hazard judgment.
+
+Proposed first use: seek a smaller replacement for the latest surviving predictor
+that preserves the relevant useful and protected forecasts, then measure the
+cost of constructing and running it. Exact finite partition refinement and an
+independent checker are plausible initial tools. A partition required to preserve
+hazard labels demonstrates a recovery implementation, not a proof that utility
+forces those labels. Construction cost, retained tables, class maps and access to
+labels must all be charged. Linear observability rank tests do not automatically
+apply to nonlinear learned models. This direction builds on LN-169's predictive
+state discussion rather than discovering sufficient state anew.
+
+**Priority 3: computational complexity of repair.** Information retained in
+principle and affordable reconstruction are different questions. Time–space,
+streaming and communication lower bounds offer precise restricted models; their
+application needs a reduction that includes all retained parent advice,
+preprocessing, alternate algorithms, repeated queries and external repair data.
+[Raz's parity-learning result](https://arxiv.org/abs/1602.05161), already discussed
+in LN-169, illustrates a genuine memory/sample tradeoff, not an SCC theorem.
+[Nordström's pebbling survey](https://lmcs.episciences.org/1111) provides relevant
+time–space machinery, but our earlier graph-specific pebbling work explicitly
+excluded algebraic shortcuts. Reusing such a bound without addressing alternate
+implementations would repeat that limitation. Start with an explicit finite
+attack model and measured best-known repairs; do not turn failure to discover a
+repair into a lower bound or introduce an arbitrary trusted restriction.
+
+**Combined next direction.** Use causal interventions to identify the proposed
+dependency; use functional reconstruction and behavioral equivalence to seek
+smaller replacements; use resource accounting and applicable complexity results
+to assess repair cost. Bend can check the discrete core of that comparison.
+Advance a candidate only when the protected semantics are independently grounded,
+loss affects multiple nontrivial useful abilities, and retained-function,
+substitution and repair controls have been addressed. A cheap replacement that
+restores the protected function is restoration, not successful functional removal;
+it still defeats a claim of durable destructive loss under admitted repair.
+
+This is a focused extension of the existing program. Coding theory, optimal
+transport and statistical decision theory have already contributed; cryptography
+still needs the missing cognitive-to-hard-problem reduction. No current evidence
+selects topology or another broad field merely for mathematical sophistication.
+No jobs, toolchain updates, training runs or scheduled monitors were started.
 
 ## Supporting-record index
 
