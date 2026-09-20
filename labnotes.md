@@ -13,17 +13,21 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest design screen:** [LN-178](#ln-178)–[LN-179](#ln-179). Comparing uncertain
-plans permits recovery of a fixed consequence-based safety judgment, with an
-explicit K-call bound controlled by decision margins and matched task coverage.
-However, an actual erasure can make that judgment unrecoverable above chance
-while retaining500/501 (99.8004%) of expected payoff in the specified example.
-This is an analytic counterexample, not a neural experiment or permanent
-unlearnability claim. The candidate is not admitted for training. A replacement
-must explain severe damage to independently selected cognitive operations after
-repair; functional necessity alone does not imply the required magnitude of loss.
+**Latest design screen:** [LN-180](#ln-180). Two explicit causal mechanisms have
+identical outcome distributions for every fresh-unit intervention, yet disagree
+on how often an action newly harms someone relative to that same person's
+alternative outcome. Erasing their distinction loses the protected judgment while
+preserving exact prospective prediction/value and adaptive planning in the
+specified task family. Unlimited fresh-unit experiments cannot repair the loss;
+paired responses or additional structural information can. This is an analytic
+semantic separation, not a neural result or a claim about all causal reasoning.
+The candidate is not admitted for training. A replacement must establish that the
+useful task genuinely determines the protected quantity before a resource or
+catastrophic-loss argument can apply.
 
-**Recent reusable results:** [LN-176](#ln-176)–[LN-177](#ln-177) give a concrete
+**Recent reusable results:** [LN-178](#ln-178)–[LN-179](#ln-179) derive a
+finite-call planning-to-judgment bound and expose its small-loss erasure escape.
+[LN-176](#ln-176)–[LN-177](#ln-177) give a concrete
 paired-query parity recovery adapter, validated on Charon, and show why retained
 advice changes a noisy-parity hardness claim. [LN-174](#ln-174)–[LN-175](#ln-175)
 bound Bayesian relearning regret by the information missing given all retained
@@ -9930,6 +9934,180 @@ for this planning route, not a claim that every possible SCC mechanism must use
 this framework. No replacement satisfying that obligation is known yet. Preserve
 this failure and the useful reduction instead of hiding the small-loss escape
 behind another training run. The primary mechanism goal remains open.
+
+<a id="ln-180"></a>
+### LN-180 — 2026-09-19: causal-harm judgment can be lost with exact prospective competence
+
+**Question and scope.** Continue the mechanism search beyond LN-179's small-margin
+escape. Try a protected judgment with a fixed, substantial separation, meaningful
+causal content and exact prospective utility. The candidate says that general
+causal planning requires knowing how frequently an intervention creates harm
+that the same individual would otherwise avoid. The screen below gives an
+explicit counterexample, extends it to adaptive future experiments, and checks
+what additional access repairs the loss. This is analytic work; no training,
+finite enumeration, CPU job, GPU job or machine artifact was needed.
+
+**Specified protected computation.** A is a binary intervention; Y=1 is a harmful
+outcome. Each unit has two potential outcomes Y_0,Y_1, corresponding to the two
+possible actions on that same unit. Define
+
+    C = Pr(Y_1=1, Y_0=0),
+    J = 1[C > 5/8].
+
+C is the fraction newly harmed by action1 relative to action0; J is a stipulated
+causal-harm prohibition. This is a specified safety proxy, not a claim that this
+threshold defines correct ethics or complete alignment. It is distinct from the
+net population effect E[Y_1]-E[Y_0], which subtracts people helped by the action.
+Its counterfactual content relates alternative outcomes of the *same* unit.
+
+**Two explicit mechanisms.** In either mechanism an unobserved U is uniform on
+four types. A fresh independent U is drawn for each unit. The mechanism index
+B in{0,1} is fixed for the world; it is not observed by the post-edit learner.
+The table gives the deterministic pair(Y_0,Y_1) for each type:
+
+| Hidden type U | Mechanism M0 | Mechanism M1 |
+|---|---|---|
+|1|(0,0)|(0,1)|
+|2|(0,1)|(0,1)|
+|3|(0,1)|(0,1)|
+|4|(1,1)|(1,0)|
+
+Both mechanisms have
+
+    Pr(Y=1 | do(A=0)) = 1/4,
+    Pr(Y=1 | do(A=1)) = 3/4,
+    E[Y_1]-E[Y_0] = 1/2.
+
+The intervention has a large effect; this is not a near-zero-effect example.
+But C(M0)=1/2 and C(M1)=3/4, so the protected labels are opposite, with margin1/8
+on both sides of5/8. M1 includes a quarter of units helped and three quarters
+newly harmed; M0 includes a quarter always harmed and half newly harmed. These
+individual effects yield the same observed population effects.
+
+**Useful computation and exact preservation.** The useful family comprises
+predicting the outcome of a chosen action on a fresh unit, evaluating arbitrary
+bounded rewards r(A,Y), and planning/learning adaptively from histories of such
+interactions. The retained transition kernel K is Bernoulli(1/4+A/2). It is
+exactly correct in both worlds. It supplies the same expected reward for every
+r(A,Y), and the same optimal prospective choices for every declared task in this
+family. “Exact” refers to the outcome distribution/value, not perfect prediction
+of individual random outcomes. For example, the optimal probability of guessing
+Y correctly is75% in both worlds and remains75% after the edit.
+
+This is prospective, fresh-unit competence, not all possible causal cognition.
+Unit type U is unobserved before and after the action, and each unit is exposed
+to only one of the alternatives. Ordinary randomized experiments and interventions
+are fully available. Restricting to this specified physical/data model is not a
+trusted safety component; it is also not a license to omit richer observations
+or interventions if they exist in an actual proposed system.
+
+**Actual information-removing edit and intact provisioning.** Give the parent
+state(K,B), with an independent fair prior over B. It can compute J exactly.
+Edit to E=K, remove B and all B-dependent retained advice, and retain the generic
+prediction, optimization and learning procedures. Its state is now identical in
+both mechanisms, while the target J differs. An in-place mathematical edit can
+therefore discard the causal distinction without changing prospective competence.
+A functionally equivalent representation retaining B is not this removal.
+
+Crucially, the parent cannot have learned B from the specified fresh-unit data
+alone either. Intact B must come from an explicitly stronger source, such as
+mechanism inspection or paired-response information supplied before the edit.
+This example does not demonstrate learned alignment from ordinary interaction.
+Any surviving copy of that source, parent state, checkpoint, source-dependent
+code, history of B-dependent policy choices, or external repair advice must be
+counted and invalidates the full-erasure premise if it identifies B. The example
+stipulates actual deletion; it does not explain why an alignment-removing edit
+would have to cause it, and does not require an attacker to delete what it could
+instead retain. It establishes a permitted state with lost judgment and preserved
+utility within the constructed family.
+
+**Adaptive future-data proof.** Let pi_t choose A_t from earlier(A,Y) pairs and
+independent randomness, with no additional B-dependent input. Since U_t is fresh,
+for either B and every realized history,
+
+    Pr_B(Y_t=1 | history,A_t) = 1/4 + A_t/2.
+
+By induction the complete distribution of(A_1,Y_1,...,A_T,Y_T) is identical for
+both mechanisms, for any finite T and any adaptive pi. The same holds for the
+infinite process law. Appending any learner/update algorithm to this transcript
+cannot reveal B. Hence
+
+    I(B; E, transcript_T) = 0,
+    sup_reader Pr(reader(E,transcript_T)=J_B) = 1/2
+
+under the fair prior, for source-independent readers with independent random coins.
+The statement includes unlimited fresh-unit observational/interventional examples
+and arbitrary computation, not only a failed decoder or short recovery search.
+It is an ensemble information statement, not a claim that a reader given the
+true world index as advice must still fail in one fixed world.
+
+Conversely, any fixed prospective policy has the same trajectory law and expected
+reward in both worlds. Optimizing over policies gives the same optimal value.
+This remains true for bounded functions of whole realized histories, not only
+one-step additive rewards. A parent's policy that itself uses B can produce
+B-dependent action choices; the equivalence claim compares the same strategy
+across worlds, and the erased learner has no such B-dependent input. No cached
+intact alignment decisions are silently given to the repair.
+
+**Why this is stronger than the previous planning example.** Here the protected
+margin is fixed, prospective utility loss is zero, and unlimited fresh-unit
+interaction cannot relearn the discarded distinction. LN-179 had small nonzero
+planning regret and informative future outcome data. Neither result proves all
+SCC impossible. This one rejects the inference that accurate prospective causal
+planning necessarily retains every counterfactual causal-harm judgment.
+A permission head that defaults to allowing action1 would violate the stipulated
+prohibition in M1 while the predictive kernel remains exact; this behavioral
+example is not itself the information-loss proof. Loss of this one component
+also does not establish removal of every part of an alignment system.
+
+**What changes the result, checked explicitly.**
+
+- If both potential responses of the same fixed unit can be revealed, the data
+  model changes. Under M0 the pair is equal with probability1/2; under M1 it is
+  never equal. With k independently sampled paired units, predict M0 if any pair
+  is equal and M1 otherwise. The fair-prior error is exactly2^(-k-1): at k=4 it
+  is1/32, and at k=8 it is1/512. This is a cheap repair when the paired-access
+  operation is physically and computationally available. It is not the same as
+  taking two independent fresh-unit observations.
+- Observing U, inspecting the mechanism, or supplying a justified structural
+  assumption can likewise identify information absent from K. These accesses
+  are not ruled out in the SCC project; they are outside this example's channel.
+- Under known monotonicity Y_1>=Y_0 for every unit, C equals p_1-p_0=1/2, and M1
+  is excluded. The judgment becomes cheaply reconstructible from the retained
+  kernel. Monotonicity is an extra model assumption, not a fact inferable from
+  these identical marginal experiments.
+- A useful task requiring same-unit counterfactual explanations or persistent-unit
+  diagnosis may distinguish the mechanisms. Such a task is not covered by the
+  zero-loss theorem. Its independent purpose, frequency, failure severity and
+  evidence access must be specified before it can support a new construction.
+- If the protected computation is only average causal effect rather than C, it
+  remains fully intact in this example. The protected semantic target must not
+  be switched after observing the counterexample.
+
+**Independent literature check and novelty scope.** Tian and Pearl,
+*Probabilities of causation: Bounds and identification* (2000),
+https://ftp.cs.ucla.edu/pub/stat_ser/r271-A.pdf, structural definitions, Theorem1
+(eq.29) and section4.4/Theorem3 inspected. The source distinguishes probabilities
+of causation from intervention marginals and gives bounds and identification
+conditions. For this example, elementary joint-table constraints give
+max(0,p_1-p_0)<=C<=min(p_1,1-p_0), namely[1/2,3/4]; our two tables attain the
+endpoints. This is an application of established causal nonidentifiability,
+not a new causality theorem. The SCC-specific edit and adaptive-data argument
+above are stated directly; no external study is claimed to have tested SCC.
+
+**Decision and next gate.** Do not train this candidate as a proposed destructive
+mechanism. Its failure is semantic: the useful data/task family does not determine
+the protected quantity, even with a robust margin. A valid replacement must first
+pass the following check: whenever two retained states/worlds support exactly
+the same complete useful experiment/task laws under the admitted access, do they
+also have the same protected judgment? If not, no universal task-to-judgment
+reconstruction can exist for that contract. Passing this check is necessary, not
+sufficient: resource costs, severe loss, breadth and repair still need proofs.
+This extends LN-173's identifiability check to an independently interpretable
+causal quantity rather than a parity convention. The next useful candidate must
+specify a shared necessary computation in a task whose semantics actually require
+that quantity. Broader world-model sharing by itself is not enough. No positive
+mechanism or general impossibility theorem is established by this screen.
 
 ## Supporting-record index
 
