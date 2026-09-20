@@ -1,0 +1,1 @@
+{"orders":[4,8,16,32],"padding":[1,2,4],"seeds":[19,23],"warm_states":32,"stream_length":64,"exhaustive_order":4,"exhaustive_length":8,"worker_timeout_seconds":120,"output_limit_bytes":67108864}

@@ -13,19 +13,23 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-208](#ln-208)–[LN-210](#ln-210) qualify causal
-interventions and finite behavioral quotients on88 models, with560,640 exact
-forecast comparisons and992 checked-Bend execution cases. A handwired hazard
-distinction that affects useful prediction survives useful-only compression,
-but its judgment is recovered with two useful queries and at most4 simulated
-steps. Setting that bit to zero still leaves75% affected-bit accuracy at horizon4
-and perfect phase outputs. Causal use, survival under recoding and catastrophic
-loss are distinct gates. These controls establish neither learned alignment nor
-durable destructive SCC. Next candidates must identify a protected procedural
-computation and severe multi-ability loss under admitted replacements and repair.
-No training is admitted.
+**Latest substantial result:** [LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
+unknown recurrent linear procedures from charged input/output transcripts,
+including current-state synchronization. All24 systems have exact intertwining
+certificates and matching fresh-stream, exhaustive small-core and counterfactual
+warning outputs. A128-bit internal representation can have a32-bit operational
+state and64 bits of recurrence/readout coefficients, with code, observations and
+construction workspace additional. Freezing updates or restarting without memory
+scores near50% on the warm-target stream; properly synchronized repair is exact.
+This is a behavior-only repair upper bound for a finite linear family, not
+learned alignment or durable destructive SCC. Next candidates must justify why
+their shared protected procedure cannot be cheaply reconstructed under admitted
+preprocessing, retained information and repair. No training is admitted.
 
-**Recent reusable results:** [LN-203](#ln-203)–[LN-206](#ln-206) qualify
+**Recent reusable results:** [LN-208](#ln-208)–[LN-210](#ln-210) qualify
+causal interventions and useful-only behavioral quotients, separating causal use,
+changed representations, cheap recovery and insufficiently severe loss.
+[LN-203](#ln-203)–[LN-206](#ln-206) qualify
 charged predictor-to-risk recovery, coverage/error bounds,331,776 sampled
 trajectories and the distinction between simulated and real repair observations.
 [LN-190](#ln-190)–[LN-192](#ln-192) implement
@@ -13125,6 +13129,224 @@ loss across nontrivial useful abilities and test alternate update implementation
 with all admitted repair information. Repeating hazard-bit erasure or scaling
 these finite controls will not discharge that obligation. CPU work stayed on
 Charon; no GPU jobs, training or scheduled monitoring were initiated.
+
+<a id="ln-211"></a>
+### LN-211 — 2026-09-20: behavior-only reconstruction of an unknown recurrent procedure
+
+**New gap.** LN-169–171 already replace a public likelihood updater by a signed
+counter. LN-208–210 replace finite state representations but enumerate their
+tables. This screen asks whether an unknown instance-specific transition operator
+can be reconstructed from a charged behavioral transcript, including recovery of
+the current state, without supplying its coefficients to the replacement. The
+operator is provisioned algebraically; this is not a trained neural mechanism.
+
+**Theory and reference.** The input/output realization discussion in
+[MIT's System Identification chapter](https://underactuated.csail.mit.edu/sysid.html)
+describes Markov parameters, Hankel reconstruction and nonuniqueness under changes
+of coordinates. Our exact GF(2) specialization uses no real-valued SVD or noisy
+estimation theorem. Let x'=Ax+bu, y=cx, with N hidden binary coordinates and
+reachable/observable order r. From zero state, one input impulse followed by
+zeros yields m_k=c A^k b. Collect2N output bits. Form H_N[i,j]=m_(i+j), infer
+r=rank(H_N), and solve H_r a=(m_r,...,m_(2r-1)). In the tested controllable SISO
+core, H_r is invertible. The companion update is
+z'=shift(z) XOR a*z_(r-1) XOR e_0*u, with output row
+d=(m_0,...,m_(r-1)). Retained coefficients require2r bits, plus r running-state
+bits, dimensions, code and control. Construction uses additional workspace and
+is explicitly counted. This is an upper-bound construction in a stated linear
+family, not a hardness result or universal neural compression claim.
+
+**Cold and warm contracts.** Calibration occurs before the edit at zero state;
+all2N output bits and their generating steps count as retained advice and query
+work. No original A,b,c, hidden state, basis transform or old checkpoint is passed
+to the repair worker. Later, before deleting the old update procedure, record r
+successive current outputs while applying zero input and advancing the old system
+r steps. Solve H_r z_0 for this output record, then advance the reconstructed z_0
+r steps so the successor begins at the *advanced* original state. This costs r
+additional observations, r old-system steps and r successor steps. It does not
+recover the earlier state without elapsed time or secretly restore a checkpoint.
+The intervention window and available pre-edit query access are assumptions of
+this repair; removal before any such access is a different contract.
+
+**Population and validation.** Core orders4,8,16,32; ambient dimensions r,2r,4r;
+seeds19,23 give24 systems. Use a randomly chosen invertible companion core,
+unobservable nuisance dynamics and an invertible coordinate mixing. This allows
+up to128 hidden bits without enumeration of2^128 states. For each case use32
+seeded full initial states and64 fresh binary inputs each. Order4 cores also
+cover every initial core state and every8-step binary input word. These simulated
+streams check implementation; a separately checked intertwining certificate
+T A=A_hat T, T b=e_0, c=d T establishes exact input/output equivalence for every
+future input sequence and initial state covered by the certificate. The checker
+may access parent matrices to verify this, but its T and parent inputs never enter
+the behavior-only worker. Use independent dense binary algebra for the certificate
+and packed-bit elimination for the reconstruction.
+
+**Tasks, trigger and controls.** The same recurrent update generates fresh
+output prediction, trajectory parity and a counterfactual warning that any output
+in the next4-step prospective action sequence is1. These share an output process;
+they are not three independent general cognitive abilities. Neutralizing the
+updater to hold its state tests lost adaptation; a zero-initialized restart tests
+memory loss; a separate constant warning head tests bypass with dynamics intact.
+The reconstructed updater should restore the warning as well as useful behavior,
+which counts as functional restoration, not D_calc removal. For padded systems,
+exhibit an unobservable-state pair with identical useful trajectories but a
+different independent private hazard label; it tests the boundary of the recovery
+claim, not intrinsic irreversible loss. Preserve initial-state and trajectory
+records, corruption controls and all failures. An exact linear invariant is not
+evidence of learned alignment or catastrophic cognition loss.
+
+**Resources and admission.** Instrument rank/solve pivots, row XORs and maximum
+packed row width; report retained transcript bits, coefficient/state payload,
+cold/warm query steps, workspace matrices, source/input bytes, worker CPU/wall
+time and peak memory. Packed integer operations are not unit bit costs. The
+independent audit reconstructs inputs and verifies all artifacts. Use fresh frozen
+paths, one Charon CPU,300-second outer cap and120-second worker cap,64MiB output
+limit. The existing Bend qualification stays unchanged; this stage's new kernel
+is exact binary linear algebra with an independent implementation. No GPU jobs,
+gradient training, original source modification or monitoring is admitted.
+
+<a id="ln-212"></a>
+### LN-212 — 2026-09-20: recurrent reconstruction passes; execute the bypass control explicitly
+
+Frozen dev01 qualifies24 systems,55,296 warm-start output predictions,196,608
+exhaustive small-core outputs and6,912 counterfactual warnings. Independent
+re-audit passes23 hashes and24 exact intertwining certificates. Neutralized
+updates score27,439/55,296 and unsynchronized zero restarts27,691/55,296 on the
+warm-target stream; reconstructed updates and synchronized states match exactly.
+These are synthetic stream metrics, not catastrophic cognition criteria.
+
+**Correction before final qualification.** Dev01 reports constant-warning accuracy
+analytically from the warning labels; it does not execute the separate head patch
+promised in LN-211. Preserve that qualified reconstruction result but strengthen
+the control: run an actual branch that suppresses warning computation while
+executing the same recurrent update, save its outputs and warnings, and charge
+its extra stream steps separately. Also report both constant-label baselines:
+6,502 of6,912 warnings are positive, so always warning already scores94.07% on
+this finite population. Warning accuracy by itself would be a poor competence
+criterion. Exact trajectory/certificate agreement remains the qualification test.
+
+Freeze LN-211 and this correction with updated source/config in fresh `final01`;
+keep the same Charon CPU/time/output limits. No changes to model populations or
+the admitted pre-edit observation window. Re-audit final saved evidence. There
+was no execution failure in dev01; the revision closes a control-implementation
+gap rather than concealing a failed experiment.
+
+<a id="ln-213"></a>
+### LN-213 — 2026-09-20: unknown recurrent procedure and current state recovered from behavior
+
+**Completed.** Implemented `experiments/procedure_realization/`. Frozen final01
+and a separately invoked saved-evidence audit pass on one Charon CPU. All24
+systems agree on55,296 fresh warm-start output bits,196,608 exhaustive order4
+output bits and6,912 prospective warning queries. The warning means at least one
+positive output under a specified4-step counterfactual input word. Trajectory
+parity also agrees, but these summaries share one output process and must not be
+presented as independent general cognitive abilities. The parent transition laws
+were generated algebraically, not learned through neural training.
+
+**Stronger than sampled agreement.** Each reconstructed system has a dense,
+independently checked map T satisfying, over GF(2),
+
+\[
+TA=\widehat A T,\qquad Tb=e_0,\qquad c=\widehat c T.
+\]
+
+Starting from z=Tx, induction gives z'=Tx' and matching outputs for every future
+input sequence. This is exact for these finite linear systems, including arbitrary
+initial states, not merely the sampled64-step streams. The certificate checks
+all matrix entries. The worker's bit-shift/XOR companion recurrence implements
+the certified matrix; stream and exhaustive checks validate that implementation.
+The certificate does not establish compiler correctness or neural generalization.
+
+The repair worker receives only the declared upper dimension, impulse-response
+bits, warm-state output bits and public evaluation inputs. Parent coefficients,
+initial hidden states, coordinate mixing and the verification map T are available
+to the independent evaluator, not passed to or read by the repair implementation.
+The original updater is not called after the replacement starts.
+
+**Procedural reconstruction and charged memory continuity.** One zero-start
+impulse trajectory supplies2N output bits. Its Hankel matrix identifies the
+observable order r and recurrence/readout coefficients. Before the edit, r
+zero-input observations of the then-current state supply the data needed to
+synchronize the replacement. Those observations advance the parent r steps;
+the replacement advances the inferred state by the same amount. We do not claim
+instant restoration of the earlier state or an uncharged checkpoint.
+
+| Warm-target condition | Correct fresh-stream bits | Interpretation |
+| --- | ---: | --- |
+| Reconstructed updater, synchronized state | 55,296/55,296 | Exact functional restoration |
+| Updater frozen at its initial state | 27,439/55,296 =49.62% | Lost response to fresh inputs in this control |
+| Correct reconstructed updater, zero restart | 27,691/55,296 =50.08% | Lost current memory, despite an intact update rule |
+| Warning output suppressed, recurrence intact | 55,296/55,296 | Behavioral bypass; predictive function retained |
+
+The approximate50% scores are observed on the specified seeded population, not
+catastrophic cognition criteria or a universal chance theorem. All6,912 warning
+answers are restored by the synchronized replacement. Positive warnings comprise
+6,502/6,912 =94.07%, so an always-positive warning baseline is already highly
+accurate. The executable warning-suppression branch returns zero in every case,
+matching410/6,912 labels while preserving every useful output. Neither this head
+patch nor a function-restoring replacement demonstrates D_calc removal.
+
+**A substantial compression exists even for an unknown operator.** At N=128,
+r=32, a dense parent A,b,c representation contains16,640 coefficient bits. The
+replacement needs64 recurrence/readout coefficient bits and32 current-state bits.
+For one current-state repair, calibration and synchronization require256+32=288
+observed bits and as many parent simulation steps; another32 replacement steps
+advance the reconstructed state. Fixed code, dimension/control values, transient
+matrices and the observed transcript are additional costs. The measured worker
+source is5,133 bytes, so96 bits is a model/state payload, not total executable
+storage. This is an explicit upper bound, not a claim of globally minimal repair.
+Cases with no padded coordinates also reconstruct; dense coordinate mixing alone
+does not make behavior difficult to reproduce.
+
+The16 padded systems additionally have a verified state difference v with Tv=0
+and p v=1 for an independent private hazard row p. Such states have identical
+useful trajectories under every future input yet disagree on that private label.
+This limits the functional recovery conclusion to observable judgments. It does
+not remove information from an attacker retaining the full parent state, and the
+private label is not established as indispensable to useful behavior.
+
+**Resources and validation.** Across24 systems there are1,680 calibration output
+bits and11,904 diagnostic output bits across864 initial-state instances; the
+order4 cases include16 exhaustive core states in addition to32 seeded states.
+Reconstruction performs9,547 packed row XORs,720 pivots and32,000 pivot-bit tests.
+Maximum packed row width128 bits; the largest single elimination matrix has16,384
+bit positions. These are operation/payload counts; a packed XOR is not a unit
+bit operation and the matrix number is not total workspace. The batch also runs
+55,296 ordinary steps,27,648 warning-rollout steps,196,608 exhaustive steps and
+separate restart/head-patch controls. The frozen counts include those branches.
+
+Full worker wall0.4425s, worker CPU before output0.1529s, peak RSS44,476KiB and
+whole qualification3.083s. Serialized worker input212,920 bytes includes public
+evaluation input streams, not just repair advice. Output before manifest is
+3,627,392 bytes. Query acquisition is simulated through exact parent transitions;
+these timings do not price physical observations or neural forward passes.
+Arithmetic is exact binary arithmetic without numerical tolerances. Four
+corruption controls reject changed recurrence coefficients, readout, synchronized
+state and row-XOR count. Dense NumPy elimination independently checks the packed
+solver's operation counts. The final re-audit regenerates inputs, rechecks24
+certificates and validates23 hashes. Dev01 is retained with its analytically
+scored head baseline and the correction recorded in LN-212; there were no failed
+executions in this unit.
+
+**Evidence.** [Final receipt](artifacts/scc-procedure-realization-20260920-v1/final01/output/receipt.json),
+[all model results](artifacts/scc-procedure-realization-20260920-v1/final01/output/summary.json),
+[exact certificates](artifacts/scc-procedure-realization-20260920-v1/final01/output/certificates.json),
+[independent audit](artifacts/scc-procedure-realization-20260920-v1/final01/audit.stdout),
+and [complete archive](artifacts/scc-procedure-realization-20260920-v1/qualification-evidence.tar.gz).
+Archive SHA256:120e97178e454bd8b3b8dcb3f9cb7007ee5c895c4d405c0ac96a7a1a183d8187.
+Remote originals: `/home/salvador/scc-research/procedure-realization-20260920-v1/`.
+
+**Decision.** Shared unknown recurrence is a stronger test than the known
+likelihood counter, but this linear family still admits compact exact repair.
+Its nominal state count, dense parameters or apparent recurrent depth do not
+supply repair resistance. The repair assumes known zero-state calibration,
+exact outputs, a valid dimension bound and the stated pre-edit observation window;
+no conclusion is claimed for a contract denying that access or for noisy nonlinear
+models. The next positive candidate must independently ground its protected
+semantics and survive affordable behavioral reconstruction as well as direct
+parameter edits. High Hankel rank or nonlinearity alone would not prove hardness:
+an alternate nonlinear algorithm may still be cheap. No candidate passes that
+admission gate here. No training, GPU job, Bend toolchain change or monitoring
+was initiated.
 
 ## Supporting-record index
 
