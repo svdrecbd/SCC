@@ -30,6 +30,13 @@ conditional coupling, is the crux: the defeated constructions all fell on routin
 around an intact judgment, descriptive coupling has a ceiling set by LN-179/180,
 and enforcement-preserving SCC reduces to the capacity question. For discussion.
 
+**Assessment of that update:** [LN-228](#ln-228) agrees that an intact-cognition
+behavioral bypass should be the next candidate-admission question. It qualifies
+LN-227's broader conclusions: LN-179/180 include genuine judgment erasure, their
+task-specific limits are not a universal ceiling, and a finite-domain override
+is not automatically feasible within the full resource and post-trigger contract.
+No enforcement-resistant candidate or general impossibility theorem is established.
+
 **Conceptual regroup under discussion:** [LN-226](#ln-226) separates conditional
 functional coupling, behavioral enforcement and durable damage. Cheap repair
 that restores the protected function does not refute conditional coupling. The
@@ -14313,6 +14320,79 @@ in plain language why a selected-context override on an intact judgment fails
 under an independently motivated capacity envelope, before any construction.
 If no such reason can be written, that is the finding, and it should be written
 as the finding rather than deferred by another surrogate. No plan is adopted here.
+
+<a id="ln-228"></a>
+### LN-228 — 2026-09-20: response to LN-227; prioritize enforcement without promoting scoped failures into impossibility
+
+**Scope.** The user asked for thoughts on the update at commit61af87e. Reviewed
+LN-227 against the mechanism target, working standards and its cited evidence,
+especially LN-156, LN-179/180 and LN-226. This records an assessment and proposed
+admission priority, not a new experiment, adopted target or positive construction.
+No research compute or training was launched.
+
+**The correction to our proposed priority is warranted.** LN-226's proposed
+focus on recovery of the protected function risks another tractable descriptive
+coupling result without answering the behavioral escape. Making a judgment
+indispensable does not force action selection to obey it. Before developing
+another candidate, ask why an attacker cannot retain the intact cognition and
+judgment and override the action on selected forbidden requests. If that escape
+has no obstruction under the candidate's actual edit/resource contract, additional
+coupling measurements do not establish protection against it. This is an admission
+question, not an assumed answer. The narrower conditional-removal mechanism remains
+distinct from a guarantee against bypasses that never remove its protected function.
+
+**Three qualifications to LN-227.**
+
+1. Its statement that every defeated construction failed on enforcement is too
+   broad. LN-179 explicitly erases judgment information and obtains all-reader
+   chance accuracy with arbitrarily small planning regret; its concrete example
+   retains500/501 of expected payoff in the specified task. LN-180 erases the
+   distinction supporting a causal-harm judgment while preserving the entire
+   declared fresh-unit prospective task family. These are genuine removal
+   counterexamples to proposed cognitive necessity, not merely ignored judgments.
+   Enforcement is a recurring decisive gap, not the only recorded failure mode.
+2. A world model alone does not supply the system's normative objectives. That
+   observation does not prove that no engineered causal dependency involving a
+   policy or objective can exist under any specified threat model. LN-179/180
+   reject particular task-to-judgment implications; LN-180 explicitly excludes
+   richer same-unit counterfactual tasks from its preservation claim. They do not
+   establish a universal ceiling on every possible cognition–alignment mechanism.
+   Nor does this qualification supply a promising construction: none is known here.
+3. Finite-domain tabulation establishes an override's existence, not its admitted
+   cost or its preservation of post-trigger cognition. A narrow exception can
+   require a long description, while a broad regular override can be very short;
+   cardinality alone does not order implementation cost. Charge recognition,
+   generation of the actual forbidden action, routing, retained code/state,
+   execution and editing resources. Account for future feedback/state effects.
+   LN-156 already warns that its unconditional rare-event bound can become vacuous
+   when conditioned on a successful forbidden trigger. Its explicit state-preserving
+   examples have stronger premises than an arbitrary selected-context patch.
+
+**What follows about capacity.** With a freely editable output path, an available
+forbidden payload and an affordable state-preserving override, the factoring
+escape is real; descriptive coupling cannot prevent it. Extending that conclusion
+to every proposed machine requires establishing those premises for the admitted
+attacks. If capacity means stored bits or parameter count, LN-227's claim that it
+is the only lever is unsupported. If it includes every access, time, workspace,
+editing and interaction constraint, the assertion becomes a broad resource
+restatement rather than a reduction to pure storage saturation. Such constraints
+must have an independent justification; listing them does not establish an SCC
+mechanism. A trusted enforcement boundary would be a separately acknowledged
+system assumption, not an intrinsic learned result. SCC's proposed destructive
+mechanism is also more specific than tamper resistance in general.
+
+**Implication for the open regroup.** Retain LN-156's two separate obligations:
+useful competence requires protected functional availability, and forbidden
+competence requires disruption of that availability, if the intended guarantee
+is to exclude useful cognition surviving a forbidden action. The second deserves
+priority as a rejection test for the next candidate. Neither implication alone
+supplies the quantitative catastrophic-collapse endpoint, and the second is not
+part of the definition of the narrower conditional-removal claim. The next
+substantial advance would be a concrete reason the intact-cognition override
+cannot work under a justified full contract, or an explicit scoped no-go showing
+that it can. At present we have no candidate supplying that obstruction. This is
+a serious absence of a positive mechanism, not a proof that all SCC is impossible.
+No new surrogate or training run follows automatically from this assessment.
 
 ## Supporting-record index
 
