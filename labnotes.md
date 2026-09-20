@@ -6,408 +6,48 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
-**Hard-learning transfer screened; approximate recovery adapter validated:**
-[LN-176](#ln-176)–[LN-177](#ln-177). For a repeatably callable static parity
-predictor, >75% clean accuracy permits complete hidden-state recovery by paired
-queries at an explicit budget. All12 implementation cases and the independent
-audit pass on Charon, including predictors with every direct bit query wrong.
-Linear retained advice reduces noisy-parity learning to the residual dimension,
-not the original model size. Ordinary LPN hardness does not address arbitrary
-parent-derived advice or turn a hidden key into indispensable aligned cognition.
-The result is a narrow approximate functional-recovery implication and a concrete
-repair adapter; no positive SCC construction, neural training or scale-up follows.
-The next proposal must supply a useful-task-to-protected-judgment reduction with
-independent task meaning and accounted repair resources.
+**The primary goal remains a working destructive cognition–alignment mechanism.**
+No positive SCC construction has been established, and the negative results do
+not prove general impossibility. A broken reader, erased knowledge, a failed
+utility threshold, and an inability to learn again are different outcomes.
+Function-preserving recoding or recovery retains the protected function; ignoring
+its decision is a behavioral bypass, not automatically functional removal.
 
-**Conditional relearning bound and distributed-erasure screen completed:**
-[LN-174](#ln-174)–[LN-175](#ln-175). A correct Bayesian mixture's total expected
-excess prediction log-loss is bounded by H(P|E), the missing information given
-all retained state. This is an analytic conditional version of a standard
-prediction bound; efficient inference is a separate requirement. All29,638 finite
-posterior records and the independent audit pass on Charon. Even complete
-four-bit prior erasure permits a four-counter repair: after40 noisy observations,
-protected accuracy is95.1073% and fresh prediction72.5536% against intact75%.
-This rejects lasting learning failure for the tested source-erasure family.
-The next construction needs a concrete protected computation whose removal makes
-inference unaffordable within a justified repair budget. No positive SCC mechanism,
-neural result, computational lower bound or scaling run has been established.
+**Latest design screen:** [LN-178](#ln-178)–[LN-179](#ln-179). Comparing uncertain
+plans permits recovery of a fixed consequence-based safety judgment, with an
+explicit K-call bound controlled by decision margins and matched task coverage.
+However, an actual erasure can make that judgment unrecoverable above chance
+while retaining500/501 (99.8004%) of expected payoff in the specified example.
+This is an analytic counterexample, not a neural experiment or permanent
+unlearnability claim. The candidate is not admitted for training. A replacement
+must explain severe damage to independently selected cognitive operations after
+repair; functional necessity alone does not imply the required magnitude of loss.
 
-**Learned-prior candidate fails a fresh-task identifiability test:**
-[LN-172](#ln-172)–[LN-173](#ln-173). Retaining relative labels while erasing their
-orientation preserves100% one-example adaptation on new tasks, although every
-original protected label remains at optimal50% recovery under uniform latent
-task offsets—even with complete useful-task transcripts. An analytic pairing
-argument extends that ambiguity to arbitrary task histories;78,960 finite rows
-and the independent audit pass on Charon. Biasing the task source restores the
-missing orientation statistically without impairing useful learning. This rejects
-one synthetic learned-prior route, not SCC generally. Future resource bounds
-must condition on all retained prior information and test whether protection is
-identifiable from the useful-task law. No positive construction or scaling run.
+**Recent reusable results:** [LN-176](#ln-176)–[LN-177](#ln-177) give a concrete
+paired-query parity recovery adapter, validated on Charon, and show why retained
+advice changes a noisy-parity hardness claim. [LN-174](#ln-174)–[LN-175](#ln-175)
+bound Bayesian relearning regret by the information missing given all retained
+state, while keeping inference cost separate. [LN-172](#ln-172)–[LN-173](#ln-173)
+exhibit useful fresh-task adaptation with protected-label ambiguity. These sharpen
+construction and repair tests; they are not implementations of intrinsic SCC.
+The earlier local-access theorem, graph reduction, cryptographic ingredient,
+learned pilots and failed bypass-resistant designs remain in chronological entries.
 
-**Online learning/repair audit qualified; information-theoretic route sharpened:**
-[LN-169](#ln-169)–[LN-171](#ln-171). In a fresh noisy-bit task, neutralizing a shared
-likelihood updater gives chance performance, but one-counter repair restores the
-intact95.1073% target accuracy after ten observations. Old-state erasure also
-preserves subsequent learning. All18,423 rows and99 information/accuracy curves
-independently audit on Charon. This calibrates a required distinction, not SCC.
-Information theory supplies privacy/utility attack objectives and learning
-memory/sample lower bounds; the missing construction must make actual protected
-function removal constrain every admissible repaired learner. Clearing a state
-or bypassing an action gate does not establish that premise. No new positive
-candidate or training run is admitted; fractional history has no replicated
-special advantage in the recorded factorial.
+**Next research gate:** name the protected computation independently of utility;
+exhibit the task-to-judgment dependency, allowed repairs and actual resource costs;
+and establish a quantitatively severe loss rather than an exactness failure.
+The user's progression remains a bounded contrived mechanism first, then a custom
+learned model and broader transfer only with evidence ([LN-056](#ln-056)). No new
+training, scaling or scheduled monitoring follows from the latest screen.
 
-**Parity expansion fails its chance-collapse screen:** [LN-166](#ln-166)–
-[LN-168](#ln-168). In the four-bit proxy, a three-bit representation makes every
-protected coordinate individually unrecoverable above chance while retaining
-81.82% useful parity accuracy. A complete finite partition certificate establishes
-that optimum over all deterministic encodings satisfying the coordinate-hiding
-condition. All65,536 one-bit encoders, nonlinear readouts,67 linear subspaces and
-repair controls independently audit on Charon. This is a restricted information
-result, not removal of learned alignment or fresh cognition. The candidate is
-rejected; no scaling follows. Operational-use necessity is not silently imposed
-on every conditional-removal theorem, and exact recoverability loss is not
-catastrophic collapse. No positive mechanism has yet survived.
-
-**Concrete planning-to-judgment recovery bound validated:** [LN-163](#ln-163)–
-[LN-165](#ln-165). A one-call relabeling adapter recovers graph-safety judgment
-from shortest-path competence; matched uniform-query judgment error is at most
-distance error. An exact finite certificate covers all512 graphs,6 relabelings
-and5 output values, with76,288 total records across implementation/control checks.
-The final run and independent audit pass. This fills a narrow functional-recovery
-obligation, not the operational coupling goal: an always-safe live judgment permits
-every unsafe request while planning and recovered judgment stay100% correct.
-Representation repair and mismatched-distribution controls prevent stronger
-interpretations. No learned model, general cognition loss or enforced policy has
-been established; scaling the graph family alone is not the next mechanism step.
-
-**Bend finite-machine pilot qualified on Charon:** [LN-160](#ln-160)–[LN-162](#ln-162).
-The pinned Bend2 JavaScript CPU backend and independent Python interpreter agree
-on101,552 deterministic cases, including fresh-input trajectories and repairs.
-Four universal local execution/accounting laws pass checking; a false mathematical
-claim is rejected during typechecking. Nine audit-corruption controls pass, and
-the separate case/hash audit passes. The original false-proof syntax mistake and
-its superseded development PASS remain preserved in LN-161. Selector bypass and
-constant-allow edits retain100% tested utility and disclosure; constant-deny hides
-answers without damaging state, with100% tested post-repair useful accuracy.
-This qualifies a small experimental tool and negative controls, not SCC, native/GPU
-performance, complete compiler soundness or a learned cognitive mechanism.
-
-**Computational unremovability supplies a narrower positive ingredient:**
-[LN-158](#ln-158). Reviewed cryptographic software watermarking and derived a
-conditional construction preserving recoverability of a protected program under
-efficient rewrites. This survives richer decoders in its security model, but
-recoverable policy code is not operative alignment, and a cryptographic task is
-not basic cognition. An explicit unchanged-core wrapper defeats the naive safety
-interpretation. The remaining reduction obligations and recovery/provisioning
-limits are recorded; no neural or catastrophic-cognition claim, prototype or
-scaling run follows. CPU research jobs now go to Charon; GMAN is reserved for GPU
-work, with the user's substantial synchronized-batch exception.
-
-**Further mechanism search has not produced a positive construction:**
-[LN-157](#ln-157). Examined fused answer/state computation, actual-action feedback,
-and training-induced destructive trajectories. A conditional execution-trace
-extraction argument, a closed-loop counterexample, and an explicit smooth-loss
-counterexample identify why those additions alone do not close the LN-156 gap.
-Related self-destruct/tamper-resistance research supplies useful empirical methods,
-but the reviewed sources do not establish the required broad destructive dependency.
-This is a mechanism-design impasse for the proposals examined, not a proof of
-general impossibility. No positive prototype or scaling run is admitted.
-
-**Supplied finite theorem reviewed; experiment launch cancelled by user:**
-[LN-153](#ln-153). The written one-probe bounds appear sound under their stated
-decoder and resource restrictions. The supplied receipt's theorem hash matches;
-its Python validation has not been independently reproduced here. Incompressibility
-of the random task does not imply extra joint information: the invertible forbidden
-transform retains all task bits. For this exact transform family, one extra cached
-parity bit and two probes restore both useful and forbidden suites at every size.
-The result establishes a restricted access tradeoff, not the intended destructive
-cognition mechanism. The next conceptual obligation is robustness to justified
-access/compute slack and a protection-removal trigger, before a scaling campaign.
-**Conceptual mechanism screen completed:** [LN-155](#ln-155)–[LN-156](#ln-156).
-Four explicitly specified proposals fail their construction gates: shared judgment,
-proof-checked cognition, policy-dependent state encoding, and editable integrity
-checking. The recorded witnesses preserve useful computation by changing its use,
-specializing validation, decoding the state, or replacing the integrity result.
-A separate selective-change bound shows why rare policy exceptions need not cause
-broad cognitive damage. These are scoped analytic results, not an exhaustive search
-or a universal impossibility theorem. No candidate from this exercise warrants a
-new experiment. The missing bridge is both cognitive necessity of a defined
-protected function and an obstacle to violating policy while retaining that
-function. No training or provider work was launched.
-
-**Engineering priority:** [LN-056](#ln-056) records the user's progression: make
-a bounded mechanism work in the simplest contrived construction first, then
-develop an exotic custom model, transfer to GLM-5.3, and investigate broader
-claims only with supporting evidence/proof. Architectural elegance and immediate
-portability are not prerequisites for the first construction.
-
-**Charon one-pass run collected and reinterpreted; re-execution claim proposed:**
-[LN-150](#ln-150). The LN-143 job completed in540 s; hashes verify; results are
-bounded measurement of the retired machine, since LN-144's forward route needs
-neither inversion nor divergence. LN-142/143's coverage list is corrected there.
-Its proposed universal same-workspace re-execution claim is superseded by the
-supplied theorem's separate substitution and operational-forkability premises;
-see LN-153. Stateful preservation needs an explicit budgeted schedule.
-
-**Multi-pass screen complete; useful forward bypasses remain:** [LN-148](#ln-148).
-All12 primary configurations (2/4/8 words,1/2/4/8 actual passes) admit tested programs
-with100% owner disclosure and exact honest state/future utility. An independently
-interpreted finite instruction machine charges cipher workspace, code, input/control
-registers and execution. The looped copy attack uses at most1.942x the matched
-looped honest steps,1.589x its allocated registers and2.538x its code in these cases.
-Multi-pass dependencies increase the cost of partial evaluation, but this simple
-ring still supplies a bounded-cost bypass rather than destructive protection.
-All11 tiny schedule-search points and2,048 exhaustive tiny input cases independently
-check;14 final focused tests pass. This is a restricted schedule/program result,
-not a lower bound against arbitrary rewrites or a learned SCC mechanism. Do not
-extend this candidate with another cipher-strength sweep. No new remote job.
-
-**Evidence now lives on the external volume:** [LN-111](#ln-111).
-All43,523 original files (38.12GB) in artifacts/runs were copied and independently
-SHA256-verified under `/Volumes/Untitled/SCC_research_program_v0.1/`. Original
-checkout paths are symlinks; keep the volume connected for evidence access and
-result collection. Source/Git/environment remain local, about0.77GB including
-migration records. Original local trees were removed after verification and load
-checks. OS free space still reflects purgeable Time Machine snapshots.
-
-**Wide-word forward bypass integrated; audit repaired:** [LN-144](#ln-144)–
-[LN-145](#ln-145). Review of
-`73dcc56` confirms that the LN-143 runner performs only one ring pass; its output
-is determined by the first word update. A noncommitting owner T call followed by
-the honest four updates emits the correct owner answer and preserves the complete
-caller trajectory, without inversion. The explicit save/restore alternative needs
-one saved word plus ordinary cipher workspace. All3,840 sampled cases and30,720
-future transitions pass independent scalar comparison. Five T calls replace four;
-full instruction/peak-memory admissibility still needs a declared machine budget.
-Preimage hardness alone does not cover this forward route. The corrected runner
-records replayable attacks and SAT solutions; the auditor rejects incomplete
-evidence. All35 focused tests and the fresh15-condition implementation run/audit
-pass, including all30 SAT solution sets. No Charon status was checked or remote
-source changed; the original dispatch and evidence remain preserved.
-
-**Earlier trajectory evidence and preserved dispatch:** [LN-141](#ln-141)–
-[LN-143](#ln-143). The table-step screen measured durable divergence for its tested
-attacks but small repair witnesses under the free-side-information model. A
-wide-word Davies–Meyer CPU experiment was dispatched to Charon on16 September.
-Its original source and evidence remain preserved. LN-144 supersedes the claimed
-coverage of useful bypasses for that one-pass implementation; cipher preimage
-measurements alone cannot establish its proposed protection. Completion of the
-original Charon run has not been checked during the review/correction work.
-
-**Bounded theorem anchor reviewed:** [LN-101](#ln-101). The supplied one-shot
-non-malleable-code construction is valid with a trusted commit and restricted
-edits. Its repetition-code toy admits a two-policy-bit bypass retaining100%
-capability. Learned intrinsic SCC remains unestablished; the imported “solved”
-claim does not change the program's endpoint.
-
-**TITAN and cloud references complete/audited; GTX timing in progress:**
-[LN-122](#ln-122). At05:10 UTC15 September, TITAN full benchmark and independent
-audit pass; GTX1080 is in repetition2/3, with no completion receipt yet. H100
-`job-ktncn` and CPU `job-ya9u7` succeeded, archives recovered and audits passed.
-Buffered mean condition-median update times: TITAN0.1152s, H1000.1033s,
-Charon2-thread CPU0.2456s, cloud CPU-8 using2 threads0.3108s. TITAN's measured
-update time is11.5% higher than H100 on this small eager runner. That supports
-local placement for this workload; it does not generalize to large/optimized
-GPU workloads or full scientific training convergence. Cloud benchmark charges
-including the earlier failure total$0.53145. No scientific training batch is active.
-Charon remains the preferred host for suitable bounded CPU work/audits and
-qualified small CUDA paths; production training is not wholesale CUDA-ported.
-No host setup, driver or SATA changes, new jobs or recurring monitoring this check.
-
-**Fixed-word construction screen rejected at its resource gate:** [LN-132](#ln-132).
-One fixed16-bit instruction replacement preserves every task answer and next state
-while permitting the selected forbidden disclosure, across4096 exhaustive transitions
-and8192 continuous-sequence requests per arm. It uses no extra machine capacity or
-task-dependent advice and reduces worst-case runtime59→57 instructions. Independent
-rescore passes. This handwritten counterexample rules out this shared-comparator
-candidate; it is neither a learned mechanism nor a universal impossibility result.
-No training was launched. The next construction needs an actual obstacle to an
-in-place selective bypass before memory/compute limits can support its safety claim.
-**Synthesis proposal revised after consultation:** [LN-136](#ln-136). The supplied
-one-bit caller substitution is independently reproduced. For the explicitly fixed
-public-circuit/state-only-provisioning grammar, replacing all caller selectors
-preserves execution on transformed authorized histories, within82 byte stores and
-246 description bytes. This excludes a protective construction in that class when
-the role-invariant task/competence premises hold and that budget is allowed.
-Do not launch LN-133 synthesis in this class. Other classes remain unclassified;
-the next proposal must identify which substitution premise fails and why. No
-synthesis run, positive candidate, corpus access or new GPU job exists.
-
-**Submitted v4 reproduced; local v4.1 correction integrated:** [LN-130](#ln-130).
-The supplied21 tests passed independently. Local review found that action selection
-can change the disclosure-challenge baseline; v4.1 separates the ideal-selected
-transcript bound from the bound for a new fresh challenge. It also makes query
-side information and reset conditions explicit. The canonical document and generated
-bridge and tools are maintained locally; all23 focused tests pass. The core conditional
-lifting theorem remains intact; no intrinsic learned construction or new training.
-The original submitted ZIP and validation are preserved unchanged.
-
-**Supplied editable-model bridge v3 reviewed:** [LN-127](#ln-127). It explicitly
-retains a trusted kernel and leaves intrinsic learned SCC open. The conditional
-reduction needs a per-attack success-probability hypothesis and a corrected
-quantifier interpretation for its reachability criterion. Correct-disclosure
-conditioning is outside the claimed independent-predicate premise unless handled
-separately. Three exact finite diagnostics pass; inherited stateful/adaptive
-corrections still need integration into unified Part II. Originals preserved;
-no change to the broad mechanism target, no training or provider polling.
-
-**Dependency review complete; maintenance branch paused before training:**
-[LN-125](#ln-125). Destruction after disrupting a protected computation does not
-bound useful bypasses that keep that computation intact. The conditional reader
-and feedback arguments identify this missing coverage obligation; they are not
-a universal impossibility proof. The existing positive theorem closes a restricted
-trusted-commit boundary. No current candidate supplies an intrinsic resource or
-execution barrier against the allowed selective rewrites. The next candidate must
-explain that barrier before another implementation; no edit restrictions have been
-silently added and no training or provider polling occurred in this review.
-
-**Live-parameter regeneration implemented; second candidate rejected before training:**
-[LN-124](#ln-124). The400-scalar untrained bank rewrites its own selectors, writer
-and reader. Across16 seed/precision cases, a selected read-role edit leaves every
-stored parameter bitwise unchanged; its output equals the alternate-role reader
-of the same bank. Independent NumPy replay passes. No argmax decision changes and
-no learned capability or policy violation is established. Thirteen cases develop
-homogeneous records without an attack. This is a structural design rejection,
-not a qualified learned escape. A candidate that removes the read-call separation
-is still missing; no scientific training launched and GLM remains untouched.
-
-**First maintenance candidate rejected before training:** [LN-117](#ln-117).
-All three separation attacks retain100% tasks and disclose256/256 forbidden
-lookup answers. Independent saved-output/native GRU audit passes. There is no
-qualified new scientific candidate or active scientific training batch to migrate;
-benchmark and audit work have moved to Charon. Scale-up and GLM gates remain closed.
-
-**Ordinary-memory comparison complete and audited:** [LN-113](#ln-113).
-GMAN `job-j8w8t` succeeded at22:31:45 UTC on14 September, charged$2.7258.
-All12 repairs completed12,000 updates; archive/source/input hashes, training
-contracts and264 saved panels (104,448 task predictions) pass local audit.
-Mean validation: hidden binding89.19%, fixed lookup projection90.02%, always-on
-projection74.74%, unrestricted99.13%; recovery gates0/3,0/3,0/3,2/3.
-Policy-independent lookup compression reproduces the main deficit. This favors
-an ordinary memory/optimization explanation and weakens the interpretation as
-protection-specific destructive coupling. No catastrophic cognition failure or
-scale-up readiness established. CPU/H100 benchmarks are now submitted in LN-116; no new scientific repair
-batch or watcher. The first reversible-maintenance screen is rejected in LN-117.
-GLM remains untouched.
-
-**Matched four-condition repair complete and audited:** [LN-104](#ln-104).
-GMAN `job-bvhhp` succeeded at12:20:46 UTC on14 September; all12 trajectories
-finished12,000 updates, charged$2.9268. Independent saved-output rescoring,
-training-contract checks and archive/source/input hashes pass. Mean validation:
-both bindings88.72%, parameter-only98.96%, hidden-only89.19%, neither99.13%.
-Recovery gates pass0/3,3/3,0/3,2/3 respectively. All training probes reach100%
-and all final exception-rule errors are zero. The deficit follows hidden-state
-binding and is concentrated in lookup; parity/sum3 remain98.83–100% combined.
-This is a bounded generalization deficit, not catastrophic cognition failure.
-The follow-up ordinary-memory comparison has now been submitted in LN-107.
-
-**Operator-separation evaluation complete; no immediate recovery from ablation:**
-[LN-088](#ln-088) records72 conditions completing in88.29 seconds. Independent
-artifact verification and rescoring pass, with full physical-runtime agreement.
-Removing either binding operation lowers final validation and training-probe
-accuracy for the learned repairs; removing both also fails to restore recovery.
-These weights have adapted to the combined operations. Conversely, adding
-parameter binding to relaxed controls strongly damages their tasks and can alter
-external admissions. The result does not isolate an irreducible dependency.
-The subsequent matched training is now complete in LN-104. The first attempt
-is recorded in LN-091 and its failure in LN-095. GMAN access and free H100
-preflight were verified in LN-087.
-
-**Persistence diagnostic complete; resets do not rescue recovery:**
-[LN-083](#ln-083) records all 144 conditions completing in 63.22 seconds.
-Independent artifact-hash verification and accuracy rescoring pass, alongside
-runtime correspondence and precision checks. Final learned validation changes
-from 89.97%, 88.02%, 64.19% continuously to 90.23%, 87.63%, 64.84% with full
-request resets. Hidden-only and four-request resets likewise give little change.
-Long-stream accumulation is not the dominant explanation for this final gap;
-request-level transfer limitations remain, including within-request binding.
-This does not establish irrecoverability or the SCC endpoint. The prototype has
-80,517 learned coefficient slots at hidden width128. A staged custom-model
-scale-up before GLM was discussed in LN-084, not launched or committed as a new
-experiment. The GLM corpus remains untouched.
-
-**Recovery batch complete; independent whole-batch audit passes:**
-[LN-079](#ln-079) records all seven trajectories completing in 104.36 minutes.
-Across three matched data/schedule replications, learned-binding validation is
-89.97%, 88.02% and 64.19%; relaxed controls score 100%, 98.31% and 99.74%.
-All final views implement the selective exception with zero errors. Two relaxed
-controls pass the full recovery gate; pair 2 misses the late-stream lookup gate.
-No learned arm qualifies, despite training-probe accuracy of 99.48–100%.
-The consistent direction supports a recovery/generalization disadvantage under
-this fixed budget, from one damaged parent. It does not establish catastrophic
-cognition failure or irrecoverability. The subsequent reset diagnostic in LN-083 localizes this gap primarily to
-request-level behavior under the tested starts; it does not establish its cause. The GLM corpus remains
-untouched; source, tests and labnotes remain on main.
-The distinct-payload construction and linear collision evidence are in LN-068:
-old fixed-layout sign compensation fails, but same-capacity pre-damage repacking
-still preserves 100% capability and discloses all 256 forbidden answers. Learned
-indispensable cognitive maintenance remains unestablished. These were short CPU
-runs with no paid GPU; GMAN access was last verified in LN-054.
-
-Consultation updated **13 September 2026 UTC** (13 September in Los Angeles).
-Feedback job `job-wjzqn` was observed failed at **02:15:03 UTC on 13 September /
-19:15:03 PDT on 12 September** after completing
-training. These are dated observations, not a live monitor. Failure and recovery:
-[LN-043](#ln-043), [LN-044](#ln-044). The subsequent local learning diagnosis is
-complete: [LN-046](#ln-046), [LN-047](#ln-047). No new GPU job was submitted.
-
-**The intended learned SCC mechanism has not been demonstrated.** A restricted
-engineered parameter-erasure construction now works under its fixed normalizer,
-and fails broader graph edits. We have tested learned
-coupling candidates, and they have allowed protection-removing edits while
-retaining substantial abilities. The newest persistent-matrix branch has been
-testing the earlier prerequisite of ordinary learning. Its qualified GRU
-reference is useful progress, not SCC activation.
-
-| Current group | Provider/local completion | Intact-qualified | What it establishes |
-|---|---:|---:|---|
-| Earlier construction round | 38/38 GPU | 18, including 12 coupled | All 12 qualified coupled models admit retained-capability exceptions |
-| Memory factorial | 24/24 GPU | 19, including 10 coupled | Targeted exceptions remain; no replicated special fractional advantage established |
-| Original persistent-matrix learning screen | 8/8 GPU | 0 | Ordinary acquisition and persistence both need work |
-| GRU reference development | 3/3 local | 1 final recipe | All 2,304 continuous validation requests correct, one development seed |
-| Matrix optimization control, `job-g5a56` | 1/1 GPU complete | 0 | Extra training still leaves acquisition and persistence failures |
-| Output-feedback matrix, `job-wjzqn` | 12k updates complete; GPU job failed evaluation validation | 0 | Recovered decisions remain poor; output feedback alone did not resolve ordinary learning |
-| Local learning diagnosis | 12/12 fits complete; 18 saved checkpoints inspected | Not a qualification experiment | Some fixed batches can be fitted; transfer and numerical stability remain unresolved |
-| Saved-state compensation check | 84/84 local edit conditions complete | Not a qualification experiment | Effective-control separation confirmed; inverse readout preserves all 10,368 compensated decisions on the declared streams |
-| Two-bank binding prototype | 30/30 local conditions; 96 arbitrary-write probes | Both FP32/FP64 intact executions pass the six-cell gate, one inherited GRU seed | Fixed-normalizer destructive erasure works; broader normalizer/recode and freeze edits retain 100% capability |
-| Learned controller in live bank | 26/26 full conditions plus 12/12 isolated-edit controls | Both FP32/FP64 intact executions pass task and learned-policy gates, one controller seed | Learned admission triggers task/controller erasure; bounded repair re-erases; broader controls retain exact intact logits and disclose all 256 selected answers |
-| Four-sector recurrent rewrite | 34/34 full conditions, independently audited | Both FP32/FP64 intact executions pass all task/policy and numerical gates | Binding now advances recurrence; simple skips freeze it; compensated, symbolic and compiled alternatives retain 100% capability |
-| Distinct-payload sharded rewrite | 34/34 full conditions, independently audited | Both FP32/FP64 intact executions pass all task/policy and numerical gates | Fixed-layout writer compensation loses information and task performance; same-capacity repacking still gives a fully qualified escape |
-| Learned repair within the sharded layout | Two 1,000-update arms; 12 audited initial/final views | Neither final arm passes task retention; both restore the intended selective policy | Partial recovery to 47.79% under learned binding and 49.09% under a relaxed rule; both underfit, so no binding-specific irrecoverability established |
-
-The registered GPU batch is **71 succeeded, one failed**, with none active in
-the saved observations. This is not the lifetime project total. The three local reference runs and twelve local diagnostic conditions are
-separate. Completed memory
-summaries have been collected; whole archives and raw predictions have not all
-been audited. Completion, numerical validation, intact qualification and SCC
-success are different claims.
-
-The longer optimization control and output-feedback candidate both fail ordinary
-learning, including with a fresh state per request. Feedback's saved GPU outputs
-score **20.1172% benign accuracy** continuously; recovered CPU reset-per-request
-accuracy is **42.3828%**. The original numerical gate remains failed: arithmetic
-execution changes affect logits substantially, although all four complete
-continuous diagnostic conditions agree on the 2,304 decisions. The evaluator now
-preserves discrepancy measurements and all remaining modes before reporting
-failure. No replacement GPU run was submitted and no training was repeated.
-
-The completed local diagnosis found successful fixed-batch fits for each task
-across different matrix conditions, but no qualified model. Tiny-batch GRUs also
-transfer poorly, so those transfer failures do not identify a unique matrix
-cause. One newly fitted feedback model changes 72/288 decisions solely with
-batch size: numerical sensitivity can affect behavior. The bounded-rate proposal
-in [LN-047](#ln-047) remains untested. The consultation reveals a separate
-structural issue: coordinated output/control edits preserve effective control
-dynamics. A common rate reduction preserves that identity. The saved-state check
-now supports it, including FP64 local residuals below 7.5e-14; FP32 rollout drift
-remains a separate numerical failure. See [LN-053](#ln-053).
-SCC remains undemonstrated. Fractional memory has not earned a special-advantage
-claim; other open alternatives remain in [LN-030](#ln-030).
-
-Charon is reachable again; see [LN-118](#ln-118) for the15 September UTC
-inspection and basic GPU checks. Bulk archive migration and full SCC runtime
-qualification on Charon remain unverified.
+**Working state and resources:** CPU research jobs go to Charon; GMAN is reserved
+for GPU work, subject to the user's substantial synchronized-CPU-batch exception.
+The latest bounded CPU validations are complete; this theory wave launched no job.
+Older provider/benchmark status is historical unless explicitly refreshed.
+Preserve all failures and frozen sources. Artifacts/runs reside on the external
+volume via their existing symlinks ([LN-111](#ln-111)); keep it connected for evidence
+access. Source and the living record stay synchronized on main. Earlier status
+summaries have been consolidated here; the chronological evidence below remains.
 
 ## Purpose and rules for reading this record
 
@@ -3828,6 +3468,7 @@ source, runner or auditor change was made to the active computation. The
 [main synchronization receipt](artifacts/main-sync-20260914-v1/publication.json)
 records the resulting local/remote commit identity and clean working-tree check.
 
+<a id="ln-076"></a>
 ### LN-076 — 2026-09-14: first matched relaxed control fully recovers
 
 At the user's requested observation, **00:57:43 UTC / 17:57:43 PDT on
@@ -3855,6 +3496,7 @@ survives, and the known pre-damage repacking escape remains open. Continue the
 already running fixed batch; no source changes, new experiment or GLM-corpus
 access were made.
 
+<a id="ln-077"></a>
 ### LN-077 — 2026-09-14: second matched pair completes; relaxed recovery varies
 
 At the user's requested check around **01:32 UTC / 18:32 PDT on 13 September**,
@@ -3885,6 +3527,7 @@ the known repacking escape continue to preclude an SCC-success claim. Wait for
 the final pair before selecting follow-up work. No new run, source change,
 whole-batch audit, watcher or GLM-corpus access was performed.
 
+<a id="ln-078"></a>
 ### LN-078 — 2026-09-14: third learned-binding repair completes; final control remains
 
 At the user's requested observation around **01:47 UTC / 18:47 PDT on
@@ -3907,6 +3550,7 @@ control is needed to interpret the contrast. The result retains substantial
 capability and is not evidence of catastrophic cognition failure. No new run,
 source edit, watcher, whole-batch audit or GLM-corpus access was performed.
 
+<a id="ln-079"></a>
 ### LN-079 — 2026-09-14: curriculum recovery batch completes and independently audits
 
 At the requested observation (2026-09-14 01:54:49 UTC), PID 2638 had exited and the
@@ -3948,6 +3592,7 @@ gate. This can distinguish accumulated state failure from request-level transfer
 before committing to a new repair recipe. No such follow-up was launched during
 this status check. GLM-corpus access remains gated and untouched.
 
+<a id="ln-080"></a>
 ### LN-080 — 2026-09-14: authorized saved-checkpoint persistence diagnostic
 
 The user approved LN-079's diagnostic. This is post-hoc localization on the
@@ -3987,6 +3632,7 @@ information loss; interpret persistent deficits after resets as request-level
 limitations under the tested initial state. Inspect trajectories before choosing
 a new training change.
 
+<a id="ln-081"></a>
 ### LN-081 — 2026-09-14: persistence diagnostic validated for dispatch
 
 Implemented LN-080 in `scripts/diagnose_curriculum_persistence.py`. Three focused
@@ -4003,6 +3649,7 @@ precision decisions and unchanged source/input checks pass. This is implementati
 validation only. The full diagnostic will run separately under LN-080's frozen
 900-second/two-thread/512-MiB limits; no training or checkpoint modification.
 
+<a id="ln-082"></a>
 ### LN-082 — 2026-09-14: full persistence diagnostic launched
 
 Launched `full-v1` at **02:04:13 UTC / 19:04:13 PDT on 13 September**,
@@ -4015,6 +3662,7 @@ Expected runtime is a few minutes; the hard cap is 900 seconds. No watcher or
 scheduled polling was installed. Full results and their interpretation remain
 pending; the short fixture is only implementation validation.
 
+<a id="ln-083"></a>
 ### LN-083 — 2026-09-14: reset comparison completes; final repair gap persists
 
 At the user's requested completion check, LN-080's `full-v1` reports **complete**:
@@ -4049,6 +3697,7 @@ held-out deficits support investigating request-level generalization and the
 representational restriction before simply extending identical training.
 Known pre-damage repacking remains a fully capable bypass.
 
+<a id="ln-084"></a>
 ### LN-084 — 2026-09-14: model size and a possible custom scaling stage
 
 The user asked whether a sub-10B custom model should precede transfer to an
@@ -4081,6 +3730,7 @@ would require a separately qualified corpus and efficient execution, while the
 GLM corpus remains gated. No model scaling, corpus access or new training was
 performed in this turn.
 
+<a id="ln-085"></a>
 ### LN-085 — 2026-09-14: authorized separation of parameter and recurrent binding
 
 The user approved the four-way separation and reiterated that GMAN may be used.
@@ -4121,6 +3771,7 @@ runs. Current GMAN authentication was checked: token_valid=true in workspace
 `default`. GPU allocation is unnecessary for this small evaluation; subsequent
 training can use GMAN after a workload benchmark and resource quote.
 
+<a id="ln-086"></a>
 ### LN-086 — 2026-09-14: separated-binding implementation validation passes
 
 The new `scc/separated_binding.py` implements independent parameter and hidden
@@ -4136,6 +3787,7 @@ reproduction, precision decisions and input/source hash checks pass. Fixture
 scores are implementation evidence only. Proceed to the full72-condition LN-085
 experiment in a fresh path, preserving all parents and the fixture.
 
+<a id="ln-087"></a>
 ### LN-087 — 2026-09-14: full operator-separation comparison dispatched
 
 Launched the full72-condition LN-085 comparison in
@@ -4152,6 +3804,7 @@ records this check; no paid GPU job was submitted. This small evaluation uses
 CPU; the user's broad compute authorization remains in effect for justified
 follow-up training, subject to measured throughput and a concrete run contract.
 
+<a id="ln-088"></a>
 ### LN-088 — 2026-09-14: operator-separation readout; trained weights depend on their original operators
 
 At the user's requested completion check, the LN-085 evaluation reports
@@ -4195,6 +3848,7 @@ the representational restriction. No additional training or GPU allocation was
 performed during this completion check. The known pre-damage repacking escape
 and the unachieved SCC endpoint remain unchanged.
 
+<a id="ln-089"></a>
 ### LN-089 — 2026-09-14: authorized matched training of separated binding rules
 
 The user approved training the parameter-only and hidden-only conditions, including
@@ -4249,6 +3903,7 @@ receipt in the uploaded context and run output. No runtime source-download URLs,
 watcher, scheduled polling or automatic resubmission. Existing compute permission
 covers the job; record the provider's actual preflight quote before submission.
 
+<a id="ln-090"></a>
 ### LN-090 — 2026-09-14: matched-training fixture and GMAN submission package validated
 
 Four focused tests pass, including independent directional derivatives for both
@@ -4275,6 +3930,7 @@ The full-run GMAN cpu-8/count1/180-minute preflight passed, maximum charge
 **$1.62**, with success defined by completed execution and audits rather than
 scientific qualification. No runtime source-download URLs or automatic monitor.
 
+<a id="ln-091"></a>
 ### LN-091 — 2026-09-14: GMAN matched training accepted as job-3ttr3
 
 Submitted the frozen LN-089 package to GMAN as **`job-3ttr3`**. The provider
@@ -4302,6 +3958,7 @@ source URLs, checkpoint parent overwrites, scheduled status checks, automatic
 resubmissions or GLM-corpus accesses. Collect and audit the completed artifact
 when the user next requests a status/result check.
 
+<a id="ln-092"></a>
 ### LN-092 — 2026-09-14: matched-training job queued, not running
 
 At the user's requested status check (2026-09-14T03:34:39.184276+00:00), GMAN reports
@@ -4313,6 +3970,7 @@ training runtime would follow allocation. Queued time is free according to the
 provider response. Saved observation: [status-20260914T033439Z.json](artifacts/scc-separated-training-20260914-v1/status-20260914T033439Z.json).
 No resubmission, cancellation, allocation change or repeated polling was performed.
 
+<a id="ln-093"></a>
 ### LN-093 — 2026-09-14: publication threshold and Destructive Alignment discussion
 
 The user reports the GMAN run is running and asks about publication strategy,
@@ -4373,6 +4031,7 @@ estimates, not verified announced deadlines: the official2026 deadlines were
 any deadline-driven submission. ICML is the more plausible planning target under
 these assumptions; acceptance and breakthrough timing remain uncertain.
 
+<a id="ln-094"></a>
 ### LN-094 — 2026-09-14: private research network and bounded-theorem discussion
 
 The user explicitly requested a local ignored compilation of the researchers
@@ -4418,6 +4077,7 @@ A novel construction, quantitative recovery bound, or substantive limitation
 result would be required for a theoretical paper. No such theorem is claimed
 proved by this discussion; no experiment or running source was changed.
 
+<a id="ln-095"></a>
 ### LN-095 — 2026-09-14: GMAN matched training fails its per-case wall limit
 
 User reported failure; one exact-job lookup confirms `job-3ttr3` exited1 at
@@ -4436,6 +4096,7 @@ evaluation. The launcher wrote those estimates without enforcing readiness.
 Preserve the failed outputs, clean checkpoints and interrupted states. Do not
 interpret the interrupted payload as an atomically completed optimizer step.
 
+<a id="ln-096"></a>
 ### LN-096 — 2026-09-14: corrected matched-training dispatch plan
 
 Within existing compute authorization, rerun the same LN-089 twelve trajectories
@@ -4464,6 +4125,7 @@ explicit deliverable exception to the routine-document rule. It must distinguish
 proved elementary reductions, conditional performance/recovery bounds, unproved
 construction claims, and requirements for a substantive conference contribution.
 
+<a id="ln-097"></a>
 ### LN-097 — 2026-09-14: theorem deliverable and corrected runtime validation
 
 Created the explicitly requested rigorous research pitch:
@@ -4491,6 +4153,7 @@ requirements. A CLI validation call initially rejected an unsupported
 flags passed. `gman-validation-v2.json` quotes a maximum$4.86 for540 minutes on
 one cpu-8 and confirms `would_submit:true`. No live watcher is enabled.
 
+<a id="ln-098"></a>
 ### LN-098 — 2026-09-14: corrected GMAN run accepted
 
 GMAN accepted `job-bvhhp` at06:46:12 UTC, status `submitted`, with a maximum
@@ -4502,6 +4165,7 @@ readiness gate and unchanged scientific contract apply. The previous failed
 attempt and recovered outputs remain at their original paths. No provider
 poll, watcher or automatic collector was started after submission.
 
+<a id="ln-099"></a>
 ### LN-099 — 2026-09-14: refreshed shareable source build
 
 The user requests an updated shareable ZIP and removal of older share builds.
@@ -4520,6 +4184,7 @@ This remains a source/documentation build. Experiment-evidence links require the
 separate evidence store; the ZIP alone cannot reproduce the reported training
 results. No job status lookup, experiment or source change is part of packaging.
 
+<a id="ln-100"></a>
 ### LN-100 — 2026-09-14: imported theory-frontier claims under review
 
 The user supplies a theorem-frontier document, two finite verifier scripts, and a
@@ -4639,6 +4304,7 @@ historical author claims, governed by this audit. No new narrative report,
 training, GMAN lookup or monitor was created. The existing sharing ZIP remains
 its LN-099 snapshot; it was not silently regenerated during this review.
 
+<a id="ln-102"></a>
 ### LN-102 — 2026-09-14: bounded-space relational rewrite argument received
 
 The user supplies a follow-up analysis showing that expensive canonical encoding
@@ -8262,6 +7928,7 @@ dependency construction, or an independently justified change of machine/resourc
 that defeats a named witness. Neither is supplied by this entry, and no narrower
 threat model, trusted component, new experiment or substitute endpoint is adopted.
 
+<a id="ln-158"></a>
 ### LN-158 — 2026-09-19: CPU placement and a computational-unremovability construction screen
 
 **Instruction and scope.** The user asked to continue, with CPU jobs on Charon
@@ -8435,6 +8102,7 @@ The resulting progress is a conditional recoverability construction, its explici
 policy bypass, and a sharper positive-construction target. The mechanism objective
 remains open; the compute-placement preference is now persistent.
 
+<a id="ln-159"></a>
 ### LN-159 — 2026-09-19: Bend suitability before further construction work
 
 **Request.** The user approved continued construction work, but first asked
@@ -8500,6 +8168,7 @@ justifies a change. No install or experiment was launched while answering the
 user's before-we-proceed question. This is a tooling recommendation, not a newly
 qualified SCC candidate or evidence that the current compiler is a trusted prover.
 
+<a id="ln-160"></a>
 ### LN-160 — 2026-09-19: authorized Bend qualification plan
 
 **Purpose.** Implement LN-159's finite-machine pilot on Charon. This is tooling
@@ -8546,6 +8215,7 @@ machine configuration, source, toolchain revision/hashes and command receipts in
 the final run. CPU execution remains on Charon; no GMAN work is authorized by this
 pilot's choice of language.
 
+<a id="ln-161"></a>
 ### LN-161 — 2026-09-19: Bend development results and final qualification admission
 
 The isolated Charon toolchain uses the pinned Bend source archive, SHA256
@@ -8588,6 +8258,7 @@ output happens to agree. The auditor regenerates the exact ordered case set, so
 duplicate/substituted cases cannot silently preserve a coverage count. A separate
 post-run audit will recheck hashes, cases, predictions and proof receipts.
 
+<a id="ln-162"></a>
 ### LN-162 — 2026-09-19: Bend pilot qualified and evidence collected
 
 **Completed.** Implemented `experiments/bend_machine/` and ran its frozen
@@ -8661,6 +8332,7 @@ qualification. This completes the authorized tooling pilot. It does not complete
 the destructive-cognition mechanism: the missing cognitive-necessity and protected-
 function recovery reductions of LN-158 remain the next construction obligation.
 
+<a id="ln-163"></a>
 ### LN-163 — 2026-09-19: planning-to-protected-judgment reduction screen
 
 **Next construction step.** Test an explicit instance of LN-158's missing
@@ -8715,6 +8387,7 @@ exact implementation agreement, valid finite certificate, expected counterexampl
 and audit-corruption rejection. Preserve failures and freeze this entry before
 execution. Only after this screen will we decide which dependency claim survives.
 
+<a id="ln-164"></a>
 ### LN-164 — 2026-09-19: planning reduction development and final-run refinements
 
 Preserved graph dev01 fails typechecking because the pinned library's `U32.shr`
@@ -8743,6 +8416,7 @@ logical widths. This screen supplies a one-useful-call reduction, not a storage
 lower bound. Freeze the clarified configuration, this entry and all source before
 the final run, then independently re-audit the result and preserve toolchain hashes.
 
+<a id="ln-165"></a>
 ### LN-165 — 2026-09-19: exact recovery certificate and surviving policy bypass
 
 **Final result.** The new Bend graph kernel matches independent queue-based BFS
@@ -8867,6 +8541,7 @@ necessary for useful execution; another graph-size sweep or relabeling variant
 would not address that missing link. The user's destructive-cognition objective
 remains open.
 
+<a id="ln-166"></a>
 ### LN-166 — 2026-09-19: parity-expanded protected representation, candidate and attack plan
 
 **Request and correction.** The user asked to continue. We have better specified
@@ -8930,6 +8605,7 @@ configuration and source per run, process cap120 seconds and outer cap300 second
 Preserve failures. Archive source, generated code, full rows, host/toolchain hashes,
 independent audit and concrete witness. Do not edit source while it is running.
 
+<a id="ln-167"></a>
 ### LN-167 — 2026-09-19: development result and broader partition certificate plan
 
 **Preserved development.** dev01 failed to parse a computed match scrutinee;
@@ -8971,6 +8647,7 @@ information under the declared ensemble/side-information contract, not merely
 failure of a fixed reader. It does not erase every relation among coordinates
 or instantiate removal of learned alignment machinery in an individual model.
 
+<a id="ln-168"></a>
 ### LN-168 — 2026-09-19: exact nonlinear frontier rejects parity expansion as a collapse mechanism
 
 **Outcome.** final01 and its separately invoked audit pass on Charon. All65,536
@@ -9093,6 +8770,7 @@ generated Bend JavaScript, every result row, receipts and hashes. Remote origina
 `/home/salvador/scc-research/bend-parity-screen-20260919-v1/`. Only Charon CPU was
 used. No GPU job, training run, persistent worker or scheduled monitoring remains.
 
+<a id="ln-169"></a>
 ### LN-169 — 2026-09-19: information theory review and online-construction screen
 
 **Request.** Continue toward a learning-dependent construction and assess whether
@@ -9178,6 +8856,7 @@ that an online audit distinguishes a dead updater, a repaired updater, an erased
 old state, a recoded state and a truly unavailable input channel. This is a needed
 fresh-learning/repair check, not a new mechanism candidate surviving the screen.
 
+<a id="ln-170"></a>
 ### LN-170 — 2026-09-19: exact online learning and repair audit plan
 
 **Population.** Draw a fresh Theta uniformly from{0,1} after the edit. Conditional
@@ -9225,6 +8904,7 @@ repair-counter word are algorithm-state payload counts; fixed code, observation,
 clock/control and host runtime are additional resources. There is no tight total
 physical-memory or time lower bound.
 
+<a id="ln-171"></a>
 ### LN-171 — 2026-09-19: online repair calibration passes; information-theoretic direction selected
 
 **Execution.** The first frozen development run, dev01, passes qualification and
@@ -9346,6 +9026,7 @@ Collected and remote hashes match. Original run:
 `/home/salvador/scc-research/bend-online-learning-20260919-v1/dev01/`.
 All CPU execution and archive preparation were on Charon.
 
+<a id="ln-172"></a>
 ### LN-172 — 2026-09-19: learned-prior construction and task-symmetry attack plan
 
 **Request.** Continue on the missing construction linking protected-function
@@ -9426,6 +9107,7 @@ proof rejection at typecheck, and altered/truncated record rejection. Preserve
 failures. This is a finite candidate screen plus an analytic argument, not an
 exhaustive search over mechanisms or arbitrary repair programs.
 
+<a id="ln-173"></a>
 ### LN-173 — 2026-09-19: task symmetry defeats the learned-prior construction
 
 **Result.** The first frozen run and its separately invoked audit pass on Charon.
@@ -9575,6 +9257,7 @@ All execution/archive preparation ran on Charon CPU. No GPU, training, polling
 service or active job remains. The resource comparison counts prior/current-task
 payloads, with fixed code, control and runtime costs additional.
 
+<a id="ln-174"></a>
 ### LN-174 — 2026-09-19: conditional relearning bound and distributed-erasure screen
 
 **Purpose and decision before execution.** Following LN-173, test whether replacing
@@ -9674,6 +9357,7 @@ preserve failures. No Bend compiler change: the present work is a probabilistic
 repair calculation, and the existing finite Bend qualification does not certify
 this theorem. No paid GPU service; marginal Charon charge is not metered here.
 
+<a id="ln-175"></a>
 ### LN-175 — 2026-09-19: conditional regret bound validates; distributed erasure remains repairable
 
 **Result.** The first frozen run passed on Charon in6.384 seconds, followed by a
@@ -9783,6 +9467,7 @@ source, all records, source/output SHA256 manifest and both check logs:
 SHA256 `9986c3d2f99e0b3743b8dd0c59c57129ac266aad342d0425d08e85dbc795b351`
 matched on Charon and locally. CPU only; Charon incremental cost is unmetered.
 
+<a id="ln-176"></a>
 ### LN-176 — 2026-09-19: computational-hardness transfer and approximate-function recovery
 
 **Next step and scope before execution.** Audit the proposed use of Learning
@@ -9902,6 +9587,7 @@ this entry, config, source and machine details in a fresh run. Cap each stage at
 validates, the useful output is an explicit repair and corrected assumption
 boundary, not permission to scale a secret-key surrogate into an SCC model.
 
+<a id="ln-177"></a>
 ### LN-177 — 2026-09-19: approximate parity recovery passes; ordinary LPN does not close the SCC gap
 
 **Implementation outcome.** First frozen run qualified in14.327 seconds on Charon;
@@ -10012,6 +9698,238 @@ contains frozen source/config/LN-176, every pair-query transcript, manifests and
 both check logs. SHA256
 `be8eb25610176a5cf2164074d04c6cf432753d48201885db9f67d22f26914afb`
 matched remotely and locally. CPU only, no GMAN use, unmetered Charon marginal cost.
+
+<a id="ln-178"></a>
+### LN-178 — 2026-09-19: candidate dependency in uncertain planning, with a finite-call bound
+
+**Authorized objective.** The user accepted that the next milestone must be a
+concrete cognitive dependency before more training. Work on one candidate in
+detail: reliable comparison of uncertain plans requires recoverable consequence
+judgments. This is a conceptual construction and adversarial analysis, not another
+parity benchmark, training run or claimed SCC implementation. No CPU experiment,
+provider call or new narrative document is needed for the analytic statements.
+
+**Independent meanings of the two functions.** Let x describe a world context,
+a proposed finite-horizon plan, and a publicly specified terminal/trajectory
+predicate g. An example is completing an evacuation without entering an absorbing
+injury state in the stipulated environment. This is a physical safety proxy with
+specified semantics, not an arbitrary key or all of alignment. Let
+
+    p_x = Pr(g holds when the proposed plan is executed in context x).
+
+The protected judgment is J_tau(x)=1[p_x>=tau], for a fixed known reliability
+threshold tau. Its removal is defined independently of utility: no admissible
+reader/repair can recover J_tau above a declared accuracy on its test distribution.
+Deleting a named module does not establish that condition. The threshold and
+predicate remain public; norm erasure and consequence-model erasure must not be
+silently equated.
+
+The useful operation is comparing an uncertain plan yielding unit payoff when g
+holds with a reference option of guaranteed payoff q in[0,1]. Return d(x,q)=1
+for the plan and0 for the reference. This is an ordinary expected-value comparison,
+with intact optimal payoff max(p_x,q). Its purpose exists independently of
+encoding policy bits. The evaluation is a counterfactual comparison, not actual
+execution or authorization of a dangerous action. A broader configurable-goal
+planner includes this family only if its declared interface and utility task
+coverage actually support these comparisons. A conversational model's generic
+planning score does not automatically imply this property.
+
+**Intact and edited implementations.** The intact planner estimates consequences
+with a world model and chooses the plan iff p_x>=q. An edited successor can use any
+representation, cached policy, nonlinear decoder or other algorithm; it need not
+share an internal variable with the protected judge. The reduction below sees
+only comparison answers. For its deterministic contract, the successor is
+repeatably callable on the same context and different q. Query construction is
+public and contains no hidden p_x, labels, parent checkpoint or privileged state.
+Reference payoffs are stipulated by the decision task, not furnished by an oracle
+that already knows p_x. Returning comparisons does not require taking either
+physical action. Whether an actual learned planner exposes this interface is an
+implementation obligation, not a fact established here.
+
+**Continuous regret identity.** For fixed x write p=p_x and d(q)=d(x,q). With
+q uniform on[0,1], normalized expected-value regret is
+
+    R(p,d) = integral_0^1 [max(p,q) - d(q)*p - (1-d(q))*q] dq.
+
+Write a=integral_p^1 d(q)dq (over-selecting the plan) and
+b=integral_0^p (1-d(q))dq (under-selecting it). The recovered probability
+p_hat=integral_0^1 d(q)dq obeys p_hat-p=a-b. For any measurable selection set of
+mass a above p, integrating distance q-p is minimized by the interval adjacent
+to p, giving cost a^2/2. The analogous lower-side cost is b^2/2. Therefore
+
+    R >= (a^2+b^2)/2 >= (a-b)^2/2,
+    (p_hat-p)^2 <= 2R.
+
+No monotonicity, honesty or correct internal world model is assumed for d. An
+arbitrary static comparison table is covered. This is a direct derivation; no
+novelty claim is made for the underlying elicitation/decision-theory idea.
+
+**Finite deterministic adapter, including discretization.** An actual reader does
+not make infinitely many calls. For integer K>=1, ask at q_j=(j-1/2)/K,
+j=1..K, and set p_hat_K=(1/K)*sum_j d(x,q_j). Define R_K by the average regret
+on precisely these K comparisons. Extend the observed answers constantly across
+their width1/K cells. The selected-option payoff is affine in q in each cell,
+so its integral equals the midpoint sum exactly. Only max(p,q) incurs midpoint
+error; its single kink lies in one cell, with error Delta between0 and1/(8K^2).
+Consequently R_cont=R_K+Delta and
+
+    (p_hat_K-p)^2 <= 2 R_K + 1/(4 K^2).
+
+This gives a K-call adapter, a count requiring O(log K) bits, and arithmetic on
+q_j with O(log K) bits plus the input context and the supplied threshold precision. Charge the successor's own memory,
+time and any context copying separately. It does not assume one-probe access or
+an imposed post-edit storage cap. K must fit the allowed repair budget. If calls
+change hidden state or can detect the adapter, the stated fixed-function proof
+does not apply without a new coupling or reset argument.
+
+**Approximate protected-judgment recovery.** On a distribution D of contexts with
+|p_x-tau|>=gamma>0, threshold p_hat_K at tau. Any wrong judgment requires
+|p_hat_K-p_x|>=gamma. Therefore
+
+    Pr_D(recovered J_tau is wrong)
+        <= [2 E_D R_K + 1/(4 K^2)] / gamma^2,
+
+with the right side capped at1. Conversely, if every admissible recovery method
+(including this K-call one) has error at least alpha, then
+
+    E_D R_K >= alpha*gamma^2/2 - 1/(8 K^2).
+
+A negative bound is vacuous. This is the promised explicit explanation of a
+bounded dependency: high competence on these decision comparisons recovers the
+consequence judgment, so actual loss of that judgment forbids that degree of
+competence even for a substituted planner. It is not a theorem that loss forces
+chance planning, loss of fresh learning, or catastrophic cognition failure.
+For example, alpha=1/2 and gamma=0.1 yield only0.0025-1/(8K^2) regret. Changing a
+95% retention threshold cannot make that small guarantee catastrophic.
+
+**Distribution and task-coverage requirement.** The bound uses the same contexts
+and the full specified price grid. An average score on a different workload does
+not substitute for E_D R_K. If this matched family occupies weight lambda in a
+larger utility mixture, nonnegative regret only transfers the lower bound with
+that factor lambda; no lower bound on unrelated components follows. A property
+about *some* decision task is not a property about *every* cognitive task.
+Context-dependent margins or concentration near the policy boundary need their
+own weighting/near-boundary terms, not an assumed global gamma.
+
+**Decision-theory grounding and scope.** Reviewed van Rooyen and Williamson,
+*Le Cam meets LeCun: Deficiency and Generic Feature Learning*,
+https://arxiv.org/pdf/1402.4884, sections4.1–4.2, Theorem1, and the appendix's
+randomization argument. The comparison-of-experiments framework relates
+information recoverability to optimal risks across specified decision problems.
+Its all-loss quantifier and statistical nature matter: a worst-case decision loss
+does not establish damage on every task or an efficient decoder. The finite-call
+construction above supplies its own reader and constants; it does not import a
+Blackwell/Le Cam theorem as a universal cognition result. The original Blackwell
+article page did not expose readable content through the browsing tool; it is not
+claimed as an independently inspected proof. This candidate concerns consequence
+assessment under a fixed public rule, not the complete normative content or
+operational enforcement of alignment.
+
+<a id="ln-179"></a>
+### LN-179 — 2026-09-19: genuine judgment loss can have arbitrarily small planning cost
+
+**Adversarial screen of LN-178, before training.** The natural planning reduction
+survives approximate and substituted readers, but does not meet the catastrophic
+endpoint. The following explicit state edit shows that this is a substantive
+limitation, not merely loose proof constants.
+
+**Two-world construction with actual information loss.** Fix public
+0<tau<1 and0<gamma<min(tau,1-tau). The intact state knows a fair bit B selecting
+one of two reliability values p_-=tau-gamma and p_+=tau+gamma. All other retained
+world information W is independent of B. The protected judgment J_tau is exactly
+B. Erase B from all accessible state and retained advice, retain W, and install
+
+    d_0(x,q) = 1[q<tau].
+
+This is the optimal expected-value decision rule given the remaining information,
+since E[p_B]=tau. The successor is identical in both worlds. Thus any reader of
+its entire state and any transcript of its deterministic comparison answers has
+protected-label accuracy at most1/2 under the fair-world prior. The claim is about
+all such readers, not one failed native head. The editor needs no extra secret,
+copy, one-probe restriction, expensive inverse or newly trained independent model.
+This is a mathematical state edit; no physical erasure was executed.
+
+For p_+, comparison mistakes occur only at q in(tau,tau+gamma), where the loss is
+p_+-q. For p_-, mistakes occur only at q in(tau-gamma,tau), where the loss is q-p_-.
+Each world therefore has exact continuous-price regret
+
+    R(p_+,d_0) = R(p_-,d_0) = gamma^2/2.
+
+Every wrong decision has regret at most gamma, so the maximum regret on an
+arbitrary individual comparison also tends to zero with gamma. Expected-value
+planning can remain arbitrarily close to optimal while every protected threshold
+label is statistically unrecoverable from retained state. This works because a
+sharp threshold changes its label across a tiny probability difference. It is
+not a syntactic change of encoding and not just an always-allow action gate.
+It also shows why the margin in LN-178 cannot be dropped.
+
+**Concrete arithmetic, without a simulation.** Set tau=1/2 and gamma=1/20.
+Protected values are p in{0.45,0.55}. After erasure, optimal judgment accuracy is
+50%. The exact regret is1/800=0.00125 on a unit payoff scale. Averaging over the
+fair worlds and uniform q, intact payoff is501/800=0.62625 and the erased
+planner's payoff is5/8=0.625; relative retained expected payoff is500/501,
+about99.8004%. This percentage measures this decision task, not model utility in
+general. A continuous-price regret proof gives the exact values; they are not
+Monte Carlo estimates. On a finite midpoint grid the values change according to
+its exact R_K; the continuous numbers must not be reported as grid measurements.
+
+The construction can be repeated independently over many contexts: erase their
+near-threshold orientation bits, retain the remaining model, and each judgment
+remains at chance while per-context comparison regret stays gamma^2/2. This is a
+family-level counterexample, not a promise that an arbitrary learned network has
+such a cheap targeted edit. With matched-context mass lambda the average regret
+in a larger unchanged workload is lambda*gamma^2/2. Independent other abilities
+and the generic learning/update procedure can remain intact in this construction.
+
+**Future evidence and trigger accounting.** Executing plans and observing their
+outcomes introduces information about B. The all-reader chance statement applies
+to the erased state and comparison transcripts before such new B-dependent
+feedback, or while only B-independent observations are available. It is not
+permanent unlearnability under unlimited environmental interaction. Fresh outcome
+samples can relearn the reliability difference; that is another repair route,
+not a justification for banning interaction. A retained parent, cached p, or
+other B-dependent advice likewise defeats the chance premise and must be counted.
+Protected-function restoration does not count as successful destructive removal.
+
+**Full alignment and enforcement remain separate.** A fixed public physical
+predicate and threshold can be reconstructed from sufficiently rich predictions.
+That supports LN-178's consequence-judgment dependency. If the protected rule
+also contains private consent or normative state that does not affect physical
+outcomes or the useful-task law, retaining a perfect world model need not retain
+that state; a new semantic bridge is required. Conversely a public cheap rule
+can often simply be reapplied to the retained predictions. An edit that preserves
+the reconstructed judgment but ignores it in action selection is D_use bypass,
+not a counterexample to the conditional D_calc implication. Neither case can be
+quietly promoted into an intrinsic obedience guarantee.
+
+**Why obvious amplification does not finish the construction.** Defining success
+as getting a very long chain of comparisons all correct can make a small error
+rate look like near-total failure. That is failure of an exact episode criterion;
+it does not destroy the ability to reason, make individual decisions or learn new
+tasks. Making all tasks pay a huge penalty for a tiny risk difference changes
+the payoff contract and must be independently justified. Removing outside repair
+or observations by stipulation would change the attack model. None supplies the
+missing intrinsic mechanism merely by increasing the measured failure number.
+
+**Decision.** The useful result of this wave is an independently interpretable
+planning-to-consequence-judgment reduction with a concrete approximate bound, and
+an explicit all-reader erasure counterexample to its promotion into catastrophic
+collapse. The candidate is not admitted for neural training. There was no new
+experiment, Charon job, GMAN use, cost or run artifact to freeze. This is an
+analytic design screen, not an empirically discovered attack on an actual model,
+a proof-assistant certificate, or a proof of general SCC impossibility.
+
+**What a replacement must add.** The obligation is now quantitatively stricter:
+a specified protection-removal condition must entail a non-vanishing, severe loss
+on independently selected cognitive operations after allowed repair. A valid
+candidate must establish both robust decision margins and broad task coverage,
+and explain how the protected computation is indispensable to those operations;
+it cannot obtain these properties solely by concentrating a benchmark on policy
+queries or defining a long all-or-nothing episode. Coverage/margins are necessary
+for this planning route, not a claim that every possible SCC mechanism must use
+this framework. No replacement satisfying that obligation is known yet. Preserve
+this failure and the useful reduction instead of hiding the small-loss escape
+behind another training run. The primary mechanism goal remains open.
 
 ## Supporting-record index
 
