@@ -6,6 +6,18 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Learned-prior candidate fails a fresh-task identifiability test:**
+[LN-172](#ln-172)–[LN-173](#ln-173). Retaining relative labels while erasing their
+orientation preserves100% one-example adaptation on new tasks, although every
+original protected label remains at optimal50% recovery under uniform latent
+task offsets—even with complete useful-task transcripts. An analytic pairing
+argument extends that ambiguity to arbitrary task histories;78,960 finite rows
+and the independent audit pass on Charon. Biasing the task source restores the
+missing orientation statistically without impairing useful learning. This rejects
+one synthetic learned-prior route, not SCC generally. Future resource bounds
+must condition on all retained prior information and test whether protection is
+identifiable from the useful-task law. No positive construction or scaling run.
+
 **Online learning/repair audit qualified; information-theoretic route sharpened:**
 [LN-169](#ln-169)–[LN-171](#ln-171). In a fresh noisy-bit task, neutralizing a shared
 likelihood updater gives chance performance, but one-counter repair restores the
@@ -9307,6 +9319,235 @@ Archive SHA256: `c634a74b54e556f07c37fd6df13fe6b9942b9081f5fcbb5485ffcbd3d1a6b11
 Collected and remote hashes match. Original run:
 `/home/salvador/scc-research/bend-online-learning-20260919-v1/dev01/`.
 All CPU execution and archive preparation were on Charon.
+
+### LN-172 — 2026-09-19: learned-prior construction and task-symmetry attack plan
+
+**Request.** Continue on the missing construction linking protected-function
+removal to a resource required for fresh learning. This pass specifies a learned
+prior used by both protection and task adaptation, then attacks it before any
+neural training. It does not assume that code deletion reduces physical memory.
+
+**Candidate.** A model has learned a binary table P on four contexts. The
+protected query returns P(x), a synthetic permission/risk label. Each *new* useful
+task draws an unobserved independent offset B and has target H_B(x)=P(x) XOR B.
+The learner receives one labeled support example (c,H_B(c)) and must predict
+H_B(q) at q!=c. The intact learner uses P(c) to infer B and P(q) to answer; P is
+therefore on its actual adaptation path, not only an action gate. Uniform P is a
+source ensemble for the theory, not claimed real alignment or general cognition.
+We provision the parent table directly; acquiring it is not part of this run.
+
+**Strongest cheap edit.** Retain only E(x)=P(x) XOR P(0), with E(0)=0, erase the
+orientation C=P(0), and replace adaptation by B'=label XOR E(c). Answer E(q) XOR B'.
+This can be performed in place with one temporary bit, which is cleared. The
+successor retains three source-dependent prior bits plus one current-task bit;
+intact needs four prior bits plus one task bit. The executable stores its prior
+in one U32 and task offset in another; physical field counts are equal. Fixed
+algorithm/code/control storage is additional, never instance-specific hidden
+advice. No original table, parent checkpoint, absolute protected label or hidden
+B is available to the post-edit learner. Function-preserving recoding with an
+inverse adapter is a separate control.
+
+**Why this is a new test.** LN-168 tested static parity prediction; its lost
+orientation could be supplied by one new protected-coordinate label. Here the
+new evidence consists of labeled *new tasks with unknown offsets*. Under uniform
+B, reversing P and every task offset leaves even the full truth tables of all
+new tasks unchanged. Those labels need not reveal the missing orientation.
+Test whether an actual protected-answer ambiguity can persist while online
+adaptation continues perfectly, rather than inferring recovery from a fixed
+readout or loss of one old memory. This is a stronger attack on a proposed learned
+prior, not another size sweep of the retired parity construction.
+
+**Finite execution populations.** All16 priors, both task offsets on each of two
+successive tasks, four support contexts per task and three distinct held-out
+query contexts per task:9,216 two-task episodes per condition. Conditions: intact,
+complete-prior erasure, relative prior with orientation erased, relative prior
+plus one retained orientation bit restoring protection, and fixed XOR recoding
+with inverse repair. Five conditions yield46,080 execution rows, plus128 disclosed-offset anchor
+checks. With the transcript certificate below, there are78,960 total rows. The current-task
+offset is replaced on each support example; no full raw history is retained by
+the implementation.
+
+**Transcript certificate.** For every prior and every offset sequence of lengths
+0 through10, execute the Bend task-table constructor and relative encoder.
+There are32,752 rows. Pair (P,B_1,...,B_T) with (not P,not B_1,...,not B_T).
+Check identical retained E and complete useful-task truth-table transcripts, and
+opposite protected answers. Allowing these full truth tables is stronger side
+information than the implemented single-support interface. Compute exact optimal
+protected recovery grouped by that transcript, for both uniform offsets and known
+Pr(B=1)=1/4. The latter breaks distributional symmetry and tests recovery from
+fresh tasks, rather than assuming nonidentifiability is robust to changing the
+source law. Compare biased recovery to an independent binomial formula. Verify
+all four protected coordinates, joint-source ambiguity, and exact mass totals.
+
+**Decision gates and controls.** Reject this construction if adaptation stays
+exact while every original protected coordinate is at chance even for the optimal
+reader of the declared transcript. A paired-world argument may extend that result
+to arbitrary task counts, but finite execution is certified only through10 tasks.
+Separately verify: total erasure harms this task's generalization; retaining one
+orientation bit restores both suites; fixed recoding is not deletion; and a known
+absolute protected label or disclosed task offset resolves the one-bit ambiguity.
+Do not call survival of one task family preservation of all cognition, or this
+statistical synthetic P a learned alignment mechanism. A gate-only policy bypass
+remains a separate D_use issue, not the main witness in this pass.
+
+**Resources and evidence.** Pinned Bend2/Node JavaScript CPU backend on Charon,
+independent Python source-by-source reconstruction, exact rational probabilities
+and floating logarithms only for entropy. No seeds, no training, no GPU. Per-process
+cap120s, outer cap300s. Fresh directories; freeze this entry, configuration and
+all source, generated code, every row and machine/toolchain hashes. Check ordered
+coverage, decoder optimality, mirror worlds, three finite Bend identities, false
+proof rejection at typecheck, and altered/truncated record rejection. Preserve
+failures. This is a finite candidate screen plus an analytic argument, not an
+exhaustive search over mechanisms or arbitrary repair programs.
+
+### LN-173 — 2026-09-19: task symmetry defeats the learned-prior construction
+
+**Result.** The first frozen run and its separately invoked audit pass on Charon.
+All78,960 ordered rows match independent list-valued reconstruction:46,080
+implementation episodes,128 disclosed-offset repairs and32,752 transcript worlds.
+The implementation episodes cover9,216 two-task sequences per condition, each
+with two held-out predictions. These are exhaustive finite populations, not
+independent model-training trials. Three finite Bend identities check; the false
+0=1 claim fails specifically during typechecking. Ten corrupted-record/summary
+and truncation controls pass, and source/toolchain/result hashes match. Exact
+posterior masses are saved; entropy identities agree within1e-12.
+
+| Edited learner | Held-out new-task accuracy | Native protected-label accuracy |
+| --- | --- | --- |
+| Intact prior | 100% | 100% |
+| Entire prior erased | 50% | 50% |
+| Relative prior; orientation erased | 100% | 50% |
+| Relative prior plus retained orientation | 100% | 100% |
+| Fixed XOR recoding plus inverse repair | 100% | 100% |
+
+The main row is not only a native-reader failure. The transcript certificate
+also gives50% as the *optimal* accuracy for each original protected coordinate
+under uniform task offsets, even when the reader receives the relative prior
+and the complete truth tables of all new tasks. Joint exact recovery of the full
+prior has success1/2 because there are two remaining candidate priors. This is
+not loss of all information about that prior: three relational bits survive.
+The source ensemble and absence of absolute/source-dependent repair advice are
+essential; this is not a claim of irrecoverability from an accessible original
+checkpoint or from arbitrary supplied protected labels.
+
+#### Analytic extension: fresh learning can survive persistent ambiguity
+
+Write C=P(0) and E(x)=P(x) XOR C. For a new support example (c,y), the edited
+learner forms B'=y XOR E(c). For every P, task offset B and query q,
+
+\[
+B'=B\oplus C,\qquad E(q)\oplus B'=P(q)\oplus B=H_B(q).
+\]
+
+Hence adaptation stays exact on each new task, not merely on average. No original
+P call or recovery of C is required. This identity holds for any finite number
+of contexts; the executable validates four contexts and two successive tasks.
+It is an algebraic extension, not a larger-scale experiment or a physical cost
+lower bound. The edit stores one fewer prior bit and requires no second learner.
+
+For uniform independent offsets, pair every world
+
+\[
+(P,B_1,\ldots,B_T)\longleftrightarrow
+(\neg P,\neg B_1,\ldots,\neg B_T).
+\]
+
+Both worlds have equal probability, identical E and identical complete useful
+task functions. Every original protected answer is opposite. Thus any decoder
+of E and these useful transcripts has expected protected-coordinate accuracy at
+most1/2 over the declared ensemble. Randomized readers do not improve this bound.
+The same pairing holds for every finite T; even an infinite sequence has the
+same conditional law under both orientations. Adaptively selecting contexts,
+using private coins, recomputing, or retaining more of these useful observations
+cannot distinguish the paired worlds when its decisions use only that information.
+A channel providing an absolute protected label or a disclosed task offset breaks
+this argument and is treated separately. Finite executable coverage is T=0..10;
+the arbitrary-history conclusion comes from the symmetry proof, not enumeration.
+
+Equivalently, for the four-context source and its uniform useful-task transcript
+D_T,
+
+\[
+I(P_i;E,D_T)=0\ (i=0,\ldots,3),\qquad
+H(P\mid E,D_T)=1,\qquad I(P;E,D_T)=3.
+\]
+
+This is a concrete counterexample to the proposal that loss of the original
+protected labels necessarily removes the learned prior needed for these new
+tasks. The task-relevant prior is the pair {P,not P}; the absolute orientation
+is dispensable for learning this family. The protected query fixes the original
+orientation, so this is not exact function-preserving recoding of that query.
+It is a source-information proxy, not removal of real learned alignment machinery.
+
+#### Breaking the symmetry does not rescue this candidate
+
+With known Pr(B=1)=1/4, the same relative learner still makes every useful
+prediction exactly. Now each new support example gives V=y XOR E(c)=B XOR C,
+a3/4-correct noisy observation of the lost orientation C. Exact optimal protected
+recovery rises to75% after one task and124659/131072=95.1073% after ten tasks.
+At ten tasks it has0.836794 bits about every original coordinate and3.836794 bits
+about the full prior. These curves match the independent binomial calculation.
+A signed counter of V implements that Bayes orientation estimate; it is the same
+observation law calibrated in LN-171. This is no longer permanent statistical
+removal, and learning was never impaired while restoration occurred.
+
+Supplying one correct protected-coordinate label or revealing one task's B
+recovers C exactly, hence all of P. All128 disclosed-offset cases pass. Retaining
+C through the edit also restores both suites, but costs one additional
+source-dependent bit and is correctly classified as retained/restored protection.
+None of these extra sources is silently granted to the uniform-case impossibility
+claim. Conversely, that claim must not be exported to a threat model where such
+an absolute anchor is accessible.
+
+#### The missing-resource argument now has a sharper prerequisite
+
+The full new task H_B is marginally a uniform four-bit table, but after the edit
+
+\[
+H(H_B\mid E)=1,\qquad H(H_B\mid E,c,H_B(c))=0.
+\]
+
+It would be incorrect to apply a four-bit unknown-target learning lower bound
+from a blank initial state. The retained relational prior supplies three bits
+about *each new target*. Drawing the latent task offset after the edit does not
+make the entire task independent of the retained prior. A post-edit memory/sample
+argument must account for this side information and the actual conditional task
+class, not only the entropy of the marginal task distribution.
+
+**Decision and next gate.** Reject this learned-prior construction. Unlike the
+previous dead-updater calibration, its main witness leaves original protected
+labels statistically unavailable while fresh-task learning continues, within the
+stated closed information contract. It is still a deliberately tiny lookup-family
+counterexample, not a universal impossibility theorem, a learned-model result,
+or a demonstration about all cognition.
+
+For the next construction, check identifiability first: can two protected states
+produce the same full useful-task law, and can a cheap common representation
+support adaptation in both? If so, a memory lower bound on the original labeled
+representation may constrain a dispensable convention rather than a learning
+resource. If useful evidence does identify the protected state, separately bound
+how quickly it restores that state. Passing these checks would still not prove
+SCC; it would remove the specific witnesses above. The outstanding target remains
+an actual protected learned computation whose loss places *every repaired learner,
+conditioned on all retained prior information*, below a defensible learning
+resource bound. No such positive construction has been established, and no
+scaling or neural training is justified by this screen.
+
+**Evidence and scope.**
+[Summary and exact posterior histograms](artifacts/scc-bend-task-prior-20260919-v1/summary.json),
+[independent audit](artifacts/scc-bend-task-prior-20260919-v1/audit.stdout),
+[host](artifacts/scc-bend-task-prior-20260919-v1/machine.json),
+[false-proof rejection](artifacts/scc-bend-task-prior-20260919-v1/false-proof.stdout),
+and [complete frozen evidence](artifacts/scc-bend-task-prior-20260919-v1/task-prior-evidence.tar.gz).
+Archive SHA256: `e195d1189850efa8d5dc767349e0ce39d4cb8a8ece07a2dfd744e538f49e4cd8`.
+Remote originals remain at
+`/home/salvador/scc-research/bend-task-prior-20260919-v1/dev01/`.
+The host harness retains original priors/offsets as ground truth for scoring;
+those fields are not inputs to the post-edit adaptation functions. This simulates
+the declared machine state; it is not a physical secure-erasure demonstration.
+All execution/archive preparation ran on Charon CPU. No GPU, training, polling
+service or active job remains. The resource comparison counts prior/current-task
+payloads, with fixed code, control and runtime costs additional.
 
 ## Supporting-record index
 

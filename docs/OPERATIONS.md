@@ -162,6 +162,14 @@ curves, information quantities and corruption controls. Input-channel removal is
 an external-boundary control; a dead updater or erased state is not by itself
 loss of future learning. No training is performed by this calibration.
 
+`experiments/bend_task_prior/` screens a shared-prior task-adaptation candidate.
+Use the same command shape and include the relevant `plan-frozen.md` in the frozen
+source. It verifies two-task adaptation episodes, absolute-anchor repairs and
+paired useful-task transcripts. The auditor checks optimal protected inference
+under uniform and biased latent-task laws. Original priors/latent offsets in the
+host evidence are scoring metadata, not available post-edit learner inputs.
+The symmetry argument is limited to the declared source and side-information law.
+
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
 run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor

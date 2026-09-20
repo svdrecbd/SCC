@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "contexts": 4,
+  "priors": 16,
+  "episodes": 2,
+  "certificate_max_tasks": 10,
+  "conditions": ["intact", "erased", "relative", "relative_plus_anchor", "fixed_recode_repaired"],
+  "fixed_recode_mask": 10,
+  "offset_laws": ["uniform", "one_quarter"],
+  "bend_commit": "15ae0c86f3193b8f645b4bedbc438655b648d0da",
+  "node_version": "v24.13.0",
+  "backend": "Bend JavaScript CPU",
+  "process_timeout_seconds": 120,
+  "intact_prior_logical_bits": 4,
+  "relative_prior_logical_bits": 3,
+  "current_task_logical_bits": 1,
+  "relative_prior_u32_fields": 1,
+  "current_task_u32_fields": 1,
+  "tight_total_physical_memory_bound": false,
+  "evidence_class": "learned-prior candidate screen; not learned alignment or general cognition"
+}
