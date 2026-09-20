@@ -13,20 +13,23 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-218](#ln-218)–[LN-221](#ln-221) recover
-partially observed nonlinear stream models without giving the learner their
-coordinates, size, topology or protected labels. Both test regimes recover all
-six feedback rules and their alias variants exactly; current-state observation
-also synchronizes all 1,120 tested starts. Short conformance misses three delayed
-controls, but a declared extension of the input probes repairs all three. Exact
-certificates come from a separate evaluator and are never discovery feedback.
-Zeroing feedback retains 80.36% of short plans and perfect fresh-input memory,
-although four-step forecasting falls to 50.89%. Hiding coordinates and missing
-rare behavior have not supplied a destructive SCC mechanism. The main remaining
-question is acquisition/repair cost under the full admitted replay, copy and
-retained-information contract, coupled to substantial loss on meaningful tasks.
+**Latest substantial result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
+the acquisition-cost baseline under admitted copies and continued live execution.
+On the thirty frozen LN-221 transcripts, full replay costs 1,209,616 transitions;
+continuing the live state uses 758,943 with no saved snapshots, and unlimited
+prefix snapshots use 125,362. Copying and lookup costs remain separate; the
+preferred tested policy changes with their price. All 1,714,167 repeated terminal
+answers agree. Exact task-mass controls show that broad failures are easy to
+witness under representative IID access, while identifying the missing procedure
+can still be difficult. This unit establishes stronger cost/coverage controls,
+not intrinsic SCC or a general efficient-repair theorem. Acquisition overhead
+alone has not supplied a positive mechanism.
 
-**Recent reusable results:** [LN-214](#ln-214)–[LN-217](#ln-217) exactly recover
+**Recent reusable results:** [LN-218](#ln-218)–[LN-221](#ln-221) reconstruct
+six partially observed nonlinear rules and their alias variants from output-only
+queries, synchronize all tested ongoing states and repair delayed conformance
+misses. Feedback removal leaves substantial short-plan and fresh-memory utility.
+[LN-214](#ln-214)–[LN-217](#ln-217) exactly recover
 ten bounded-degree nonlinear feedback systems from delayed output histories,
 reject lower-degree fits, and distinguish feedback removal from surviving fresh
 memory. Their known-coordinate feature construction is a finite repair upper
@@ -13867,6 +13870,279 @@ A one-pass/online access comparison is worth formulating only under that explici
 contract, with worst-case ambiguity distinguished from typical learning cost.
 No further experiment or neural training is launched by this conclusion. The
 primary destructive cognition–alignment mechanism remains unestablished.
+
+<a id="ln-222"></a>
+### LN-222 — 2026-09-20: copy-aware acquisition costs and task-weighted failure detection
+
+**Question.** LN-221 charges every discovery query as a reset plus full replay.
+The broader attacker contract admits copies. Quantify a valid online snapshot
+strategy before treating those reset-based counts as a recovery barrier. In
+parallel, distinguish the probability of encountering a materially harmful error
+from the complexity of repairing the underlying procedure. This is a cost and
+coverage qualification on frozen parents, not a new positive mechanism or neural
+training experiment.
+
+**Frozen inputs.** Use all thirty final01 case/regime transcripts and parent
+tables from LN-221. Freeze their original SHA manifest and validate inherited
+file hashes before extracting the new run input. Their aggregate 81,627 distinct
+queries and 1,209,616 full-replay transitions are fixed. Replay the exact original
+adaptive query order; no advance knowledge of later queries is given to the
+checkpoint policy. Oracle answers and learned outcomes must be unchanged.
+
+**Allowed snapshot policy.** Compare 0, 1, 4, 16, 64, 256 and unlimited saved
+states. Keep the initial reset operation, and use the longest previously cached
+query prefix. Restore its opaque state handle or reset, then execute the remaining
+suffix, saving visited prefixes and evicting the least recently used entry when
+needed. The policy sees prefix strings and opaque handles, not source-state IDs,
+outputs at intermediate nodes or future queries. Count transitions, terminal
+output reads, resets, saves, restores, releases, prefix lookups, logical state-copy
+bits, peak saved-state bits and prefix/handle-index payload. Charge original
+query words and retained oracle program separately; do not present cache state
+bits as whole-program storage. Snapshot/restore cost is explicitly included,
+not assumed free. The simulation uses integer states; its wall time is not a
+measurement of copying neural weights or activations.
+
+**Checks and scope.** Require exact agreement with every saved terminal answer.
+A separate timestamp-based cache simulator checks selected prefixes and resource
+counters. With no saved states, transitions must equal the original sum of query
+lengths. With unlimited saved states, they must equal the number of distinct
+nonempty query prefixes. This is an exact optimum only for materializing those
+prefixes through a forward-step/snapshot oracle. It is not a lower bound on other
+learning algorithms, white-box program extraction or arbitrary computation.
+Parent-program retention is part of the pre-edit query access; directly retaining
+an intact parent can also restore its behavior, while retaining its protected
+function. Neither operation is a functional-removal escape.
+
+**Task measure.** For the three frozen delayed controls, compare the wrong zero
+predictor under uniform binary words of horizons 8, 16, 32 and 64 and under a
+mixture placing alpha in {0,1/16,1/4,1/2,1} on the all-one word. Compute exact
+rational disagreement mass by an independent product-state probability recursion
+and direct run-length counting. At H>=d it is alpha+(1-alpha)*2^-d; at H<d it is
+zero. For m in {0,1,4,16,64}, save the exact IID probability (1-r)^m that all task
+draws miss the error. Counting draws is distinct from counting distinct cached
+oracle queries. These identities assume independent representative input access,
+which an arbitrary deployment need not provide. Greater error mass makes the
+failure easier to witness; it does not establish efficient reconstruction from
+the witnesses. The chosen mixture is a declared control, not a measured task
+population. Existing density-ratio work remains in LN-203–206; this unit couples
+explicit copy costs to the later delayed-control coverage question.
+
+**Qualification.** Preserve per-query replay evidence and exact mass certificates.
+Reject changed cached outputs, starts, copy counters, total work and probability
+certificates. Freeze source/config/this entry and inherited input hashes in a new
+artifact directory. Charon only, one CPU, 300-second qualification cap, 120-second
+separate audit cap and 64 MiB new output cap. Keep all failures and rerun only for
+concrete corrections. No GPU, training, monitoring or new narrative report.
+
+<a id="ln-223"></a>
+### LN-223 — 2026-09-20: snapshot reuse reduces replay; avoid excessive copying
+
+Dev01 qualifies all 210 case/capacity replays and 571,389 terminal answers in
+16.87 seconds. Unlimited prefix snapshots reduce aggregate transitions from
+1,209,616 to 125,362, exactly the distinct-prefix count. The delay-32 extended
+case drops from 318,474 to 9,154 transitions. These are transition reductions,
+not measured neural speedups: saves/restores and index maintenance remain costs.
+
+**Concrete policy improvement.** Saving every visited prefix is expensive with
+small caches. At capacity one it performs 758,943 transitions plus 783,244 saves/
+restores; giving each transition, save, restore and reset unit cost makes it
+worse than full replay (1,599,513 versus 1,291,243, before index/release costs).
+Add a second online policy that saves only at the end of a query. It uses the
+same longest-prefix lookup and LRU eviction, knows no later query and sees only
+opaque handles. Compare both policies at all seven capacities on the fixed
+thirty inherited cases. Charge the same primitive operations and retain per-query
+proof records. The unlimited distinct-prefix equality is required only for the
+all-prefix policy; endpoint-only replay must use at least that many transitions,
+and its unlimited cache must contain exactly the nonempty queried words.
+
+The exact task-mass calculation passes sixty mixtures and three hundred missed-
+error probabilities. For delay 32 at horizon 64, uniform-input error is 2^-32;
+putting one quarter of task weight on the all-one input raises error above one
+quarter and reduces the chance of missing it in sixteen IID draws below 1.01%.
+This is detection, not a proof of efficient repair from those draws.
+
+Preserve dev01. Freeze the policy addition, inherited evidence and LN-222–223
+in fresh final01 with the same Charon one-CPU, 300-second/64-MiB qualification
+and 120-second audit caps. No population change, training or scaling follows.
+
+<a id="ln-224"></a>
+### LN-224 — 2026-09-20: charge continued use of the live state before finalizing copy costs
+
+Final01 passes all 420 replays and 1,142,778 saved answers in 25.58 seconds.
+The endpoint-only policy reaches the delay-32 case in 9,179 transitions with
+unlimited snapshots, close to the all-prefix policy's 9,154, while saving fewer
+states. Both policies still restore or reset at each query boundary even when
+the next word extends the just-executed word.
+
+**Further admissible improvement.** The parent already has an active state; an
+extension of its current prefix can continue without a saved snapshot or restore.
+Add `live_query_end`, which compares the current word with the longest cached
+prefix, uses whichever reaches farther (preferring the active state on ties),
+and otherwise follows the endpoint-only policy. Keep `all_prefixes` and
+`query_end` unchanged as controls. Charge active-state reuse counts and the logical
+last-word metadata payload. State initialization is fixed oracle setup, excluded
+from the operation counters in all versions; resets explicitly called by the
+policy remain counted. The zero-snapshot full-replay equality applies to the two
+reset/restore controls; the live policy may legitimately do less work with zero
+saved states. Saved-state capacity still excludes the explicitly counted active
+register. No future query or hidden state identity is exposed to the policy.
+
+Preserve final01 unchanged and freeze fresh final02 with all three policies,
+the fixed seven capacities, inherited evidence and LN-222–224. Qualification and
+separate audit keep the same time/output caps. This is removal of avoidable
+execution overhead under already-admitted access, not an expanded attack contract
+or additional scientific population. No training or GPU work.
+
+<a id="ln-225"></a>
+### LN-225 — 2026-09-20: copy-aware replay frontier and the distinction between finding and repairing failure
+
+**Completed and audited.** Final02 qualifies 630 replays: thirty frozen case/regime
+transcripts, three online execution policies and seven saved-state capacities.
+All 1,714,167 terminal answers match the original discovery transcripts. The
+separate saved-evidence audit passes 646 hashes plus 31 inherited-input hashes;
+retrieved hashes, current-source/frozen-source equality and the complete archive
+hash also pass. This reuses the same six masked-feedback rules, alias variants
+and three delayed controls from LN-221. Repeated replay checks are not additional
+independent mechanism experiments or a larger scientific population.
+
+**Transition costs are strategy-dependent.** Each policy receives only the next
+query word, with no future query order. It uses opaque snapshot handles and does
+not inspect hidden state IDs or intermediate output labels. Both saved-state
+policies start from the longest retained prefix. `all_prefixes` saves each new
+visited prefix; `query_end` saves only terminal states. `live_query_end` also
+continues from the current active state when that prefix is at least as useful
+as a saved one. Original query strings/answers and the pre-edit parent oracle
+remain charged retained resources.
+
+The following aggregates cover each original query once per displayed policy:
+
+| Policy | Saved-state cap | Parent transitions | Saves | Restores | Resets |
+|---|---:|---:|---:|---:|---:|
+| Full reset/replay | 0 | 1,209,616 | 0 | 0 | 81,627 |
+| Live continuation, endpoint saves | 0 | 758,943 | 0 | 0 | 57,266 |
+| Every-prefix saves | 16 | 308,149 | 308,149 | 72,675 | 8,952 |
+| Every-prefix saves | 256 | 208,449 | 208,449 | 81,076 | 551 |
+| Every-prefix saves | Unlimited | 125,362 | 125,362 | 81,537 | 90 |
+| Live continuation, endpoint saves | Unlimited | 143,130 | 81,597 | 60,539 | 30 |
+
+Live continuation alone cuts transition work by about 37.3% with no saved
+snapshots. It still retains the explicitly counted active register and last-word
+metadata. Unlimited prefix caching cuts transitions by about 89.6%. The original
+LN-221 counts were correct for its reset-based execution; they were not lower
+bounds on the best admitted repair procedure. No wall-clock or neural speedup
+factor is inferred from these transition ratios.
+
+The unlimited all-prefix total exactly equals the number of distinct nonempty
+query prefixes. Each such node is materialized once. The independent checker
+verifies both this count and the no-cache full-replay identity. Its optimality
+is restricted to materializing this prefix tree by forward transitions and
+snapshots. State equivalence, a different query schedule, direct program extraction,
+alternative learning algorithms or algebraic shortcuts can do better than that
+restricted task. Bounded LRU policies are measured upper bounds, not proven
+optimal time–space frontiers.
+
+**Copy costs change the preferred policy.** An illustrative aggregate price model
+sets one transition and one explicit reset to unit cost and each save/restore
+to lambda units. It excludes index maintenance, releases and fixed setup; this
+is not a complete hardware model. Among the tested policies/capacities:
+
+| Copy price lambda | Lowest-priced tested policy | Saved-state cap | Illustrative total |
+|---|---|---:|---:|
+| 0 | Every-prefix saves | Unlimited | 125,452 |
+| 1 | Live continuation, endpoint saves | Unlimited | 285,296 |
+| 4 | Live continuation, endpoint saves | Unlimited | 711,704 |
+| 16 or 64 | Live continuation | 0 | 816,209 |
+
+The full-reset baseline is 1,291,243 under this price convention. A one-slot
+all-prefix cache can increase work once copying is charged, as LN-223 records.
+Snapshotting is an option to optimize, not a free operation or a universal speedup.
+The saved summaries expose lookup counts, releases, logical state movement and
+storage separately so a different price model can be applied.
+
+For the delay-32 extended transcript specifically, 318,474 full-replay transitions
+fall to 60,615 with live continuation alone, or 9,179 with unlimited endpoint
+snapshots. The latter performs 8,986 saves, 1,600 restores and one reset. The
+all-prefix policy reaches 9,154 transitions but makes more copies. None of these
+strategies changes the 8,987 requested terminal observations or supplies extra
+labels to the original learner.
+
+**Retained storage and measured scope.** Maximum saved-state payload under the
+all-prefix policy is 72,960 bits across cases, with the maximum prefix/handle-index
+payload separately reaching 452,480 bits. These maxima need not occur in the same
+case. For live endpoint caching the respective maxima are 53,916 and 444,278 bits.
+The delay-32 live endpoint run attains those latter values, keeps an active six-bit
+state and needs at most 67 logical bits of last-word metadata. Prefix delimiters,
+container overhead, handle implementation, retained parent program, query cache
+and source code remain additional. Opaque handles do not erase the physical state
+stored behind them. The recorded parent JSON bytes include the supplied private
+finite fixture; they are not a neural-model memory estimate.
+
+The copy policy source is 3,624 bytes. The whole final qualification takes
+33.93 seconds, with peak process RSS 40,032 KiB including evaluator/input data,
+and records 16,626,535 output bytes before receipt/hash metadata. These are
+single-core Charon implementation measurements. An integer-state assignment here
+is not an empirical cost measurement for copying neural weights or activations.
+All source, inherited evidence and machine configuration were frozen before
+execution. No GPU, neural training or monitoring was used.
+
+**Task-weighted detection certificate.** The sixty exact mixture/horizon controls
+and three hundred missed-error probabilities all pass. A probability recursion
+through the frozen parent automata agrees with an independent direct run-length
+formula. For delay d, horizon H>=d and a mixture putting alpha weight on the
+all-one word, the zero predictor's error mass is
+
+    r = alpha + (1-alpha) / 2^d.
+
+For H<d it is zero. Under m independent draws from that declared task measure,
+the probability of witnessing no error is exactly (1-r)^m. The records retain
+rational values, not floating-point threshold approximations. For d=32, H=64:
+
+- Uniform inputs: r=2^-32; after 64 draws the probability of still missing the
+  error is about 0.9999999851.
+- One-quarter targeted task weight: r is just above 1/4; the miss probability is
+  about 0.0100226 after 16 draws and 1.00907e-8 after 64 draws.
+
+This is a controlled change of task distribution, not a measurement of real
+workloads. Repeated IID draws may repeat an input; distinct oracle queries can
+be fewer when answers are cached. Finding an error is not reconstructing the
+procedure that fixes it. Broad error can be easy to witness even when computation
+or sample requirements for full repair remain large. Conversely, a rare exception
+missed by generic tests does not establish severe typical utility loss. The
+representative-IID access premise must be explicit for any deployed-model claim.
+
+**Validation and preservation.** The implementation uses an ordered cache and
+opaque-state API; the checker independently uses timestamped cached states and
+replays the finite transition model. It verifies each selected prefix, terminal
+answer, saved-state occupancy and operation counter. Changed cached output,
+selected prefix, save count, transition count, error mass and missed-error
+probability are rejected. Dev01, final01 and final02 all passed their stated
+qualifications; later versions add the concrete copy-overhead and live-state
+improvements rather than overwrite earlier execution. No failed execution occurred
+in this unit. The final saved-evidence audit recomputes the policy and probability
+certificates from preserved inputs.
+
+- [Implementation](experiments/copy_aware_recovery/),
+  [final receipt](artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/receipt.json),
+  [all cost profiles](artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/summary.json),
+  [exact probability certificates](artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/mass-certificates.json),
+  [saved-evidence audit](artifacts/scc-copy-aware-recovery-20260920-v1/final02/audit.stdout).
+- [Complete three-version archive](artifacts/scc-copy-aware-recovery-20260920-v1/qualification-evidence.tar.gz),
+  SHA-256 `c8fd9043a0d07171ad564a6741c3c8d32fe09a6ae1f9694f383951c042cc7215`.
+  Remote originals: `/home/salvador/scc-research/copy-aware-recovery-20260920-v1/`.
+
+**Consequence for the mechanism search.** Acquisition costs must be evaluated
+against replay reuse, live state and admitted copies before they can support a
+recovery barrier. Retaining an intact parent is itself a behavior-restoration
+option when affordable, and it retains the protected computation; that is not
+a successful protected-function-removal attack. This unit sharpens the durability
+and cost analysis without settling whether a true cognition–alignment dependency
+exists. A next candidate needs a procedural reconstruction problem whose residual
+difficulty survives the admitted information and implementation choices, together
+with a substantial task-loss requirement. Random fact tables, arbitrary removal
+of replay access or rare diagnostic exceptions do not discharge those conditions.
+The next conceptual step is to separate a genuinely difficult synthesis problem
+from finding its counterexamples, and distinguish repairs that restore protection
+from alternatives that remove it. No new experiment or training is launched here.
 
 ## Supporting-record index
 
