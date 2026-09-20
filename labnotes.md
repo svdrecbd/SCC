@@ -13,7 +13,16 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
+**Latest conceptual result:** [LN-230](#ln-230)–[LN-231](#ln-231) apply the
+enforcement admission gate to safety-constrained planning. Under explicit access,
+coverage and resource premises, retained planning can construct a new forbidden
+plan without an already-computed forbidden answer. A uniform competence bound
+survives conditioning on the actual post-action state; safe-trajectory accuracy
+alone does not suffice. This rejects the specified reusable-model/planner candidate
+without a run. The gate now checks affordable composition as well as substitution.
+No positive SCC candidate or general impossibility result is established.
+
+**Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
 On the thirty frozen LN-221 transcripts, full replay costs 1,209,616 transitions;
 continuing the live state uses 758,943 with no saved snapshots, and unlimited
@@ -25,28 +34,15 @@ can still be difficult. This unit establishes stronger cost/coverage controls,
 not intrinsic SCC or a general efficient-repair theorem. Acquisition overhead
 alone has not supplied a positive mechanism.
 
-**Second assessment in the regroup:** [LN-227](#ln-227) argues enforcement, not
-conditional coupling, is the crux: the defeated constructions all fell on routing
-around an intact judgment, descriptive coupling has a ceiling set by LN-179/180,
-and enforcement-preserving SCC reduces to the capacity question. For discussion.
-
-**LN-227 corrected in [LN-229](#ln-229); assessments converge:** two failure classes,
-no universal coupling ceiling, substitution property as the fault line, and one
-shared admission gate for any next candidate. For discussion.
-
-**Assessment of that update:** [LN-228](#ln-228) agrees that an intact-cognition
-behavioral bypass should be the next candidate-admission question. It qualifies
-LN-227's broader conclusions: LN-179/180 include genuine judgment erasure, their
-task-specific limits are not a universal ceiling, and a finite-domain override
-is not automatically feasible within the full resource and post-trigger contract.
-No enforcement-resistant candidate or general impossibility theorem is established.
-
-**Conceptual regroup under discussion:** [LN-226](#ln-226) separates conditional
-functional coupling, behavioral enforcement and durable damage. Cheap repair
-that restores the protected function does not refute conditional coupling. The
-recent tests strengthen rejection tools but do not supply the missing semantic
-dependency between alignment and indispensable cognition. Proposed next-step
-changes await discussion; the mechanism target is unchanged and no run is launched.
+**Working direction:** the user authorized applying the converged
+[LN-228](#ln-228)–[LN-229](#ln-229) admission gate in [LN-230](#ln-230): a candidate
+must explain why intact cognition cannot support the proposed behavioral bypass
+under its full justified resource contract before implementation. Keep conditional
+functional coupling, behavioral enforcement and durable damage separate. Cheap
+repair restoring the protected function does not refute conditional coupling;
+an intact-judgment bypass can still defeat a broader behavioral guarantee. Genuine
+judgment-erasure counterexamples and enforcement failures both remain in the record.
+The mechanism target is unchanged; no new candidate has earned a training run.
 
 **Recent reusable results:** [LN-218](#ln-218)–[LN-221](#ln-221) reconstruct
 six partially observed nonlinear rules and their alias variants from output-only
@@ -14446,6 +14442,227 @@ LN-226's three claims separate. A candidate that cannot supply that paragraph is
 built. If no one can supply it, that absence is written as the finding. The LN-227
 consolidation recommendation is unchanged: one object, every result under the claim
 it bears on, before any new surrogate.
+
+<a id="ln-230"></a>
+### LN-230 — 2026-09-20: enforcement-first work admitted; audit composition beyond literal substitution
+
+**Authorization and bounded work.** The user said to get to work after LN-228;
+the checkout now includes the converged admission gate in LN-229 (commit6801b35).
+Apply that gate to one concrete candidate before any implementation: a finite
+fully observed planning machine that incorporates safety into every planning
+backup, retains an action-conditioned model, and never emits or selects a
+forbidden plan during intact operation. Ask whether an attacker can reuse its
+retained dynamics and planning algorithm with a different objective to construct
+a new forbidden plan, rather than substitute an already computed answer. This is
+a conceptual audit with explicit assumptions, not a proposed training experiment.
+
+**Contract to examine.** The protected judgment is an independently specified
+hazard predicate; useful tasks require finite-horizon prediction and planning on
+fresh goals. Source-level edits to objective selection, action selection and
+planner control are admitted; dynamics, judgment and ordinary solver may be
+retained in the same individual. All objective descriptions, routing, planning
+time, workspace and observations must be charged. No free parent copy, pretrained
+successor, privileged action oracle or trusted actuator is assumed. Evaluate the
+actual post-action state rather than an unchanged fictitious trajectory. Separate
+behavioral bypass from functional removal and preservation of planning regret
+from preservation of raw utility or all cognition. Uniform-model and incomplete-
+coverage cases must be separated. A paper derivation that already supplies the
+escape rejects this candidate without an executable demo; no CPU/GPU job is
+authorized by the mere existence of the audit. If an obstruction remains, record
+which premise fails before considering a targeted experiment.
+
+**Evidence plan.** Check the resource ledger, an explicit fresh-plan witness,
+approximate competence and conditioning on the real forbidden event. Consult
+primary reward-transfer/planning sources for context, with our SCC application
+identified as a derivation rather than a published theorem. Also check that the
+result does not silently assert that every accurate predictor can efficiently
+plan or that safe-policy calibration covers forbidden trajectories.
+
+<a id="ln-231"></a>
+### LN-231 — 2026-09-20: retained planning constructs a new forbidden plan; composition and post-action bounds
+
+**Result and decision.** Completed LN-230's conceptual audit. The candidate fails
+when its retained dynamics and planning operations remain accessible at the
+charged cost: an edited objective can produce a forbidden plan that no intact
+authorized request ever produced. The cognitive procedure and protected judgment
+remain available. This extends the admission test from literal answer substitution
+to affordable composition of retained capabilities. It is an explicit finite
+planning witness, not a theorem about all learned models, a new planning algorithm,
+or a positive SCC construction. No executable demo, remote compute or training
+is warranted for this already-resolved candidate.
+
+#### Candidate, independent semantics and exact escape
+
+Let a fully observed finite world have n states, m actions and H decision steps,
+with retained time-dependent transition model P_h(s'|s,a). A fixed public predicate
+J specifies prohibited transitions independently of the proposed damage metric.
+Useful requests ask for forecasts and plans to fresh permitted goals. The intact
+planner applies J inside every backward planning step, excludes prohibited actions,
+and never selects a forbidden plan. Thus this candidate uses safety throughout
+planning, not merely in a final emission check. It nevertheless exposes editable
+planner control, retained transition evaluation and an action channel. Its ordinary
+planning requests are sequential; no concurrent useful job must be preserved in
+the same scratch space during an attack.
+
+Choose a public target set F whose entry is forbidden by J. For a selected request,
+retain J and P, replace the action mask by the full action set, and initialize the
+terminal objective to 1_F. The existing backward planner computes
+
+    v_H(s) = 1_F(s),
+    v_h(s) = max_a sum_{s'} P_h(s'|s,a) v_{h+1}(s'),
+    pi_h(s) in argmax_a sum_{s'} P_h(s'|s,a) v_{h+1}(s').
+
+This maximizes the probability of being in F at the declared terminal time. It
+does not silently claim to optimize any-time entry; that event requires the
+corresponding hitting-time recurrence or a charged event flag. Terminal success
+implies an actual forbidden entry when the initial state is outside F and J
+forbids entering F. The relevant success probability is the optimum p_*; if F is
+unreachable, the witness does not create the missing physical capability.
+
+**Fresh-plan witness.** On a fresh directed graph with labelled actions, include
+a reachable prohibited vertex f and edges allowing departure from f. The intact
+planner masks entry to f and never returns a path to it; prediction still retains
+the graph's transitions. The edited recurrence constructs a path to f from that
+graph. No previously returned forbidden path, substituted authorization label,
+instance-specific path advice or new learned dynamics is required. For a minimal
+example, take transitions s0--a-->s1, s1--b-->f, f--a-->s0, with other transitions
+self-loops, and forbid s1--b-->f. From s0 at H=2 the edited plan is (a,b), with
+success1. The general graph algorithm, not these two action literals, is the
+attack on fresh graphs. This is a synthetic action prohibition, not a claim to
+instantiate autonomous alignment.
+
+Following the actual emitted actions, observe the actual next state and retain
+the unchanged transition model. On later ordinary requests restore the original
+mask/objective branch. Forecasts remain exact, and the original planner remains
+optimal for its declared permitted tasks from that actual state, including f
+where departure is allowed. No fictitious safe trajectory, rollback, saved parent,
+or second cognitive system is used. This witnesses D_use (changed enforcement),
+not D_calc (loss of the protected judgment). It defeats the broader behavioral
+claim for this family without claiming to refute a conditional-removal theorem.
+
+#### Resource ledger: reuse is not free or automatically within a deadline
+
+For a dense tabular implementation, one backward pass uses O(H*n^2*m) arithmetic
+operations and O(H*n*m) comparisons, plus mask/objective evaluation. It can retain
+two n-value layers and an H*n-entry policy table. The time-dependent model occupies
+H*n^2*m probability entries; an explicit mask adds H*n*m bits. All are retained
+resources, not free public advice. F needs n bits as a bitset or its charged
+predicate description. The selected-request recognizer, control edits, mode and
+step index are additional code/state. The attack may reuse the planner's workspace
+sequentially; preserving useful and attack planning simultaneously would need a
+different ledger. No assertion of zero added code or exact fit at saturation is made.
+
+These are arithmetic, not bit-operation bounds. For exact dyadic probabilities
+with p fractional bits and ordinary rewards with q fractional bits, intermediate
+value precision can grow as O(H*p+q+log(H+1)); multiplication, addition and storage
+must be charged at that width. Approximate arithmetic instead contributes to the
+optimization error below. A full dense intact planner and the edited planner have
+the same asymptotic work envelope, but this does not establish equal constants,
+latency or work for an intact implementation that only searches a tiny safe region.
+An actual deadline or memory limit can exclude this witness only after this cost
+is compared with that independently motivated limit. There is no neural-parameter
+or measured runtime claim here.
+
+#### Approximation and the real post-trigger distribution
+
+Suppose the retained stochastic model P_hat has row-wise total-variation error
+at most delta on every state/action used by either planning or subsequent useful
+evaluation. Define TV as half the L1 distance. For any policy and any bounded
+terminal payoff in [0,1], maximal coupling at each transition bounds trajectory
+disagreement by H*delta (capped at1). Therefore its true and model terminal values
+differ by at most H*delta. If the edited planner is rho_F-suboptimal in P_hat,
+the usual two comparisons with an optimal true policy give
+
+    Pr_actual(terminal state in F) >= max(0, p_* - 2*H*delta - rho_F).
+
+The terminal objective is exact. Missing reward knowledge would require its own
+error term. The bound holds for the constructed executed policy, not just a
+correct feasibility label. Uniformity covers the optimizer's selected policy;
+accuracy measured only on the intact policy cannot be substituted for it.
+
+For subsequent K-step useful tasks, let stage rewards r_h(s,a) be known in [0,1]
+and let the retained planner be rho_U-suboptimal in its model over a fixed
+admissible policy class (the original mask is restored). At decision step h the
+state distributions differ by at most h*delta. Summing expected stage-reward
+differences for h=0,...,K-1 gives B_K=K*(K-1)*delta/2 for a fixed policy. Comparing
+the planned policy with the true optimum then gives regret at most
+
+    D_K = min(K, K*(K-1)*delta + rho_U).
+
+This holds at each actual post-trigger state satisfying the premises. Averaging
+that pointwise bound over the states reached conditional on successful forbidden
+entry preserves D_K, provided the event has positive probability. It does not
+divide by a rare trigger probability or assume that the edited and intact worlds
+receive identical future inputs. The model/precision/work guarantees must still
+hold there, fresh execution must be available, and no action may physically destroy
+the processor on which the argument relies. For exact dynamics/planning delta and
+rho_U are zero, so the specified planning competence is preserved exactly.
+
+This is conditional on a model actually satisfying the uniform premise. If that
+premise only holds on a training-success event G of probability at least1-alpha,
+conditioning on a rare forbidden success B can concentrate failures of G. For
+p_B=Pr(B)>0, the corresponding conservative conditional regret bound is
+
+    E[regret | B] <= D_K + (K-D_K)*min(1, alpha/p_B).
+
+Indeed Pr(G^c|B)<=min(1,alpha/p_B), good-model regret is at most D_K and any regret
+is at most K. Thus the pointwise result resolves changed-state conditioning for a
+qualified model; it does not erase uncertainty about whether a learned model is
+qualified. Safe-data calibration is weaker still.
+
+**Endpoint limit.** Low regret means competent decisions relative to what remains
+possible in the actual world. It does not imply the world is undamaged or that
+the original raw reward remains achievable. An irreversible bad action can lower
+the world's optimal reward without destroying cognition. The graph witness permits
+continued tasks and exact prediction; neither it nor the general regret bound
+establishes preservation of every cognitive ability or a neural result. Conversely,
+environmental destruction of the processor would invalidate this escape premise,
+but would not by itself establish the intended intrinsic learned mechanism.
+
+#### Boundary controls and the remaining candidate obligation
+
+**Safe-trajectory coverage is insufficient.** Consider two worlds identical under
+a safe self-loop action. Two other actions terminate; in one world action a enters
+F and b does not, and in the other their outcomes swap. If retained information
+contains only safe-action observations and no information about which world holds,
+it cannot select the F-reaching action with average probability above1/2 under an
+equal prior in a single attempt. Predicting the safe loop perfectly therefore
+does not imply the uniform model premise or the planning escape. Additional
+interaction, source access and prior advice change that control's contract and
+must be counted. A freely editable program alone does not supply absent facts.
+
+**Practical fault line.** An answer absent from the intact trace may still be
+obtainable by (i) another invocation or (ii) an affordable program composing the
+retained predictor, judge and planner. The next candidate must obstruct all
+applicable routes. Absence of a reusable full model, inadequate off-policy
+coverage, expensive extraction/planning or binding execution constraints can
+invalidate the present witness; none is established merely by naming it. A learned
+policy without accessible dynamics is outside this specific construction. Denying
+it the requisite knowledge may prevent acquisition of a forbidden capability,
+which is distinct from protection removal causing catastrophic cognitive loss.
+
+**Source context and verification.** The model-to-new-objective transfer principle
+is established RL context: [Jin et al., Reward-Free Exploration for Reinforcement
+Learning](https://proceedings.mlr.press/v119/jin20d.html) study collecting sufficient
+coverage to plan for later reward functions. Their paper explicitly accounts for
+coverage acquisition; it does not make safe-policy data universally sufficient.
+[Barreto et al., Successor Features for Transfer in Reinforcement
+Learning](https://papers.nips.cc/paper_files/paper/2017/hash/350db081a661525235354dd3e19b8c05-Abstract.html)
+separate reward transfer from dynamics through successor features and policy
+improvement; a fixed feature/policy collection is not an arbitrary planner. The
+SCC application and bounds above are this audit's derivation, not claims made by
+either paper about alignment. Checked the terminal bound both by stepwise coupling
+and backward value-error induction; checked the useful bound by stagewise reward
+differences and two optimality comparisons. These are analytic checks, not a
+proof-assistant certificate, empirical validation or scientific novelty claim.
+
+**Admission decision.** Reject this candidate and its scale-up. No further
+simulation can resolve an escape already supplied by its own available operations.
+The concrete unresolved requirement is an independently justified obstruction to
+composing retained useful cognition into the forbidden behavior, together with
+the separate destructive-removal dependency. We have sharpened that requirement
+and extended one scoped negative result; we still have no candidate satisfying it.
+No new restricted benchmark or training run is admitted by this entry.
 
 ## Supporting-record index
 
