@@ -1,0 +1,12 @@
+{
+  "dimensions": [16, 64, 256],
+  "seeds": [19, 23],
+  "horizons": [4, 12],
+  "denominator": 64,
+  "observation_budgets": [0, 1, 4, 16, 64],
+  "max_adapter_and_runner_bytes": 4096,
+  "max_predictor_calls_per_job": 256,
+  "timeout_seconds": 280,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1
+}

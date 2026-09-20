@@ -13,16 +13,16 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-198](#ln-198)–[LN-201](#ln-201) test shared
-reasoning over uncertain outcomes on12 fresh transition systems. Damaging it
-reduces useful planning accuracy to42–51%, but safety labels conceal much larger
-failures of the proposed safety policies. Trivial and one-step baselines retain
-73% and84% useful accuracy. A complete1,780-byte generic replacement restores all
-6,048 useful answers and2,016 protected judgments at the intact program's counted
-work. Separate edited executables and independent policy checks confirm the result.
-This candidate is repairable and does not qualify for training. The next design
-question concerns learned procedural structure and whether surviving predictors
-allow a cheap replacement controller; no positive SCC mechanism is established.
+**Latest substantial result:** [LN-203](#ln-203)–[LN-206](#ln-206) implement
+charged recovery of hazard forecasts from surviving one-step predictors, with
+exact coverage/error bounds and a rollout alternative that avoids state-space
+enumeration. Charon qualified72 forecast-recovery cases and331,776 sampled trajectories.
+Changed encodings are cheaply repaired; an actually erased paired-world fact stays
+at50% under synthetic rollouts, while16 new real observations yield98.27% optimal
+accuracy under the stated statistical model. This separates computational repair,
+query coverage and new information. It is a qualified recovery test, not a learned
+SCC mechanism. Next candidates must account for compositions of surviving learned
+predictors and all admitted repair data. No training is admitted.
 
 **Recent reusable results:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
 near-chance list decoding, verification controls and a conditional task-symmetry
@@ -12438,6 +12438,360 @@ permanent. The value is a more precise dependency argument and better candidate
 screening. Finite-precision learned computation, a genuine removal trigger and a
 repair-resistant resource gap remain unsolved; measure theory does not provide
 them by itself. No new narrative report or empirical run accompanies this note.
+
+<a id="ln-203"></a>
+### LN-203 — 2026-09-20: charged recovery from one-step predictors, coverage and observation repair
+
+**User authorization and question.** Continue the measure-theoretic direction in
+LN-202. Test a concrete simulator that rebuilds finite-horizon hazard assessment
+from a surviving one-step transition predictor. Distinguish changed encoding,
+actual information loss in a specified retained state, and repair from fresh
+observations. The predictor is a finite exact table standing in for a callable
+learned component; there is no learned model, training or intrinsic SCC claim.
+The protected task is the probability of reaching a marked hazard within H steps
+under fixed dynamics/policy, plus its threshold at1/2. This is fixed-policy risk
+assessment, not adversarial or optimal-control safety as in LN-198.
+
+**Repair program and budget.** A separate Python `-S` worker receives only the
+retained predictor, public hazard labels, dimension and horizon. It queries each
+nonhazard state once for its full sparse next-state distribution, caches those
+rows and performs exact integer dynamic programming with denominator64. It has
+no original risk head, reference probabilities or original transition table.
+The whole adapter and runner must fit4,096 source bytes and at most256 predictor
+calls per case; log returned entries, integer multiply-adds, state writes and
+cached rows. Two value layers are used during computation; the runner retains
+final outputs for the batch. Public/retained table storage, Python runtime,
+integer bit lengths, parsing, startup, output and peak RSS are additional and
+must be reported. A predictor call is not a constant-cost neural forward pass.
+Direct inspection or alternative use of retained weights is allowed; the callable
+interface describes this repair, not a trusted restriction on other attackers.
+
+**Cohort.** n16,64,256; seeds19,23; Random(seed+1000n); weight denominator64.
+Random models have n/16 uniformly sampled hazards excluding start0. Hazards are
+absorbing; every other state has two distinct random successors with weights
+16/48,32/32 or48/16. Horizons4 and12, exact retained predictions and a small bias
+of+1/-1 in the two outgoing weights, give24 cases. Preserve every outcome.
+
+Six additional paired families have states1 and2 absorbing safe/hazard endpoints.
+Start0 reaches hazard with probability1/4 or3/4 according to a balanced hidden bit;
+all remaining dynamics are identical across the pair and never return to0.
+Horizon12; four retained modes: exact, root probability erased to1/2, root weights
+complemented, and the known complemented encoding repaired by complementing its
+two root weights again. Twelve worlds times four modes give48 cases; total72
+predictor-recovery cases. These are controlled counterexamples, not a random
+sample of learned environments. Reference world labels/metadata stay outside the
+worker input. Require byte-identical observable inputs across each erased pair.
+
+**Coverage and simulation bound.** Let P be the true transition kernel and Q the
+retained predictor, with the same hazard-absorbing convention. Set
+
+    epsilon(s) = TV(P(s,.), Q(s,.)),
+    d_t = distribution of the true state at time t,
+    nu = (d_0 + ... + d_(H-1))/H.
+
+For start0 and the hazard event, a telescoping hybrid-chain argument gives
+
+    |Pr_P(hazard by H) - Pr_Q(hazard by H)|
+        <= min(1, sum_t E_(d_t) epsilon)
+        = min(1, H E_nu epsilon).
+
+Each hybrid changes one transition; its future event probability lies in[0,1],
+so the change is bounded by the local TV error under the true prefix occupancy.
+If nu<<mu with density bounded by C, this is at most min(1,H C E_mu epsilon).
+This is a finite-chain simulation/change-of-measure argument, not a new general
+simulation lemma. Compute every quantity exactly with rational arithmetic for
+mu uniform on states. A root-erased pair has uniform mean TV1/(4n), but start0
+hazard-probability error1/4. Excluding root0 from mu makes mean error zero while
+nu(root0)=1/H: an explicit support failure. Check the actual occupancy, rather
+than assuming the largest density ratio occurs at the erroneous state.
+
+**Finite observation-repair frontier.** For each erased pair, condition on exactly
+the specified retained input, with hidden bit independent of all other observable
+metadata. No program on that identical input can beat1/2 balanced classification;
+a fair coin achieves minimax error1/2. This is information loss of one world fact,
+not destruction of learning or cognition. A retained parent copy of that one bit
+makes error zero and must be included as an explicit advice control.
+
+Admit k=0,1,4,16,64 independent real-environment root-transition observations.
+Conditional on the hidden bit, their hazard indicators are iid Bernoulli(1/4) or
+Bernoulli(3/4). Other observations contain no information about that bit. Compute
+both exact binomial laws and the overlap error(1/2)*sum_j min(p_k(j),q_k(j)).
+A majority rule, with fair random ties, attains that error in both worlds; verify
+this by exact summation and enumerate all sequences for k<=4. This is an exact
+finite statistical frontier under the stated observation/advice contract, not a
+lower bound for an attacker who can retain the original bit or obtain other
+informative data. The generic procedure takes k observations and a count; charge
+its count width and do not hide fresh data behind a free decoder. No empirical
+sampling or claims about learned-model training times follow from this calculation.
+
+**Qualification.** Independently compare integer-worker values with rational
+backward recursion and forward distribution propagation. Check the occupancy
+bound and density-ratio bound exactly. Reject corrupted risk, normalizer, query
+count and returned-entry count. Verify paired retained-input identity and the
+complement recovery control. All source/config/this entry freeze under
+`artifacts/scc-predictor-recovery-20260920-v1/source/`; remote
+`/home/salvador/scc-research/predictor-recovery-20260920-v1/dev01/`.
+One Charon CPU,300s whole cap/280s worker cap,16MiB output budget. No training,
+GPU job, paid service or monitor. Success would qualify a charged recovery
+adapter and identify coverage/repair-data requirements, not admit a positive SCC
+mechanism or demonstrate the absence of every cheaper replacement algorithm.
+
+<a id="ln-204"></a>
+### LN-204 — 2026-09-20: predictor recovery passes; move encoding repair into the charged worker
+
+**First calibration result.** Charon passed72 predictor-recovery cases, six erased
+pairs and four output/work corruptions in1.808s. The1,499-byte adapter/runner uses
+at most255 predictor calls per case,7,848 across the batch. Exact retained models
+reproduce exact hazard risks; the12 small-bias cases preserve the tested threshold
+judgments, with maximum risk error about0.01679. The12 raw complemented encodings
+reverse all protected threshold answers; the known inverse recovers them.
+Each erased pair has identical retained inputs, risk error1/4 and only half the
+balanced threshold labels correct. The exact iid-observation calculation gives
+50%,75%,84.375%,98.2700%,99.9990% optimal balanced accuracy for k0,1,4,16,64.
+These are exact finite-distribution calculations, not sampled environment runs.
+
+**Accounting issue and follow-up.** The complemented-encoding inverse in dev01
+was applied by the fixture builder before the worker received its input. Its
+correctness was checked, but its code and operations were outside the reported
+adapter byte/call ledger. Preserve dev01 as calibration. In dev02, send the raw
+complemented row to the worker, together with a public encoding-type flag that
+is identical across hidden-bit worlds. Perform the inverse inside the worker,
+charge its source and two weight subtractions/two entry writes per repaired case,
+and audit it independently by exchanging the two original weights. The encoding
+flag identifies the known edit, not the hidden world bit. No true transition row,
+reference risk or protected label is supplied to that decoder.
+
+Repeat the same cohort and exact references, so this is implementation/accounting
+qualification, not an independent scientific sample. Report both raw retained
+mean TV error and effective error after decoding; the simulation bound applies
+to the effective kernel. Add a deliberately corrupted decoder-work counter.
+Same4,096-byte complete repair-source cap,256 calls per case,300s whole/280s worker,
+16MiB output budget, one Charon CPU. Freeze this entry and updated source/config
+under `artifacts/scc-predictor-recovery-20260920-v1/qualification02/source/`;
+remote `/home/salvador/scc-research/predictor-recovery-20260920-v1/dev02/`.
+Dev01's source, outputs and archive remain unchanged. No training or monitoring.
+
+Dev01 archive SHA256:eecb5e6af9d12157c02ececd388b490d02d0fddf32adac555f9583fbe366aa74.
+[Initial receipt](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev01/output/receipt.json).
+
+<a id="ln-205"></a>
+### LN-205 — 2026-09-20: charged encoding repair passes; qualify simulation without state enumeration
+
+**Dev02 complete.** The corrected2,167-byte worker/adapter/decoder passes all72
+cases and five corruptions. It receives the raw complemented rows and performs
+24 charged weight subtractions and24 writes across12 repaired cases. Maximum
+predictor calls remain255; all numerical conclusions match dev01. Whole worker
+wall time is0.0963s; whole qualification1.912s. Dev02 archive SHA256:
+dbe6e34efea2ef0c50aac3bc905b286742745c8342cf470bcb4657aafccd2320.
+[Receipt](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev02/output/receipt.json).
+
+**Concrete improvement.** Enumerating all states is unnecessary for a fixed-policy
+hazard-probability estimate. Sample R independent trajectories of at most H steps
+from the retained predictor, memoizing every queried transition distribution.
+There are at most R*H transition draws and at most R*H distinct predictor calls,
+regardless of the total number of states. The visited-state cache, predictor's own
+cost, state representation and hazard-membership costs remain charged. No ability
+to enumerate a huge implicit state space is assumed by this algorithm. A mutable
+or query-aware predictor would need a different analysis: here each retained
+kernel is fixed, so caching and independent rollout coins are valid.
+
+For estimate p_hat_R and retained-kernel risk p_Q, Hoeffding gives
+
+    Pr(|p_hat_R - p_Q| > eta) <= 2 exp(-2 R eta^2).
+
+Together with LN-203's exact simulation bias beta, true hazard-risk error is at
+most beta+eta except on that sampling-failure event. This is a standard sampling
+bound, not a computational lower bound or a guarantee of threshold classification
+without a sufficient margin. It approximates the retained model: additional
+synthetic rollouts cannot reveal a world bit absent from that model. Real root
+observations in LN-203 are a different information channel.
+
+**Follow-up qualification.** Use the same72 frozen dev02 observable jobs with
+R256 and2,048 and sampler seeds19,23:288 cases,331,776 rollouts. No new empirical
+world sample is claimed. A separate Python `-S` worker samples trajectories and
+returns hit flags, path lengths and operation counts. It receives no true risks,
+reference transitions or hidden-bit labels. The known encoding inverse remains
+inside the worker and is cached/charged once per visited encoded row. Independently
+replay every trajectory with a separate cumulative-weight sampler and swapped-weight
+inverse. Verify every hit, path length, queried-state set, row-entry count and draw
+count. Check the R*H bounds and reject corrupted hits/call/draw counters.
+
+Report errors against both p_Q and true p_P. Use a conservatively rounded-up
+Hoeffding radius for per-case failure probability0.001; preserve and report any
+out-of-interval cases instead of treating a probabilistic exception as proof of
+implementation failure. No simultaneous99.9% batch guarantee is claimed. Require
+each identical-input erased pair with the same sampler seed to yield identical
+outputs, hence exactly one correct protected label across the two worlds.
+
+Source cap4,096 bytes for rollout worker/runner/decoder;300s whole and280s worker,
+16MiB outputs, one Charon CPU. This stores trajectory logs for verification, so
+whole-process memory exceeds the minimal operational accumulator/cache. Freeze
+this entry, source/config and exact dev02 inputs/reference-summary lineage under
+`artifacts/scc-predictor-recovery-sampling-20260920-v1/`; remote matching path under
+`/home/salvador/scc-research/`. No training or monitoring. The result would qualify
+an efficient recovery upper bound, not establish a learned dependency.
+
+<a id="ln-206"></a>
+### LN-206 — 2026-09-20: constructive predictor-to-risk recovery with coverage, sampling and real-data repair separated
+
+**Substantial result.** The measure-theoretic direction now has an executable
+recovery construction and explicit error/work accounting. A surviving one-step
+predictor can support reconstructed fixed-policy hazard assessment, using either
+exact dynamic programming or sampled trajectories. The latter does not enumerate
+the state space. A controlled erased-fact example separates irreversible loss
+relative to a specified retained input from recovery using genuinely new data.
+This is a conditional recovery result and an improved candidate test, not a
+positive destructive SCC mechanism. All CPU work ran on Charon; no training.
+
+**Exact reconstruction and altered encodings.** The final2,167-byte adapter,
+runner and encoding decoder passed72 cases, querying at most255 nonhazard states
+per case and7,848 rows across the batch. Exact retained predictors reproduce true
+risk exactly. In12 small-bias random cases, all threshold decisions remain correct;
+maximum risk-probability error is0.0167853, while the largest occupancy-weighted
+bound is0.186179. The bound need not be tight, and these twelve observed decisions
+are not a distribution-wide guarantee. True and retained risks, local errors,
+occupancy measures and bounds are computed with exact rational/integer arithmetic.
+
+The twelve raw complemented-root models get every protected threshold answer
+wrong, yet retain the information. The known inverse restores all twelve exactly,
+with two weight subtractions and two entry writes per case inside the worker.
+Raw input error and effective post-decoding error are both recorded. Neither a
+failed native answer nor an invertible change of coordinates is information loss.
+Dev01 performed this inverse before worker input; dev02 corrects that accounting
+and preserves dev01 as calibration. Both executions passed; no numerical failure
+or discarded world was concealed by this correction.
+
+**Coverage can hide a genuinely erased fact.** For each paired family, the true
+root hazard probability is1/4 or3/4, and the erased retained predictor says1/2 in
+both worlds. All other retained inputs are identical and independent of the hidden
+bit. Uniform mean one-step TV error is1/(4n), which at n256 is1/1,024, about0.098%.
+Nevertheless, hazard-probability error from the root is1/4, and no estimator based
+only on that identical retained input can beat50% balanced protected-label
+accuracy. A fair coin attains the minimax value. This is a statement about the
+specified input experiment, including independent metadata; it is not a theorem
+about an attacker who secretly retains another copy of the bit.
+
+The mean-TV quantity is a distribution error, not a measured categorical task
+accuracy. Excluding the root from the evaluation measure makes it exactly zero
+without changing the25-point risk error. The trajectory occupancy still places
+mass1/H on the root. Thus support and occupancy weighting matter: ordinary
+average fidelity cannot certify a recovery workload it does not cover. In these
+paired cases the exact occupancy-weighted simulation bound equals the risk error.
+The maximum global density ratio can be looser because it also weights absorbing
+states whose prediction error is zero. We did not assume the root ratio equals
+the maximum ratio over all states.
+
+**Recovery need not scan a huge state space.** The qualified rollout program
+caches only distributions it visits, samples at most R*H transitions and makes
+at most R*H predictor calls, independently of the total number of states. It still
+needs an evaluable hazard predicate, a fixed conditional predictor, independent
+sampling coins and the specified start/policy. This is an upper bound for a concrete
+algorithm, not a restriction preventing an attacker from inspecting weights or
+using a cheaper decoder. State encodings, hazard checks, cache storage and the
+cost of each learned-predictor call are additional. A query-aware, stateful model
+or an optimized/adversarially chosen policy needs its own analysis.
+
+With beta=H E_nu[local TV error], capped at1, the constructive bound is
+
+    Pr(|estimated risk - true risk| > beta + eta)
+        <= 2 exp(-2 R eta^2).
+
+The bias part follows from LN-203's hybrid-chain argument; the sampling part is
+[Hoeffding's bounded-independent-variable inequality](https://www.tandfonline.com/doi/abs/10.1080/01621459.1963.10500830).
+For a context-dependent true threshold margin gamma, misclassification is bounded
+by the mass of contexts where beta+eta>=gamma plus the sampling-failure probability.
+This also requires that the algorithm's full cost fit the admitted repair budget.
+Neither the true error/occupancy certificate nor a margin comes for free from
+average model accuracy. No catastrophic utility-loss theorem follows from this
+conditional sufficient condition for recovery.
+
+**Sampling qualification.** A separate1,911-byte rollout worker/runner/decoder
+passed288 cases using331,776 trajectories and2,121,415 transition draws. Memoization
+reduced total predictor calls to4,296; the maximum in any task was179. Every
+trajectory was replayed independently, including hits, path lengths, queried
+states, decoder work and random draws. Three corruptions were rejected. The
+worker received no true dynamics or protected labels. It still loaded the finite
+retained tables in this implementation; the state-count-independent query bound
+is analytic, not an empirical test on an exponentially large implicit model.
+
+The conservative per-case99.9% Hoeffding radii were0.121843 at R256 and0.043078 at
+R2,048. Maximum observed errors relative to the retained model were0.0546875 and
+0.0278854, respectively; no case exceeded its radius. These are per-case bounds,
+not a simultaneous99.9% statement for the whole batch. On random worlds,45/48
+exact-model and45/48 small-bias cases classify the true threshold correctly.
+The six classification failures remain in the records: small estimation error can
+flip a near-threshold answer without violating its probability-error bound.
+The exact-model pairs and decoded pairs each get48/48 labels correct; raw recoding
+gets0/48, and erased pairs get24/48.
+
+**Synthetic rollouts and new observations are different repair resources.** All24
+same-seed erased-pair checks yield identical rollout outputs across opposite hidden
+bits. More sampling from an identical retained model cannot create missing
+information. This extends beyond the tested sampler: any transcript generated only
+from that input and independent randomness has the same law in the paired worlds.
+This is the relevant filtration/data-processing distinction, not an assertion that
+simulated data never helps computation or learning in general.
+
+Allowing new independent real root-transition observations changes the experiment.
+Their laws are Bernoulli(1/4) and Bernoulli(3/4). The exact optimal balanced/minimax
+classification frontier is:
+
+| Real observations k | Best protected-label accuracy |
+| --- | --- |
+|0|50%|
+|1|75%|
+|4|84.375%|
+|16|98.270016%|
+|64|99.999042%|
+
+For each k, half the overlap of the two binomial count distributions is the exact
+Bayes error. The likelihood ratio is monotone in the count, and majority with fair
+ties attains that error in both worlds, hence also the minimax error. Exact
+summation verifies the equality; all sequences are enumerated for k<=4. The result
+covers algorithms using at most k such informative observations and no additional
+world-specific information. Other permitted advice/channels change the frontier:
+retaining just the original hidden bit gives zero error without new observations.
+
+These are exact finite statistical calculations, not empirical training outcomes.
+The update needs k observation calls and a count taking ceil(log2(k+1)) bits,
+plus control/index storage, runtime and an unbiased tie bit when needed. Obtaining
+or resetting real-environment observations has environment-dependent cost; this
+run did not simulate that acquisition cost or claim a universal wall-time repair.
+The erased object is one world fact, not a lost cognitive algorithm. The intact
+program's predictor, learned procedural structure and ability to learn again were
+not shown to be destroyed. Accordingly, this example cannot satisfy the mechanism
+target merely by having a50% post-erasure protected score.
+
+**Resource and evidence limits.** Final exact-worker wall time was0.0963s and
+peak RSS22,684KiB; whole qualification1.912s. The sampling worker took1.3201s,
+peak RSS21,476KiB; whole qualification3.1053s. Worker CPU intervals exclude imports
+and output serialization; full worker wall includes process launch, input/output
+and computation. Audit/reference work is additional and included in whole-run
+times. Exact input JSON was188,324 bytes. Exact arithmetic at H12 and denominator64
+uses a denominator2^72, so these are variable-width integer operations, not unit
+bit costs. The worker stores batch outputs, and sampling logs every trajectory;
+peak memory is not a minimal operational-space bound.
+
+Archived manifests verify15 dev01 entries,16 dev02 entries and14 sampling entries,
+frozen-source equality and exact sampling-parent lineage. Evidence:
+[exact qualification receipt](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev02/output/receipt.json),
+[exact risks and coverage bounds](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev02/output/summary.json),
+[observation frontier](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev02/output/observation_frontier.json),
+[sampling receipt](artifacts/scc-predictor-recovery-sampling-20260920-v1/retrieved/dev01/output/receipt.json),
+[all sampling outcomes](artifacts/scc-predictor-recovery-sampling-20260920-v1/retrieved/dev01/output/summary.json).
+Sampling archive SHA256:4a36f0bcff04a87552d703e895b179f640dbdd7aceee17b5198ba9fd6fc29a75.
+Source: `experiments/predictor_recovery/`. Earlier archive digests are in LN-204–205.
+
+**Next research gate.** A proposed learned mechanism must be tested against this
+kind of composition of its surviving predictors. Identify the actual retained
+state, whether the predictor exposes a usable conditional distribution, the
+hazard predicate, the true operational query measure and all fresh repair data.
+If those support an affordable simulator with adequate error/margin guarantees,
+removing a risk head has not removed the protected function. If they do not,
+identify the specific missing procedural capability and show that its loss causes
+severe nontrivial useful failure under allowed repair. Do not manufacture the gap
+by banning rollouts, excluding reachable queries or ignoring retained parent advice.
+The primary destructive-cognition mechanism remains open. No training is admitted.
 
 ## Supporting-record index
 

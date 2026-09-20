@@ -1,0 +1,9 @@
+{
+  "trials": [256, 2048],
+  "seeds": [19, 23],
+  "nominal_failure_probability_per_task": 0.001,
+  "max_source_bytes": 4096,
+  "timeout_seconds": 280,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1
+}
