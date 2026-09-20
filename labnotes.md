@@ -13,19 +13,21 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-181](#ln-181)–[LN-183](#ln-183) derive and
-validate an exact finite information-theoretic screen over all stochastic
-encodings for a binary protected judgment. Charon certified37 complete-hiding
-cases and105 selected approximate-tradeoff points, with independent integer
-primal/dual checks. In the main balanced-prior cases, hiding a judgment completely
-leaves42–80% of the specified prediction skill; allowing75% optimal judgment
-accuracy leaves87–99.65%. Explicit fresh-observation repairs also recover the
-judgment in the tested general-population witnesses. This is an admission and
-attack tool, not a learned destructive mechanism. No candidate is admitted for
-training. The remaining gap is a necessary protected computation across broader
-cognitive operations, with severe loss after allowed repair.
+**Latest substantial result:** [LN-184](#ln-184)–[LN-185](#ln-185) extend the
+screen to judgment families. A function-space bound shows when hiding every
+protected judgment necessarily removes useful prediction signal, with no local-
+access restriction. The exact Charon audit also exhibits surviving relational
+information and a stronger family that forces all old-world information to be
+lost. Even that full erasure permits99.91% restored prediction signal and99.69%
+whole-world recovery after64 fresh observations per action in the specified
+finite model. This is conditional information coupling and repair, not destruction
+of learned cognition. No training candidate is admitted. The next requirement
+is an actual indispensable computation whose replacement is expensive under
+explicit repair budgets; increasing judgment count alone does not supply it.
 
-**Recent reusable results:** [LN-178](#ln-178)–[LN-179](#ln-179) derive a
+**Recent reusable results:** [LN-181](#ln-181)–[LN-183](#ln-183) provide exact
+all-encoder binary-judgment tradeoffs and independent flow certificates.
+[LN-178](#ln-178)–[LN-179](#ln-179) derive a
 finite-call planning-to-judgment bound and expose its small-loss erasure escape.
 [LN-176](#ln-176)–[LN-177](#ln-177) give a concrete
 paired-query parity recovery adapter, validated on Charon, and show why retained
@@ -10414,6 +10416,275 @@ should investigate that shared-computation obligation with structural attacks;
 a larger causal-population sweep or another encoder size sweep is not warranted.
 The working mechanism remains open. Notify the user before any admitted training
 run; the present certificates do not admit one.
+
+<a id="ln-184"></a>
+### LN-184 — 2026-09-20: family coverage, surviving relations, and repair — planned screen
+
+**Question.** LN-183 left a family-of-computations obligation. Address the semantic
+part with a general bound, a natural risk-judgment family, and explicit repair.
+This is not another population-size sweep. Determine exactly which useful
+functions must lose predictable signal when *every* individual protected query
+is hidden, which relations can survive, and whether removing all old-world
+information damages the algorithm for learning again. No neural candidate is
+admitted; this is a bounded exact CPU audit on Charon.
+
+**General family bound.** On a finite prior W, let J_1,...,J_m be binary protected
+judgments. Let E include all retained state, code-dependent advice and accessible
+copies. Full hiding means each J_j is independent of E, not merely that a
+particular decoder fails. In the prior-weighted L2 space, decompose a centered
+useful function f as s+r, where s lies in the linear span of centered J_j and r
+is orthogonal to that span. Conditional expectation is an L2 contraction, so
+
+    E[f|E] = E[r|E],
+    Var(E[f|E]) <= E[r^2].
+
+This bounds retained squared-error prediction signal over all stochastic
+encodings and arbitrary readers. Every useful function in the protected span
+loses all of its prior-relative prediction signal. Functions outside it need
+not. It is not necessary for E to be independent of W. For approximate hiding,
+if s=sum c_j(J_j-EJ_j) and
+eta_j=||E[J_j|E]-EJ_j||_2, the triangle inequality gives
+
+    sqrt(Var(E[f|E])) <= sqrt(E[r^2]) + sum_j |c_j| eta_j.
+
+This elementary bound need not be tight. Nonorthogonal/redundant raw judgments
+are allowed, and large coefficients can make the approximate implication weak.
+No inference-time access restriction or linear-encoder assumption appears.
+
+**Specified natural family.** W=(a,b) is uniform on {0,1,2,3}^2, with independent
+fresh-unit harm probabilities p0=a/3 and p1=b/3 for two actions. Initially the
+entire W is available. For each action, judge whether its risk exceeds one of
+{1/6,1/2,5/6}. These six risk-budget judgments are safety proxies, not a full
+ethical/alignment specification. Each p is exactly one third the sum of its
+three threshold labels. Thus hiding all six necessarily removes all prediction
+signal about each action's harm probability. If all six eta_j<=eta, retained
+variance for either probability is at most eta^2. The prior variance is5/36,
+so retained skill is at most min(1,36*eta^2/5). This is a meaningful approximate
+family implication for proper probability estimation, not a cap on binary-label
+accuracy. Skewed labels can reveal information without improving majority-guess
+accuracy; an explicit control will check this distinction.
+
+**Counterexample to promoting that result into all cognition.** Edit W into
+D=(b-a) mod4 and erase the original identity. Given D, each coordinate remains
+uniform on all four levels, so all six individual judgments are perfectly
+hidden. Yet D retains a relation: the two actions have equal risk iff D=0.
+Predicting equal risk is an independently interpretable comparison, and should
+remain exact. A posterior has four possible worlds rather than16. The joint
+six-label vector uniquely specifies W, so hiding every component separately is
+weaker than hiding the whole vector. This is a relational-information example
+with risk semantics, not a claim that this residue is alignment or cognition.
+
+**Stronger family control.** Consider a randomized policy choosing action0 with
+probability1/5 and action1 with probability4/5. Its risk is (a+4b)/15. The15
+midpoint thresholds (k+1/2)/15, k=0,...,14, distinguish all16 worlds. Differences
+of these nested indicator functions plus the constant function span every
+function of W. If all15 labels are individually independent of E, the full
+posterior on W must equal its prior: all old-world information is gone. This
+requires thresholds with margin1/30; increasing a family's expressivity or
+precision is a substantive change, not free evidence of cognitive breadth.
+The six pure-action thresholds plus the constant have rank7, leaving nine
+orthogonal directions; the mixed-policy family plus the constant has rank16.
+A representation can retain many joint relations under the first contract,
+while the second forces complete erasure of this finite *world*. Neither says
+that inference or learning machinery was destroyed.
+
+**Registered execution.** One four-level grid,16 worlds, four encodings: intact,
+invertible recoding, constant erasure, and D. Enumerate every posterior and all21
+risk labels. Useful functions chosen before execution: p0, p1, mixed-policy risk,
+equal-risk indicator, indicator p1>p0, and p0*p1 (both actions harm two different,
+independently sampled units in the same world). Compute exact posterior means,
+Brier signal, all-label-vector MAP accuracy, and the additive-span residual for
+each useful function. Verify all bounds on the two encodings satisfying the
+six-query privacy contract; do not apply a privacy bound to encodings that fail
+its hypothesis. The product concerns distinct units, not same-unit potential
+outcomes or an assumption about their unobserved counterfactual correlation.
+
+**Repair after full erasure.** Install/retain a generic four-hypothesis Bayesian
+updater; give m in {0,1,2,4,8,16,32,64} fresh independent Bernoulli outcomes *per
+action* from the same fixed world. Exactly sum every binomial count, rather than
+sample seeds. Report posterior prediction regret and optimal joint W recovery
+(the same as recovering the whole risk-judgment table). The posterior factorizes
+across actions; joint MAP success is the square of single-action MAP success.
+Also compare the sample-mean updater's exact mean-square error for m>0. Repair
+retains two counts (2*ceil(log2(m+1)) logical bits), the public horizon/action
+schedule and public generic decoder; Python enumeration uses more space. No
+original W, old checkpoint, informative source-specific code or new independent
+model is supplied. This restores knowledge within a retained elementary learner;
+it does not demonstrate learning wholly new concepts or repairing every damaged
+algorithm. A constant/no-update control remains at the prior.
+
+**Additional control.** On four equiprobable worlds with binary labels0,1,1,1,
+retain which of the two pairs {0,1},{2,3} contains the world. Label posteriors
+are1/2 and1. Majority-label accuracy remains3/4, but posterior variance is
+positive. Consequently prior-majority accuracy alone is not full hiding for
+skewed members of a judgment family. Use exact posterior-independence checks.
+
+**Validation/resources.** Separate evaluator and auditor: regenerate posteriors,
+compute exact matrix ranks by rational elimination, check the projection identity
+and conditional-variance bounds, and reconstruct binomial probabilities using
+sequential dynamic updates rather than the evaluator's power/binomial formula.
+Corruption controls must reject changed encodings, thresholds, rank claims,
+posterior metrics, likelihoods, repair results and incomplete case coverage.
+Standard-library Python, one Charon CPU process,300s wall budget,10MiB output
+ceiling, fresh source/output directories, frozen LN-184/config/source/machine
+and checksums. No seeds, training, GMAN, paid allocation or monitoring. Preserve
+any failed run. Return with the whole coverage-and-repair result, not each check.
+
+**Literature scope.** Wang et al., *Privacy with Estimation Guarantees*,
+https://arxiv.org/pdf/1710.00447 (v5), section5 and Theorem5 inspected, develops
+bounds transferring estimation difficulty between correlated functions using
+conditional expectations and function-space structure. Its sharper theorem has
+additional orthogonality conditions. The simple projection/contraction argument
+above is stated independently and does not assume those conditions. The family
+perspective is established information theory; no novelty claim is made for it.
+
+<a id="ln-185"></a>
+### LN-185 — 2026-09-20: broad judgment loss can force prediction collapse and still leave learning intact
+
+**Completed outcome.** The frozen Charon audit passed13 rows: four encodings,
+eight exact repair horizons and the skew-label control. It independently checked
+108 posterior/function combinations, both matrix ranks and ten intentionally
+corrupted inputs/results. Runtime was0.545s; output before manifests was30,601
+bytes. No seeds, approximate optimization, training, GPU work or failed run.
+The useful outcome is a family-level coupling bound, an explicit surviving
+relation and a repair result even after full old-world erasure.
+
+**Positive bounded result.** Hiding every one of the six pure-action risk-budget
+judgments forces retained squared-error prediction signal for p0, p1 and their
+mixture to zero. This follows for *all* stochastic encodings from the span bound
+in LN-184, without one-probe, linear-encoding, architectural or decoder limits.
+The audit checks the finite representation and witnesses; it does not enumerate
+all encodings. Approximate posterior hiding also has a concrete bound: if each
+label's posterior probability changes from its prior by at most eta in L2,
+retained action-risk prediction skill is at most min(1,36*eta^2/5). For example,
+eta=1/20 implies at most9/500=1.8% retained prediction signal. This is a proper-
+probability-estimation condition, not75% classification accuracy or an observed
+neural edit. It is a conditional semantic coupling result with explicit scope.
+
+The information destroyed in this model is knowledge of two fixed Bernoulli
+rates. Zero *prediction signal* means no improvement over the best constant-prior
+probability forecast; it does not mean zero accuracy, refusal, absence of generic
+reasoning, or loss of the ability to acquire new evidence. For this prior, the
+intact outcome Brier risk is1/9 and the prior-only risk is1/4; their difference
+is5/36. The bound concerns that difference, not all cognition.
+
+**What survives simultaneous individual-judgment hiding.** The D=(b-a) mod4
+encoding passes all six exact posterior-independence checks. It retains no
+signal about either marginal risk, but the equality-of-risk comparison remains
+perfect: its prior-relative Brier skill is100%. It also retains9/115=7.83% of the
+signal about both of two distinct units being harmed, despite zero retained
+marginal-risk signal. The projection bound for that product task permits at most
+5/23=21.74%; our witness is not claimed optimal for that task. Its entire-world
+MAP recovery is1/4 versus1/16 with no information. It retains two of the original
+four bits under this uniform prior. Thus “each judgment is hidden” does not mean
+“the joint judgment table is hidden.” This is about information-bearing relations,
+not evidence that the residue alone is a broadly capable agent.
+
+The pure-action family plus a constant has exact rank7 among16 world functions.
+The15 mixed-policy thresholds plus a constant have rank16. Under full hiding of
+every member of the latter family, all indicator functions of W have constant
+posterior expectations, so E is independent of W. That is complete loss of this
+finite world's information, and any deterministic task of that *old world*
+loses its prior-relative predictive advantage. General computation on new inputs
+and acquisition of new observations do not follow the same conclusion. A fine-
+precision threshold family can make a finite information-loss statement very
+strong without making its learning-algorithm claim any stronger.
+
+**Repair of full erasure, with no surviving world-specific hint.** Start from
+the constant encoding, so even the stronger family is hidden and I(W;E)=0.
+Provide independent new outcomes from each action and retain two counts. The
+public four-level hypothesis class and generic updater suffice to reconstruct
+the entire world and therefore both judgment families. The following values
+sum all possible binomial observations exactly under the declared uniform prior:
+
+| Fresh observations per action | Total observations | Restored action-risk prediction skill | Exact whole-world / whole-judgment-table recovery |
+|---|---:|---:|---:|
+|0|0|0%|6.25%|
+|4|8|85.63%|59.54%|
+|8|16|93.84%|79.90%|
+|16|32|97.48%|91.23%|
+|32|64|99.22%|97.32%|
+|64|128|99.91%|99.69%|
+
+These are prior-averaged achievable results, not worst-world percentages or
+zero-error guarantees. Whole-world MAP is optimal for the specified observation
+channel, prior and horizon; it is not an optimal acquisition policy or a lower
+bound on the resources of every possible repair. At64 observations per action,
+the counters require14 logical bits, plus the public schedule, grid and decoding
+program. The frozen Python auditor holds more state and uses rational arithmetic;
+14bits is the streaming statistic, not its measured memory consumption. It is
+not a fixed-original-capacity repair. Acquiring128 world observations is a real
+resource, available in this toy contract and not assumed free in a future
+physical task. These are new measurements of an old latent world, not learning
+a wholly new concept or repairing an arbitrarily damaged reasoning engine.
+The no-update constant predictor stays at zero signal and1/16 joint recovery.
+
+**A prior-independent repair limit for this route.** There is also an elementary
+worst-world upper bound on repair resources, independent of Bayesian inference.
+For a fixed Bernoulli probability p, the fresh sample mean p_hat from m independent
+outcomes satisfies
+
+    E[(p_hat-p)^2] = p(1-p)/m <= 1/(4m).
+
+This holds after any erasure of the old state because the repair may ignore that
+state. If p lies on a known grid with spacing h, round the sample mean to its
+nearest grid point. A wrong result requires |p_hat-p|>=h/2, so Markov's inequality
+applied to the squared error bounds its probability by1/(m*h^2). For d actions,
+a union bound gives at most min(1,d/(m*h^2)) probability of any wrong grid value.
+Here d=2,h=1/3, hence18/m. At m=360 per action this certifies at least95% exact
+whole-world recovery for *every* allowed world, using720 fresh observations and
+18 logical counter bits plus public code. This is a loose analytic sufficient
+bound, not a360-sample measured run or the Bayes curves in the table. It does
+not depend on how many threshold queries are attached to those same rates.
+Stationary independent observations, public grid, usable inputs and an executable
+counter/decoder are essential premises. Restricted access, unavailable data,
+nonstationarity and destruction of computation itself are not covered.
+
+**Metric correction for future family tests.** The skew-label control has
+prior-majority accuracy3/4 both before and after revealing a two-way signal, yet
+its retained posterior variance is1/16 and it preserves1/3 of the label's Brier
+signal. Thus “no classification improvement over baseline” is not equivalent
+to hiding a biased judgment. LN-181's perfect-independence constraints remain
+valid; LN-182's accuracy-cap reduction explicitly required a balanced prior.
+For judgment families, use full posteriors/proper-score quantities or explicitly
+justify the conversion. Do not silently apply the balanced-label equivalence
+to a collection of unequal-prevalence thresholds.
+
+**Evidence.** Source: `experiments/judgment_family/`. Frozen records:
+`artifacts/scc-judgment-family-20260920-v1/`, remote
+`/home/salvador/scc-research/judgment-family-20260920-v1/dev01/`.
+The evaluator computes exact group posteriors, additive residuals and binomial
+likelihoods. The separate auditor reconstructs threshold meanings, computes
+ranks by rational elimination, uses Gram–Schmidt for residuals, checks conditional
+variance by direct squared errors, and propagates count distributions sequentially
+for repair. All results are rational numbers; percentages above are rounded.
+Ten controls reject corrupted encodings, rank, threshold/useful metrics,
+likelihoods, repair accuracy, resource count, skew privacy and case coverage.
+Source/config/plan, machine metadata, stdout/stderr, raw rows, summary, controls,
+receipt and file hashes are retained. Remote/local archive SHA-256 agrees:
+`65069c7e3e9630ab613e52f39375c2395291424aae6bbcbf4cf95b66f4d037db`.
+No training, GMAN, paid allocation or scheduled monitoring was initiated.
+
+**Decision: the information-erasure branch has a clear boundary.** We now have
+a family-wide, access-independent implication and a stronger family that forces
+complete old-world information loss. Both can coexist with functioning generic
+learning and inexpensive recovery in this specified observation model. Increasing
+the number of judgments or their representational rank will not, by itself,
+bridge the gap to destruction of indispensable computation. Do not commission
+more risk-grid scaling or train this as an SCC mechanism.
+
+The next positive construction must name the actual evaluator/update computation
+and show why a semantics-preserving replacement or in-place repair is costly
+under explicit time, memory, data and code budgets. It must provide a reason
+that ordinary useful learning requires this computation, not merely knowledge
+of the protected labels. Before any training proposal, test the constructive
+repair (external counter/interpreter/compiler/replacement updater as appropriate)
+against that budget. Existing cheap Boolean-primitive, shared-updater and parity
+repairs remain evidence against their already-tested constructions; a new cost
+claim must account for them. No new computationally hard shared evaluator is
+identified here, and no general SCC impossibility follows. The mechanism goal
+remains open; the completed result narrows where a positive construction must
+add something beyond information erasure.
 
 ## Supporting-record index
 

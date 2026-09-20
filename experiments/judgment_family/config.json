@@ -1,0 +1,7 @@
+{
+  "levels": 4,
+  "modes": ["intact", "recode", "constant", "difference"],
+  "repair_samples_per_action": [0, 1, 2, 4, 8, 16, 32, 64],
+  "timeout_seconds": 300,
+  "output_limit_bytes": 10485760
+}
