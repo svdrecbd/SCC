@@ -6,6 +6,19 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Hard-learning transfer screened; approximate recovery adapter validated:**
+[LN-176](#ln-176)–[LN-177](#ln-177). For a repeatably callable static parity
+predictor, >75% clean accuracy permits complete hidden-state recovery by paired
+queries at an explicit budget. All12 implementation cases and the independent
+audit pass on Charon, including predictors with every direct bit query wrong.
+Linear retained advice reduces noisy-parity learning to the residual dimension,
+not the original model size. Ordinary LPN hardness does not address arbitrary
+parent-derived advice or turn a hidden key into indispensable aligned cognition.
+The result is a narrow approximate functional-recovery implication and a concrete
+repair adapter; no positive SCC construction, neural training or scale-up follows.
+The next proposal must supply a useful-task-to-protected-judgment reduction with
+independent task meaning and accounted repair resources.
+
 **Conditional relearning bound and distributed-erasure screen completed:**
 [LN-174](#ln-174)–[LN-175](#ln-175). A correct Bayesian mixture's total expected
 excess prediction log-loss is bounded by H(P|E), the missing information given
@@ -9769,6 +9782,236 @@ source, all records, source/output SHA256 manifest and both check logs:
 [archive](artifacts/scc-conditional-relearning-20260919-v1/conditional-relearning-evidence.tar.gz).
 SHA256 `9986c3d2f99e0b3743b8dd0c59c57129ac266aad342d0425d08e85dbc795b351`
 matched on Charon and locally. CPU only; Charon incremental cost is unmetered.
+
+### LN-176 — 2026-09-19: computational-hardness transfer and approximate-function recovery
+
+**Next step and scope before execution.** Audit the proposed use of Learning
+Parity with Noise (LPN) as a computational bottleneck. Separate random-example
+learning from repair with an executable successor, selected queries and retained
+information. Derive the reductions first. Implement only an explicit recovery
+adapter that a future candidate must resist; this is not a new positive noisy-bit
+or parity-scale pilot. CPU validation goes to Charon; no learned model or GPU run.
+
+**Model and first transfer failure.** Standard random-example LPN supplies uniform
+independent a in F2^n and y=<a,s> XOR e, for hidden uniform s and independent
+Bernoulli(eta) noise,0<eta<1/2. A hardness assumption for this game says nothing
+by itself about an editor that has already seen a competent parent. In
+particular, Gaussian elimination on n noiseless parent basis queries recovers s
+(the basis case simply reads s_i). Replacing the parent by that key and a dot
+product retains the protected parity function, and thus is not D_calc removal.
+An unchanged-core always-allow wrapper likewise retains it. These examples do
+not refute a conditional D_calc theorem; they prevent misclassifying syntactic
+edits or gate bypasses as its trigger. If the environment itself permits repeated
+chosen noisy unit-vector queries, majority vote also learns each s_i with
+m >= 2 ln(n/delta)/(1-2eta)^2 independent responses, using nm samples and at most
+delta total failure probability. That access is stronger than random examples.
+It must be counted if present, not assumed absent because the source theorem
+omits it. The adapter below needs queries to the successor, not such an
+external chosen-label oracle.
+
+**Exact conditional-dimension reduction (our derivation).** Suppose the only
+retained secret-dependent advice is Bs=b, where B is a fixed public rank(n-r)
+matrix independent of s. Solve for a particular s0 and a full-column-rank kernel
+basis N. Then s=s0+Nz, and conditional on b, z is uniform in F2^r. Transform each
+random noisy example to
+
+    a' = N^T a,       y' = y XOR <a,s0> = <a',z> XOR e.
+
+Since N has rank r, a' is uniform. Conditional on a', the remaining randomness
+in a is independent of z. Conversely one can lift a uniform a' to a uniformly
+random preimage a and undo the label offset. This gives equivalent sample
+experiments with public polynomial linear-algebra overhead: the residual LPN
+problem has dimension r, not n. For r=1, half the random samples have a'=1 and
+give noisy observations of a single bit, learnable by a counter; a'=0 samples
+contain no secret information. For r=0 there is no residual secret. If B itself
+is selected based on s, its choice can leak extra information; the uniform affine
+posterior argument then needs rechecking. Arbitrary nonlinear advice is not
+covered by this rank formula.
+
+Before new samples, optimal clean uniform-parity accuracy from this linear advice
+is 1/2+2^(-r-1): queries in the row span of B (fraction2^-r) are known, all others
+are balanced over the affine fiber. Noisy-label accuracy is
+1/2+(1-2eta)*2^(-r-1). This is a prediction upper bound under the stated posterior,
+not general cognition loss. Large ambient dimension with one unknown coordinate
+is still a one-dimensional repair problem. Ordinary LPN hardness cannot silently
+be applied with the original n after arbitrary retained advice.
+
+**Constructive recovery from a useful successor (analytic).** Let h:F2^n->{0,1}
+be a fixed, repeatably callable edited predictor with uniform clean parity error
+epsilon<1/4 for a particular s. It may be nonlinear and arbitrarily wrong on the
+error set. For any coordinate i and uniform r, query
+
+    v_i(r) = h(r) XOR h(r XOR e_i).
+
+When both calls are correct, v_i=s_i. Each query is marginally uniform, so the
+union bound gives Pr(v_i=s_i)>=1-2epsilon. Independence between the two calls is
+not needed. Fresh independent r across repetitions makes the votes independent
+for fixed h. Majority over an odd m with
+
+    m >= 2 ln(n/delta)/(1-4epsilon)^2
+
+recovers every bit of s with failure probability at most delta by Hoeffding and
+a union bound. Costs:2nm successor evaluations, O(nm) n-bit input manipulations
+(or O(n^2 m) bit operations with a simple representation), plus output key n bits,
+a working random vector n bits and a vote counter O(log m) bits. The successor's
+own evaluation time/state, random-bit generation and host runtime are additional.
+Once recovered, arbitrary parity requests cost a dot product. This is a
+high-accuracy local correction argument, not a newly discovered code theorem or
+a proof of general program recoverability. The strict threshold matters: for
+n=2, h(a)=a0*a1 agrees75% with both s=00 and s=01 (bit0 convention); unique recovery
+from h alone cannot be guaranteed at that boundary. More general list decoding
+can tolerate lower advantage, but is not this implementation.
+
+If utility predicts independent fresh noisy labels with accuracy u, then
+u=eta+(1-2eta)*(1-epsilon). Hence the sufficient condition is
+u>3/4-eta/2; at eta=1/4 it is u>62.5%, below the intact75% ceiling. This identity
+assumes the predictor has no access to the test noise. A 95%-of-intact threshold
+u=71.25% corresponds to clean error7.5%, comfortably within the correction regime.
+Recovered protected functionality counts as retained/repairable functionality,
+not destructive removal. The contrapositive is narrow: absence of recovery
+within the stated call budget rules out this degree of matched parity utility.
+It does not turn62.5% into a catastrophic-cognition endpoint.
+
+**Primary-source check.** Blum, Kalai and Wasserman, *Noise-Tolerant Learning,
+the Parity Problem, and the Statistical Query Model*, JACM2003,
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/2003-Noise-Tolerant_Learning.pdf,
+introduction and section2 inspected: its noisy-example model chooses input from
+a distribution; the paper supplies an algorithm, not a universal impossibility
+proof. No claim about today's best attack or cryptographic parameter security
+is made. Goldreich's author page https://www.wisdom.weizmann.ac.il/~oded/gl.html
+and Hast2003 https://www.iacr.org/archive/eurocrypt2003/26560195/26560195.pdf,
+section4 Theorem1 and algorithm inspected, establish the broader Hadamard
+list-decoding connection. We use our elementary >75% proof above, not an
+implementation or full independent verification of the general theorem.
+
+**Bounded adapter validation plan.** n in{32,128}, seeds{19,23}, three deterministic
+oracles: exact parity; parity flipped on all vectors of Hamming weight<=1
+(basis-query trap); parity flipped when its first three input bits are zero
+(structured error1/8). The trap's error is(n+1)/2^n<1/8 yet every unit query is
+wrong. All use the conservative epsilon<=1/8 bound and delta=0.001 per recovery.
+There are12 cases. Log every random vector and both answers, recovered key,
+per-coordinate counts and exact call count. The repair function receives only
+an oracle, n, its own randomness and m; it never receives the key or error rule.
+The host retains ground truth for scoring, which is not secure physical erasure.
+An independent bit-list audit checks every response, vote, coverage, seeds,
+resource formula, recovered key and the75% ambiguity example. Mutated responses,
+recovered bits and missing trials must fail. Analytic bounds carry the general
+claim; twelve seeded successes cannot estimate0.001 failure probability. Freeze
+this entry, config, source and machine details in a fresh run. Cap each stage at
+180 seconds. No paid service; Charon marginal charge is unmetered. If this
+validates, the useful output is an explicit repair and corrected assumption
+boundary, not permission to scale a secret-key surrogate into an SCC model.
+
+### LN-177 — 2026-09-19: approximate parity recovery passes; ordinary LPN does not close the SCC gap
+
+**Implementation outcome.** First frozen run qualified in14.327 seconds on Charon;
+a separate transcript and source/output-hash audit passed. All12 cases recovered
+all960 hidden bits using177,792 recovery calls, plus960 direct-basis control calls.
+The auditor independently checked every oracle response using bit lists, every
+random draw, majority result and declared call count. Three altered-record controls
+were rejected; the exact75% non-unique-recovery boundary was verified. No jobs
+remain active. This validates the declared adapter, not an empirical estimate of
+its0.001 failure bound; the uniform guarantee is the analytic argument in LN-176.
+The two public seeds intentionally make synthetic ground truth reproducible;
+these instances are not cryptographic security tests.
+
+| Dimension | Repetitions per coordinate | Recovery calls per case | Exact-oracle direct bits | Basis-trap direct bits | Structured-error direct bits | Recovered bits, each condition and seed |
+|---|---:|---:|---:|---:|---:|---:|
+|32|83|5,312|32/32|0/32|3/32|32/32|
+|128|95|24,320|128/128|0/128|3/128|128/128|
+
+The structured oracle is87.5% accurate on uniform inputs; paired correction
+recovers its exact underlying parity. The basis trap has clean error(n+1)/2^n
+while every direct unit-vector answer is wrong. For n=128, the floating summary's
+`clean_accuracy: 1.0` is rounding: the exact error is129/2^128, not zero. The
+analytic formula and full response audit, not that rounded field, establish its
+behavior. No failed direct reader is reported as lost information.
+
+**Working memory versus evidence logging.** LN-176's small working-memory bound
+is for the mathematical streaming majority algorithm. This auditable prototype
+retains all query pairs in its trace; its logging occupies O(n^2 m) bits plus
+Python object overhead and is included in the recorded run. It is not a measured
+minimal-memory implementation. Evidence callbacks receive logged answers, not
+control over the predictor. The adapter is a fixed-function, repeatable-call
+construction; mutable stateful predictors, query-recognizing adversaries across
+calls, a restricted input interface or a tighter allowed call budget require a
+new analysis. Host-side synthetic scoring has the key; the recovery function
+only receives the callable oracle, dimension, repetition count and its randomness.
+This is no physical erasure or remote isolation demonstration.
+
+**What the analytic result does establish.** For any fixed deterministic successor
+h, regardless of representation or nonlinear implementation, clean uniform parity
+accuracy>75% implies recovery of the complete key at the explicit query budget.
+No new labeled examples or parent checkpoint are needed. At independent test
+noise1/4, the sufficient useful noisy-label threshold is>62.5%. Thus in this
+particular task family high useful competence and nonrecoverability of the
+protected parity computation cannot coexist under the stated repair resources.
+This is a real approximate functional-recovery implication; it survives multiple
+reads and arbitrary static readout changes. It is not the old one-probe storage
+claim. Constants deteriorate as accuracy approaches the boundary, and the
+statement says nothing about all cognition or whether the recovered function is
+used to govern behavior. Stronger Hadamard list-decoding results are literature
+context, not implemented or needed for this conclusion.
+
+**Why the proposed hard-learning mechanism is not admitted.** The assumption
+transfer has four distinct missing links:
+
+1. **The starting state matters.** An LPN learner begins with noisy random examples.
+   An editor begins with a capable parent and may keep derived advice or a useful
+   predictor. A reduction has to simulate that state without already knowing the
+   hard secret; invoking ordinary LPN while handing over arbitrary secret-derived
+   information leaves this simulation obligation unproved.
+2. **The residual dimension matters.** For fixed public linear advice Bs,
+   LN-176 reduces the experiment exactly to dimension n-rank(B). A huge parent
+   with one unknown degree of freedom does not inherit huge-dimension hardness.
+   This does not prove all nonlinear advice harmless or all residual dimensions
+   easy; it prevents using n as a security parameter without auditing the advice.
+3. **The access model matters.** Successor queries support the paired recovery
+   adapter. An external chosen-label oracle, if additionally available, supports
+   direct noisy basis learning. These are distinct resources, and neither may be
+   silently replaced by the random-example-only learning game. Conversely we do
+   not assume a chosen-label service exists when it does not.
+4. **The semantic task still matters.** Turning a policy's serialized bits into the
+   secret and making useful tasks compute their parities merely installs an
+   auxiliary policy-reconstruction task. The recovery theorem still holds for
+   any bitstring, but uniform-secret LPN hardness need not apply to structured
+   policy code. Neither fact makes that auxiliary task indispensable cognition.
+   An always-allow output change with the parity core intact remains a use bypass,
+   not evidence of destructive protected-function removal.
+
+Hard learning after *stipulated full erasure* is therefore a conditional recovery
+barrier, not a reason that removing alignment must cause that erasure. Failed
+recovery against one learner would not supply the missing quantifier either.
+The current LPN proposal fails admission as a positive mechanism without a larger
+training or cryptographic-parameter experiment.
+
+**Decision and concrete next direction.** Keep the paired-query adapter as a
+mandatory repair for any proposed parity-based coupling. Stop treating bare LPN
+hardness or a larger hidden key as the next mechanism. The remaining constructive
+obligation is now two explicit reductions on an independently motivated useful
+learning/computation task: (i) useful competence must make the actual protected
+judgment recoverable within an accounted budget; (ii) a claimed loss of that
+judgment must therefore remove that useful competence even after allowed repair.
+The protected judgment must be specified independently of an arbitrary random
+key or added parity benchmark, and the lost ability must support the stated
+cognitive endpoint. No candidate meeting those obligations has been produced in
+this wave. LN-176 is a bounded example of the first reduction, not a completion
+of the target. A future proposal should supply the task-to-judgment mapping before
+more training; no automatic next sweep is scheduled.
+
+**Evidence.** Source:
+[experiments/parity_recovery_adapter](experiments/parity_recovery_adapter/).
+Remote frozen run:
+`/home/salvador/scc-research/parity-recovery-adapter-20260919-v1/dev01/`.
+[Summary](artifacts/scc-parity-recovery-adapter-20260919-v1/summary.json),
+[audit](artifacts/scc-parity-recovery-adapter-20260919-v1/audit.stdout),
+[machine](artifacts/scc-parity-recovery-adapter-20260919-v1/machine.json),
+[receipt](artifacts/scc-parity-recovery-adapter-20260919-v1/receipt.json).
+[Archive](artifacts/scc-parity-recovery-adapter-20260919-v1/parity-recovery-evidence.tar.gz)
+contains frozen source/config/LN-176, every pair-query transcript, manifests and
+both check logs. SHA256
+`be8eb25610176a5cf2164074d04c6cf432753d48201885db9f67d22f26914afb`
+matched remotely and locally. CPU only, no GMAN use, unmetered Charon marginal cost.
 
 ## Supporting-record index
 

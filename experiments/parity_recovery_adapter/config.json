@@ -1,0 +1,9 @@
+{
+  "dimensions": [32, 128],
+  "seeds": [19, 23],
+  "conditions": ["exact", "basis_trap", "structured_eighth"],
+  "error_bound": 0.125,
+  "failure_bound": 0.001,
+  "stage_timeout_seconds": 180,
+  "classification": "repair adapter implementation validation, no hardness experiment"
+}
