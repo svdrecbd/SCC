@@ -1,0 +1,9 @@
+{
+  "seeds": [19, 23],
+  "exhaustive_sizes": [4, 6],
+  "meter_sizes": [32, 64, 128],
+  "support_bits": [0, 1, 2, 4],
+  "retry_counts": [1, 8, 32, 64, 128],
+  "timeout_seconds": 300,
+  "output_limit_bytes": 2000000
+}

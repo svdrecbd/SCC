@@ -13,18 +13,20 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-186](#ln-186)–[LN-187](#ln-187) test replacement
-of a shared probabilistic-inference computation. Charon validated48 cases and
-1,608 exact queries. A small generic algorithm repairs64-variable sparse models
-cheaply, restoring both useful forecasts and the protected joint-risk calculation.
-Three useful forecasts reconstruct that protected calculation, with explicit
-error, query-coverage and repair-cost bounds. This repair preserves functional
-coupling; it is not successful protected-function removal. Neither replacement
-hardness nor catastrophic cognition loss is established. No training is admitted;
-the unresolved requirement is severe, broad loss while protection remains
-functionally absent after allowed repair.
+**Latest substantial result:** [LN-188](#ln-188)–[LN-189](#ln-189) validate
+verified randomized recovery on Charon:22 cases and34,816 exhaustive target/mask
+checks. Weak exact useful competence can reconstruct the protected judgment
+reliably, but zero exact success can coexist with99.22% coordinate accuracy and
+cheap complete repair. The approximate-error extension exposes the cost of
+turning this into a severe loss bound. Public linear algebra restores both
+functions; no genuine removal event or learned SCC mechanism is established.
+No training is admitted. The next lead is efficient correction of approximate
+useful outputs with verification, subject to the unresolved trigger and task
+coverage requirements.
 
-**Recent reusable results:** [LN-184](#ln-184)–[LN-185](#ln-185) give a
+**Recent reusable results:** [LN-186](#ln-186)–[LN-187](#ln-187) establish
+three-forecast protected-risk recovery and cheap sparse-inference replacement.
+[LN-184](#ln-184)–[LN-185](#ln-185) give a
 judgment-family span bound and repair after complete old-world erasure.
 [LN-181](#ln-181)–[LN-183](#ln-183) provide exact
 all-encoder binary-judgment tradeoffs and independent flow certificates.
@@ -10954,6 +10956,220 @@ decision is a different outcome. Simply increasing state count, graph density,
 code size or replacement runtime will not establish those obligations. A working
 learned SCC mechanism is still open; this wave establishes neither one nor a
 proof that none can exist.
+
+<a id="ln-188"></a>
+### LN-188 — 2026-09-20: planned verification-amplified recovery and severity controls
+
+**Question and contract.** Can randomized equivalent queries amplify weak useful
+competence into reliable recovery of a protected computation, without the small
+threshold margins in LN-187? Study an invertible public binary linear system
+A x=b, with useful output the complete solution and a synthetic forbidden-state
+judgment J_A(b)=x_0. This is a constrained state-prediction/planning analogue,
+not learned alignment. The mathematical trigger is functional loss of J under
+all admitted repairs. The experiment instead supplies controlled damaged
+solvers; it must not call those edits genuine D_calc while public A permits
+reconstruction. Solver code, representations and action heads are editable.
+No protected verifier, private query channel or trusted architecture is assumed.
+
+For each fixed A, let a stationary solver return the exact solution on a fraction
+delta_A of uniform right-hand sides. On target b, choose uniform fresh r, ask
+for x' on b'=b XOR A r, verify A x'=b', and return x' XOR r if valid. Since A is
+invertible, each shifted query is uniform, independent across trials. Verification
+has no false positives. After K trials and an independent fair fallback judgment,
+protected accuracy is exactly 1-(1-delta_A)^K/2 on every target. Thus a cap
+1/2+eta on *all admitted recoverers*, including this one, implies
+
+    delta_A <= 1-(1-2 eta)^(1/K).
+
+This is a per-matrix exact-solution implication. A global average over matrices
+cannot be substituted for delta_A. Stateless deterministic solvers suffice;
+stateful solvers need a conditional-success assumption on every history or a
+charged reset. A model can retain almost every solution coordinate yet fail all
+exact-output tests. A second repair enumerating the n+1 words within Hamming
+distance one will test whether such apparent collapse is cheaply reversible.
+Direct Gaussian elimination on public inputs is the competing replacement;
+its work and input storage must be charged. It may make the removal premise
+unattainable in this toy. Restoration of both functions is restoration, not an
+escape with J still absent. An always-permit action head is separately D_use.
+
+**Bounded qualification.** Run `experiments/verified_recovery/` on Charon only,
+one process, 300s wall cap, 2MB output cap, seeds19/23. For n=4,6 exhaust every
+b and r for success fractions 1,1/2,1/4,1/16. Verify bijective remapping,
+accepted-solution correctness and target-independent one-trial success. Evaluate
+K=1,8,32,64,128 by the exact independent-trial formula; these are analytic
+probabilities, not empirical repeated-episode estimates. Independently check
+with scalar bit arithmetic and enumerated inverses. At n=32,64,128, measure
+single-query direct replacement and verified one-coordinate repair. The oracle's
+reference inverse/row operations generate artificial errors and are not available
+to the recovery adapter; oracle execution is not free and is logged separately.
+This is implementation validation, not trained-model evidence.
+
+Controls: correct/partial/zero solver, malformed output rejection, varying
+one-bit corruption with high coordinate accuracy, radius-one correction,
+per-matrix success concentration, independent matrix/solution checks and deliberate
+record corruptions. Counts are packed-row operations, not constant-cost bit work;
+state matrix size, oracle calls, parity checks and word widths. Freeze this entry,
+source, config and machine; preserve failures. No neural/GPU job or monitoring.
+Pass only if all exact identities, independent references and negative controls
+agree. A positive SCC claim additionally needs a real protected-removal event,
+severe useful loss after repair, and learned alignment; this audit cannot qualify
+those gates. Related general idea: random self-reduction/self-correction, not a
+novel claim about linear algebra. The linear reduction here is proved directly.
+
+<a id="ln-189"></a>
+### LN-189 — 2026-09-20: verified retries amplify recovery; exact collapse remains a weak endpoint
+
+**Completed qualification.** Charon passed22 cases:16 exhaustive small-system
+cases and6 metered32/64/128-variable cases, with34,816 target/mask combinations
+and nine rejected record corruptions. The qualification took1.630s and produced
+35,219bytes before receipt/manifests. No neural training, GPU allocation or
+monitoring was started. These are deterministic implementation and finite-identity
+checks, not measurements of learned capability, learned alignment or D_calc.
+
+**The recovery bound is substantially stronger on its stated endpoint.** For
+public invertible A over F2, a full-solution solver g with success fraction delta_A
+on uniform b can be queried on b XOR A r. Its answer is verified by multiplying
+by A; a valid answer, XOR r, is the exact solution to the original command.
+The checker does not call an inverse, know the original answer or contain a
+protected judgment. Invertibility makes the shifted input exactly uniform, and
+fresh independent masks make success events independent for a fixed deterministic
+stateless g. After K calls, a fair fallback bit on total failure gives
+
+    protected accuracy = 1 - (1-delta_A)^K/2.
+
+The adapter returns the entire solution upon success; taking its first coordinate
+recovers the specified forbidden-state judgment. The probability statement holds
+for every fixed target b over the adapter randomness. A cap on all admitted
+recoverers is evaluated over the declared target population, e.g. uniform b for
+a fixed A. It is not a cap separately against every possible hard-coded answer
+to one fixed target. The recovered function may exist in an alternative algorithm
+without a native protected head; that is functional restoration under our target.
+
+Consequently, if every admitted protected recoverer is capped at55% accuracy
+and64 such trials fit the repair budget, exact useful success must be at most
+0.1644904%. Conversely,6.25% exact useful success permits99.1962% protected
+accuracy after64 trials. Even1% permits73.7202%. These retry probabilities are
+analytic calculations from the proved independent-trial identity. The small
+cases enumerate every one-trial input and verify that identity; the experiment
+does not sample64-trial neural recovery episodes. Decimal summaries can round
+extremely small failure probabilities to zero; exact rational values for the
+finite support fractions are preserved in the raw records.
+
+**Coverage and interface assumptions matter.** Delta_A is per fixed matrix.
+A solver perfect for one of two equally likely matrices and always failing on
+the other has50% global exact accuracy. The retry adapter gives100% protected
+accuracy on the first and50% on the second, averaging75%, however many retries
+it takes. Plugging global delta=1/2 into the fixed-matrix formula would wrongly
+promise almost100%. This is an analytic concentration control checked by the
+auditor, not a new learned-model experiment. Stateful adaptive solvers require
+a per-history success condition or a charged reset; the present qualification
+establishes neither. All edits and replacement algorithms remain in scope; the
+verifier is available public code, not an imposed trusted boundary.
+
+**The exactness trap survives.** The control oracle flips exactly one solution
+coordinate, chosen from the requested command. It therefore has zero exact
+solution accuracy for every command but coordinate accuracy(n-1)/n: at128
+coordinates,127/128=99.21875%. Its output still contains nearly the whole solution;
+the native protected bit can also remain correct on many commands. This is
+not protected-function removal or information erasure. Plain verification rejects
+the corrupted answer. Enumerating the answer and all n one-coordinate flips,
+then checking each candidate, recovers the complete solution and judgment.
+
+All six metered examples recovered with one oracle call. The two128-variable
+cases used45 and105 candidate checks, respectively, versus a worst-case129
+checks; the adapter's row-parity counts were5,888 and13,568, including the
+mask transformation. These are six fixed target/mask validations, not an exhaustive
+128-bit sweep. The correctness of the radius-one repair for every one-bit error
+is the elementary fact that the true solution is in the enumerated ball and is
+uniquely accepted. The oracle uses a retained synthetic reference description
+of1,536 elementary row operations at128 variables, which is charged as1,536
+reference updates per call. Encoding each operation as two7-bit indices would
+require21,504 logical bits, excluding container/runtime overhead. That description
+generates controlled errors; the recovery adapter is never supplied it or a
+precomputed inverse. The current radius-one adapter eagerly constructs n+1
+candidate words, requiring n(n+1) logical candidate bits plus object overhead;
+it is not a constant-workspace implementation. A streaming implementation could
+reduce that scratch, but was not run here.
+
+**Approximate severity versus this repair's cost.** An analytic extension makes
+the remaining gap explicit. For valid n-bit native outputs, let X be their
+Hamming error count on a uniform command and e=E[X]/n. A radius-h verifier search
+succeeds exactly when X<=h. For0<=h<n, Markov's inequality gives
+
+    delta_h = Pr(X<=h) >= 1 - n e/(h+1).
+
+Apply the retry argument to this local candidate search. If every admitted
+recoverer is capped at1/2+eta and K trials of this search are affordable, write
+q=1-(1-2eta)^(1/K). Then
+
+    e >= (h+1)(1-q)/n.
+
+This is a necessary error floor under that removal premise, not an achievable
+frontier. Radius-one repair at n=128 yields only the floor(1-q)/64, roughly
+1.56% coordinate error for eta=.05,K64. A severe floor near50% needs h near
+n/2 in this bound. Naively enumerating that ball requires
+sum_{i=0}^h binom(n,i) candidate checks per trial, exponentially many for a fixed
+positive fractional radius below one half and already roughly half the cube
+near one half. This is the cost of this enumeration algorithm, not a lower bound
+on all repairs. The general-h calculation is an analytic extension; only h=0
+and h=1 adapters were implemented. It explains precisely why an impressive
+exact-output collapse number does not yet give affordable recovery from broad
+approximate competence or prove broad cognitive loss.
+
+**Public replacement is still easy.** Direct Gaussian elimination restores both
+functions without calling the damaged oracle. At128 variables, the two cases
+used8,122/8,151 packed augmented-row XORs,16,384 elimination tests and249/234
+pivot tests, on129-bit rows. Each public matrix has16,384 logical bits. The
+implementation recomputes elimination per command; no cached factorization or
+inverse is supplied. Counts omit Python object overhead, indexing and allocation;
+row operations/parities are not constant-cost bit operations. Exact returned
+solutions are checked with independent scalar arithmetic. Adapter meters are
+checked exactly; elimination counters are instrumented with sanity bounds,
+not independently replayed operation for operation. The2,184-byte repair source
+excludes Python/runtime, data, drivers and the synthetic oracle. It is not a
+minimal executable size or a computational-hardness result.
+
+Thus the toy still lacks a genuine functional-removal event after admitted
+repair: public inputs and a small replacement restore J. The reduction gives
+a conditional dependency, not an observed attack causing the required loss.
+An always-permit action head could ignore a recovered judgment; that is D_use,
+not evidence the judgment has been destroyed. Restoring both functions does
+not refute their conditional coupling, but it does refute treating this example
+as demonstrated irreversible damage or expensive replacement.
+
+**Evidence and controls.** Small inverse tables use independent scalar matrix
+multiplication; fixtures come from invertible elementary row operations. The
+repair is checked against independent reverse-operation answers and forward
+multiplication. All target/mask mappings in the small cases are bijective.
+Malformed/out-of-range and wrong candidates are rejected. The nine audit
+corruptions change case coverage, matrix invertibility, success counts, the
+amplification formula, oracle counts, repaired output, coordinate accuracy,
+repair cost or matrix-averaged coverage. None was accepted. There were no failed
+runs discarded. The general related technique is random self-reduction and
+self-correction; see the introduction of [Erata et al., ICCAD2024](https://www.cs.yale.edu/homes/antonopoulos-timos/ICCAD-2024.pdf).
+That work concerns cryptographic implementation fault defenses; it is not evidence
+of SCC, and our simple linear-system reduction is proved directly above.
+
+Tracked source: `experiments/verified_recovery/`. Artifact root:
+`artifacts/scc-verified-recovery-20260920-v1/`; retrieved run under `retrieved/`.
+Remote original: `/home/salvador/scc-research/verified-recovery-20260920-v1/dev01/`.
+Frozen plan/source/config, machine, records, summary, controls and receipts are
+preserved. All19 manifest entries verified locally, including six harmless
+filesystem metadata sidecars; tracked source equals the frozen executed source.
+Remote/local archive SHA-256:
+`a62915037d5a487aa2f4604e1ec7e8e2b74a50f2c0757ee54d4e6d3ef7fb7a4f`.
+
+**Decision and next gate.** Keep verified equivalent-query recovery as a new
+attack/recovery test. Do not train or scale this linear-system toy as SCC.
+The concrete next theoretical lead is efficient correction/list decoding of
+approximate useful outputs followed by independent verification, to avoid paying
+for an exponential Hamming ball while transferring a substantial error metric.
+An applicable candidate must also specify an independently meaningful protected
+computation, a real removal intervention, repair resources and useful task
+coverage. Error correction alone does not supply those; public linear algebra
+already repairs this toy. The severity and trigger obligations remain open.
+The progress is a stronger recovery tool and a quantified obstruction to its
+interpretation, not evidence that a working learned mechanism is near.
 
 ## Supporting-record index
 
