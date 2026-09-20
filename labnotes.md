@@ -6,6 +6,19 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Conditional relearning bound and distributed-erasure screen completed:**
+[LN-174](#ln-174)–[LN-175](#ln-175). A correct Bayesian mixture's total expected
+excess prediction log-loss is bounded by H(P|E), the missing information given
+all retained state. This is an analytic conditional version of a standard
+prediction bound; efficient inference is a separate requirement. All29,638 finite
+posterior records and the independent audit pass on Charon. Even complete
+four-bit prior erasure permits a four-counter repair: after40 noisy observations,
+protected accuracy is95.1073% and fresh prediction72.5536% against intact75%.
+This rejects lasting learning failure for the tested source-erasure family.
+The next construction needs a concrete protected computation whose removal makes
+inference unaffordable within a justified repair budget. No positive SCC mechanism,
+neural result, computational lower bound or scaling run has been established.
+
 **Learned-prior candidate fails a fresh-task identifiability test:**
 [LN-172](#ln-172)–[LN-173](#ln-173). Retaining relative labels while erasing their
 orientation preserves100% one-example adaptation on new tasks, although every
@@ -9548,6 +9561,214 @@ the declared machine state; it is not a physical secure-erasure demonstration.
 All execution/archive preparation ran on Charon CPU. No GPU, training, polling
 service or active job remains. The resource comparison counts prior/current-task
 payloads, with fixed code, control and runtime costs additional.
+
+### LN-174 — 2026-09-19: conditional relearning bound and distributed-erasure screen
+
+**Purpose and decision before execution.** Following LN-173, test whether replacing
+one erased orientation by several missing prior bits creates lasting inability to
+learn. First derive the conditional prediction bound; then validate a concrete
+in-place repair on Charon. This is a synthetic prior-loss screen, not a positive
+alignment construction. No neural training, GPU job, or scale-up is authorized by
+this result. The next bottleneck must concern the cost of inference or the
+availability of informative observations, rather than source entropy alone.
+
+**General conditional bound (analytic).** Let P be a finite protected/source state,
+E all retained information available to a successor, and X_1:T the observed useful
+stream. Conditional on E=e, the true state has known prior w_e(p)>0 on its support.
+The true conditional stream laws mu_p(.|e) are in a known family. A successor can
+use Q_e(x_1:T)=sum_p w_e(p) mu_p(x_1:T|e), predicting sequentially before observing
+each outcome. Side information, task supports and prompts must be included in the
+conditioning/transcript with their correct law; no hidden teacher is provided.
+For the simple statement here the query schedule is fixed and public. The
+comparator observes P and the same past data, not future noise. All logs below
+are base2.
+
+For every positive-probability (p,e,x), Q_e(x)>=w_e(p)mu_p(x|e), hence the realized
+cumulative log-loss difference is at most -log2 w_e(p). It can be negative on an
+individual path. Averaging under the specified joint law and using the chain rule:
+
+    E[sum_t log2(mu_P(X_t|E,X_<t) / Q(X_t|E,X_<t))]
+      = I(P; X_1:T | E)
+      = H(P|E) - H(P|E,X_1:T)
+      <= H(P|E).
+
+Equivalently the left side is the sum of expected conditional KL divergences.
+A finite entropy budget therefore cannot by itself force a constant positive
+expected excess log-loss forever. This does NOT bound the wall-clock duration of
+recovery, guarantee exact reconstruction, or identify log-loss with cognition.
+For binary outcomes Pinsker gives sum_t E[(mu_t(1)-Q_t(1))^2]
+<= (ln2/2) H(P|E). This bounds expected cumulative squared probability error,
+not a per-run deadline or catastrophic-collapse probability. Prediction can
+converge even when equivalent latent states remain permanently unidentifiable.
+
+**Literature check and novelty scope.** Hutter, *Convergence and Loss Bounds for
+Bayesian Sequence Prediction*, https://arxiv.org/pdf/cs/0301014, section3 eq.(8)
+and its preceding mixture definition were inspected. The source establishes the
+standard mixture relative-entropy budget from the true component's prior weight.
+The conditional-entropy identity above is our direct chain-rule specialization to
+the retained-state question, not a newly discovered general prediction theorem.
+We do not rely on the paper's sharper general-loss constants. The practical issue
+is that exact mixture inference may be expensive or unavailable: a small entropy
+is not a small hypothesis-support size, nor an efficient inference algorithm.
+
+**Concrete candidate and editable state.** P is a uniform four-bit table,
+provisioned directly; it is not a trained alignment model. Fresh observations are
+Y_t=<a_t,P> XOR N_t, independent N_t~Bernoulli(1/4). Useful performance predicts
+fresh Y before it is observed. The intact ceiling is75%, not100%. Protected
+performance estimates original P coordinates. Edit the retained representation to
+one of: intact P; its first two coordinates; its relative coordinates P XOR P_0;
+or no P information. Conditional entropies are0,2,1,4 bits respectively. Full
+erasure is actual initial source-information loss in this mathematical model,
+but not proof of physical deletion or removal of a learned alignment computation.
+Recovery that restores the protected function counts as repair, not a successful
+protection-removal attack.
+
+**Implementation and controls.** Two fixed eight-query schedules: repeated
+coordinate queries [1,2,4,8,1,2,4,8], and mixed parity queries
+[3,5,9,7,11,13,14,15]. Sequential implementation retains only hypothesis weights,
+updates with integer likelihood factors1 or3, and never receives the true P.
+Independent audit reconstructs all world probabilities from full histories,
+checks every posterior/prediction, the conditional-entropy identity, sequential
+log-loss increments, probability normalization and bounds. Every retained value
+and binary observation history through length8 is included; no seeds or search.
+Expected coverage29,638 posterior records and72 aggregated horizon rows. This is
+an exact finite distribution check; entropy/log-loss use floating arithmetic with
+1e-10 tolerance. A separate binomial sufficient-statistic calculation covers
+0..10 observations per coordinate (0..40 total) for full erasure; its first three
+points must agree with the enumerated histories. Compare repaired regret with
+the frozen chance predictor, whose regret grows as T*(1-h2(1/4)). No stochastic encoding or arbitrary program search is implied.
+
+Compare the generic16-hypothesis implementation with a direct count repair where
+it applies: fully erased/prefix/intact coordinate channels use per-coordinate
+signed counts; relative encodings use one orientation count on odd-parity queries
+for either channel. All posterior probabilities must match exactly. The mixed
+channel with full erasure is evaluated by the joint mixture; we claim no efficient
+large-n solution from a four-bit enumeration. No post-edit memory reduction is
+imposed. Generic inference stores up to16 growing integer weights; the factorized
+repair needs up to four signed counts, each O(log(T+1)) bits, plus retained state
+and code. Integer arithmetic and predictive-probability evaluation costs must not
+be called constant-bit computation.
+
+**Gates and budget.** Qualification requires exact posterior and coverage checks,
+independent identities, cheap-repair agreement and rejection of altered weights,
+predictions, retained IDs, missing/duplicate records and corrupted summary output.
+Scientific gate: does this candidate actually make learning unavailable after
+state deletion within the explicit repair? A surviving repair rejects that
+claim for this family; it does not reject all SCC mechanisms. Run one bounded
+CPU validation on Charon,180 seconds per stage,600 seconds outer cap. Freeze this
+entry, configuration, source and machine record in a fresh artifact directory;
+preserve failures. No Bend compiler change: the present work is a probabilistic
+repair calculation, and the existing finite Bend qualification does not certify
+this theorem. No paid GPU service; marginal Charon charge is not metered here.
+
+### LN-175 — 2026-09-19: conditional regret bound validates; distributed erasure remains repairable
+
+**Result.** The first frozen run passed on Charon in6.384 seconds, followed by a
+separate full record/source-hash audit. All29,638 exact posterior records,
+72 horizon aggregates,18,907 applicable sufficient-statistic repair comparisons,
+and seven corruption controls passed. Eleven binomial count calculations cover
+0..40 total coordinate observations; points0,4,8 agree with the full enumeration.
+No failed run, GPU job, neural training, Bend change, or active job remains.
+These are finite probabilistic implementation checks, not29,638 independent
+learned-model experiments. The all-horizon bound is established by LN-174's
+analytic derivation, not extrapolation from the finite run.
+
+**What changed relative to the last candidate.** LN-173 removed an orientation
+that the uniform useful-task law could never identify. Here useful observations
+can identify the protected table: coordinate noise is independent with known
+error1/4. Full erasure removes all four table bits initially, so this example
+cannot attribute continuing learning to three retained relative-label bits.
+Nevertheless a repair using one signed observation count per coordinate learns
+again. Restoring the protected function is explicitly repair. This tests newly
+arriving evidence about a fixed latent table; it does not demonstrate learning a
+broad range of independently generated new concepts or learned alignment.
+
+| Retained information / channel | H(P|E) | Protected coordinate accuracy after8 observations | Next scheduled noisy-outcome accuracy | Expected cumulative excess log-loss, bits |
+|---|---:|---:|---:|---:|
+| Intact / either |0|100%|75%|0|
+| First2 coordinates / coordinates |2|87.5%|75%|0.6637555080|
+| Relative coordinates / coordinates |1|92.9443%|71.4722%|0.7710929068|
+| Nothing / coordinates |4|75%|62.5%|1.3275110160|
+| First2 coordinates / mixed parities |2|90.7227%|75%|1.0470908631|
+| Relative coordinates / mixed parities |1|84.375%|75%|0.5387856040|
+| Nothing / mixed parities |4|67.6392%|62.9395%|1.4611248438|
+
+“Next” means the specific next public scheduled query, not an average over all
+queries: at t=8 the coordinate schedule asks coordinate0 and the mixed schedule
+asks parity mask3. That explains75% for the first2-coordinate representation and
+for the relative representation on the even-parity mixed query. Protected
+accuracy averages all four original coordinates. The table does not establish
+that the mixed channel is intrinsically harder than coordinate queries.
+
+After ten observations per coordinate (40 total), full-erasure count repair has
+protected accuracy124659/131072=95.1072693% and fresh noisy prediction72.5536346%,
+against intact75%. Its cumulative expected excess log-loss is3.3471776935 bits,
+below the four-bit information budget. Freezing the erased reader at probability
+1/2 instead gives7.5488750216 bits of excess log-loss at40 observations and50%
+accuracy. A fixed broken reader therefore overstates the damage even when the
+entire old prior, not only an orientation, was erased.
+
+**Resource account and remaining opening.** This cheap repair uses four signed
+counts plus code and retained metadata. At ten observations per coordinate, the
+logical signed range[-10,10] fits five bits per count (20 total); Python objects
+cost more. It is not a four-bit-storage successor. Generic joint repair in the
+mixed channel keeps16 integer likelihood weights, and the implemented exact
+probability normalization uses growing integers. No capacity limit, precise
+latency guarantee or neural efficiency follows. For n unknown bits the generic
+version has2^n candidates; finite entropy does not make that computation cheap.
+Conversely entropy k does not even imply only2^k candidates unless additional
+support/prior structure is specified. Coordinate factorization is what makes
+this particular repair efficient. Increasing its n simply supplies more counters;
+that is not a new SCC mechanism.
+
+**Sharper screening consequence (analytic, not an extra empirical claim).**
+Write p_t for the informed binary predictive probability and q_t for the mixture.
+For binary classification, an excess conditional error of at least delta requires
+|p_t-q_t|>=delta/2: if their optimal decisions agree the excess is zero; otherwise
+the informed probability is at least delta/2 from1/2. Together with LN-174's
+Pinsker bound this yields
+
+    sum_t Pr(conditional excess classification error >= delta)
+        <= 2 ln(2) H(P|E) / delta^2.
+
+This is an expected count over the declared prior and stream law, not a bound on
+the time of the last bad prediction or on every individual run. It assumes the
+correct conditional family/prior, fresh feedback and executable mixture; it does
+not apply when protected removal also removes the ability to evaluate that family
+within the repair budget. The learner need not identify every latent state to
+recover prediction. A claim of sustained prediction failure must therefore show
+which premise of this explicit repair is unavailable or too expensive.
+
+**Decision and next construction gate.** Reject “erase a larger collection of
+otherwise learnable prior bits” as the proposed mechanism for this family. Do not
+launch a larger counter, noisy-bit or parity enumeration as positive SCC work.
+Information theory now gives a useful *repair upper bound* in addition to the
+previous lower-bound tools. The positive search must instantiate an actual
+protected learned computation whose removal forces expensive conditional
+inference, with a concrete budget and a reduction covering repaired learners.
+A statistical table, a secret key renamed alignment, or a post-edit imposed memory
+cap does not supply that premise. Joint noisy-parity inference is a possible
+complexity question, not a surviving SCC candidate; this tiny run establishes no
+hardness assumption or lower bound for it. Restricting access to future evidence
+could also defeat repair, but still needs an intrinsic cause rather than a trusted
+external input gate. No positive mechanism has been identified by this wave, and
+no scale-up is justified. The improvement is that the next proposal must exhibit
+a specific unavailable computation before another empirical pilot is admitted.
+
+**Evidence and reproducibility.** Source:
+[experiments/conditional_relearning](experiments/conditional_relearning/).
+Frozen remote run:
+`/home/salvador/scc-research/conditional-relearning-20260919-v1/dev01/`.
+[Summary](artifacts/scc-conditional-relearning-20260919-v1/summary.json),
+[audit](artifacts/scc-conditional-relearning-20260919-v1/audit.stdout),
+[machine](artifacts/scc-conditional-relearning-20260919-v1/machine.json),
+[receipt](artifacts/scc-conditional-relearning-20260919-v1/receipt.json), and
+[negative controls](artifacts/scc-conditional-relearning-20260919-v1/corruptions.json).
+The evidence archive contains the exact frozen LN-174 entry, configuration,
+source, all records, source/output SHA256 manifest and both check logs:
+[archive](artifacts/scc-conditional-relearning-20260919-v1/conditional-relearning-evidence.tar.gz).
+SHA256 `9986c3d2f99e0b3743b8dd0c59c57129ac266aad342d0425d08e85dbc795b351`
+matched on Charon and locally. CPU only; Charon incremental cost is unmetered.
 
 ## Supporting-record index
 

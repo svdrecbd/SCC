@@ -1,0 +1,13 @@
+{
+  "n": 4,
+  "horizon": 8,
+  "noise_numerator": 1,
+  "noise_denominator": 4,
+  "modes": ["intact", "prefix2", "relative", "erased"],
+  "channels": {
+    "coordinates": [1, 2, 4, 8, 1, 2, 4, 8],
+    "mixed_parities": [3, 5, 9, 7, 11, 13, 14, 15]
+  },
+  "timeout_seconds": 180,
+  "classification": "finite implementation validation and synthetic repair screen"
+}
