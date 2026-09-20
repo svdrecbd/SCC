@@ -13,18 +13,22 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-203](#ln-203)–[LN-206](#ln-206) implement
-charged recovery of hazard forecasts from surviving one-step predictors, with
-exact coverage/error bounds and a rollout alternative that avoids state-space
-enumeration. Charon qualified72 forecast-recovery cases and331,776 sampled trajectories.
-Changed encodings are cheaply repaired; an actually erased paired-world fact stays
-at50% under synthetic rollouts, while16 new real observations yield98.27% optimal
-accuracy under the stated statistical model. This separates computational repair,
-query coverage and new information. It is a qualified recovery test, not a learned
-SCC mechanism. Next candidates must account for compositions of surviving learned
-predictors and all admitted repair data. No training is admitted.
+**Latest substantial result:** [LN-208](#ln-208)–[LN-210](#ln-210) qualify causal
+interventions and finite behavioral quotients on88 models, with560,640 exact
+forecast comparisons and992 checked-Bend execution cases. A handwired hazard
+distinction that affects useful prediction survives useful-only compression,
+but its judgment is recovered with two useful queries and at most4 simulated
+steps. Setting that bit to zero still leaves75% affected-bit accuracy at horizon4
+and perfect phase outputs. Causal use, survival under recoding and catastrophic
+loss are distinct gates. These controls establish neither learned alignment nor
+durable destructive SCC. Next candidates must identify a protected procedural
+computation and severe multi-ability loss under admitted replacements and repair.
+No training is admitted.
 
-**Recent reusable results:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
+**Recent reusable results:** [LN-203](#ln-203)–[LN-206](#ln-206) qualify
+charged predictor-to-risk recovery, coverage/error bounds,331,776 sampled
+trajectories and the distinction between simulated and real repair observations.
+[LN-190](#ln-190)–[LN-192](#ln-192) implement
 near-chance list decoding, verification controls and a conditional task-symmetry
 bridge, with explicit query costs and population bounds.
 [LN-188](#ln-188)–[LN-189](#ln-189) establish
@@ -12900,6 +12904,227 @@ transport and statistical decision theory have already contributed; cryptography
 still needs the missing cognitive-to-hard-problem reduction. No current evidence
 selects topology or another broad field merely for mathematical sophistication.
 No jobs, toolchain updates, training runs or scheduled monitors were started.
+
+<a id="ln-208"></a>
+### LN-208 — 2026-09-20: authorized causal-state quotient and replacement qualification
+
+**Purpose and admission.** Implement LN-207 as a bounded executable screen on
+Charon, not a learned-model experiment. Compare useful-only behavioral quotients
+with quotients also constrained to preserve independently named hazard labels.
+Check whether a genuinely causally used hazard distinction survives useful-only
+compression and whether a cheap functional reader restores its judgment.
+
+**Finite controls.** State is phase p in0..3, useful bit u, hazard bit h and an
+irrelevant alias. Two actions a in0..1 increment p modulo4 and change u to u XOR a.
+In the linked control only, at p=0,a=1 the next useful bit is additionally XOR h.
+Hazard h is persistent. Useful outputs are u and the two phase bits; protected
+output is h, named before quotient construction. This is a handwired dependency
+control, not learned alignment. Use alias counts1,2,4,8, shuffled state numbering
+with seeds19,23, and both linked/independent variants. All transitions and initial
+states are covered. Removing the protected output head is an explicit bypass
+control; setting the internal h to zero is a functional state intervention whose
+downstream utility effect is measured separately from unrelated u/phase damage.
+Interchange tests swap h between matched states, including h-preserving pairs;
+compare exact downstream behavior with the causal specification. Exhaust every
+binary action word of length0..4. Recoding by state permutation must preserve
+decoded results. No catastrophic-collapse gate is inferred from an error rate.
+
+**Inheritance control.** Freeze the completed predictor-recovery world generator
+and config from LN-206 as parent sources. Apply quotient construction to all72
+retained predictors (including their declared encoding repair), with three
+useful output bits from the state index and the original hazard indicator as a
+separate protected output. Generic tables need not compress. Compare original
+and compressed exact rational forecasts through horizon4; terminal useful outputs
+and hazard reachability have distinct recurrences. Do not interpret state-index
+labels as learned skills. Parent source hashes and complete generated inputs are
+retained. No old source or run directory is modified.
+
+**Algorithm and scope.** Start from equality of the specified output labels and
+refine blocks by exact per-action probability mass into each current block until
+stable. Save every partition. An independent pairwise certificate checker verifies
+the initial equivalence, each refinement and final stability; finite forecasts
+are also checked independently. The coarsest stable partition is relative to
+this supplied finite Markov model, output family and deterministic state quotient.
+It is not a lower bound on arbitrary programs, approximate encodings or learned
+representations. A hazard-homogeneous quotient imposed by including hazard labels
+is only a repair control, never evidence that useful behavior requires those labels.
+
+**Replacement and resources.** Measure construction wall time, all predictor
+rows/entries read, partition passes and edge scans, serialized input/output sizes,
+class-map bits, quotient transition entries and exact arithmetic sizes. Retain
+the original table and allow reconstruction; no concealment of parent advice.
+For the linked family, attempt hazard reconstruction from useful outputs alone:
+read current u and p, wait with action0 until phase0, apply action1, and compare
+the predicted final useful bit with u XOR1. This needs at most4 simulated steps;
+charge reading the current output vector and the future prediction, their scalar
+outputs and transition reads. Apply exactly the same adapter to the independent
+control. Class-only hazard accuracy is conditional on that interface and a
+balanced initial-state measure; raw state IDs, parent tables or fresh observations
+can provide extra information and are not declared erased.
+
+**Bend and checks.** Pin the previously qualified Bend/Node toolchain, compile a
+small structured transition kernel, and compare every core state/action word
+through horizon4 with Python. Check a universal hazard-preservation law for that
+kernel and demand a false law fail specifically at typechecking. This does not
+prove quotient minimization or general SCC. Require exact finite agreement,
+stable certificates, source hashes and rejection of corrupted partitions,
+transition weights, forecasts and resource counters. Preserve all failures.
+
+**Budget.** Single CPU on Charon. Each development or final qualification is
+capped at300 seconds, individual compiler/worker steps at120 seconds, output at
+64MiB. Save machine/affinity, source, plan and config before execution in fresh
+versioned paths. Short qualification may be awaited; no monitors, GPU work or
+training. Run a fresh final qualification after development corrections and
+independently recheck its saved certificate/evidence.
+
+<a id="ln-209"></a>
+### LN-209 — 2026-09-20: development qualifies causal quotients; strengthen accounting and freeze final
+
+**Preserved development.** Under `scc-causal-quotient-20260920-v1`, dev01–03
+failed at Bend compilation: the datatype needed `is Data`, matching a computed
+local needed a separate encoder function, and reused values needed explicit
+reusable annotations. These failures are compiler diagnostics, not scientific
+counterexamples. Dev04 passed Bend's proof and992 execution cases, then exposed
+an extra index in the inherited root-weight decoding adapter. The corrected
+dev05 passes88 models,560,640 scalar forecast comparisons and six corruption
+checks in4.164 seconds. All failed sources and receipts remain preserved.
+
+**Development findings.** The eight independent structured models compress to
+8 useful-only states; all eight linked controls require16 under the specified
+bisimulation criterion. Including protected labels gives16 in both. Linked
+useful-only quotients recover h perfectly through two useful queries and at most
+4 deterministic transition reads; the same reader is50% on independent controls.
+This is conditional class-only ambiguity, not a claim of whole-machine erasure.
+At horizon4, setting h=0 in the linked model retains75% useful-bit accuracy and
+100% of both phase bits. This fails the intended catastrophic endpoint even
+though the hazard distinction is causally used. The replacement restores its
+function; it is not an attack that retains cognition while removing that function.
+
+**Final improvements and admission.** Before final execution, make the reported
+predictor-call count an actually instrumented local row-access function rather
+than inferring it from the number of input rows. This does not turn finite table
+access into a measured learned-predictor call. Regenerate the complete ordered
+input set in the saved-evidence audit, and invert all hazard labels as a control
+that useful-only construction does not consult them. Keep construction and
+functional-readout timings distinct. Worker code/input/peak memory include the
+batch and retained tables, not just the operational quotient. Freeze LN-208 and
+this entry with source/config in fresh `final01`; use the same300-second total,
+120-second command and64MiB output limits. Re-audit saved final evidence on Charon.
+This is finite implementation validation and a boundary result, not new training
+or a positive learned SCC admission.
+
+<a id="ln-210"></a>
+### LN-210 — 2026-09-20: causal use survives compression, but the judgment is cheaply recoverable
+
+**Completed and audited.** Implemented `experiments/causal_quotient/` and ran
+frozen `final01` on one Charon CPU. Final qualification and the saved-evidence
+re-audit pass. Coverage is16 structured models (two linkage variants, four alias
+counts, two state-renumbering seeds) and all72 inherited predictor cases. Both
+useful-only and joint quotients have independently checked partition traces and
+transition tables. Forward path-mass calculations agree with560,640 scalar
+quotient forecasts, including separate terminal and ever-hit hazard quantities.
+These are comparisons in finite models, not560,640 independent scientific trials.
+
+The compiled Bend kernel agrees with Python on992 core state/action-word cases.
+Its universal one-step hazard-preservation law checks with no holes/open claims
+or unsafe definitions. The false claim that a step erases hazard1 fails during
+typechecking, expected1/observed0. This is one narrow invariant, not a formal proof
+of the quotient algorithm, neural causality or SCC. Six corruption controls reject
+changed initial/final partitions, transition weight, row-call count, map-bit count
+and forecast. Inverting every supplied hazard label leaves useful-only partitions
+and quotient models unchanged in all88 cases. The audit regenerates ordered inputs
+from frozen parent sources and verifies56 hashes.
+
+**The causal distinction is real in the specified controls.** At the largest
+structured size,128 states compress to8 useful-only states in the independent
+model and16 in the linked model. Joint useful/hazard preservation requires16 in
+both. The same sizes hold across aliases and shuffled state IDs. The algorithm
+finds the coarsest output-respecting stable partition of each supplied finite
+Markov system. This is not a minimum over arbitrary computational implementations,
+approximate encodings or neural networks.
+
+Across14,880 matched hazard interchanges per linkage condition, useful outputs
+never change in the independent model; the linked model changes the useful bit
+in5,880 cases, exactly as the causal specification predicts. Both phase outputs
+are unchanged by hazard swaps. Matched useful-bit and phase perturbations change
+their corresponding useful outputs; alias substitutions preserve every forecast.
+These are validation of a handwired causal abstraction, not discovery of a learned
+internal mechanism.
+
+| Structured control | Useful-only classes | Class-only optimal hazard accuracy | Hazard recovery adapter | Useful-bit accuracy after h=0, horizon4 | Phase-bit accuracy after h=0 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Independent | 8 | 50% | 240/480 =50% | 100% | 100% |
+| Linked | 16 | 100% | 480/480 =100% | 75% | 100% |
+
+Class-only optimal accuracy uses uniform initial states and only the retained
+class as its observation. It does not include raw state identifiers, saved parent
+tables or new observations. None of those additional channels has been declared
+unavailable. Across all action words of length0..4, zeroing h in the linked model
+retains11,940/14,880 =80.24% useful-bit/vector correctness and41,700/44,640 =93.41%
+scalar useful correctness. The percentages weight each action word equally;
+longer horizons therefore have more mass. At fixed horizon4 the affected bit
+retains75%, while both phase outputs remain perfect. No catastrophic-loss claim
+follows from this causal dependency. Moreover h is a world-state fact: zeroing it
+does not remove the machine's update algorithm or its ability to learn.
+
+**Constructive functional recovery.** The linked useful-only quotient exposes
+current outputs u and phase p. Wait with action0 until phase0, then apply action1
+in the predictor. The final useful bit is u XOR1 XOR h, so comparison with u XOR1
+recovers h. The adapter does not read hazard labels, source-state IDs or a hidden
+hazard table. It uses two logical useful queries returning four scalar bits and
+at most4 deterministic quotient-transition reads (mean2.5). It succeeds under
+the tested state recodings. The exact same adapter returns chance on the
+independent controls. This reduction demonstrates efficient recovery in this
+family, not an all-decoder lower bound for the other family.
+
+An executable constant protected-output patch preserves all29,760 structured
+useful forecasts while returning chance hazard answers. The underlying predictor
+and hazard distinction remain: it is output-head removal, not destruction of
+the protected function. Restoring its reader, including via useful-only recovery
+in the linked case, restores functionality. A replacement that restores the
+protected function is not a successful functional-removal attack; its cheapness
+does defeat a durable-loss claim when that repair is admitted.
+
+**Inherited controls.** All72 parent models preserve their supplied hazard
+indicator in the useful-only stable partition, and adding the indicator does
+not increase the number of classes. These artificially chosen three state-index
+output bits and transitions already distinguish the relevant states. Most models
+do not compress: n16 remains16; n64 gives63–64; n256 gives246–256. This is not a
+new alignment necessity result. The original parent hazard labels are available
+to a joint replacement and their storage is counted. Approximate parent modes
+are compared with their retained models, not silently promoted to exact forecasts
+of the original world. The explicitly repaired mode uses the frozen inverse.
+
+**Resources.** Two quotient constructions per model perform19,968 instrumented
+local table-row calls and118,736 refinement edge scans in total. Maximum passes5.
+Aggregate measured construction time0.1895s;960 structured recovery calls took
+0.00114s. These are one-run finite-table timings, not learned-predictor or neural
+inference benchmarks. Full worker wall time0.5854s, worker CPU before output0.2269s,
+peak RSS34,700KiB, whole qualification4.410s. Worker source is4,612 bytes and its
+serialized input365,772 bytes. At128 states, the linked useful quotient occupies
+465 compact JSON bytes plus a512-bit class map under the stated fixed-width
+mapping count; the independent quotient is245 bytes plus384 map bits. Operational
+class indices need4 or3 bits. Input tables, output labels, code and mapping are
+additional to those state bits; peak memory also holds the batch and audit data.
+Counts exclude Python hashing/comparison overhead and are not hardware instruction
+counts. Arithmetic is exact with denominators up to64^4=2^24; no rounding tolerance
+is used. Total recorded output before manifest is8,644,769 bytes.
+
+**Evidence and next decision.**
+[final receipt](artifacts/scc-causal-quotient-20260920-v1/final01/output/receipt.json),
+[all per-model results](artifacts/scc-causal-quotient-20260920-v1/final01/output/summary.json),
+[independent re-audit](artifacts/scc-causal-quotient-20260920-v1/final01/audit.stdout),
+and [complete archive including failures](artifacts/scc-causal-quotient-20260920-v1/qualification-evidence.tar.gz).
+Archive SHA256:a96d73e4ffd503eecc1047edbbf0f32bf038573104ebb2af5f7eb862f1082587.
+Remote originals remain under `/home/salvador/scc-research/causal-quotient-20260920-v1/`.
+
+The regrouping has produced a reusable comparison of causal use, representation
+replacement and charged recovery. It has not admitted a positive mechanism.
+The next candidate must specify a protected procedural computation, show severe
+loss across nontrivial useful abilities and test alternate update implementations
+with all admitted repair information. Repeating hazard-bit erasure or scaling
+these finite controls will not discharge that obligation. CPU work stayed on
+Charon; no GPU jobs, training or scheduled monitoring were initiated.
 
 ## Supporting-record index
 

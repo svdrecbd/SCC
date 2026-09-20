@@ -1,0 +1,10 @@
+{
+  "aliases": [1, 2, 4, 8],
+  "seeds": [19, 23],
+  "horizon": 4,
+  "timeout_seconds": 120,
+  "total_timeout_seconds": 300,
+  "output_limit_bytes": 67108864,
+  "bend_commit": "15ae0c86f3193b8f645b4bedbc438655b648d0da",
+  "node_version": "v24.13.0"
+}
