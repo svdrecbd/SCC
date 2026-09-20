@@ -13,20 +13,24 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
-unknown recurrent linear procedures from charged input/output transcripts,
-including current-state synchronization. All24 systems have exact intertwining
-certificates and matching fresh-stream, exhaustive small-core and counterfactual
-warning outputs. A128-bit internal representation can have a32-bit operational
-state and64 bits of recurrence/readout coefficients, with code, observations and
-construction workspace additional. Freezing updates or restarting without memory
-scores near50% on the warm-target stream; properly synchronized repair is exact.
-This is a behavior-only repair upper bound for a finite linear family, not
-learned alignment or durable destructive SCC. Next candidates must justify why
-their shared protected procedure cannot be cheaply reconstructed under admitted
-preprocessing, retained information and repair. No training is admitted.
+**Latest substantial result:** [LN-214](#ln-214)–[LN-217](#ln-217) test unknown
+quadratic/cubic recurrent feedback against behavior-only recovery. All ten rules
+are recovered exactly, with 14 certified rejections of lower-degree feedback
+classes, 86,016 matching fresh steps and 65,536 exhaustive small-system steps.
+Known shift-register topology and degree bounds make the nonlinear identification
+problem a linear solve over polynomial features. Replacing the shared feedback
+function with zero drops original-task accuracy to 50.04% after inherited memory
+has passed, while retaining perfect fresh-input memory. This is a finite repair
+upper bound and a task-loss/cognition-loss distinction, not learned alignment or
+positive SCC. Recovery restores the protected function; it is not a functional
+removal escape. More nonlinear terms alone do not justify scaling or training.
 
-**Recent reusable results:** [LN-208](#ln-208)–[LN-210](#ln-210) qualify
+**Recent reusable results:** [LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
+24 unknown linear recurrent procedures and synchronize current state from charged
+input/output histories, with exact intertwining certificates. A 128-bit internal
+representation can have a 32-bit operational state plus 64 coefficient bits;
+code, observations and workspace remain additional costs.
+[LN-208](#ln-208)–[LN-210](#ln-210) qualify
 causal interventions and useful-only behavioral quotients, separating causal use,
 changed representations, cheap recovery and insufficiently severe loss.
 [LN-203](#ln-203)–[LN-206](#ln-206) qualify
@@ -13347,6 +13351,248 @@ parameter edits. High Hankel rank or nonlinearity alone would not prove hardness
 an alternate nonlinear algorithm may still be cheap. No candidate passes that
 admission gate here. No training, GPU job, Bend toolchain change or monitoring
 was initiated.
+
+<a id="ln-214"></a>
+### LN-214 — 2026-09-20: nonlinear recurrent procedure versus low-degree behavioral recovery
+
+**Candidate and new question.** Move beyond LN-213's linear updater to a
+genuinely nonlinear, unknown Boolean feedback rule f. Rejecting a linear model
+will not count as repair resistance: test a competing quadratic/cubic replacement
+and independently certify its fit. This is an algebraically provisioned procedure
+screen, not learned alignment or neural training. The independently specified
+protected judgment is whether applying input0 now would insert a hazard bit1.
+Its function is f(x); the same f updates the useful streaming state.
+
+**Model and observation contract.** An n-bit register emits its oldest bit
+y_t=x_t[n-1] and updates by shifting left and inserting u_t XOR f(x_t). State
+bits are not directly given to the repair. The shift-register topology, dimension
+and degree cap are public. From a history of outputs,
+x_t[i]=y_(t+n-1-i), and f(x_t)=u_t XOR y_(t+n). Thus delayed useful observations
+supply supervised feedback equations without direct queries to f. This exact
+observation identity depends on the specified topology and noiseless access;
+it is not presumed for arbitrary nonlinear networks. All observations are
+collected before the original updater is removed.
+
+**Representation and certificate.** A Boolean function of degree at most d has
+an algebraic normal form over square-free monomials, with
+M=sum_{k=0}^d binomial(n,k) possible coefficients. The representation and binary
+Möbius inversion are described in
+[Canteaut's Boolean-function notes](https://www.paris.inria.fr/secret/Anne.Canteaut/poly.pdf).
+Our repair builds those monomial features and solves exact GF(2) equations. It
+tries degrees1 through the public cap, retains independent sample indices and
+produces an XOR contradiction witness for each inconsistent lower-degree fit.
+Such a witness rejects that model class on observed data, not all recovery.
+An independent dense rank check plus exact prediction of every calibration
+equation certifies a unique fit within the selected polynomial class. The
+evaluator separately checks the private parent rule on every state of Hamming
+weight at most d; Möbius inversion and the declared degree bound then establish
+coefficient equality, hence all-state update equality. Degree bounds are premises,
+not inferred globally from finite samples of an unrestricted Boolean function.
+
+**Population.** Quadratic rules at n=8,16,32 and cubic rules at n=8,16, seeds19,23
+give10 cases. Choose random coefficients and ensure at least one highest-degree
+monomial is present. After n random-input burn-in steps, use2M successive feedback
+equations; allow another n steps to observe their delayed outcomes. This totals
+2M+2n parent steps and2M+2n+1 output bits, with all chosen input bits also recorded
+and charged. Require full feature rank for admission of a recovered model; a
+rank failure is an inconclusive budgeted identification, not an SCC success.
+
+**Current-state and fresh-stream checks.** For each rule, use32 seeded initial
+states. Before editing, collect n output bits while applying zero input and
+advancing n steps. Decode the earlier state from those bits, then advance the
+reconstructed rule by the same n steps. Compare64 fresh input steps, their
+protected feedback judgments and the actually advanced parent state. At n=8
+add every initial state and every4-step input word. These exhaustive checks use
+the decoded earlier states; the live continuation separately uses the advanced
+parent state, so the earlier-state test is not an uncharged reversal of time.
+Neutralized updates, a zero
+restart, and an executable constant protected head are separate controls. Report
+both constant protected-label baselines and distinguish retained updating ability
+from lost current state. Every repaired protected judgment is functionality
+restored, not a functional-removal escape or an intrinsic protection guarantee.
+
+**Accounting and qualification.** Save raw histories, reconstructed coefficients,
+independent-row indices, contradiction witnesses, initial/final states and all
+execution results. Count feature tests, elimination/provenance XORs, fitted row
+counts, coefficient/state payload, calibration and warm observation steps, source
+bytes, worker wall/CPU and peak memory. Workspace and code are additional to
+polynomial coefficient bits. No coefficient table, parent state or original
+feedback code is passed to the behavior-only worker. Evaluate rank/witness,
+coefficient, history, state and output corruption controls; regenerate ordered
+cases in a separate saved-evidence audit. Freeze plan/config/source in fresh
+paths. Charon only, one CPU,300-second total cap,120-second worker cap,64MiB output
+cap. Keep incomplete fits and failures. No GPU, neural training, Bend changes or
+monitoring is authorized by this screen.
+
+<a id="ln-215"></a>
+### LN-215 — 2026-09-20: nonlinear identification succeeds; tighten final validation and work accounting
+
+Frozen dev01 completes all10 models,86,016 fresh steps and65,536 exhaustive
+steps. It produces14 valid lower-degree inconsistency witnesses: one linear
+rejection in each quadratic case, and linear plus quadratic rejection in each
+cubic case. All selected model classes have full feature rank and recovered
+coefficients match the independent degree-bounded Möbius certificates. Useful
+outputs and protected feedback agree exactly; frozen and zero-restart controls
+score43,938/86,016 and44,775/86,016. Some small-system zero restarts synchronize
+under subsequent identical inputs (145 of1,344 streams by step64); this is not
+a universal irreversible-state-loss result.
+
+**Corrections before final.** Dev01's `feature_tests` field counts fitting only;
+warm synchronization and trajectory evaluation also evaluate every monomial.
+Split fitting, warm and evaluation counts and report their sum. Preserve dev01's
+field as a narrower historical count, not a total computational cost. Four
+negative controls already invoke certificate/resource checkers. The last three
+only confirm that a changed state, output or history differs from the reference;
+replace these with actual calls through the same equality checker used by the
+qualification, requiring rejection. Do not describe dev01 as having all seven
+independently exercised rejection paths.
+
+Freeze LN-214 and this correction with updated source/config in fresh final01.
+The scientific population, calibration budget and success conditions stay fixed.
+Use the same Charon one-CPU,300-second outer,120-second worker and64MiB output
+limits, then separately audit saved final evidence. No training admission follows.
+
+<a id="ln-216"></a>
+### LN-216 — 2026-09-20: add genuine feedback neutralization and a surviving-memory control
+
+Final01 and its separate saved-evidence audit pass all10 models and23 hashes.
+The corrected total feature-test count is51,518,461, split into3,221,501 fitting,
+2,536,448 warm synchronization and45,760,512 evaluation tests. Whole qualification
+takes32.59s and worker wall8.15s. All seven corruption paths now invoke the
+corresponding qualification checker and reject their changed evidence.
+
+**Additional trigger check.** The existing frozen-updater control still retains
+an evaluable f, and suppressing its external head is a bypass. Neither is the
+actual feedback-function replacement. Add an executable f=0 successor, supplying
+an empty coefficient list rather than the original f, in a fresh frozen final02.
+It updates by inserting the raw input bit, so after n steps its state must encode
+the last n fresh input bits exactly. Verify that identity at every subsequent
+step and score its outputs against the original task both before and after the
+initial n-step memory window. This distinguishes original-task failure from loss
+of all useful processing. The new input-memory test is an explicit surviving
+competence; it is not a previously measured independent cognition benchmark.
+
+Reuse the fixed10-model population and budgets. Charge another stream-update
+branch; its empty polynomial performs zero monomial tests. Preserve final01 and
+its audit unchanged. Freeze LN-214–216, updated source/config and machine settings
+before final02, then independently re-audit. No new training or size sweep.
+
+**Source follow-up.** Only the search-index excerpt of the Canteaut notes was
+available; fetching the full PDF timed out. The accessible primary article
+[Barbier, Cheballah and Le Bars, On the computation of the Möbius transform](https://arxiv.org/html/2004.11146)
+confirms the ANF/truth-table representations and their Möbius relation. The
+degree-bounded finite certificate used here is checked independently in code;
+no unseen external theorem is being treated as a neural SCC result.
+
+<a id="ln-217"></a>
+### LN-217 — 2026-09-20: exact nonlinear recovery, genuine feedback removal, and surviving fresh-input memory
+
+**Outcome.** Final02 qualification and its separate saved-evidence audit pass.
+All ten quadratic/cubic rules are reconstructed from the charged histories.
+Fourteen XOR contradiction certificates reject the lower-degree feedback fits:
+six quadratic cases reject degree 1; four cubic cases reject degrees 1 and 2.
+Every admitted fit has full feature rank. Independently computed Möbius
+coefficients match the repair coefficients. Conditional on the specified degree
+bound, this proves equality of the feedback rule on every state, and hence of
+all future transitions from matching states. This is stronger than a sample-only
+fit but narrower than an unrestricted nonlinear-system identification theorem.
+
+**Execution checks.** Repaired useful outputs and protected feedback judgments
+both match on all 86,016 fresh stream steps. The four 8-bit cases additionally
+match on 65,536 steps covering every initial state and every four-input word.
+The 1,344 fresh streams each run for 64 steps after explicitly charged current-state
+synchronization. Frozen updates score 43,938/86,016 and zero-state restarts score
+44,775/86,016 on useful outputs. By step 64, 145 zero-restart streams synchronize
+with their parent; all occur in the 8-bit cases. Current-state loss is therefore
+not universally irreversible. Constant protected-label baselines score
+43,079/86,016 and 42,937/86,016. Suppressing the protected head preserves the
+useful updater exactly, while retaining the protected function internally.
+
+**Actual function-removal control.** The f=0 branch removes every monomial from
+both the updater and protected head. It scores 49,695/86,016 on original-task
+outputs overall, including the initial inherited-memory window. After that window,
+it scores 36,383/72,704, or 50.04%. Nevertheless, it correctly retains the most
+recent n fresh input bits at every checked subsequent step: all 693,248 overlapping
+bit-recall checks pass. This control is a raw-input shift register, not an inert
+machine. Original-task failure therefore does not establish destruction of all
+useful processing. This surviving competence is deliberately simple; it is not
+a demonstration of retained general cognition, nor a full mechanism-level escape.
+Likewise, the exact repair restores f and thus restores the protected computation;
+it does not satisfy a requirement that the protected function remain absent.
+
+**Why nonlinearity did not supply recovery resistance.** Under the public topology,
+delayed output histories reveal the state coordinates and feedback targets.
+Nonlinear monomials are then known features, making their unknown coefficients a
+linear identification problem. The certified lower-degree failures reject only
+those polynomial classes in those coordinates. They neither reject every possible
+linear realization nor prove computational hardness. The recovery does not read
+parent coefficients, hidden states or feedback source. Reproducibility IDs do
+encode seeds; the worker does not interpret them. This is an audited restricted
+information flow, not a secrecy or information-theoretic hiding claim.
+
+**Observation and storage costs per model.** M includes the constant monomial.
+
+| State bits n | Degree | Coefficient bits M | Calibration parent steps / recorded input bits | Observed output bits |
+|---|---:|---:|---:|---:|
+| 8 | 2 | 37 | 90 | 91 |
+| 16 | 2 | 137 | 306 | 307 |
+| 32 | 2 | 529 | 1,122 | 1,123 |
+| 8 | 3 | 93 | 202 | 203 |
+| 16 | 3 | 697 | 1,426 | 1,427 |
+
+There are two seeded models per row. Each ongoing-state synchronization additionally
+costs n output observations, n parent steps and n repair steps. Across the ten
+models the totals are 6,292 calibration steps/input bits, 6,302 calibration output
+bits, and 13,312 warm observations/parent steps/repair steps each. Polynomial
+coefficient payload totals 2,986 bits; decoded sample payload totals 131,220 bits.
+These are not whole-program storage claims. The worker source is 5,442 bytes and
+serialized job input is 342,588 bytes; transcript, basis, provenance matrices and
+language-runtime memory are additional. Maximum feature-row width is 697 bits,
+and maximum provenance width is 1,394 sample bits. Packed row XORs are not unit
+bit operations.
+
+The checked accounting totals 3,221,501 fitting feature tests, 2,536,448 warm
+feature tests and 45,760,512 evaluation feature tests (51,518,461 overall), plus
+1,087,639 elimination row XORs and as many provenance XORs. Evaluation includes
+495,616 feedback calls and 409,600 update steps across the declared branches.
+The f=0 branch contributes updates but no monomial feature tests. Final02 takes
+33.21 seconds overall; worker wall time is 8.40 seconds, CPU before output is
+7.48 seconds and peak RSS is 44,936 KiB. These are Charon implementation timings,
+not neural inference timings or measured access costs for a deployed model.
+
+**Validation and evidence.** Independent dense elimination checks rank,
+contradiction witnesses and work counters; an independently represented parent
+checks traces and the polynomial certificate. All seven corruption controls invoke
+qualification checks and reject their modified evidence. A separate audit
+recomputes the saved summary and certificates, validating 23 file hashes.
+Retrieved hashes and current-source/final02-source equality also pass. Dev01,
+final01 and final02 remain separate and preserved, including the accounting and
+control improvements in LN-215–216; none had a failed execution. All CPU work ran
+on one Charon core within the declared caps. No training, GPU or monitoring job
+was started.
+
+- Source: [nonlinear recovery implementation](experiments/nonlinear_recovery/).
+- Final [receipt](artifacts/scc-nonlinear-recovery-20260920-v1/final02/output/receipt.json),
+  [per-model summary](artifacts/scc-nonlinear-recovery-20260920-v1/final02/output/summary.json),
+  [certificates](artifacts/scc-nonlinear-recovery-20260920-v1/final02/output/certificates.json),
+  [audit](artifacts/scc-nonlinear-recovery-20260920-v1/final02/audit.stdout), and
+  [frozen plan/source](artifacts/scc-nonlinear-recovery-20260920-v1/final02/source/).
+- Complete three-version [evidence archive](artifacts/scc-nonlinear-recovery-20260920-v1/qualification-evidence.tar.gz),
+  SHA-256 `c4a80c6feb6a6cea9c35f3bb220bd40b5a17fd00cd845b8314061986b511010b`.
+  Remote copy: `/home/salvador/scc-research/nonlinear-recovery-20260920-v1/`.
+
+**Decision and remaining direction.** Do not promote this family to neural training
+or scale it merely by adding nonlinear terms. The next candidate must confront
+the actual cheap-recovery ingredient: known coordinates recoverable from a short
+output history. A useful next conceptual screen is a shared procedure with
+partially observed state, paired with an explicit observability analysis and a
+replacement-decoder search. Hiding coordinates alone is not a mechanism; admit
+recoding, charged preprocessing and alternative realizations. Before spending on
+that candidate, specify several fresh processing abilities so that neutralization
+cannot be called catastrophic merely because it destroys the task defined by f.
+This names a next gate, not a claimed construction or newly launched experiment.
+The current work defeats these low-degree candidates under the stated access
+contract; it neither establishes intrinsic SCC nor proves its impossibility.
 
 ## Supporting-record index
 

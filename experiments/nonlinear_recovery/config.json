@@ -1,0 +1,1 @@
+{"families":[[8,2],[16,2],[32,2],[8,3],[16,3]],"seeds":[19,23],"sample_factor":2,"warm_states":32,"stream_length":64,"exhaustive_n":8,"exhaustive_length":4,"worker_timeout_seconds":120,"output_limit_bytes":67108864}
