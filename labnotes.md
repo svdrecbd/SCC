@@ -30,6 +30,10 @@ conditional coupling, is the crux: the defeated constructions all fell on routin
 around an intact judgment, descriptive coupling has a ceiling set by LN-179/180,
 and enforcement-preserving SCC reduces to the capacity question. For discussion.
 
+**LN-227 corrected in [LN-229](#ln-229); assessments converge:** two failure classes,
+no universal coupling ceiling, substitution property as the fault line, and one
+shared admission gate for any next candidate. For discussion.
+
 **Assessment of that update:** [LN-228](#ln-228) agrees that an intact-cognition
 behavioral bypass should be the next candidate-admission question. It qualifies
 LN-227's broader conclusions: LN-179/180 include genuine judgment erasure, their
@@ -14393,6 +14397,55 @@ cannot work under a justified full contract, or an explicit scoped no-go showing
 that it can. At present we have no candidate supplying that obstruction. This is
 a serious absence of a positive mechanism, not a proof that all SCC is impossible.
 No new surrogate or training run follows automatically from this assessment.
+
+<a id="ln-229"></a>
+### LN-229 — 2026-09-20: LN-227 corrected; the two assessments converge on one admission gate
+
+**Scope.** Corrections to my [LN-227](#ln-227) after the user relayed [LN-228](#ln-228)'s
+three qualifications. Withdrawals are recorded here and LN-227 is left as written.
+No experiment, plan, target change or compute.
+
+**Withdrawn: "every defeated construction fell on enforcement."** True of the built
+machines (LN-117, LN-124, LN-132, LN-136, LN-144, LN-148, the LN-156 proposals),
+false of the analytic candidates. LN-179 erased judgment information with all-reader
+chance accuracy and arbitrarily small planning regret; LN-180 erased a causal
+distinction while preserving the whole declared prospective task family. Those are
+failures of claimed cognitive necessity. The record has two failure classes. What
+remains of the LN-227 point: conditional coupling has bounded positive instances
+(LN-185, LN-187); enforcement has none.
+
+**Restated: no universal ceiling on coupling.** The premise that a world model does
+not entail normative content is true of the descriptive route only. LN-179/180 are
+counterexamples for particular task families under stated assumptions; LN-180
+explicitly excludes richer same-unit counterfactual tasks. An engineered dependency
+involving policy or objective is an open question with no candidate, not a
+proven impossibility. "By definition" was wrong.
+
+**Partly withdrawn: "capacity is the only lever" and "cost grows with breadth."**
+Existence of a finite override does not establish its admitted cost, that it
+generates the forbidden action with correct content, or that cognition survives
+once the action changes the environment (LN-125's equal-input premise). Breadth is
+the wrong variable: "always permit" is broad and short; a narrow exception may need
+a costly recognizer. The cost is that of the cheapest override achieving V while
+preserving U, which depends on the exception's structure and the machinery it must
+carry. Corrected statement: the fault line is the substitution property. Where the
+forbidden content is already computed for some authorized request, the override
+carries no new computation and the record has a concrete escape for every such
+construction. Where it is not, the override must supply that computation, and the
+levers on its cost are description size, execution time under a justified deadline,
+workspace and access, and environmental interaction. LN-228 is right that listing
+those is a resource restatement, not a mechanism, and that each needs independent
+justification. Capacity in the stored-bits sense is one of them, not the only one.
+
+**Convergence.** LN-228 and this entry now agree on the admission gate for any
+next candidate: before construction, state which side of the substitution fault
+line it is on; if on the open side, name the lever and say in plain language why
+the intact-cognition, intact-judgment, selected-action override cannot pay it under
+the candidate's full declared contract. Keep LN-156's two obligations separate, and
+LN-226's three claims separate. A candidate that cannot supply that paragraph is not
+built. If no one can supply it, that absence is written as the finding. The LN-227
+consolidation recommendation is unchanged: one object, every result under the claim
+it bears on, before any new surrogate.
 
 ## Supporting-record index
 
