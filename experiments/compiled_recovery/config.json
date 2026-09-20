@@ -1,0 +1,11 @@
+{
+  "dimensions": [12, 32, 64],
+  "source_seeds": [19, 23],
+  "fresh_seed_offset": 100,
+  "clause_density": 4.3,
+  "timeout_seconds": 280,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1,
+  "reference_backend": "g3",
+  "repair_backend": "cd195"
+}

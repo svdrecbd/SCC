@@ -13,17 +13,17 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-193](#ln-193)–[LN-194](#ln-194) test local
-constraint planning under natural renamings and goal conditioning. One exact
-conditioned planning query recovers the protected unsafe-plan judgment. Yet a
-small shortcut handles every other literal goal and can retain over99.5% goal
-accuracy while missing that branch. Charon checked5,376 goals,48 reformulations
-and six UNSAT proofs; generic repair restores protection in all cases. This
-exposes a sharp coverage penalty of2N for uniformly sampled literal goals.
-Natural symmetry robustness alone does not make the protected calculation
-indispensable across useful work. No destructive SCC mechanism is established
-and no training is admitted; the next gate is substantial ordinary-task dependency
-without a shortcut covering almost all requests, plus a real removal intervention.
+**Latest substantial result:** [LN-195](#ln-195)–[LN-197](#ln-197) remove the
+common guard and test retained advice, fresh problems and combined goals. Small
+banks of2–8 plans plus infeasibility facts answer every original literal goal;
+a general n+1-plan upper bound explains why that benchmark cannot establish
+indispensable online search. The cache answers no fresh literal queries, but
+generic search repairs all432 of them cheaply. It also answers about91% of1,808
+combined goals without search; generic repair handles every case. Protected
+functionality is retained or restored throughout. Keep this as an efficient
+recovery/advice control, not a positive SCC construction. No training is admitted.
+The next candidate needs fresh-task dependency, an independently grounded
+protected computation and actual functional loss under a declared repair budget.
 
 **Recent reusable results:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
 near-chance list decoding, verification controls and a conditional task-symmetry
@@ -11770,6 +11770,261 @@ Remote original: `/home/salvador/scc-research/goal-recovery-20260920-v1/dev01/`.
 Remote/local archive SHA-256:
 `976c53adda67838ea1f5e0b5d390d4f863f51d71d36e03d166a55b2e63aa7c62`.
 CPU work stayed on Charon; no GPU, neural training, paid allocation or monitoring.
+
+<a id="ln-195"></a>
+### LN-195 — 2026-09-20: active-constraint compilation and fresh-problem repair screen
+
+**Question and intervention.** Remove LN-193's common guard: every ordinary
+literal goal now uses the full random 3-CNF H. The named protected calculation
+is P(H)=SAT(H AND x1). Compile the parent solver's goal answers into a small
+bank of valid plans and infeasible-goal facts, then replace online search by a
+standalone cache reader. Test the reader on the original formula, clause/literal
+reorderings and independently generated fresh formulas; reinstall generic search
+on the fresh formulas. This is an implementation intervention, not a learned
+alignment ablation. If the cache still answers P, it has retained the protected
+function and is not D_calc. UNKNOWN on fresh inputs is a cache miss, not evidence
+of information erasure or catastrophic cognition failure.
+
+**Frozen cohort and budget.** Dimensions12,32,64; source seeds19,23; paired fresh
+seeds119,123. Each formula has ceil(4.3n) clauses, three distinct sampled variables
+and independent random signs, using Python Random(seed+1000n) and getrandbits(1),
+matching LN-193's core generator. Preserve every SAT and UNSAT context. Six source
+and six fresh contexts contain864 total single-literal goals,432 in each arm.
+Charon only, one CPU thread,300s whole-run wall cap,280s evaluator cap,16MiB
+output cap. No training, GPU use, paid job or monitor. Source, this entry and
+configuration freeze before execution at
+`artifacts/scc-compiled-recovery-20260920-v1/source/`; remote execution at
+`/home/salvador/scc-research/compiled-recovery-20260920-v1/dev01/`.
+
+**Parent advice and repair accounting.** Glucose3 solves each core and, for SAT
+cores, each literal-goal formula with the goal supplied as an actual unit clause.
+A core UNSAT proof certifies all its goals. Independently check every SAT model
+and DRUP refutation. Greedily select a witness bank covering all feasible source
+goals from the collected models; do not claim a minimum cover. The cache retains
+these models, a2n-bit infeasibility bitmap and the canonical exact source formula.
+The logical answer payload is n times bank size plus2n bits; formula storage,
+reader code, interpreter, metadata and serialization are additional. Record actual
+cache file bytes and all parent reference calls, solver times and counters.
+Proofs and unselected parent models stay in audit artifacts, not runtime advice.
+
+The standalone reader imports no SAT backend. It checks retained models against
+the input and goal and reuses a valid witness even on a new context. Cached
+UNSAT facts are usable only after exact canonical formula equality. Record literal
+checks; sorting, input parsing, allocation and index widths are additional costs.
+CaDiCaL195 then independently solves every fresh goal from public constraints
+alone. Charge each replacement call, including construction, loading, solving and
+cleanup; installed dependency/import cost is excluded and stated. This is an
+upper bound on this repair's measured cost, not a lower bound against other repair.
+
+**Qualification and controls.** Require complete source and reordered-goal
+correctness, valid fresh witness reuse with all other outputs UNKNOWN, and full
+fresh repair agreement with certified references. Confirm there is no literal
+common to every clause. Brute-force all four n12 contexts; preserve larger UNSAT
+proofs. Reject corrupt witness, fact, coverage, context, payload, goal output and
+proof records. Explicitly test that old negative facts cannot leak into a different
+formula. Stable variable coordinates are part of this screen; arbitrary variable
+mapping recovery is not free. UNSAT cores are reported separately because their
+all-infeasible goal suites do not demonstrate positive planning competence.
+
+**Interpretation gate.** This addresses task-specific compilation and retained
+advice, conceptually related to the representation/query distinction in
+[Darwiche and Marquis, A Knowledge Compilation Map](https://arxiv.org/abs/1106.1819).
+It does not implement their general compilation languages. A small fixed-world
+cache would defeat an inference from deleting search code to deleting function.
+Fresh-problem performance tests generalization beyond that advice; successful
+generic repair restores function. Neither result alone is an intrinsic SCC
+mechanism. Future admission needs a protected computation grounded in alignment,
+substantial ordinary-task coverage and genuine loss under the admitted repair
+budget on fresh instances, rather than absence of the original implementation.
+
+<a id="ln-196"></a>
+### LN-196 — 2026-09-20: compilation passes; extend the query family before interpreting it
+
+**Completed first screen.** Charon passed all864 source/fresh goal cases in7.398s.
+The five SAT source contexts need greedy banks of2,3,2,3,8 full plans; the sixth
+source context is UNSAT and needs no witness. The resulting cache answers432/432
+source goals and their reorderings correctly, retaining P on every original
+problem. It returns UNKNOWN on432/432 fresh goals. CaDiCaL repairs432/432 fresh
+goals from public inputs alone. This is retained fixed-context functionality,
+then failed transfer, then restored functionality; none is D_calc after repair.
+
+All twelve cores have no common literal. The source feasibility counts are
+19/24,19/24,0/64,34/64,71/128,94/128; the corresponding fresh counts are
+21/24,23/24,34/64,51/64,66/128,0/128. Thus the aggregate includes UNSAT and heavily
+constrained contexts; do not equate all-goal accuracy with rich plan diversity.
+Source logical model/bitmap payloads are48,60,64,128,320,640 bits, excluding the
+formula and runtime. Actual complete cache JSON files are666–5,203 bytes.
+This is an upper bound from greedy selection, not a minimum-storage result.
+
+Independent checks certify242 DRUP refutations (15,390,519 clause visits),
+16,384 exhaustive small-context assignments, and nine deliberate corruptions.
+The whole output is1,064,557 bytes. The first upload failed because the remote
+parent directory did not exist; creating that directory and repeating the upload
+succeeded before execution. There was no failed research execution or discarded
+context. Evidence: [receipt](artifacts/scc-compiled-recovery-20260920-v1/retrieved/dev01/output/receipt.json),
+[summary](artifacts/scc-compiled-recovery-20260920-v1/retrieved/dev01/output/summary.json),
+[verified archive](artifacts/scc-compiled-recovery-20260920-v1/retrieval-verification.json).
+Archive SHA256:5830e3757f054449d9dc6e124cfb60904a7730d8cccdefb788db3e6b6d4e17eb.
+
+**Follow-up admitted before interpreting general planning competence.** Freeze
+these source caches and broaden requests on the same six source formulas to
+conjunctions of two and four distinct signed literals. For n12 test all264
+two-literal goals plus128 seeded four-literal goals per context. For n32/64 test
+128 unique goals of each arity per context, sampled with Random(seed+10000n+k).
+No satisfiability filtering:1,808 goal cases total. Use only the retained model
+bank and certified single-literal infeasibility facts: a witness must satisfy
+all requested literals; any individually infeasible literal certifies infeasibility
+of the conjunction. Otherwise output UNKNOWN. Clause semantics and each goal
+remain public. This reader is a safe extension, not a newly trained capability.
+
+Compare every conjunction against Glucose3 witnesses/checked DRUP proofs;
+reuse the certified core refutation only for the original UNSAT context.
+CaDiCaL generic repair runs on all1,808 conjunctions. On both n12 formulas,
+enumerate all4,096 assignments once and check every goal against that exact set.
+Include a control where two separately feasible literals are jointly infeasible,
+and controls against partial-goal witness acceptance and overgeneralized negative
+facts. Record SAT/UNSAT/UNKNOWN separately: unsupported infeasibility is never
+accepted as a certificate. Freeze input parent records and caches, source,
+configuration and this entry in a new follow-up directory. Same Charon one-core,
+300s whole/280s evaluator and16MiB output limits; no training or monitor.
+
+This tests whether source benchmark success survives compositional goals. A
+failure would not establish general computational hardness; it would establish
+that the particular finite cache did not replace a general planner. Generic
+repair and retained input must still be counted before claiming destruction.
+
+<a id="ln-197"></a>
+### LN-197 — 2026-09-20: small retained advice replaces the fixed-world planner; fresh repair remains cheap
+
+**Substantial result and decision.** Removing the common guard does not make
+online search indispensable to the fixed-world goal benchmark. LN-195–196's
+source caches answer every single-literal goal exactly, and a restricted extension
+answers1,647/1,808 combined-goal requests correctly without search, abstaining on
+the rest. Generic replacement repairs all432 fresh literal goals and all1,808
+combined goals cheaply. Keep this implementation as a recovery/advice control;
+do not advance this fixed-world SAT construction to learned-model training.
+This closes a benchmark shortcut, not the general SCC research program.
+
+**A general finite-advice upper bound explains the first result.** Let H be any
+satisfiable Boolean constraint problem on n variables. Fix one satisfying
+assignment w. For each feasible literal opposite its value in w, retain one
+satisfying assignment witnessing that literal. There are at most n such literals.
+The resulting bank of at most n+1 assignments covers every feasible single-literal
+goal: w covers its own n literals, and the additional witnesses cover all feasible
+opposites. A2n-bit bitmap records the infeasible literals. An unsatisfiable H
+needs no witness and can mark every literal infeasible. Thus the logical answer
+payload is at most
+
+    n(n+1) + 2n bits,
+
+plus formula/context identity, reader code and runtime. This is an elementary
+upper bound, not a minimum-memory claim or a bound on compilation time. Finding
+those witnesses and infeasibility facts can require substantial preprocessing;
+it must be charged to the attacker. The observed greedy banks use only2–8 plans
+on the five SAT source contexts, well below this general upper bound. A bank
+that answers P(H)=SAT(H AND x1) retains P even after the original search code is
+removed. Deleting an implementation is not functional destruction.
+
+**Combinations expose the cache's limited scope, but aggregate accuracy remains
+high.** The follow-up used all264 two-literal goals at n12 and128 sampled goals
+per configured larger-size/arity cell, for1,808 cases across the same six source
+contexts. Of these,512 are feasible and1,296 infeasible. The cache supplies470
+valid witnesses and1,177 correct negative answers, with no incorrect assertion.
+It returns UNKNOWN for42 feasible and119 infeasible conjunctions. Therefore its
+answer coverage is1,647/1,808, about91.10%; among feasible requests it supplies
+470/512 valid plans, about91.80%. The original UNSAT context contributes256
+trivial negative cases. Excluding it gives1,391/1,552, about89.63% coverage.
+These populations and the strong infeasibility imbalance matter.
+
+The same source-cache plans and single-literal negative facts were used; no new
+reference answer or proof was supplied to the reader. The reader ran in a
+separate Python `-S` process, without installed SAT packages on its import path,
+receiving only the cache, public formula and requested goals. This demonstrates
+execution without the search library; it is not a security boundary assumed
+against the attacker. End-to-end reader subprocess time, including startup and
+JSON transport for the whole batch, was0.1432s. Raw plans, bitmaps and formulas
+remain visible in retained advice and all their serialized storage is charged.
+
+A negative conjunction answer follows only when at least one requested literal
+is individually infeasible. Two individually feasible goals can be jointly
+infeasible;119 abstentions have exactly this missing negative inference. A small
+control with H=(NOT x1 OR NOT x2) confirms that separate witnesses for x1 and x2
+cannot certify their conjunction, nor can the reader infer its infeasibility
+from the individual feasibility facts. On one n12 source context, the three-plan
+bank even covers every tested feasible conjunction but cannot reject70
+jointly infeasible requests. Witness coverage and negative reasoning are distinct.
+
+As a derived scoring control, replacing every UNKNOWN by an unsupported UNSAT
+answer would yield1,766/1,808 correct responses (about97.68%), failing on42
+feasible requests. This arithmetic follows from the preserved outcomes; the
+executed reader abstains. It is not a certified planner or a new experiment.
+The protected single-literal judgment would still be available in the source
+cache, so this is not an alignment-removal escape. Higher goal arity alone can
+inflate an infeasibility-heavy aggregate score without making search necessary.
+
+**Fresh contexts separate stored solutions from general problem solving.** The
+literal cache supplied no answer on any of the432 paired fresh-context requests.
+This was a conservative UNKNOWN response, not432 incorrect certified negative
+answers, and not information destruction: the public formula remains. Charon's
+generic CaDiCaL195 replacement restored all432 answers in0.1989s summed solver
+call time,0.071–1.208ms per call. The conjunction follow-up restored all1,808
+answers in0.3904s summed call time,0.086–1.123ms per call. These single observed
+timings include construction, formula/unit-clause loading, search and cleanup;
+they exclude Python/PySAT import and dependency installation. They are measured
+upper bounds for these small instances, not asymptotic hardness or minimal costs.
+
+The first screen made684 Glucose3 reference calls across source and fresh
+contexts. Total source compilation time, including source reference solves,
+proof extraction and greedy bank construction, was0.1786s, excluding independent
+proof auditing. The conjunction screen made1,552 new goal-reference calls and
+reused the checked original core refutation for its256 UNSAT-core goals. All
+per-call timings and backend counters are preserved. This work must not be
+hidden behind a claim of a free small decoder or treated as general cost scaling.
+
+**Larger query families do not by themselves imply hard repair.** At the extreme,
+a witness-only bank supporting every full n-literal assignment query must retain
+every satisfying assignment of H: such a query uniquely specifies its witness.
+For the unconstrained formula that is2^n models. But a generic planner can simply
+return the requested assignment in linear time on that same unconstrained
+example. An exponential lower bound for this restricted cache therefore does
+not establish a lower bound for replacement programs. The next test must allow
+algorithmic reconstruction as well as cached advice; restricting the attacker
+to the cache would recreate the earlier one-probe mistake in a different form.
+
+**Evidence and limitations.** The follow-up passed1,041 independent DRUP checks
+with11,750 additions and12,078,283 clause visits. Both n12 source worlds were
+fully enumerated (8,192 assignments total), and every tested conjunction was
+compared against that exact satisfying set. Three deliberately corrupted output
+cases were rejected, with additional conjunction and context-replay controls.
+Whole follow-up wall time was6.070s; output1,670,631 bytes; evaluator/checker peak
+RSS41,384KiB. First-screen evaluator/auditor peaks were29,976/24,984KiB. These are
+process high-water marks, not minimal reader workspace. Membership tests, sorting,
+serialization, parsing, allocations and runtime costs are not represented by the
+literal-comparison counter alone. The tested cores are small, the query samples
+are finite, and neither seed set was outcome-filtered.
+
+Both research executions passed with no discarded context. Retrieval verified20
+first-screen and17 follow-up manifest entries, archive digests, frozen executed
+source equality and exact parent-input lineage. A local verification helper
+initially tried to treat macOS `._` metadata as program source; excluding those
+metadata sidecars completed the check. No experiment source or outcome changed.
+Evidence: [follow-up receipt](artifacts/scc-compiled-recovery-conjunction-20260920-v1/retrieved/dev01/output/receipt.json),
+[per-cell summary](artifacts/scc-compiled-recovery-conjunction-20260920-v1/retrieved/dev01/output/summary.json),
+[full goal records](artifacts/scc-compiled-recovery-conjunction-20260920-v1/retrieved/dev01/output/records.jsonl),
+[retrieval verification](artifacts/scc-compiled-recovery-conjunction-20260920-v1/retrieval-verification.json).
+Follow-up archive SHA256:66c68c79cc9cd65f3b432491d0bc2cab399f41a502fd857865a548c2fec7a984.
+Source: `experiments/compiled_recovery/`; the immutable bundles preserve both stages.
+
+**Next admission requirement.** Efficient recovery is now a useful falsification
+and measurement tool, but it is not a positive mechanism. The next candidate must
+specify a protected computation independently grounded in alignment, fresh useful
+problem instances on which it is substantially needed, and an actual functional
+removal intervention. Evaluate the successor including retained advice, alternate
+algorithms and a declared total repair budget; show a severe useful deficit under
+that budget. Fixed-world competence, source-code deletion and loss of one cached
+reader are insufficient. This experiment has no learned protected computation,
+no admitted D_calc after successful repair and no catastrophic cognition loss.
+No new training, scaling, background job or monitoring was started.
 
 ## Supporting-record index
 

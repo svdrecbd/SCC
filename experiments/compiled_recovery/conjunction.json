@@ -1,0 +1,9 @@
+{
+  "dimensions": [12, 32, 64],
+  "source_seeds": [19, 23],
+  "arities": [2, 4],
+  "sample_count": 128,
+  "whole_timeout_seconds": 300,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1
+}
