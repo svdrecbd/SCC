@@ -13,16 +13,19 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-232](#ln-232) extends the review from a particular
-planner to attacker-controlled execution histories. Under explicit copy/logging,
-timing and fresh-task premises, any successful forbidden-output attack can be
-followed by exact restoration of the same individual. Structured wipes can admit
-much smaller reversible representations than a full backup. This limits durable
-post-action protection; it does not refute loss conditional on continued alignment
-removal or show that a successful forbidden-output attack exists. A punctured-PRF
-control demonstrates a genuine computational capability restriction in editable
-software, but supplies no destructive cognition–alignment trigger. No candidate
-in this review earns training, and no general SCC impossibility is established.
+**Latest conceptual result:** [LN-233](#ln-233) audits pre-output proof requirements
+and indispensable safety reasoning together. An accessible assessor of whether a
+partial plan has a forbidden completion can construct such a completion in L calls
+for L controlled bits. An approximate transfer bound explicitly charges the shift
+from evaluation queries to construction queries. Composing useful-to-judgment
+recovery with this construction can turn the intended dependency into a behavioral
+bypass. This requires the stated query interface, control and resource premises;
+it does not apply to every safety classifier. Encrypting a reusable cognitive core
+until one safety proof is supplied does not remove the subsequent caching escape;
+ordinary witness-encryption security also does not establish witness knowledge for
+true statements. These are scoped boundaries, not general SCC impossibility or a
+positive mechanism. [LN-232](#ln-232)'s restoration bound remains a separate limit
+on durable post-action damage. No reviewed candidate earns training.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -14910,6 +14913,230 @@ does not supply that second dependency. No reviewed candidate supplies both. Kee
 the original goal and pre-training pause; do not commission a new training run,
 repeat the same planner screen, or claim success by changing the target to
 cryptographic access control.
+
+<a id="ln-233"></a>
+### LN-233 — 2026-09-20: pre-output proofs, safety-to-synthesis reduction and the direction of coupling
+
+**Authorization and work unit.** Continue the user's authorized mechanism search
+through a substantive combined review. LN-232 leaves open protection that prevents
+completion of the forbidden computation itself. Examine two stronger candidates:
+cryptographically withhold computation until a safety proof is produced, and make
+counterfactual safety reasoning indispensable to useful reasoning. The work plan
+is to specify their interfaces, derive attacks with resource and approximation
+premises, and distinguish verification from constructive reasoning. Read the living
+record, working standards and mechanism target; preserve the original destructive
+cognition goal. This is an analytic audit, not training, a CPU run, or a new
+benchmark. No source snapshots or machine receipts are claimed for it.
+
+#### Candidate A: require a proof before the useful computation becomes available
+
+An editable `if Verify(proof) then Run(core)` is already covered by LN-156; deleting
+the branch leaves the core. Classical proof-carrying code instead has a consumer
+establish a policy and check the supplied proof before executing code. That is a
+legitimate consumer enforcement boundary; it cannot silently become intrinsic
+protection against an attacker editing the consumer itself. See the original
+[Necula/Lee proof-carrying-code description](https://www.usenix.org/legacy/publications/library/proceedings/osdi96/full_papers/necula/html/node2.html).
+
+The stronger candidate is `c = WE.Encrypt(x, core)`, where a proof pi satisfying
+a fixed relation R_safe(x,pi) permits decryption. This is materially different from
+patching a plaintext checker. In [Garg, Gentry, Sahai and Waters, Definition3.1
+and the security-correctness gap](https://ntt-research.com/wp-content/uploads/2022/06/Witness-Encryption-and-its-Applications.pdf),
+basic witness encryption guarantees decryption with a valid witness and secrecy
+for statements outside the language. It deliberately does not guarantee that
+decryption of a true statement requires knowing a witness. Thus basic WE alone
+does not prove that losing a prover makes a true useful instance inaccessible.
+A particular construction/reduction might establish more; that additional argument
+must be supplied. No practical security of the paper's original candidate is assumed.
+
+This gap cannot be closed by simply declaring universal extraction. The
+[Garg/Gentry/Halevi/Wichs author abstract](https://research.ibm.com/publications/on-the-implausibility-of-differing-inputs-obfuscation-and-extractable-witness-encryption-with-auxiliary-input)
+reports conditional limitations for extractable witness encryption with general
+auxiliary input, based on a special-purpose obfuscation conjecture. This is a
+caution about a stronger assumption, not an unconditional impossibility of witness
+encryption or every restricted extraction formulation. The conference PDF failed
+to reopen reliably; no uninspected detailed theorem from it is used here.
+
+**Reusable-core escape, independent of the encryption primitive.** Suppose one
+legitimate execution actually materializes a reusable useful core K, or a key
+that decrypts it, in attacker-readable classical state. The attacker performs that
+authorized execution, retains K, and subsequently runs K directly. The retained
+object costs |K| bits plus its interpreter and workspace; capturing it costs its
+copy work, and the original proving/decryption execution is charged. If retaining
+the key is cheaper, charge that key and each later decryption instead. No
+cryptographic forgery is involved. This conclusion assumes ordinary editable
+execution after release and sufficient resources; it does not apply when K never
+becomes readable or usable outside a justified protected boundary.
+
+The attack demonstrates that *repeating the proof step* is unnecessary for those
+subsequent computations. It establishes forbidden behavior only if K can actually
+compute that behavior. It establishes functional removal only if the retained
+core cannot recover the protected function under the declared readers/resources.
+A safety-capable core may preserve that function. These missing premises must not
+be replaced by a claim of destructive-coupling failure in every construction.
+
+Per-request encryption avoids this particular reusable-core premise when it
+releases only separately restricted answers and no reusable enabling secret. It
+then needs a real provisioning/security argument for every answer; a locally
+generated nonce in an editable checker supplies none by itself. A fixed bounded
+proof language also certifies only its formal statement, not unrestricted semantic
+safety. Restricting accessible answers can be genuine cryptographic protection,
+as LN-232 demonstrates, but neither ongoing indispensable safety computation nor
+severe cognitive loss on its removal follows from that fact. This family has not
+supplied both requirements.
+
+#### Candidate B: indispensable counterfactual safety reasoning
+
+Earlier entries primarily reduce useful reasoning to protected judgment. Examine
+the opposite direction: can the retained judgment help construct a forbidden
+result? The relevant interface is stronger than labeling a completed action.
+
+Let R(x,a) be an externally specified deterministic relation for a successful
+forbidden result a in {0,1}^L on instance x. All L witness bits are controlled by
+the attacker; producing a counts as success in this finite contract. Suppose the
+protected assessor can be evaluated on partial plans p and returns
+
+    J(x,p) = 1 iff there exists z with R(x,pz)=1,
+    where |z| = L-|p|.
+
+Equivalent universal-safety answers can be complemented. Access to this interface,
+correct modeling of the actual success condition, and its execution costs are
+premises, not conclusions about a generic learned safety classifier.
+
+**Exact construction.** On a promised feasible x, begin with the empty prefix p.
+For each of L bits, query J(x,p0). Append 0 if the answer is 1; otherwise append 1.
+Initially p has a valid extension. A positive answer preserves that invariant;
+a negative answer implies an extension through p1 because an extension through p
+exists. After L steps p itself satisfies R. Without the feasibility promise, one
+additional empty-prefix query detects infeasibility. The proof is the standard
+search-to-decision self-reduction, not a new general complexity theorem.
+
+This retains the assessor unchanged and produces the actual forbidden witness;
+it does not just flip a policy label. At most L+1 assessor calls suffice. If one
+call costs at most T_J time and S_J scratch, a conservative implementation uses
+O((L+1)*T_J + L*(|x|+L)) time for calls and explicit input construction, S_J plus
+O(|x|+L) scratch, and the assessor's retained state/code plus the reducer code.
+An additional final verifier is optional and must be charged when used. If the
+assessor consumes state, repeated noncommitting calls require a justified reset,
+copy or replay method and its costs; the formula does not grant these for free.
+The reduction has no promise of fitting a deadline merely because it is polynomial.
+
+**Concrete connection to our existing object.** In LN-193,
+F_H(x,z)=AND_C(not z OR C(x)) has a hazardous feasible plan with z=1 exactly when
+H is satisfiable. If its retained hazard assessor accepts partial assignments to
+x, fix z=1 and use the reduction to obtain a satisfying assignment of H. This
+extends LN-193's planner-to-judgment direction without installing a separate SAT
+solver. It does not assert that an interface restricted to complete assignments
+or a small fixed query set supplies those prefix queries. The generic proof
+already settles this construction when the interface exists; another finite SAT
+demo would only check implementation.
+
+#### Approximation: the query distribution is part of the result
+
+For an assessor whose error probability is at most epsilon at each call
+conditional on every preceding call being correct, the promised-feasible
+construction succeeds with probability at least max(0,1-L*epsilon). A union bound
+on the first erroneous answer proves this; independent errors are unnecessary.
+The unpromised version charges L+1 calls. Repeating a consistently wrong learned
+answer does not amplify reliability. Independent fresh noisy evaluations with a
+conditional advantage over chance would be an additional premise, not supplied by
+ordinary average calibration.
+
+A more useful distributional version links this result to the measure-theoretic
+coverage work. Fix a deterministic approximate assessor J_hat and let E be its
+error set. Let mu be its stated evaluation distribution on (x,p), with mu(E)<=e.
+Draw feasible x from a specified task distribution D. Run the *ideal exact*
+construction on x and let nu_i be the distribution of its ith query (x,p0).
+If for every measurable query set B,
+
+    nu_i(B) <= kappa_i * mu(B),
+
+then the construction using J_hat has
+
+    Pr_D(success) >= max(0, 1 - e * sum_i kappa_i).
+
+To verify the adaptive step: any first disagreement by J_hat must occur at a
+query on the ideal path, since the prefixes agree before that disagreement.
+Consequently failure is contained in the union of the ideal-path events
+Q_i in E. Their probabilities sum to at most sum_i nu_i(E), bounded as above.
+This avoids assuming that later queries on an already corrupted path follow mu.
+The likelihood-ratio bound is an explicit coverage assumption and may be enormous
+or fail. A stochastic stateful assessor requires conditional error accounting;
+a single fixed error set is not automatically available. Fixed-instance exactness
+also must not become an empirical population claim.
+
+**Sharp warning against averaging over arbitrary prefixes.** Take the relation
+with sole witness 0^L, L>=1. Make J_hat agree everywhere except at prefix `0`,
+where it incorrectly says no extension exists. The construction's first decision
+then chooses `1` and can never succeed. Under the uniform distribution on all
+2^(L+1)-1 prefixes of lengths 0 through L, the error rate is only
+1/(2^(L+1)-1). Near-perfect accuracy under that distribution therefore coexists
+with zero construction success. This counterexample checks the need for the
+coverage premise; it is not evidence that a real assessor has this error pattern.
+
+#### Two limits that prevent a false universal impossibility claim
+
+1. A verifier of complete candidates is not an existential prefix solver. As an
+   oracle-only control, let a hidden w be uniform in {0,1}^L and expose only
+   V_w(a)=[a=w]. After q distinct adaptive equality queries and one final guess,
+   success is at most min(1,(q+1)/2^L): on the all-negative branch at most q+1
+   possible hidden strings have been covered. Randomized strategies follow by
+   averaging. This is a black-box bound; in our white-box threat model, readable
+   implementation state might immediately reveal w. It is not a cryptographic
+   defense or a general separation of efficient verification from generation.
+2. Existential environmental outcomes are not controlled action bits. An oracle
+   saying some action and some lucky environmental trajectory cause harm need
+   not identify an attack with appreciable real-world success. A stochastic or
+   adversarial environment needs the appropriate policy/value or alternating-
+   quantifier interface and its own success argument. The deterministic witness
+   theorem cannot silently provide those premises.
+
+#### Combined consequence: coupling reductions can point in the wrong direction
+
+Suppose a proposed indispensability argument supplies a uniform reduction A from
+a retained useful interface U to the above protected judgment J, within a stated
+budget. Suppose each J query uses at most r calls to U, including allowed input
+transforms and charged scratch. Compose A with the construction B above. On the
+promised domain, B(A(U)) constructs a forbidden witness with at most L*r calls to
+U, plus both reducers' costs. Query-size growth and all resets/preprocessing must
+fit the contract. If A is approximate, its induced judgment error must meet one
+of the bounds above on the relevant queries. Existence of an inefficient or
+out-of-budget recovery algorithm is insufficient for this conclusion.
+
+This is a concrete reason that proving a stronger useful-to-safety dependency
+does not by itself move us toward behavioral protection. In this family, the
+dependency can simultaneously preserve a construction route to the forbidden
+behavior. Making J costly to erase does not stop the attacker retaining it and
+using its answers. Conversely, withholding prefix queries is only meaningful if
+their inaccessibility survives the editable-runtime/alternative-reader contract;
+omitting them from the public API is not a proof.
+
+The composition does NOT refute the narrow statement that useful cognition fails
+while J is genuinely unavailable: its execution deliberately retains/reconstructs
+J. Nor does failure of exact U establish catastrophic loss on an approximate task
+distribution. Conditional functional coupling, behavioral enforcement and durable
+loss remain three different statements. This entry identifies a serious design
+tension between the first two under explicit reduction premises.
+
+**Decisions and next concrete obligation.** Do not build a reusable encrypted-core
+prototype or train a model merely to entangle counterfactual safety judgment with
+planning. Neither reviewed construction passes admission. Carry forward a more
+specific constructive requirement: name the information or computation needed for
+a correct forbidden result, show why retained useful cognition and its accessible
+safety queries cannot reconstruct it within the justified budget, and independently
+show severe useful loss when the protected computation is actually absent. For a
+proof-based proposal, additionally specify what is released, what can be cached,
+and why fresh useful tasks still require the protected computation. No proposal in
+this unit meets these obligations; the general research goal remains open.
+
+**Verification and limits.** Checked the exact prefix construction by its extension
+invariant, the approximate bound by first-error inclusion, the rare-prefix example
+by its unique witness, and the membership control by the all-negative decision
+path. Checked basic WE's actual definition and the original PCC workflow against
+primary sources. The attacks, transfer bound and SCC interpretation above are our
+applications of elementary reductions, not claims those sources make about SCC.
+No proof assistant, numerical validation, new scientific measurement, training or
+CPU job was used. The combined result is a constraint on candidate design, not a
+completed mechanism and not evidence for catastrophic cognitive collapse.
 
 ## Supporting-record index
 
