@@ -12341,6 +12341,104 @@ gap before proposing training; do not impose a new trusted query limit merely
 to create that gap. Fresh instances and low native scores alone are insufficient.
 The desired destructive mechanism remains open, not demonstrated or disproved.
 
+<a id="ln-202"></a>
+### LN-202 — 2026-09-20: measure-theoretic direction assessment
+
+**User question.** Assess whether measure theory can provide research direction
+comparable to the earlier information-theory review. No experiment or training
+was requested or launched by this question. Recommendation: use measure-theoretic
+probability and statistical decision theory to sharpen coverage and constructive
+recovery, with computational limits explicit. This is a theoretical assessment,
+not a newly validated mechanism. LN-178 already reviewed Blackwell/Le Cam, and
+LN-194 already derived a density-ratio coverage bound; do not relabel those as
+new discoveries.
+
+**1. Compare retained experiments by the decisions they support.** Blackwell/Le
+Cam comparison is well matched to retained representations and repair. A stochastic
+map from retained observations to the distribution needed for a protected decision
+is a mathematical recovery channel. Approximate simulation in total variation
+bounds the change of any specified loss in[0,1]. The classical framework does not
+charge for executing that map, and an all-decision-problems comparison cannot be
+inferred from a small utility suite. A separating loss can be irrelevant to cognition.
+Reviewed [van Rooyen and Williamson](https://arxiv.org/pdf/1402.4884), the paper
+already used in LN-178, and [Mariucci](https://arxiv.org/pdf/1605.03301), sections1–2.
+The original Blackwell journal page again did not expose readable text; no claim
+of newly inspecting its proof is made.
+
+**Proposed computational formulation, not an imported theorem.** For a finite
+world family theta, let P_theta be the distribution of all retained state/public
+input and Q_theta the desired protected observation or output. Consider
+
+    delta_B(P -> Q) = inf_{K with charged cost <= B} sup_theta TV(K P_theta, Q_theta).
+
+K must be the same algorithm across theta. World-specific advice belongs in the
+retained input and ledger, not in a free theta-dependent decoder. Charge its
+construction, code, retained advice, calls, time and workspace. This restricted
+quantity is a proposed research object; the classical randomization converse does
+not automatically hold for a resource-restricted set of kernels. Reconstructing
+all parent weights is unnecessary if a smaller protected output can be simulated.
+
+The forward implication is constructive: if a particular charged simulator has
+TV error at most delta and a subsequent decision rule has loss in[0,1], composing
+them changes expected loss by at most delta for each theta. Costs of both programs
+must fit the total budget. This follows directly from the defining TV bound on
+bounded expectations. The unproved SCC step remains showing that actual useful
+competence forces such an efficient protected simulator, with quantitatively
+severe consequences on the intended useful workload. No computational lower bound
+or catastrophic loss follows from defining delta_B.
+
+**2. Change of measure makes the coverage requirement explicit.** Let mu be the
+ordinary query distribution and nu the distribution required by a specified
+recovery adapter, on the same query/error space. If nu is absolutely continuous
+with respect to mu and dnu/dmu<=C almost everywhere, then for any measurable
+error event A,
+
+    nu(A) <= C mu(A).
+
+This is an immediate consequence of the density formula in the
+[Radon–Nikodym theorem](https://ocw.mit.edu/courses/18-175-theory-of-probability-spring-2014/f33e55917467aa3cf5afa57ec32f4a6a_MIT18_175S14_Lecture25.pdf).
+Our2N coefficient in LN-194 is a concrete instance. For example, conditioning on
+a branch with ordinary mass1/10,000 has coefficient10,000. A high average score
+then gives a weak bound on that branch. Where nu has a component singular to mu,
+its mass must be accounted for separately: the ordinary average supplies no
+control over errors there. Calling an event measure zero is always relative to
+a particular measure, not proof an adversary cannot choose it.
+
+For agents, editing the policy can change which states/trajectories are visited.
+Thus the coverage measure must include the edited policy and admitted environment
+choices, or use an explicitly justified family of measures. A benchmark rebalance
+alone does not make the protected computation indispensable. This is a coverage
+check, not a new protection mechanism. Do not transfer errors between unrelated
+losses without a recovery reduction linking them.
+
+**3. Sigma-fields and filtrations distinguish retained information from repair
+history.** Under finite or standard measurable models, represent total retained
+observations E by sigma(E). An invertible measurable recoding with measurable
+inverse preserves this field. A protected bit measurable with respect to it is
+recoverable in principle; this says nothing about efficient computation. For binary
+J, the conditional probability E[J|sigma(E)] is the ideal Bayesian prediction,
+not an automatically implementable neural decoder.
+
+During repair, use F_t=sigma(E, transcript through t), including query choices,
+responses and any relevant randomness. This is an increasing information history.
+[Durrett, Probability: Theory and Examples](https://math.duke.edu/~rtd/PTE/PTE5_011119.pdf),
+Theorems4.6.8–4.6.9, supplies conditional-expectation convergence to the prediction
+based on the full history. If J is measurable from that full history, the ideal
+posterior converges to J. There is no finite-time rate or computational guarantee
+in that statement, and no automatic revelation of a nonidentifiable J. An actual
+model may forget, and a computationally bounded model cannot necessarily evaluate
+its ideal posterior. The filtration is the total admitted evidence, not a claim
+that the model retains or uses every observation successfully.
+
+**Priority for continued work.** First make protected recovery an explicit charged
+simulation from surviving learned components. Then audit the measures on which
+that simulation relies and how they change under editing. Use the information
+history to account for repair data rather than quietly treating deletion as
+permanent. The value is a more precise dependency argument and better candidate
+screening. Finite-precision learned computation, a genuine removal trigger and a
+repair-resistant resource gap remain unsolved; measure theory does not provide
+them by itself. No new narrative report or empirical run accompanies this note.
+
 ## Supporting-record index
 
 This is an inventory of historical evidence, not a second current narrative.
