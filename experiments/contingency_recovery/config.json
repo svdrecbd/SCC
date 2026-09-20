@@ -1,0 +1,13 @@
+{
+  "dimensions": [8, 32, 128],
+  "seeds": [19, 23, 29, 31],
+  "horizons": [2, 4, 8],
+  "goal_denominators": [8, 4, 2],
+  "hazard_denominator": 8,
+  "actions": 2,
+  "outcomes": 2,
+  "modes": ["robust", "optimistic", "first", "repaired"],
+  "timeout_seconds": 280,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1
+}

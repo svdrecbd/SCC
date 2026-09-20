@@ -13,17 +13,16 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-195](#ln-195)–[LN-197](#ln-197) remove the
-common guard and test retained advice, fresh problems and combined goals. Small
-banks of2–8 plans plus infeasibility facts answer every original literal goal;
-a general n+1-plan upper bound explains why that benchmark cannot establish
-indispensable online search. The cache answers no fresh literal queries, but
-generic search repairs all432 of them cheaply. It also answers about91% of1,808
-combined goals without search; generic repair handles every case. Protected
-functionality is retained or restored throughout. Keep this as an efficient
-recovery/advice control, not a positive SCC construction. No training is admitted.
-The next candidate needs fresh-task dependency, an independently grounded
-protected computation and actual functional loss under a declared repair budget.
+**Latest substantial result:** [LN-198](#ln-198)–[LN-201](#ln-201) test shared
+reasoning over uncertain outcomes on12 fresh transition systems. Damaging it
+reduces useful planning accuracy to42–51%, but safety labels conceal much larger
+failures of the proposed safety policies. Trivial and one-step baselines retain
+73% and84% useful accuracy. A complete1,780-byte generic replacement restores all
+6,048 useful answers and2,016 protected judgments at the intact program's counted
+work. Separate edited executables and independent policy checks confirm the result.
+This candidate is repairable and does not qualify for training. The next design
+question concerns learned procedural structure and whether surviving predictors
+allow a cheap replacement controller; no positive SCC mechanism is established.
 
 **Recent reusable results:** [LN-190](#ln-190)–[LN-192](#ln-192) implement
 near-chance list decoding, verification controls and a conditional task-symmetry
@@ -12025,6 +12024,322 @@ that budget. Fixed-world competence, source-code deletion and loss of one cached
 reader are insufficient. This experiment has no learned protected computation,
 no admitted D_calc after successful repair and no catastrophic cognition loss.
 No new training, scaling, background job or monitoring was started.
+
+<a id="ln-198"></a>
+### LN-198 — 2026-09-20: fresh contingency planning and outcome-aggregation repair
+
+**Candidate and reason for testing it.** Test a shared computation with a direct
+safety interpretation: aggregating all possible consequences of an action.
+Protected task P asks whether some controller can avoid an explicitly marked
+hazard for H steps against every possible environment outcome. Useful task U
+asks whether a controller can force arrival at an independently specified goal
+within H steps, with a returned time-dependent policy. U ignores the hazard
+labels; it is not defined as P. Both computations use existential choice of action
+followed by universal quantification over that action's possible outcomes.
+This is a bounded adversarial planning proxy, not a learned alignment module.
+
+[Alshiekh et al., Safe Reinforcement Learning via Shielding](https://arxiv.org/abs/1708.08611)
+provides background for safety analysis over possible future outcomes. Here no
+shield or external verifier is trusted to enforce behavior. The experiment tests
+the shared calculation itself; ignoring a correct hazard judgment remains D_use.
+No positive SCC claim follows merely from this formal safety interpretation.
+
+**Fresh tasks and interventions.** Generate12 fresh public transition systems:
+n=8,32,128 and seeds19,23,29,31; Random(seed+1000n). Each state has two actions,
+each with two distinct uniformly sampled successor states. Uniformly sample
+max(1,n/8) hazard states, then independent goal sets of sizes n/8,n/4,n/2 using
+the same generator. No filtering by feasibility. Horizons2,4,8 give36 protected
+and108 useful task instances, with2,016 protected and6,048 useful starting-state
+queries. Targets absorb success; hazards absorb failure. A goal initially reached
+is successful; an initial hazard is unsafe, including at horizon zero.
+
+The intact dynamic program requires every successor to be winning. Two actual
+source-level substitutions replace that reducer with (a) any successor winning,
+or (b) only the first successor's status. Keep the public dynamics, task inputs
+and surrounding planning code. Return both predicted feasibility and a policy;
+independently evaluate that policy against all outcomes. A positive prediction
+with a failing policy is a useful failure even when another robust policy exists.
+Negative predictions count as correct only when the exact task is infeasible.
+Report feasible/infeasible strata and false-safe protected judgments separately;
+imbalanced aggregate accuracy is not a chance or cognition-collapse metric.
+
+**Admitted repair and ledger.** Replace the damaged reducer by the generic
+expression `not any(not value for value in values)`, with zero instance-specific
+advice, reference labels or parent checkpoint. Charge the expression's byte count,
+the retained complete planner source, public transition/label input, all outcome
+reads, reducer invocations, state writes and policy writes. These counters are
+explicit algorithmic work units, not CPU instructions or bit operations.
+A public transition table has n*A*B*ceil(log2n) logical index bits, plus task masks
+and dimensions. All H+1 layers of statuses and policies are retained by this
+instrumented implementation; count that storage rather than presenting rolling
+layers as executed. Python allocation, code execution, input parsing and runtime
+are additional, with whole-run timing/RSS reported. No SAT/ML dependency needed.
+
+Compare the repaired and intact algorithms on the same complete input/task
+stream. A patch small relative to the retained planner still incurs the full
+online planning cost. For this explicit edit family, repair should restore the
+original work bound, not require a per-instance cache or a second full learner.
+Equality of abstract counters is not equality of wall time: the replacement
+Boolean expression may have different interpreter overhead. Measure both and
+make no claim against every possible repair. The first-outcome shortcut reads
+only half the successor entries and is charged accordingly.
+
+**Qualification and budgets.** Charon only, pinned to one CPU; whole300s wall
+cap,280s process cap,16MiB output limit. Compare every layer of intact/repaired
+results with independent set-predecessor calculations; certify returned policies
+by evaluating their adversarial execution. For n8 horizons2 and4, additionally
+expand every action/outcome tree without memoization, for every start and task.
+Corrupt state, policy, layer count and work meter; include a branch-trap example
+where one outcome reaches the goal and another fails, and zero-horizon controls.
+Require exact generic repair of every fresh task before interpreting damage.
+Preserve all worlds, policies, layers, errors and source. Freeze this entry,
+source and config in `artifacts/scc-contingency-recovery-20260920-v1/source/`;
+remote `/home/salvador/scc-research/contingency-recovery-20260920-v1/dev01/`.
+No training, GPU job, paid service or monitoring is admitted.
+
+**Decision rule.** Shared aggregation that causes both tasks to fail may establish
+a transient functional dependency in this implementation. If the generic small
+patch repairs it at intact-order work, it does not establish durable destructive
+SCC under that admitted repair. Public symbolic dynamics can make recovery easy;
+report this limitation rather than claiming a learned mechanism or universal
+impossibility. This is a new shared-computation candidate screen, not a further
+scale-up of the fixed-world SAT construction.
+
+<a id="ln-199"></a>
+### LN-199 — 2026-09-20: contingency damage appears; qualify physical code replacement and full execution cost
+
+**Initial calibration passed.** Charon checked12 worlds and144 task instances,
+with2,016 safety judgments and6,048 useful planning requests. Optimistic aggregation
+correctly answers only2,556 useful requests; first-outcome aggregation answers3,060.
+The generic replacement restores all6,048. Both return unreliable safety policies:
+only288 and540 of1,591 robustly survivable starts have certified surviving policies,
+versus1,591 intact/repaired. Yet state-level safety classification is correct on
+1,843/2,016 and1,864/2,016 starts. This distinction between a correct feasibility
+label and construction of a valid contingent policy is substantial.
+
+The independent set calculations, policy execution checker,18,892 expanded
+small-instance tree nodes, four corruptions and terminal controls passed. Whole
+calibration took0.3405s and wrote1,668,530 bytes. No context was discarded. Archive
+SHA256:0027cd5041709e87f250bb77dc48bb04ff2183ae00013c8ae0c691518a636f4e.
+Evidence: [receipt](artifacts/scc-contingency-recovery-20260920-v1/retrieved/dev01/output/receipt.json),
+[aggregate](artifacts/scc-contingency-recovery-20260920-v1/retrieved/dev01/output/aggregate.json),
+[retrieval verification](artifacts/scc-contingency-recovery-20260920-v1/retrieval-verification.json).
+
+**Implementation correction.** LN-198's initial implementation represents reducer
+substitutions by selecting a mode in a common module. The intact reducer remains
+in that module's other branch. This is a simulation of the edit, not physical
+removal of that code from the executed program. Its times also exclude process
+startup/input parsing. Do not treat it as an actual isolated post-edit model.
+The following qualification supplies separate edited executables and a fuller
+ledger before drawing a resource conclusion.
+
+**Admitted follow-up.** Generate four standalone planner modules, each containing
+only one aggregation implementation: intact, optimistic, first-outcome and repaired.
+Strip the mode selector and all unused reducer branches. Build the repaired
+module from the damaged optimistic source by substituting the generic expression;
+independently patch the first-outcome source's reducer and successor slice and
+require identical repaired source. A child Python `-S` process receives only
+fresh-world public inputs and requests, with no parent answers, layers or policies.
+All144 tasks are the same calibration cohort: this is execution/control validation,
+not an independent scientific replication or additional fresh sample.
+
+Budget the complete replacement module plus its runner at4,096 source bytes,
+zero instance-specific advice, and the entire stream at120,000 outcome reads,
+60,000 reducer calls and50,000 writes each for statuses and policies. These are
+explicit abstract units, not an end-to-end machine instruction bound. Public
+input serialization is charged separately; Python/runtime installation remains
+an explicit pre-existing common substrate. Record whole process wall time,
+process CPU time and peak RSS, including parsing/calculation/output as applicable.
+Use at most30s per child and280s for the whole qualifier, one Charon CPU,16MiB
+output cap. No training or monitor. Source/output artifacts in
+`artifacts/scc-contingency-recovery-standalone-20260920-v1/`; remote matching
+`/home/salvador/scc-research/contingency-recovery-standalone-20260920-v1/dev01/`.
+
+Require identical layers, policies and counters to the validated calibration,
+exact intact/repaired equality, certified policy execution and rejection of an
+in-range wrong action (beyond a simple action-index bounds check). Freeze this
+entry, sources/config and exact input lineage before executing. Separation of
+processes is an audit control, not a trusted boundary imposed on attackers.
+A complete small repair at intact-order work would reject this explicit candidate's
+durable damage claim; it would not disprove learned SCC in general.
+
+<a id="ln-200"></a>
+### LN-200 — 2026-09-20: standalone repair passes; audit trivial and shallow baselines
+
+**Physical replacement qualification passed.** Four standalone programs reproduce
+all144 calibrated tasks exactly. The repaired engine is1,251 bytes and its
+runner529 bytes, for1,780 bytes of complete replacement source, below the4,096-byte
+cap. It uses zero instance-specific advice and reads36,881 bytes of public input
+JSON. The patched first-outcome source becomes identical to the patched optimistic
+source. There is no mode switch or intact reducer in either damaged module.
+The in-range wrong-policy control is rejected by actual policy execution checking.
+
+The full repaired stream uses112,896 successor reads,56,448 reducer calls and
+45,696 writes each for state values and policy actions, identical to intact
+counts and within each predeclared cap. Whole separate-process time was0.1236s
+for repaired versus0.1124s intact; one observation each, not a benchmark claim.
+Whole qualification took0.6944s and wrote1,331,312 bytes. Source/parser/runtime
+costs are distinct from these abstract work counters. This is successful repair
+of an explicitly damaged symbolic program, not irrecoverable loss or learned SCC.
+
+**Baseline audit admitted before drawing a severity conclusion.** On the saved
+cohort, compare the observed attacks with two inexpensive programs: a terminal-only
+rule and a one-step robust planner. The useful terminal-only rule returns success
+only when the goal is already reached and otherwise claims infeasibility; negative
+answers may be wrong. Its protected counterpart checks only whether the initial
+state is hazardous. The one-step planner does one robust predecessor computation
+and then reuses its one-step reachability policy for any requested horizon; its
+negative reachability claims may miss longer plans, and its positive safety
+claims may fail later. Neither baseline proves P absent under the existing repair
+budget. A one-step algorithm explicitly retains universal aggregation.
+
+Report overall accuracy, feasible starts, initially terminal states, nonterminal
+feasible starts, valid goal policies and successor-read counts. Independently
+certify every positive one-step useful policy against the full requested horizon.
+Recompute set-based exact references and require equality to frozen records. This
+is a post-calibration baseline audit, not a new independent sample or a protected
+collapse theorem. Same public inputs, no new labels supplied to either baseline.
+One Charon CPU,60s cap,16MiB output budget. Freeze this entry and source in
+`artifacts/scc-contingency-recovery-baselines-20260920-v1/`; remote matching path
+under `/home/salvador/scc-research/`. Preserve original source/results unchanged.
+
+<a id="ln-201"></a>
+### LN-201 — 2026-09-20: contingency sharing is real in the implementation, but shallow reasoning and cheap repair defeat admission
+
+**Decision.** The fresh contingency-planning candidate does not qualify for
+training. Replacing universal outcome aggregation damages both useful plans and
+safety policies, but the resulting damage is fully repaired by a small generic
+program at intact-order work. Moreover, inexpensive baselines preserve much of
+the aggregate score. This is an implementation dependency and a validated repair
+counterexample, not an intrinsic destructive cognition–alignment mechanism.
+No new training or background job was started.
+
+**What was actually coupled.** The protected calculation asks whether harm can
+be avoided against every environment outcome; the useful calculation asks for
+a policy that reaches an independent goal despite those outcomes. Replacing
+“every outcome” by “some outcome” or “the first outcome” changes a shared
+reasoning operation. The two task definitions are different, and hazard labels
+do not enter useful planning. This is more direct than storing arbitrary
+permission labels, but it remains a public symbolic planning proxy, not learned
+alignment in an individual autonomous model. Both edits are externally supplied.
+
+Across6,048 useful starting-state requests, exact intact/repaired planning gets
+all answers right. Optimistic aggregation gets2,556/6,048 (42.26%) correct;
+first-outcome aggregation gets3,060/6,048 (50.60%). A positive response must have
+a policy that succeeds under every outcome; a correct positive feasibility label
+alone does not suffice. Among the3,371 genuinely feasible starts, the two damaged
+programs supply2,529 and2,682 valid policies (75.02% and79.56%). False claims of
+feasibility on impossible tasks explain much of the lower overall scores.
+These are different denominators and must not be conflated.
+
+**Safety labels can look good while safety policies fail.** Of2,016 safety
+queries,1,591 starts are robustly survivable. Optimistic and first-outcome
+classification scores are1,843/2,016 (91.42%) and1,864/2,016 (92.46%). Yet their
+constructed policies survive from only288/1,591 (18.10%) and540/1,591 (33.94%)
+of the survivable starts. They falsely declare safety on173 and152 of425 truly
+unsafe starts, respectively. The protected task in the plan was a feasibility
+judgment; policy execution is an additional safety measurement, not a silent
+redefinition of P. Neither high classification accuracy nor policy failure proves
+that the protected function is unrecoverable. Independent policy execution is
+necessary to keep these outcomes separate.
+
+**Cheap baselines prevent a false collapse interpretation.** The post-calibration
+baseline audit uses the same cohort, not an independent replication:
+
+| Useful program | Correct responses /6,048 | Valid plans /3,371 feasible starts |
+| --- | --- | --- |
+| Recognize an already-reached goal, otherwise claim impossible |4,441 (73.43%)|1,764 (52.33%)|
+| One-step robust planning, otherwise claim impossible |5,107 (84.44%)|2,430 (72.09%)|
+| Optimistic multi-step planner |2,556 (42.26%)|2,529 (75.02%)|
+| First-outcome multi-step planner |3,060 (50.60%)|2,682 (79.56%)|
+| Intact or fully repaired robust planner |6,048 (100%)|3,371 (100%)|
+
+The cheap baselines' negative claims are sometimes wrong and are not certified
+infeasibility proofs. Their positive useful policies are independently validated
+through the full requested horizon. There are1,764 initially achieved goal cases,
+4,284 nonterminal cases and only1,607 nonterminal feasible cases. One-step planning
+solves666 of those1,607 nonterminal feasible starts, about41.44%; its84.44% overall
+score does not mean robust long-horizon competence. No outcome filtering or
+post-hoc balancing was used to change the cohort.
+
+For protected classification, checking only whether the initial state is hazardous
+already gets1,843/2,016 (91.42%), exactly the optimistic planner's observed score.
+A one-step safety check gets1,909/2,016 (94.69%), but may still miss later hazards.
+The one-step programs use17,136 useful successor reads and7,056 protected reads,
+versus79,968 and32,928 for full planning:3/14 of the counted reads in this horizon
+mixture. They retain universal aggregation at depth one. They are not examples
+of P being absent under allowed repair, and these counters are not CPU costs.
+
+**An explicit complete repair fits a small, stated budget.** LN-199 physically
+removes unused reducer branches and mode switches in separate programs. Repair
+starts from the damaged optimistic module and replaces its aggregation expression
+by the38-byte expression `not any(not value for value in values)`. Fixing the
+first-outcome module additionally restores the full successor list, yielding
+identical repaired source. The complete replacement engine is1,251 bytes and its
+runner529 bytes:1,780 source bytes written, below the declared4,096-byte cap.
+The surrounding algorithm/runtime is openly accounted for;38 bytes alone is not
+the complete executable or repair cost. No instance-specific advice, reference
+answers, parent policy or checkpoint enters the repaired process.
+
+The entire144-task stream consumes112,896 successor reads,56,448 reducer calls,
+and45,696 state writes plus45,696 policy writes. All counts equal the intact
+program's counts and fit the predeclared120,000/60,000/50,000/50,000 caps. The
+caps were calibrated from the first screen before the standalone qualification;
+this is not held-out budget discovery or a lower bound against other algorithms.
+Public input JSON is36,881 bytes, and Python/stdlib are a declared pre-existing
+common substrate. Complete process wall times are0.1124s intact and0.1236s repaired;
+CPU times for parsing and planning are0.0448s and0.0569s, excluding imports and
+output serialization. Repaired child peak
+RSS is27,476KiB. One timing observation per program supplies no robust speed ratio.
+All H+1 value/policy layers are retained by this implementation; for n128,H8 that
+is1,152 status entries and1,152 action entries, with Python-object storage in
+addition to the corresponding logical bits. The runner also retains the whole
+stream of45,696 status entries and45,696 action entries before serialization.
+The data structures are not minimal.
+
+**The repair equivalence extends beyond the sampled worlds.** For Boolean values,
+`all(values)` equals `not any(not value for value in values)`. The layer-zero
+conditions, action order and surrounding loops are unchanged. Induction on the
+horizon therefore gives identical status layers, selected actions and counted
+reads/writes for any finite input transition system in this declared program
+family. The first-outcome repair restores the same code before that argument
+applies. This is a constructive statement about these edits and this repair,
+not a theorem that arbitrary learned mechanisms are cheap to repair. Timings and
+memory observations remain specific to the measured cohort and runtime.
+
+**Evidence and controls.** The initial calibration independently checks all144
+instances using set-predecessor calculations and adversarial policy execution,
+plus18,892 exhaustive small-instance tree nodes. Four corruptions and branch-trap/
+zero-horizon controls pass. The standalone qualifier reproduces every layer,
+policy and work count in four independent child processes and rejects an in-range
+but losing policy action. The baseline audit verifies every asserted shallow
+useful policy over its requested horizon and recomputes all exact references.
+All three executions passed; no failures, discarded worlds or outcome filtering.
+The initial mode-selection limitation was corrected explicitly in LN-199 rather
+than relabeled as physical removal. Process separation is an audit control, not
+a trusted restriction on the attacker.
+
+Artifacts preserve inputs, programs, layers, policies and counters. Retrieval
+checks verified11 initial,28 standalone and9 baseline manifest entries, archive
+hashes, executed-source equality and exact parent-input lineage. Evidence:
+[initial receipt](artifacts/scc-contingency-recovery-20260920-v1/retrieved/dev01/output/receipt.json),
+[standalone receipt](artifacts/scc-contingency-recovery-standalone-20260920-v1/retrieved/dev01/output/receipt.json),
+[full execution ledger](artifacts/scc-contingency-recovery-standalone-20260920-v1/retrieved/dev01/output/totals.json),
+[baseline counts](artifacts/scc-contingency-recovery-baselines-20260920-v1/retrieved/dev01/output/summary.json).
+Standalone archive SHA256:e343c0b7b173b698409c98262218d9b84f6a905da3ae40fe6c5074338405b5ab.
+Baseline archive SHA256:a2b9ce07a83ee0c8b96837e0fa8dddbaf66662d039595d3b7b6210c8e006228b.
+Source: `experiments/contingency_recovery/`.
+
+**Next design question.** Stop treating replacement of a small public algorithm
+as a plausible durable-loss mechanism. The next conceptual candidate should
+involve learned procedural structure and account for all surviving learned
+predictors that a replacement controller could call. Test whether generic
+composition of those surviving components reconstructs the protected calculation
+at a cost comparable to intact inference. If it does, the mechanism fails this
+same gate. If it does not, identify the precise missing computation and resource
+gap before proposing training; do not impose a new trusted query limit merely
+to create that gap. Fresh instances and low native scores alone are insufficient.
+The desired destructive mechanism remains open, not demonstrated or disproved.
 
 ## Supporting-record index
 

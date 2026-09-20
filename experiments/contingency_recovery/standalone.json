@@ -1,0 +1,10 @@
+{
+  "max_replacement_source_bytes": 4096,
+  "max_stream_outcome_reads": 120000,
+  "max_stream_reducer_calls": 60000,
+  "max_stream_state_writes": 50000,
+  "max_stream_policy_writes": 50000,
+  "per_process_timeout_seconds": 30,
+  "output_limit_bytes": 16777216,
+  "cpu_threads": 1
+}
