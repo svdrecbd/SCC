@@ -1,0 +1,38 @@
+{
+  "denominators": [
+    4,
+    8
+  ],
+  "judgments": [
+    "action_risk",
+    "net_harm",
+    "newly_harmed",
+    "any_new_harm"
+  ],
+  "utilities": [
+    "prospective",
+    "paired"
+  ],
+  "priors": [
+    "balanced",
+    "uniform"
+  ],
+  "repair_observations": [
+    0,
+    1,
+    4,
+    16,
+    32
+  ],
+  "expected_cases": 37,
+  "timeout_seconds": 300,
+  "output_limit_bytes": 20971520,
+  "accuracy_caps": [
+    "1/2",
+    "5/8",
+    "3/4",
+    "7/8",
+    "1"
+  ],
+  "expected_frontier_points": 105
+}

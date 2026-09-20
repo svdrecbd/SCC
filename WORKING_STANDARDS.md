@@ -47,6 +47,12 @@ justified follow-up exceeds the old aggregate cap.
 
 ## Current documentation and status workflow
 
+On 2026-09-19 the user asked to bundle continued research rather than hand back
+each small screen or status change. Continue through a substantial unit of work;
+return for a substantial finding, a consequential decision, or before initiating
+a training run. Keep necessary in-progress communication concise. This does not
+authorize background monitoring or weaken experiment admission requirements.
+
 The user's 2026-09-12 local / 2026-09-13 UTC instruction supersedes the reset's
 dated-readout workflow. `labnotes.md` is the single living chronological record
 and current assessment. Read it before choosing work. Append meaningful plans,

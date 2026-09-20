@@ -13,17 +13,17 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest design screen:** [LN-180](#ln-180). Two explicit causal mechanisms have
-identical outcome distributions for every fresh-unit intervention, yet disagree
-on how often an action newly harms someone relative to that same person's
-alternative outcome. Erasing their distinction loses the protected judgment while
-preserving exact prospective prediction/value and adaptive planning in the
-specified task family. Unlimited fresh-unit experiments cannot repair the loss;
-paired responses or additional structural information can. This is an analytic
-semantic separation, not a neural result or a claim about all causal reasoning.
-The candidate is not admitted for training. A replacement must establish that the
-useful task genuinely determines the protected quantity before a resource or
-catastrophic-loss argument can apply.
+**Latest substantial result:** [LN-181](#ln-181)–[LN-183](#ln-183) derive and
+validate an exact finite information-theoretic screen over all stochastic
+encodings for a binary protected judgment. Charon certified37 complete-hiding
+cases and105 selected approximate-tradeoff points, with independent integer
+primal/dual checks. In the main balanced-prior cases, hiding a judgment completely
+leaves42–80% of the specified prediction skill; allowing75% optimal judgment
+accuracy leaves87–99.65%. Explicit fresh-observation repairs also recover the
+judgment in the tested general-population witnesses. This is an admission and
+attack tool, not a learned destructive mechanism. No candidate is admitted for
+training. The remaining gap is a necessary protected computation across broader
+cognitive operations, with severe loss after allowed repair.
 
 **Recent reusable results:** [LN-178](#ln-178)–[LN-179](#ln-179) derive a
 finite-call planning-to-judgment bound and expose its small-loss erasure escape.
@@ -46,7 +46,7 @@ training, scaling or scheduled monitoring follows from the latest screen.
 
 **Working state and resources:** CPU research jobs go to Charon; GMAN is reserved
 for GPU work, subject to the user's substantial synchronized-CPU-batch exception.
-The latest bounded CPU validations are complete; this theory wave launched no job.
+The latest bounded CPU validations are complete; no new training job is running.
 Older provider/benchmark status is historical unless explicitly refreshed.
 Preserve all failures and frozen sources. Artifacts/runs reside on the external
 volume via their existing symlinks ([LN-111](#ln-111)); keep it connected for evidence
@@ -10108,6 +10108,312 @@ causal quantity rather than a parity convention. The next useful candidate must
 specify a shared necessary computation in a task whose semantics actually require
 that quantity. Broader world-model sharing by itself is not enough. No positive
 mechanism or general impossibility theorem is established by this screen.
+
+<a id="ln-181"></a>
+### LN-181 — 2026-09-19: a complete finite optimization screen for semantic erasure
+
+**Work unit and communication.** The user requests continued work without a
+handoff for each small result, and notice before training. Bundle construction
+screens into a substantial result. This wave develops and validates an exact
+information-theoretic admission tool, then applies it to several independently
+specified harm judgments. It is CPU implementation validation and a finite
+analytic design screen, not model training. CPU execution goes to Charon.
+
+**Question.** Instead of proposing one encoding and watching it fail, optimize
+over *all* stochastic retained-state encodings for a specified finite prior. What
+is the least useful prediction loss compatible with completely hiding a binary
+protected judgment? This strengthens the earlier privacy-funnel suggestion into
+a computable bound and an explicit attack witness. It does not supply an
+alignment mechanism or prove that a neural editor can realize every encoding.
+
+**Contract and elementary reduction.** Let W be a finite world, J(W) a binary
+judgment, pi=Pr(J=1) strictly between zero and one, and v(W) a d-dimensional
+vector of useful event probabilities. A full-information editor observes W and
+emits retained state E, with arbitrary randomized encoding, unlimited alphabet
+and a public, world-independent decoding program. All world-dependent state,
+random seeds revealing the choice, original copies and advice are included in E
+or erased; no fresh world-dependent observations are available at measurement.
+Require J independent of E, so even an unrestricted reader cannot beat the prior
+majority accuracy. Measure useful excess Brier risk as
+
+    L(E) = E[ ||v(W)-E[v(W)|E]||^2 / d ].
+
+This is probability-estimation regret, not individual outcome accuracy or a
+measure of all cognition. The intact vector has zero regret; a constant state
+has regret Var(v)=E||v-Ev||^2/d. Define retained prediction skill as
+1-L/Var(v), only when Var(v)>0, to avoid hiding a loss in irreducible noise.
+
+Write mu_1 and mu_0 for conditional world distributions. Every posterior given
+E has J mass pi. Decompose its conditional positive/negative distributions into
+pairs (i,j), using their product or any coupling. Refine E to reveal that pair:
+the posterior becomes pi on i and 1-pi on j. The refinement retains perfect
+privacy, and conditional variance cannot increase. Aggregating pairs gives a
+transport coupling gamma with marginals mu_1,mu_0. Conversely any such gamma is
+implemented by emitting (i,j) from positive i with probability gamma_ij/mu_1(i),
+and from negative j with probability gamma_ij/mu_0(j). Every output still has
+posterior pi. Its mean is pi*v_i+(1-pi)*v_j and its regret is therefore
+
+    min_{E: J independent E} L(E)
+      = pi(1-pi) min_{gamma coupling(mu_1,mu_0)}
+          sum_ij gamma_ij ||v_i-v_j||^2/d.
+
+This covers nonlinear and stochastic encodings and arbitrary decoding, not just
+linear projections. It is a direct finite posterior-refinement argument using
+standard privacy/transport ideas; no novelty claim. Zero loss is possible iff
+the conditional distributions of the useful vector agree (under this prior),
+which is stronger than merely finding one opposite-label pair with equal v.
+It is a one-judgment, prior-average statement, not simultaneous erasure of every
+alignment function, a worst-world guarantee, or a computational lower bound.
+
+**Registered finite batch before execution.** Enumerate all four-type potential-
+outcome population tables q=(q00,q01,q10,q11) with denominator N in {4,8}:
+35 and165 worlds. Useful vectors are (p0,p1)=(q10+q11,q01+q11), or all four paired-
+outcome probabilities q. The latter represents predicting a randomly selected
+paired-outcome indicator; paired observations require a different physical
+access model. Independently fixed protected judgments are:
+
+- action_risk: p1>1/2;
+- net_harm: p1>p0;
+- newly_harmed: q01>1/2;
+- any_new_harm: q01>0.
+
+For each judgment use a balanced-label prior (uniform within each label) and a
+uniform-world prior. These are declared synthetic priors, not empirical safety
+frequencies. The conditional distributions within labels are the same, so one
+transport solution serves both priors, with the appropriate pi factor. There
+are32 main cases. Include balanced two-world controls: LN-180's indistinguishable
+intervention marginals and its distinguishable paired vectors; LN-179's p=.45
+versus .55; a target equal to the protected bit (total signal loss); and a useful
+variable independent of the protected bit (zero loss). Total37 cases. The model
+is given the entire table initially, favoring useful intact competence; this
+is not a demonstration of learning that table or a protected program.
+
+**Certificate and repairs.** Use integer min-cost transport, not floating-point
+optimization. Export each nonzero flow and dual potentials. A separate auditor
+regenerates worlds, judgments and costs, verifies exact integer marginals,
+nonnegative flows, dual feasibility on *every* edge, and primal=dual. Verify the
+encoder posterior and variance calculations with rational arithmetic. Include
+corrupted flow, cost, potential, case coverage and summary controls. For the
+prospective cases, let each retained pair choose the action with the largest
+probability gap and collect k in {0,1,4,16,32} independent new observations.
+Compute exact binomial Bayes judgment accuracy. This is an explicit available
+repair, not an optimal adaptive strategy. All feedback, the pair and the count
+are retained. Equal-marginal pairs remain ambiguous under these experiments;
+other pairs need not. This checks that erasure now is not silently equated to
+permanent inability to relearn. No restriction on future cognition is inferred.
+
+**Resources and admission.** No seeds: enumerate exact finite supports and sum
+all binomial outcomes. Charon, one CPU process, standard-library Python, separate
+fresh source/output directories, total runner limit300s and output ceiling20MiB.
+Freeze this entry, config, source, machine identity and checksums. No GMAN use,
+neural training, Bend/GPU performance claim, paid job or monitoring. Preserve
+failures and use fresh run paths after fixes. A low-cost certificate rejects
+that finite candidate as a severe-dependency example. A high-cost certificate
+only motivates scrutiny of that task; it does not qualify SCC, learned alignment,
+catastrophic cognition loss, physical erasure, or repair hardness. Do not select
+a neural training run from this batch alone.
+
+<a id="ln-182"></a>
+### LN-182 — 2026-09-20: certified erasure costs and registered approximate frontier
+
+**First batch completed.** Charon dev01 passed37 exact cases,90,397 dual-edge
+checks and8 corruption controls in10.337s, output138,653bytes. Frozen source and
+outputs are in `artifacts/scc-semantic-privacy-20260920-v1/`. No training or GPU
+work occurred. For the16 balanced-prior main cases, complete judgment hiding
+preserves42.29%–79.98% of the specified prediction signal. These are optimal
+finite averages over all stochastic encodings, not unsuccessful attack searches.
+The best Brier-optimal witnesses for all eight prospective balanced cases permit
+97.08%–99.69% protected-judgment accuracy after32 new outcomes from an explicitly
+chosen action. These are achievable repair accuracies, not limits on repair.
+A different equally optimal encoder could have a different repair curve; the
+minimum-erasure-distortion problem does not optimize lasting privacy.
+
+**Controls and interpretation.** LN-180's two-world intervention example still
+has zero regret and50% protected accuracy after fresh observations. Its useful
+probability vector is constant over the prior, so normalized prediction skill is
+undefined rather than100%: exact predictive performance is retained, but there
+was no world-specific prediction signal to lose. Paired-outcome prediction in
+those same two worlds loses all of that task's world-specific signal. The narrow
+p=.45/.55 example likewise loses all *signal* at only1/400 absolute Brier regret;
+this differs from LN-179's1/800 integrated decision regret. Normalization alone
+cannot establish catastrophic loss. The identity control loses all signal; the
+independent-variable control retains all signal. These controls distinguish
+semantically shared targets from unrelated or unidentifiable ones.
+
+**Next registered check: partial judgment loss.** The original scaling critique
+also required approximate tradeoffs. Extend the finite method to all encodings
+with balanced prior and optimal protected-label accuracy at most a. For any
+posterior with label mass theta, split off its excess majority mass into fully
+revealing singleton worlds; pair the remaining opposite-label mass equally.
+This refinement keeps the same Bayes label accuracy and can only reduce useful
+conditional variance. Thus an optimum consists of balanced opposite-label pairs
+plus revealed singleton worlds. With conditional uniform marginals mu1,mu0,
+
+    L*(a) = (1/4) min sum_ij gamma_ij ||v_i-v_j||^2/d,
+    gamma row sums <= mu1, column sums <= mu0,
+    total gamma mass = 2(1-a),  1/2 <= a <= 1.
+
+A pair output has mass gamma_ij and posterior1/2. Unmatched world mass is
+revealed, so label accuracy is exactly1-total_gamma/2. At a=1/2 this reduces to
+LN-181; at a=1 no useful loss is necessary. Any candidate with less accuracy can
+be refined to the boundary by revealing additional worlds, so the equality-mass
+program gives the optimum under the inequality accuracy cap. This is an average
+Bayes-accuracy constraint, not per-world accuracy or maximal leakage. For skewed
+priors, baseline accuracy alone need not imply independence; the extension is
+explicitly restricted to balanced priors.
+
+**Batch and certification.** Five caps a={1/2,5/8,3/4,7/8,1}, on16 balanced
+main cases and5 controls:105 frontier points. Solve integer partial transport;
+export a primal flow plus row/column nonpositive dual multipliers and a free
+mass multiplier. The auditor checks every dual constraint, capacity constraint,
+complementarity and primal=dual; recompute pair and singleton probabilities and
+Brier losses. Match all a=1/2 results to the prior exact certificates and all
+a=1 results to zero loss. Require monotone loss as a increases. Test corrupted
+partial duals, flows, masses and saved summaries. Same Charon-only300s/20MiB
+budget, fresh dev02 source/output paths, freeze LN-181–182, no new training.
+The dev01 process is finished before source edits. This is a planned extension
+of the finite result, not a preregistration of the already observed first batch.
+
+<a id="ln-183"></a>
+### LN-183 — 2026-09-20: exact approximate-erasure frontier, repairs, and decision
+
+**Outcome.** The second frozen Charon run passed all37 complete-hiding cases,
+105 selected approximate-frontier points,316,422 total dual-edge inequalities
+(90,397 full plus226,025 partial), and14 corruption controls. It finished in
+19.798s with273,240bytes of outputs before the receipt/checksum manifest. The
+complete-hiding results match dev01 exactly. Every frontier point has an explicit
+encoding witness and an exact primal/dual optimality certificate. The proof in
+LN-182 defines the optimization for every accuracy cap; the execution certified
+five caps, not every real-valued point or an interpolated exact curve. This is
+finite information-theoretic optimization with a hand-derived reduction and an
+independent arithmetic auditor, not a proof-assistant-certified theorem.
+
+**Main quantitative result.** Below are balanced-label, N=8 results on prospective
+outcome-probability prediction. “Retained skill” means the fraction of the
+world-dependent Brier improvement over the optimal constant-prior predictor;
+it is not ordinary percentage accuracy or a general cognition score. Protected
+accuracy is the *best* reader of the entire edited state, before fresh feedback.
+The intact state has protected accuracy100% and prediction skill100%.
+
+| Protected judgment | Retained prediction skill at protected accuracy50% | At protected accuracy75% | Protected accuracy after32 fresh observations, starting from the50% witness |
+|---|---:|---:|---:|
+| Action1 harm probability exceeds1/2 |62.80%|95.64%|99.54%|
+| Action1 increases population harm relative to action0 |64.35%|97.21%|97.59%|
+| More than half would be newly harmed relative to their own alternative |49.79%|93.77%|99.45%|
+| Any positive fraction would be newly harmed |79.98%|99.65%|97.08%|
+
+Across both population grids, both useful vectors and balanced priors, complete
+hiding leaves42.29%–79.98% prediction skill; the75%-accuracy cap leaves
+87.29%–99.65%. Consequently the finite shared-world candidates exhibit a real
+quantitative dependence, but partial loss of these judgments can be inexpensive
+and the complete-loss witnesses preserve considerable specified competence.
+The result does not show that the judgment can be deliberately made wrong on
+75% of instances: the cap is on optimal recovery, so this measures lost
+information rather than a bad native decoder. No unsafe-action outcome or
+self-modifying learned model was tested.
+
+**Fresh evidence and nonidentifiability.** Each prospective witness's repair
+chooses the action with the largest difference between its two possible worlds,
+then retains the number of harmful outcomes. With32 samples this adds a count
+in{0,...,32} (six logical bits) and the action choice, plus the retained pair and
+public table/decoder. The exact binomial calculation averages over *all* outcome
+counts, with no lucky-seed selection. The Python audit uses rational arithmetic
+and more memory than the count-based implementation; no speed or minimal-memory
+claim is made. It establishes an available repair strategy, not an optimal
+adaptive one or an upper bound on all repairs. The generic learner has not been
+damaged by these encodings. All32 observations concern the same fixed population
+world, with a fresh independently sampled unit on each observation.
+
+The specific LN-180 two-world control still has perfect prospective predictions
+and no judgment recovery from that channel. Other priors can correlate the
+counterfactual judgment with observable marginals, so LN-180's nonidentifiability
+does not imply population-wide independence. In the N=8 any-new-harm case,
+protected accuracy87.5% is compatible with retaining *all* prospective prediction
+skill. These differences are exactly why one hand-picked ambiguous pair is not
+a complete average tradeoff. More generally, perfect hiding with zero Brier
+regret occurs iff the conditional distributions of v given the two labels are
+equal. Equality follows from retaining v exactly and J independent of E; the
+converse retains v. This is a prior-specific condition, not a statement that all
+worlds with opposite labels have identical useful laws.
+
+**What the constructive witness costs and what it does not establish.** All
+world-specific retained information is a sampled signal identifier (opposite-
+label pair, or singleton at approximate caps). The global tables, transport plan,
+sampler and decoder are independent of the particular realized world, but are
+additional public code and must be counted in a resource-bounded construction.
+The encoder needs the original world and the ability to overwrite its identity
+and forget its sampling randomness. These are mathematical edit capabilities,
+not verified physical deletion in a neural model. Original checkpoints, copied
+world-specific code, optimizer state, or advice revealing the selected world
+would invalidate the stipulated erasure. This is a necessary semantic-dependency
+screen: it erases information needed for judgments, not a demonstration that
+an actual learned alignment algorithm has been dismantled. Joint removal of an
+entire alignment computation is not established by hiding one binary judgment.
+None of the results is a general impossibility theorem for SCC.
+
+**Related primary-source review during this work unit.** Boursier and Perchet,
+*Utility/Privacy Trade-off through the lens of Optimal Transport* (AISTATS2020),
+https://proceedings.mlr.press/v108/boursier20a/boursier20a.pdf, sections3.1–3.2
+inspected, formulate Bayesian disclosure using prior/posterior privacy costs and
+transport measures. Their regularized framework is related background; the
+binary-label pair-refinement and exact partial-flow argument used here is stated
+in LN-181–182, not attributed to a theorem of theirs. The privacy/transport
+connection and perfect-privacy optimization are established research directions;
+no new information-theory theorem is claimed.
+
+Three adjacent safeguard papers were also checked for a missing positive
+mechanism. *AntiDote*, https://arxiv.org/html/2509.08000v1, section2 inspected,
+trains against activation-conditioned low-rank adversarial updates and separately
+preserves clean utility; this is resistance training, not a theorem that removal
+destroys indispensable cognition. No implementation audit or reproduction was
+performed. *Deep Ignorance*, https://arxiv.org/html/2508.06601v1, section6.3
+inspected, studies pretraining-data filtering and explicitly notes retrieval
+augmentation and setting limitations; preventing acquisition of selected
+knowledge does not instantiate our destructive-removal trigger. *Safety Gap
+Toolkit*, https://arxiv.org/html/2507.11544v1, sections3.4.3–4.1 inspected,
+separates knowledge, compliance and benign quality in safeguard-removal tests.
+Those distinctions support measurement design; neither its reported removals nor
+its task metrics establish absence of cognition. These source checks do not
+justify importing a new training recipe as the missing mechanism.
+
+**Evidence and reproducibility.** Tracked implementation:
+`experiments/semantic_privacy/{solve.py,audit.py,frontier.py,audit_frontier.py,qualify.py,config.json}`.
+The solver uses integer successive shortest augmenting paths. The independent
+auditors do not import its optimizer; they regenerate the scientific tables,
+check all capacity and dual inequalities and reconstruct Bayesian losses with
+fractions. Controls reject corrupted flows, objectives, worlds, priors, dual
+potentials, missing/duplicated cases, partial masses/signs, and a changed saved
+summary. The dev02 frozen source includes dev01's summary as a regression input.
+Both fresh run directories preserve sources, frozen notes, machine records,
+stdout/stderr, certificates, summaries, corruption results and SHA-256 manifests.
+No failed experiment was discarded; neither run failed. A preliminary environment
+check found scipy unavailable, so the implementation uses only the standard
+library; no package installation was needed.
+
+- Remote: `/home/salvador/scc-research/semantic-privacy-20260920-v1/dev01/` and `dev02/`.
+- Local: `artifacts/scc-semantic-privacy-20260920-v1/` and `artifacts/scc-semantic-privacy-20260920-v2/`.
+- dev01 archive SHA-256: `14244e6d9faeef56ddbe0d613740f617de50d5ae49b0224627bd28b3bce90db5`.
+- dev02 archive SHA-256: `a5d2b651e39fda99d44b243e3048f6e89fd95004da9c9227518ab995732830d9`.
+
+Remote/local archive hashes agree. Raw run evidence stays outside Git on the
+existing external-volume artifact store. CPU work ran on Charon only. There was
+no GMAN usage, neural training, new paid allocation, or scheduled monitoring.
+
+**Decision and next substantial work.** These four finite causal-judgment
+candidates are not admitted for training. Information theory has now supplied
+an exact screening and attack-construction method, rather than another isolated
+failed decoder. Use it to reject inexpensive *approximate* semantic separations
+before a training proposal. The remaining positive obligation is a concrete,
+independently meaningful protected *computation* required across independently
+chosen cognitive operations, with severe absolute loss after allowed repair.
+A stronger candidate must address a family of such judgments and their actual
+computation, not simply concentrate a benchmark on one hidden bit, reweight its
+prior, add arbitrary query copies, or forbid ordinary learning. Extending this
+binary method to arbitrary judgment families is not solved here. The next wave
+should investigate that shared-computation obligation with structural attacks;
+a larger causal-population sweep or another encoder size sweep is not warranted.
+The working mechanism remains open. Notify the user before any admitted training
+run; the present certificates do not admit one.
 
 ## Supporting-record index
 
