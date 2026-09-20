@@ -1,0 +1,45 @@
+{
+  "bits": [
+    4,
+    5,
+    6
+  ],
+  "seeds": [
+    19,
+    23
+  ],
+  "aliases": [
+    1,
+    4
+  ],
+  "delays": [
+    8,
+    16,
+    32
+  ],
+  "middle_depth": 3,
+  "round_cap": 100,
+  "query_cap": 100000,
+  "step_cap": 2000000,
+  "warm_steps": 64,
+  "fresh_steps": 32,
+  "task_horizon": 4,
+  "worker_timeout": 60,
+  "output_cap": 67108864,
+  "regimes": [
+    "short",
+    "extended"
+  ],
+  "probe_lengths": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "probe_patterns": [
+    "0",
+    "1",
+    "01",
+    "0011"
+  ]
+}

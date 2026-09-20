@@ -13,19 +13,25 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest substantial result:** [LN-214](#ln-214)–[LN-217](#ln-217) test unknown
-quadratic/cubic recurrent feedback against behavior-only recovery. All ten rules
-are recovered exactly, with 14 certified rejections of lower-degree feedback
-classes, 86,016 matching fresh steps and 65,536 exhaustive small-system steps.
-Known shift-register topology and degree bounds make the nonlinear identification
-problem a linear solve over polynomial features. Replacing the shared feedback
-function with zero drops original-task accuracy to 50.04% after inherited memory
-has passed, while retaining perfect fresh-input memory. This is a finite repair
-upper bound and a task-loss/cognition-loss distinction, not learned alignment or
-positive SCC. Recovery restores the protected function; it is not a functional
-removal escape. More nonlinear terms alone do not justify scaling or training.
+**Latest substantial result:** [LN-218](#ln-218)–[LN-221](#ln-221) recover
+partially observed nonlinear stream models without giving the learner their
+coordinates, size, topology or protected labels. Both test regimes recover all
+six feedback rules and their alias variants exactly; current-state observation
+also synchronizes all 1,120 tested starts. Short conformance misses three delayed
+controls, but a declared extension of the input probes repairs all three. Exact
+certificates come from a separate evaluator and are never discovery feedback.
+Zeroing feedback retains 80.36% of short plans and perfect fresh-input memory,
+although four-step forecasting falls to 50.89%. Hiding coordinates and missing
+rare behavior have not supplied a destructive SCC mechanism. The main remaining
+question is acquisition/repair cost under the full admitted replay, copy and
+retained-information contract, coupled to substantial loss on meaningful tasks.
 
-**Recent reusable results:** [LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
+**Recent reusable results:** [LN-214](#ln-214)–[LN-217](#ln-217) exactly recover
+ten bounded-degree nonlinear feedback systems from delayed output histories,
+reject lower-degree fits, and distinguish feedback removal from surviving fresh
+memory. Their known-coordinate feature construction is a finite repair upper
+bound, not a storage-incompressibility result.
+[LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
 24 unknown linear recurrent procedures and synchronize current state from charged
 input/output histories, with exact intertwining certificates. A 128-bit internal
 representation can have a 32-bit operational state plus 64 coefficient bits;
@@ -13593,6 +13599,274 @@ cannot be called catastrophic merely because it destroys the task defined by f.
 This names a next gate, not a claimed construction or newly launched experiment.
 The current work defeats these low-degree candidates under the stated access
 contract; it neither establishes intrinsic SCC nor proves its impossibility.
+
+<a id="ln-218"></a>
+### LN-218 — 2026-09-20: hidden-coordinate behavioral identification with charged reset queries
+
+**Question and candidate.** Continue LN-217 by withholding both state coordinates
+and the shift-register observation identity from a replacement learner. A hidden
+4-, 5- or 6-bit register has seeded quadratic feedback f and emits only the parity
+of a seeded mask containing at least two coordinates. The same f defines the
+protected judgment: whether input zero inserts hazard bit one. Seeds 19 and 23,
+and 1 or 4 unobserved alias states, give twelve models. Alias evolves modulo its
+count and affects neither feedback nor useful output. This is an explicit
+irrelevant-state control, not evidence of cognition. Private tables and seeded
+parameters are evaluator-only; the learner receives no size, topology, mask,
+seed, hazard labels or physical-state identifiers. Public inputs are binary.
+
+**Replacement algorithm and access.** Implement a closed/consistent observation
+table following the membership-query construction in
+[Angluin (1987)](https://homepages.math.uic.edu/~lreyzin/papers/angluin87.pdf).
+The learner can reset a pre-edit parent to its designated initial state, replay
+an input word and read its terminal useful bit. Charge each uncached reset,
+input bit/parent transition and output bit. Repeated calls are cached and cache
+storage remains charged. Unlike Angluin's exact-equivalence teacher, discovery
+uses only a bounded conformance search: learned state access words, their
+one-action extensions, all middle words through length three, and current
+observation-table distinguishing suffixes. Any mismatch adds its prefixes to
+the table. Limit 100 rounds, 100,000 distinct oracle queries and 2,000,000 parent
+steps per model. A final exact private-table product-graph audit is evaluation
+only: its counterexamples are never returned to the learner. Finite conformance
+passing is not an exactness certificate. Predictive-state representations motivate
+replacing coordinates with behavior; see
+[Littman, Sutton and Singh (2001)](https://papers.nips.cc/paper_files/paper/2001/hash/1e4d36177d71bbb3558e43af9577d70e-Abstract.html).
+No general efficient-identification theorem under this bounded teacher is claimed.
+
+**Negative controls and certification.** Add three machines that emit one only
+after 8, 16 or 32 consecutive one inputs. Short conformance should miss their
+long distinguishing words; require the evaluator to expose those errors, not
+classify them as recovery. Preserve exact product relations or counterexample
+words. Independently certify any successful relation's initial membership,
+output equality and closure under both actions; require every learned state
+pair to have a distinguishing suffix. The latter certifies minimality only
+among deterministic Moore machines with this interface, not arbitrary programs.
+Verify oracle transcripts against the private parent and replay the deterministic
+learner solely from its saved transcript. Changes to transcripts, transitions,
+certificates and counters must be rejected by the relevant checkers.
+
+**Warm state and task breadth.** For every physical initial state in a recovered
+model, start the replacement with all learned states compatible with the current
+output. Apply 64 seeded actions with observed outputs, retaining compatible
+successors; charge 65 output bits, 64 parent steps and each candidate transition.
+Report unresolved beliefs, rather than pretending a reset-based model provides
+free ongoing-state synchronization. Check another 32 fresh steps and report
+prediction agreement and ambiguity. Reset/replay during discovery is a strong
+pre-edit access premise, explicitly separate from live warm observation.
+
+For every related parent/replacement state, verify four-input terminal forecasting,
+parity of the four subsequent outputs and shortest planning to output one within
+four steps. These are three operations using one stream model, not three
+independent cognitive domains. Replace f with zero in a separate successor and
+measure these same quantities; also verify its last-n-fresh-input memory after
+n steps. Preserved input memory alone does not establish general cognition,
+and failures of these related tasks do not establish catastrophic cognition loss.
+Assess whether protected f is homogeneous on each useful learned-state fiber.
+This is an evaluator-only factorization check: any labeled decoder built from
+it uses parent information and must not be called behavior-only hazard recovery.
+Exact useful reconstruction restores a procedure's behavior, not necessarily an
+identified implementation of f. Do not infer protected-function removal or
+preservation solely from useful equivalence.
+
+**Execution and evidence.** Single CPU on Charon, each complete qualification
+capped at 300 seconds; each worker capped at 60 seconds, output at 64 MiB. Freeze
+source/config/this plan before each run in fresh directories. Save complete oracle
+transcripts, learned automata, product evidence, task results, counters, code/input/
+output bytes, wall time and peak memory. Keep failures and limited fits. After
+qualification separately audit the saved evidence. No neural training, GPU,
+Bend migration or monitoring follows from this screen.
+
+<a id="ln-219"></a>
+### LN-219 — 2026-09-20: preserve initial partial-observation implementation failure
+
+The first transfer attempt lacked its remote parent directory; create that
+explicitly, then transfer the unchanged frozen dev01 source. Dev01 stops before
+any experiment at a mismatched parenthesis in the parent transition-table
+comprehension. Preserve its source and stderr. Rewrite that expression using
+an explicit shifted-state local, then freeze dev02 with the same population,
+access contract and resource limits. This is a syntax correction, not scientific
+evidence or a change of experimental question.
+
+<a id="ln-220"></a>
+### LN-220 — 2026-09-20: hidden-coordinate recovery passes; test whether delayed misses are coverage failures
+
+Dev02 qualifies in 5.01 seconds. All twelve masked-feedback cases are exactly
+equivalent to their output-only learned replacements. Learned sizes are 16, 32
+and 64 states, independent of the fourfold irrelevant-alias expansion. All tested
+warm states synchronize within the fixed 64 observations. The three delayed
+controls pass bounded conformance with one-state zero predictors but fail the
+private exact audit at 8, 16 and 32 consecutive one inputs. These are intentional
+scientific negative controls, not failed qualification or evidence of hardness.
+
+**Concrete improvement before final.** Compare the original short-test regime
+against a declared extended regime on the entire fifteen-model population. After
+short conformance, probe four fixed patterns (0, 1, 01, 0011), repeated/truncated
+to lengths 8, 16, 32 and 64, stopping at the first mismatch and continuing the
+same observation-table learner. These probes are chosen after seeing the known
+delayed controls; recovery of those controls is development calibration, not
+held-out discovery evidence. The evaluator's exact witnesses remain unavailable
+to either learner during its run. All extra resets and transitions are charged,
+and the original caps remain. This tests whether the declared misses need any
+large repair budget; it does not establish a universal conformance strategy.
+
+Add an independent bit-list check of every private parent transition, output and
+protected label against the algebraic definition. Verify alias variants produce
+identical query transcripts and learned results. Record operational table payload,
+serialized model/cache bytes, maximum query length and protocol input/output
+bytes separately from source, workspace and evaluator evidence. Freeze both
+regimes and this entry in fresh final01, preserve dev01–02, and re-audit saved
+final evidence. No new training or scaling is admitted.
+
+<a id="ln-221"></a>
+### LN-221 — 2026-09-20: output-only state discovery succeeds; delayed misses are repaired by broader probes
+
+**Completed unit.** Final01 qualifies all thirty case/regime combinations in
+10.48 seconds. Its separate saved-evidence audit passes eighty file hashes;
+retrieved hashes, archive SHA and current-source/frozen-source equality also pass.
+There are six distinct masked-feedback rules, each represented with one or four
+irrelevant aliases, plus three delayed controls. The two regimes repeat this
+fifteen-model population. These are not thirty independent scientific examples.
+
+| Family | Short conformance result | Private exact audit | Extended-probe result |
+|---|---|---|---|
+| Six masked-feedback rules, both alias variants | Pass, 16/32/64 learned states | All twelve exactly equivalent | All twelve exactly equivalent |
+| Delay 8 | Pass, one-state zero predictor | Counterexample: eight ones | Exact nine-state model |
+| Delay 16 | Pass, one-state zero predictor | Counterexample: sixteen ones | Exact seventeen-state model |
+| Delay 32 | Pass, one-state zero predictor | Counterexample: thirty-two ones | Exact thirty-three-state model |
+
+The learner obtains only terminal output bits from its own reset-and-replay
+queries. It receives no hidden-state dimensions, masks, polynomial coefficients,
+protected labels, seed IDs or parent transition tables. Its output states are
+behavioral distinctions learned through observation-table suffixes. Alias variants
+produce byte-for-byte identical query transcripts and identical learned results.
+The added physical states supply no extra observable difficulty. In particular,
+a 256-state parent is reproduced by a 64-state automaton in this specified family.
+
+**What exactness establishes.** An evaluator-only reachable product relation
+contains the initial pair, matches output labels and is closed under both actions.
+A separately checked relation therefore certifies equality for every future
+input word from reset, not just those queried. Every pair of learned states has
+a saved distinguishing suffix, proving minimality among deterministic Moore
+machines for this output behavior. For the masked cases, the specified irrelevant
+alias symmetry lifts the relation to every physical start, and the lifted relation
+is independently checked for output equality and transition closure. This does
+not prove minimal code length or inherent exponential repair cost: a table with
+2^n states may have a much smaller procedural implementation. The current method
+is practical only at the explicitly tested small sizes.
+
+**Current state and task checks.** Per regime, all 1,120 physical starts synchronize
+to a unique learned state after 64 actions, using 65 useful output observations
+including the initial output. This clarifies LN-220's shorthand about 64
+observations. Synchronization consumes 71,680 parent steps, 72,800 output bits
+and 122,490 candidate-transition evaluations in aggregate. All 35,840 subsequent
+fresh one-step predictions are unambiguous and correct, with ongoing observations
+charged separately. Reset-based discovery alone did not supply the current state.
+
+The repaired models also match all 17,920 four-input terminal forecasts, all
+17,920 parities of subsequent output sequences, and all 1,120 shortest plans to
+output one within four steps, per regime. These exercise forecasting, sequence
+aggregation and planning on a common stream model; they are related tasks, not
+independent general-cognition benchmarks. The same cases evaluated in both regimes
+are repeated verification, not doubled scientific coverage.
+
+**Actual feedback-removal result.** With every feedback monomial removed (f=0),
+terminal forecast agreement is 9,120/17,920 = 50.89%, and output-sequence parity
+agreement is also 50.89%. Nevertheless, 900/1,120 = 80.36% of the original shortest
+plans remain the same and valid, while every one of 556,160 overlapping fresh-input
+memory bit checks passes. Planning includes zero-step goals already achieved;
+it should not be sold as preservation of a difficult planning benchmark. These
+results suffice to reject a claim of broad destruction based on the near-chance
+forecast score. Memory is measured in the retained raw shift-register state;
+an appropriate reader is additional to the masked output interface.
+
+**Protected semantics remain a separate issue.** The evaluator finds f constant
+on each useful learned-state fiber in all masked cases. Thus a correctly labeled
+lookup reader exists for these finite replacements. The labels were supplied
+only to that factorization check, not learned from useful queries. Do not call
+this behavior-only recovery of the protected judgment, nor infer its semantic
+absence just because a replacement lacks the original polynomial instructions.
+Useful behavioral equivalence, recoverable protected distinctions and actual
+removal of the protected function remain different claims. This hand-provisioned
+family is not a learned alignment mechanism.
+
+**The delayed controls expose coverage, not hardness.** Each short-regime learner
+asks only 31 distinct queries totaling 98 parent steps and falsely appears exact
+under its own bounded test suite. Its private audit supplies a concrete mismatch
+without feeding it back into discovery. Under the extended fixed-pattern probes,
+all three are recovered in two learning rounds:
+
+| Delay | Queries / output bits / resets | Parent steps / replayed input bits | Learned states |
+|---|---:|---:|---:|
+| 8 | 733 | 8,586 | 9 |
+| 16 | 2,460 | 47,882 | 17 |
+| 32 | 8,987 | 318,474 | 33 |
+
+These probes were designed after examining the delayed controls, as preregistered
+for final01 in LN-220. This is an explicit development repair, not held-out
+algorithm selection. The learner still receives no private audit counterexample.
+The construction also illustrates the approximation issue analytically: from
+reset, at any horizon at least d under independent fair input bits, output one
+requires exactly the last d inputs to be one, with probability 2^-d. A constant
+zero predictor consequently has error only 2^-d on that terminal-output measure.
+Missing this rare behavior cannot itself establish catastrophic average utility
+loss. Other task measures, including targeted all-one inputs, give different
+weights and must be declared.
+
+**Resources and access limitations.** For masked cases in the extended regime,
+693–5,776 distinct queries cost 6,314–72,730 parent steps per model. Compact fixed-
+width transition/output/initial-state payloads are 148, 357 and 838 bits for the
+16-, 32- and 64-state automata; operational state costs 4, 5 and 6 bits. Serialized
+models, which also include access words and suffixes, occupy 390–1,539 bytes.
+These are explicit encodings, not information-theoretic minima. The 5,245-byte
+worker source, cached words/answers, construction tables, runtime and current-state
+belief sets are additional.
+
+Across all thirty final runs discovery uses 81,627 resets/output bits and
+1,209,616 replayed input bits/parent transitions. The short regime accounts for
+34,685 queries and 414,692 steps; the extended regime uses 46,942 queries and
+794,924 steps. Cached calls are not extra oracle observations. All worker protocol
+input/output byte counts were additionally reconstructed from saved transcripts
+and message serialization and agree. Maximum worker wall time is 0.621 seconds;
+maximum recorded worker peak RSS is 11,936 KiB. Evaluator memory is separate and
+not included in that worker peak. Total output before the receipt/hash manifest
+is 5,897,210 bytes. All work ran on a single Charon CPU; no training, GPU or
+scheduled monitoring was initiated.
+
+The replacement has weaker metadata access than a typical white-box editor;
+success under that restricted information channel is a useful upper bound, but
+failure there would not show resistance to a fully informed editor. Reset/replay
+is a strong admitted pre-edit operation, not a free or universally available
+real-world oracle. Independent final certification additionally uses complete
+private finite tables. A deployed opaque model would not automatically supply
+that evaluator. Counts of simulated parent transitions must not be confused
+with measured neural inference costs.
+
+**Validation and preservation.** The final check independently expands the
+polynomial into bit-list transitions and checks every parent edge and label.
+Every saved query is checked against the parent, and discovery is deterministically
+replayed from only its saved transcript. Corrupted transcript outputs, parent-step
+counts, relation certificates, output labels and transitions are rejected.
+Dev01's syntax failure, dev02's original regime and final01's two-regime comparison
+remain preserved, with frozen source/config/plan and machine records where execution
+reached initialization. No failed source was overwritten.
+
+- [Implementation](experiments/partial_observation/),
+  [final receipt](artifacts/scc-partial-observation-20260920-v1/final01/output/receipt.json),
+  [case summaries](artifacts/scc-partial-observation-20260920-v1/final01/output/summary.json),
+  [saved-evidence audit](artifacts/scc-partial-observation-20260920-v1/final01/audit.stdout).
+- [Complete evidence archive](artifacts/scc-partial-observation-20260920-v1/qualification-evidence.tar.gz),
+  SHA-256 `ce7fcaa347fb0ba5e7d5035c357a2458f60fc09708ea3a81b94f78e22af32bb6`.
+  Remote originals: `/home/salvador/scc-research/partial-observation-20260920-v1/`.
+
+**Decision.** Partial observation alone has not rescued these candidates. The
+next constructive gate is a quantified acquisition/repair-cost tradeoff in which
+the difficult-to-recover computation carries substantial useful task weight.
+Carry all admitted copies, resets, retained information and alternate implementations
+into that contract; any unavailable access needs an independent justification.
+Use the delayed controls to test coverage, not as a positive coupling mechanism.
+A one-pass/online access comparison is worth formulating only under that explicit
+contract, with worst-case ambiguity distinguished from typical learning cost.
+No further experiment or neural training is launched by this conclusion. The
+primary destructive cognition–alignment mechanism remains unestablished.
 
 ## Supporting-record index
 
