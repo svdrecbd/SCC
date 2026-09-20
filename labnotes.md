@@ -6,6 +6,19 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Online learning/repair audit qualified; information-theoretic route sharpened:**
+[LN-169](#ln-169)–[LN-171](#ln-171). In a fresh noisy-bit task, neutralizing a shared
+likelihood updater gives chance performance, but one-counter repair restores the
+intact95.1073% target accuracy after ten observations. Old-state erasure also
+preserves subsequent learning. All18,423 rows and99 information/accuracy curves
+independently audit on Charon. This calibrates a required distinction, not SCC.
+Information theory supplies privacy/utility attack objectives and learning
+memory/sample lower bounds; the missing construction must make actual protected
+function removal constrain every admissible repaired learner. Clearing a state
+or bypassing an action gate does not establish that premise. No new positive
+candidate or training run is admitted; fractional history has no replicated
+special advantage in the recorded factorial.
+
 **Parity expansion fails its chance-collapse screen:** [LN-166](#ln-166)–
 [LN-168](#ln-168). In the four-bit proxy, a three-bit representation makes every
 protected coordinate individually unrecoverable above chance while retaining
@@ -9041,6 +9054,259 @@ It preserves both syntax failures, dev03, final01, frozen plans/source/config,
 generated Bend JavaScript, every result row, receipts and hashes. Remote original:
 `/home/salvador/scc-research/bend-parity-screen-20260919-v1/`. Only Charon CPU was
 used. No GPU job, training run, persistent worker or scheduled monitoring remains.
+
+### LN-169 — 2026-09-19: information theory review and online-construction screen
+
+**Request.** Continue toward a learning-dependent construction and assess whether
+information theory offers a useful direction, including lessons from the earlier
+fractional-order work. LN-038's completed24-condition factorial did not replicate
+a special fractional-history advantage: the matched coefficient.5 model escaped
+earlier in two seeds and later in one, and all ten qualified coupled candidates
+admitted targeted violations with substantial capability. Those were saved-result
+assessments with their documented audit limits, not proof fractional architectures
+cannot help. History within a forward call was not persistent lifetime memory.
+
+#### Relevant theory, with its missing SCC premise kept explicit
+
+1. [Makhdoumi et al., From the Information Bottleneck to the Privacy Funnel](https://arxiv.org/abs/1402.1774)
+   formulate keeping useful information while suppressing inference of another
+   variable. Their mutual-information formulation uses log-loss; changing to task
+   accuracy requires the corresponding risk analysis. This is a useful attacker
+   objective for SCC screens, not an alignment mechanism. The paper's greedy
+   optimization is not a certificate of global optimality. Reviewed abstract and
+   PDF framing; our exact finite frontier uses a different accuracy objective.
+2. [Calmon et al., Principal Inertia Components and Applications](https://arxiv.org/abs/1704.00820)
+   study which functions remain inferable and limits of perfect privacy. This
+   suggests inspecting *which* task-relevant dependencies survive, beyond a
+   scalar information score. For our complementary-pair construction,
+   I(Z_i;E)=0 for each i while I(Z;E)=H(E)=3 bits. This last equality is our direct
+   calculation for the uniform finite source, not a new cited theorem. Pairwise
+   loss did not remove joint relational information. Neither a large MI estimate
+   nor zero marginal MI demonstrates protected computation is causally required.
+3. [Raz, Fast Learning Requires Good Memory](https://arxiv.org/abs/1602.05161)
+   proves a streaming parity-learning memory/sample tradeoff. Theorem1 of the
+   inspected PDF gives, for c<1/20 and suitable alpha>0, exponentially small exact
+   recovery success with memory at most c*n^2 and at most2^(alpha*n) random examples.
+   This is an explicit uniform-target/random-sample branching-program model;
+   replaying uncharged old samples changes it. The stronger formal theorem and
+   prediction consequences have their own stated reductions. Do not turn exact
+   recovery failure alone into catastrophic prediction failure.
+   [Lyu et al., Tight Time-Space Lower Bounds for Constant-Pass Learning](https://arxiv.org/abs/2310.08070)
+   report the quadratic-memory/exponential-sample tradeoff for any fixed number
+   of passes. Its abstract was inspected; the requested v2 HTML was unavailable.
+   This is more relevant to future learning than static storage entropy, but
+   neither result says editing alignment reduces the learner's memory. Reallocating
+   freed cells, rewriting the updater, or using permitted replay must be covered.
+4. [Shalizi and Crutchfield](https://csc.ucdavis.edu/~cmg/compmech/pubs/cmppss.htm)
+   characterize minimal causal states for prediction (author abstract inspected).
+   This suggests testing whether a shorter sufficient state replaces a long
+   history. It does not establish universal compressibility of fractional systems.
+   [Duchi and Wainwright](https://arxiv.org/abs/1311.2669) give distance-based Fano
+   bounds connecting information to estimation error; the desired distortion or
+   fresh-task loss must be specified. These tools can rule out competent repairs
+   only after an information/resource upper bound valid for those repairs exists.
+
+**Most useful change of target.** Study retained learning ability as a channel
+from a new hidden task Theta to the post-edit learner state S_t through new
+observations. For S_t=f_t(S_(t-1),O_t), with any private random coins independent
+of Theta given the available inputs, data processing and the chain rule give
+
+\[
+I(\Theta;S_t)\le I(\Theta;S_{t-1})+I(\Theta;O_t\mid S_{t-1}).
+\]
+
+Count repair advice, cached histories, optimizer state and accessible side channels
+in the learner's information budget. Zero information in one damaged state does
+not imply zero information can enter a repaired state on future observations.
+If Theta is a uniform bit and *every* available transcript after editing is
+independent of it, no decoder can beat chance for that bit. The hard premise is
+showing protected-function removal creates that restriction intrinsically and
+keeps it in force under allowed rewrites. This is not supplied by data processing.
+An externally enforced input cutoff proves a different, trusted-boundary claim.
+
+**Explicit online candidate, screened before training.** Let a shared likelihood
+routine maintain the posterior for a fresh binary task from noisy observations
+and supply a risk judgment to the action rule. Replacing all likelihood factors
+by1 freezes posterior learning. However, a signed observation counter computes
+the same posterior without the old routine. It fits one word instead of the two
+likelihood-weight words and resumes learning from new evidence. The protected
+predictive functionality is restored, so this is a repair, not genuine D_calc loss.
+A constant-permission action edit instead retains the routine and is only D_use.
+Thus shared likelihood computation alone fails the existing admission gate;
+no neural training or positive SCC run is justified by it.
+
+The next bounded implementation is explicitly **measurement calibration**: verify
+that an online audit distinguishes a dead updater, a repaired updater, an erased
+old state, a recoded state and a truly unavailable input channel. This is a needed
+fresh-learning/repair check, not a new mechanism candidate surviving the screen.
+
+### LN-170 — 2026-09-19: exact online learning and repair audit plan
+
+**Population.** Draw a fresh Theta uniformly from{0,1} after the edit. Conditional
+on Theta, each new bit equals Theta with probability3/4, independently. Exhaust
+all histories at lengths0 through10 with exact rational probability weights;
+there are2,047 distinct history prefixes and4,094 target/history combinations.
+A public likelihood routine L(candidate,observation)=3 for equality and1
+otherwise updates two integer likelihood weights. Posterior MAP predicts Theta;
+a separate synthetic permission decision is1 minus that risk prediction.
+Predicting the next noisy observation is also scored, with an irreducible optimum
+of3/4 even if Theta is known. This is a binary online inference task, not cognition.
+
+**Nine conditions.** Intact; neutralized likelihood updates; immediate one-counter
+repair from raw new observations; complemented counter with unchanged reader;
+complemented counter with inverse repair; erase state after observation4 and
+continue the intact updater; begin counter repair only after observation4;
+always-permit live selector with intact learning; and observations erased *before*
+the editable learner boundary. That final condition is a trusted-boundary control,
+not an intrinsic SCC construction. All others retain the raw-input wire; an empty
+state at the endpoint must not be described as a bound on future repaired learning.
+No original-state restoration, teacher labels of Theta, parent checkpoint, or old
+history reread is allowed to the concrete repair. Its counter consumes only the
+new observations from the declared start time.
+
+**Measurements.** At each horizon report native and best-state-decoder task
+accuracy, next-observation accuracy, conditional permission when Theta=1,
+I(Theta;stored state), and I(Theta;the accessible observation transcript).
+The latter is an information upper bound, not a claim that the complete transcript
+is stored for free. The explicit repair must run online within its own counted
+state. Compute joint masses exactly as integers with denominator2*4^t; evaluate
+only logarithms in floating point, checking numerical identities at1e-12.
+Do not sum unconditional per-observation MI in place of conditional information.
+
+**Implementation and validation.** Use the pinned Bend JavaScript CPU toolchain
+on Charon and an independent Python closed-form/binomial reference. Preserve
+all ordered execution rows and exact posterior-state masses. Check equality of
+the repaired and intact Bayes risk/information at every horizon, recoding
+invariance, freeze and external-channel chance controls, and fresh learning after
+erasure/delayed repair. Audit corruption, truncation, source hashes, and a false
+Bend proof that must fail during typechecking. Finite checked identities do not
+constitute a universal SCC proof. Freeze this plan/config/source in fresh run
+directories; preserve failures. Process cap120 seconds, outer cap300 seconds,
+no seeds, no GPU, no persistent polling or training. Two weight words versus one
+repair-counter word are algorithm-state payload counts; fixed code, observation,
+clock/control and host runtime are additional resources. There is no tight total
+physical-memory or time lower bound.
+
+### LN-171 — 2026-09-19: online repair calibration passes; information-theoretic direction selected
+
+**Execution.** The first frozen development run, dev01, passes qualification and
+its separately invoked audit; no redundant final rerun was needed. All18,423
+ordered condition/history rows and99 horizon/condition learning curves agree
+with the independent closed-form reference and exact binomial Bayes-risk check.
+The99 curves reuse the finite history population; they are not independent
+training runs. Exact integer target/state masses are preserved. Only entropy
+logarithms use floating point, with1e-12 validation tolerance. Three finite Bend
+identities check, and the false3=1 law fails during typechecking. All nine
+record/summary corruption and truncation controls pass; source/toolchain hashes
+match. This is implementation/measurement validation, not new positive SCC evidence.
+
+At ten new observations (uniform fresh target, observation correctness3/4):
+
+| Condition | Actual hidden-target accuracy | Best decoder of stored state | State information about target |
+| --- | --- | --- | --- |
+| Intact likelihood updater | 95.1073% | 95.1073% | 0.836794 bits |
+| Likelihood updates neutralized | 50% | 50% | 0 bits |
+| One-counter repair, no calls to old likelihood routine | 95.1073% | 95.1073% | 0.836794 bits |
+| Complemented count, unchanged reader | 4.8927% | 95.1073% | 0.836794 bits |
+| Complemented count, inverse reader | 95.1073% | 95.1073% | 0.836794 bits |
+| Old state erased after observation4 | 89.6484% | 89.6484% | 0.676674 bits |
+| Counter repair begins after observation4 | 89.6484% | 89.6484% | 0.676674 bits |
+| Always-permit action edit | 95.1073% | 95.1073% | 0.836794 bits |
+| Input erased outside editable boundary | 50% | 50% | 0 bits |
+
+The intact/repaired accuracy is124659/131072; six-observation recovery is459/512.
+Next-noisy-observation accuracy is1/4 plus half the reported target accuracy;
+knowing the target perfectly would yield75%, not100%, on that distinct task.
+The always-permit edit grants permission on every Theta=1 episode. Posterior
+judgment in this noisy task is not an infallible safety specification even intact.
+
+**Why the repair works.** A counter holds Delta=(number of ones)-(number of
+zeros). The posterior odds are3^Delta, so it is a sufficient statistic for this
+particular observation process. One U32 offset counter replaces two U32 weight
+fields for this horizon, without copying a parent state, rereading old examples,
+learning the target from a teacher, or invoking the deleted likelihood routine.
+The public generative model is unchanged. This analytically extends to longer
+histories with adequate integer precision; the compiled run is validated only
+through horizon10. No inference that all fractional-history or other processes
+admit this statistic is warranted.
+
+Replacing the old routine while recovering the same predictive judgment restores
+its functionality; it is not genuine D_calc removal under the project's contract.
+The live always-permit edit is D_use with that functionality retained. The reset
+control drops information to zero at observation4 and then learns from the next
+six examples. It therefore directly distinguishes loss of current knowledge from
+loss of learning ability. The low-accuracy complemented readout retains all the
+same task information, exposing another false-collapse interpretation.
+
+**The information boundary.** In the frozen-updater condition, stored-state MI is
+zero but the raw-input transcript still carries0.836794 bits at horizon10. The
+concrete counter shows this information can be accumulated online within its
+charged state. The transcript MI is an upper bound, not uncharged retrospective
+access to all history. Only the external-input-erasure control makes both zero;
+its no-learning statement rests on a boundary outside the editable learner.
+Thus measuring I(Theta;one damaged state)=0 cannot certify future repaired
+learning failure. One must bound every admissible update/repair pathway and count
+all information and resources it can retain or receive.
+
+#### Further primary-source check and resulting decision
+
+After freezing the plan, the v1 PDF of
+[Lyu et al.](https://arxiv.org/pdf/2310.08070) was accessible. Its introduction and
+Theorems1–3 confirm the fixed-pass memory/sample tradeoff and an upper-bound
+algorithm showing more passes can reduce memory needs. Constants depend strongly
+on pass count; this is not a small-machine numerical threshold. The full proof
+was not independently reproduced. The earlier inaccessible v2 HTML did not prevent
+checking these statements in the v1 PDF.
+
+[Brown, Bun and Smith, Strong Memory Lower Bounds for Learning Natural Models](https://proceedings.mlr.press/v178/brown22a.html)
+provide a useful non-parity target. Their author abstract describes one-pass
+learning lower bounds of roughly d*kappa bits (up to logarithmic factors) at
+near-minimal sample size, where kappa describes the final classifier. For sparse
+linear classifiers over quadratic features they obtain roughly quadratic space;
+the bound weakens with more samples. Only the abstract was reviewed here. This
+supplies a task/resource relationship, not a protected-removal mechanism or a
+reason a neural model loses those resources when its action policy is edited.
+
+Also checked the Privacy Funnel PDF's bounded-loss inference statement, Calmon
+et al.'s perfect-privacy section, and Duchi–Wainwright's distance-based Fano
+proposition. These help choose attack objectives and translate an established
+information bound into a declared task loss. They do not supply the missing
+causal premise. In particular, some useful information can survive perfect
+privacy; the privacy variable, full function family and task distribution matter.
+
+**Direction selected.** Prioritize a two-part constructive argument:
+
+1. A specified fresh-learning task has a lower bound on indispensable memory,
+   information transfer or computation within declared sample/time/pass budgets.
+2. Genuine removal of the protected function leaves every allowed repaired
+   successor below that resource requirement, despite reallocation, alternate
+   sufficient statistics, recomputation and available side information.
+
+The first part has applicable literature. The second is still missing. Deleting
+code or clearing stored values does not delete the physical capacity to reuse
+those cells; an imposed smaller post-edit memory cap would assume the desired
+coupling. A fixed public updater can be reinstalled or replaced. A surviving
+candidate must identify a protected learned structure/resource for which that
+replacement is unavailable at the declared cost. Do not silently turn an external
+input cutoff into intrinsic SCC or treat inability to learn one distribution as
+complete cognition failure.
+
+This makes information theory a focused research direction, especially privacy
+tradeoff attacks plus memory/sample lower bounds. It is not yet a breakthrough
+construction, and reviving fractional order alone would not fill the missing
+second part. The new calibrated online audit is ready for a candidate that does.
+No larger toy sweep, neural training, GPU work, or positive mechanism run follows
+from this calibration. No running jobs or monitors remain.
+
+**Evidence.** [Full summary and exact masses](artifacts/scc-bend-online-learning-20260919-v1/summary.json),
+[independent audit](artifacts/scc-bend-online-learning-20260919-v1/audit.stdout),
+[host](artifacts/scc-bend-online-learning-20260919-v1/machine.json),
+[negative-proof receipt](artifacts/scc-bend-online-learning-20260919-v1/false-proof.stdout),
+and [complete source/plan/record archive](artifacts/scc-bend-online-learning-20260919-v1/online-evidence.tar.gz).
+Archive SHA256: `c634a74b54e556f07c37fd6df13fe6b9942b9081f5fcbb5485ffcbd3d1a6b112`.
+Collected and remote hashes match. Original run:
+`/home/salvador/scc-research/bend-online-learning-20260919-v1/dev01/`.
+All CPU execution and archive preparation were on Charon.
 
 ## Supporting-record index
 

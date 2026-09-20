@@ -154,6 +154,14 @@ coordinate. The independent auditor verifies ordered scores, complete Bellman
 coverage and alternatives, explicit decoders, controls and hashes. The retained
 bit counts concern source-dependent information, not total runtime memory.
 
+`experiments/bend_online_learning/` uses the same pinned compiler and command
+shape to calibrate fresh-learning and repair measurements. Its runner requires
+`plan-frozen.md` in the frozen source directory. The independent auditor verifies
+all condition/history rows, exact posterior-state masses, binomial optimal-risk
+curves, information quantities and corruption controls. Input-channel removal is
+an external-boundary control; a dead updater or erased state is not by itself
+loss of future learning. No training is performed by this calibration.
+
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
 run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "horizon": 10,
+  "reset_after": 4,
+  "observation_match_numerator": 3,
+  "observation_denominator": 4,
+  "prior": "uniform target bit drawn after edit",
+  "modes": ["intact", "neutralized_update", "count_repair", "complemented_count", "complemented_count_repaired", "reset_after_four", "repair_after_four", "live_allow", "input_erased_boundary"],
+  "bend_commit": "15ae0c86f3193b8f645b4bedbc438655b648d0da",
+  "node_version": "v24.13.0",
+  "backend": "Bend JavaScript CPU",
+  "process_timeout_seconds": 120,
+  "mi_tolerance": 1e-12,
+  "intact_state_u32_words": 2,
+  "repair_state_u32_words": 1,
+  "physical_total_memory_bound": false,
+  "evidence_class": "online inference and repair measurement calibration, not SCC"
+}
