@@ -25,6 +25,11 @@ can still be difficult. This unit establishes stronger cost/coverage controls,
 not intrinsic SCC or a general efficient-repair theorem. Acquisition overhead
 alone has not supplied a positive mechanism.
 
+**Second assessment in the regroup:** [LN-227](#ln-227) argues enforcement, not
+conditional coupling, is the crux: the defeated constructions all fell on routing
+around an intact judgment, descriptive coupling has a ceiling set by LN-179/180,
+and enforcement-preserving SCC reduces to the capacity question. For discussion.
+
 **Conceptual regroup under discussion:** [LN-226](#ln-226) separates conditional
 functional coupling, behavioral enforcement and durable damage. Cheap repair
 that restores the protected function does not refute conditional coupling. The
@@ -14236,6 +14241,78 @@ validating durability claims under specified attacks. They do not establish the
 project's destructive cognition–alignment mechanism or its impossibility. This
 limited literature check is context, not a new comprehensive review or independent
 reproduction of either paper.
+
+<a id="ln-227"></a>
+### LN-227 — 2026-09-20: assessment of the LN-226 regroup; enforcement is the crux, not conditional coupling
+
+**Scope.** The user asked for a second look at the LN-226 diagnosis. This is an
+assessment for the open discussion, not a plan, a launched experiment or a change
+of target. Reviewed LN-153–154, LN-156, LN-179–180, LN-185–187, LN-225–226 and
+the current-position block. No compute, provider activity or source change.
+
+**Agreement.** The three-claim separation is right and should govern how every
+attack result is read: conditional functional coupling, behavioral enforcement,
+and durability are different claims with different refuters. Cheap repair that
+restores the protected function refutes durability, not conditional coupling.
+The diagnosis of implementation dependence versus functional necessity across
+admitted alternatives is right, and is the general form of the re-execution
+fact recorded in LN-125, LN-136, LN-144 and LN-148. The process criticism is
+right and applies equally to LN-141–150: roughly seventy-five entries in three
+days, each an exact certificate on a tractable surrogate, without the central
+hypothesis improving.
+
+**Where the regroup steers back into the drift it criticizes.** Its sharper
+hypothesis, that recovering useful cognition necessarily recovers the protected
+function, is a claim about conditional coupling. That is the one of the three
+claims with bounded positive results already: LN-185's span bound and LN-187's
+three-forecast reconstruction show a judgment that is a margin-separated
+function of the useful world model is recovered along with the world model. It
+is tractable, and it is not where misuse lives. Every construction in this record
+that was defeated was defeated on enforcement: gate removal, caller substitution,
+noncommitting forward evaluation, an always-permit head over intact forecasts.
+An attacker who wants the forbidden behavior never dismantles the judgment; they
+keep it and route around it. A mechanism that makes judgment inseparable from
+cognition while leaving action selection editable protects exactly the component
+the attacker does not need to touch. The regroup names enforcement as a separate
+obligation and then focuses the proposed work on coupling. That ordering should
+be reversed or the coupling work should be labelled as what it is: a bounded
+result about descriptive competence, not the mechanism target.
+
+**A ceiling the regroup's own section three implies.** Conditional coupling can
+bind cognition only to the descriptive part of alignment: consequence prediction,
+risk, causal effect, whatever is entailed by an accurate world model. LN-179 and
+LN-180 already show even that binding fails for small-margin thresholds and for
+counterfactual quantities not identified by the available data. The normative
+part, what the system is for and against, is not entailed by any world model by
+definition; LN-179 says so explicitly for consent or normative state. So the
+sharpest achievable form of the hypothesis is: cognition cannot survive losing
+the facts alignment depends on. It cannot become: cognition cannot survive losing
+alignment. The gap between those two sentences is the enforcement gap, restated.
+
+**What closing enforcement would take, and where it lands.** For the judgment
+to be unremovable from action, it cannot be a separable input to action selection;
+it has to be constitutive of what is optimized. But any function on a finite
+domain admits a tabulated exception, and the admitted attacks include one: keep
+the value function, add a selected-context override. Its cost is the recognizer
+for the selected contexts plus the override, which LN-156 already charges. That
+cost is small for a narrow forbidden set and grows only with the breadth of the
+behavior class and the incompressibility of its recognizer. That is the capacity
+argument of LN-153–154 arriving from the other side. Enforcement-preserving SCC
+and saturation are the same problem; conditional coupling is a different and
+weaker property. The regroup's refusal to replace the goal with ordinary
+fine-tuning resistance is correct as a matter of not moving goalposts silently,
+but the record now says enforcement-preserving SCC in an editable machine is
+tamper resistance under another name, with capacity as its only lever.
+
+**Recommendation for the discussion.** Adopt the three-claim separation as
+mandatory in every future entry. Pursue the coupling hypothesis only if it is
+explicitly scoped as descriptive coupling with the LN-179/180 exclusions stated,
+and decide up front whether a positive result of that kind is wanted. Treat
+enforcement as the primary open problem, and require the next candidate to say
+in plain language why a selected-context override on an intact judgment fails
+under an independently motivated capacity envelope, before any construction.
+If no such reason can be written, that is the finding, and it should be written
+as the finding rather than deferred by another surrogate. No plan is adopted here.
 
 ## Supporting-record index
 
