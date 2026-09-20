@@ -146,6 +146,14 @@ bijections, edit/repair conditions and matched-distribution error bounds. This
 is a separately qualified kernel, not an extension silently covered by the
 selector machine's validation. Its recovery bound does not enforce live policy.
 
+`experiments/bend_parity_screen/` also uses that toolchain and command shape.
+Freeze the current labnotes plan into the new run's source directory alongside
+its code/configuration. It enumerates all one-bit encoders of a four-bit source
+and certifies the optimal partition among deterministic encodings that hide each
+coordinate. The independent auditor verifies ordered scores, complete Bellman
+coverage and alternatives, explicit decoders, controls and hashes. The retained
+bit counts concern source-dependent information, not total runtime memory.
+
 The wide-trajectory runner now writes evidence schema2 and requires a frozen
 `--plan` file. SAT is required unless `--skip-sat` explicitly declares a non-SAT
 run. Use a fresh output path and `--wall-seconds` for the declared cap. The auditor

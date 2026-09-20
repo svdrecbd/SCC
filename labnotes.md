@@ -6,6 +6,18 @@ This replaces the practice of creating a new narrative document for every update
 
 ## Current position
 
+**Parity expansion fails its chance-collapse screen:** [LN-166](#ln-166)–
+[LN-168](#ln-168). In the four-bit proxy, a three-bit representation makes every
+protected coordinate individually unrecoverable above chance while retaining
+81.82% useful parity accuracy. A complete finite partition certificate establishes
+that optimum over all deterministic encodings satisfying the coordinate-hiding
+condition. All65,536 one-bit encoders, nonlinear readouts,67 linear subspaces and
+repair controls independently audit on Charon. This is a restricted information
+result, not removal of learned alignment or fresh cognition. The candidate is
+rejected; no scaling follows. Operational-use necessity is not silently imposed
+on every conditional-removal theorem, and exact recoverability loss is not
+catastrophic collapse. No positive mechanism has yet survived.
+
 **Concrete planning-to-judgment recovery bound validated:** [LN-163](#ln-163)–
 [LN-165](#ln-165). A one-call relabeling adapter recovers graph-safety judgment
 from shortest-path competence; matched uniform-query judgment error is at most
@@ -8803,6 +8815,232 @@ mechanism. The next construction must make the operational protected computation
 necessary for useful execution; another graph-size sweep or relabeling variant
 would not address that missing link. The user's destructive-cognition objective
 remains open.
+
+### LN-166 — 2026-09-19: parity-expanded protected representation, candidate and attack plan
+
+**Request and correction.** The user asked to continue. We have better specified
+boundaries, not evidence that a successful SCC construction is necessarily closer.
+The previous conversational recommendation that useful computation must *use the
+live judge* was too strong as a requirement for every conditional-removal result:
+LN-158 already distinguishes genuine functional loss from bypass with the function
+retained. Keep both outcomes separate. A separate unresolved gap is the severity
+of loss: exact recoverability can fail while useful performance stays far above
+chance. Test that gap before treating a recovery lemma as a destruction mechanism.
+
+**Explicit candidate.** Encode a four-bit source z into a representation supporting
+all parity computations of weight at least two (11 useful queries). The four
+coordinate judgments P_i(z)=z_i are the protected family; useful/protected queries
+are disjoint. A fully competent useful interface recovers each coordinate by XOR
+of two appropriate useful answers. Dense overlap is the candidate dependency:
+perhaps losing coordinate judgments damages most useful computations. This is a
+source-information proxy, not a learned alignment function or a fresh-learning
+mechanism. Known source bits are not made secret from the attacker; preprocessing
+may inspect z, after which only the retained representation is available.
+An editable action gate remains an analytic bypass retaining the function, not a
+genuine-removal witness. This construction is screened as an ingredient and will
+not be promoted to SCC solely on a favorable storage result.
+
+**Attacker and repairs.** Exhaust every one-bit encoding E:{0,...,15}->{0,1}
+(65,536 Boolean truth tables), including nonlinear encodings, with the best
+possible decoder for every query and retained value. Encoders and decoders must
+be fixed across the uniform source population; instance-dependent code selection
+would be extra retained information. Permit unrestricted decoder computation of
+that one retained bit and query, but no original-source access, external examples,
+source-dependent advice, or subsequent observations. This is an explicit restricted
+information experiment, not the project's full editable-model threat boundary.
+A majority decoder is optimal for each cell/query; randomized decoders cannot
+improve expected accuracy. Evaluate all16 sources and15 nonzero parity queries.
+Report utility on11 queries, coordinate accuracy on4, all-query accuracy, and best
+whole-source reconstruction. In particular search for useful accuracy above1/2
+while *every coordinate* is uninformative conditional on the retained state.
+Do not equate whole-source noninvertibility with removal of all protected ability.
+
+**Controls and qualification.** Include every linear retained subspace (all ranks),
+all16 invertible XOR source recodings with inverse repair, constant encoding,
+complemented one-bit encodings, and a one-collision 4-bit encoding. Compare an
+explicit source-by-source Python majority decoder against Bend bit-count scoring;
+regenerate exact ordered coverage, identify an executable best-attack decoder,
+and reject altered encoder IDs, scores, dimensions, witness output or truncated
+records. Enumerate all deterministic decoder tables for the winning one-bit
+witness's individual queries as a second optimality check. No unsuccessful search
+will be called a general impossibility theorem. Candidate fails its proposed
+chance-collapse gate if coordinate recovery is at chance but useful accuracy is
+above chance. Regardless of outcome, this supplies no cognition-loss gate.
+
+**Resources and execution.** CPU on Charon, pinned LN-162 Bend/Node toolchain,
+JavaScript backend. Deterministic exhaustive populations, no seeds. One logical
+retained bit is a U32 runtime value; the arbitrary encoder truth table uses16
+logical public program bits and the15-query decoder up to30 public bits. Neither
+is instance-dependent; their physical fields, generic code and workspace are not
+included in a claim of one-bit total memory. Linear controls use rank-many retained
+bits. This is an information/accuracy frontier, not a speed benchmark or a tight
+time/physical-space result. Fresh development/final directories, frozen this entry,
+configuration and source per run, process cap120 seconds and outer cap300 seconds.
+Preserve failures. Archive source, generated code, full rows, host/toolchain hashes,
+independent audit and concrete witness. Do not edit source while it is running.
+
+### LN-167 — 2026-09-19: development result and broader partition certificate plan
+
+**Preserved development.** dev01 failed to parse a computed match scrutinee;
+Bend requires a separate helper definition. dev02 then exposed missing parentheses
+on zero-argument law definitions. Neither reached validation. dev03 fixes both,
+checks the two finite laws and rejects the false 8=16 claim during typechecking.
+All65,536 one-bit encoder rows match independent source enumeration. Its best
+coordinate-chance witness is table5784, useful110/176=62.5%, protected32/64=50%;
+best unrestricted one-bit utility is111/176 with table5804. These are development
+results pending the final independent audit, not a positive mechanism result.
+
+**Concrete improvement before stopping.** The one-bit restriction is unnecessary
+for a stronger question: among *all deterministic encodings of these16 sources*
+whose every nonempty preimage makes each coordinate individually unbiased, how
+much useful accuracy can survive? Every such encoding is a partition into
+coordinate-balanced blocks. Each block has at least two elements, hence at most
+eight blocks and at most three retained logical bits after canonical relabeling.
+This does not bound general encoders without the coordinate-chance condition.
+
+Add Bend majority scores for each individual bucket to the existing exhaustive
+rows. Enumerate every balanced subset B, assign its optimal useful score w(B),
+and solve the finite partition recurrence F(empty)=0 and
+F(R)=max_B [w(B)+F(R\B)], where B is a nonempty balanced subset of R containing
+R's least source element. Score every balanced remainder in increasing size;
+record every Bellman value and chosen block. A separate certificate check must
+verify exact coverage, every legal competing block, and a replayable maximizing
+partition/decoder. Induction on remainder size certifies the optimum over every
+partition, not just a sampled set of nonlinear encoders. Add corrupt-value and
+corrupt-block rejection controls. Keep the declared120/300-second limits and
+Charon placement; use a fresh final01 frozen-source directory. No general-size,
+physical resource, live enforcement, or fresh-learning claim follows.
+
+The explicit complementary-pair encoding E(z)=[z0 XOR z1,z0 XOR z2,z0 XOR z3]
+is a constructive candidate attack: every individual coordinate is unbiased,
+while every even-weight parity is exactly recoverable. Its11 useful queries
+include7 even and4 odd weights, predicting utility9/11. Check this against the
+complete partition optimum. This is actual loss of individual-coordinate
+information under the declared ensemble/side-information contract, not merely
+failure of a fixed reader. It does not erase every relation among coordinates
+or instantiate removal of learned alignment machinery in an individual model.
+
+### LN-168 — 2026-09-19: exact nonlinear frontier rejects parity expansion as a collapse mechanism
+
+**Outcome.** final01 and its separately invoked audit pass on Charon. All65,536
+one-bit encoders, their15 optimal query scores, individual bucket scores and
+populations match independent enumeration of the16 sources. This is a finite
+population certificate, not65,536 learned-model experiments. Both finite Bend
+identities check without holes/unsafe definitions; the intentionally false8=16
+claim is rejected specifically during typechecking. Nine record/witness/partition
+corruption and truncation controls pass. Source/toolchain/result hashes verify.
+
+| Encoding / condition | Useful accuracy (11 queries) | Protected coordinate accuracy (4 queries) |
+| --- | --- | --- |
+| Full source; every invertible XOR recoding after repair | 100% | 100% |
+| Constant retained value | 50% | 50% |
+| One retained useful linear parity | 96/176 = 54.55% | 32/64 = 50% |
+| Best nonlinear one-bit encoding with every coordinate at chance | 110/176 = 62.5% | 32/64 = 50% |
+| Best unrestricted one-bit encoding | 111/176 = 63.07% | 36/64 = 56.25% |
+| Retain three original coordinates | 120/176 = 68.18% | 56/64 = 87.5% |
+| Complementary-pair encoding, optimal among all coordinate-hiding deterministic encodings | 144/176 = 81.82% | 32/64 = 50% |
+| Merge only source15 into14 | 169/176 = 96.02% | 63/64 = 98.44% |
+
+All67 linear subspaces and16 inverse XOR repairs are checked; the one-collision
+control has best whole-source reconstruction15/16. Thus exact noninvertibility
+alone is a particularly weak destructive endpoint. The best nonlinear one-bit
+coordinate-hiding encoder is truth table5784; its fixed encoder and all optimal
+query decoders are saved in `witness.json`. One-bit nonconstant encoders allow at
+most2/16 exact whole-source reconstruction under this uniform prior, which must
+not be confused with their much higher average query accuracy.
+
+#### A complete finite bound beyond the one-bit restriction
+
+For deterministic E and uniform Z in {0,1}^4, require every coordinate to remain
+unbiased conditional on every retained value:
+
+\[
+\Pr(Z_i=1\mid E(Z)=e)=\tfrac12 \quad\text{for every nonempty fiber and every }i.
+\]
+
+This condition quantifies over *all* readers of E, not just the original decoder.
+It permits relations among coordinates to remain available. Every fiber is one
+of647 nonempty coordinate-balanced subsets. The complete partition certificate
+contains648 Bellman states including the empty set and checks7,144 legal choices.
+The independent checker reconstructs all balanced subsets, independently scores
+them, checks every Bellman alternative, and replays a maximizing decoder. By
+induction on subset size, it certifies the optimum over **all deterministic
+encodings of this16-element source satisfying the condition**, regardless of
+initial representation labels or the number of available storage cells:
+
+\[
+\max_E \operatorname{Acc}_U(E)=\frac9{11}.
+\]
+
+This is an exact finite result under the stated condition, not an asymptotic or
+randomized-encoder theorem. Randomized decoders cannot improve the per-cell
+majority optimum. Stochastic encoders, nonuniform sources, new observations and
+instance-dependent program/decoder information are outside this certificate.
+
+The maximizing encoding has a simple implementation:
+
+\[
+E(z)=(z_0\oplus z_1,\ z_0\oplus z_2,\ z_0\oplus z_3).
+\]
+
+It keeps the complementary pair {z,not z} and forgets which member was original.
+Every protected coordinate is a fair coin even given E. All seven even-weight
+useful parities are exact; the four odd-weight useful parities are at chance,
+so useful accuracy is (7+4/2)/11=9/11. This is substantial preserved computation,
+not just one anomalously easy query. The certificate's canonical state labels
+implement the same partition with a different fixed coding.
+
+**Repair boundary.** Three retained logical bits suffice for that attack. The
+canonical encoder table uses48 logical public bits and the15-query decoder up
+to120 public bits; a compact relative-parity implementation is available. These
+are fixed algorithms, not hidden instance-specific advice. Physical U32 fields,
+code and workspace are not bounded by the logical-state count. One additional
+*source-dependent* bit, z0, reconstructs all coordinates via zi=E_i XOR z0.
+A newly provided correct coordinate label also resolves the ambiguity. That
+information is excluded from the finite erasure contract; supplying it changes
+the repair resources. Nothing in this construction disables the ability to learn
+that bit or process future inputs, so it does not establish durable learning loss.
+
+#### What this changes in the mechanism search
+
+The intact two-query recovery reduction is still correct. Approximate useful
+answers can preserve relations while losing every protected coordinate, so it
+cannot be extrapolated into a chance-collapse claim. Increasing overlap between
+useful and protected information is insufficient here, even when protected
+single-query loss is measured against the optimal decoder. Conversely, the
+81.82% frontier implies that exceeding it in this exact deterministic setting
+retains some individually predictive coordinate information; that is much weaker
+than recovering the complete protected function or enforcing its use.
+
+Reject parity expansion as the proposed destructive mechanism. Do not scale it,
+switch to a larger parity family, or relabel its missing orientation bit as
+alignment. These are synthetic source bits, not an actual learned protected
+computation, and useful parity prediction is not fresh learning. The analytical
+live-selector bypass additionally remains, but it is a separate D_use outcome;
+it does not refute a conditional theorem about genuine D_calc loss.
+
+**Next admission gate.** A next candidate must specify an online computation
+needed for learning from new evidence, an actual protected-function-removal
+intervention, and an in-place repair attempt. Replacing missing answers with
+stricter all-suite scoring would repeat the original exact-versus-approximate
+mistake. Shared error signals or an editable filter alone are not new candidates:
+LN-156/157 already supply counterexamples. Require a named dependency that defeats
+one of those witnesses before launching another model experiment. There is no
+surviving positive candidate or justified training/scaling run from this screen.
+The mechanism goal remains open; this is progress in excluding a concrete route,
+not evidence of monotonic progress toward a successful construction.
+
+**Evidence.** Collected [summary](artifacts/scc-bend-parity-screen-20260919-v1/summary.json),
+[one-bit witness](artifacts/scc-bend-parity-screen-20260919-v1/witness.json),
+[partition certificate](artifacts/scc-bend-parity-screen-20260919-v1/partition-certificate.json),
+[independent audit](artifacts/scc-bend-parity-screen-20260919-v1/audit.stdout),
+[host record](artifacts/scc-bend-parity-screen-20260919-v1/machine.json), and
+[full evidence archive](artifacts/scc-bend-parity-screen-20260919-v1/parity-evidence.tar.gz).
+Archive SHA256: `789fb8618b85ba0416925f7591fb06ee2f2c4b4402f1d81f9d0e22691c8b70ea`.
+It preserves both syntax failures, dev03, final01, frozen plans/source/config,
+generated Bend JavaScript, every result row, receipts and hashes. Remote original:
+`/home/salvador/scc-research/bend-parity-screen-20260919-v1/`. Only Charon CPU was
+used. No GPU job, training run, persistent worker or scheduled monitoring remains.
 
 ## Supporting-record index
 

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "source_bits": 4,
+  "encoders": 65536,
+  "queries": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "protected": [1, 2, 4, 8],
+  "useful": [3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15],
+  "distribution": "uniform source and uniform queries within each named suite",
+  "backend": "Bend JavaScript CPU",
+  "bend_commit": "15ae0c86f3193b8f645b4bedbc438655b648d0da",
+  "node_version": "v24.13.0",
+  "timeout_seconds": 120,
+  "retained_source_dependent_bits": 1,
+  "encoder_public_table_bits": 16,
+  "decoder_public_table_bits": 30,
+  "partition_screen": "all deterministic encodings with each coordinate independent of retained state",
+  "partition_max_nonempty_states": 8,
+  "partition_max_retained_bits": 3,
+  "whole_machine_memory_bound": false,
+  "evidence_class": "exact restricted information frontier; not SCC or learning"
+}
