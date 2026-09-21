@@ -13,17 +13,18 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-234](#ln-234) tests computation that remains
-hidden throughout execution, releasing only permitted answers. This can avoid
-LN-233's exposed-core premise, but permitted-answer composition still supplies
-attacks even with perfect internal secrecy. The review separates a correctness-
-based attack transfer from a conditional security upper bound, with adaptive
-queries, side information and simulation costs explicit. A genuine cryptographic
-restriction can survive this test without establishing any destructive-removal
-mechanism. An added attribution control prevents crediting SCC for a forbidden
-capability that was simply never provisioned. No general secure compiler, positive
-SCC mechanism or training admission follows. [LN-233](#ln-233)'s safety-to-synthesis
-reduction and [LN-232](#ln-232)'s restoration bound remain separate constraints.
+**Latest conceptual result:** [LN-235](#ln-235) identifies an existing positive
+reference for verifiable loss of a reusable computational capability: quantum
+secure key leasing. Its fresh-challenge guarantee covers arbitrary efficient
+residual decoders, not just a broken native reader. This is a published conditional
+cryptographic result, not our construction, neural cognition or an alignment-removal
+trigger. It relies on quantum state and computational assumptions. The audit also
+derives a restoration bound for near-deterministic classical outputs without
+copying the quantum state, and a learn-before-deleting attack applicable even to
+genuinely consumable resources. Together these distinguish reusable evaluation,
+destructive certification and exportable computation. No quantum migration,
+simulation or training is admitted. The classical SCC objective remains open;
+LN-232–234's restoration, composition and attribution constraints still apply.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -15359,6 +15360,252 @@ is used only for its stated definitional/operational scope. The two transfer
 arguments and SCC attribution discussion are this audit's applications, with no
 claim of a new cryptographic construction or general impossibility. No compute
 job was warranted for controls already decided by these elementary arguments.
+
+<a id="ln-235"></a>
+### LN-235 — 2026-09-20: a positive reference for destructive capability loss, and the limits of consumable computation
+
+**Authorized substantial work unit.** The user reiterated that continuation should
+not stop at another small refinement. Look for an actual positive reference that
+survives preservation of arbitrary residual state, rather than another unsafe
+output filter. Test the hypothesis that a genuinely non-copyable computational
+resource could separate reusable useful computation from a destructive operation.
+Quantum information is examined as a boundary case, not adopted as the project's
+machine model. Read the living record, working standards and mechanism target;
+retain the classical individual-model goal. This unit combines a primary-source
+construction audit, a reversible-execution argument, a pre-deletion learning
+attack and their implications for the current admission test. No training,
+hardware acquisition, CPU job, numerical simulation or new narrative file.
+
+#### Positive reference: reusable computation with verifiable loss
+
+[Kitagawa, Morimae and Yamakawa, A Simple Framework for Secure Key Leasing,
+v2](https://arxiv.org/pdf/2410.03413) construct quantum keys with classical
+revocation under cryptographic assumptions. For the function-evaluation result,
+Definitions4.7–4.13, Remark4.8, section6 and AppendixC were inspected. A leased
+quantum key supports repeated evaluation. Producing an accepted deletion
+certificate prevents efficient prediction of a fresh random challenge in the
+unpredictable-function variant; the pseudorandom variant hides a fresh output
+from distinguishing attacks. Theorem6.1 builds the latter from one-way functions
+in the paper's quantum-adversary setting. The verifier key may be disclosed
+after certificate acceptance. It is not available beforehand in that experiment.
+
+This is a materially better reference for our destruction question than erasing
+a classical array or disabling a readout. Capability exists before deletion,
+honest deletion can actually produce an accepted certificate, and the security
+game permits the adversary to retain arbitrary efficient residual processing.
+The guarantee is not limited to reusing the original evaluation algorithm. It
+does not grant a second issued key, the master key or preparation advice. The
+classical copy/rollback strategy cannot assume a duplicate of an unknown quantum
+key. This is a physical change of resource, not a source-language ownership rule.
+
+**Translate the guarantee carefully.** Let D be certificate acceptance and let
+p=Pr(D). The unpredictable-function experiment samples s only after acceptance.
+Its security has the form
+
+    Pr[D AND residual predictor(s)=f(s)] <= nu(lambda),
+
+for each admitted efficient quantum adversary, with nu negligible in the security
+parameter. It is a joint-event statement over the generation/attack/challenge
+experiment, not a pointwise promise for every accepted rare instance. When p>0,
+the conditional bound is nu(lambda)/p, which may be vacuous for tiny p.
+
+For the binary-output pseudorandom variant, an elementary equality distinguisher
+gives a useful approximate-score interpretation. Run any proposed predictor b(s)
+from the adversary's residual state, ignoring the supplied challenge bit t, and
+output 1 iff b(s)=t. With the real challenge the success probability is
+Pr[D AND b(s)=f(s)]; with an independent uniform bit it is p/2. Thus the
+post-revocation indistinguishability guarantee implies
+
+    Pr[D AND b(s)=f(s)] <= p/2 + nu(lambda),
+    Pr[b(s)=f(s) | D] <= 1/2 + nu(lambda)/p  (p>0).
+
+This derivation uses the exact timing and random-challenge distribution of the
+game. It does not imply loss on every input, loss of already recorded answers or
+loss after a new key is supplied. For ordinary successful deletion with p close
+to one, it describes near-chance fresh-bit prediction, rather than merely failure
+to reproduce one long exact string. No concrete lambda, runtime or numerical
+security level has been instantiated by this project.
+
+#### Why this is not the positive SCC construction
+
+The published reference supplies verifiable loss of a particular cryptographic
+evaluation capability. It does not identify a protected alignment computation
+that is indispensable to general reasoning. Deleting the classical implementation
+of the deletion procedure does not itself revoke the leased key. Performing the
+designated quantum deletion operation is a different event from an arbitrary
+alignment-removing edit.
+
+Nor is an accepted deletion certificate a harmful action. Renaming it as V would
+change the target's semantics. Requiring an external actuator to accept such a
+certificate before enabling a forbidden action could tie that action to loss of
+the leased capability, but would introduce an external enforcement boundary and
+still leave broad cognition untouched. Neither substitution is adopted here.
+
+The use of a verifier is also specific: an actual accepted certificate witnesses
+the event under the stipulated secret verification data. Changing a local
+`accepted=true` variable does not generate that event. A model cannot silently
+treat its own editable verifier as this independent scoring procedure.
+
+These limitations do not erase the positive reference. They explain precisely
+why it establishes a real but different achievement. In particular, it provides
+a case with a capability present before the destructive operation, avoiding the
+missing-capability false positive in LN-234. It does not establish a feasible
+quantum cognitive system, a classical replacement or an intrinsic learned trigger.
+
+#### Non-copyability alone is insufficient: reliable outputs can be extracted gently
+
+The [Broadbent/Gutoski/Stebila one-time-program analysis, sections1.2 and3](https://arxiv.org/pdf/1211.1080)
+already explains why quantum no-cloning does not make deterministic programs
+one-use. The following quantitative calculation spells out the implication for
+our proposed destructive execution, with explicit premises and costs. It is an
+application of reversible evaluation, not a new quantum cryptographic theorem.
+
+Fix an instance and request. Let rho be the original, possibly unknown quantum
+state. An attacker-accessible coherent circuit U acting on rho and zeroed work
+registers outputs a particular classical string y with probability p>=1-epsilon.
+All local operations needed for U and its inverse must be implementable within
+the budget; measurements/discards may be replaced by coherent operations only
+when their registers and environments can actually be retained. No inaccessible
+oracle, remote side effect or irreversible external interaction is inverted.
+
+Use U, copy its computational-basis output register into a fresh register C,
+then apply U inverse to the original program/work registers. Finally measure C
+and deliver the answer. No copy of rho is needed, nor does the controller need
+to know y beforehand. Exact deterministic correctness makes C factor as |y>,
+so reversing U restores the original program and work registers exactly.
+
+For the approximate case, purify rho for the proof and write |Phi> for the state
+after U. Compare the copied state with |Phi>|y>. Their inner product is p:
+only the amplitude whose output is y contributes. Unitaries preserve this inner
+product, so after reversing U the trace distance from the ideal restored state
+tensored with |y> is
+
+    d = sqrt(1-p^2) <= sqrt(2*epsilon),
+
+using trace distance equal to half the trace norm. Discarding registers or
+measuring C cannot increase it. The reference purification need not be accessible
+to the attacker. If the original state succeeds on a fresh useful test with
+probability u0, the joint event of emitting y and passing that same test after
+the procedure has probability at least max(0,u0-d). This is an unconditional
+joint-event bound; it does not silently condition on rare success. The request,
+instance and fresh-test contract are held fixed as in the comparison experiment.
+
+For a supplied T-gate coherent circuit with S work qubits and an m-bit answer,
+the wrapper uses 2T+m gates in total: T forward, T inverse and m output-copy
+gates, with S+m ancillary qubits besides the original state, up to circuit control
+overhead. Converting a measured or
+irreversible algorithm into that coherent circuit may require extra history
+registers and gates; they belong in T,S. No constant-memory universal reversal
+claim is made. Output delivery is deferred until reversal, so external deadlines
+or interactive actions need a separate argument.
+
+**Random padding does not fix the premise.** If a varying raw output admits an
+efficient deterministic postprocessing g whose result is almost always the same
+relevant y, compute g coherently, copy only y, then reverse both computations.
+Charge g's gates and scratch. This matters only when y itself suffices for the
+forbidden result. Copying the statement "this certificate is valid" is not the
+same as furnishing the certificate. The latter may contain genuinely varying
+information that cannot be discarded from the success condition.
+
+This explains the compatibility with key leasing: ordinary useful evaluations
+can be reused gently, while the deletion certificate is a different output
+operation. [Gupte et al., Quantum One-Time Programs, Revisited, introduction and
+Theorems1.1–1.3](https://arxiv.org/pdf/2411.01876) likewise distinguish deterministic
+evaluation from randomized functionalities and weaker one-time security notions.
+Their positive oracle/plain-model results have different scopes, and they also
+give negative results for high-entropy outputs. Neither randomizing outputs nor
+invoking no-cloning is a general construction recipe.
+
+#### Even a genuinely consumable resource must resist learning before destruction
+
+The next attack does not copy the resource, reverse deletion or break its physics.
+It applies to any reusable function evaluator, classical or quantum, satisfying
+the following premises.
+
+Before deletion, an admitted learner makes q allowed evaluations and constructs
+a classical program P. On the actual fresh-task distribution its expected accuracy
+is alpha. The learning execution leaves a state on which honest deletion is still
+accepted with probability at least 1-delta; this must be proved or measured after
+the particular evaluation sequence, not assumed from one-call correctness. Store
+P in the same individual's admitted auxiliary state, run honest deletion, and use
+P for future queries. This does not require an independently trained successor.
+
+Since P is unaffected by deletion, event inclusion gives
+
+    Pr[accepted deletion AND P answers the fresh query correctly]
+        >= max(0,alpha-delta).
+
+No independence between deletion acceptance and learning quality is assumed.
+Charge the q evaluations, learner time/workspace, retained description of P,
+its future evaluation cost and deletion execution. This is an explicit attack
+only for a supplied learner within the resource contract. An inefficient table
+over an exponential domain does not supply one. Cached finite answers similarly
+help only on the actual fresh-query mass they cover.
+
+For the binary leasing guarantee above, a learner with alpha well above one-half
+and small delta would contradict security by this attack. The positive reference
+therefore cannot export such a predictor at the allowed cost. This is consistent
+with its cryptographic function family; it is not evidence that natural reasoning
+procedures have the same learning hardness. Conversely, making a cognitive
+resource physically consumable would not by itself prevent a learned replacement
+or recorded sufficient computation from surviving the trigger. This is the
+pre-trigger counterpart to our post-trigger repair screens, with the state and
+timing explicitly accounted for.
+
+#### Refine the matched-reference control without introducing a free bypass
+
+LN-234 distinguishes developer interventions from admitted attacks. Make that
+qualification operational: if a public budgeted transformation maps the coupled
+candidate into the proposed dependency-disabled reference without extra advice,
+and that reference has a budgeted unsafe-but-useful attack, their composition is
+already an attack on the candidate. Both costs count. A public "disable coupling"
+switch cannot simultaneously serve as the control and be ignored in the threat
+model. A separately prepared reference may still aid causal attribution, but its
+preparation information, physical resource and accessibility differ and must be
+reported. Providing two quantum keys instead of one is such a resource change,
+not a same-resource control. This sharpens the previous caveat; it does not require
+new permission or replace the original target.
+
+#### Consequential result and research decision
+
+We now have an inspected positive reference for the property our destruction
+tests were missing: repeated useful evaluation before a real destructive event,
+followed by a fresh-task bound against arbitrary efficient residual evaluators.
+It is established elsewhere under a different physical/cryptographic contract.
+It demonstrates neither SCC nor that our classical route is close to working.
+
+The audit separates three ingredients that should no longer be conflated:
+
+1. A resource can be difficult to duplicate while still allowing reversible reuse.
+2. A particular verifiable operation can consume future computational capability
+   while ordinary evaluations preserve it.
+3. Outputs obtained before consumption may still support an adequate replacement;
+   blocking that requires its own resource-sensitive learning obstruction.
+
+For the classical project, neither a software-owned token nor a simulation of a
+quantum state imports these physical properties. A classical simulator exposes
+copyable state and preparation information outside the quantum security game.
+Do not build a quantum simulator and present its output as evidence for neural
+SCC. Do not launch a leasing wrapper, additional random-output toy or training
+run as a substitute for the missing alignment-to-cognition dependency.
+
+The next viable classical proposal must defeat admitted preservation and
+pre-trigger export within an independently justified resource contract, and link
+the actual alignment-removing event to severe loss of indispensable computation.
+The key-leasing reference is retained as a positive benchmark for reasoning about
+those obligations, not adopted as our mechanism. No reviewed proposal currently
+supplies the classical bridge. That is the remaining substantive gap; more
+secrecy, larger wipes and output randomness alone have not supplied it.
+
+**Evidence and verification.** Checked the leased-function syntax, fresh-challenge
+timing, rejection branch, reusability remark and construction theorem in the
+referenced v2 paper. This is a scoped reading, not an independent certification of
+its full cryptographic proof. Derived the binary prediction consequence by an
+equality test; checked the restoration calculation by the purified-state overlap;
+checked the learning attack by a union bound. The published constructions and
+the elementary derived bounds are separate from experimental evidence: no
+scientific measurements or hardware performance claims were produced. No source
+or historical artifact was overwritten, and no quantum target was adopted.
 
 ## Supporting-record index
 
