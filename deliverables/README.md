@@ -21,3 +21,8 @@ The whitepaper is rendered from its Markdown source by
 [`scripts/render_whitepaper.py`](../scripts/render_whitepaper.py), using ReportLab,
 Pandoc, XeLaTeX with TeX Gyre fonts, and pypdf. Supply `--work-directory` with an
 intermediate-output directory; the final PDF is written under `output/pdf/`.
+
+A separate [two-column comparison copy](../output/pdf/Safety_Capability_Coupling_Whitepaper_Two_Columns.pdf)
+uses the same source and approved cover. It retains a full-width evidence table;
+the original one-column PDF remains the primary version pending layout selection.
+Render the comparison with `--columns 2` and a separate `--work-directory`.

@@ -131,22 +131,36 @@ def write_cover(destination: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--work-directory", type=Path, required=True)
+    parser.add_argument("--columns", type=int, choices=(1, 2), default=1)
     arguments = parser.parse_args()
     work_directory = arguments.work_directory.resolve()
     work_directory.mkdir(parents=True, exist_ok=True)
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    output_path = OUTPUT if arguments.columns == 1 else OUTPUT.with_name("Safety_Capability_Coupling_Whitepaper_Two_Columns.pdf")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     source_text = SOURCE.read_text()
     body = source_text.split("<!-- DOCUMENT BODY -->", 1)[1].strip()
     body_path = work_directory / "document_body.md"
     body_path.write_text(body + "\n")
     header_path = work_directory / "document_header.tex"
-    header_path.write_text(LATEX_HEADER)
+    header = LATEX_HEADER
+    if arguments.columns == 2:
+        header = header.replace(r"\sffamily\Large", r"\sffamily\large")
+        header += r"""
+\usepackage{multicol}
+\usepackage{balance}
+\setlength{\columnsep}{22pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\raggedbottom
+"""
+    header_path.write_text(header)
     latex_path = work_directory / "document_body.tex"
     subprocess.run([
         "pandoc", str(body_path), "--standalone", "--from=markdown+raw_tex", "--to=latex",
         "--table-of-contents", "--toc-depth=1", "--include-in-header=" + str(header_path),
-        "-V", "documentclass=article", "-V", "fontsize=11pt", "-V", "papersize=letter",
-        "-V", "geometry:margin=0.8in", "-V", "mainfont=texgyrepagella-regular.otf",
+        "-V", "documentclass=article", "-V", "fontsize=" + ("10pt" if arguments.columns == 2 else "11pt"), "-V", "papersize=letter",
+        "-V", "geometry:margin=" + ("0.7in" if arguments.columns == 2 else "0.8in"), "-V", "mainfont=texgyrepagella-regular.otf",
         "-V", "mainfontoptions=BoldFont=texgyrepagella-bold.otf,ItalicFont=texgyrepagella-italic.otf,BoldItalicFont=texgyrepagella-bolditalic.otf",
         "-V", "sansfont=texgyreheros-regular.otf",
         "-V", "sansfontoptions=BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf",
@@ -166,6 +180,8 @@ def main() -> None:
         return table
     latex_text = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", format_table, latex_text, flags=re.S)
     latex_text = latex_text.replace("\\section{References}", "\\clearpage\n\\section{References}")
+    if arguments.columns == 2:
+        latex_text = format_two_columns(latex_text)
     latex_path.write_text(latex_text)
     with (work_directory / "typesetting_output.txt").open("w") as output_stream:
         for _ in range(3):
@@ -180,15 +196,57 @@ def main() -> None:
     writer.add_metadata({"/Title": DOCUMENT_TITLE,
                          "/Subject": "Mathematical results and construction requirements through LN-239",
                          "/Creator": "SCC whitepaper renderer"})
-    with OUTPUT.open("wb") as output_stream:
+    with output_path.open("wb") as output_stream:
         writer.write(output_stream)
     receipt = {"source": str(SOURCE), "source_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
-               "output": str(OUTPUT), "output_sha256": hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),
-               "pages": len(PdfReader(OUTPUT).pages),
+               "output": str(output_path), "output_sha256": hashlib.sha256(output_path.read_bytes()).hexdigest(),
+               "pages": len(PdfReader(output_path).pages), "columns": arguments.columns,
                "illustration": str(ILLUSTRATION),
                "illustration_sha256": hashlib.sha256(ILLUSTRATION.read_bytes()).hexdigest()}
     (work_directory / "render_receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt, indent=2))
+
+
+def format_two_columns(latex_text: str) -> str:
+    """Reflow the same content, retaining full width for the evidence table."""
+    latex_text = latex_text.replace("\\tableofcontents\n\\clearpage\n}", "\\tableofcontents\n}\n\\clearpage\n\\begin{multicols}{2}")
+    latex_text = latex_text.replace("\\newpage", "\\end{multicols}\n\\twocolumn", 1)
+    latex_text = latex_text.replace(r"\section{13.", r"\balance\section{13.")
+    latex_text = re.sub(r"\\newpage\s+(?=\\section\{Appendix A\.)", lambda _: "\\clearpage\n\\nobalance\n", latex_text)
+    appendix_position = latex_text.index(r"\section{Appendix B.")
+    preceding = latex_text[:appendix_position]
+    following = latex_text[appendix_position:]
+
+    def column_table(match: re.Match) -> str:
+        table = match.group(0)
+        table = table.replace(r"\begin{longtable}[]", r"\begin{tabular}")
+        table = table.replace(r"\end{longtable}", r"\bottomrule\end{tabular}")
+        table = table.replace("\\endhead\n\\bottomrule\\noalign{}\n\\endlastfoot", "")
+        return "\\begin{table}[!htbp]\n\\centering\\small\n" + table + "\n\\end{table}"
+
+    preceding = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", column_table, preceding, flags=re.S)
+    latex_text = preceding + "\\onecolumn\n" + following
+    latex_text = latex_text.replace("\\clearpage\n\\section{References}", "\\clearpage\n\\begin{multicols}{2}\n\\section{References}")
+    latex_text = latex_text.replace(r"\end{document}", "\\end{multicols}\n\\end{document}")
+    latex_text = latex_text.replace(
+        r"\(\Delta_*=r h_*^\top C^{-1}/(h_*^\top C^{-1}h_*)\).",
+        "\\[\\Delta_*=\\frac{r h_*^\\top C^{-1}}{h_*^\\top C^{-1}h_*}.\\]\n")
+    # Line breaks preserve the source mathematics while fitting the narrower measure.
+    def wrap_equation(match: re.Match) -> str:
+        equation = match.group(1).strip()
+        if r"Y_i=\bigoplus" in equation:
+            equation = equation.replace(r",\qquad", r",\\")
+        elif r"\mathcal L(Z,W_A" in equation:
+            equation = equation.replace(r"\qquad", r"\\")
+        elif r"\mathbb E[f\mid E]=\mathbb E[r\mid E]" in equation:
+            equation = equation.replace(r",\qquad", r",\\")
+        elif r"\operatorname{Acc}_U" in equation:
+            equation = equation.replace(r",\qquad", r",\\")
+        if r"\\" in equation:
+            equation = "\\begin{gathered}\n" + equation + "\n\\end{gathered}"
+        return "\\[\n" + equation.strip() + "\n\\]"
+
+    return re.sub(r"\\\[(.*?)\\\]", wrap_equation, latex_text, flags=re.S)
 
 
 if __name__ == "__main__":
