@@ -13,18 +13,20 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-235](#ln-235) identifies an existing positive
-reference for verifiable loss of a reusable computational capability: quantum
-secure key leasing. Its fresh-challenge guarantee covers arbitrary efficient
-residual decoders, not just a broken native reader. This is a published conditional
-cryptographic result, not our construction, neural cognition or an alignment-removal
-trigger. It relies on quantum state and computational assumptions. The audit also
-derives a restoration bound for near-deterministic classical outputs without
-copying the quantum state, and a learn-before-deleting attack applicable even to
-genuinely consumable resources. Together these distinguish reusable evaluation,
-destructive certification and exportable computation. No quantum migration,
-simulation or training is admitted. The classical SCC objective remains open;
-LN-232–234's restoration, composition and attribution constraints still apply.
+**Latest conceptual result:** [LN-236](#ln-236) checks classical self-erasing
+computation as a bridge from LN-235's quantum reference. Published constructions
+provide restricted positive examples under total-memory, communication and
+random-oracle assumptions. Ordinary repeated use of the same one-time function
+is incompatible with its guarantee. A separate joint-counting bound shows when
+storage of fresh independent information excludes even approximate recovery of
+old answers, allowing arbitrary encodings and decoders. This is a source-recovery
+bound, not cognitive destruction. The new design requirement is selective
+consumption: ordinary cognition must remain reusable while an actual
+alignment-removing intervention forces the incompatible computation. No reviewed
+construction supplies that connection or justifies a neural training run.
+Neither quantum hardware nor a sealed bounded-memory device is adopted.
+LN-232–235's preservation, composition, attribution and pre-trigger learning
+constraints still apply; no positive SCC mechanism has been established.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -15606,6 +15608,238 @@ checked the learning attack by a union bound. The published constructions and
 the elementary derived bounds are separate from experimental evidence: no
 scientific measurements or hardware performance claims were produced. No source
 or historical artifact was overwritten, and no quantum target was adopted.
+
+<a id="ln-236"></a>
+### LN-236 — 2026-09-20: classical self-erasing computation, joint storage bounds and the selective-consumption gap
+
+**Authorized work.** Continue the bridge from LN-235 into classical computation.
+The user sees possible progress; treat that as a research hypothesis, not evidence
+that a working neural mechanism is close. Read the project instructions, current
+record and target. Revisited LN-101/103's space-bounded-code caveats and LN-158's
+watermark construction rather than presenting them as new routes. Investigate
+classical self-erasure, distinguish memory cost from loss of capability, and
+derive an approximate joint-retention test. No training, CPU job, hardware change,
+provider polling or separate narrative deliverable was warranted by this analytic
+work. The classical individual-model target and admitted attacker remain unchanged.
+
+#### A classical positive reference, with its actual resource boundary
+
+[Dziembowski, Kazana and Wichs, One-Time Computable Self-Erasing
+Functions](https://www.iacr.org/archive/tcc2011/65970124/65970124.pdf), sections 2–5,
+give a random-oracle construction against a fully controlled local machine with
+s bits of total configuration and c bits of outgoing communication. The input
+key occupies most of its memory. Oracle queries are bounded by q. The bound
+counts input tapes, control state and communication timing; arbitrary incoming
+messages do not remove the outgoing limit. Their graph-labeling argument covers
+general algorithms in that model, rather than assuming the attacker follows the
+honest pebbling schedule. A single evaluation is possible, but obtaining correct
+values at two distinct inputs of the same indexed function is unlikely. The
+multi-function variant permits finitely many indexed evaluations, consuming key
+material along the way.
+
+This is a scoped construction reading, not an independent proof certification.
+The conference text's Theorem 1 statement and its proof's union bound differ by
+a factor T; retain the conservative factor if using its multi-index guarantee.
+No numerical instantiation relies on that statement here. The separate
+[limited-memory one-time-program compiler](https://eprint.iacr.org/2015/238)
+extends the functionality beyond PRFs under bounded memory/leakage assumptions;
+only its primary abstract was accessible, not a verified implementation or full
+proof. Neither reference establishes reusable cognition or an alignment trigger.
+
+**What transfers to our reasoning.** A classical destructive computation is not
+automatically defeated by saying "copy it": the proposed copy has to fit inside
+the total resource bound, and off-device preservation has to fit the communication
+allowance. Conversely, model parameter count is not that bound. Runtime memory,
+editable code, logs, files and available remote storage cannot be omitted. A
+language's ownership discipline or a voluntary process memory limit supplies no
+physical reason an editor cannot enlarge that envelope. No such restriction is
+newly imposed on the SCC attacker by this entry.
+
+#### Reuse test: a consumable core cannot silently serve as a reusable one
+
+Here is an elementary consequence of any two-evaluation security guarantee.
+Fix one indexed function and two distinct inputs. Let B1 and B2 mean that an
+admitted sequential execution outputs the respective correct answers, and suppose
+its two-answer success is bounded by epsilon. Write u1=Pr(B1), u2=Pr(B2), each
+measured in this same execution. Then
+
+    u1 + u2 - 1 <= Pr(B1 AND B2) <= epsilon,
+    (u1 + u2)/2 <= (1 + epsilon)/2.
+
+No independence is used. In particular, two 99%-reliable fresh evaluations in
+that execution would give joint success at least 98%. An evaluator that satisfies
+a small-epsilon one-time guarantee cannot simultaneously offer those two uses
+within the same budget. For a security game requiring explicit answer submissions,
+charge those submissions and their additional queries before applying its bound.
+This is an exact-answer statement, not a per-bit or general-cognition theorem.
+
+Repeating a cached answer at the same input avoids the premise but does not supply
+fresh-input competence. Separately provisioned slots give a finite inventory,
+not repeated use of the same slot. Supplying a new key changes the target function
+unless a separate preservation argument is supplied. The source is therefore a
+positive consumption reference, not a drop-in useful core for our model.
+
+#### Memory occupancy is insufficient; bound joint retention instead
+
+[Alwen, Blocki and Pietrzak, Sustained Space
+Complexity](https://arxiv.org/pdf/1705.05313) study memory required over many steps,
+with graph-to-computation reductions in a parallel random-oracle model. Such a
+memory-cost theorem does not, by itself, identify which old capability is lost.
+Even touching every location can preserve all prior information: the in-place
+rewrite W=Z XOR a for a known mask a is invertible. This counterexample is to
+inferring erasure from occupancy/writes, not an attack on their construction.
+
+The relevant stronger question is whether one retained state can support *both*
+the proposed new computation and the old useful responses. A simple counting
+argument gives an unrestricted-decoder boundary case with approximation included.
+It complements, rather than reinstates, the rejected one-probe saturation story.
+
+**Contract.** Z is uniform on n bits, R is uniform on m bits, and they are
+independent. Z indexes old useful answers; R is fresh information introduced by
+the proposed consuming task. Fix public parameters independent of both. After
+arbitrary processing the attacker retains W with at most 2^s possible values.
+W includes every instance-dependent program, checkpoint, auxiliary string and
+accessible transcript used for later answers. The repair phase has no further
+access to Z, R or correlated outside information.
+
+Let C injectively encode m-bit strings into N-bit codewords, with this list property:
+every N-bit response vector is within Hamming distance floor(rho*N) of the
+codewords of at most L messages. For each W, let a_W be its vector of responses to the N
+codeword-coordinate queries, and zhat_W its responses to the n old useful queries.
+Each vector is defined from the same retained state at a fresh query boundary;
+the proof need not efficiently materialize either vector. The decoders and
+encoder may be nonlinear and use unrestricted computation. Instance-dependent
+decoder selection must be encoded in W. Randomized encoders are allowed. Fixing
+independent future public coins and averaging also permits randomized response
+vectors, but a sampled vector's score must not be relabeled expected competence.
+
+Define
+
+    G = {distance(a_W, C(R)) <= floor(rho*N)},
+    H_d = {distance(zhat_W, Z) <= d},
+    V(n,d) = sum_{j=0}^d binomial(n,j),   0 <= d <= n.
+
+Then, for any such encoder and decoders,
+
+    Pr[G AND H_d] <= min(1, 2^(s-n-m) * L * V(n,d)).                 (1)
+
+**Proof.** For each retained value w, the list property permits at most L values
+of R for G. The Hamming ball around zhat_w permits at most V(n,d) values of Z
+for H_d. Thus at most L*V(n,d) source pairs can satisfy both at this w. Union over
+at most 2^s retained values and divide by the 2^(n+m) equiprobable source pairs.
+For a stochastic encoder, its conditional probability of selecting a qualifying
+w is at most one; the same union bound applies. No linearity, probe restriction,
+efficient list decoder or claim about the attacker's unsuccessful search is used.
+
+If total retained capacity is s=m+b, the RHS before capping is
+2^(b-n)*L*V(n,d). For d=floor((1/2-eta)*n), 0<eta<=1/2, the elementary binomial
+tail bound V(n,d)/2^n <= exp(-2*eta^2*n) yields
+
+    Pr[G AND old-answer accuracy >= 1/2+eta]
+        <= min(1, 2^b * L * exp(-2*eta^2*n)).                       (2)
+
+For p=Pr(G)>0, the corresponding conditional probability is at most the
+uncapped expression divided by p, capped at one. This bounds the probability
+of exceeding an accuracy threshold. A separate entropy argument also bounds
+the conditional mean, for the deterministic response vectors above. Let e be
+the mean old-coordinate error given G and let h2 be binary entropy in bits.
+Conditioning a uniform source pair on an event of probability p gives
+H(Z,R | G)>=n+m-log2(1/p): each conditional source-pair probability is at most
+1/(p*2^(n+m)). On G the list property gives H(R | W,G)<=log2(L). Also
+H(Z | W,G)<=n*h2(e), by bounding each bit's error entropy and applying concavity.
+Since H(W | G)<=s, the chain rule yields
+
+    n*(1-h2(e)) <= b + log2(L) + log2(1/p).
+
+Using 1-h2(e)>=2*(e-1/2)^2/ln(2), the conditional mean accuracy obeys
+
+    E[old-answer accuracy | G]
+        <= min(1, 1/2 + sqrt((b*ln(2)+ln(L)+ln(1/p))/(2*n))).       (3)
+
+The radicand is nonnegative whenever the stated event is feasible. In particular,
+when b=0, L=1 and p=1, the best old-coordinate accuracy is exactly chance.
+The conditioned-mean proof is an additional derivation; do not infer (3) merely
+by relabeling the tail probability in (2). This statement uses uniform fresh
+coordinate queries and deterministic decoders, not arbitrary task distributions.
+In this explicit source model, successful occupation by independent information
+can exclude even modest above-chance retention of the old answers. The bound
+survives arbitrary recoding and unlimited decoder time because it charges all
+retained source-dependent information.
+
+**Verification is a separate event.** Passing one sampled challenge is not G.
+For an actual acceptance event A, if a separate soundness argument proves
+Pr(A AND NOT G)<=epsilon_test, then
+
+    Pr[A AND H_d] <= epsilon_test + 2^(s-n-m)*L*V(n,d),
+
+capped at one. Conditioning on A divides this bound by Pr(A). As a simple
+static control, r independent uniform coordinate checks of the same fixed a_W,
+with no intervening adaptation, give epsilon_test<=(1-rho)^r. Stateful updates,
+feedback, variable stopping or access to the original R invalidate that simple
+test argument unless separately accounted for. This closes the otherwise easy
+mistake of treating one lucky proof response as evidence of full occupation.
+
+**Source relationship.** [Husain, Ko, Rudra and Uurtamo, Almost Universal Hash
+Families are also Storage Enforcing](https://arxiv.org/pdf/1205.1462), Theorem 6
+and its proof, use list decoding and description length to enforce storage.
+Their description accounting includes the answering algorithm. Equation (1) is
+our elementary two-independent-source application of the counting idea, not a
+new coding theorem or an efficient reconstruction result. Their erasure
+application explicitly excludes external storage access. We have not implemented
+their protocol or transferred its assumptions to a learned model.
+
+#### Controls, attribution and the remaining selective-consumption problem
+
+The boundary cases of (1) are checkable without a computation experiment:
+
+- For n=m=1, s=1, d=0 and the identity code with rho=0, L=1, the bound is 1/2.
+  Store Z and always answer R=0: the joint success is exactly 1/2.
+- For s=n+m, storing both sources gives perfect success; the exact-recovery bound
+  reaches one. A backup is not excluded if its bits are genuinely available.
+- If R=Z instead of being independent, s=n supports both exactly. The erroneous
+  use of (1) would predict 2^(-n) at d=0,L=1. This explicitly recovers the
+  same-source flaw in the old transform narrative rather than hiding it.
+- If R remains readable outside W, or a short supplied seed generates R, the
+  assumed independent m-bit residual uncertainty is absent. Byte length alone
+  does not repair that failure. Correlated side information needs a new bound.
+- Retaining Z and guessing a single independent challenge can pass by chance;
+  it does not satisfy the stronger successful-occupation event. The epsilon_test
+  term is necessary.
+
+These controls establish exactly what the positive bound says. Z still represents
+a source of answers, not indispensable reasoning. A random overwrite that erases
+Z therefore remains outside the cognitive endpoint, even when the storage proof
+is valid. A malicious act generally does not require retaining an independent
+random challenge. Requiring a verifier's certificate to authorize the act would
+introduce the external enforcement boundary already identified in LN-235.
+
+The constructive target is now **selective consumption**: reusable safe cognition
+must coexist with a demonstrated resource conflict forced by actual removal of
+the protected computation. The inspected one-time primitive consumes ordinary
+fresh evaluations too; the independent-source bound needs an occupation event
+that alignment removal has not been shown to force. A public refresh procedure
+is not automatically a solution: if it also runs from a violating successor and
+restores the useful resource within budget, compose it into the attack. If it
+requires unavailable evidence or outside help, state and justify that asymmetry.
+If it restores the protected function as well, distinguish the repaired behavioral
+history from a counterexample with the function still absent, as in LN-226/232.
+
+**Decision.** Retain the classical self-erasing construction and (1)–(3) as
+concrete positive boundary tools. Do not implement another lookup wipe, a generic
+memory-hard benchmark or a finite one-time inventory as the SCC mechanism.
+Before a prototype earns a run, specify a reusable useful operation and the
+alignment-removing operation, then prove a joint resource conflict between the
+latter and continued useful computation under the *same* resource contract.
+Neither a large memory footprint nor the existence of a self-erasing primitive
+supplies that proof. This is a sharper construction target; it does not establish
+that a classical neural implementation is close or that alternatives are impossible.
+
+**Evidence limits.** The research unit contains inspected primary definitions,
+explicit counting/event arguments and boundary witnesses, not new empirical
+evidence. No proof assistant or finite exhaustive solver was run. The list-code
+parameters are assumptions of the analytic bound, not a qualified coding
+implementation. Historical experiments and sources remain untouched. The living
+record is the only narrative artifact changed.
 
 ## Supporting-record index
 
