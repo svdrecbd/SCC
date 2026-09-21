@@ -16357,6 +16357,26 @@ in the evidence-enabled checkout. These are maintenance checks, not rerun scient
 experiments. Future entries should record new findings and specific qualifications
 without repeating standing rules or unchanged status.
 
+<a id="ln-241"></a>
+### LN-241 — 2026-09-20: whitepaper and naming standard
+
+Prepared the user-requested [Safety–Capability Coupling Whitepaper](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)
+and [editable source](deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md).
+The 20-page synthesis covers the mechanism target, separate coupling/enforcement/
+durability claims, mathematical results and their assumptions, recovery evidence,
+construction requirements, selected proofs and source references through LN-239.
+It introduces no new experiment or scientific conclusion. Historical conceptual
+documents remain preserved; the labnotes remain the current research record.
+
+Placed the user's professional naming standard first in project and personal
+Codex AGENTS.md files. Added the whitepaper to repository navigation and the
+committed-source sharing package. The rendering source uses an editable Markdown
+document, a vector cover and typeset mathematics. Checked rendered pages, equations,
+contents destinations, reference links, page bounds and source/output hashes.
+Preserved instruction originals and rendering/verification receipts in
+[the preparation evidence](artifacts/scc-whitepaper-20260920-v1/).
+All work was local document maintenance; no research computation or training ran.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
