@@ -6,7 +6,8 @@ results and corrections.
 
 | Prepared | Package | Scope |
 |---|---|---|
-| 21 September | [Safety–Capability Coupling Program](../output/pdf/Safety_Capability_Coupling_Whitepaper.pdf) · [editable source](scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md) | Canonical version 1.1: mathematics through LN-239, claim boundaries, next research decision, proofs and evidence map |
+| 21 September | [Safety–Capability Coupling Program](../output/pdf/Safety_Capability_Coupling_Whitepaper.pdf) · [editable source](scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md) | Canonical version 1.2: concise introduction to the research question, mathematical lessons and next direction |
+| 21 September | [Technical reference, version 1.1](../docs/archive/whitepaper-v1.1/README.md) | Preserved 17-page synthesis: mathematical statements, selected proofs, detailed assumptions and evidence map |
 | 16 September | [Evidence figures](scc-figures-20260916-v1/README.md) | Five figures, PDF, editable SVGs, data and reproducible plot source |
 | 15 September | [Theory v4.1](scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md) | Conditional theorem and editable-model boundary; retains its v4 filename |
 | 14 September | [Theorem research proposal](scc-theory-pitch-20260914/SCC_Theorem_Research_Proposal.md) | Historical proposal, not authorization for its experiments |
@@ -25,8 +26,12 @@ is the macOS Palatino collection; `--palatino-font` accepts its path on other
 systems where a licensed copy is available. Supply `--work-directory` with an
 intermediate-output directory; the final PDF is written under `output/pdf/`.
 
-Two columns are the default and canonical layout. The overview, resource ledger,
-claim diagram, admission checklist and evidence map use the full page width.
-The [version 1.0 source and both earlier layouts](../docs/archive/whitepaper-v1/README.md)
-are preserved as historical artifacts. An optional `--columns 1` export produces
-a separately named one-column file without replacing the canonical PDF.
+Two columns are the default and canonical layout, with Palatino body text at
+11 points. Four questions organize the argument; mathematical derivations and
+exhaustive evidence accounting remain in the linked technical reference and
+labnotes. The approved cover geometry and authorship are retained.
+
+The [version 1.0 source and layouts](../docs/archive/whitepaper-v1/README.md)
+and [version 1.1 technical reference](../docs/archive/whitepaper-v1.1/README.md)
+are preserved. An optional `--columns 1` export produces a separately named
+one-column file without replacing the canonical PDF.

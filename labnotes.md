@@ -16430,6 +16430,26 @@ editing, comparison receipts and rendering outputs are preserved in
 [the revision evidence](artifacts/scc-whitepaper-revision-20260920-v2/).
 This is a document revision and conceptual specification; no new experiment ran.
 
+<a id="ln-243"></a>
+### LN-243 — 2026-09-21: concise whitepaper and supporting technical reference
+
+The user judged version 1.1 too dense for the whitepaper's introductory purpose.
+Replaced the canonical document with an eight-page version 1.2, approximately
+3,100 source words rather than 8,000, organized around four questions:
+the intended mechanism, the strongest lessons, the mathematical tools and the next
+research decision. Retained the approved cover, authorship, two-column layout and
+Palatino; increased body text to 11 points. Selected equations explain the argument
+while detailed proofs, audit tables and the full evidence map remain in the
+[preserved technical reference](docs/archive/whitepaper-v1.1/README.md).
+
+The reference PDF is unchanged and the archived source differs only in its cover
+asset link. Information theory, measure theory, recovery, dynamics and resource
+constraints remain represented in the shorter account, with references to their
+full treatments. Scientific claims and the next conceptual question are unchanged;
+this revision introduces no research result or experiment. Source snapshots,
+preservation checks and rendered-document verification are in the
+[revision evidence](artifacts/scc-whitepaper-condensation-20260921-v1/).
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
