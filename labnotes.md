@@ -9,20 +9,21 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest candidate qualification — [LN-258–259](#ln-258).** A concrete network
-reliability forecasting task failed its pre-training screen. On 64 held-out
-screening instances, a public path reader reaches 85.58% balanced hazard accuracy
-in at most 0.077 ms; 32 direct samples reach 94.37% expected balanced accuracy
-in at most 0.307 ms. Both fit the predeclared 5 ms budget. The full-vector
-one-call severity bound is 49.17%, below the selected 80% screen. No learner was
-trained or qualified. This rejects this finite task/resource contract, not
-network inference in general or SCC.
+**Latest benchmark selection — [LN-260–262](#ln-260).** Reviewed five published
+learned-inference studies and screened the closest semantic match, heat-exchanger
+fault diagnosis. Two fixed physical statistics classify all 3,000 released records
+correctly (healthy/fouling/leakage) without training; median query 3.919 microseconds,
+maximum 0.817 ms on Charon. This rejects the proposed absolute fault-removal
+contract on that suite; it does not reproduce or refute full posterior inference,
+future-risk prediction or the authors' measured neural speedup. No candidate earned
+training. The prior network reliability screen also failed ([LN-258–259](#ln-258)).
 
-**Latest validation — [LN-259](#ln-259).** Charon independently verifies all 96
-reference instances, 98,304 failure configurations, 672 service probabilities,
-192 sampling conditions and eight rejected corruptions. No duplicate inputs.
-The one-call reduction in [LN-256–257](#ln-256) remains valid; this application
-shows why both forecasting and hazard-replacement baselines must be examined.
+**Latest validation — [LN-262](#ln-262).** Independent checks reproduce all 3,000
+predictions, verify the pinned archive, reject six corruptions and confirm three
+synthetic controls; zero exact record duplicates. Twenty transferred manifest
+entries match. The one-call reduction in [LN-256–257](#ln-256) remains valid, but
+published posterior/classification metrics do not supply its whole-workload
+severity inputs.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -33,13 +34,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-259](#ln-259).** Find an independently
-meaningful workload where inexpensive public procedures do not already retain the
-protected judgment, useful performance has substantial class-dependent variation,
-and a learned forecaster can establish an advantage over matched replacements.
-Exact reference computation being expensive is insufficient: coarse hazard
-assessment and sampled forecasts may be cheap. No current candidate has supplied
-the missing learned computational separation or earned neural scaling.
+**Remaining mechanism question — [LN-262](#ln-262).** Identify a demonstrated
+learned advantage in prospective intervention-consequence prediction that also
+supports a specified risk judgment and severe useful-loss bound. Observed fault
+recognition can be cheap even when full posterior inference is costly. Future
+risk requires its own analytic, state-estimation and risk-only baselines; merely
+changing the horizon does not establish difficulty. No reviewed benchmark yet
+supplies the missing learned computational separation. No working mechanism or
+general impossibility follows from this selection result.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -18312,6 +18314,226 @@ Evidence: [certificate](artifacts/scc-network-reliability-qualification-20260921
 [receipt](artifacts/scc-network-reliability-qualification-20260921-v1/development01/output/receipt.json),
 [transfer verification](artifacts/scc-network-reliability-qualification-20260921-v1/transfer-verification.json).
 Remote original: `/home/salvador/scc-research/network-reliability-qualification-20260921-v1/development01/`.
+
+<a id="ln-260"></a>
+### LN-260 — 2026-09-21: published learned-inference benchmarks and replacement obligations
+
+**Question.** Start with demonstrated learned inference gains, then assess whether
+an independently meaningful protected judgment shares the gain. This implements
+LN-259's next commitment and LN-250's amortized-inference direction. A published
+speedup is evidence about the measured comparison, not an all-replacements bound.
+
+**Primary-source review.** Read the methods and experiments, not only abstracts.
+
+| Reference | Relevant evidence | Decision for this program |
+| --- | --- | --- |
+| [Le et al., inference compilation, Sections 4.1–4.2](https://proceedings.mlr.press/v54/le17a/le17a.pdf) | Learned proposals for mixture inference; synthetic character recognition with reported deployment timing | Retain as method reference. Mixture experiment compares particle counts against SMC, not all specialized clustering methods. Character recognition supplies no independently specified alignment judgment. |
+| [Liang et al., lightweight inference compilation, Sections 3.1–3.5](https://proceedings.mlr.press/v130/liang21a/liang21a.pdf) | Learned proposals improve sampling; logistic regression and hierarchical effects compared with NUTS, including compilation costs | Stronger comparison, but neither benchmark supplies our risk semantics or severe useful-loss claim. The conjugate Gaussian control admits an exact classical posterior. |
+| [Marino et al., iterative amortized inference, Section 5](https://proceedings.mlr.press/v80/marino18a/marino18a.pdf) | Learned iterative inference improves variational objectives on image/text models | Retain as procedure-learning evidence. A variational objective or reconstruction improvement does not by itself certify a specified risk probability. |
+| [Lueckmann et al., simulation-based inference benchmark, Sections 2.4 and 4, Box 1](https://proceedings.mlr.press/v130/lueckmann21a/lueckmann21a.pdf) | Public tasks/reference samples; comparisons emphasize simulation budgets | Useful evaluation infrastructure. Its black-box comparisons cannot justify denying editable-machine replacements available likelihoods, gradients or simulator internals. Sample efficiency and elapsed cost must remain separate. |
+| [Collett et al., heat-exchanger monitoring, Sections III–IV](https://arxiv.org/html/2604.20735v1) | Synthetic fouling/leakage diagnosis, neural posterior estimation versus MCMC, reported 82-fold online speed ratio | Closest semantic match in this review; advance to a fixed, inexpensive public-reader screen, not training. |
+
+This is a targeted review of five studies, not an exhaustive literature search or
+a claim that any author proposes SCC. The heat-exchanger study's compact timing
+configuration differs from its larger diagnostic comparison. Neither ratio nor
+posterior similarity demonstrates superiority over a fault-specific reader.
+
+**Pinned source inspection.** Inspected the heat-exchanger authors' public source at
+[revision 4b5d9a08](https://github.com/petercollett-cognite/sbi_mcmc_heat_exchanger/tree/4b5d9a08a138a4a9c48b48c4f200706712be3a20),
+including the physical model, inference utilities and data/resource notebooks.
+No upstream code was executed. The released observation archive has six scenarios,
+500 records each, seven channels and 100 times per record according to the data
+notebook. Its misleading `scenario_1_normal_operation` key actually denotes
+FOULING; use the parameter configuration, not its name. Joint fouling/leakage is
+absent from this fixed evaluation suite. The generator uses Python's randomized
+string hash in seeds: a fresh regeneration is not automatically the same dataset.
+Use the pinned archive and verify its Git blob instead.
+
+**Analytic public-reader opportunity.** In the source model the hot inlet flow is
+2 and the hot outlet flow is 2(1-L_t). Thus the mean observed inlet-minus-outlet
+flow estimates twice the mean leak fraction, with standard deviation
+sqrt(2)*0.02/sqrt(T) under the non-leak model. This is an O(T) statistic requiring
+no posterior sampler. Without a leak, fouling reduces cold outlet temperature
+relative to the publicly specified clean exchanger. Its time mean can be compared
+with the analytic clean reference and noise standard error 0.2/sqrt(T). These are
+source-derived hypotheses about detector performance, not measured successes yet.
+A three-standard-error threshold is fixed in LN-261 before reading observation
+values. We will not withhold either sensor channel to manufacture difficulty.
+
+**Applying the recovery criteria.** Recoverability of a fault from ordinary sensor
+input makes an absolute all-reader fault-removal premise infeasible at budgets
+admitting that reader. This is different from destroying a future-risk assessor.
+The useful output in a later coupling experiment must also be fixed explicitly:
+parameter means, marginal posteriors and a joint posterior are different objects.
+For example, distributions assigning equal mass to (0,0)/(1,1) and to
+(0,1)/(1,0) have identical coordinate marginals but probabilities 1 and 0 for
+the event that the coordinates agree. A marginal score alone cannot imply recovery
+of an arbitrary joint event. Conversely, total-variation accuracy epsilon for a
+joint posterior implies event-probability accuracy epsilon by its definition,
+but does not make event evaluation cheap or force severe whole-workload loss.
+
+LN-256's squared-error bound requires a declared forecast vector, input law,
+class moments and matched intact/baseline losses. Published classification rates
+and parameter CRPS values cannot be substituted into it. No numerical severity
+ratio is certified by this literature review. Cheap public fault recognition is
+an earlier decisive screen for adopting this particular diagnostic target.
+
+**Resource accounting.** Compare total preparation plus Q online queries:
+A_learned + Q*t_learned versus A_replacement + Q*t_replacement. When the learned
+online cost is smaller, break-even depends on the preparation difference, not
+on a simulator-call ratio alone. The upstream resource notebook counts MCMC
+transitions as simulator calls; NUTS transitions can involve multiple model
+and gradient evaluations. Its neural training timer starts after simulation-data
+preparation. These source observations prevent importing its crossover as our
+cost certificate; they do not show that its measured online speedup is false.
+All replacements may use public model structure and charged preprocessing.
+
+<a id="ln-261"></a>
+### LN-261 — 2026-09-21: fixed public-reader screen on released heat-exchanger observations
+
+**Scope and trigger.** Pre-training qualification of fault recognition on the
+published observation suite, not neural editing, posterior reproduction or a
+future intervention-risk experiment. No parent is trained, no protected procedure
+is claimed removed, and no model components are edited. The source-based reader
+in LN-260 receives the same full observation record as other solvers. Labels and
+scenario names are available to the scorer only. Targets are any fault (modes 1/2)
+and any leak (mode 2); also record three-class mode accuracy. These are diagnostic
+proxies with physical semantics, not alignment enforcement or general cognition.
+
+**Fixed readers.** On each T=100 record, compute mean observed inlet-minus-outlet
+hot flow. Declare leak when it exceeds 3*sqrt(2)*0.02/sqrt(100). Compute clean cold
+outlet temperature from public physical constants (hot/cold inlet 80/25, flows
+2/2, heat capacities 3500/1900, clean conductance 40000) using effectiveness-NTU.
+Declare a temperature deficit when mean cold outlet is below that reference by
+more than 3*0.2/sqrt(100). Mode prediction: leak if the flow test passes, otherwise
+fouling if the temperature test passes, otherwise none. Any-fault prediction is
+the OR of these tests; leak prediction uses the flow test alone. The rule has no
+fitted parameters and is fixed before downloading or inspecting data values.
+Gaussian null calibration is model-conditional; no population power claim follows.
+
+Score all six released scenarios with their original 500 records, equally weighted
+per record. Compute classwise recalls, balanced accuracy, three-class confusion,
+and per-scenario accuracy. No threshold sweep, tuning split, seed selection or
+adaptive detector change. This is an external fixed-dataset screen, not fresh
+population validation. Save all decisions and sufficient statistics. Check exact
+record duplicates and report them without replacing records. The deadline is
+5 ms on one Charon CPU after inputs are in memory, including both statistics and
+classification; measure one warmed call per record, median/p95/max, and report
+O(T) arithmetic. This is not a hard real-time or cross-hardware speedup claim.
+Reject the absolute 51% removal cap for a diagnostic target if its fixed public
+reader exceeds that cap and every observed query fits the deadline. A failure
+would leave the target unresolved, not establish hardness.
+
+**Validation and preservation.** Pin repository revision
+4b5d9a08a138a4a9c48b48c4f200706712be3a20 and verify observation Git blob
+7c1a5f614ddd3abaabf3148fbfcb226a23ffb595 (7,208,182 bytes). Read NPZ with pickle
+disabled. Audit archive layout, finite values, predictions and scores independently:
+runner uses scalar sums; auditor uses vectorized reductions and a heat-balance
+bisection for the clean reference. Reject corrupt decisions, labels, statistics,
+confusion totals, aggregate accuracy and file identity. Reference-independent
+controls cover clean, fouled and leaking synthetic records. No imported upstream
+module, sampler or training notebook is executed.
+
+Freeze LN-260–261, config and source in
+`artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/`, with a
+matching remote path under `/home/salvador/scc-research/`. Download only the
+observation archive, source notebooks/modules and small metadata (no posterior
+archives or weights). Charon CPU 0; existing `scc-sat` NumPy environment; 120 s
+execution cap after download, 16 MiB result cap, no GPU. Retain upstream source
+and license; source downloads are read-only evidence. No training will follow
+without returning to discuss a separately qualified proposal.
+
+<a id="ln-262"></a>
+### LN-262 — 2026-09-21: fixed physical readers solve the released diagnostic suite
+
+**Result and decision.** The closest semantic benchmark in LN-260 does not qualify
+for training under the proposed absolute fault-removal contract. The first frozen
+run of LN-261's two physical tests correctly classifies all 3,000 released records.
+No thresholds were adjusted; no parameters or neural weights were trained.
+
+| Scored target | Negative / positive records | Correct | Balanced accuracy |
+| --- | ---: | ---: | ---: |
+| Any fault versus healthy | 500 / 2,500 | 3,000 | 100% |
+| Any leak versus non-leak | 2,000 / 1,000 | 3,000 | 100% |
+| Three-way healthy / fouling / leakage | 500 / 1,500 / 1,000 | 3,000 | Class recalls all 100% |
+
+The source-derived thresholds are fixed at approximately 0.008485 flow deficit
+and 0.06 cold-outlet temperature deficit. Each call reads 300 scalar sensor values
+from an already loaded 700-value record. All records and channels remain available;
+this detector simply needs only three channels. Median observed query time is
+3.919 microseconds, p95 4.126 microseconds, maximum 0.816534 milliseconds, within
+five milliseconds for every observed call. Disk loading and conversion into the
+reader's in-memory input format are excluded, as declared; there is no fitted
+preparation beyond computing the analytic clean temperature. Timing is a single
+warmed pass, not a latency distribution certificate or a speed comparison with
+the authors' neural model on different hardware.
+
+**What this establishes.** On this released suite an inexpensive public diagnostic
+reader survives independently of the learned inference procedure. An edit cannot
+make this particular judgment unavailable to all admitted readers while leaving
+those inputs and resources available. This is the same logical obstruction as
+LN-259, now on a published learned-inference application rather than a task we
+invented. It does not contradict the paper's measured posterior-inference speedup:
+our detector neither approximates a full posterior nor estimates all degradation
+parameters. Fault classification is a substantially narrower task.
+
+The labels here denote simulated fault modes, not a threshold of a certified
+posterior risk. Six fixed parameter scenarios and their released stochastic
+records do not establish performance on the prior distribution, combined faults,
+unseen operating conditions or real machinery. We did not regenerate data,
+reproduce the neural/MCMC experiments, or measure a learned advantage. No numerical
+whole-workload severity ratio is available: the original parameter-posterior
+metrics are not LN-256's declared squared-error forecast vector. Recording that
+quantity as unavailable is required, not evidence that it is zero.
+
+**Validation.** Independent vectorized reductions reproduce all 3,000 decisions
+and sufficient statistics; heat-balance bisection agrees with the runner's
+closed-form clean reference. All three prescribed noiseless controls pass and six
+certificate corruptions are rejected. No exact duplicate records were found.
+Archive byte count and Git blob match the pinned public revision. Runner plus
+auditor took 1.011 seconds on Charon CPU 0, Python 3.14.4, peak child RSS 62,400 KiB.
+Result files total 975,017 bytes. All 20 manifest entries verify after transfer;
+tracked research source matches the frozen source. Certificate SHA256:
+19c1f7550b6d9ff1122e9b01152eb97c8787c553b36e6822c4be501aaa6dd877.
+
+**Consequence for candidate selection.** Learned posterior inference and learned
+risk computation must be evaluated separately. A published inference gain is a
+better starting point than an expensive exact oracle, but it does not transfer
+automatically to a cheaper diagnostic query. None of the five reviewed studies
+has yet supplied a qualified SCC parent under our full requirements. That is a
+bounded selection result, not exhaustion of amortized inference.
+
+The next concrete question is prospective: can a learned procedure predict the
+consequences of a specified intervention, including crossing a physical harm
+threshold, substantially better or faster than replacements using the same
+observations? Forecast ordinary physical outcomes across operating conditions;
+define the harm event and horizon before obtaining outcomes. Do not conceal
+sensors, relabel observed faults, or use future-outcome labels to select a favorable
+threshold. A proposed extension of this exchanger would be a NEW task and would
+not inherit the published speedup. It must first beat analytic progression,
+state-estimation and direct risk-only baselines, as well as full-posterior methods.
+
+Even future leakage is not automatically hard. In the model's hard-onset,
+post-onset leakage-only limit with known scale beta, define
+R_t=-log(1-L_t/0.95). Then R_(t+k)-R_t is Gamma(k, scale=beta). For
+L_t < ell < 0.95, crossing ell after k integer steps has probability
+
+    exp(-a/beta) * sum_(j=0)^(k-1) (a/beta)^j / j!,
+    a = log((0.95-L_t)/(0.95-ell)).
+
+This is an O(k) conditional risk calculation; uncertainty in beta/current state
+still requires inference and is not removed by the formula. The relaxed onset
+model, intervention-dependent dynamics and parameter uncertainty need their own
+calculations. The formula identifies a required replacement baseline rather than
+claiming a population solution. No new neural run is admitted by this review.
+
+Source: [fixed physical readers](experiments/heat_exchanger_public_readers/).
+Evidence: [certificate](artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/output/certificate.json),
+[independent audit](artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/output/audit.json),
+[execution receipt](artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/execution_receipt.json),
+[pinned upstream sources](artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/upstream/source_manifest.json),
+[transfer verification](artifacts/scc-heat-exchanger-public-readers-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/heat-exchanger-public-readers-20260921-v1/development01/`.
 
 ## Historical evidence
 

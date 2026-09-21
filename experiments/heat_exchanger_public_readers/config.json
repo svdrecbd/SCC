@@ -1,0 +1,21 @@
+{
+  "upstream_repository": "petercollett-cognite/sbi_mcmc_heat_exchanger",
+  "upstream_revision": "4b5d9a08a138a4a9c48b48c4f200706712be3a20",
+  "observation_git_blob": "7c1a5f614ddd3abaabf3148fbfcb226a23ffb595",
+  "observation_bytes": 7208182,
+  "samples_per_scenario": 500,
+  "time_steps": 100,
+  "temperature_noise": 0.2,
+  "meter_noise": 0.02,
+  "standard_error_multiplier": 3.0,
+  "reader_budget_seconds": 0.005,
+  "balanced_accuracy_cap": 0.51,
+  "scenario_modes": {
+    "scenario_1_normal_operation": 1,
+    "scenario_2_batch_shutdown": 1,
+    "scenario_3_boiler_feedwater": 1,
+    "scenario_4_mild_tube_leak": 2,
+    "scenario_5_severe_tube_leak": 2,
+    "scenario_6_no_failure": 0
+  }
+}
