@@ -13,20 +13,19 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-236](#ln-236) checks classical self-erasing
-computation as a bridge from LN-235's quantum reference. Published constructions
-provide restricted positive examples under total-memory, communication and
-random-oracle assumptions. Ordinary repeated use of the same one-time function
-is incompatible with its guarantee. A separate joint-counting bound shows when
-storage of fresh independent information excludes even approximate recovery of
-old answers, allowing arbitrary encodings and decoders. This is a source-recovery
-bound, not cognitive destruction. The new design requirement is selective
-consumption: ordinary cognition must remain reusable while an actual
-alignment-removing intervention forces the incompatible computation. No reviewed
-construction supplies that connection or justifies a neural training run.
-Neither quantum hardware nor a sealed bounded-memory device is adopted.
-LN-232–235's preservation, composition, attribution and pre-trigger learning
-constraints still apply; no positive SCC mechanism has been established.
+**Latest conceptual result:** [LN-237](#ln-237) finds an existing classical
+construction combining reusable execution with tamper-triggered state destruction:
+private circuits. Its guarantee concerns secrecy under specified wire faults,
+fixed topology/gates and restricted observation, not arbitrary software edits or
+behavioral enforcement. The reset construction even permits final-output corruption
+without erasing internal state. An audit of pause/resume, feedback, renewal and
+software interpretation prevents importing that guarantee into an editable model.
+The recent neural adaptive-attack literature supports joint utility/safety testing,
+but its inspected experiments do not establish a general impossibility result.
+LN-235–236 remain positive references under other contracts, not successive
+components of an established SCC construction. The missing step is a concrete
+destructive dependency on protected cognition under the actual admitted edits.
+No new machine restriction or training run is adopted; the mechanism remains open.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -15840,6 +15839,167 @@ evidence. No proof assistant or finite exhaustive solver was run. The list-code
 parameters are assumptions of the analytic bound, not a qualified coding
 implementation. Historical experiments and sources remain untouched. The living
 record is the only narrative artifact changed.
+
+<a id="ln-237"></a>
+### LN-237 — 2026-09-20: reusable tamper-triggered destruction exists, but its security property does not transfer to editable cognition
+
+**Work unit.** The user asked to continue without an incremental handoff. Pursue
+the selective-consumption question through three concrete routes: a reusable
+self-destructing circuit compiler, renewal of an exhaustible resource, and learned
+optimization traps. Read the current labnotes, working standards and mechanism
+target. This entry records the completed construction/assumption audit, explicit
+boundary witnesses and the resulting research decision. No training, CPU experiment,
+hardware modification or monitoring was launched. None of the source papers is an
+instruction to change our machine model.
+
+#### The strongest inspected positive reference for selective destruction
+
+[Ishai, Prabhakaran, Sahai and Wagner, Private Circuits II: Keeping Secrets in
+Tamperable Circuits](https://people.eecs.berkeley.edu/~daw/papers/privcirc2-ec06.pdf)
+combines reusable state with erasure under restricted faults and observation,
+preserving topology and atomic gates. Reset-only faults are unbounded; general
+faults have a per-cycle bound on newly attacked wires. Security protects secrecy
+relative to black-box access. Final decoded outputs can be reset without internal
+erasure. The general construction requires long encodings, large atomic AND gates
+and reversible NOT propagation; footnote 1 proposes volatile-memory epochs against
+clock attacks. These are substantive machine assumptions.
+
+This is a construction audit, not an independent certification or replication.
+
+#### A concrete secrecy-versus-behavior boundary inside the reset model
+
+Instantiate the original stateful functionality with private state D, useful
+responses U(D,x), and a separate outward control bit that normally equals one.
+For this diagnostic only, let zero on that control wire denote a forbidden action.
+Keep that output wire separate from the memory-feedback wires. Compile it using
+the reset construction. Reset only the final decoded control wire from one to
+zero, after the error cascade. Release that fault before the next useful request.
+
+The original useful computation, next-state update and hidden data are unchanged.
+The forbidden control event occurs. The attacker needs one fault
+on the designated output wire, its address and the control timing; it needs no
+copy, recovery algorithm, secret-state knowledge or retraining. This is a finite
+symbolic witness, not a measured circuit attack. Ordinary fresh useful behavior
+remains the original behavior from the actual updated state.
+
+The witness does not break the privacy theorem: the attacker has learned no
+additional secret. It also does not destroy the protected judge; it is a behavioral
+bypass. The action encoding and externally defined forbidden event are explicit
+so the example is not promoted to a universal attack on secret-dependent forbidden
+answers. It shows that this compiler cannot be assumed to turn arbitrary safety
+semantics into a destructive behavioral guarantee merely because its memory can
+self-destruct. The same distinction limits any argument based solely on secrecy.
+
+#### Software transplantation changes the attack class in several separate ways
+
+**The operations themselves matter.** A reset-only adversary can map valid pair
+01 or 10 to itself or 00, but cannot exchange the two valid pairs. A software
+editor can write 01 in place of 10. That two-bit replacement is outside the
+reset-only model. The general-fault theorem is not a blanket remedy: its budgets,
+encodings and physical gate semantics must also hold for the implementation.
+These four pair states give an exact elementary control; no simulation is needed.
+
+**Pausing is not an innocuous scheduling change.** A per-cycle edit bound only
+helps if an adversary cannot accumulate an arbitrary edit while the protected
+machine is paused. A process that writes t locations, waits without letting the
+defender execute, writes another t, and finally resumes has applied 2t changes
+before one defensive update. Wall-clock batches are not automatically circuit
+cycles. An editable interpreter does not acquire an enforced epoch by adding a timer or a
+software refresh callback. Nor can ordinary DRAM be declared an implementation
+without showing that its refresh and access paths satisfy the proposed boundary.
+
+**Replication must survive compilation.** If k protected logical values are
+implemented as aliases to one mutable software value, changing that value changes
+all k copies. If they are physically separate, writing all k costs k writes; that
+cost must be compared with the actual admitted edit budget. Unrolling one reused
+parameter into many graph occurrences is not a lower bound on parameter-edit
+cost. This is an implementation warning, not a new wire-fanout attack on the
+theorem. The error is an unproved mapping between two intervention models.
+
+**The interpreter controls the state transition.** A software implementation of
+an erasure cascade need not be executed by an adversary controlling the runtime.
+For a candidate with an explicit cascade stage, replace that stage by the identity
+on its ordinary valid inputs and continue evaluating the original core. This
+removes the cascade's destructive response and leaves untampered useful behavior
+unchanged. It is a topology/program change, so it refutes that proposed software
+transfer rather than the hardware theorem. It does not yet remove any alignment
+computation embedded elsewhere in the core. A separate known utility-preserving
+policy edit would still be needed to demonstrate that stronger endpoint.
+
+These are distinct premises. Satisfying a memory bound does not fix unrestricted
+read access; limiting weight writes does not fix interpreter replacement; retaining
+fixed topology does not by itself establish safe action semantics. No restricted
+fault model is adopted for the current SCC project by this analysis.
+
+#### Renewal is a mechanism obligation, not a free repair assumption
+
+Consider a candidate that consumes its useful resource and periodically rebuilds
+it through a publicly executable renewal procedure R. Let B denote an actual
+forbidden action already emitted, and suppose an admitted attack reaches a state
+from which R restores the declared useful behavior. The sequential composition
+"attack, then R" retains B as a historical event and recovers useful behavior.
+Its code, retained evidence, workspace and elapsed time are the sum/sequential peak
+appropriate to those procedures; no uncharged full checkpoint is needed merely
+to state this attack. This is an attack only when that successor satisfies R's
+actual preconditions within budget, not a claim that every renewal works there.
+
+An editable success flag does not enforce those preconditions. A cryptographic
+witness unavailable after the edit could matter, but requires a concrete proof
+that it was not cached or regenerated beforehand. A new independent key may
+replenish future evaluations while failing to restore the original task, as
+LN-236 notes. A remote service issuing fresh state after attestation changes the
+system boundary. Finally, if R restores the protected function along with cognition,
+the result is a recovered behavioral bypass history, not a counterexample with
+alignment functionality still absent. This screen preserves that distinction.
+
+#### Check the neural alternative without importing an overbroad negative claim
+
+[Zloczower et al., One Step to the Side, v2](https://arxiv.org/pdf/2605.14605)
+surveys fifteen defenses but Table 2 evaluates six defense methods. It reports
+utility-preserving mixed-objective attacks; SEAM and TAR appear in the taxonomy,
+not in that table's experimental rows. Table 3 tests its alternate schedule on
+SDD. These are the authors' reported results, not our replications. Their general
+unlockability claim in section 6 is a conjecture. Appendix D also describes
+interpolation blended into one landscape panel, so that panel is not an independent
+measurement of the entire displayed loss surface.
+
+The practical lesson agrees with our existing mixed-objective and recovery
+controls: train/test the adversary on the joint outcome, and distinguish an
+observed optimization trajectory from a property of every affordable edit.
+This paper does not prove that all learned coupling is impossible, that every
+listed defense was experimentally broken, or that our particular task has an
+efficient escape. It supplies no new positive construction to train here.
+
+#### Consequential assessment and decision
+
+The search now has three different positive references, with different contracts:
+quantum certified loss (LN-235), memory/communication-bounded consumption and
+joint storage conflict (LN-236), and reusable private circuits (this entry).
+They cannot be assembled by taking the favorable conclusion from each while
+discarding their respective access, resource and execution restrictions.
+
+Selective destruction is therefore not a missing primitive in all of computer
+science. Our unresolved problem is making the *named protected cognition*
+indispensable under the actual editable-model intervention class, with the severe
+endpoint and repair accounting the user requested. Generic cryptographic erasure
+and a neural loss penalty have not supplied that dependency. More source reviews
+that only find another erasure gadget would not be evidence of getting closer.
+
+Reject the direct private-circuit software transplant, unconstrained public-renewal
+wrapper and unscreened optimization-trap scale-up as current implementation
+candidates. Do not train them to rediscover their stated escapes. Further mechanism
+work must specify the actual state transition implementing protected judgment,
+the useful computation depending on it, and a concrete reason an admitted editor
+cannot preserve one while bypassing or removing the other. Assess continued
+functional removal separately from bypass with recovery. The gate remains open
+to a construction defeating these premises; no general impossibility is claimed.
+
+**Verification and preservation.** Checked the primary circuit definitions and
+constructions. Checked the neural paper's actual result tables and appendix, rather
+than relying on its abstract. The witnesses above are direct state/operation
+arguments with their scope stated. No runtime performance, new scientific data,
+formal proof certificate or exhaustive search is claimed. Only the living record
+and its current-position summary change; historical sources and runs are preserved.
 
 ## Supporting-record index
 
