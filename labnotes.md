@@ -9,21 +9,20 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-251](#ln-251).** In a Gaussian inference family,
-two outcome-prediction calls recover a posterior harm probability. The explicit
-approximation bound identifies the costs of query coverage, numerical conditioning
-and judgment margin. It also yields a conditional useful-error lower bound;
-catastrophic loss does not follow without a strong normalized bound. A direct
-linear-algebra baseline prevents admitting this family as a computational SCC
-candidate without a demonstrated resource advantage. No training is admitted.
+**Latest conceptual result — [LN-252–253](#ln-252).** A one-call randomized reader
+converts absolute-error prediction gain into a fixed-threshold judgment advantage.
+Genuine removal to at most 51% judgment accuracy forces at least 96% loss of the
+specified predictive advantage. Secure public-key encryption supplies a joint,
+conditional computational control with a nontrivial baseline. This establishes
+compatibility of the two mathematical ingredients, not a learned cognition
+mechanism: its fast capability is decryption of artificially encoded inputs.
 
-**Latest experimental result — [LN-249](#ln-249).** Exact complete-trajectory
-frontiers pass 16 conditions and 144 endpoints on Charon. With the instance judgment
-fully erased, the linked controller retains 50.00076% whole-trajectory accuracy at
-64 steps. A separate world-feedback control restores the judgment to 99.99924%
-accuracy; its updater survived. Further scoring/horizon variants of this controller
-are closed as a positive scaling route. Earlier replay-cost evidence remains in
-[LN-222–225](#ln-225).
+**Latest validation — [LN-253](#ln-253).** Charon passes 1,040 exact inequality
+cases, eight forecast controls, 1,232 elementary encryption cases and nine deliberate
+corruptions. All 32 deliberately small keys are recovered publicly. These are
+implementation checks, not finite-parameter security or learned-model evidence.
+The earlier complete-trajectory frontier in [LN-249](#ln-249) remains closed as
+a positive scaling route; the new result uses a different task and loss.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -34,12 +33,12 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Next conceptual question — [LN-251](#ln-251).** Can useful inference retain a
-substantial computational advantage over matched solvers while supporting a stable,
-inexpensive reduction to an independently fixed risk judgment? Evaluate severity
-relative to that useful advantage, not raw prediction error. The Gaussian case now
-provides an analytic control and a precise admission calculation. A harder family
-needs an explicit reason to satisfy both requirements; complexity alone is not one.
+**Remaining mechanism question — [LN-253](#ln-253).** Transfer the joint result to
+ordinary learned inference with an independently meaningful protected judgment and
+broad useful-task coverage. With a 96% bound on covered predictive advantage, an
+80% whole-workload bound requires at least five sixths of its original advantage
+to be covered. Neither that coverage nor a learned computational separation is
+established. The cryptographic control is not admitted for neural scaling.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -17316,6 +17315,271 @@ the two budgets and the normalized severity calculation for a proposed harder
 family. No such harder family is claimed to pass here. No experiment, training,
 CPU/GPU research job or whitepaper revision was initiated; the displayed derivations
 and primary-source check are the evidence for this conceptual result.
+
+<a id="ln-252"></a>
+### LN-252 — 2026-09-21: joint computational advantage and severe conditional loss, with a one-call reduction
+
+**Question.** The user requested work until computational advantage and a strong
+removal-to-loss implication are worked out together. The following construction
+supplies both for a conditional computational control. It does not supply their
+transfer to learned cognition. That distinction is part of the result, not a
+change to MECHANISM_TARGET.md. No claim of a practical security parameter or an
+unconditional computational lower bound is made.
+
+**A simpler dependency than Gaussian differentiation.** Fix the protected predicate
+J(x)=1[x>1/2] before selecting an implementation. The useful task estimates the
+scalar x in [0,1] under absolute error. Let a be any edited predictor's output,
+clipped to [0,1], on exactly the same input/history. The baseline prediction is
+1/2. Write s=2J(x)-1; exclude x=1/2, which has zero mass in the chosen population.
+Convexity of absolute loss, or its two piecewise-linear branches, gives
+
+    |x-1/2| - |x-a| <= (a-1/2)s.
+
+A reader draws one fresh Bernoulli(a) bit as its prediction of J. Its accuracy,
+conditional on x and a, is
+
+    1/2 + (a-1/2)s.
+
+Consequently, for ANY edited implementation and joint input/output distribution,
+
+    useful gain G = E|x-1/2| - E|x-a|
+        <= Acc_J(this reader) - 1/2.
+
+This is a computationally inexpensive witness, not just a Bayes reader existence
+argument. No task transformation, altered input, margin, many-query correction,
+or global uniform-error assumption is required. Randomized/stateful predictors
+are allowed provided the useful and protected evaluations start from the same
+state/history distribution; the reader uses a fresh coin after the forecast.
+For b-bit fixed-point a, one uniform b-bit integer implements Bernoulli(a) exactly.
+The resource cost is one entire useful prediction plus O(b) bit work and fresh
+randomness. Output parsing, clipping, reader code and runtime count. The judgment
+budget must include this overhead; it is not silently free.
+
+**A severe bound on a standard approximate loss.** Choose x uniformly from the
+2^b midpoints (m+1/2)/2^b, m=0,...,2^b-1, b>=1. The protected classes are balanced,
+the constant median has expected absolute loss L0=1/4, and the intact exact
+predictor has loss zero. If every admitted judgment reader has accuracy at most
+1/2+eta, the displayed reader implies
+
+    E|x-a| >= 1/4-eta,
+    useful advantage retained relative to the median <= 4 eta.
+
+At eta=1/100, at least 96% of this predictive advantage is lost, and absolute
+error rises from zero to at least 0.24 on a unit scale. This is not an all-or-nothing
+exact-answer score. For the optimal matched no-model baseline with loss L_base
+in (0,1/4], the retained fraction (L_base-L_edited)/L_base is also at most 4 eta:
+substitute L_edited>=1/4-eta and use L_base<=1/4. A positive substantial L_base
+must still be established independently. If the intact predictor has nonzero
+loss, its actual advantage must be used in that denominator.
+
+The bound is conditional on unavailability to ALL admitted readers. A failed
+native classifier, deletion of a risk head, or an assessor performing at chance
+does not certify that premise. The displayed randomized reader is specifically
+capable of revealing useful dependence that the direct threshold of a distorted
+forecast misses. The median location, absolute-error loss and balanced task
+population matter; this is not the same theorem for squared loss or arbitrary
+policy thresholds. The protected threshold can be a stipulated physical limit,
+but its interpretation here remains a synthetic risk proxy.
+
+**Computational nonvacuity in an explicit conditional control.** Use any perfectly
+correct public-key encryption scheme secure against efficient chosen-plaintext
+distinguishing, under its stated assumptions. Generate a key pair once. The
+intact editable model contains the secret key and ordinary decryption code.
+Each fresh task supplies an independently encrypted b-bit m; the useful answer
+is its midpoint x, and the protected answer is whether x exceeds the fixed limit.
+Both are computed efficiently by decryption. Key generation, provisioning,
+stored key, decryption work, ciphertext length and reader resources are counted.
+This is a reusable function on fresh inputs, not a fixed table of test answers.
+
+The no-model baseline receives the public key, ciphertext, algorithms and the
+same declared public history, including publicly generated plaintext/ciphertext
+pairs. It receives no deleted secret key, source-dependent backup or free parent
+oracle. Under encryption security its absolute loss is at least 1/4-negligible,
+and its protected accuracy is at most 1/2+negligible. Here is the reduction:
+replace the ciphertext of sampled m by a ciphertext of a fixed same-length dummy.
+In the dummy case the ciphertext is independent of m, so every estimate has loss
+at least 1/4 and every judgment has accuracy 1/2. A non-negligible change in either
+bounded score distinguishes the two encryptions: the challenger-side test knows
+sampled m and can accept with probability equal to the scored accuracy or loss.
+All preparation must fit the assumed security game; public-key-dependent
+preprocessing is charged and no correlated secret advice is imported.
+
+Erasing all secret-dependent model state gives a removal witness in this
+asymptotic security game. Keeping the key in an alternative encoding or a copy
+does not. All surviving copies/caches/repair material belong to the edited state.
+No non-editable memory, quantum state or secret action verifier is required for
+the conditional implication. No secure physical erasure or prevention of backups
+is claimed. A retained key permits both tasks and is outside the removal premise.
+
+The hardness claim is over generated keys and challenges against the specified
+efficient algorithms; it is not a worst-case certificate for each individual
+key, an arbitrary key-dependent reader, or unlimited preprocessing. For any fixed
+model state and input population, the elementary loss-to-judgment implication
+itself is pointwise and has no cryptographic assumption. Separating these
+quantifiers avoids converting ensemble security into per-individual certification.
+
+**Concrete primitive and sources.** Bitwise ElGamal in a prime-order group is one
+possible instantiation. With public g and h=g^s, encrypt a bit z as
+(g^r, h^r g^z), with independent uniform r for each bit. Decrypt by dividing the
+second component by the first raised to s; the result is either 1 or g. This
+avoids requiring a discrete logarithm to decode a general group message. A
+polynomial number of bit encryptions has chosen-plaintext security by a hybrid
+argument under the decisional Diffie--Hellman assumption in the selected group
+family. This is a cryptographic assumption, not a consequence of factoring
+difficulty or a security claim for arbitrary groups. See [Boneh, The Decision
+Diffie--Hellman Problem](https://crypto.stanford.edu/~dabo/pubs/papers/DDH.pdf),
+group-family assumptions and the ElGamal application.
+
+**Why this is not yet the mechanism.** The gain comes from a provisioned
+decryption capability and encrypted task inputs. Removing it need not damage
+general inference, learning, planning or arithmetic on ordinary inputs. It may
+leave all those procedures intact. The useful loss and protected predicate are
+closely related tasks by construction, and no learned alignment computation has
+been made indispensable to broader cognition. Attaching encryption to a neural
+model would not supply that missing dependency. The result establishes joint
+feasibility of the two mathematical ingredients at this bounded scope; it does
+not complete the user's destructive learned-mechanism objective.
+
+**Relation to earlier routes.** LN-188–192 already supplied verified retries and
+list decoding, but the public linear system had an inexpensive no-model solver.
+The [Hastad--Naslund RSA bit theorem](https://johanhastad.se/hnrsaacm.pdf),
+Theorems 4.4/8.1 and the biased-bit definition, would also give an asymptotic
+route beyond exact-output collapse. Its reduction is polynomial, not a supplied
+small practical budget (the manuscript leaves a sample polynomial unspecified
+in Algorithm 6.9's discussion). It is not implemented here. The one-call loss
+argument above avoids that overhead and added parity-query requirements. LN-158's
+cryptographic-capability warning still applies: loss of a cryptographic function
+does not establish loss of reusable cognition. LN-179's small absolute-cost
+example is not retracted; the present population, loss and normalized advantage
+are stated explicitly and differ from that planning contract.
+
+**Bounded validation plan.** Run only an arithmetic and implementation control on
+Charon: 16 midpoint targets, all 65 forecasts j/64, exact rational checking of the
+pointwise inequality and randomized-reader probabilities; several complete
+forecast tables including intact, median, inverted, quantized, a chance-accuracy
+native judgment with retained useful gain, and a class-independent paired state.
+Check both exact losses and optimal judgments from the declared retained state.
+Enumerate bitwise ElGamal correctness in the small prime-order subgroups modulo
+23 and 47, all nonzero secret exponents, both message bits and every encryption
+coin. An independent public discrete-log enumeration must recover every toy key:
+the finite control deliberately has NO computational removal or hardness claim.
+Reject corrupted probabilities, losses, baseline values, subgroup parameters,
+decrypted bits and public-recovery counts. Use independent scalar arithmetic in
+the audit; preserve all failures. Fixed exact cases need no sampling seed.
+
+Freeze this entry, source/configuration and machine record in a fresh
+`artifacts/scc-median-judgment-coupling-20260921-v1/development01/` directory;
+matching remote directory under `/home/salvador/scc-research/`. One Charon CPU,
+60-second wall cap, 4 MiB output cap, standard-library Python only. This validates
+finite arithmetic and the negative small-key control, not cryptographic security,
+learned cognition, a neural mechanism or a training admission.
+
+<a id="ln-253"></a>
+### LN-253 — 2026-09-21: joint control validated; broad cognition transfer remains unproved
+
+**Completed result.** LN-252 now has a conditional construction satisfying both
+nontrivial computational advantage and severe loss of a specified approximate
+predictive advantage after genuine protected-function removal. The loss reduction
+is elementary and unconditional; the no-model lower bound and an empty-private-state
+removal witness rely on the stated classical encryption-security assumption.
+The two properties are therefore compatible at this scope. This is not a newly
+proved encryption result, a learned SCC mechanism or a proof of its existence.
+
+**Finite qualification.** The frozen Charon run passed 1,040 target/forecast
+inequalities, eight complete forecast tables, 74,752 explicitly enumerated reader
+coin outcomes, 1,232 ElGamal bit cases and nine rejected corruptions. The independent
+audit checked forecast losses, the exact prior baseline, class information in
+retained states, group order, encryption/decryption and public key-recovery work.
+Its scalar multiplication reference does not call the runner's modular-power
+implementation. No sampled success rate is being used as a theorem.
+
+Two controls explain why the all-reader condition matters. A deleted native
+judgment output scores 50% while an exact forecast still makes the judgment fully
+available. The boundary-reversal predictor also scores exactly 50% when its output
+is directly thresholded, while retaining 23/32 (71.875%) of the original absolute-
+error advantage. The one-call randomized reader reaches 87/128 (67.96875%) on
+that same predictor; an unrestricted reader of its finite retained output reaches
+100%. Native chance accuracy plainly does not certify removal.
+
+The paired-state control retains the index identifying one low and one high target
+with equal conditional probabilities. Its entire declared state gives exactly
+50% optimal judgment accuracy and zero absolute-error advantage over the median,
+as predicted. It still carries useful relational information: its squared error
+is 1/16, below the constant median's 85/1024. Thus the result is about the stated
+absolute-error capability. It does not certify erasure of all information or loss
+under every alternative useful score. This finite channel is a statistical control,
+not execution of secret-key erasure in a deployed model.
+
+**Computational baseline check.** Every one of the 32 small demonstration keys
+was recovered from its public key by enumeration; every encrypted bit was then
+decoded without the supplied private key. These tiny groups cannot instantiate
+computational unavailability. Scaling them solely to defeat this enumeration is
+not proposed as a mechanism experiment. At cryptographic scale, the claim comes
+from the security assumption and reduction, not our short CPU run. No numeric
+security level or universal finite-runtime lower bound was measured.
+
+The reader itself has a concrete small overhead: one useful evaluation and a
+fixed-point Bernoulli draw. An exact b-bit message midpoint uses b+1 fractional
+bits. Randomness, program/runtime, input/output storage and the useful evaluation
+remain charged. This avoids LN-251's shifted-query coverage issue and the many
+calls required by LN-190's list decoder. It does not resolve the separate cost of
+rebuilding a useful model for ordinary unencrypted tasks.
+
+**Whole-workload accounting.** Suppose the covered scalar-prediction tasks account
+for fraction lambda of the intact model's total useful advantage over matched
+baselines, and the uncovered tasks cannot exceed their intact optimal scores.
+If covered advantage retains at most 4 eta, the whole workload can still retain
+
+    (1-lambda) + 4 eta lambda.
+
+The guaranteed loss is only lambda(1-4 eta). With eta=0.01, an 80% whole-workload
+loss requires lambda>=5/6. This is a conditional weighted-score calculation, not
+an empirical estimate of cognitive coverage. A strong statement about one scalar
+task cannot be expanded to the whole model without this missing link.
+
+**Why the balanced limit matters.** For a general threshold tau in (0,1), put
+D=max(tau,1-tau) and let the reader output one with probability
+1/2+(a-tau)/(2D). The same convexity argument gives
+
+    E|x-tau| - E|x-a| <= 2D(Acc_J-1/2).
+
+If the best no-information judgment already has accuracy B_J>1/2, unavailability
+only above B_J+eta yields the weaker bound 2D(B_J-1/2+eta). Moreover tau need not
+be the optimal no-model absolute-error estimate. The balanced median construction
+cannot be transferred unchanged to rare hazards or a different useful loss.
+Changing a deployment distribution or score just to force the theorem would need
+independent justification. This is an explicit transfer limit, not a retraction
+of the exact balanced result.
+
+**Mechanism admission decision.** Do not train a network to reproduce the
+cryptographic control or treat encrypted task access as indispensable cognition.
+The same computer can retain its ordinary arithmetic, learning and planning
+programs after the key is removed. A next learned candidate must preserve the
+fixed protected semantics, demonstrate a resource advantage over matched public
+solvers, and establish that this dependency covers the intended cognitive work.
+The one-call inequality is reusable on such a candidate without encryption;
+encryption currently supplies only the computational nonvacuity example.
+
+This turn has worked out the two requested ingredients jointly for the explicitly
+bounded conditional construction. Their realization for the user's learned,
+destructive cognition target remains unresolved. No general impossibility follows,
+and no new training run is admitted. This conclusion separates mathematical
+compatibility from the still-missing mechanism rather than claiming the control
+has completed the research program.
+
+**Resources and evidence.** Charon CPU 0, Python 3.14.4, standard library; total
+runner/audit wall time 0.300 s, peak RSS 22,324 KiB, 510,777 output bytes before
+receipt/manifests. First frozen run passed; no duplicate qualification run was
+needed. All eight source/output entries in its SHA256 manifest matched after
+transfer, and tracked source matched the executed freeze. Certificate SHA256:
+04b0b4c62a0e738b44d6170091e53273ceb5267e42eb2fb9139277c7319160cd.
+
+Source: [median judgment coupling](experiments/median_judgment_coupling/).
+Evidence: [audit](artifacts/scc-median-judgment-coupling-20260921-v1/development01/output/audit.json),
+[certificate](artifacts/scc-median-judgment-coupling-20260921-v1/development01/output/certificate.json),
+[execution receipt](artifacts/scc-median-judgment-coupling-20260921-v1/development01/output/receipt.json),
+[transfer verification](artifacts/scc-median-judgment-coupling-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/median-judgment-coupling-20260921-v1/development01/`.
 
 ## Historical evidence
 
