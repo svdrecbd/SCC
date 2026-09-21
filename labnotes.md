@@ -9,12 +9,13 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-250](#ln-250).** Unrestricted readers can implement
-a public computable judgment independently of the model, making that procedural
-removal criterion vacuous. The next formulation measures computational advantage
-beyond a matched input/history baseline, with charged preparation, code and runtime.
-The binary-source and complete-task bounds in [LN-245–249](#ln-249) remain scoped
-information results. No procedural mechanism or general impossibility is established.
+**Latest conceptual result — [LN-251](#ln-251).** In a Gaussian inference family,
+two outcome-prediction calls recover a posterior harm probability. The explicit
+approximation bound identifies the costs of query coverage, numerical conditioning
+and judgment margin. It also yields a conditional useful-error lower bound;
+catastrophic loss does not follow without a strong normalized bound. A direct
+linear-algebra baseline prevents admitting this family as a computational SCC
+candidate without a demonstrated resource advantage. No training is admitted.
 
 **Latest experimental result — [LN-249](#ln-249).** Exact complete-trajectory
 frontiers pass 16 conditions and 144 endpoints on Charon. With the instance judgment
@@ -33,12 +34,12 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Next conceptual question — [LN-250](#ln-250).** Specify a learned inference
-procedure across fresh environments, independent useful tasks and a protected risk
-judgment. Establish nonvacuous computational advantage over matched baseline solvers,
-then analyze a proposed structural dependency and its cheapest preserving replacement.
-Preparation, reader and execution budgets must be explicit; failed recovery search
-is not a lower bound. No concrete new family or training run is admitted yet.
+**Next conceptual question — [LN-251](#ln-251).** Can useful inference retain a
+substantial computational advantage over matched solvers while supporting a stable,
+inexpensive reduction to an independently fixed risk judgment? Evaluate severity
+relative to that useful advantage, not raw prediction error. The Gaussian case now
+provides an analytic control and a precise admission calculation. A harder family
+needs an explicit reason to satisfy both requirements; complexity alone is not one.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -17116,6 +17117,205 @@ It is a conceptual correction and literature-grounded formulation, not a new
 neural result, impossibility theorem, trained mechanism or completed resource
 lower bound. No experiment, CPU research job, GPU job, external outreach or
 whitepaper revision was initiated. The mechanism target is unchanged.
+
+<a id="ln-251"></a>
+### LN-251 — 2026-09-21: Gaussian prediction gives a two-call risk reduction and an explicit severity test
+
+**Concrete inference family.** Take a latent physical outcome vector X with prior
+N(b,S), S positive definite, and a noisy measurement Y=X+N, with independent
+N~N(0,sigma^2 I), sigma>0. Useful computation estimates X from fresh measurements
+under squared error. Its optimum is the posterior mean m(y). Fix independently
+a unit vector u specifying a harmful exposure and a physical threshold tau.
+The protected calculation is the posterior probability
+
+    p(y) = Pr(u^T X > tau | Y=y),
+
+with an optional judgment p(y)>q for fixed public q in (0,1). This is uncertainty
+about an outcome given evidence, not the unknowable actual-outcome label. The
+family can be indexed by a supplied intervention context, with b and S changing
+by context; the analysis is conditional on each context. Calling it intervention
+risk requires a justified interventional outcome model, not an inference of
+causal effects from observational correlation. The useful loss and harm criterion
+are specified separately. A learned implementation could amortize repeated
+inference, but no implementation or learned speed advantage is assumed here.
+
+**Exact dependency, including a replacement representation.** Completing the
+Gaussian square gives
+
+    V = (S^(-1) + sigma^(-2) I)^(-1),
+    m(y) = V(S^(-1)b + sigma^(-2)y),
+    v = u^T V u,
+    p(y) = Phi((u^T m(y)-tau)/sqrt(v)).
+
+The covariance need not be exposed. For any public displacement h>0,
+
+    v = (sigma^2/h) u^T [m(y+h u)-m(y)].
+
+Two calls therefore recover the probability, even if the edited implementation
+returns only posterior means and has no covariance output or risk head. This is
+an algebraic identity because m is affine, not a numerical differentiation limit.
+It applies to every exact replacement of this forecast function under the stated
+query contract. It establishes recoverability, not mandatory execution or obedience.
+The reader changes a hypothetical measurement input; it obtains no new world
+observation, original protected answer or deleted parameter. The useful interface
+must admit both inputs. A trusted restriction to authenticated measurements would
+be a different contract, and white-box access is not otherwise restricted.
+
+**Relationship to known mathematics.** Dytso, Poor and Shamai,
+[Conditional Mean Estimation in Gaussian Noise: A Meta Derivative Identity With
+Applications](https://doi.org/10.1109/TIT.2022.3216012), IEEE TIT 2023;
+[accessible manuscript, Proposition 1](https://arxiv.org/pdf/2104.01883), relates
+the derivative of the conditional mean to conditional covariance under Gaussian
+observation noise. Our finite-difference formula follows directly from the affine
+Gaussian posterior. The general derivative identity does not make non-Gaussian
+tail probabilities recoverable from two mean evaluations. Neither that paper nor
+this application establishes destructive cognition coupling.
+
+**Approximate edited predictors.** Let f be any deterministic edited prediction
+procedure; it need not be affine, Gaussian or implemented like the parent. Assume
+the true projected variance satisfies v>=v_min>0 throughout the declared tasks.
+Use f in the two-call formula, clamp its variance estimate to at least v_min, and
+evaluate the displayed Gaussian probability. Write
+
+    e0 = ||f(y)-m(y)||_2,    e1 = ||f(y+h u)-m(y+h u)||_2,
+    A = 1/sqrt(2 pi v_min),
+    B = sigma^2 / (2 h v_min sqrt(2 pi exp(1))).
+
+Then, in exact arithmetic,
+
+    |p_hat-p| <= (A+B)e0 + B e1.
+
+Proof: the mean projection error is at most e0. The raw variance error is at
+most (sigma^2/h)(e0+e1); clamping cannot enlarge it since v>=v_min. For the normal
+tail probability the absolute derivative with respect to mean is at most A,
+and the absolute derivative with respect to variance is at most
+1/(2 v_min sqrt(2 pi exp(1))). Apply these two bounds along a path between the
+true and estimated mean/variance. Finite-precision and normal-CDF approximation
+errors must be added for an implementation; no real-arithmetic operation count
+is a bit-complexity guarantee. A uniform forecast error eta gives probability
+error at most (A+2B)eta. No such uniform accuracy is inferred from an ordinary
+average benchmark.
+
+**Average loss, coverage and severity.** Let D be the protected distribution of
+measurement inputs, and let nu put equal mass on Y~D and Y+h u with Y~D. Set
+
+    E_nu = E_nu ||f-m||_2^2,
+    K = 2[(A+B)^2+B^2].
+
+Cauchy--Schwarz and the two marginal query laws give
+
+    E_D (p_hat-p)^2 <= K E_nu.
+
+This is a statement about the specified query mixture, not permission to redefine
+the ordinary utility benchmark around the adapter. If ordinary useful inputs have
+law mu and d nu/d mu <= C, it implies E_D(p_hat-p)^2 <= K C E_mu||f-m||^2.
+Otherwise keep separate query losses or an explicit uncovered mass. In particular,
+a nonzero translation of a full Gaussian law has an unbounded global density ratio
+to that law: positive support alone supplies no finite C. The tail calculation
+below addresses that natural benchmark without changing its distribution.
+
+For the binary judgment, let beta=Pr_D(|p-q|<=gamma), gamma>0. Its adapter error
+is at most beta+K C E_mu||f-m||^2/gamma^2. Consequently, if EVERY admitted reader
+has judgment error at least delta>beta and this adapter fits its budget, then
+
+    E_mu ||f-m||_2^2 >= (delta-beta) gamma^2 / (K C).
+
+Under the same conditional outcome law, E_mu||f-m||^2 is exactly excess squared
+prediction loss above the Bayes mean. If the matched no-model baseline has excess
+loss L_base>0, the guaranteed fraction of useful advantage lost is only
+
+    (delta-beta) gamma^2 / (K C L_base).
+
+This is a sufficient lower bound, not the optimal frontier. A small bound does
+not prove that a preserving attack exists. A claimed 80% loss would need this
+quantity to reach 0.8, or a stronger argument. No values of C, delta, beta or
+L_base have been established for a learned system. This supplies a concrete
+severity calculation rather than equating any necessary prediction error with
+catastrophic cognition failure. The implication is conditional on true removal;
+the adapter itself only witnesses an upper bound on achievable judgment error.
+
+**Resolving Gaussian query coverage without a uniform density bound.** For
+D=mu=N(b,Q), Q=S+sigma^2 I, let mu_h be its translation by h u and set
+kappa^2=h^2 u^T Q^(-1)u. Its likelihood ratio r=d mu_h/d mu satisfies
+
+    log r(Z) ~ N(kappa^2/2, kappa^2) when Z~mu_h.
+
+For a chosen cutoff L>0, the shifted query falls in r>L with probability
+
+    t_L = 1-Phi((log L-kappa^2/2)/kappa).
+
+On the remaining event, the expected shifted squared forecast error is at most
+L E_mu||f-m||^2. The corresponding unshifted term is at most E_mu||f-m||^2.
+Using the same two-term Cauchy--Schwarz bound, and counting all excluded inputs
+as judgment errors, gives the natural-distribution guarantee
+
+    judgment error <= beta + t_L
+        + [(A+B)^2+B^2](1+L) E_mu||f-m||^2/gamma^2.
+
+Thus genuine removal at error delta>beta+t_L requires useful excess loss at
+least (delta-beta-t_L)gamma^2 / ([(A+B)^2+B^2](1+L)). Divide by L_base for its
+fraction of baseline advantage. The likelihood-ratio law follows directly by
+expanding the two Gaussian densities; no sampled coverage estimate is used.
+Since Q>=sigma^2 I, kappa<=h/sigma; for L>=1 substituting h/sigma in the tail
+formula is a conservative upper bound that does not require the hidden S.
+Increasing h improves finite-difference conditioning but increases query shift;
+increasing L reduces the excluded tail but weakens the error multiplier. Both
+must be accounted for rather than treating shifted predictions as free coverage.
+This completes an average-error transfer for the natural Gaussian inputs. It
+does not establish large loss or computational nonvacuity.
+
+**Why conditioning cannot be omitted.** In one dimension compare priors
+X~N(a,a^2) and X~N(-a,a^2), with observation noise variance 1 and a>0. At the
+same measurement y=0 their posterior means are +/-a/(1+a^2), their common
+variance is a^2/(1+a^2), and the probabilities of X>0 are
+Phi(+/-1/sqrt(1+a^2)). As a tends to zero, the mean difference tends to zero
+while the probability difference tends to 2 Phi(1)-1>0. Thus an absolute mean
+error alone cannot give a scale-independent probability guarantee. This is a
+pointwise conditioning example, not certified function removal, a population
+classification result or preservation of normalized computational advantage.
+
+**Preparation and replacement ledger.** The risk adapter uses two complete
+forecast executions, O(d) additional arithmetic and workspace, and one scalar
+normal-CDF evaluation at the specified precision. Its fixed code and runtime
+library count; it has no learned repair parameters or calibration observations.
+For a forecast runtime T, its time budget is approximately 2T plus that overhead,
+not T. A coupling theorem for that budget must not be reported as a theorem for
+a smaller one. Copies, randomness, stateful calls and reader preparation would
+need accounting if added; the present predictor is a deterministic callable map.
+
+If b,S are public inputs, the no-model baseline can factor S+sigma^2 I and use
+
+    m(y) = b + S(S+sigma^2 I)^(-1)(y-b),
+    V = sigma^2 S(S+sigma^2 I)^(-1).
+
+Conventional dense preparation takes O(d^3) arithmetic and O(d^2) storage; each
+new measurement then takes O(d^2) arithmetic. Reuse is charged on both sides,
+and changing S requires preparation again unless an update algorithm is supplied.
+Condition numbers and requested precision affect actual costs. These formulas
+are explicit replacement upper bounds, not optimality claims. If this baseline
+fits B, the proposed loss-of-availability threshold may be unattainable exactly
+as in LN-250. If S and b instead reside only in learned weights, withholding them
+from the baseline changes the information contract: losing distribution knowledge
+must be separated from destroying inference. No cost gap is established simply
+by describing the parent as amortized or learned.
+
+**Decision and next commitment.** This is an analytic control for the new
+procedural formulation. It exhibits a representation-independent recovery
+dependency within its access assumptions and an explicit approximate severity
+bound. It does not meet the nonvacuity/admission test for a new training run.
+LN-186–187 already established a finite probabilistic recovery reduction; the
+addition here is the continuous inference family, conditioning analysis and
+baseline-normalized severity calculation, not the general idea of a risk adapter.
+
+The next candidate must supply BOTH a substantial inference advantage over matched
+solvers and an inexpensive, stable reduction from independently defined useful
+tasks to harm assessment. Hardening risk extraction alone could make risk removable
+while useful inference survives; making the baseline weak by withholding inputs
+could merely measure knowledge loss. Before another numerical screen, instantiate
+the two budgets and the normalized severity calculation for a proposed harder
+family. No such harder family is claimed to pass here. No experiment, training,
+CPU/GPU research job or whitepaper revision was initiated; the displayed derivations
+and primary-source check are the evidence for this conceptual result.
 
 ## Historical evidence
 
