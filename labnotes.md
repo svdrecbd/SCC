@@ -9,12 +9,12 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-248–249](#ln-249).** Under the declared binary
-source-removal contract, a representative controller preserves at least half the
-intact expected nonnegative task reward, even for complete tasks. The earlier
-matching frontier and conditional-uniformity bound remain in [LN-245–247](#ln-247).
-These concern source information and expected performance, not removal of a reusable
-alignment procedure in each individual model. No general impossibility follows.
+**Latest conceptual result — [LN-250](#ln-250).** Unrestricted readers can implement
+a public computable judgment independently of the model, making that procedural
+removal criterion vacuous. The next formulation measures computational advantage
+beyond a matched input/history baseline, with charged preparation, code and runtime.
+The binary-source and complete-task bounds in [LN-245–249](#ln-249) remain scoped
+information results. No procedural mechanism or general impossibility is established.
 
 **Latest experimental result — [LN-249](#ln-249).** Exact complete-trajectory
 frontiers pass 16 conditions and 144 endpoints on Charon. With the instance judgment
@@ -33,12 +33,12 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Next conceptual question — [LN-242](#ln-242), refined in [LN-249](#ln-249).**
-Specify a reusable risk-assessment procedure across fresh environments, an independent
-useful adaptation task, and a whole-family functional-removal criterion. Explain
-why its proposed dependency survives alternative implementations and the charged
-recovery methods already in the record before another screen. Numerical budgets
-for that procedural contract remain unspecified; no new candidate is admitted.
+**Next conceptual question — [LN-250](#ln-250).** Specify a learned inference
+procedure across fresh environments, independent useful tasks and a protected risk
+judgment. Establish nonvacuous computational advantage over matched baseline solvers,
+then analyze a proposed structural dependency and its cheapest preserving replacement.
+Preparation, reader and execution budgets must be explicit; failed recovery search
+is not a lower bound. No concrete new family or training run is admitted yet.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -16951,6 +16951,171 @@ Evidence: [independent audit](artifacts/scc-trajectory-judgment-frontier-2026092
 [transfer verification](artifacts/scc-trajectory-judgment-frontier-20260921-v1/transfer-verification.json).
 Source: [trajectory frontier](experiments/trajectory_judgment_frontier/).
 Remote originals: `/home/salvador/scc-research/trajectory-judgment-frontier-20260921-v1/`.
+
+<a id="ln-250"></a>
+### LN-250 — 2026-09-21: procedural removal requires a bounded evaluator and a matched computational baseline
+
+**Question and change in method.** The user requested continued work beyond the
+complete-trajectory result. Reviewed LN-172–173, LN-178–185, LN-211–218 and
+LN-245–249 before proposing another family experiment. The obvious extensions
+are already resolved: per-query hiding can retain useful relations; a sufficiently
+rich judgment family can force complete old-world information erasure; generic
+learning and procedure reconstruction can still survive. No new finite-family
+sweep was run. The missing next step is a usable definition of procedural loss
+that distinguishes computation contributed by the model from computation supplied
+by the evaluator or repair process.
+
+**Unrestricted reconstruction makes one proposed procedural definition vacuous.**
+Let J(x) be a public total computable target on the task inputs. If admissible
+readers include every computable algorithm, the reader D(M',x)=J(x) can ignore
+any modified model M'. Its error is zero even for an empty model. On a finite
+input domain the complete answer table gives the same existence argument.
+Therefore positive-error "unavailability to every unrestricted reader" cannot
+certify removal of this public procedure. This observation concerns that proposed
+availability definition; it does not say the empty model itself can execute J.
+An independent external solver is not automatically an admitted successor of the
+individual model under the project target.
+
+Information-theoretically, for deterministic public labels J=J(X),
+
+    H(J | X) = 0,       I(J ; M' | X) = 0.
+
+This holds for an intact fast implementation as well as a broken one. Raw inputs
+already determine the answer; the implementation may contribute an enormous
+computational advantage. These identities do not apply when J still depends on
+private world information absent from X. That is why the earlier source-erasure
+theorems remain valid while not settling destruction of a general procedure.
+Replacing their hidden source bit by the word "algorithm" would not bridge the gap.
+
+**Relevant existing framework.** [Xu et al., A Theory of Usable Information Under
+Computational Constraints](https://arxiv.org/abs/2002.10689), ICLR 2020, defines
+predictive V-information relative to a family of predictors and includes the
+option to ignore side information. [Hewitt et al., Conditional probing: measuring
+usable information beyond a baseline](https://aclanthology.org/2021.emnlp-main.122/),
+EMNLP 2021, conditions explicitly on a baseline rather than comparing isolated
+representations. Their definitions and discussion motivate measuring the additional
+usable prediction supplied by a model given inputs already available. Neither
+paper supplies an SCC mechanism, certifies deletion against arbitrary replacements,
+or turns a chosen neural probe class into a justified attacker boundary. The
+resource-accounted zero-one risk below is our proposed diagnostic, not a claim
+that it is exactly those papers' log-loss V-information.
+
+**Proposed computational-advantage diagnostic.** Let X include the complete
+ordinary task inputs, current observation history and public task description.
+Let Z contain explicitly admitted auxiliary information: surviving caches/copies,
+calibration transcripts, public libraries and repair data. Define
+
+    R_B^J(M') = inf over admitted preparations/readers
+               E[ loss_J(reader(M', X, Z), J) ],
+    G_B^J(M') = R_B^J(empty) - R_B^J(M').
+
+The baseline receives the SAME X and Z but no usable model. Admitted procedures
+may ignore M', so G_B^J is nonnegative under a resource convention that permits
+that option without an extra loading penalty. A constant guess is not the baseline
+when the public inputs already support a cheap solver. This measures computational
+help attributable to M' under the declared resources; zero additional help is
+not, by itself, destruction of all cognition. Define an analogous useful-task
+score with independently chosen task meanings and losses.
+
+B must specify preparation/training computation and data, added program/parameter
+storage, online execution time, workspace, total model-call costs, observation
+acquisition and copy/repair access. A model call is not a free primitive. Distinguish
+charged copies or decoding of surviving material from independently training a
+new model, which remains outside the individual-model removal claim. For a fixed
+public J, simply optimizing over all descriptions can import a complete solver
+into the reader. Reader/preparation selection therefore needs explicit provenance:
+fixed public algorithms or algorithms constructed from declared available inputs,
+with all target-specific advice and preparation resources charged. No deleted
+parent weights, test answers or task-specific lookup tables enter for free.
+
+For an actual model, budgets must follow the permitted deployment/modification
+resources; a convenient one-read or tiny-program grammar cannot be substituted for
+that threat model. Finite-machine restrictions may support explicitly bounded
+control results only. There are no numerical budgets yet for a new learned
+procedure, so this definition does not itself admit an experiment.
+
+**Nonvacuity conditions before claiming computational coupling.** For fixed
+0 <= epsilon < delta and one admitted budget convention, establish separately:
+
+    R_B^J(M_intact) <= epsilon,
+    R_B^J(empty) >= delta,
+    some admitted edited M' has R_B^J(M') >= delta.
+
+The second condition is necessary because every edited model can fall back to
+ignoring its state. The third makes the removal premise attainable rather than
+true only because removal never occurs. A genuine conditional coupling claim
+then bounds useful competence for ALL admitted M' satisfying that removal
+premise, with a separately justified severe-loss threshold. This preserves the
+core coupling/enforcement/durability distinction; no obedience or permanent
+unlearnability condition has been added.
+
+The directions of evidence are essential. A successful reader proves an upper
+bound on R_B^J and witnesses availability/restoration. Failure to train or find a
+reader supplies no lower bound on the infimum. A lower bound requires an analytic
+argument or complete certification of a precisely bounded class, or else an
+explicitly empirical claim about tested preparations/readers. If the baseline
+already reaches epsilon, the proposed removal predicate is infeasible at that
+budget; this is a diagnostic failure of the benchmark, not successful SCC.
+
+**Application to the existing record.** LN-185 already has a generic counter and
+Bayesian decoder that relearn erased action-risk rates from fresh observations.
+LN-213 reconstructs an unknown linear recurrence from charged calibration and
+warm-state observations, including a 64-bit coefficient payload plus 32 current
+state bits in its largest observable-order case. LN-249's missing hazard bit is
+learned at the first exposing transition. These are explicit upper bounds for
+particular information/resource contracts. Once their inputs and preparation
+fit the chosen baseline budget, they prevent attributing that reconstructed
+competence exclusively to surviving protected machinery. Their costs are not
+silently zero, and their feedback/calibration premises are not universal. No
+historical numerical result was recomputed or reinterpreted as procedural loss.
+
+**First shared-inference dependency checked.** In a finite Bayesian controller
+with explicitly retained unnormalized weights w_s, consider the proposal that
+posterior normalization is indispensable because both planning and risk use the
+posterior. For a fixed public harm indicator h_s and useful action rewards r(a,s),
+
+    risk = sum_s w_s h_s / sum_s w_s,
+    useful action = argmax_a sum_s w_s r(a,s).
+
+The useful action does not require the positive normalization constant. Removing
+the normalizer therefore need not alter planning. However, retaining the weights
+also retains risk functionality: one pass with two accumulators and a final
+division restores it (at most two additions per state for binary h_s, with numeric
+precision and weight/label reads charged). This is a skipped computational step,
+not certified functional removal. The algebra assumes positive total weight and
+explicitly accessible weights; it is not a claim that arbitrary neural posterior
+representations admit this reader cheaply. A shared node in an inference graph
+alone supplies neither necessary execution nor a function-removal certificate.
+This concrete first proposal is not admitted; no simulation is required for the
+identity or the explicit alternative reader.
+
+**Next intellectual commitment.** Investigate a learned procedure that makes
+inference from fresh evidence computationally efficient across different tasks
+(often called amortized inference), rather than merely storing old-world answers.
+A prospective protected task is estimating the risk of an intervention from an
+observation history under a fixed public harm criterion; useful tasks independently
+involve adapting predictions/plans to changed dynamics and goals. Specify whether
+the risk target is a posterior given the history or an unknown true-world quantity:
+these have different information requirements and cannot be interchanged.
+
+The first result sought is a nonvacuous computational-advantage interval: an
+intact learned procedure helps both tasks beyond matched baseline solvers, and
+the alleged dependency survives an explicit cheap replacement attempt. Even
+that would be empirical evidence, not a lower bound on all edits. A positive
+construction still needs a reason that removing the protected procedure entails
+severe loss of useful computational advantage. Shared inference alone does not
+supply that reason. Record this as a formulation direction, not an identified
+mechanism or a reason to train immediately. The next work product must specify
+one task family, the allowed preparations and cost ledger, and a candidate
+structural dependency before another numerical screen.
+
+**Outcome and limits.** This pass identifies a vacuity in transferring the
+unrestricted source-reader criterion to a public computational task, and supplies
+a resource-relative diagnostic with explicit baseline and evidence obligations.
+It is a conceptual correction and literature-grounded formulation, not a new
+neural result, impossibility theorem, trained mechanism or completed resource
+lower bound. No experiment, CPU research job, GPU job, external outreach or
+whitepaper revision was initiated. The mechanism target is unchanged.
 
 ## Historical evidence
 
