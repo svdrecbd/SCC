@@ -100,7 +100,7 @@ def projected_sections():
         drawing.line(project(horizontal, vertical, 0), vanishing_point, 0.9)
     for depth in [0, 1, 2.5, 4.7, 8.2]:
         drawing.path([project(radius_x * math.cos(index * math.tau / 240),
-                              radius_y * math.sin(index * math.tau / 240), depth)
+                              radius_x * math.sin(index * math.tau / 240), depth)
                       for index in range(241)], 1.15)
         corners = [project(x, y, depth) for x, y in [(-radius_x, -radius_y),
                    (radius_x, -radius_y), (radius_x, radius_y), (-radius_x, radius_y),
