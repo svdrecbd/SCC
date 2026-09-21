@@ -24,7 +24,7 @@ __pycache__/
 /private/research-network.md
 
 # Local verified external-storage migration receipts.
-/.storage-migrations/
+/.storage-migrations
 
 # Preserved obsolete local checkouts and source exports.
-/.local-archives/
+/.local-archives
