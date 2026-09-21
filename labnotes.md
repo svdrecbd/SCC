@@ -16450,6 +16450,19 @@ this revision introduces no research result or experiment. Source snapshots,
 preservation checks and rendered-document verification are in the
 [revision evidence](artifacts/scc-whitepaper-condensation-20260921-v1/).
 
+<a id="ln-244"></a>
+### LN-244 — 2026-09-21: explanatory mathematics and cover refinement
+
+Version 1.3 removes the laboratory affiliation and descriptive cover subtitle at
+the user's request, retaining Salvador Escobedo and the University of California,
+San Francisco. Restored the bounded coupling condition and approximate coexistence
+tradeoff; expanded the transform, prediction and coverage equations to show their
+reasoning. Definitions accompany the notation. The paper remains eight pages with
+approximately 3,100 source words; its scientific claims and technical reference are
+unchanged. Checked the rendered mathematics, fonts, links and page bounds. The
+pre-edit source and verification receipts are preserved in
+[the revision evidence](artifacts/scc-whitepaper-mathematical-revision-20260921-v1/).
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

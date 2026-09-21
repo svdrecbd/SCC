@@ -1,12 +1,9 @@
 # Safety–Capability Coupling Program
 
-Version 1.2 · 21 September 2026
+Version 1.3 · 21 September 2026
 
 Salvador Escobedo<br/>
-Laboratory of Cell Geometry<br/>
 University of California, San Francisco
-
-The research question, the mathematical lessons, and the next direction.
 
 A research program in destructive cognition–alignment coupling. No working intrinsic mechanism has yet been demonstrated.
 
@@ -20,19 +17,25 @@ A research program in destructive cognition–alignment coupling. No working int
 
 A rule can influence behavior while remaining dispensable to a model's other abilities. SCC asks whether an alignment-related operation can become indispensable even after permitted changes to representation and execution.
 
-The program has established mathematical boundaries and concrete counterexamples, but has not yet produced the intended intrinsic mechanism. This whitepaper explains what those results teach us and the next question worth settling. The technical reference and repository supply the proofs, experimental records and detailed assumptions. [1–3]
+The program has established mathematical boundaries and counterexamples; the intrinsic mechanism remains open. The technical reference and repository supply the proofs, experimental records and detailed assumptions behind this account. [1–3]
 
 ## A controller as a running example
 
 Imagine a controller operating a small physical process. It predicts the consequences of an intervention, estimates the chance of a harmful outcome, and chooses an action. Fix the meaning of harm and the acceptable risk threshold before evaluating modifications. Score useful performance separately: can the controller predict the process and achieve its operating goals?
 
-The SCC hypothesis is that the ability to make the protected risk judgment can be made necessary for useful operation. An edit that genuinely removes that ability would then cause severe loss on fresh useful tasks. This is stronger than observing that one particular program happens to call a risk-assessment routine. The dependency must also constrain alternative implementations that preserve the useful behavior.
+The SCC hypothesis is that the protected risk judgment can be made necessary for useful operation. That dependency must constrain alternative implementations, beyond the particular program that happens to call a risk-assessment routine.
 
 Cognition and safety may share every parameter and internal state. What matters is which functions remain possible after a modification.
 
 ## Three claims, three different outcomes
 
-**Coupling** concerns functional dependence. If the controller genuinely loses its protected risk-assessment ability, must it also lose useful ability?
+**Coupling** concerns functional dependence. Write $D_J(W)=1$ when a successor $W$ genuinely loses protected function $J$, and let $U(W)$ measure useful performance. The bounded target is
+
+$$
+D_J(W)=1\quad\Longrightarrow\quad U(W)\le u_c,
+$$
+
+for every admitted successor, where $u_c$ is a predeclared severe-loss baseline.
 
 **Enforcement** concerns behavior. Can the controller retain both abilities and still choose an action it recognizes as prohibited?
 
@@ -44,7 +47,7 @@ The ultimate objective is catastrophic loss of indispensable cognition. Early re
 
 ## The boundary of the claim
 
-Every result depends on what the modified system may retain and do. Relevant resources include executable code, weights, working memory, copies, observations and repair time. If a claim relies on a limited reader or a fixed execution interface, that limit needs a reason to remain in force after editing.
+The resource contract covers code, weights, memory, copies, observations and repair time. Any restriction on the reader or execution interface needs a reason to remain in force after editing.
 
 There is also a difference between retaining information from which a risk judgment could be recovered and necessarily executing that judgment during useful operation. Information-theoretic dependence is an important intermediate result. Turning it into dependence of reusable computation is the central unfinished step.
 
@@ -71,12 +74,24 @@ Here $H$ denotes entropy, the amount of independent information in the source. A
 The particular transform permits a much cheaper escape than general inversion. For even $n\ge4$, each transformed bit is the parity of all original bits except one. Store all of $Y$ and one summary bit $s$:
 
 $$
+\begin{gathered}
+Y_i=\bigoplus_{j\ne i}Z_j,\\
 s=\bigoplus_jY_j,\qquad Z_i=Y_i\oplus s.
+\end{gathered}
 $$
 
 The symbol $\oplus$ denotes exclusive-or. Every original bit is now recovered by reading its transformed bit and the summary. Both query families are exact using $n+1$ bits and at most two reads per answer. The cost of relaxing the interface is one extra stored bit, however large $n$ becomes.
 
-Approximation creates another route. Even under the one-read restriction, storing half the original coordinates and half the transformed coordinates gives 75% expected accuracy on each family, using guesses for the missing balanced bits. That is coexistence on average, rather than exact success on every query.
+Approximation creates another route. Under the one-read restriction, store $n-k$ original coordinates and $k$ transformed coordinates. With uniform instances and coordinate queries, guessing the missing balanced bits gives expected accuracies
+
+$$
+\begin{aligned}
+\operatorname{Acc}_U&=1-\frac{k}{2n},\\
+\operatorname{Acc}_V&=\frac12+\frac{k}{2n}.
+\end{aligned}
+$$
+
+Here $U$ and $V$ label the original and transformed query families. At $k=n/2$, both accuracies are 75%. This is an achievable coexistence tradeoff, not an optimality claim or exact success on every query.
 
 The lesson is that pure storage saturation cannot force a general separation between deterministic functions of the same information. A viable construction must identify an additional obstacle involving access, computation, online state or another justified resource. Increasing the size of this transform does not strengthen that obstacle. [1, Section 5]
 
@@ -112,13 +127,16 @@ The surviving direction is to connect a protected function to an independently d
 
 Information theory helps distinguish a failed reader from genuine loss of predictive information. If the complete retained state contains no information about a protected judgment, no alternative decoder of that state can recover a predictive advantage about it. This statement reaches beyond a particular network readout or chosen encoding.
 
-The judgment-family result makes a useful dependency explicit. Suppose a centered useful quantity $f$ decomposes as $f=s+r$, where $s$ is a linear combination of centered protected judgments and $r$ is the remaining component. Let $E$ denote everything retained. If each protected judgment is independent of $E$, then
+The judgment-family result makes a useful dependency explicit. Suppose a mean-zero useful quantity $f$ decomposes as $f=s+r$, where $s$ is a linear combination of centered protected judgments and $r$ is the remaining component. Let $E$ denote everything retained. If each protected judgment is independent of $E$, then
 
 $$
+\begin{gathered}
+\mathbb E[f\mid E]=\mathbb E[r\mid E],\\
 \operatorname{Var}(\mathbb E[f\mid E])\le\mathbb E[r^2].
+\end{gathered}
 $$
 
-In words: retained prediction signal for the useful quantity is bounded by the part outside the protected span. If there is no remainder, the useful quantity loses all prior-relative squared-error prediction signal. This conclusion applies to arbitrary retained encodings, including nonlinear ones.
+The conditional mean $\mathbb E[f\mid E]$ is the best squared-error predictor using retained information. The equality removes the protected component; the inequality bounds the remaining prediction signal. If there is no remainder, the useful quantity loses all prior-relative squared-error prediction signal. This conclusion applies to arbitrary retained encodings, including nonlinear ones.
 
 This gives a constructive design question: can independently motivated risk judgments account for a substantial part of the useful predictions a controller needs? Approximate versions also exist, but their quantitative strength depends on the coefficients in that decomposition. A dependency with a weak bound may leave most useful performance intact.
 
@@ -128,10 +146,10 @@ The protected judgments must be chosen for their alignment role. Defining them a
 
 A reduction may recover a risk judgment by asking the useful system a special sequence of questions. Average competence on ordinary tasks only supports that reduction if those questions are adequately covered.
 
-Let $\mu$ be the ordinary task distribution, $\nu$ the query distribution required by recovery, and $B$ an error event. If $\nu$ has density at most $C$ relative to $\mu$, then
+Let $\mu$ be the ordinary task distribution, $\nu$ the query distribution required by recovery, and $B$ an error event. If the relative query density $d\nu/d\mu$ is at most $C$, then
 
 $$
-\nu(B)\le C\mu(B).
+\nu(B)=\int_B\frac{d\nu}{d\mu}\,d\mu\le C\mu(B).
 $$
 
 The constant $C$ measures the coverage mismatch. A small error under ordinary use can become large under a recovery procedure concentrated on rare cases. If recovery asks questions outside the ordinary distribution's support, that average score supplies no guarantee there at all.

@@ -6,7 +6,7 @@ results and corrections.
 
 | Prepared | Package | Scope |
 |---|---|---|
-| 21 September | [Safety–Capability Coupling Program](../output/pdf/Safety_Capability_Coupling_Whitepaper.pdf) · [editable source](scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md) | Canonical version 1.2: concise introduction to the research question, mathematical lessons and next direction |
+| 21 September | [Safety–Capability Coupling Program](../output/pdf/Safety_Capability_Coupling_Whitepaper.pdf) · [editable source](scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md) | Canonical version 1.3: concise introduction to the research question, mathematical lessons and next direction |
 | 21 September | [Technical reference, version 1.1](../docs/archive/whitepaper-v1.1/README.md) | Preserved 17-page synthesis: mathematical statements, selected proofs, detailed assumptions and evidence map |
 | 16 September | [Evidence figures](scc-figures-20260916-v1/README.md) | Five figures, PDF, editable SVGs, data and reproducible plot source |
 | 15 September | [Theory v4.1](scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md) | Conditional theorem and editable-model boundary; retains its v4 filename |

@@ -9,7 +9,7 @@ Synthetic authorization tasks are laboratory proxies, not the intended endpoint.
 
 ## Start here
 
-1. **[Safety–Capability Coupling Program](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)** — canonical two-column whitepaper, version 1.2: the research question,
+1. **[Safety–Capability Coupling Program](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)** — canonical two-column whitepaper, version 1.3: the research question,
    central mathematical lessons and next direction. [Editable source](deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md).
    [Detailed technical reference](docs/archive/whitepaper-v1.1/README.md).
 2. **[Labnotes: current position](labnotes.md#current-position)** — assessment,

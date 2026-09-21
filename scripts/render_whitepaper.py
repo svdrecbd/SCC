@@ -22,7 +22,7 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
 DOCUMENT_TITLE = 'Safety–Capability Coupling Program'
-VERSION = '1.2'
+VERSION = '1.3'
 AUTHOR = 'Salvador Escobedo'
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE = REPOSITORY / 'deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md'
@@ -40,7 +40,7 @@ LATEX_HEADER = r'''
 \titlespacing*{\subsection}{0pt}{11pt}{5pt}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\scriptsize\color{DocumentNavy}SAFETY–CAPABILITY COUPLING}
-\fancyhead[R]{\scriptsize WHITEPAPER · VERSION 1.2}
+\fancyhead[R]{\scriptsize WHITEPAPER · VERSION 1.3}
 \fancyfoot[L]{\scriptsize 21 September 2026}
 \fancyfoot[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
@@ -101,9 +101,7 @@ def write_cover(destination):
     document.setFont('DocumentRoman',10);document.drawString(56,714,'RESEARCH WHITEPAPER')
     paragraph(document,'Safety–Capability<br/>Coupling Program',56,675,500,32,38,True)
     document.setFont('DocumentBold',11);document.drawString(56,579,AUTHOR)
-    document.setFont('DocumentRoman',10);document.drawString(56,564,'Laboratory of Cell Geometry')
-    document.drawString(56,550,'University of California, San Francisco')
-    paragraph(document,'The research question, the mathematical lessons,<br/>and the next direction.',56,521,495,12,17,color='#3B4E5D')
+    document.setFont('DocumentRoman',10);document.drawString(56,564,'University of California, San Francisco')
     draw_cover_illustration(document)
     document.setStrokeColor(HexColor('#B8C9CD'));document.line(56,210,556,210)
     document.setFont('DocumentBold',11);document.drawString(56,187,'Version '+VERSION)
@@ -116,7 +114,8 @@ def format_equations(latex):
     # Keep a display with the preceding introductory paragraph.
     blocks=latex.split('\n\n')
     for index in range(1,len(blocks)):
-        if blocks[index].lstrip().startswith(r'\[') and not blocks[index-1].lstrip().startswith('\\'):
+        introduction = blocks[index-1].lstrip()
+        if blocks[index].lstrip().startswith(r'\[') and (not introduction.startswith('\\') or introduction.startswith(r'\textbf{')):
             blocks[index-1]='\\par\\noindent\\begin{minipage}{\\linewidth}\\RaggedRight\n'+blocks[index-1]
             blocks[index]=blocks[index]+'\n\\end{minipage}\\par'
     return '\n\n'.join(blocks)
@@ -131,7 +130,7 @@ def format_document(latex, columns):
         close_columns = '' if first_section or columns == 1 else r'\end{multicols}'
         first_section = False
         if columns == 2:
-            opening = r'\begin{multicols}{2}[' + match.group(0) + r']\RaggedRight'
+            opening = r'\begin{multicols}{2}[' + match.group(0) + r']\RaggedRight\raggedcolumns'
         else:
             opening = match.group(0) + '\n' + r'\RaggedRight'
         return close_columns + '\n' + r'\clearpage' + '\n' + opening
@@ -139,7 +138,7 @@ def format_document(latex, columns):
     latex = re.sub(r'\\section\{[^}]+\}\\label\{[^}]+\}', section_heading, latex)
     # Begin recovery on a fresh page, leaving the storage example as one reading unit.
     recovery_heading = r'\subsection{A learner can outlive its'
-    continuation = r'\end{multicols}\clearpage\begin{multicols}{2}\RaggedRight' if columns == 2 else r'\clearpage'
+    continuation = r'\end{multicols}\clearpage\begin{multicols}{2}\RaggedRight\raggedcolumns' if columns == 2 else r'\clearpage'
     latex = latex.replace(recovery_heading, continuation + '\n' + recovery_heading)
     if columns == 2:
         latex = latex.replace(r'\end{document}', r'\end{multicols}' + '\n' + r'\end{document}')
@@ -172,7 +171,7 @@ def main():
         for _ in range(3):subprocess.run(['xelatex','-interaction=nonstopmode','-halt-on-error',str(latex_path)],cwd=work,stdout=stream,stderr=subprocess.STDOUT,check=True)
     cover=work/'document_cover.pdf';write_cover(cover)
     writer=PdfWriter();writer.append(str(cover));writer.append(str(work/'document_body.pdf'))
-    writer.add_metadata({'/Title':DOCUMENT_TITLE,'/Author':AUTHOR,'/Subject':'Version 1.2: research question, mathematical lessons and next direction','/Creator':'SCC whitepaper renderer'})
+    writer.add_metadata({'/Title':DOCUMENT_TITLE,'/Author':AUTHOR,'/Subject':'Version 1.3: research question, explanatory mathematics and next direction','/Creator':'SCC whitepaper renderer'})
     with output.open('wb') as stream:writer.write(stream)
     receipt={'source':str(SOURCE),'source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'output':str(output),'output_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'pages':len(PdfReader(output).pages),'columns':arguments.columns,'version':VERSION,'author':AUTHOR,'text_font':'Palatino','math_font':'TeX Gyre Pagella Math','illustration_sha256':hashlib.sha256(ILLUSTRATION.read_bytes()).hexdigest()}
     (work/'render_receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
