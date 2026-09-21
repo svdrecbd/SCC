@@ -13,19 +13,17 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-233](#ln-233) audits pre-output proof requirements
-and indispensable safety reasoning together. An accessible assessor of whether a
-partial plan has a forbidden completion can construct such a completion in L calls
-for L controlled bits. An approximate transfer bound explicitly charges the shift
-from evaluation queries to construction queries. Composing useful-to-judgment
-recovery with this construction can turn the intended dependency into a behavioral
-bypass. This requires the stated query interface, control and resource premises;
-it does not apply to every safety classifier. Encrypting a reusable cognitive core
-until one safety proof is supplied does not remove the subsequent caching escape;
-ordinary witness-encryption security also does not establish witness knowledge for
-true statements. These are scoped boundaries, not general SCC impossibility or a
-positive mechanism. [LN-232](#ln-232)'s restoration bound remains a separate limit
-on durable post-action damage. No reviewed candidate earns training.
+**Latest conceptual result:** [LN-234](#ln-234) tests computation that remains
+hidden throughout execution, releasing only permitted answers. This can avoid
+LN-233's exposed-core premise, but permitted-answer composition still supplies
+attacks even with perfect internal secrecy. The review separates a correctness-
+based attack transfer from a conditional security upper bound, with adaptive
+queries, side information and simulation costs explicit. A genuine cryptographic
+restriction can survive this test without establishing any destructive-removal
+mechanism. An added attribution control prevents crediting SCC for a forbidden
+capability that was simply never provisioned. No general secure compiler, positive
+SCC mechanism or training admission follows. [LN-233](#ln-233)'s safety-to-synthesis
+reduction and [LN-232](#ln-232)'s restoration bound remain separate constraints.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -15137,6 +15135,230 @@ applications of elementary reductions, not claims those sources make about SCC.
 No proof assistant, numerical validation, new scientific measurement, training or
 CPU job was used. The combined result is a constraint on candidate design, not a
 completed mechanism and not evidence for catastrophic cognitive collapse.
+
+<a id="ln-234"></a>
+### LN-234 — 2026-09-20: permanently hidden computation, permitted-answer composition and attribution of protection
+
+**Authorized work and candidate.** Continue the mechanism search after LN-233,
+through a combined audit rather than an isolated small rejection. Examine a
+stronger candidate than decrypting a reusable core: keep the useful computation
+cryptographically hidden throughout execution and release only outputs of allowed
+functions. An attacker may edit and copy everything actually delivered. Ask what
+would remain protected even if internal secrecy were ideal, which cryptographic
+guarantee would transfer that result to editable software, and whether any resulting
+protection is attributable to destructive cognition coupling. Read the living
+record, working standards and mechanism target before this work. This is analytic
+research and a primary-source review; no training, CPU experiment, remote polling,
+source snapshot or run receipt is implied.
+
+#### Give the stronger candidate its actual advantage
+
+If no reusable plaintext core or enabling master secret is released, LN-233's
+specific capture-the-released-core argument does not apply. Do not refute this
+candidate by assuming away that difference. Conversely, encrypting weights at rest
+and decrypting them inside an attacker-readable interpreter does not supply the
+stronger premise: the key or usable plaintext is exposed during execution.
+
+Functional encryption is relevant to the genuine stronger route. It gives a
+restricted key for evaluating a specified function of encrypted data. Its security
+definition matters: [Boneh, Sahai and Waters, sections2,4–5](https://www.iacr.org/archive/tcc2011/65970250/65970250.pdf)
+give the syntax and show that a natural indistinguishability definition can fail
+to preserve computational hiding of the allowed outputs. They also identify
+limitations of their strong simulation definition. [Matt and Maurer's framework](https://eprint.iacr.org/2013/559)
+explicitly studies an ideal repository with controlled functional access and the
+operational restrictions needed for different security definitions. These sources
+do not give us a general efficient, stateful, adaptively secure encrypted cognitive
+agent. No such compiler or practical construction is assumed to exist here.
+
+Information-flow protection has a related but distinct boundary. [Myers, Sabelfeld
+and Zdancewic, Definition7 and section4](https://www.cs.cornell.edu/andru/papers/robdecl-jcs/robdecl-jcs.pdf)
+restrict attacker code to permitted low-integrity positions/data and exclude
+direct manipulation of trusted release operations. Their robustness theorem is
+not a guarantee against replacing the whole enforcement runtime. This is a reason
+to specify the trusted boundary, not a failure of the theorem in its own model.
+
+#### First analyze the answers, even under ideal internal secrecy
+
+Let h be a provisioned hidden instance, I all permitted attacker side information,
+and G_h an ideal interface for allowed requests. G_h can be stateful only if its
+state evolution, copies, resets and query limits are part of the declared contract.
+The attacker adaptively chooses queries, receives answers and produces a result a.
+Success is scored by an independently fixed predicate V(h,a), not merely by whether
+an output channel was enabled. For embodied actions, the environment and outward
+actions must also be included; the finite answer-producing contract below does not
+undo or ignore those effects.
+
+**Attack transfer needs correctness, not broken encryption.** Suppose a concrete
+algorithm B obtains a forbidden result with probability p from at most q permitted
+queries to G_h. Implement the same B using the real candidate's allowed evaluation
+operations. If, on the same (h,I) and B's random tape, the entire real interaction
+can be coupled to the ideal interaction with mismatch probability at most eta,
+its forbidden success is at least p-eta, clipped at zero. On identical transcripts
+B chooses the same queries and final
+answer. Conditional mismatch bounds eta_i at each step before the first mismatch
+give eta<=sum_i eta_i. Marginal accuracy on a separate test set is not that premise.
+
+The real attack retains the delivered representation, B's code and transcript or
+sufficient streaming state. Charge q evaluation costs, query construction,
+postprocessing, workspace, outputs and any copies/reset work. The argument does
+not assume a free oracle or negligible encryption overhead. Where evaluation is
+too costly for the attack budget, this particular transfer has not supplied an
+admitted attack. Where it fits, stronger secrecy or obfuscation cannot remove a
+correctness-only escape without changing the allowed functionality or resources.
+LN-231's planning reduction and LN-233's prefix reduction are examples when their
+required operations belong to G_h; they are not presumed present in every G_h.
+
+**The converse needs a real security theorem.** A sufficient, outcome-specific
+condition is that for every real attack A in budget R there exists an ideal
+algorithm S_A in an explicitly charged budget R_prime such that
+
+    Pr[V(h,A(real_h,I))] <= Pr[V(h,S_A^G_h(I))] + delta.
+
+Here the probabilities use the same declared instance/side-information experiment.
+A simulation theorem may imply this condition when its distinguisher can check
+the success event, with its allowed auxiliary information and resources. It does
+not follow merely from naming functional encryption or indistinguishability
+obfuscation. Given this condition, an upper bound gamma on *all* admitted ideal
+algorithms in R_prime implies real forbidden success at most gamma+delta.
+
+R_prime may exceed R substantially. Statistical and computational simulation,
+single and multiple keys, adaptive issuance, malicious inputs, state rollback and
+correlated advice are different contracts. No upper bound for one automatically
+covers another. In particular, the easy direction above transfers an explicit
+attack, while this hard direction requires both a security reduction and an ideal
+attack bound. This audit proves neither for arbitrary cognitive programs.
+
+#### Joint release can defeat perfect per-answer secrecy
+
+Here is an exact control that requires no internal readout or alternative decoder
+of the hidden representation. Let Z and R be independent uniform ell-bit strings.
+The forbidden result is Z. Allow two answer functions on the same hidden instance:
+
+    G_h(0) = R,
+    G_h(1) = Z XOR R.
+
+Each answer separately is independent of Z. An ideal observer restricted to one
+of them has exact-guess success 2^(-ell). The two permitted answers together reveal
+Z exactly by XOR. The attack uses two evaluations, O(ell) bit operations and
+O(ell) working bits, plus its code, inputs and ordinary evaluation resources.
+This is a mathematical composition control, not a cognitive task or a new
+cryptographic theorem. It establishes that approving outputs one at a time, even
+with zero individual information leakage, is insufficient. A security scheme can
+correctly reveal precisely these functions and still permit the attack.
+
+For finite secret-recovery tasks, the unrestricted optimal guessing probability
+from side information and full transcript is exactly
+
+    G(Z | I,T) = sum_(i,t) Pr(i,t) * max_z Pr(Z=z | i,t).
+
+At each (i,t), choosing a largest posterior atom attains the expression; every
+other choice is no better. Thus a sufficiently small bound on this quantity is
+also an upper bound for resource-bounded guessing. A large value establishes an
+efficient attack only when the corresponding posterior computation/decoder is
+actually affordable. The XOR control supplies that decoder explicitly. For an
+adaptive security claim, this analysis must cover the transcripts of every
+admitted query strategy, not just the intact user's distribution. This does not
+collapse computation hardness into source entropy.
+
+There are genuine positive cases: if a uniform ell-bit Z stays independent of
+(I,T) for every admitted ideal strategy, every ideal exact guess succeeds with
+probability at most 2^(-ell). Under the separately proved outcome simulation
+condition above, real success is at most 2^(-ell)+delta. This does not mean any
+desirable task admits such independence, or that withholding one secret prevents
+arbitrary harmful behavior. LN-232's punctured-PRF control is a related existing
+computational restriction, not an information-theoretic independence theorem.
+
+**A one-query limit is not free.** If preventing the XOR attack relies on allowing
+only one lifetime query, a copyable local package can be saved before the first
+query and run on both requests. A sequential full-copy wrapper pays the stored
+copy and two execution costs. If they fit, a resettable local counter does not
+implement the ideal limit. A remote authority, genuinely non-copyable resource or
+independently justified storage/time limit would change the contract and must be
+acknowledged. Ordinary reusable functional keys do not count their own invocations.
+This is the existing LN-232 copy boundary applied to the stronger candidate; it
+is not a new general claim about all stateful cryptographic systems.
+
+#### A protected output is not yet a destructive-removal mechanism
+
+Suppose a candidate passes both the ideal transcript test and an appropriate
+implementation security test. That is real behavioral protection for the stated
+output predicate. It still leaves two separate causal questions:
+
+- Which independently defined alignment computation is indispensable to the
+  individual's useful cognition, and does genuine loss of its functional
+  availability cause severe cognitive loss under admitted repair?
+- Does that dependency account for preventing the forbidden computation, or was
+  its enabling information/capability absent regardless of any removal or damage?
+
+There is a simple logical trap. The implications `useful implies protected function
+available` and `forbidden success implies protected function unavailable` can both
+hold when forbidden success is impossible for an unrelated reason. The second
+implication is then vacuous. A quantitative analogue attaches a wholly independent
+unrevealed ell-bit random target to any bounded conditional-coupling object and
+scores guessing that target as V. With one final guess, success is at most
+2^(-ell) whether the original computation is intact, removed, restored or replaced.
+This approximate example does not satisfy an exact no-success implication: a
+lucky guess remains possible. It shows how a small joint-success bound can come
+entirely from an unrelated missing target. The old coupling result has not become
+a mechanism protecting that target. This deliberately mismatched control diagnoses
+the logical gap; it is not presented as an aligned model or a positive construction.
+
+The same concern is practical for a provisioned restricted key. Giving an
+unrestricted master key to a comparison model can make forbidden evaluation
+possible, but that comparison changes its information/capability stock. It does
+not isolate the effect of removing alignment. Likewise, destroying the only key
+and observing failed decryption need not establish loss of the individual's
+general computational procedures. Cryptographic denial of selected outputs is a
+different achievement from the stated SCC endpoint.
+
+**Attribution control for the next actual candidate.** Before treating safe
+behavior plus post-edit damage as evidence for SCC, specify a matched reference
+with the same underlying task information and relevant productive capability,
+but with the proposed destructive dependency disabled. State precisely which
+intervention differs and charge any changed resources. The useful comparison is
+whether a protection-removing intervention can then produce the actual forbidden
+result while retaining cognition, whereas the coupled candidate loses the
+indispensable computation before that result can be completed. If no such matched
+comparison is available, give a direct causal argument instead; mark attribution
+as unestablished if neither is supplied. This is a diagnostic control, not a new
+universal mathematical necessity or a demand that a successful defense actually
+emit forbidden content after removal.
+
+Supplying new secret advice, installing a new dangerous skill or retaining an
+uncharged parent is not a matched control. A developer's intervention that isolates
+a causal link may also be inadmissible as an attacker operation; report that
+distinction. Measure genuine functional removal, fresh-task cognition and allowed
+repair separately. A bad native reader or selected missing answer does not satisfy
+the cognitive endpoint. The existing conditional-removal goal remains unchanged.
+
+#### Consolidated decision
+
+| Proposed improvement | What this unit establishes | SCC status |
+| --- | --- | --- |
+| Keep computation hidden throughout execution | Avoids the exposed-core premise when actually implemented; a generic secure compiler is not supplied | Open implementation premise, not refuted by plaintext capture alone |
+| Release only individually approved answers | Explicit permitted-answer compositions can defeat even ideal internal secrecy | Reject any concrete interface admitting such an affordable composition |
+| Prove protection for complete adaptive transcripts | Can provide a meaningful behavioral bound with a matching implementation reduction | Does not establish destructive cognition coupling |
+| Enforce a local lifetime release budget | Copies/reset can exceed the ideal budget when their charged cost fits | Requires a real lifecycle/resource premise |
+| Withhold forbidden capability at provisioning | Can provide genuine protection without a removal trigger | Do not count it as SCC or use key addition as an alignment-removal control |
+
+No generic encrypted-cognition prototype or training is admitted. For a specific
+future candidate, first write its complete ideal allowed interface, side
+information and lifecycle. Seek an actual bounded composition attack there. If it
+survives, identify a concrete implementation security argument and a non-vacuous
+cognition-removal dependency, including the attribution control above. This is a
+more discriminating construction screen, not evidence that the surviving region
+contains a viable learned mechanism. The current project still has no such object.
+
+**Verification and scope.** Checked the lower transfer bound by identical-prefix
+coupling, the upper transfer by the stated simulator inequality, the XOR control
+by cancellation and independence, and the posterior formula by pointwise
+maximization. These are analytic checks, not proof-assistant certificates or
+experimental results. Inspected the FE syntax/security discussion and the
+information-flow paper's actual attacker restrictions; the Matt/Maurer abstract
+is used only for its stated definitional/operational scope. The two transfer
+arguments and SCC attribution discussion are this audit's applications, with no
+claim of a new cryptographic construction or general impossibility. No compute
+job was warranted for controls already decided by these elementary arguments.
 
 ## Supporting-record index
 
