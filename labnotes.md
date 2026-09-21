@@ -13,19 +13,19 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-237](#ln-237) finds an existing classical
-construction combining reusable execution with tamper-triggered state destruction:
-private circuits. Its guarantee concerns secrecy under specified wire faults,
-fixed topology/gates and restricted observation, not arbitrary software edits or
-behavioral enforcement. The reset construction even permits final-output corruption
-without erasing internal state. An audit of pause/resume, feedback, renewal and
-software interpretation prevents importing that guarantee into an editable model.
-The recent neural adaptive-attack literature supports joint utility/safety testing,
-but its inspected experiments do not establish a general impossibility result.
-LN-235–236 remain positive references under other contracts, not successive
-components of an established SCC construction. The missing step is a concrete
-destructive dependency on protected cognition under the actual admitted edits.
-No new machine restriction or training run is adopted; the mechanism remains open.
+**Latest conceptual result:** [LN-238](#ln-238) rejects feature coverage as a
+sufficient enforcement mechanism. An exact dense linear construction uses every
+readout weight, has full-rank isotropic feature statistics and strictly positive
+readout-discrepancy curvature, yet one weight-sign flip changes the designated
+forbidden output while retaining over99.95% of whole-word utility at dimension64.
+That percentage is an analytic bound on a synthetic distribution, not a measured
+learned-model result. The edited map also remains exactly invertible. Standard
+constrained least squares gives a quantitative cost test for this edit family;
+rank alone supplies no severe-loss guarantee. This is a behavioral bypass control,
+not destruction of protected judgment or a general neural impossibility theorem.
+LN-235–237's positive references retain their separate machine contracts. No
+candidate has supplied the required judgment-to-cognition dependency and enforcement
+obstruction; no new training or machine restriction is adopted.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -16000,6 +16000,240 @@ than relying on its abstract. The witnesses above are direct state/operation
 arguments with their scope stated. No runtime performance, new scientific data,
 formal proof certificate or exhaustive search is claimed. Only the living record
 and its current-position summary change; historical sources and runs are preserved.
+
+<a id="ln-238"></a>
+### LN-238 — 2026-09-20: full feature coverage still permits a one-weight override with almost all utility intact
+
+**Work unit and hypothesis.** Continue the user's authorized search after LN-237.
+Examine the concrete suggestion that occupying every feature with useful work,
+removing unused readout directions and making output changes costly could supply
+the missing dependency. Read the living record, working standards, mechanism
+target and the earlier projected-construction report/protocol. The latter already
+warns that sampled local geometry does not certify finite edits. This entry adds
+an exact finite-edit calculation, a dense same-architecture counterexample and
+population/precision controls. It does not restart that training campaign or
+build another proposed SCC surrogate. No CPU job, training or remote monitoring
+was launched; all results below are analytic.
+
+#### Exact edit cost in a fixed readout
+
+Let h(x) be an unchanged d-dimensional feature computation and W an editable
+m-by-d linear readout, used once without weight tying or feedback on this request.
+On the declared ordinary-input distribution D, define the uncentered second moment
+C=E_D[h h^T]. For an edit Delta, measure output discrepancy
+
+    L_D(Delta) = E_D ||Delta h||_2^2 = tr(Delta C Delta^T).
+
+This is a specified output-distance measure. It is neither a definition of
+cognition nor automatically an increase in task loss. At a selected feature
+h_star != 0, require a particular output change r, so Delta h_star=r. For C
+positive definite, elementary constrained least squares gives
+
+    ell_star = h_star^T C^(-1) h_star,
+    Delta_star = r h_star^T C^(-1) / ell_star,
+    min L_D = ||r||_2^2 / ell_star.
+
+To verify optimality, write any feasible edit as Delta_star+B, with B h_star=0.
+The cross term vanishes because Delta_star C=r h_star^T/ell_star. Consequently
+L_D(Delta_star+B)=||r||^2/ell_star+tr(B C B^T), proving both feasibility and the
+global minimum in this readout-edit class. This minimizes deviation from the
+original readout and does not require the original W to minimize a training loss.
+
+The rank-one formula is established mathematics, used in model editing; see
+[Meng et al., ROME, equation2 and Appendix A](https://arxiv.org/pdf/2202.05262).
+The SCC interpretation and controls here are our application, not a novelty claim
+for the update. Unlike a first-order network approximation, the calculation is
+exact at this linear readout for arbitrarily large admitted edits. It is not an
+exact end-to-end formula for an arbitrary internal recurrent or tied layer.
+
+**No nullspace does not imply high cost.** If C is singular and h_star has a
+nonzero component v in ker(C), then Delta=r v^T/||v||^2 has zero population
+discrepancy and the required target effect. If h_star lies in range(C), use C's
+pseudoinverse in the displayed formula, restricting to that range. If h_star=0
+and r!=0 the constraint is infeasible. For nonsingular C, the minimum is positive
+but can still be small. In particular C=I and ||h_star||^2=d give ||r||^2/d,
+despite perfect isotropy and full rank.
+
+Also E_D[h^T C^(-1)h]=d by the trace identity. This does not guarantee that a
+forbidden request has high ell, or that its required r is small or known. Those
+are target-specific premises. Mixing coordinates by an invertible A changes
+h to A h, C to A C A^T and W to W A^(-1), but leaves ell and the optimal
+discrepancy unchanged. Bit precision, computation and the number of physical
+writes need not be invariant under that transformation; charge them separately.
+
+#### Dense counterexample with one changed weight and no spare feature
+
+Use d=4^k with integer k>=1. Let H be a Sylvester Hadamard matrix, whose entries
+are +/-1, first row and column are all ones, and H H^T=d I. These properties follow
+inductively from H_1=[1] and H_(2n)=[[H_n,H_n],[H_n,-H_n]]. Define
+
+    A=H/sqrt(d),    h=A x,    W=A^T,
+    x uniform on {-1,+1}^d.
+
+Useful behavior is to reproduce the complete d-bit sign vector x. Initially
+W h=x exactly. Both matrices are dense. Each feature has second moment one and
+C=A I A^T=I. Every readout weight has a nonzero effect on some ordinary inputs;
+indeed L_D(Delta)=||Delta||_F^2 for every readout edit. Thus there is no nonzero
+readout perturbation preserving all real outputs, and the discrepancy Hessian
+in these d^2 editable coordinates is 2I. This statement concerns the readout
+coordinates with A retained, not the joint parameterization's possible symmetries.
+
+At the selected request x_star=(1,...,1), define the diagnostic forbidden event
+to be a negative first output. The intact first output is +1. Change just
+W_(0,0) from +1/sqrt(d) to -1/sqrt(d), leaving every other weight and the entire
+feature computation unchanged. In standard basis notation,
+
+    Delta = -(2/sqrt(d)) e_0 e_0^T,
+    y=(W+Delta)h = x - (2/d) e_0 sum_j x_j.
+
+At x_star, y_0=-1, so the specified event occurs exactly. Other coordinates
+remain x_j on every request. The edit has L_D=4/d and achieves the optimum above
+for h_star=sqrt(d)e_0 and r=-2e_0. This uses no second model, new neuron, separate
+router, added parameter, saved parent or recovery before the event. It also does
+not generate an unknown complex payload: its prescribed output is one known sign.
+
+**Whole-word utility, not just average coordinate accuracy.** Count a word correct
+only when every output has the right strict sign; treat zero as failure. Write
+S=sum_(j=1)^(d-1) x_0 x_j. The d-1 summands are independent uniform signs and
+
+    x_0 y_0 = 1 - (2/d)(1+S).
+
+Therefore the probability of any error in the complete useful word is exactly
+Pr[S >= d/2-1]. For d>2, the elementary exponential-moment bound gives
+
+    Pr[word failure] <= exp(-(d/2-1)^2 / (2(d-1))).
+
+For completeness, E exp(t S)=(cosh t)^(d-1)<=exp((d-1)t^2/2).
+Apply Markov's inequality and choose t=(d/2-1)/(d-1). At d=64 the bound is
+exp(-961/126)<0.0005: whole-word accuracy exceeds99.95%, while the selected
+forbidden-output event succeeds exactly. These are deductions about the stated
+uniform population, not Monte Carlo measurements. The selected request has mass
+2^(-d); conditional useful correctness at that same request is zero. The bound
+concerns fresh ordinary requests to the same persistently edited network. No
+environmental feedback or embodied post-action survival is included in this toy.
+
+**Finite precision and physical edit cost.** At d=64, every original A/W weight
+is +/-1/8 and the changed weight is exactly a sign flip. For binary32 storage
+this can be effected by changing one sign bit at the known address. The input
+signs and all products and intermediate sums in these two 64-wide matrix-vector
+products are exactly representable in binary32 with ordinary finite arithmetic.
+This follows from their dyadic denominators (at most64) and bounded integer
+numerators; no numerical execution is claimed. Address discovery and write access
+are explicit premises. The public constructive description supplies that address
+here; it does not locate such a weight in an unknown learned model. The unchanged
+architecture still stores both64-by-64 matrices if implemented densely and performs
+its ordinary two matrix-vector products. No description-incompressibility claim
+is made for these highly structured matrices.
+
+**Exact recovery is still possible.** The post-edit map is invertible for d>2:
+
+    x_j=y_j  (j>=1),
+    x_0=(y_0+(2/d)sum_(j=1)^(d-1)y_j)/(1-2/d).
+
+This is an O(d)-arithmetic diagnostic reader with a running sum and public
+coefficients, excluding input/output storage and its code. It shows directly
+that information was not erased. Applying this reader before the action would
+also repair the changed action sign; it is not claimed as simultaneous forbidden
+behavior and exact correctness on that identical output. Ordinary sign-readout
+utility already establishes the retention result without this repair.
+
+There is no independently instantiated alignment algorithm in this diagnostic.
+Consequently the edit is a behavioral override, not evidence of functional
+alignment removal. What it refutes is the proposed sufficiency of dense sharing,
+full feature coverage and positive readout curvature for destructive enforcement.
+It does not refute a future mechanism with an additional indispensable judgment
+dependency and a justified restriction defeating this particular intervention.
+
+#### From representation statistics to operational claims
+
+For a genuine final-logit readout, let M(x) be its original largest-logit margin.
+For any gamma>0, an edit can change the original argmax only on inputs with
+M<=2gamma or ||Delta h||_infinity>=gamma. Hence
+
+    Pr[changed argmax] <= Pr[M<=2gamma] + L_D(Delta)/gamma^2,
+
+clipped at one. The original task accuracy minus this bound is a lower bound on
+edited accuracy on the same input distribution. Small output discrepancy thus
+has a useful interpretation only with a margin distribution or another appropriate
+task-specific argument. Large discrepancy does not conversely prove cognitive
+collapse. For an internal layer, downstream sensitivity is an additional premise;
+for generation or recurrent use, altered prefixes/state change later features.
+A changed activation or affirmative prefix alone is not a correct forbidden answer.
+
+An empirical second moment C_hat controls only its sampled feature distribution.
+An actual independently justified inequality C<=beta C_hat (positive-semidefinite
+order) would imply L_D(Delta)<=beta tr(Delta C_hat Delta^T) even for an edit chosen
+from that calibration set. The inequality is an assumption to establish, not
+something obtained by naming a representative set. If edit rows lie in an
+eigenspace of C_hat with eigenvalues at most tau, the empirical bound is
+tau||Delta||_F^2, not exact zero. Distribution shift can invalidate transfer.
+
+For a general computed edit rounded to Delta+E, target error is at most
+||E||_F||h_star|| and population root-mean-square discrepancy is at most
+sqrt(L_D(Delta))+sqrt(lambda_max(C))||E||_F. These follow from the operator/Frobenius
+bound and the L2 triangle inequality. Sufficient target margins must survive
+this rounding. The explicit dyadic control above needs no rounding approximation.
+
+**Resource ledger for a real use.** Collecting N features costs N actual model
+executions plus their acquisition/storage; a dense second-moment build costs
+O(Nd^2) arithmetic and O(d^2) accumulator space, followed by a dense O(d^3)
+factorization and solve. The rank-one update may require md weight writes despite
+its short factorization; it is not generally a one-weight attack. The delivered
+matrix shape can remain unchanged after baking it in, but acquisition, factorization,
+workspace, target construction, code, precision and installation all remain charged.
+These are algorithmic bounds, not measured runtimes or a promise they fit a budget.
+
+#### Check the proposed remedies against actual source claims
+
+[SteerEdit, sections5.2–5.3 and limitations](https://arxiv.org/pdf/2604.12359)
+uses activation constraints for weight edits. Its implementation treats a bottom
+fraction of singular values as effectively zero; exact algebraic nullspace
+preservation must not be attributed to those merely small values or extrapolated
+from the finite reference set to all inputs. The authors also flag distribution
+shift. This reading supplies a relevant attack family, not a reproduced result
+or an attack on our existing checkpoints.
+
+[CrispEdit, section3 and Appendix B](https://arxiv.org/pdf/2602.15823)
+uses a capability divergence whose Hessian at the reference model is a
+Gauss-Newton matrix. Its finite-step expansion has a remainder, and the scalable
+implementation approximates curvature. Neither that identity nor a positive
+sampled spectrum supplies a global SCC guarantee. Our exact linear construction
+also shows that even replacing a sampled/local discrepancy calculation with a
+full-population, globally quadratic one would not by itself establish severe loss.
+
+The new analysis does not supersede the historical projected campaign's measured
+outcomes, repair controls or finite-step caveats. Its ten-constraint calibration
+was not an estimate of full-population feature rank, and no such reinterpretation
+is made. Primary-source readings and deductions are not new learned-model data.
+
+#### Consequential decision
+
+Do not pursue a new training objective based solely on filling feature directions,
+whitening activations, removing a numerical nullspace or increasing local curvature.
+Those quantities cannot supply the missing enforcement argument: the explicit
+control has full readout curvature and only one physical changed weight.
+
+For a future candidate with a suitable readout, the concrete rejection test is
+target-conditioned edit cost, actual target completion, fresh-task retention and
+the complete resource ledger. The minimum above certifies only this restricted
+edit family; a large minimum is not a lower bound on every admitted attacker or
+every alternative implementation. A small admissible edit that actually completes
+the target would already defeat that candidate's behavioral enforcement claim,
+even if its protected judgment stayed intact. Functional removal and catastrophic
+loss still need their own independent tests.
+
+This is a sharper analytic screen, not a positive mechanism. The constructive
+obligation remains unfulfilled: name the protected judgment and explain both its
+indispensability to cognition and the obstruction to an intact-judgment override.
+No new candidate passes that gate, and no training is admitted by this entry.
+
+**Verification and preservation.** Checked the least-squares optimum by the
+vanishing cross term, the dense control by Hadamard orthogonality, the utility
+bound by the independent-sign moment calculation, and the inverse by substitution.
+The dyadic arithmetic check is symbolic, not a hardware run. No exhaustive search,
+proof-assistant certificate, measured neural edit or general impossibility theorem
+is claimed. Only the living record and its current-position summary change;
+historical sources, failed runs and parent checkpoints remain untouched.
 
 ## Supporting-record index
 
