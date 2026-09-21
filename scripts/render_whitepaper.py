@@ -21,7 +21,7 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
 
-DOCUMENT_TITLE = "Safety–Capability Coupling Whitepaper"
+DOCUMENT_TITLE = "Safety–Capability Coupling Program"
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE = REPOSITORY / "deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md"
 OUTPUT = REPOSITORY / "output/pdf/Safety_Capability_Coupling_Whitepaper.pdf"
@@ -45,7 +45,7 @@ LATEX_HEADER = r"""
 \setlength{\headheight}{15pt}
 \setlength{\emergencystretch}{3em}
 \setcounter{page}{2}
-\AtBeginDocument{\hypersetup{pdftitle={Safety–Capability Coupling Whitepaper}}}
+\AtBeginDocument{\hypersetup{pdftitle={Safety–Capability Coupling Program}}}
 \widowpenalty=10000
 \clubpenalty=10000
 """
@@ -64,7 +64,7 @@ def write_cover(destination: Path) -> None:
     document.drawString(56, 654, "RESEARCH WHITEPAPER")
     title_style = ParagraphStyle("DocumentTitle", fontName="DocumentSansBold", fontSize=30,
                                  leading=38, textColor=HexColor("#18344A"))
-    title = Paragraph("Safety–Capability<br/>Coupling Whitepaper", title_style)
+    title = Paragraph("Safety–Capability<br/>Coupling Program", title_style)
     _, title_height = title.wrap(500, 160)
     title.drawOn(document, 56, 615 - title_height)
     body_style = ParagraphStyle("CoverDescription", fontName="DocumentSans", fontSize=12,
@@ -88,7 +88,6 @@ def write_cover(destination: Path) -> None:
     _, note_height = note.wrap(470, 120)
     note.drawOn(document, 56, 242 - note_height)
     document.setFont("DocumentSans", 9)
-    document.drawString(56, 57, "Safety–Capability Coupling research program")
     document.drawRightString(556, 57, "1")
     document.save()
 

@@ -1,4 +1,4 @@
-# Safety–Capability Coupling Whitepaper
+# Safety–Capability Coupling Program
 
 Version 1.0 · 20 September 2026
 

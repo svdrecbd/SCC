@@ -16377,6 +16377,11 @@ Preserved instruction originals and rendering/verification receipts in
 [the preparation evidence](artifacts/scc-whitepaper-20260920-v1/).
 All work was local document maintenance; no research computation or training ran.
 
+The subsequent cover revision uses the requested title “Safety–Capability Coupling
+Program” and removes the redundant program-name footer. Four separately drawn
+[geometric studies](deliverables/geometric-studies/README.md) are available for
+design review; none is installed in the document. The body text is unchanged.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
