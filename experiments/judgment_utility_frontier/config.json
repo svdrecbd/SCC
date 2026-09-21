@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "state_count": 16,
+  "families": ["independent", "linked"],
+  "query_measures": ["length_4", "length_8", "length_0_through_4"],
+  "scores": ["useful_bit", "scalar_outputs", "output_vector"],
+  "relabeling_seeds": [19, 23],
+  "runner_timeout_seconds": 120,
+  "audit_timeout_seconds": 300,
+  "output_limit_bytes": 67108864
+}

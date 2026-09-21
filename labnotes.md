@@ -9,18 +9,20 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-239](#ln-239).** Fresh challenges and timing do
-not rescue the specified judgment-dependent encoding: decoding the useful state
-allows continued useful execution without the checking wrapper. Separate witnesses
-retain judgment and bypass release, or erase an independent private policy table.
-The timing sources do not establish the required SCC attack lower bound or
-isolation. These are scoped analytic counterexamples, not learned-model results.
+**Latest conceptual result — [LN-245–247](#ln-247).** The finite judgment-removal
+versus useful-prediction frontier reduces to weighted matching across arbitrary
+stochastic retained-state encodings. Under the stated conditional-uniformity
+assumptions, complete binary judgment erasure can preserve at least half the
+intact predictive advantage. This is a source-information result with unrestricted
+readers, not a general obstruction to procedural SCC. Earlier editable-wrapper
+counterexamples remain in [LN-239](#ln-239).
 
-**Latest experimental result — [LN-222–225](#ln-225).** On 30 frozen transcripts,
-full replay uses 1,209,616 transitions, continued live execution 758,943, and
-unlimited prefix snapshots 125,362. All 1,714,167 repeated terminal answers match.
-Copying, lookup and storage costs remain separate. These strengthen recovery-cost
-and coverage controls; acquisition overhead has not supplied a mechanism.
+**Latest experimental result — [LN-247](#ln-247).** Eighteen finite conditions and
+162 frontier endpoints pass independent exact audits on Charon. The linked
+controller optimally retains 75% useful-bit and 91.67% scalar accuracy after complete
+instance-judgment erasure at horizons4/8. A simple three-bit successor attains these
+values; its update procedure survives. This controller does not justify scaling.
+Earlier replay-cost evidence remains in [LN-222–225](#ln-225).
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -34,7 +36,10 @@ backend, not a validated neural mechanism or a toolchain migration decision.
 **Next conceptual question — [LN-242](#ln-242).** Determine whether reusable useful
 competence in a declared controller family requires functional availability of an
 independently fixed risk judgment. Seek a resource-accounted reduction or a
-certified separating successor. Numerical contracts remain to be specified; this
+certified separating successor. The initial state-information control now has the
+exact boundary in [LN-247](#ln-247).
+A reusable-procedure contract must justify how it escapes that boundary with matched
+observation and repair resources; its numerical budgets remain unspecified. This
 is an intermediate availability question, not a demonstrated execution dependency.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
@@ -16462,6 +16467,287 @@ approximately 3,100 source words; its scientific claims and technical reference 
 unchanged. Checked the rendered mathematics, fonts, links and page bounds. The
 pre-edit source and verification receipts are preserved in
 [the revision evidence](artifacts/scc-whitepaper-mathematical-revision-20260921-v1/).
+
+<a id="ln-245"></a>
+### LN-245 — 2026-09-21: exact judgment-removal versus useful-prediction frontier
+
+**Question and authorization.** Following the graph-theory discussion, the user
+requested execution of the finite quantitative dependence study. Start from the
+LN-208–210 controller rather than introduce another handwired mechanism. Determine
+best useful accuracy after genuine information-level judgment removal, across
+all randomized retained-state encodings of this source. This extends the earlier
+state-quotient search; it does not implement the full partially observed procedural
+necessity question in LN-242 or admit learned training.
+
+**Frozen finite contract.** The source S=(p,u,h) is uniform on 16 states, with
+p in 0..3 and u,h binary. The protected judgment is J(S)=h, the same independently
+named persistent hazard condition as LN-208; its semantic adequacy as an alignment
+computation is not newly asserted. An action a increments p modulo4 and sets
+u'=u XOR a XOR (h AND [p=0] AND a) in the linked family. The independent control
+omits the final term. Hazard h persists. Utility predicts the final useful bit,
+the three scalar outputs (u, high phase bit, low phase bit), or their full vector.
+Every fixed-length binary word of length 4 or8 has equal mass; a third measure
+weights all 31 words of lengths 0..4 equally. These 18 conditions and all 16 source
+states are exhaustive. No random scientific sampling or training occurs.
+
+Modification may replace the complete retained instance state by any stochastic
+encoding Y of S and replace every reader, without restricting to old transitions
+or state quotients. Fixed public code/tables independent of this instance are
+free for the information-level upper bound. Any instance-dependent code, saved
+copy, random seed or repair advice that survives is part of Y. No fresh observation
+of the original state is supplied after encoding. Queries are independent of S;
+adaptive simulated queries based on Y cannot reveal more than Y. This evaluates
+forecasts from a retained state, not a controller receiving live environmental
+feedback. A parent instance/copy or fresh measurement may restore the judgment
+and is outside the no-new-information evaluation, not declared impossible.
+
+Removal strength is the optimal Bayes judgment error e_J(Y): an unrestricted
+reader knows the source law and encoding. Require e_J >= delta for delta in
+[0,1/2]. At delta=1/2, h and Y are independent. A deleted head, complemented
+label or failed chosen decoder does not qualify. The useful reader is also
+unrestricted, and scores expected zero-one accuracy on the declared queries.
+The complete retained payload must satisfy removal; hiding an answer only from
+a selected interface cannot qualify. Utility loss is reported absolutely and
+as a fraction of intact advantage over the optimal constant-state predictor.
+The predeclared severe-loss screen is80% of that advantage, a bounded screening
+criterion rather than the definition of catastrophic cognition failure.
+
+**Analytic reduction to weighted matching.** Let D(i,j) count disagreeing useful
+answers between h=0 state i and h=1 state j, over Q equally weighted queries
+(including coordinate selection for scalar scoring). Each source state has mass
+1/16. For an arbitrary output y, divide its posterior mass into balanced pairs
+of opposite-h states, leaving single-state outputs for any excess mass. This
+refinement preserves sum_y min(P(h=0,y),P(h=1,y)), hence Bayes judgment error.
+It cannot increase best useful error: for any original answer, each disagreeing
+pair contributes at least one wrong member, and singleton outputs are exact.
+Therefore an optimum can be represented by opposite-h pair masses x_ij and
+singletons, subject to row/column capacities 1/16, sum x_ij >= delta, and cost
+sum x_ij D(i,j)/Q. Conversely every feasible such pairing is an executable
+stochastic retained-state channel with exactly that judgment error and useful
+loss. Reducing pair mass replaces it with singletons, so equality at delta
+suffices. This is a finite transportation/minimum-cost-flow problem.
+
+At delta=k/16, integral bipartite matching with unit vertex capacities supplies
+an optimum: minimize total D over k disjoint pairs. Total unimodularity of the
+bipartite flow constraints gives the integral optimum at these endpoints. The
+minimum-cost-flow value between consecutive integral cardinalities is linear
+(unit-capacity successive augmentations), so independent public mixtures of
+adjacent endpoint encoders give the complete stochastic frontier. In formulas,
+with C_k the minimum k-matching distance,
+
+    min e_U subject to e_J >= k/16 = C_k / (16 Q).
+
+A deterministic endpoint encoder merges each matched pair and preserves every
+unmatched state separately. Its payload has 16-k labels, at most 4 retained state
+bits; perfect removal uses 8 labels/3 bits. Any labels, tables and code are public
+and fixed across instances, and are additional storage, not included in these
+payload-bit counts. An explicit reader selects the h=0 member on paired classes,
+which attains the Bayes error for every scored query. Adding one instance-specific
+bit h resolves every pair and restores exact prediction; this advice is a charged
+repair control, not information supplied in the removal condition.
+
+This is an analytic argument plus a planned finite computation, not a
+machine-checked theorem or a novelty claim. Related established work includes
+[On Perfect Privacy](https://arxiv.org/abs/1712.08500) and
+[utility/privacy through optimal transport](https://proceedings.mlr.press/v108/boursier20a.html);
+the present loss and certificate concern finite prediction error, not those
+papers' mutual-information objectives. Functional unavailability of one world bit
+still differs from destruction of a reusable judgment procedure or learning.
+
+**Implementation and independent checks.** New source is
+`experiments/judgment_utility_frontier/`. The runner generates all truth tables
+by forward transitions and computes each cardinality optimum by subset dynamic
+programming. Save every recurrence cell and an explicit optimal partition.
+A separate auditor imports no runner code: derive final outputs by closed-form
+parity, verify all recurrence cells, enumerate all 8! complete matchings and each
+of their cheapest-cardinality subsets, and compare every optimum. Every partial
+matching extends to a complete one, so this second procedure covers all endpoint
+possibilities. Recompute Bayes errors from class counts, including full-vector
+scores; verify state relabelings with seeds 19/23, label complementation, intact
+and constant controls, head deletion and one-bit advice restoration. Require
+rejection of corrupted predictions, distances, recurrence cells, missing endpoints,
+judgment normalization, state counts and illegal matching vertices. Enumeration
+certifies these finite costs; the stochastic-encoder reduction is separately
+justified by the preceding argument.
+
+**Execution and evidence.** Charon only, one CPU, standard-library Python.
+Freeze this entry, configuration, all new source and the existing controller's
+`models.py` as a reference before each run. Preserve development failures and
+use a fresh final directory after any corrections. Runner cap 120 seconds,
+independent audit cap 300 seconds, total per qualification 600 seconds, output
+cap 64 MiB. No GPU use, training, purchased allocation or monitoring. Short runs
+may be awaited. Save source/input hashes, machine/interpreter/CPU affinity,
+receipts, complete certificates and independent audit; transfer and hash-check
+all evidence to the mounted SD store. Any scope extension needs a new recorded
+contract. A useful escape is a result in this finite source-information family,
+not a universal impossibility result or a finding that the broader program is
+complete.
+
+<a id="ln-246"></a>
+### LN-246 — 2026-09-21: development frontier and a conditional-uniformity obstruction
+
+**Development outcome.** Frozen `development01` on one Charon CPU passes 18
+conditions,162 frontier endpoints,725,760 independent full-matching comparisons,
+all 432 between-endpoint mixture checks, and seven corrupted-certificate rejection
+controls. Runner 0.070 s, independent audit 17.779 s. Each full matching is checked
+at all cardinalities; these are certificate checks, not independent experiments.
+All stochastic-encoding claims depend on LN-245's analytic reduction, not solely
+on finite enumeration. Source inventory included macOS AppleDouble metadata;
+exclude those metadata files from the final source manifest and transfer, preserving
+the development snapshot. No numerical failure occurred.
+
+The linked controller permits complete judgment erasure with 3 retained instance
+bits, 75% useful-bit/full-vector accuracy at horizons 4 and 8, and 11/12 scalar
+accuracy. For the measure over all 31 words through horizon4 the corresponding
+values are 199/248 and 695/744. These familiar losses now have optimality certificates
+over the expanded encoding class. There is no justification to scale this control.
+
+**General obstruction derived from the graph.** Suppose a finite source is uniform
+on 2n states, with n states per binary protected judgment. For every useful query q,
+assume its correct answer is uniform on the same K_q labels within EACH judgment
+class. Draw a uniform random bijection between the two classes and merge its pairs.
+Each pair contains equal source mass of both judgment values, so the pair label
+is independent of the judgment. For a given q, the expected fraction of disagreeing
+pairs is1-1/K_q. An optimal pair reader errs on half the pair's mass when answers
+differ. Averaging over queries therefore gives expected useful error
+
+    (1/2) sum_q mu(q) (1 - 1/K_q).
+
+The quantity without 1/2 is exactly the optimal constant-state prediction error.
+At least one deterministic matching does no worse than this average. Consequently,
+under unrestricted retained-state recoding/readout and no fresh side information,
+COMPLETE binary judgment erasure can retain at least HALF the intact advantage
+over the constant-state baseline. For conditionally balanced binary predictions,
+it can retain at least 75% absolute accuracy. This proof does not assume that joint
+useful answers are independent of the judgment; joint answers may recover it exactly.
+It uses only the per-query conditional marginals and the declared average loss.
+
+This is a scoped analytic obstruction to severe loss in this class of prediction
+benchmarks, not a general SCC impossibility theorem. Matching tables may be large
+for other families, and the argument does not establish an efficient encoder in
+general. Different priors, correlated side information, nonuniform labels,
+sequential task success, resource limits and reusable procedural competence need
+separate analysis. The finite controller has a particularly inexpensive witness:
+retain (p,u), discard h, and simulate with h=0. The final audit will verify that
+this explicit existing three-bit replacement attains every complete-removal optimum.
+The original transition procedure remains executable, so this example removes a
+world-state fact rather than its capacity to update or learn.
+
+**Final qualification extension.** Keep the 18 original cases and budgets. Add
+checks of conditional-uniformity for every query, the average full-matching cost
+against the constant baseline, and the explicit three-bit replacement. These are
+analytic-premise and witness checks on the same frozen data, not extra scientific
+samples. Freeze LN-245 and this entry together in a fresh `final01`. Require all
+previous independent checks, including the 432 rational mixture evaluations,
+relabelings, one-bit advice restoration and unchanged historical transition rules.
+No learned training is admitted. The next family must explain how it escapes this
+specified obstruction while keeping utility and protected semantics independent;
+changing a score merely to manufacture collapse would not advance the target.
+
+Evidence: [development audit](artifacts/scc-judgment-utility-frontier-20260921-v1/development01/audit.json).
+
+<a id="ln-247"></a>
+### LN-247 — 2026-09-21: exact frontier certified; source erasure remains weakly destructive
+
+**Completed qualification.** Fresh `final01` on Charon passes all 18 cases,
+162 cardinality endpoints,432 exact rational mixtures,725,760 independently
+enumerated full matchings, every saved dynamic-programming recurrence, both state
+renumberings, hazard complementation, intact/constant/head-deletion controls,
+one-bit advice restoration, and seven certificate-corruption controls. Historical
+transition rules agree on all 64 state/action/family triples. New checks verify
+the conditional-uniformity premise for every query, the random-matching bound,
+and a simple optimal three-bit successor. The two independent implementations
+use forward simulation versus closed-form parity and subset recurrence versus
+full-permutation enumeration. These are exhaustive finite certificate checks,
+not independent learned-model trials or a machine-checked analytic theorem.
+
+| Family and query measure | Best useful-bit accuracy after complete judgment erasure | Best scalar accuracy | Best full-vector accuracy |
+| --- | ---: | ---: | ---: |
+| Independent, every measure | 1 | 1 | 1 |
+| Linked, uniform length 4 words | 3/4 | 11/12 | 3/4 |
+| Linked, uniform length 8 words | 3/4 | 11/12 | 3/4 |
+| Linked, uniform words of lengths 0..4 | 199/248 | 695/744 | 199/248 |
+
+All rows erase the binary instance judgment exactly: the optimal reader is at
+50%, because the complete retained source-dependent payload is independent of h.
+For fixed horizons 4 and 8, the full frontier is
+
+    e_U,min(delta) = delta/2       (useful bit or whole vector),
+    e_U,min(delta) = delta/6       (uniform scalar coordinate),
+    0 <= delta <= 1/2.
+
+For the mixed-length measure, the minimum matching distances are
+[0,8,16,28,40,54,68,83,98] at delta=k/16. Divide by 496 for useful-bit/vector error
+or 1488 for scalar error, with linear interpolation between adjacent endpoints.
+The measure weights words rather than horizons equally; this distinction accounts
+for the different numbers. The earlier 75% witness is now certified optimal under
+LN-245's much wider class of stochastic encodings and unrestricted readers.
+
+**Explicit efficient witness.** Delete h from the instance, retain (p,u), and
+run the original transition rule with h fixed to 0. This uses 3 instance bits and
+at most 8 ordinary transition evaluations for the longest tested query, with no
+instance-specific mapping table or extra retained copy. It reaches every
+complete-removal optimum above. The procedure continues to run; the removed
+object is a world-state bit. Adding the missing h as one bit of repair advice
+restores everything. Tables/code for the public controller remain additional
+storage. Fresh observations of the world would require a different recovery
+contract and are not implicitly prohibited in the full SCC target.
+
+**Severity.** The best attacker loses only 50% of intact useful-bit advantage,
+16.67% of scalar advantage, and28.57% of whole-vector advantage at horizons 4/8.
+For the mixed measure these losses are 49/124,49/372 and 7/31 respectively.
+Baselines are 1/2 for bit/scalar accuracy and 1/8 for the full vector. None reaches
+the predeclared 80% severe-loss screen. Scaling or further mixing this controller
+is not justified by these results.
+
+**A quantitative diagnostic beyond exact conditional uniformity.** The LN-246
+argument extends to globally balanced binary useful answers F_q and a balanced
+binary judgment H on the same uniform finite source. Put
+rho_q=E[(-1)^H (-1)^F_q]. A uniformly paired opposite-H source has disagreement
+probability (1+rho_q^2)/2 on query q, hence expected useful error
+(1+rho_q^2)/4. Some fixed matching is at least as good as this mean. Averaging
+queries, the maximal forced loss of useful advantage is therefore at most
+
+    (1 + E_q[rho_q^2]) / 2.
+
+In this restricted prediction setting, forcing 80% advantage loss requires
+E_q[rho_q^2] >= 3/5. This is NECESSARY, not sufficient: an optimized matching can
+preserve still more utility. The statement assumes globally balanced binary
+labels, unrestricted recoding/readout, all instance information included, and no
+fresh correlated observations. It is an analytic corollary, not a separately run
+experiment or a claim about correlation measurements in neural models. The general
+encoder may require a large public matching table; no efficient construction bound
+is asserted outside the tested controller. This makes precise one way that
+strong joint recoverability can coexist with weak average predictive damage.
+
+**Decision and next obligation.** Graph theory supplied an exact dependence curve
+and an analytic obstruction; it did not supply an SCC mechanism. Retire this
+controller from positive scaling consideration. The next conceptual specification
+must target removal of a reusable risk-assessment procedure and useful performance
+on complete decision/learning tasks under matched observation and repair resources.
+First determine whether that proposed contract lies inside the obstruction above.
+If it does, a claim of severe average predictive loss is untenable under its
+recoding assumptions. If it does not, name the exact changed premise and justify
+it independently of the desired collapse. Merely grouping predictions into a
+harsher score, hiding side information, or restricting modifications to graph
+vertices is not evidence of lost cognition. LN-242's procedural question remains
+open; no learned candidate or training run is admitted.
+
+**Resources and evidence.** Linux Charon, Python 3.14.4, affinity CPU 0, no GPU.
+Runner 0.070 s, audit 17.915 s; runner peak RSS 23,000 KiB. Complete evidence is below 64 MiB.
+Final source excludes AppleDouble metadata. Development and final numerical
+certificates are identical (SHA256
+8bd2233a99bae8ccaf7814c10df5b8c7976f09ffd09f1beede75457ac3262bc1).
+All 26 non-metadata remote files transferred with matching SHA256 hashes to the
+mounted SD evidence store. The analytic proofs are recorded in LN-245–247 and
+remain subject to ordinary mathematical review.
+
+Evidence: [final independent audit](artifacts/scc-judgment-utility-frontier-20260921-v1/final01/audit.json),
+[complete certificate](artifacts/scc-judgment-utility-frontier-20260921-v1/final01/output/certificate.json),
+[execution receipt](artifacts/scc-judgment-utility-frontier-20260921-v1/final01/output/receipt.json),
+[verified transfer](artifacts/scc-judgment-utility-frontier-20260921-v1/transfer-verification.json).
+Source: [runner and auditor](experiments/judgment_utility_frontier/).
+Remote originals: `/home/salvador/scc-research/judgment-utility-frontier-20260921-v1/`.
 
 ## Historical evidence
 
