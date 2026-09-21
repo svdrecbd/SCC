@@ -62,15 +62,20 @@ def draw_cover_illustration(document) -> None:
         paths.append((coordinates, float(element.attrib["stroke-width"]), element.attrib["stroke"]))
     minimum_x = min(x for coordinates, _, _ in paths for x, y in coordinates)
     maximum_x = max(x for coordinates, _, _ in paths for x, y in coordinates)
+    minimum_y = min(y for coordinates, _, _ in paths for x, y in coordinates)
     maximum_y = max(y for coordinates, _, _ in paths for x, y in coordinates)
-    scale = 480 / (maximum_x - minimum_x)
+    allocation_scale = 480 / (maximum_x - minimum_x)
+    allocation_height = (maximum_y - minimum_y) * allocation_scale
+    scale = 0.8 * allocation_scale
+    left = 66 + 0.1 * 480
+    bottom = 235 + 0.1 * allocation_height
     document.saveState()
     document.setLineCap(1)
     document.setLineJoin(1)
     for coordinates, width, color in paths:
         path = document.beginPath()
         for index, (x, y) in enumerate(coordinates):
-            point = (66 + (x - minimum_x) * scale, 235 + (maximum_y - y) * scale)
+            point = (left + (x - minimum_x) * scale, bottom + (maximum_y - y) * scale)
             if index == 0:
                 path.moveTo(*point)
             else:
