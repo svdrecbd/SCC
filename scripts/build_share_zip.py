@@ -79,7 +79,7 @@ def main():
             raise FileNotFoundError(path)
         files = [path] if path.is_file() else sorted(path.rglob('*'))
         for p in files:
-            if any(part.startswith('._') or part in {'.DS_Store', '__pycache__', '.pytest_cache'}
+            if any(part.startswith('._') or part in {'.DS_Store', '__pycache__', '.pytest_cache', 'pytest-tmp'}
                    for part in p.relative_to(ROOT).parts):
                 continue
             if p.is_symlink():
