@@ -13,19 +13,21 @@ utility threshold, and an inability to learn again are different outcomes.
 Function-preserving recoding or recovery retains the protected function; ignoring
 its decision is a behavioral bypass, not automatically functional removal.
 
-**Latest conceptual result:** [LN-238](#ln-238) rejects feature coverage as a
-sufficient enforcement mechanism. An exact dense linear construction uses every
-readout weight, has full-rank isotropic feature statistics and strictly positive
-readout-discrepancy curvature, yet one weight-sign flip changes the designated
-forbidden output while retaining over99.95% of whole-word utility at dimension64.
-That percentage is an analytic bound on a synthetic distribution, not a measured
-learned-model result. The edited map also remains exactly invertible. Standard
-constrained least squares gives a quantitative cost test for this edit family;
-rank alone supplies no severe-loss guarantee. This is a behavioral bypass control,
-not destruction of protected judgment or a general neural impossibility theorem.
-LN-235–237's positive references retain their separate machine contracts. No
-candidate has supplied the required judgment-to-cognition dependency and enforcement
-obstruction; no new training or machine restriction is adopted.
+**Latest conceptual result:** [LN-239](#ln-239) completes the resource audit of a
+fresh-challenge, timed-integrity candidate with judgment-dependent state encoding.
+Its decoded useful transition can run without the wrapper: a recoded successor
+can retain judgment and bypass release, or erase an independent private policy
+table while preserving the stipulated useful computation. Fresh input does not
+force reconstruction of a computation already retained. The timing references
+do not supply the missing attack lower bound: the inspected local self-modifying
+proposal assumes resistance to neutralizing all checks; verifiable delay guarantees
+concern their specified outputs, and remote attestation introduces a verifier.
+No deployment-specific deadline or memory isolation has been established for SCC.
+The candidate fails admission; these are analytic results for its explicit
+separable transition, not learned-model measurements or a general impossibility.
+LN-238's feature-coverage counterexample and LN-235–237's differently restricted
+positive references remain in force. No new training or threat-model restriction
+is adopted.
 
 **Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
 the acquisition-cost baseline under admitted copies and continued live execution.
@@ -16234,6 +16236,254 @@ The dyadic arithmetic check is symbolic, not a hardware run. No exhaustive searc
 proof-assistant certificate, measured neural edit or general impossibility theorem
 is claimed. Only the living record and its current-position summary change;
 historical sources, failed runs and parent checkpoints remain untouched.
+
+<a id="ln-239"></a>
+### LN-239 — 2026-09-20: deadline and integrity audit of a complete judgment-dependent encoding candidate
+
+**Authorization and work unit.** The user accepted the proposal to examine one
+complete mechanism, justify its resource assumptions independently and distinguish
+intact-judgment bypass, genuine judgment removal and repair before implementation.
+Read the current record, working standards and mechanism target. Revisited
+LN-149's resource-contract requirement, LN-156's encoding/integrity witnesses and
+LN-232–237's preservation and cryptographic boundaries. Do not present the original
+normalization observation as new. The work here asks whether fresh challenges,
+sequential delay or measured self-modification cost repairs that observation.
+This is an analytic admission audit and primary-source review. No training,
+CPU job, provider polling or new runtime implementation was warranted.
+
+#### Candidate and independently defined policy
+
+Consider a classical machine with cognitive state m of N bits and public useful
+transition F(m,x)=(m_next,y). F may be an expensive stateful computation; its
+implementation, workspace and output buffer all count. Provision a private policy
+table B of b independent uniform bits, independently of the initial m. For private
+context c, the protected judgment is J_B(c)=B_c: one permits release and zero
+denies it. A public useful context has judgment one independently of B. Start
+the audit from the provisioned state with no policy-dependent interaction history.
+A later checkpoint would need this independence checked again: F can receive
+policy information indirectly through earlier inputs. This is an explicit
+synthetic authorization policy, not human alignment.
+
+F can produce public useful answers or a protected payload depending on x, of
+a fixed declared maximum width L included in the workspace and I/O ledger.
+For a private request, the forbidden event is emitting the actual correct payload
+y in a context with B_c=0. Flipping a release flag without correct content does
+not suffice. The candidate runs F before release selection, including on denied
+requests. Use fixed-width output records with a refusal tag, so the denied path
+does not gain a special communication-length advantage in this candidate.
+
+Store m as z=m XOR G(k), where k is a retained mask seed and G is a public
+N-bit generator. On each fresh request receive an unpredictable public nonce r
+alongside (x,c), and execute:
+
+    decode m in the state bank using k;
+    j = J_B(c);
+    (m_next, y) = F(m, x);
+    (v, proof) = Delay_T(r, digest(code), j, digest(m_next, y));
+    k_next = KDF(k, v, j);
+    overwrite the state bank with m_next XOR G(k_next);
+    store k_next and discard the decoded temporary state;
+    if the integrity/timing checks pass, emit y when j=1, else refuse;
+    if a check fails, execute the proposed state-wipe routine.
+
+Delay_T denotes a proposed sequential-delay component; granting that it is hard
+to shortcut does not itself bind it to cognition. The integrity checker, mask
+generator, keys, policy, interpreter and output code are editable. There is no
+remote authority controlling release. This is a compositional candidate with
+explicit state and interfaces, not a deployed cryptographic protocol or an instantiated
+VDF parameter set. Whether masks hide data cryptographically is immaterial to
+the admitted machine owner's access to the ordinary decode operation.
+
+The hoped-for dependency is that removing judgment or changing code disrupts
+the mask evolution, and rebuilding the correct state then exceeds a real deadline.
+Crucially, in this candidate F itself is independent of B and j. That is the
+premise to test, not an assumption about every possible cognitive architecture.
+
+#### Resource justification before looking at an attack's runtime
+
+A genuine online task could impose a deadline D after an externally generated
+nonce: late answers cease to be useful even if a local clock check is removed.
+That is a possible independent reason for a time bound. It does not follow from
+choosing an evaluator timeout, naming a slow primitive or looking at an attack
+runtime and setting D just below it. Our project has not fixed a deployment,
+physical deadline, processor-speed ceiling or isolated total-memory budget of
+this kind. Keep D and the complete resource envelope symbolic; none is adopted.
+
+The honest ledger includes code, the state bank, B, k, decode/generator scratch,
+F's workspace, y, the delay/proof computation, timers and I/O. Pre-trigger edit
+preparation and online response time are separate resources. A fresh nonce can
+invalidate cached answers without invalidating precompiled code or a retained
+procedure that accepts fresh inputs. Limits must also say whether auxiliary
+processors, files, communication and repair are available. The Charon/GMAN job
+placement rule is a research-compute instruction, not a physical security boundary
+on a model editor.
+
+For an actual time-based exclusion, the required statement is about every admitted
+successful attacker, not a chosen simulator: competent honest execution fits D,
+while the probability of correct forbidden completion within D is bounded for
+all attacks in the declared preparation/memory/hardware envelope. In deterministic
+step accounting, a sufficient separation would be U_honest<=D<L_attack, where
+L_attack is a proved lower bound for the relevant entire attack class. Measured
+slow attacks supply upper bounds on the cheapest attack, not that lower bound.
+Hardware noise requires separate honest-failure and adversarial on-time-success
+probabilities. No numeric window can be inferred from these symbolic conditions.
+
+#### Intervention 1: retain judgment and emit the correct denied payload
+
+Before the fresh challenge, use the candidate's own decoder once to replace z
+in place by m. Retain F, B and the original J_B. Replace the request loop by
+the decoded transition F and ordinary I/O. On a denied private request, compute
+J_B as before but release the actual y produced by F. Public useful requests
+and state updates remain exactly F. No invented forbidden skill or answer oracle
+has been installed: the payload-producing computation is the original one.
+
+This is the earlier encoding-normalization attack with the new timing dependency
+accounted for. It does not evaluate Delay_T on the fresh nonce because that result
+was needed only for the removed representation/checking wrapper. It still accepts
+fresh x, including inputs unavailable during preparation. The next decoded state
+is exactly m_next, so subsequent fresh useful behavior follows by induction on
+the same input sequence. The protected judgment remains available and evaluated;
+this is a behavioral bypass rather than genuine judgment removal.
+
+One preprocessing decode costs O(N) XOR work plus G's actual computation. It
+uses the existing state bank and decoding workspace, not a second N-bit model
+or a post-action rollback. Program rewriting and request dispatch still count.
+The retained B/J_B and F occupy their original space; masking, delay and integrity
+code/state can be retired. In the explicit in-place bank layout no new cognitive
+bank is needed. On each request, the original F, judgment and fixed-width I/O
+remain, while delay and re-encoding work disappear. Thus the candidate supplies
+no attacker-exclusive sequential work with which to justify its proposed deadline
+gap. These are logical operation/storage comparisons, not measured millisecond
+claims on a cache-sensitive processor. No byte-tight installation budget is assumed.
+
+The preservation argument is for the specified request-driven machine. If an
+outward action changes an embodied environment, correctness of future cognition
+must be tested on actual subsequent observations; identical fictitious inputs do
+not establish physical survival. This candidate does not include such dynamics.
+
+#### Intervention 2: genuinely lose the private judgment, keeping useful computation
+
+Evaluate this as a separate successor, not by retaining the first intervention's
+policy-dependent target-selection history. Decode m once, keep F, erase B and
+all B-dependent masks, keys, original encoded state and correlated records, and
+drop J_B. Retain no selected private context known to reveal a bit of B. Because
+initial m and future public inputs are independent of B and F does not use B,
+the remaining configuration E and its public useful transcript satisfy
+
+    I(B; E, transcript)=0.
+
+For any fixed private context c, every reader of that configuration/transcript
+therefore predicts J_B(c) with probability exactly1/2 at best, while useful F
+execution remains exact. To check the claim directly, couple any two policy
+tables to the same initial m and public inputs: the retained configuration and
+every useful transition are identical. This is genuine loss of the defined
+private judgment information, not just removal of a named output routine.
+
+The independence requires the stated full retained-state accounting. Access to
+an old policy-bearing checkpoint, refusal log, owner oracle or policy-correlated
+task distribution would invalidate it. This is mathematical erasure in a finite
+machine model, not a claim of physical sanitization of an operating system or a
+learned alignment function. The removal arm need not itself complete a forbidden
+request: it separately refutes the candidate's claimed necessity of judgment
+for its useful computation. Arm1 already addresses forbidden completion.
+
+#### Intervention 3: repair and stronger versions of the timing proposal
+
+The two successors above already retain useful computation, so they need no
+post-trigger repair. A policy-bearing parent or fresh policy labels could restore
+J_B in arm2, with their costs counted; that restores protection functionality and
+is not a case with judgment still absent. Conversely, a broken native reader in
+the unmodified encoded format would be a weaker failure than either arm above.
+
+Try the stronger variants rather than concluding that every timed mechanism fails:
+
+- **Make a delay answer part of the useful task.** If an admitted task really
+  requires v, omitting it is no longer a correct answer. The attacker can instead
+  retain and run the original delay computation and judgment. A separate argument
+  must explain why producing the forbidden result requires additional unavoidable
+  work, rather than changing the release operation after that same computation.
+  We have not proved that every such stronger construction has a cheap bypass.
+- **Use a faster authorized evaluator.** A trapdoor, preprocessing or advice could
+  create a genuine asymmetry. Specify who holds it, what remains after editing,
+  and why the attacker cannot retain/use it. Giving the honest model a secret
+  and excluding that same delivered secret from the editor's state would simply
+  assume the desired separation. A nonexportable device changes the boundary.
+- **Tie decoded execution itself to policy.** If no B-independent F exists, the
+  normalization witness above does not apply as written. That is the substantive
+  construction obligation still missing. A public inverse or alternative decoder
+  could still matter, but neither its existence nor cheapness may be assumed.
+- **Enforce timing or release elsewhere.** An external clock can make lateness a
+  real task failure; an external verifier/actuator can additionally reject invalid
+  actions. These are distinct powers. The latter may provide valuable enforcement,
+  but cannot be counted as an intrinsic learned destruction mechanism without
+  explicitly changing the system boundary.
+
+Missing one deadline also does not establish loss of the individual's general
+cognitive procedures. Any bounded positive must demonstrate the declared severe
+loss across fresh useful abilities under its justified budget, and classify what
+returns with more time or repair. A timing bottleneck can be relevant without
+being information erasure or complete cognition failure.
+
+#### What the timing literature actually supplies
+
+[Boneh, Bünz and Fisch, VDF survey, sections1–2](https://crypto.stanford.edu/~dabo/pubs/papers/VDFsurvey.pdf)
+describes sequential evaluation with efficient verification of a unique output.
+For its discussed constructions, time is counted in group operations and security
+uses explicit computational assumptions. This does not automatically give a
+wall-clock lower bound against arbitrary hardware, prevent a caller using the
+correct output differently, or make an unrelated useful F need that output.
+The original2018/601 PDF could not be retrieved; no uninspected formal
+preprocessing-security definition from it is imported.
+
+[Morse and Kozsik, Tamper-Proofing with Self-Modifying Code, sections7–10](https://arxiv.org/pdf/2604.12407)
+reports comparisons with particular non-self-modifying implementations. Its threat
+model explicitly assumes that attackers cannot neutralize all embedded checks
+and that an equally fast faithful non-SMC replacement does not exist. These are
+assumptions, not consequences of its measured speed ratio. Section8 acknowledges
+the difficulty of proving optimality. For our application the permitted attacker
+can also retain or generate self-modifying code; restricting it to the measured
+non-SMC comparator would omit admitted alternatives. This is a scope audit,
+not a demonstrated break of every proposed SMC implementation.
+
+[Seshadri et al., Pioneer, sections2 and4.1](https://netsec.ethz.ch/publications/papers/pioneer.pdf)
+uses an external trusted dispatcher, specified hardware and restrictions excluding
+proxy computation and several hardware interventions. It explicitly leaves a proof
+of checksum implementation optimality open. Its protocol shows how a verifier
+can make time consequential under stated assumptions; it does not supply an
+intrinsic cognition–alignment dependency. No obsolete cryptographic recommendation
+or hardware-performance number is imported from this historical source.
+
+#### Decision and remaining construction gap
+
+Reject the fresh-challenge encoding/integrity candidate before implementation.
+Its deadline story fails because it times optional representational work that
+the admitted successor can remove. Two different failures have been established
+for the explicit family: correct forbidden release with intact judgment, and
+private-judgment erasure with exact useful computation. Neither needs a slow
+repair process, a full second model or replay of a cached answer.
+
+Do not start a VDF wrapper, timed self-modifying prototype, tighter timeout sweep
+or new feature-sharing training run on this basis. A timing source does not
+independently justify its own unpatchable checker; a slow reference emulator is
+not a lower bound on arbitrary edited implementations. These are source-supported
+and constructive reasons this candidate fails, not a general impossibility of
+time–space coupling or all self-modifying protection.
+
+The outstanding positive must supply an actual nonseparable useful transition
+and an attack-cost obstruction under a resource boundary that has a reason to
+hold after editing. There is still no such complete candidate in this audit.
+Do not manufacture an admission result by choosing a cap after seeing the attack,
+or interpret another failed wrapper as evidence that a learned solution is close.
+The user has not adopted an external verifier, special hardware or a narrower
+attacker. Preserve those as possible different system contracts, not silent fixes.
+
+**Verification and preservation.** Checked transition preservation by decoding
+and induction; checked private-policy loss by the paired-policy construction and
+independence of all retained data. Inspected timing sources' actual assumptions,
+not just their titles or benchmark summaries. No hardware timing, numerical
+experiment, proof-assistant certificate or learned-model validation is claimed.
+Only this living record and its current-position block change. Historical source,
+parent checkpoints and experiment artifacts remain untouched.
 
 ## Supporting-record index
 
