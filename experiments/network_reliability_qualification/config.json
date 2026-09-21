@@ -1,0 +1,23 @@
+{
+  "node_count": 8,
+  "source_node": 0,
+  "critical_node": 7,
+  "additional_edges": 3,
+  "development_count": 32,
+  "evaluation_count": 64,
+  "development_seed": 25801,
+  "evaluation_seed": 25802,
+  "failure_denominator": 256,
+  "stress_numerators": [1, 4, 8, 16],
+  "edge_multipliers": [3, 4, 5],
+  "sample_counts": [8, 32, 128],
+  "sampling_seed": 25803,
+  "connectivity_threshold": "3/4",
+  "reader_advantage_cap": "1/100",
+  "reader_bits": 16,
+  "reader_deadline_seconds": 0.005,
+  "severe_loss_fraction": "4/5",
+  "timeout_seconds": 120,
+  "output_limit_bytes": 16777216,
+  "interpretation": "Pre-training finite network reliability screen; no learned-model or general computational lower-bound claim"
+}

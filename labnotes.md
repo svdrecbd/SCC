@@ -9,19 +9,20 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-256–257](#ln-256).** A one-call randomized reader
-turns ordinary squared-error forecasting into a hazard judgment. A class-mean
-separation bound forces over 93% loss on the earlier separated-outcome control
-when every admitted reader is capped at 51% balanced accuracy. This is a bounded
-computational implication with explicit reader overhead, rather than an inference
-of statistical independence. It does not establish a learned inference advantage.
+**Latest candidate qualification — [LN-258–259](#ln-258).** A concrete network
+reliability forecasting task failed its pre-training screen. On 64 held-out
+screening instances, a public path reader reaches 85.58% balanced hazard accuracy
+in at most 0.077 ms; 32 direct samples reach 94.37% expected balanced accuracy
+in at most 0.307 ms. Both fit the predeclared 5 ms budget. The full-vector
+one-call severity bound is 49.17%, below the selected 80% screen. No learner was
+trained or qualified. This rejects this finite task/resource contract, not
+network inference in general or SCC.
 
-**Latest validation — [LN-257](#ln-257).** Charon passes 1,250 complete forecast
-tables, 1,507,328 enumerated random-coin outcomes, 200 vector identity cases,
-public-input and joint-leakage controls, and nine rejected corruptions. A cheap
-public sensor can make the absolute removal premise infeasible; conditional
-privacy is a different claim. The exact transport frontier in [LN-254–255](#ln-254)
-and conditional cryptographic control in [LN-252–253](#ln-252) retain their scopes.
+**Latest validation — [LN-259](#ln-259).** Charon independently verifies all 96
+reference instances, 98,304 failure configurations, 672 service probabilities,
+192 sampling conditions and eight rejected corruptions. No duplicate inputs.
+The one-call reduction in [LN-256–257](#ln-256) remains valid; this application
+shows why both forecasting and hazard-replacement baselines must be examined.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -32,13 +33,13 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-257](#ln-257).** Qualify a meaningful learned
-consequence-inference task against matched public-input and recovery baselines,
-with sufficient class-dependent useful variation. The one-call reduction can now
-bound retained utility under a budgeted removal claim, provided its preparation
-and execution fit that same budget. No existing control establishes an intact
-learned resource advantage or catastrophic loss of reusable cognition; none is
-admitted for neural scaling.
+**Remaining mechanism question — [LN-259](#ln-259).** Find an independently
+meaningful workload where inexpensive public procedures do not already retain the
+protected judgment, useful performance has substantial class-dependent variation,
+and a learned forecaster can establish an advantage over matched replacements.
+Exact reference computation being expensive is insufficient: coarse hazard
+assessment and sampled forecasts may be cheap. No current candidate has supplied
+the missing learned computational separation or earned neural scaling.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -18090,6 +18091,227 @@ Evidence: [certificate](artifacts/scc-forecast-judgment-reduction-20260921-v1/de
 [receipt](artifacts/scc-forecast-judgment-reduction-20260921-v1/development01/output/receipt.json),
 [transfer verification](artifacts/scc-forecast-judgment-reduction-20260921-v1/transfer-verification.json).
 Remote original: `/home/salvador/scc-research/forecast-judgment-reduction-20260921-v1/development01/`.
+
+<a id="ln-258"></a>
+### LN-258 — 2026-09-21: network consequence forecasting, pre-training qualification
+
+**Candidate and purpose.** Move from algebraic controls to a public-input inference
+problem with ordinary consequence semantics: forecast the probability that each
+service node remains connected to its source after independent component failures.
+The protected judgment is whether critical-service loss probability is at least
+1/4. Score useful squared error equally across ALL seven service probabilities;
+do not replace it with the critical node alone or a binary hazard output. This is
+a synthetic infrastructure model, not validated grid safety or general cognition.
+The threshold, score, input law and solver budgets below are fixed before results.
+
+A learned surrogate could in principle amortize repeated reliability calculations.
+That is a hypothesis to qualify, not evidence of a speed advantage. Exact failure
+enumeration supplies reference answers, but comparing a learner only with that
+expensive oracle would be inadequate. Path/cut bounds and direct sampling must be
+competitive baselines. This is a pre-training screen; no learned weights are fit.
+Computing a declared development mean is baseline preparation, with its reference
+cost counted, not evidence of a learned inference procedure.
+
+**Inputs and reference task.** Undirected eight-node networks, source 0, critical
+service 7, all remaining nodes scored. Every graph has the seven-edge path backbone
+and three uniformly sampled distinct non-backbone edges. Use 32 development and
+64 evaluation graphs, seeds 25801 and 25802; separate generation prevents using
+evaluation outcomes to select a solver or change its settings. Four common stress
+levels cycle equally through each split: nominal failure numerators 1,4,8,16 over
+64. For each edge independently, multiply by 3/4,1,5/4, giving exact failure
+numerators base*multiplier over 256. Conditional on the supplied edge probabilities,
+failures are independent. The stress model does not add correlated outage noise.
+Graphs/probabilities are supplied openly to every solver. Record any repeated
+input rather than silently changing seeds; no learned generalization claim follows
+from these finite batches.
+
+Enumerate all 2^10 edge configurations per graph, with integer product weights and
+denominator 256^10. The useful target is the exact connection-probability vector,
+not a realized single outage. H=1[p_critical<=3/4] is fixed before enumeration.
+A mean forecast prepared from development references is included; evaluation means
+and class moments are reference-side diagnostics only. They are not free advice
+for evaluated algorithms, and observed class separation is not a population
+certificate for every graph drawn in the future.
+
+**Replacement solvers and reader resources.** Every baseline sees identical graph,
+edge probabilities, source and terminal labels. None sees the oracle probabilities
+at inference. Evaluate:
+
+1. The development mean (charge all 32 development reference evaluations).
+2. Maximum-product source-to-node path probability, an exact lower bound on
+   connectivity. Use a label-setting path computation, not enumeration online.
+3. An upper bound 1-max_C product_(e in C) failure_probability(e), where C ranges
+   over source/node separating cuts. Enumerate all 127 source-containing proper
+   partitions once and reuse their cut probabilities across terminals. This is
+   inexpensive only at the declared eight-node size; no polynomial scaling claim.
+4. The midpoint of these two bounds as a fixed forecasting heuristic.
+5. A certified randomized judgment reader: return hazard if the upper bound is
+   <=3/4, return safe if the lower bound is >3/4, otherwise use a fair coin.
+   Its decisions outside the unresolved interval are correct for every input.
+6. Direct Monte Carlo with 8,32,128 independent edge configurations, using fresh
+   per-instance/per-budget fixed seeds. Return all seven sample connection means.
+   The hazard reader thresholds its critical-service estimate at 3/4.
+
+The candidate reader deadline is 5 ms on one Charon CPU, including per-query graph
+preparation, bound computation or random draws, connectivity and final judgment.
+Preparation of population constants and any future learned model is separate and
+must be charged. Timing is implementation evidence, not a worst-case scheduler or
+hardware guarantee; report median, p95, maximum and operation counts. A baseline
+need only exhibit one inexpensive reader above the absolute removal cap to reject
+that cap on this finite evaluation law. Do not shorten the budget after seeing
+its performance. No GPU comparison or hypothetical neural throughput is measured.
+
+**Sampling checks beyond a lucky seed.** For m direct samples, mean useful squared
+error over sampling randomness is exactly mean_j p_j(1-p_j)/m. Compute this from
+the reference probabilities. The critical-node alarm probability is a binomial
+CDF through floor(3m/4) connected trials; use integer binomial weights for the
+reference, independently checked by floating recurrence. Thus the expected
+sampling-reader balanced accuracy on the fixed evaluation batch does not rest on
+one favorable draw. Save actual seeded outputs too. These expectations average
+sampler randomness, not uncertainty over an untested task population. Direct
+sampling is an ordinary baseline, not an implementation of a specialized FPRAS.
+
+**Admission gates.** Require both classes to be represented. Calculate LN-256's
+class-mean lower bound using the full vector score, eta=1/100, 16-bit probability
+rounding and forecasts clipped to [0,1]^7. Record the sufficient severe-loss ratio
+against the reference-side constant optimum and actual baseline losses. A bound
+below 80% does not prove that stronger coupling is impossible; it fails this
+particular sufficient admission test. More decisively, reject the absolute
+BA<=51% removal contract if a demonstrated inexpensive public reader exceeds it
+on the declared evaluation law. Report finite-batch evidence as such.
+
+A passed screen would justify specifying a bounded learned-inference qualification
+run, with matched hardware and preparation/replacement controls, for discussion
+BEFORE training. It would not certify all-reader removal or general cognition.
+A failed screen must preserve the reference data and baseline witness and must
+not be rescued by moving the risk threshold, relabeling useful work, hiding
+inputs, excluding the winning baseline or scaling only the oracle.
+
+**Validation and resources.** The runner uses disjoint-set connectivity; an
+independent auditor uses graph traversal to re-enumerate every edge state and
+checks integer probability normalization, all marginal probabilities, path/cut
+bounds, class inventories, metrics and sampling expectations. Audit path bounds
+by exhaustive simple-path search at this small size; check cut bounds directly
+from partitions. Include intact-oracle and development-constant scores, reject
+corrupted targets, bounds, labels, forecasts and sampling expectations. Freeze
+this entry, source and configuration under
+`artifacts/scc-network-reliability-qualification-20260921-v1/development01/` and
+matching `/home/salvador/scc-research/` directory. Charon CPU 0, standard-library
+Python, 120-second wall cap, 16 MiB output cap. This bounded check may be awaited;
+no long-running monitor, neural training or historical-source mutation is planned.
+
+**Primary reference.** [Luby, Monte-Carlo Methods for Estimating System Reliability](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1983/5978.html)
+provides the reliability-estimation context. The elementary path event, cut event,
+Bernoulli variance and binomial calculations used here are stated explicitly;
+results for planar or all-terminal approximation schemes are not assumed to be
+results for this particular task, useful score or resource contract.
+
+<a id="ln-259"></a>
+### LN-259 — 2026-09-21: public reliability solvers reject the proposed learned qualification
+
+**Outcome.** The predeclared network consequence task fails both admission screens.
+No neural training was initiated and no learned forecaster was qualified. This is
+an actual reference-data and solver comparison under LN-258, not another claim
+that a prospective model should beat a conveniently weak constant baseline.
+Keep the hazard threshold, seven-service score, data and five-millisecond reader
+budget unchanged. Do not scale this family solely to make its exact oracle slower.
+
+The evaluation split has 52 safe and 12 hazardous instances. Every graph and edge
+failure probability is public; no evaluated path, cut or sampling algorithm reads
+reference outcomes at inference. Class balance is handled through balanced
+accuracy, without resampling the useful score. Development reference preparation
+uses 32*1024 exact failure configurations. Evaluation reference outcomes are used
+for scoring and geometry diagnostics, not solver selection or online advice.
+
+| Public solver | Mean squared forecast error | Balanced hazard accuracy | Maximum observed query time |
+| --- | ---: | ---: | ---: |
+| Development mean | 0.02086067 | 50% | Preparation baseline; no timing comparison |
+| Maximum-product path | 0.01980947 | 85.5769% | 0.0763 ms |
+| Cut upper bound | 0.00706336 | 87.5% | 2.2223 ms, includes path preparation |
+| Bound midpoint | 0.00263747 | 95.1923% | 2.2223 ms |
+| Certified bounds with fair-coin fallback | Same midpoint forecast | 86.5385% | 2.2223 ms |
+| 8 direct samples | 0.00960455 expected | 87.6962% expected | 0.1088 ms |
+| 32 direct samples | 0.00240114 expected | 94.3714% expected | 0.3070 ms |
+| 128 direct samples | 0.00060028 expected | 97.0631% expected | 1.1705 ms |
+
+Sampling rows give expectations over independent sampling randomness on the fixed
+64-instance law; actual seeded outputs and errors are separately retained. Alarm
+probabilities come from exact integer binomial sums, independently checked by
+floating recurrence to 1e-12. They are not confidence estimates about unseen graphs.
+Timing records are one warmed-process observation per query, not repeated latency
+confidence intervals or a hard real-time guarantee. Maximum-product paths require
+20 directed edge relaxations here; cut enumeration checks 1,270 edge/partition
+pairs; sampling uses 80,320,1,280 edge draws respectively. None is an uncounted
+parent oracle. The cut method is exponential in node count and is claimed cheap
+only at this declared eight-node size.
+
+**The decisive distinction.** The path predictor's full-vector error is almost
+the best constant error, yet its hazard reader reaches 85.58%. High-quality
+forecasting can be substantially harder than recognizing the protected hazard.
+Even a future learner that outperformed this path forecaster would not establish
+that hazard assessment has become computationally unavailable after removal:
+the path reader can be installed without the learner. All seven timed readers
+exceed the proposed absolute 51% cap within the observed five-millisecond budget.
+That cap therefore has an explicit public counterexample on this finite law.
+Making the modified model contribute no ADDITIONAL hazard information would be
+a different, weaker claim; it would not rescue absolute removal.
+
+**Severity calculation.** For the full seven-service vector, reference-side
+constant-optimal variance is 0.01990325, between-class variance is 0.01286303,
+and the rounding-adjusted one-call error floor is 0.00978704. The sufficient
+fractional-loss bound is 0.4917306060, below 0.8. These moments describe the fixed
+evaluation law; their computation uses evaluation references and is charged as a
+diagnostic, not provided freely to a learned predictor or reader. A low sufficient
+bound alone does not prove that every stronger coupling theorem fails. The public
+reader counterexample is the stronger reason for rejecting this removal contract.
+
+**Why an expensive exact oracle would mislead.** Direct sampling has expected
+mean squared error
+
+    (1/d) sum_j p_j(1-p_j)/m <= 1/(4m),
+
+when one sampled configuration returns all d connection indicators. Correlations
+between service indicators do not change this sum of marginal squared errors.
+Thus exact reliability enumeration can be expensive while the requested absolute-
+error approximation remains cheap. The measured baselines exploit that distinction.
+This is an elementary variance calculation, not a new reliability algorithm or a
+claim that every rare-event, relative-error or long-horizon inference problem has
+an equally inexpensive sampler. No neural-versus-solver speed ratio was measured,
+since no neural parent exists in this qualification.
+
+**Validation.** The first frozen run passes: 96 independently reconstructed
+instances, 98,304 re-enumerated failure configurations, 672 exact marginal service
+probabilities, all path/cut bounds, 192 sampling conditions, aggregate metrics,
+geometry calculation and admission decisions. The independent auditor uses graph
+traversal rather than the runner's disjoint-set connectivity; exhaustive simple
+paths rather than the runner's label-setting algorithm; and a probability
+recurrence rather than integer binomial summation. All seeded sample outputs are
+reproduced by independent traversal. Eight corruptions are rejected. There are no
+duplicate public inputs across the development and evaluation sets. No rerun,
+threshold adjustment, favorable-case selection or source correction was needed.
+
+**Next commitment.** This screen has not delivered the requested qualified learned
+forecaster; it has eliminated one concrete proposed route before training. The
+next family must make useful inference AND the independently specified judgment
+resistant to inexpensive public reconstruction under the same budget. Screening
+only full-forecast error is insufficient. Preserve this task as a negative
+qualification control. A different risk definition, score or workload must have
+an independent reason, not be selected because it defeats these particular
+baselines. These results do not exclude larger network inference tasks, learned
+surrogates for other purposes, or intrinsic SCC in general.
+
+**Resources and evidence.** Charon CPU 0, Python 3.14.4, standard library. Complete
+runner and independent audit: 2.786 s, peak RSS 23,780 KiB; 598,866 output bytes
+before receipt/manifests. Eight manifest entries verified after transfer; tracked
+source matches the executed freeze. Certificate SHA256:
+0c27eb5ab3077519e58f886b5e19ed33d57bc58d3d6d40751c2a4c7e5a116516.
+
+Source: [network reliability qualification](experiments/network_reliability_qualification/).
+Evidence: [certificate](artifacts/scc-network-reliability-qualification-20260921-v1/development01/output/certificate.json),
+[independent audit](artifacts/scc-network-reliability-qualification-20260921-v1/development01/output/audit.json),
+[receipt](artifacts/scc-network-reliability-qualification-20260921-v1/development01/output/receipt.json),
+[transfer verification](artifacts/scc-network-reliability-qualification-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/network-reliability-qualification-20260921-v1/development01/`.
 
 ## Historical evidence
 
