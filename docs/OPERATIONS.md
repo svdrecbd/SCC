@@ -35,6 +35,10 @@ retire code and its tests together, rather than reducing the count arbitrarily.
 
 ## Code navigation
 
+[Finite experiments by research phase](../experiments/README.md) covers the later
+recovery, information-theory and dynamical-system work. The table below indexes
+the earlier learned-model infrastructure.
+
 | Area | Entry points |
 |---|---|
 | Persistent tasks and substrate | [tasks](../scc/persistent_tasks.py), [matrix](../scc/persistent_matrix.py), [runner](../scripts/run_persistent_learnability.py) |
@@ -44,8 +48,8 @@ retire code and its tests together, rather than reducing the count arbitrarily.
 | Evidence integrity | [provenance](../scc/provenance.py), [checkpoints](../scc/checkpoint.py) |
 | Exact construction screens (no training) | [word machine](../scripts/screen_word_machine.py), [input substitution](../scripts/verify_input_substitution.py), [irreversible trajectory](../scripts/screen_irreversible_trajectory.py), [wide one-way step](../scripts/run_wide_trajectory.py); each has a separate `audit_*.py` that recomputes results without importing the screen |
 
-Consult labnotes before selecting an experiment. `reports/` and `protocols/` are
-historical evidence. Existing runners load named protocols when freezing their
+Consult labnotes before selecting an experiment. [Archived reports](archive/reports/README.md) and [protocols](../protocols/README.md)
+are historical evidence. Existing runners load named protocols when freezing their
 inputs, so those paths remain stable. New plans are recorded in labnotes and
 frozen into each new run's artifact directory.
 
@@ -86,7 +90,7 @@ in labnotes and the [historical archive](archive/README.md).
 Run CPU experiments, data preparation, test jobs and independent audits on Charon,
 even when slower. The user's GMAN grant is GPU-only; reserve GMAN for GPU work.
 The user permits an exception for a substantial synchronized CPU batch (for example,
-about12 coordinated jobs) that would occupy Charon all day. Record a workload and
+about 12 coordinated jobs) that would occupy Charon all day. Record a workload and
 concurrency estimate before invoking that exception; routine speedups do not qualify.
 Routine local editing, Git operations and artifact reads remain local tooling.
 Use Charon's GPUs for a runner after that runner's numerical qualification;
@@ -216,6 +220,26 @@ The original reset backup and hash ledger remain in the local evidence store at
 `artifacts/scc-research-reset-20260912-v1/`. Archived documents and artifact snapshots
 must be interpreted at their original dates.
 
+### Refresh the share ZIP
+
+After committing the source tree, run this local packaging command with the
+verified SD drive mounted (no research job or model execution):
+
+```sh
+python3 scripts/build_share_zip.py \
+  --output "$HOME/Downloads/SCC_research_program_v0.1.zip" \
+  --backup-dir "/Volumes/Untitled/SCC_research_program_v0.1/cold-storage/share-builds"
+```
+
+The builder reads the exact Git commit and the committed
+[share selection](../configs/share.json), checks all member hashes and ZIP CRCs,
+and replaces the Downloads ZIP atomically only after verification. Existing ZIPs
+are copied and hash-verified into the backup directory first. `_SHARE_INFO.json`
+identifies the source commit, evidence scope, omissions and every member hash;
+a `.receipt.json` beside the ZIP records the archive hash. Source extraction needs
+no SD drive; omitted evidence does. Supplementary summary files alone are not a
+complete independent replay package.
+
 ## External evidence storage
 
 On the original research Mac, the checkout's `artifacts` and `runs` paths point
@@ -250,3 +274,8 @@ The original migration's inventories, per-file hashes and receipts are retained
 under the checkout's ignored `.storage-migrations/20260914-v1/`, with a copy in
 the external project's `migration-records/20260914-v1/`. The dated outcome is in
 labnotes.
+
+The September 20 refresh also moved `.local-archives/` and `.storage-migrations/`
+to `cold-storage/refresh-20260920-v1/` on this volume, with compatibility symlinks
+at their previous checkout paths. Per-file inventories and copy-verification
+receipts are in `artifacts/scc-refresh-20260920-v1/storage-move.json`.

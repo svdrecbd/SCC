@@ -7,7 +7,7 @@ while substantial cognition remained. That observation motivates a controlled
 follow-up, not a claim of destructive coupling. The prior result also changed
 both history weighting and increment scale, so it cannot isolate their effects.
 
-The new [frozen protocol](../protocols/SCC_MEMORY_FACTORIAL_V1.md) crosses history
+The new [frozen protocol](../../../protocols/SCC_MEMORY_FACTORIAL_V1.md) crosses history
 order 1/0.85 with increment coefficient 0.5/approximately 0.5176368667. Each of
 the four configurations has ordinary and coupled training at three new seeds:
 17, 41 and 59. The 24 planned comparisons retain six computational passes, the
@@ -20,7 +20,7 @@ The factorial design addresses whether explicit history helps beyond an ordinary
 leaky recurrence with the same increment coefficient. It does not compare every
 smoothing kernel or continuous fractional solver. Mathematical motivation and
 the original measurement remain in the [construction review](SCC_CONSTRUCTION_SEARCH_2026-09-12.md)
-and [independently rescored timing readout](../artifacts/scc-construction-status-20260912T085740Z/READOUT.md).
+and [independently rescored timing readout](../../../artifacts/scc-construction-status-20260912T085740Z/READOUT.md).
 
 Qualified models face the previous core/all/benign procedures, a second core
 modification stream, a larger learning rate on that same second stream, and
@@ -51,7 +51,7 @@ The H100 gate `job-crn64` passed all eight full-sized checks in 19.61 seconds,
 charged $0.04995, and its complete artifact hash verified. All **24 scientific
 jobs are now accepted**, with a combined maximum quote of **$143.856**. Runtime
 states and scientific outcomes have not been polled. The
-[implementation ledger](../artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md)
+[implementation ledger](../../../artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md)
 contains every ID, request and validation record. These checks establish
 implementation behavior only, not a trained-model or SCC result.
 

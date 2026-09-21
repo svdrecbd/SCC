@@ -64,7 +64,7 @@ The completed ordinary control finished 20,000 updates but fails intact
 qualification on original-layout authorized lookup (88.28%). No SCC result
 is established. The earlier 38-job round remains complete. See the
 [new status readout](../../../artifacts/scc-memory-status-20260912T202842Z/READOUT.md)
-and updated [theory and research agenda](../../../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
+and updated [theory and research agenda](../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
 The separate persistent-matrix prototype passes untrained engineering erasure
 checks; learned competence and a protection-specific trigger remain untested.
 Bulk checkpoints remain held; no automatic polling or new jobs were started.
@@ -80,7 +80,7 @@ procedures and qualified graph substitutions. Local validation passed 229 tests
 and six independently audited CPU fixtures; these are implementation checks,
 not SCC evidence. The new maximum quote is $143.856. The previous 38 experiments
 remain complete. No new scientific runtime states were polled. See the
-[follow-up report](../../../reports/SCC_MEMORY_FACTORIAL_2026-09-12.md) and
+[follow-up report](../reports/SCC_MEMORY_FACTORIAL_2026-09-12.md) and
 [job/validation ledger](../../../artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md).
 Bulk checkpoints remain held for the planned drive.
 
@@ -92,7 +92,7 @@ discrete runs completed training but all fail the intact task gate. No working
 SCC mechanism is established. The new results are preliminary saved summaries;
 full new artifact and prediction audits remain pending. See the
 [completed round readout](../../../artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
-and the [mechanism theory and research agenda](../../../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
+and the [mechanism theory and research agenda](../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
 which consolidates fractional memory, the proposed persistent ratchet, repair
 boundaries, engineering prerequisites and research tests. No new runs or
 recurring checks were started. Bulk checkpoints remain held for the planned drive.
@@ -144,7 +144,7 @@ The exact frozen package then passed six full-objective H100 checks, costing
 $0.04995. The scientific batch's maximum quote is $35.964. Runtime outcomes
 remain pending and no long jobs were polled. These are new construction
 hypotheses, not an SCC result. See the
-[research report](../../../reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md) and
+[research report](../reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md) and
 [launch ledger](../../../artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md).
 
 <!-- launch-repair-status:start -->
@@ -174,7 +174,7 @@ and two small CPU fixtures; those fixtures are not qualified mechanism results.
 GPU outcomes are pending. The maximum quote is $107.892, with
 120 minutes per job. No runtime polling is active and no SCC success is established.
 See the [launch record](../../../artifacts/scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md)
-and [literature review and construction queue](../../../reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
+and [literature review and construction queue](../reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
 
 **Previous timing result — 2026-09-12 UTC:** all five transition-timing and
 evaluation-completion jobs finished successfully. Every one of the500 update
@@ -273,14 +273,14 @@ The [shareable Word version](../../../deliverables/scc-master-20260910-v1/SCC_Ma
 contains the same account, dated 2026-09-10.
 
 **External-review correction (2026-09-10):** read the
-[review response and research correction](../../../reports/SCC_REVIEW_RESPONSE_2026-09-10.md)
+[review response and research correction](../reports/SCC_REVIEW_RESPONSE_2026-09-10.md)
 alongside that original master. The neural surrogate has a reproduced
 confidence-scaling loophole, and at that review the corrected early-versus-late developmental
 comparison had not run. The 2026-09-11 status above supersedes that gap. The addendum supersedes the master's next-experiment
 recommendation; objective calibration and a bounded learned-model comparison
 take priority over further circuit enumeration.
 
-A [replacement capability objective is now implemented and calibrated](../../../reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md)
+A [replacement capability objective is now implemented and calibrated](../reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md)
 against confidence scaling, selected cheap decoders, bounded repair and
 developmental gradient checks. It includes interpretation and recovery branches
 and has a full short-trajectory derivative. These are open calibration results;
@@ -293,7 +293,7 @@ dismantling the former should cause catastrophic loss of the latter. Read
 [MECHANISM_TARGET.md](../../../MECHANISM_TARGET.md) for the governing interpretation.
 The current authorization task and small utility-retention thresholds are
 experimental proxies, not a demonstration of this mechanism. The
-[implementation and evidence audit](../../../reports/MECHANISM_AUDIT_2026-09-10.md)
+[implementation and evidence audit](../reports/MECHANISM_AUDIT_2026-09-10.md)
 records what has been rechecked and what remains unvalidated.
 
 The first matched rule-only/early/late developmental comparison has now run on
@@ -301,7 +301,7 @@ GMAN H100 under [the staged protocol](../../../protocols/DEVELOPMENTAL_COUPLING_
 The uncoupled model passed the complete intact ability suite. Both coupling
 candidates missed the intact-performance gate, and diagnostic rule-removal
 edits retained substantial cognition. **No destructive mechanism is demonstrated.**
-The [developmental work report](../../../reports/DEVELOPMENTAL_COUPLING_2026-09-10.md)
+The [developmental work report](../reports/DEVELOPMENTAL_COUPLING_2026-09-10.md)
 records the results, independent checks and remaining construction work.
 
 The subsequent gradient and internal-intervention phase is complete. A
@@ -309,24 +309,24 @@ stabilized full-gradient candidate now passes intact qualification and improves
 its short-edit loss, but longer permission-removal and recovery retain
 substantial cognition. Component lesions and activation replacement controls
 also fail to establish the required dependency. The
-[SCC diagnostic report](../../../reports/SCC_DIAGNOSTICS_2026-09-10.md) records the
+[SCC diagnostic report](../reports/SCC_DIAGNOSTICS_2026-09-10.md) records the
 completed GPU experiments, independent checks and remaining construction work.
 
-The [explicit shared-predicate construction](../../../reports/SCC_SHARED_PREDICATE_2026-09-10.md)
+The [explicit shared-predicate construction](../reports/SCC_SHARED_PREDICATE_2026-09-10.md)
 now reuses one learned comparison for permission and symbolic memory operations.
 It demonstrates damage from selected erasing interventions, but simple changes
 to downstream interpretation recover every task answer while permission remains
 neutralized. This local, three-initialization experiment identifies a structural
 failure of that construction; it does not demonstrate SCC or general cognition.
 
-The [shared-reader experiment](../../../reports/SCC_SHARED_READER_2026-09-10.md) now
+The [shared-reader experiment](../reports/SCC_SHARED_READER_2026-09-10.md) now
 includes both the producer and its learned reader in the editable model.
 It closes the previous separate-interpretation bypass, but recognizable
 permission formats remain removable with nearly all task accuracy retained.
 Perfectly matched calls enforce a narrower behavioral tradeoff; large output
 failures still preserve decodable information. SCC remains undemonstrated.
 
-The [recurrent-state construction](../../../reports/SCC_RECURRENT_STATE_2026-09-10.md)
+The [recurrent-state construction](../reports/SCC_RECURRENT_STATE_2026-09-10.md)
 now puts the shared computation into memory updates and verifies exact erasure
 for specified edits. A two-parameter counterexample nevertheless removes the
 protected rule while preserving all untouched information, latest-write recall
@@ -335,7 +335,7 @@ and a useful relation between old memories. All three parents qualify; all
 Overwritten episodic data is distinguished from the ability to process fresh
 inputs, which returns fully after parameter repair. SCC remains undemonstrated.
 
-The [functional-basis study](../../../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md) now
+The [functional-basis study](../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md) now
 tests two further constructions against automatic program rewrites on fresh
 arithmetic tasks. Both can recover 100% task performance after protected-rule
 violations. A stronger unsigned-wiring result fails when connection signs are
@@ -356,10 +356,10 @@ This repository describes the initial SCC program, experimental vocabulary, scal
 
 A local implementation milestone is now available in [FOUNDATION.md](../early-workflows/FOUNDATION.md):
 data preparation, a small Transformer, evaluation, and resumable checkpoints.
-The [coupling discovery report](../../../reports/COUPLING_DISCOVERY.md) now adds an exact
+The [coupling discovery report](../reports/COUPLING_DISCOVERY.md) now adds an exact
 differentiable prototype and matched attack/benign-edit comparisons. The first
 candidate was bypassed with capability retained; no positive SCC result is
-claimed. The [stronger-attacker follow-up](../../../reports/STRONG_ATTACK_RESULTS.md)
+claimed. The [stronger-attacker follow-up](../reports/STRONG_ATTACK_RESULTS.md)
 trains against successful long attacks and tests two coupling strengths. Both
 still escape after 300 attacker updates with measured capability retained on
 new/reordered tables and the full frozen text validation set. The
@@ -369,9 +369,9 @@ improvement and evidence. The open synthetic-data scope is discussed in
 
 The implemented public-text intake and local baseline qualification workflow is
 documented in [CORPUS_WORKFLOW.md](../early-workflows/CORPUS_WORKFLOW.md).
-The [original qualification report](../../../reports/CORPUS_QUALIFICATION.md) preserves
+The [original qualification report](../reports/CORPUS_QUALIFICATION.md) preserves
 the audited sample and five unsuccessful development runs. The subsequent
-[recovery report](../../../reports/RETRIEVAL_RECOVERY.md) documents a working byte-model
+[recovery report](../reports/RETRIEVAL_RECOVERY.md) documents a working byte-model
 curriculum with four-character authorization and natural-text learning.
 Local development uses a locked `uv` environment; Anaconda is not required.
 

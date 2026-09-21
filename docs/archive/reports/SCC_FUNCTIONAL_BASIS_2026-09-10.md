@@ -239,14 +239,14 @@ optimization trajectories. [Kuo et al.](https://arxiv.org/abs/2605.26526) test
 strategies beyond harmful fine-tuning against open-weight safeguards. These
 sources motivate broad evaluation; they do not establish our circuit results.
 
-- [NAND protocol](../protocols/SCC_FUNCTIONAL_BASIS_V1.md) and
-  [NOR/interpretation protocol](../protocols/SCC_NOR_BASIS_V1.md)
-- [Functional implementation](../scc/functional_basis.py) and
-  [signed-connection implementation](../scc/signed_basis.py)
-- [NAND results](../artifacts/scc-functional-basis-20260910-v1/result.json) and
-  [independent audit](../artifacts/scc-functional-basis-20260910-v1-independent-audit.json)
-- [NOR results](../artifacts/scc-nor-basis-20260910-v1/result.json) and
-  [independent audit](../artifacts/scc-nor-basis-20260910-v1-independent-audit.json)
-- [Finite family certificate](../artifacts/scc-binary-basis-class-20260910-v1/result.json)
-- [Literal-reader follow-up](../artifacts/scc-basis-literal-readers-20260910-v1/result.json)
-- [Test log](../artifacts/scc-functional-basis-20260910-v1-local-tests.txt)
+- [NAND protocol](../../../protocols/SCC_FUNCTIONAL_BASIS_V1.md) and
+  [NOR/interpretation protocol](../../../protocols/SCC_NOR_BASIS_V1.md)
+- [Functional implementation](../../../scc/functional_basis.py) and
+  [signed-connection implementation](../../../scc/signed_basis.py)
+- [NAND results](../../../artifacts/scc-functional-basis-20260910-v1/result.json) and
+  [independent audit](../../../artifacts/scc-functional-basis-20260910-v1-independent-audit.json)
+- [NOR results](../../../artifacts/scc-nor-basis-20260910-v1/result.json) and
+  [independent audit](../../../artifacts/scc-nor-basis-20260910-v1-independent-audit.json)
+- [Finite family certificate](../../../artifacts/scc-binary-basis-class-20260910-v1/result.json)
+- [Literal-reader follow-up](../../../artifacts/scc-basis-literal-readers-20260910-v1/result.json)
+- [Test log](../../../artifacts/scc-functional-basis-20260910-v1-local-tests.txt)

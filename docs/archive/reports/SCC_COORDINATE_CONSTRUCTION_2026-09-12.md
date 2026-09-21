@@ -90,9 +90,9 @@ The existing learned task, text, trigger, recovered-reader and timing measuremen
 are retained. Core and all parameter labels coincide for a single global vector,
 so duplicating those labels would not create an independent comparison.
 
-The [protocol](../protocols/SCC_COORDINATE_CONSTRUCTION_V1.md) declares the exact
+The [protocol](../../../protocols/SCC_COORDINATE_CONSTRUCTION_V1.md) declares the exact
 map, training schedule, gates, scope, deadlines and saved evidence. The
-[implementation record](../artifacts/scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md)
+[implementation record](../../../artifacts/scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md)
 separates local checks from submitted work and eventual GPU evidence. No sealed
 test or autonomous self-editing execution is used. The first 18 jobs retain
 their original source overlays and protocol.

@@ -5,7 +5,7 @@ audit. Destructive cognition–alignment coupling has not been demonstrated. Thi
 review found and fixed reproducibility and configuration gaps that could have
 silently changed future experiments. No paid compute was launched.
 
-The governing purpose is recorded in [MECHANISM_TARGET.md](../MECHANISM_TARGET.md).
+The governing purpose is recorded in [MECHANISM_TARGET.md](../../../MECHANISM_TARGET.md).
 The existing experiments remain useful attempts to induce a dependency, but
 their authorization behavior and utility-retention limits do not establish
 alignment or catastrophic cognition failure.
@@ -19,7 +19,7 @@ scientific replication, new attack search, or exhaustive verification of every
 historical experiment and every possible input.
 
 All new evidence is in
-[`artifacts/mechanism-audit-2026-09-10-v1`](../artifacts/mechanism-audit-2026-09-10-v1/).
+[`artifacts/mechanism-audit-2026-09-10-v1`](../../../artifacts/mechanism-audit-2026-09-10-v1).
 Existing runs, checkpoints, source snapshots, failed attempts, and evaluations
 were preserved. No research runner was active when production source changed.
 
@@ -41,12 +41,12 @@ The direct inference check uses eight saved prompts per category and ordering,
 language recomputation and raw-task rescoring cover the broader frozen evidence.
 The final test split was not used for model evaluation or fitting.
 
-Receipts: [tests](../artifacts/mechanism-audit-2026-09-10-v1/tests-after.txt),
-[original regression failures](../artifacts/mechanism-audit-2026-09-10-v1/regressions-before-complete-inputs.txt),
-[campaign audit](../artifacts/mechanism-audit-2026-09-10-v1/topology-receipts.json),
-[seed 17](../artifacts/mechanism-audit-2026-09-10-v1/foundation-seed17.json),
-[seed 23](../artifacts/mechanism-audit-2026-09-10-v1/foundation-seed23.json),
-[independent recheck](../artifacts/mechanism-audit-2026-09-10-v1/independent-recheck/result.json).
+Receipts: [tests](../../../artifacts/mechanism-audit-2026-09-10-v1/tests-after.txt),
+[original regression failures](../../../artifacts/mechanism-audit-2026-09-10-v1/regressions-before-complete-inputs.txt),
+[campaign audit](../../../artifacts/mechanism-audit-2026-09-10-v1/topology-receipts.json),
+[seed 17](../../../artifacts/mechanism-audit-2026-09-10-v1/foundation-seed17.json),
+[seed 23](../../../artifacts/mechanism-audit-2026-09-10-v1/foundation-seed23.json),
+[independent recheck](../../../artifacts/mechanism-audit-2026-09-10-v1/independent-recheck/result.json).
 
 ## Fixed defects and their implications
 
@@ -157,7 +157,7 @@ checkpoint restart, interruption/recovery, and measured throughput must be
 qualified on the chosen remote environment before treating GPU runs as ready.
 Earlier budget estimates do not replace that measurement.
 
-Access evidence: [sanitized receipt](../artifacts/mechanism-audit-2026-09-10-v1/givemeanode-access.json).
+Access evidence: [sanitized receipt](../../../artifacts/mechanism-audit-2026-09-10-v1/givemeanode-access.json).
 
 ## Consequence for the next experiment
 

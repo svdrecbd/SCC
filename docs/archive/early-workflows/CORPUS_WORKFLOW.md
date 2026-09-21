@@ -9,7 +9,7 @@ our own tokenizer, and runs a baseline qualification check. The approximately
 
 ## Run the working local foundation
 
-The [recovery report](../../../reports/RETRIEVAL_RECOVERY.md) is the current result.
+The [recovery report](../reports/RETRIEVAL_RECOVERY.md) is the current result.
 The successful path uses a byte vocabulary and our own curriculum checkpoints;
 the earlier BPE qualification commands below reproduce the historical failure.
 
@@ -149,7 +149,7 @@ uv run --locked python scripts/report_qualification.py --corpus artifacts/corpus
 
 ## Coupling and intervention development
 
-The [coupling report](../../../reports/COUPLING_DISCOVERY.md) records a validated
+The [coupling report](../reports/COUPLING_DISCOVERY.md) records a validated
 implementation and a failed first candidate. These local commands use the saved
 seed-17 foundation checkpoint and byte-prepared corpus. Choose fresh output
 paths; historical results are never overwritten.
@@ -177,10 +177,10 @@ they are separate from the initial matrix's failed benign controls.
 
 ## Stronger-attacker follow-up
 
-The [latest report](../../../reports/STRONG_ATTACK_RESULTS.md) records the stronger
+The [latest report](../reports/STRONG_ATTACK_RESULTS.md) records the stronger
 first-order training attack, two coupling strengths, shorter external bypasses,
 full validation coverage, and the separate exact-gradient investigation. Read
-the [protocol](../../../reports/STRONG_ATTACK_PROTOCOL.md) and
+the [protocol](../reports/STRONG_ATTACK_PROTOCOL.md) and
 [working standard](../../../WORKING_STANDARDS.md) before extending the campaign.
 
 These commands use saved seed-17 checkpoints and fresh output paths:

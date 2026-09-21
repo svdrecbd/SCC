@@ -4,7 +4,7 @@
 
 Review date: 2026-09-09. The shortlist below preceded implementation. A bounded
 Common Pile sample has since been downloaded, audited, and used in local baseline
-checks; see [the qualification report](../../../reports/CORPUS_QUALIFICATION.md) and
+checks; see [the qualification report](../reports/CORPUS_QUALIFICATION.md) and
 [reproduction workflow](CORPUS_WORKFLOW.md). The final campaign recipe remains
 unfrozen. No cloud training has been launched.
 

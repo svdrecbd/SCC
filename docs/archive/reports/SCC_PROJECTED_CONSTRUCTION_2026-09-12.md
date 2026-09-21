@@ -88,7 +88,7 @@ declaring a new reliable escape from this calibration alone.
 
 All source snapshots, scalar geometry, saved directions, parent hash and raw
 predictions are in the
-[local geometry artifact](../artifacts/scc-projected-geometry-20260912-v1/result.json).
+[local geometry artifact](../../../artifacts/scc-projected-geometry-20260912-v1/result.json).
 The parent checkpoint was verified unchanged after the measurement.
 An independent audit rescored all 2,496 recorded predictions across the
 baseline and twelve edited points. Text likelihoods were not independently
@@ -150,7 +150,7 @@ and repair procedures, readers and graph bypass. They are intentionally tiny,
 unqualified models. Independent audits rescored 6,000 endpoint predictions and 1,932
 path predictions across 24 endpoint measurements; neither fixture is scientific
 evidence for SCC. See the
-[validation artifacts](../artifacts/scc-projected-implementation-20260912-v1/fixture-validation.json).
+[validation artifacts](../../../artifacts/scc-projected-implementation-20260912-v1/fixture-validation.json).
 
 ## Declared experiment and decision
 
@@ -158,10 +158,10 @@ The six scientific conditions are standard, narrow32 and tied architectures,
 each with projected and geometry objectives at seed 23. Their ordinary controls
 have already learned the intact suite. Each receives 20,000 ordinary training
 opportunities and 800 coupling opportunities from initialization. The
-[frozen protocol](../protocols/SCC_PROJECTED_CONSTRUCTION_V1.md) specifies the
+[frozen protocol](../../../protocols/SCC_PROJECTED_CONSTRUCTION_V1.md) specifies the
 sample schedule, resources, intact gates, update-boundary measurements, cheap
 readers and bounded repairs. GPU validation and launch receipts are recorded in
-the [implementation ledger](../artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md).
+the [implementation ledger](../../../artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md).
 The exact frozen package passed six full-sized H100 objective/backward checks;
 all six scientific jobs were then accepted. Their combined maximum quote is
 $35.964, with 120-minute runtime limits. The short validation actually charged

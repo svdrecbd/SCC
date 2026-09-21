@@ -46,10 +46,20 @@ environment notes are in [operations](../OPERATIONS.md).
 - [00_README.md](status-2026-09-12/00_README.md)
 - [MECHANISM_TARGET.md](status-2026-09-12/MECHANISM_TARGET.md)
 
-[Path map](path-map.json). Dated reports and frozen protocols remain at their
-original paths: [reports](../../reports/) and [protocols](../../protocols/).
+## Reports, protocols and consultations
 
-The [research reset](../RESEARCH_RESET.md) is also a dated historical synthesis,
-not an additional current plan.
+- [Dated reports and registries](reports/README.md) — archived findings, including failures.
+- [Frozen protocols](../../protocols/README.md) — retained at stable paths for older runners.
+- [Consulting briefing, 16 September](consultations/CONSULTING_NOTES_2026-09-16.md).
+- [Engineering memo, 13 September](consultations/SCC_Engineering_Decision_Memo_2026-09-13.md).
+- [Research reset, 12 September](status-2026-09-12/RESEARCH_RESET.md).
+- [Initial budget assessment](budget/ASSESSMENT_2026-09-09.md) and
+  [pilot proposal](budget/PILOT_450_PROPOSAL.md) — dated assumptions, not current spend limits.
+- [Dated shareable deliverables](../../deliverables/README.md).
+- [Full supporting-evidence inventory](evidence-index.md), moved out of the labnotes.
 
-The current conditional theory is [canonical v4.1](../../deliverables/scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md). Submitted v3/v4 originals remain in the evidence store; LN-127 and LN-130 record their reviews.
+[Old-to-new path map](path-map.json). The September 20 refresh moved dated documents
+and rebased navigation; original text and hashes are preserved in
+`artifacts/scc-refresh-20260920-v1/` and Git history. Archived scientific claims
+remain historical, including claims corrected by later labnotes. New plans and
+interpretations belong only in [labnotes](../../labnotes.md).

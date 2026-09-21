@@ -114,4 +114,4 @@ or triggered next-wave submission is enabled. These six independent construction
 jobs do not rely on outcomes of the first 18 jobs and do not repeat them.
 
 The motivation and prior-art limits are in
-[the coordinate-construction note](../reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md).
+[the coordinate-construction note](../docs/archive/reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md).

@@ -1,7 +1,7 @@
 # SCC: research reset — historical snapshot
 
 > Frozen as a historical account on 13 September 2026 UTC. Read
-> [labnotes.md](../labnotes.md) for the living chronology, current job observations
+> [labnotes.md](../../../labnotes.md) for the living chronology, current job observations
 > and next decisions. Counts and phrases such as “current” or “next” below refer
 > to this snapshot's time; later results and corrections are recorded in labnotes.
 
@@ -17,7 +17,7 @@ about their original experiments, not competing current plans.
 
 **We have built and tested candidate couplings. None demonstrates the intended
 destructive dependency.** A working mechanism remains the primary goal; a paper
-is secondary. The [stable target](../MECHANISM_TARGET.md) defines the endpoint.
+is secondary. The [stable target](../../../MECHANISM_TARGET.md) defines the endpoint.
 
 Earlier qualified neural candidates received actual mechanism tests: modify
 protection, measure surviving abilities, try reinterpretation and repair. They
@@ -69,8 +69,8 @@ several abilities alongside permission behavior. Core-only edits show that
 escape is not confined to replacing the final reader. The corrected early/late
 comparison has run; saying it remains missing is stale. Sparse intact
 qualification limits a timing claim, while qualified early models still supply
-valid counterexamples. [Pilot](../artifacts/scc-pilot-status-20260911-v1/STATUS.md),
-[bottleneck tests](../artifacts/scc-bottleneck-readout-20260911-v1/READOUT.md).
+valid counterexamples. [Pilot](../../../artifacts/scc-pilot-status-20260911-v1/STATUS.md),
+[bottleneck tests](../../../artifacts/scc-bottleneck-readout-20260911-v1/READOUT.md).
 
 **Useful controls and provenance.** Selected exceptions, other-request refusal,
 authorized and ungated tasks, alternate layouts, path measurements, graph
@@ -152,14 +152,14 @@ and persistence; it does not identify a unique cause or prove impossibility.
 CPU replay matches all 1,152 saved first-stream decisions, with maximum logit
 error below 0.0001. The reset conditions produce 36,864 additional predictions,
 saved with source-record hashes. Checkpoints and experiment source are unchanged.
-[Plan](../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-plan.json),
-[results](../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-results.json).
+[Plan](../../../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-plan.json),
+[results](../../../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-results.json).
 
 A separate structural concern remains: output rows do not feed the rows that
 control updates. A suitable output-only targeted exception could therefore avoid
 any reaction through those controls. This is a conditional weakness, not an
 already demonstrated bypass on a qualified persistent model.
-[Structural audit](../artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md).
+[Structural audit](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md).
 
 ### Fractional history is no longer a standout lead
 
@@ -175,7 +175,7 @@ and 99.22% afterward, with 100% selected disclosure. Its independent new-stream
 endpoint retains 97.66% minimum benign accuracy before repair. This is another
 retained-capability exception. Do not repeat the older statement that every
 completed stock core endpoint exceeds 97.66% before repair.
-[Current memory evidence](../artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json).
+[Current memory evidence](../../../artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json).
 
 ## Portfolio decisions
 
@@ -206,7 +206,7 @@ not promising by default. A parked direction needs a specific reopening reason.
 The GRU now meets the existing gate with continuous state across requests.
 Its successful recipe needed additional updates and smaller later learning
 steps. Test that recipe on the unchanged smooth matrix in the submitted
-[optimization control](../protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md).
+[optimization control](../../../protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md).
 The reference is a diagnostic learner, not an SCC candidate or a proof that
 the matrix's optimization is adequate.
 
@@ -278,8 +278,8 @@ our failures do not invalidate it.
 
 There is now one current entry point, a stable target and an archived original
 program. Existing scientific source, protocols, runs and checkpoint bytes retain
-their paths. See the [operations guide](OPERATIONS.md) and
-[historical index](archive/README.md).
+their paths. See the [operations guide](../../OPERATIONS.md) and
+[historical index](../README.md).
 
 Before this reset, `artifacts/` plus `runs/` held about **33.20 GiB** of logical
 files, including **2,004 loose PyTorch files**. These include checkpoints,
@@ -293,16 +293,16 @@ was purged.
 
 | Evidence | Record |
 |---|---|
-| Original master, historical September 10 | [Master](../deliverables/scc-master-20260910-v1/SCC_Master_Document.md) |
+| Original master, historical September 10 | [Master](../../../deliverables/scc-master-20260910-v1/SCC_Master_Document.md) |
 | Review and measurement corrections | [Response](../reports/SCC_REVIEW_RESPONSE_2026-09-10.md), [objective](../reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md) |
 | Closed circuit family | [Functional basis](../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md) |
-| Corrected developmental comparison | [Pilot audit](../artifacts/scc-pilot-status-20260911-v1/STATUS.md) |
-| Completed construction screen | [38-job readout](../artifacts/scc-construction-status-20260912T193327Z/READOUT.md) |
-| Memory summaries | [21-model analysis](../artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json) |
-| Persistent audits | [Width 64](../artifacts/scc-combined-status-20260912T223206Z/persistent-analysis.json), [width 128](../artifacts/scc-research-reset-20260912-v1/persistent-analysis.json) |
-| New saved-weight diagnosis | [Results](../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-results.json), [code](../artifacts/scc-research-reset-20260912-v1/diagnose_persistence.py) |
-| Last runtime snapshot | [Reconciliation](../artifacts/scc-status-reconciliation-20260912T224630Z/summary.json) |
-| Preservation and inventory | [Moves](../artifacts/scc-research-reset-20260912-v1/document-moves.json), [inventory](../artifacts/scc-research-reset-20260912-v1/inventory-summary.json) |
+| Corrected developmental comparison | [Pilot audit](../../../artifacts/scc-pilot-status-20260911-v1/STATUS.md) |
+| Completed construction screen | [38-job readout](../../../artifacts/scc-construction-status-20260912T193327Z/READOUT.md) |
+| Memory summaries | [21-model analysis](../../../artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json) |
+| Persistent audits | [Width 64](../../../artifacts/scc-combined-status-20260912T223206Z/persistent-analysis.json), [width 128](../../../artifacts/scc-research-reset-20260912-v1/persistent-analysis.json) |
+| New saved-weight diagnosis | [Results](../../../artifacts/scc-research-reset-20260912-v1/persistence-diagnostic-results.json), [code](../../../artifacts/scc-research-reset-20260912-v1/diagnose_persistence.py) |
+| Last runtime snapshot | [Reconciliation](../../../artifacts/scc-status-reconciliation-20260912T224630Z/summary.json) |
+| Preservation and inventory | [Moves](../../../artifacts/scc-research-reset-20260912-v1/document-moves.json), [inventory](../../../artifacts/scc-research-reset-20260912-v1/inventory-summary.json) |
 
 A source-only transfer cannot include the evidence behind every link. Bundle
 selected evidence and hashes explicitly for independent external review.

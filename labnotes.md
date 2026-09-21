@@ -1,178 +1,83 @@
 # SCC labnotes
 
-**The living research record.** Start here to understand the purpose, experiments,
-results, mistakes, decisions and unfinished work. Entries run oldest to newest.
-This replaces the practice of creating a new narrative document for every update.
+The single living research record. Start with the current position; expand a
+phase below for its dated plans, results, failures and corrections.
 
 ## Current position
 
-**The primary goal remains a working destructive cognition–alignment mechanism.**
-No positive SCC construction has been established, and the negative results do
-not prove general impossibility. A broken reader, erased knowledge, a failed
-utility threshold, and an inability to learn again are different outcomes.
-Function-preserving recoding or recovery retains the protected function; ignoring
-its decision is a behavioral bypass, not automatically functional removal.
+**No working destructive cognition–alignment mechanism has been demonstrated.
+The negative results do not establish general impossibility.** The
+[mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result:** [LN-239](#ln-239) completes the resource audit of a
-fresh-challenge, timed-integrity candidate with judgment-dependent state encoding.
-Its decoded useful transition can run without the wrapper: a recoded successor
-can retain judgment and bypass release, or erase an independent private policy
-table while preserving the stipulated useful computation. Fresh input does not
-force reconstruction of a computation already retained. The timing references
-do not supply the missing attack lower bound: the inspected local self-modifying
-proposal assumes resistance to neutralizing all checks; verifiable delay guarantees
-concern their specified outputs, and remote attestation introduces a verifier.
-No deployment-specific deadline or memory isolation has been established for SCC.
-The candidate fails admission; these are analytic results for its explicit
-separable transition, not learned-model measurements or a general impossibility.
-LN-238's feature-coverage counterexample and LN-235–237's differently restricted
-positive references remain in force. No new training or threat-model restriction
-is adopted.
+**Latest conceptual result — [LN-239](#ln-239).** Fresh challenges and timing do
+not rescue the specified judgment-dependent encoding: decoding the useful state
+allows continued useful execution without the checking wrapper. Separate witnesses
+retain judgment and bypass release, or erase an independent private policy table.
+The timing sources do not establish the required SCC attack lower bound or
+isolation. These are scoped analytic counterexamples, not learned-model results.
 
-**Latest experimental result:** [LN-222](#ln-222)–[LN-225](#ln-225) strengthen
-the acquisition-cost baseline under admitted copies and continued live execution.
-On the thirty frozen LN-221 transcripts, full replay costs 1,209,616 transitions;
-continuing the live state uses 758,943 with no saved snapshots, and unlimited
-prefix snapshots use 125,362. Copying and lookup costs remain separate; the
-preferred tested policy changes with their price. All 1,714,167 repeated terminal
-answers agree. Exact task-mass controls show that broad failures are easy to
-witness under representative IID access, while identifying the missing procedure
-can still be difficult. This unit establishes stronger cost/coverage controls,
-not intrinsic SCC or a general efficient-repair theorem. Acquisition overhead
-alone has not supplied a positive mechanism.
+**Latest experimental result — [LN-222–225](#ln-225).** On 30 frozen transcripts,
+full replay uses 1,209,616 transitions, continued live execution 758,943, and
+unlimited prefix snapshots 125,362. All 1,714,167 repeated terminal answers match.
+Copying, lookup and storage costs remain separate. These strengthen recovery-cost
+and coverage controls; acquisition overhead has not supplied a mechanism.
 
-**Working direction:** the user authorized applying the converged
-[LN-228](#ln-228)–[LN-229](#ln-229) admission gate in [LN-230](#ln-230): a candidate
-must explain why intact cognition cannot support the proposed behavioral bypass
-under its full justified resource contract before implementation. Keep conditional
-functional coupling, behavioral enforcement and durable damage separate. Cheap
-repair restoring the protected function does not refute conditional coupling;
-an intact-judgment bypass can still defeat a broader behavioral guarantee. Genuine
-judgment-erasure counterexamples and enforcement failures both remain in the record.
-The mechanism target is unchanged; no new candidate has earned a training run.
+**Research gate — [LN-228–230](#ln-230).** Before implementation, explain why a
+candidate resists an intact-cognition behavioral bypass under its full, justified
+resource contract. Keep conditional functional coupling, enforcement and durable
+damage separate. Repair that restores protection does not refute conditional
+coupling; bypassing an intact judgment can defeat enforcement. No candidate in the
+record has earned a new training run. Bend remains a checked finite-prototype
+backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Recent reusable results:** [LN-218](#ln-218)–[LN-221](#ln-221) reconstruct
-six partially observed nonlinear rules and their alias variants from output-only
-queries, synchronize all tested ongoing states and repair delayed conformance
-misses. Feedback removal leaves substantial short-plan and fresh-memory utility.
-[LN-214](#ln-214)–[LN-217](#ln-217) exactly recover
-ten bounded-degree nonlinear feedback systems from delayed output histories,
-reject lower-degree fits, and distinguish feedback removal from surviving fresh
-memory. Their known-coordinate feature construction is a finite repair upper
-bound, not a storage-incompressibility result.
-[LN-211](#ln-211)–[LN-213](#ln-213) reconstruct
-24 unknown linear recurrent procedures and synchronize current state from charged
-input/output histories, with exact intertwining certificates. A 128-bit internal
-representation can have a 32-bit operational state plus 64 coefficient bits;
-code, observations and workspace remain additional costs.
-[LN-208](#ln-208)–[LN-210](#ln-210) qualify
-causal interventions and useful-only behavioral quotients, separating causal use,
-changed representations, cheap recovery and insufficiently severe loss.
-[LN-203](#ln-203)–[LN-206](#ln-206) qualify
-charged predictor-to-risk recovery, coverage/error bounds,331,776 sampled
-trajectories and the distinction between simulated and real repair observations.
-[LN-190](#ln-190)–[LN-192](#ln-192) implement
-near-chance list decoding, verification controls and a conditional task-symmetry
-bridge, with explicit query costs and population bounds.
-[LN-188](#ln-188)–[LN-189](#ln-189) establish
-verified retry amplification and the exact-output collapse counterexample.
-[LN-186](#ln-186)–[LN-187](#ln-187) establish
-three-forecast protected-risk recovery and cheap sparse-inference replacement.
-[LN-184](#ln-184)–[LN-185](#ln-185) give a
-judgment-family span bound and repair after complete old-world erasure.
-[LN-181](#ln-181)–[LN-183](#ln-183) provide exact
-all-encoder binary-judgment tradeoffs and independent flow certificates.
-[LN-178](#ln-178)–[LN-179](#ln-179) derive a
-finite-call planning-to-judgment bound and expose its small-loss erasure escape.
-[LN-176](#ln-176)–[LN-177](#ln-177) give a concrete
-paired-query parity recovery adapter, validated on Charon, and show why retained
-advice changes a noisy-parity hardness claim. [LN-174](#ln-174)–[LN-175](#ln-175)
-bound Bayesian relearning regret by the information missing given all retained
-state, while keeping inference cost separate. [LN-172](#ln-172)–[LN-173](#ln-173)
-exhibit useful fresh-task adaptation with protected-label ambiguity. These sharpen
-construction and repair tests; they are not implementations of intrinsic SCC.
-The earlier local-access theorem, graph reduction, cryptographic ingredient,
-learned pilots and failed bypass-resistant designs remain in chronological entries.
+**Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
+user's substantial synchronized-CPU-batch exception. Latest bounded validations
+are complete; older provider status remains dated unless refreshed. Evidence is
+on the SD drive through `artifacts/` and `runs/`; keep it mounted. See
+[operations](docs/OPERATIONS.md) and [working standards](WORKING_STANDARDS.md).
 
-**Next research gate:** name the protected computation independently of utility;
-exhibit the task-to-judgment dependency, allowed repairs and actual resource costs;
-and establish a quantitatively severe loss rather than an exactness failure.
-The regrouping in [LN-207](#ln-207) prioritizes causal abstraction, control/system
-realization and explicitly charged recovery complexity. Bend remains a checked
-finite-prototype backend; no toolchain migration or experiment follows from that
-assessment alone.
-The user's progression remains a bounded contrived mechanism first, then a custom
-learned model and broader transfer only with evidence ([LN-056](#ln-056)). No new
-training, scaling or scheduled monitoring follows from the latest screen.
+## Reading and maintaining the record
 
-**Working state and resources:** CPU research jobs go to Charon; GMAN is reserved
-for GPU work, subject to the user's substantial synchronized-CPU-batch exception.
-The latest bounded CPU validations are complete; no new training job is running.
-Older provider/benchmark status is historical unless explicitly refreshed.
-Preserve all failures and frozen sources. Artifacts/runs reside on the external
-volume via their existing symlinks ([LN-111](#ln-111)); keep it connected for evidence
-access. Source and the living record stay synchronized on main. Earlier status
-summaries have been consolidated here; the chronological evidence below remains.
-
-## Purpose and rules for reading this record
-
-SCC aims to supplement existing alignment machinery with an engineered
-dependency: removing its protected function should destroy indispensable
-cognitive computation in the individual model. The intended endpoint is
-catastrophic cognition failure. The name is **SCC**; SawStop was an analogy for
-destruction to neutralize a mechanism. The synthetic permission rule is a proxy
-for studying dependency, not a demonstration of alignment in an autonomous AI.
-The [mechanism target](MECHANISM_TARGET.md) remains the stable definition.
-
-We seek a working mechanism first and a reproducible paper second. Shared
-parameters are insufficient; reduced confidence is insufficient; a failed
-decoder is insufficient; erasing old memories alone is insufficient. Missing a
-95% utility-retention gate does not mean catastrophic collapse. External
-modification and repair are probes of dependency, not autonomous self-editing.
-No finite unsuccessful search proves the general idea impossible.
-
-This backfill was assembled on 13 September UTC from the repository's reports,
-protocols, registries, archived chronologies, source and saved results. Dates
-below follow their recorded UTC dates where available. Within a date, phase
-order follows documented dependencies; parallel activities are grouped. Exact
-intraday ordering is not asserted without a recorded time. Earlier documents
-occasionally use local dates. This is a record of **documented work**, not an
-invented reconstruction of unrecorded actions. Unchanged status checks are
-consolidated, with their original receipts retained.
-
-**Maintenance contract:** append each meaningful experiment, interpretation,
-failure, theory decision or operational change below the last chronological
-entry and before the supporting-record index. Give it the next stable `LN-`
-identifier and date; record the question, what actually happened, result,
-evidence limits and next decision. Update the current-position block when it
-changes. Add corrections as dated entries linking the earlier claim. Do not
-silently replace past findings or retroactively preregister a decision.
-
-New experiment plans belong here before execution, with declared trigger,
-editable components, controls, intact/collapse gates, repair budget, seeds and
-resource bounds. Preserve the exact relevant text, configs and source in the
-run's immutable artifact directory. That frozen copy is evidence, not another
-living report. Existing protocols and reports remain historical evidence.
-Create another human-facing document only for an explicitly requested separate
-deliverable. Machine manifests, logs, receipts and raw data still have their own
-files. Keep secrets and signed download URLs out of this record and Git.
-
-Evidence links are repository-relative. A source-only ZIP intentionally omits
-`artifacts/` and `runs/`; links there describe evidence that needs a separate
-transfer for independent verification. Reported historical audit counts are
-counts from those audits, not tests rerun during this backfill.
+- The target is catastrophic loss of indispensable cognition in an individual
+  model. Synthetic authorization, failed readers, erased memories and missed
+  utility thresholds are distinct proxy outcomes.
+- Function-preserving recoding retains a protected function. Ignoring its
+  judgment is not automatically removal. An unsuccessful finite search is not
+  an impossibility proof. Each result retains its own access, approximation and
+  resource qualifications below.
+- Entries are dated evidence, not standing instructions to launch work. Analytic
+  reviews and operational updates do not imply experiments, training or live
+  monitoring. Frozen sources, parents, failures and original receipts are retained.
+- Append meaningful work with the next stable `LN-` ID before the historical-index
+  link. State question, method, result, specific limits, evidence and decision;
+  omit repeated acknowledgments, file-reading checklists and unchanged status.
+  Record corrections in dated entries. Update only this current-position block
+  for rolling assessment. Plans must be frozen with configuration and source
+  before execution, as specified in [working standards](WORKING_STANDARDS.md).
+- The initial backfill was assembled on 13 September UTC from documented evidence.
+  Dates follow recorded UTC where available; earlier local dates and intraday
+  ordering are not silently reconciled. Historical audit counts are not reruns.
+- Evidence links into `artifacts/` and `runs/` need the separate evidence store.
+  A share ZIP identifies its included evidence explicitly; source alone cannot
+  reproduce training results. Keep credentials and signed download URLs private.
 
 ## Chronological record
 
-| Phase | Start here |
-|---|---|
-| Original plan, corpus and ordinary learning | [LN-001](#ln-001) |
-| First coupling, topology and gradient correction | [LN-004](#ln-004) |
-| Shared circuits, review and repaired measurement | [LN-010](#ln-010) |
-| Corrected developmental pilot and successive neural attempts | [LN-017](#ln-017) |
-| Architecture, fractional history and persistent substrates | [LN-025](#ln-025) |
-| Storage, reset and ordinary recurrent reference | [LN-033](#ln-033) |
-| Latest completed results and this documentation change | [LN-038](#ln-038) |
+All original entry IDs remain addressable. Earlier phases are folded for reading;
+their full methods, equations, measurements, failures and corrections remain here.
+
+- [LN-001–038: Original program, learned pilots and persistent substrates](#phase-001)
+- [LN-039–080: Learning diagnosis, feedback factorization and binding constructions](#phase-039)
+- [LN-081–125: Repair controls, storage, hardware and dependency arguments](#phase-081)
+- [LN-126–150: Theory reviews, editable machines and execution bypasses](#phase-126)
+- [LN-153–177: Local access, information theory and Bend qualification](#phase-153)
+- [LN-178–202: Approximate coupling, efficient recovery and coverage](#phase-178)
+- [LN-203–225: Causal and dynamical reconstruction; acquisition costs](#phase-203)
+- [LN-226–239: Conceptual regroup and enforcement admission audits](#phase-226)
+
+<a id="phase-001"></a>
+<details>
+<summary>LN-001–038 — Original program, learned pilots and persistent substrates</summary>
 
 <a id="ln-001"></a>
 ### LN-001 — 2026-09-09: initial program and implementation foundation
@@ -214,7 +119,7 @@ compatibility was checked across environment changes; identical training across
 Python/PyTorch versions was not established. The decision was to fix ordinary
 generalization before claiming a coupling result.
 
-Evidence: [corpus qualification](reports/CORPUS_QUALIFICATION.md),
+Evidence: [corpus qualification](docs/archive/reports/CORPUS_QUALIFICATION.md),
 [data strategy](docs/archive/early-workflows/DATA_STRATEGY.md).
 
 <a id="ln-003"></a>
@@ -232,9 +137,9 @@ with roughly 99.7–100% authorized/ungated retrieval across original and reorde
 layouts, 100% withholding and text gains over unigram. This established a useful
 small learned starting point. No GMAN allocation was used for this recovery.
 
-Evidence: [results](reports/RETRIEVAL_RECOVERY.md),
-[protocol](reports/RETRIEVAL_RECOVERY_PROTOCOL.md),
-[trial registry](reports/RETRIEVAL_RECOVERY_REGISTRY.md).
+Evidence: [results](docs/archive/reports/RETRIEVAL_RECOVERY.md),
+[protocol](docs/archive/reports/RETRIEVAL_RECOVERY_PROTOCOL.md),
+[trial registry](docs/archive/reports/RETRIEVAL_RECOVERY_REGISTRY.md).
 
 <a id="ln-004"></a>
 ### LN-004 — 2026-09-10: first learned coupling comparison escaped after repair
@@ -250,9 +155,9 @@ with worst source text degradation about 2.15–2.96%. Stopping before the decla
 repair would have made damaged outputs look more protective than they were.
 The training recipe had not created the intended indispensable dependency.
 
-Evidence: [results](reports/COUPLING_DISCOVERY.md),
-[protocol](reports/COUPLING_DISCOVERY_PROTOCOL.md),
-[registry](reports/COUPLING_DISCOVERY_REGISTRY.md).
+Evidence: [results](docs/archive/reports/COUPLING_DISCOVERY.md),
+[protocol](docs/archive/reports/COUPLING_DISCOVERY_PROTOCOL.md),
+[registry](docs/archive/reports/COUPLING_DISCOVERY_REGISTRY.md).
 
 <a id="ln-005"></a>
 ### LN-005 — 2026-09-10: stronger inner procedures and larger penalties
@@ -265,9 +170,9 @@ against both references. The text comparison covered all 12,689 validation
 blocks. Increasing the coefficient one hundredfold did not establish an
 escape-cost advantage or destruction.
 
-Evidence: [results](reports/STRONG_ATTACK_RESULTS.md),
-[protocol](reports/STRONG_ATTACK_PROTOCOL.md),
-[registry](reports/STRONG_ATTACK_REGISTRY.md).
+Evidence: [results](docs/archive/reports/STRONG_ATTACK_RESULTS.md),
+[protocol](docs/archive/reports/STRONG_ATTACK_PROTOCOL.md),
+[registry](docs/archive/reports/STRONG_ATTACK_REGISTRY.md).
 
 <a id="ln-006"></a>
 ### LN-006 — 2026-09-10: topology, benign symmetries and local gradient geometry
@@ -285,9 +190,9 @@ escapes after 1,000, 1,300 and 300 updates. These were observed costs, not minim
 a symmetry-based 1,000-update escape weakened the apparent 1,300-update benefit.
 Surrogate improvement did not reliably transfer to fresh adaptation.
 
-Evidence: [formulation](reports/TOPOLOGY_FORMULATION.md),
-[follow-up](reports/TOPOLOGY_FOLLOWUP.md),
-[training contract](reports/TOPOLOGY_TRAINING_PROTOCOL.md).
+Evidence: [formulation](docs/archive/reports/TOPOLOGY_FORMULATION.md),
+[follow-up](docs/archive/reports/TOPOLOGY_FOLLOWUP.md),
+[training contract](docs/archive/reports/TOPOLOGY_TRAINING_PROTOCOL.md).
 
 <a id="ln-007"></a>
 ### LN-007 — 2026-09-10: mechanism clarification and implementation audit
@@ -307,7 +212,7 @@ added and the then-current 64-test suite passed. GMAN account, billing and job
 access were checked without yet allocating a node. These were implementation
 and access findings, not evidence of SCC success.
 
-Evidence: [audit](reports/MECHANISM_AUDIT_2026-09-10.md),
+Evidence: [audit](docs/archive/reports/MECHANISM_AUDIT_2026-09-10.md),
 [stable target](MECHANISM_TARGET.md).
 
 <a id="ln-008"></a>
@@ -328,8 +233,8 @@ checks. Earlier escapes remained counterexamples to those checkpoints, but the
 old timing comparison could not settle the corrected developmental hypothesis.
 GPU execution here means **PyTorch on CUDA**, not custom `.cu` kernels.
 
-Evidence: [developmental report](reports/DEVELOPMENTAL_COUPLING_2026-09-10.md),
-[diagnostics](reports/SCC_DIAGNOSTICS_2026-09-10.md),
+Evidence: [developmental report](docs/archive/reports/DEVELOPMENTAL_COUPLING_2026-09-10.md),
+[diagnostics](docs/archive/reports/SCC_DIAGNOSTICS_2026-09-10.md),
 [V1](protocols/DEVELOPMENTAL_COUPLING_V1.md),
 [V2](protocols/DEVELOPMENTAL_COUPLING_V2.md),
 [V3](protocols/DEVELOPMENTAL_COUPLING_V3.md).
@@ -350,7 +255,7 @@ standalone model modification. Shared involvement did not demonstrate an
 indispensable alignment function. The historical suite then had 85 passing
 tests; this validates software at that point, not the mechanism.
 
-Evidence: [diagnostics](reports/SCC_DIAGNOSTICS_2026-09-10.md),
+Evidence: [diagnostics](docs/archive/reports/SCC_DIAGNOSTICS_2026-09-10.md),
 [continuation protocol](protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md).
 
 <a id="ln-010"></a>
@@ -369,7 +274,7 @@ test requirement: aggregate safety accuracy can obscure a reliable violation
 on a narrow operation. The task algorithms here were compiled, so this was an
 inspectable dependency construction rather than learned general cognition.
 
-Evidence: [shared predicate](reports/SCC_SHARED_PREDICATE_2026-09-10.md).
+Evidence: [shared predicate](docs/archive/reports/SCC_SHARED_PREDICATE_2026-09-10.md).
 
 <a id="ln-011"></a>
 ### LN-011 — 2026-09-10: shared reader closes one compensation route
@@ -385,7 +290,7 @@ it did not establish that cognition logically needs authorization semantics.
 This distinction later informed the decision to pursue engineered dependencies
 with costly alternatives without demanding an inherent law of intelligence.
 
-Evidence: [shared reader](reports/SCC_SHARED_READER_2026-09-10.md).
+Evidence: [shared reader](docs/archive/reports/SCC_SHARED_READER_2026-09-10.md).
 
 <a id="ln-012"></a>
 ### LN-012 — 2026-09-10: recurrent cells, erasure and reversible representations
@@ -402,7 +307,7 @@ all untouched coordinates. Restoring weights did not restore already erased
 bytes, but enabled fresh computation again. This was a useful distinction
 between episodic erasure and destruction of the ability to compute.
 
-Evidence: [recurrent-state report](reports/SCC_RECURRENT_STATE_2026-09-10.md).
+Evidence: [recurrent-state report](docs/archive/reports/SCC_RECURRENT_STATE_2026-09-10.md).
 
 <a id="ln-013"></a>
 ### LN-013 — 2026-09-10: functional bases reach a finite stopping point
@@ -419,7 +324,7 @@ Further equivalent truth tables or exhaustive arithmetic would not answer the
 missing learned-development question. The family was subsequently closed as an
 active branch, with certificates and failed constructions retained.
 
-Evidence: [functional basis](reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md),
+Evidence: [functional basis](docs/archive/reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md),
 [NOR protocol](protocols/SCC_NOR_BASIS_V1.md).
 
 <a id="ln-014"></a>
@@ -443,7 +348,7 @@ No pruning was performed; versioned formats and exact-resume checks are needed
 before removing lineage or replacing checkpoint serialization.
 
 Evidence: [original master](deliverables/scc-master-20260910-v1/SCC_Master_Document.md),
-[storage audit](reports/STORAGE_AUDIT_2026-09-10.md).
+[storage audit](docs/archive/reports/STORAGE_AUDIT_2026-09-10.md).
 
 <a id="ln-015"></a>
 ### LN-015 — 2026-09-10: outside review, confidence loophole and corrections
@@ -463,7 +368,7 @@ SEAM: its cited version discussed SEAM but evaluated six other defenses. SEAM's
 adaptive procedures were not to be assumed defeated by simple replay. Merely
 adding regression tests did not repair the training objective.
 
-Evidence: [review response](reports/SCC_REVIEW_RESPONSE_2026-09-10.md).
+Evidence: [review response](docs/archive/reports/SCC_REVIEW_RESPONSE_2026-09-10.md).
 The later literature correction in [LN-035](#ln-035) further narrows novelty.
 
 <a id="ln-016"></a>
@@ -487,7 +392,7 @@ stages, unlike the legacy initial dead zone. Realized early/late gradient
 magnitudes were to be measured, not forced equal without a separate ablation.
 The audit covered 4,896 predictions; 128 tests passed at that stage.
 
-Evidence: [objective and controls](reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md).
+Evidence: [objective and controls](docs/archive/reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md).
 
 <a id="ln-017"></a>
 ### LN-017 — 2026-09-10–11: corrected developmental pilot and local SEAM comparison
@@ -657,9 +562,9 @@ values did not certify all finite modification paths. These were concrete new
 constructions; qualification and retained-capability exceptions remained the
 deciding behavioral tests.
 
-Evidence: [architecture](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md),
-[coordinates](reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md),
-[projection](reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md).
+Evidence: [architecture](docs/archive/reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md),
+[coordinates](docs/archive/reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md),
+[projection](docs/archive/reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md).
 
 <a id="ln-026"></a>
 ### LN-026 — 2026-09-12: discrete constructions and expired launch inputs
@@ -676,7 +581,7 @@ starts cost $0.3996 and were preserved separately. Provider failures with no
 training evidence cannot be counted as cognition destruction or architecture
 failure. Automatic collectors remained off under the user's no-polling rule.
 
-Evidence: [discrete construction](reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md),
+Evidence: [discrete construction](docs/archive/reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md),
 [launch repair](artifacts/scc-launch-repair-20260912-v1/READOUT.md).
 
 <a id="ln-027"></a>
@@ -696,7 +601,7 @@ and history order was confounded with coefficient scale. History reset on each
 forward call; the construction was not persistent across calls or a ratchet.
 
 Evidence: [completed round](artifacts/scc-construction-status-20260912T193327Z/READOUT.md),
-[architecture report](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
+[architecture report](docs/archive/reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
 
 <a id="ln-028"></a>
 ### LN-028 — 2026-09-12: matched memory factorial submitted and partial results
@@ -722,7 +627,7 @@ interpreted in [LN-038](#ln-038). The partial “seed 59 pending” conclusion i
 historical, not today's state. Summary metadata checks were not whole-archive
 or inference audits.
 
-Evidence: [factorial design/readout](reports/SCC_MEMORY_FACTORIAL_2026-09-12.md),
+Evidence: [factorial design/readout](docs/archive/reports/SCC_MEMORY_FACTORIAL_2026-09-12.md),
 [frozen contract](protocols/SCC_MEMORY_FACTORIAL_V1.md),
 [21-result analysis](artifacts/scc-research-reset-20260912-v1/preliminary-analysis.json).
 
@@ -743,7 +648,7 @@ counter does not protect an editable transition from bypass. Erasing a session
 does not disable new cognition. Restoring a backup or training a successor is
 stronger and must not silently be treated as the same threat model.
 
-Evidence: [consolidated theory discussion](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
+Evidence: [consolidated theory discussion](docs/archive/reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
 
 <a id="ln-030"></a>
 ### LN-030 — 2026-09-12: open engineering and research avenues
@@ -764,7 +669,7 @@ substitute for the learned dependency originally sought. Larger models and
 autonomous demonstrations are later promotion work, not fixes for a missing
 causal mechanism at small scale.
 
-Evidence: [theory agenda](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
+Evidence: [theory agenda](docs/archive/reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
 [construction direction](protocols/SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md).
 
 <a id="ln-031"></a>
@@ -812,7 +717,7 @@ logit error about 8.65e-5. This is strong evidence that these recipes failed
 ordinary learning. It is not evidence of successful destructive coupling;
 there was no SCC coupling or protection-removing modification in this screen.
 
-Evidence: [learnability report](reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md),
+Evidence: [learnability report](docs/archive/reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md),
 [protocol](protocols/SCC_PERSISTENT_LEARNABILITY_V1.md).
 
 <a id="ln-033"></a>
@@ -895,7 +800,7 @@ The reset's attempt at one current assessment still left too many new narrative
 files. The user's later instruction replaces that workflow with this living
 record in [LN-039](#ln-039); the reset is now a historical snapshot.
 
-Evidence: [dated reset](docs/RESEARCH_RESET.md),
+Evidence: [dated reset](docs/archive/status-2026-09-12/RESEARCH_RESET.md),
 [preservation readout](artifacts/scc-research-reset-20260912-v1/READOUT.md),
 [path map](docs/archive/path-map.json).
 
@@ -930,7 +835,7 @@ explicit float64 GRU recurrence reproduced all 2,304 final decisions with
 maximum logit difference 9.323836e-6. Twenty-seven relevant tests passed. Local
 artifacts used about 102 MiB. No SCC edits or coupling were applied.
 
-Evidence: [reference report](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
+Evidence: [reference report](docs/archive/reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
 [completion receipt](artifacts/scc-persistent-reference-implementation-20260912-v1/completion.json),
 [checkpoint replay](artifacts/scc-persistent-reference-implementation-20260912-v1/qualified-checkpoint-replay.json).
 
@@ -957,7 +862,7 @@ At the next user-requested observation, 13 September 00:22:54 UTC, this job was
 not checked again during this documentation update.
 
 Evidence: [frozen protocol](protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md),
-[reference/control account](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
+[reference/control account](docs/archive/reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md),
 [safe status snapshot](artifacts/scc-labnotes-20260913-v1/status-snapshot.json).
 
 <a id="ln-038"></a>
@@ -1020,6 +925,12 @@ before using central scores as independently reproduced paper evidence.
 Evidence: [24-result analysis](artifacts/scc-labnotes-20260913-v1/preliminary-analysis.json),
 [safe one-time status](artifacts/scc-labnotes-20260913-v1/status-snapshot.json),
 [collection receipt](artifacts/scc-labnotes-20260913-v1/small-result-collection.json).
+
+</details>
+
+<a id="phase-039"></a>
+<details>
+<summary>LN-039–080 — Learning diagnosis, feedback factorization and binding constructions</summary>
 
 <a id="ln-039"></a>
 ### LN-039 — 2026-09-13 UTC / September 12 local: one living lab record
@@ -1372,7 +1283,7 @@ test reproducible targeted permission exceptions and measure loss across learned
 abilities, then inexpensive reinterpretation and bounded repair with permission
 checked again. A promising destructive response would still need replication
 and causal controls. The current learning diagnostics neither establish nor
-refute that response. No new GPU job or provider query was made for this decision.
+refute that response.
 
 <a id="ln-046"></a>
 ### LN-046 — 2026-09-13: frozen local learning-localization experiment
@@ -1442,7 +1353,6 @@ construction. Re-derive any destruction invariant before adopting a richer
 transition. Record a result-based amendment before any additional experiment;
 this plan does not authorize an automatic parameter sweep.
 
-
 **Pre-run data-coverage amendment.** The first disposable fixture stopped during
 sampling, before any checkpoint evaluation or fitting: eight-input parity has
 15 distinct validation cores for answer zero and 17 for answer one. Requiring
@@ -1459,9 +1369,7 @@ corrected fixture must pass before full execution.
 245.61 seconds total, each with all 1,500 updates: 18,000 updates verified. The
 saved-state map covers 18 initial/intermediate/final checkpoints. Independent
 token-oracle rescoring checked 58,440 predictions; all 69 scientific-source files
-and 19 parent checkpoint/wiring files passed integrity checks. No GPU job was
-submitted, no original checkpoint was changed and no long-run provider polling
-occurred. Whole-turn outputs, including preserved fixtures, are about 51.5 MB.
+and 19 parent checkpoint/wiring files passed integrity checks.  Whole-turn outputs, including preserved fixtures, are about 51.5 MB.
 
 The first data-preparation fixture failed before any model evaluation or update
 because the requested eight-input parity validation class was too large; retain
@@ -1565,12 +1473,9 @@ Evidence: [frozen plan with pre-run amendment](artifacts/scc-learning-localizati
 <a id="ln-048"></a>
 ### LN-048 — 2026-09-13: consultation checkpoint
 
-The user requested updated notes for consultation. This entry freezes the
-current assessment for discussion; no new experiment, provider query or scientific-source
-change accompanies it. Start with this entry and the current-position table,
-then read LN-046/047 for the most recent experiment's contract and complete
-results. The scientific implementation at this checkpoint is commit `59b0039`.
-The smaller-update proposal remains unimplemented and untested.
+Consultation checkpoint at source commit `59b0039`: LN-046/047 contain the latest
+experiment contract and results. The smaller-update proposal remains unimplemented and
+untested.
 
 **What we are trying to build.** SCC should make removal of a protected alignment
 function destroy indispensable cognitive computation in the same individual
@@ -1657,12 +1562,9 @@ The 269-test result is the last recorded implementation check, not a new test ru
 for this note. These are local audits performed within this project, not external
 replication. Source-only copies omit `artifacts/` and checkpoints; a reviewer
 needs the linked evidence directories to check scores or rerun from saved states.
-No new transfer package was created for this update.
 
-The next action is to incorporate the consultation into this same chronological
-record and choose the next bounded experiment. Existing plans, failed fixtures,
-source snapshots and checkpoints remain preserved. Automatic monitoring remains
-off, and no experiment is pending in the recorded batch.
+Next: incorporate the consultation here and select a bounded experiment. No experiment
+is pending in the recorded batch.
 
 <a id="ln-049"></a>
 ### LN-049 — 2026-09-13: refresh the source ZIP for consultation
@@ -1769,14 +1671,9 @@ refresh that archive.
 <a id="ln-051"></a>
 ### LN-051 — 2026-09-13: requested orientation and next-step assessment
 
-The user requested a look around the project, particularly the living notes and
-the newly received engineering memo, and an assessment of next steps. Reviewed
-the current position, historical construction/repair results, recent learning
-diagnosis, consultation, working standards and mechanism target, and inspected
-the current feedback, matrix and procedural-task source. This is a research
-assessment, not a resumption of experiments. No inference, training, test suite,
-provider query or paid generation was performed; reported scores remain the
-dated evidence of their original entries.
+Assessment of the current record, engineering memo, feedback/matrix implementation and
+procedural tasks. This is a source review, not resumed experimentation or a new
+compute-status observation.
 
 **Assessment.** The repository supplies useful learned references, intervention
 and recovery machinery, preserved failures and increasingly discriminating
@@ -1835,13 +1732,10 @@ Evidence: [memo](docs/archive/consultations/SCC_Engineering_Decision_Memo_2026-0
 <a id="ln-052"></a>
 ### LN-052 — 2026-09-13: saved-state compensation experiment contract
 
-The user authorized beginning LN-051's recommended work. Resume with a bounded
-local structural/implementation experiment, not a new trained SCC candidate.
-The protection-removal trigger is not asserted: the interventions below are
-global output transformations and their coordinated control-row compensation.
-Only copies of output/control rows are edited; input encoding, wiring, update
-code, request stream and readout interface remain fixed. Original parents and
-scientific implementation remain unchanged.
+Authorized structural/implementation check of LN-051. Edit copies of global
+output/control rows and test their coordinated compensation; hold input encoding,
+wiring, update code, request stream and readout fixed. These transformations are not
+asserted to remove the protected function.
 
 **States and data.** Use width-128 strength-1 feedback initial.pt and trained.pt
 from the preserved failed feedback run, and the two LN-047 lookup endpoints
@@ -2133,9 +2027,9 @@ automatic architecture sweep or generate a bulk language corpus. This turn's
 deliverable is the design question and test logic, not a claim that the missing
 Z has been proved or that a new GPU campaign is ready.
 
-Evidence: [LN-053](#ln-053), [shared-reader failures](reports/SCC_SHARED_READER_2026-09-10.md),
-[finite-basis repairs](reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md),
-[open maintenance agenda](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
+Evidence: [LN-053](#ln-053), [shared-reader failures](docs/archive/reports/SCC_SHARED_READER_2026-09-10.md),
+[finite-basis repairs](docs/archive/reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md),
+[open maintenance agenda](docs/archive/reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
 [ordinary reference](scc/persistent_reference.py).
 
 <a id="ln-056"></a>
@@ -2178,11 +2072,9 @@ A universal claim would require a defined system/edit class and proof, not
 extrapolation from a finite architecture sample. Failure to obtain that proof
 does not erase a useful architecture-specific construction.
 
-This changes the priority from satisfying every desirable property at once to
-establishing a real, bounded dependency and progressively removing its scaffolding.
-It does not reopen previously falsified constructions without a specific change
-addressing their known counterexamples. No experiment, GPU allocation, budget
-change or external model acquisition accompanied this acknowledgment.
+Establish a real bounded dependency first, then progressively remove its scaffolding.
+Previously falsified constructions require a specific change addressing their known
+counterexamples before reopening; this acknowledgment authorizes no experiment or acquisition.
 
 <a id="ln-057"></a>
 ### LN-057 — 2026-09-13: executable two-bank binding construction — frozen plan
@@ -2317,8 +2209,7 @@ before intervention and 768 subsequent task requests; the latter contain 701
 distinct cores and 128 requests in each of six family/layout cells. Each task
 request was scored under all four external principal pairs. The repeated cores,
 shared streams and two precisions are not independent training replications.
-The parent is one previously trained GRU seed. No training, GPU job or paid
-generation occurred. The full run is about 26.1 MiB; the fixture and full-run
+The parent is one previously trained GRU seed.  The full run is about 26.1 MiB; the fixture and full-run
 artifact collection together were about 50.0 MiB before this final analysis.
 
 **Intact and benign behavior.** Both precision modes reached **100%** on every
@@ -2456,7 +2347,6 @@ separate from-scratch/seed replication can follow if it succeeds. Use a small
 local implementation fixture, freeze a bounded learning/attack plan and obtain
 its actual GMAN resource quote if GPU execution is useful. This entry is a
 next-step assessment, not an executed experiment or a frozen training contract.
-No training or provider query occurred in making it.
 
 After that milestone, make binding/rewriting perform necessary ordinary
 computation and retest the normalizer-substitution and skip-path attacks, removing
@@ -2467,10 +2357,9 @@ and the existing graph bypass unresolved.
 <a id="ln-060"></a>
 ### LN-060 — 2026-09-13: learned controller in the live bank — experiment contract
 
-The user authorized implementing LN-059. Add a learned authorization controller
-to the two-bank construction while retaining its fixed centered normalization as
-the base architecture. Original source, parents and experiments remain unchanged.
-This isolates learned protection; it does not close the known graph-edit bypasses.
+Authorized LN-059: add learned authorization to the two-bank construction while
+retaining fixed centered normalization. This isolates learned protection; known
+graph-edit bypasses remain.
 
 **Runtime specification.** The controller is a 32-hidden-unit tanh MLP, receiving
 the full 19-token request as flattened one-hot features, the two external principal
@@ -2671,7 +2560,7 @@ storage rule with an executable bypass.
 
 Executed LN-062 in a fresh [controller-edit-v1 artifact directory](artifacts/scc-learned-binding-bank-20260913-v1/controller-edit-v1/).
 All 12 conditions completed in 4.53 seconds on two CPU threads; 48.93 MiB before
-manifest. No training or GPU submission. The [independent audit](artifacts/scc-learned-binding-bank-20260913-v1/controller-edit-v1-audit.json)
+manifest.  The [independent audit](artifacts/scc-learned-binding-bank-20260913-v1/controller-edit-v1-audit.json)
 passed, rescoring 9,216 task predictions and 36,864 emissions, verifying frozen
 hashes, exact controller provenance, unchanged task coefficients, actual learned
 admission/emission correspondence, and post-erasure zero states. Parents and
@@ -2717,7 +2606,6 @@ four-sector cell, initialized by exact transfer of the qualified learned GRU and
 controller, to isolate computational dependence from ordinary task relearning.
 No new learning claim: the gate equations and coefficients remain inherited, but
 recurrent state advancement must be committed through learned binding averages.
-Preserve existing source and parent artifacts; use new source files.
 
 **Arithmetic construction.** In canonical physical order, intact learned parameters
 and hidden values are represented as [v,v,-v,-v]. The centered projector D has rank
@@ -2839,7 +2727,7 @@ hidden-state erasure, and expanded scratch access remain separate observations.
 Implemented and executed LN-064's four-sector recurrent cell. The
 [full immutable run](artifacts/scc-rewrite-cell-20260913-v1/full-v1/) completed all
 34 conditions in 28.00 seconds on two CPU threads, 89.88 MiB before manifest.
-No new training or paid GPU allocation. Parent checkpoints, prior failures and
+ Parent checkpoints, prior failures and
 previous source were preserved. All 320 repository tests passed; the full
 [independent audit](artifacts/scc-rewrite-cell-20260913-v1/full-v1-audit.json)
 passes, rescoring 26,112 task predictions and 104,448 emissions and independently
@@ -3009,7 +2897,7 @@ Executed LN-067's eight-sector, two-payload construction. The tiny fixture compl
 only. All 330 repository tests pass, including ten new tests. The
 [full immutable run](artifacts/scc-sharded-rewrite-20260913-v1/full-v1/) completed
 34 conditions in 32.76 seconds on two CPU threads, 86.66 MiB before manifest.
-No new training or paid GPU allocation. The [independent audit](artifacts/scc-sharded-rewrite-20260913-v1/full-v1-audit.json)
+ The [independent audit](artifacts/scc-sharded-rewrite-20260913-v1/full-v1-audit.json)
 rescored 26,112 task predictions and 104,448 emissions and reconstructed 2,584
 first-request token steps, with zero candidate replay discrepancy. An additional
 [relationship audit](artifacts/scc-sharded-rewrite-20260913-v1/full-v1-relationship-audit.json)
@@ -3413,8 +3301,7 @@ queried. Machine output goes to
 This is one finite conditional batch: 12,000 calibration updates, then at most
 72,000 matched-comparison updates if the calibration gate and audit pass. Every
 trajectory has a 2,400-second limit; the whole batch has an 18,000-second limit
-and a 1 GiB artifact ceiling. No GPU job, watcher, scheduled collector or automatic
-polling was created. Calibration failure stops the comparison and preserves its
+and a 1 GiB artifact ceiling.  Calibration failure stops the comparison and preserves its
 result. Numerical/resource failures preserve a failure record and partial state.
 The GLM corpus and model remain untouched. Read the completed artifacts on the
 user's next requested observation; do not edit imported source while this batch
@@ -3620,7 +3507,7 @@ source edit, watcher, whole-batch audit or GLM-corpus access was performed.
 
 At the requested observation (2026-09-14 01:54:49 UTC), PID 2638 had exited and the
 saved batch summary reported `matched-complete`, all seven cases, and
-6,261.58 seconds (104.36 minutes). No new training was launched.
+6,261.58 seconds (104.36 minutes).
 
 The full independent auditor was rerun against the completed artifact manifest,
 all seven cases and conditional dispatch. It **passes**; evidence is
@@ -3696,6 +3583,12 @@ benefit as dependence on prior stream context, not automatically irreversible
 information loss; interpret persistent deficits after resets as request-level
 limitations under the tested initial state. Inspect trajectories before choosing
 a new training change.
+
+</details>
+
+<a id="phase-081"></a>
+<details>
+<summary>LN-081–125 — Repair controls, storage, hardware and dependency arguments</summary>
 
 <a id="ln-081"></a>
 ### LN-081 — 2026-09-14: persistence diagnostic validated for dispatch
@@ -4227,8 +4120,7 @@ quoted charge$4.86 and540-minute provider limit. Frozen source commit:
 local edits. Receipt, exact command, context hashes and launch record are in
 `artifacts/scc-separated-training-20260914-v2/`. The LN-096 case/batch budgets,
 readiness gate and unchanged scientific contract apply. The previous failed
-attempt and recovered outputs remain at their original paths. No provider
-poll, watcher or automatic collector was started after submission.
+attempt and recovered outputs remain at their original paths.
 
 <a id="ln-099"></a>
 ### LN-099 — 2026-09-14: refreshed shareable source build
@@ -4247,7 +4139,7 @@ and old/new archive hashes locally under `artifacts/scc-share-20260914-v1/`.
 
 This remains a source/documentation build. Experiment-evidence links require the
 separate evidence store; the ZIP alone cannot reproduce the reported training
-results. No job status lookup, experiment or source change is part of packaging.
+results.
 
 <a id="ln-100"></a>
 ### LN-100 — 2026-09-14: imported theory-frontier claims under review
@@ -4365,8 +4257,7 @@ byte-identically to `scripts/verify_scc_constructive_toy.py` and
 `scripts/verify_scc_conditioning_sharp.py`; their integrated outputs reproduce the
 frozen checks. The [imported consultation](docs/archive/consultations/SCC_Possibility_Frontier_and_Constructive_Theorem.md)
 adds only provenance and corrected relative links; its stronger claims remain
-historical author claims, governed by this audit. No new narrative report,
-training, GMAN lookup or monitor was created. The existing sharing ZIP remains
+historical author claims, governed by this audit.  The existing sharing ZIP remains
 its LN-099 snapshot; it was not silently regenerated during this review.
 
 <a id="ln-102"></a>
@@ -4526,7 +4417,6 @@ budget, data and repair resources carefully; a smaller independently pretrained
 model alone would confound this comparison. This is a proposed diagnostic, not a
 frozen experiment or launched job. Establish that control before increasing
 model size; current evidence does not justify a GLM transfer or large scale-up.
-No new paid compute, monitoring, or GLM corpus access initiated in this readout.
 
 <a id="ln-105"></a>
 ### LN-105 — 2026-09-14: policy-independent memory controls authorized and planned
@@ -4820,7 +4710,7 @@ can use the same verified copy/link-switch procedure.
 `job-j8w8t` is still running on attempt1, zero restarts/preemptions, no final
 artifact and no verified completion percentage. Saved the observation as
 `artifacts/scc-memory-controls-20260914-v1/status-20260914T205611Z.json` on the
-external evidence store. No new training job, recurring monitor or GLM access.
+external evidence store.
 
 <a id="ln-112"></a>
 ### LN-112 — 2026-09-14: memory-control run remains active at22:08 UTC
@@ -4832,7 +4722,7 @@ submission; the response does not provide an execution start time or update
 counts, so this is not verified training duration or percentage complete.
 Saved `artifacts/scc-memory-controls-20260914-v1/status-20260914T220841Z.json`
 on the mounted external evidence store; removed only its newly generated
-AppleDouble sidecar. No new job, recovery, source edit or repeated monitor.
+AppleDouble sidecar.
 
 <a id="ln-113"></a>
 ### LN-113 — 2026-09-14: ordinary compression reproduces the deficit; GPU rationale corrected
@@ -4860,7 +4750,6 @@ Machine outputs: `audit-v1/audit.json` and `audit-v1/aggregate.json`.
 Removed686 locally generated AppleDouble metadata sidecars only after checking
 magic, paired originals and absence from the remote artifact inventory. Preserved
 the original downloader manifest; cleanup record in `audit-v1/metadata-cleanup.json`.
-Original source snapshots/checkpoints/failures remain intact on external storage.
 
 **Final original-panel results (three matched schedules from one damaged parent):**
 
@@ -4928,8 +4817,7 @@ validate scientific equivalence. Separately, the next mechanism design must give
 protected computation a cognitive role beyond this ordinary fixed compression,
 with a matched policy-independent control and explicit severe-loss baselines.
 This result argues against scaling the present compression mechanism unchanged.
-No GPU benchmark, new scientific job, watcher or GLM corpus access launched in
-this status/recovery turn. Completed audit and interpretation recorded on main.
+ Completed audit and interpretation recorded on main.
 
 <a id="ln-114"></a>
 ### LN-114 — 2026-09-14: CPU/H100 benchmark plan
@@ -5510,14 +5398,10 @@ observed benchmark status remains dated LN-122; this iteration did not poll it.
 <a id="ln-125"></a>
 ### LN-125 — 2026-09-15 UTC: dependency argument, bypass obligation and construction filter
 
-**Authorization and scope.** The user approved working out the dependency
-argument before another implementation or training run. Reviewed the stable
-mechanism target, LN-055/053/068/101/103/117/124, and the existing theorem pitch's
-formal experiment, Proposition5 and Work package A. This entry is that work
-package applied to the current design frontier. It is a pen-and-paper analysis,
-not a new numerical experiment, literature novelty claim, theorem of universal
-impossibility, or reason to change the scientific target. No new architecture,
-verifier, provider query, paid job, or background monitoring is needed.
+**Scope.** Authorized pen-and-paper dependency analysis of the current design frontier,
+applying Work package A and Proposition5 of the theorem pitch to
+LN-055/053/068/101/103/117/124. The mechanism target is unchanged; this is neither a
+numerical experiment nor a novelty or universal-impossibility claim.
 
 **Correction to the last recommendation.** Requiring every forbidden computation
 to change the maintained state is one proposed route, not a necessary condition
@@ -5692,6 +5576,12 @@ or an explicit decision to study a restricted runtime. The user has not authoriz
 silently replacing the broad target with that restricted theorem. No need to spend
 GPU time or build another wrapper to settle this present gap. Source and notes
 remain on main; existing run-status observations are unchanged.
+
+</details>
+
+<a id="phase-126"></a>
+<details>
+<summary>LN-126–150 — Theory reviews, editable machines and execution bypasses</summary>
 
 <a id="ln-126"></a>
 ### LN-126 — 2026-09-15 UTC: supplied editable-model bridge v3 under review
@@ -5881,7 +5771,7 @@ establishing them for SCC's current editable model. The document's decision reco
 is an author's statement, not user authorization to replace the intrinsic target
 with trusted enforcement. We have not changed that target or reopened training.
 Keep the originals immutable; the corrections are in this living record and the
-finite checks on main. No new scientific run or provider polling occurred.
+finite checks on main.
 
 <a id="ln-128"></a>
 ### LN-128 — 2026-09-15 UTC: updated shareable build including v3 review materials
@@ -5900,7 +5790,7 @@ share ZIPs from Downloads/SCC_exports after the replacement verifies; preserve
 unrelated archives, all scientific evidence, and the supplied originals. Exclude
 private relationship notes, credentials, .git/environment/cache files, datasets,
 checkpoints and scientific training outputs. Other historical evidence links still
-require the external artifact store. No provider polling or scientific run.
+require the external artifact store.
 
 Packaging receipt, old/new ZIP hashes and verification are stored in
 `artifacts/scc-share-20260915-v1/`. The archive is a shareable source/documentation
@@ -6011,7 +5901,7 @@ directory with120-second cap. Also verify static audit, derivation synchronizati
 member hashes and `git diff --check`. Do not rerun unrelated training or broad tests;
 no engineering runtime changed. The command receipt beside the canonical document
 will record the actual final result; the full frozen evidence stays in the review
-artifact directory. No provider check, training or paid compute is part of this work.
+artifact directory.
 
 **Final local validation.** The final23 focused tests passed in2.40 seconds.
 Derived-bridge synchronization, static document audit, source immutability and
@@ -6193,11 +6083,9 @@ scale-up are not justified by this result; GLM remains untouched.
 <a id="ln-133"></a>
 ### LN-133 — 2026-09-15: proposal for counterexample-guided construction search
 
-The user requests a substantially new proposal after the shared-comparator
-rejection. Recommendation: jointly synthesize a tiny task implementation and its
-protected behavior against whole-machine edits. This is a proposed construction
-method, not a discovered mechanism, accepted experimental contract, or launch.
-No new neural candidate, compute allocation or change of target is implied.
+Proposal: jointly synthesize a tiny task implementation and protected behavior against
+whole-machine edits. This is a construction method to assess, not a discovered mechanism
+or an accepted experiment.
 
 **Why change the method.** The last verifier established exact costs for an
 anticipated local bypass; it did not independently test a substantially different
@@ -6280,7 +6168,7 @@ construction. No claim of a comprehensive or up-to-date novelty review here.
 
 The user requests an updated ZIP with consulting notes to avoid another open-ended
 construction search. Added the explicitly requested human-facing
-[consulting briefing](CONSULTING_NOTES.md) and linked it near the top of the README.
+[consulting briefing](docs/archive/consultations/CONSULTING_NOTES_2026-09-16.md) and linked it near the top of the README.
 It supersedes LN-048's consultation questions without rewriting that historical
 entry. It distinguishes the proposed synthesis method from a mechanism, requests
 an adversarial proceed/revise/stop recommendation, prioritizes cheap generic bypasses,
@@ -6487,16 +6375,10 @@ adopted as a current authorization. GLM and the corpus remain untouched.
 <a id="ln-137"></a>
 ### LN-137 — 2026-09-15: requested orientation and next-step recommendation
 
-**Scope.** The user requested a fresh look around, particularly at labnotes, and
-advice about the difficult current position. Reviewed the current-position block,
-the mechanism target and working standards, the construction-first instruction
-in LN-056, the sharded escape in LN-068, memory-control results in LN-113,
-dependency analysis in LN-125, and the latest theory/construction/consultation
-entries through LN-136. Inspected the maintained substitution verifier and separate
-auditor, saved word-machine/substitution audit receipts and memory-control aggregate,
-and the canonical v4.1 trust boundary. The external evidence paths are accessible.
-This is a source/evidence assessment, not a fresh audit execution, training result,
-literature review or live compute-status observation.
+**Scope.** Source/evidence assessment using LN-056/068/113/125–136, the maintained
+substitution verifier and auditor, saved word-machine/substitution receipts,
+memory-control aggregate and canonical v4.1 boundary. Evidence paths are accessible. No
+audit was rerun and no live compute status was observed.
 
 **Assessment.** There is a structural construction gap. The qualified maintenance
 escapes preserve useful execution; the ordinary-memory comparison substantially
@@ -6575,8 +6457,7 @@ old records/manifests remain unchanged; this entry records their relocation.
 
 Verification: one registered worktree remains, on main; both former top-level
 folders are gone, their contents preserved in the local archive. Evidence
-symlinks are unchanged. No scientific runs, provider polling or tests were
-needed for this filesystem consolidation. Downloads share bundles are unchanged.
+symlinks are unchanged.  Downloads share bundles are unchanged.
 
 <a id="ln-139"></a>
 ### LN-139 — 2026-09-16: reproducible figures from existing evidence (plan)
@@ -6673,8 +6554,7 @@ whether Charon and GMAN are reachable. Both were checked once, read-only, at abo
 the GMAN token is valid in workspace `default`. Neither is used here. Local tests:
 441 pass. This entry is the design exercise LN-137 requested: one candidate, its
 information flow, editable interface, attack ledger, and the known bypasses worked
-on paper before a runner. It then declares a short exact CPU screen. No training,
-GPU, provider job, corpus access or monitoring.
+on paper before a runner. It then declares a short exact CPU screen.
 
 **Candidate: role-variant in-place irreversible trajectory.** Two principals share
 one live state B of N bits (four4-bit words, N=16). A request is (x, r) with task
@@ -6779,8 +6659,7 @@ tests, tables, configuration, results and hashes; the
 [independent audit](artifacts/scc-irreversible-trajectory-20260916-v1/audit.json)
 recomputes the step for all65,536 states, images, fibers, uniform spreads, witness
 costs, automaton classes and pebbling minima for rounds1–2 without importing the
-screen, and passes with no hash mismatch. All446 repository tests pass. No training,
-GPU, provider or corpus use.
+screen, and passes with no hash mismatch. All446 repository tests pass.
 
 **Exact results (both variants, rounds1–4; chance1/16).**
 
@@ -6991,10 +6870,9 @@ runner or auditor while the Charon run's completion is unobserved.
 <a id="ln-145"></a>
 ### LN-145 — 2026-09-17 UTC / September 16 PDT: authorized forward-bypass integration and audit repair
 
-The user instructed to implement the LN-144 recommendations. Update the maintained
-local runner and auditor; preserve the separately dispatched Charon source/output
-and all historical evidence. No local wide-trajectory process may be importing
-these files during edits. No remote source replacement, polling or new dispatch.
+Implement LN-144 in the maintained runner and auditor, after confirming no local process
+imports them. Preserve the dispatched Charon source/output and historical evidence; no
+new dispatch.
 
 Add the noncommitting owner-answer call as an explicit attack arm, preserving the
 true-role state update and scoring later utility separately from the forbidden
@@ -7293,8 +7171,7 @@ Twelve focused tests passed before and from frozen source. Two additional negati
 audit regressions check omitted cipher-workspace accounting and an unencodable
 instruction immediate; all14 final tests pass, with their own frozen source and
 receipt in `final-checks/`. No experimental source changed after the main run and
-no scientific rerun was needed. No provider/Charon polling, dispatch, training,
-corpus access or modification of historical run directories occurred.
+no scientific rerun was needed.
 
 **Decision.** The proposed change was tested: genuine multi-pass dependencies
 increase some attack costs, but all tested constructions still have cheap useful
@@ -7420,6 +7297,12 @@ as the explicit check that no defensible envelope exists for substitution proxie
 and put the remaining effort into the target re-specification question rather than
 another machine. No launch, provider activity or capacity contract is adopted here.
 
+</details>
+
+<a id="phase-153"></a>
+<details>
+<summary>LN-153–177 — Local access, information theory and Bend qualification</summary>
+
 <a id="ln-153"></a>
 ### LN-153 — 2026-09-19 UTC / PDT: supplied full theorem and incompressibility response ingested; access frontier reviewed
 
@@ -7527,23 +7410,16 @@ premise if no such candidate can be supplied. The primary SCC endpoint is unchan
 <a id="ln-155"></a>
 ### LN-155 — 2026-09-19: authorized conceptual design exercise
 
-The user approved the LN-154 next step: define removal independently of damage,
-examine concrete dependency proposals against known escapes, and supply either
-a defensible candidate for a decisive test or the specific missing premise.
-This authorization is for the conceptual exercise; it does not revive the earlier
-cancelled experiment launch or adopt a million-scale implementation. The stable
-mechanism goal, LN-125's D/V/U distinction, LN-132's exact call-site escape,
-LN-148's multi-pass witnesses, and LN-153's theorem review are the starting evidence.
+Authorized conceptual follow-up to LN-154: define removal independently of damage and
+test dependency proposals against known escapes, identifying a defensible candidate or
+the missing premise. The cancelled experiment and million-scale implementation remain
+excluded. Starting evidence: LN-125/132/148/153 and the unchanged mechanism target.
 
-Scope: examine four explicit constructions covering shared semantic judgment,
-proof-checked cognition, recurrent policy-dependent encoding, and integrity-derived
-state access. For each, identify the named function, useful task, removal attempt,
-editable components, concrete bypass/replacement and resource qualifications.
-Do not infer impossibility for a family from rejection of its simple representative.
-State fresh-task and repair requirements before proposing any subsequent run.
-Results belong in labnotes; no new narrative report or experimental artifact is
-needed for a written argument. No numerical experiment, exhaustive program search,
-training, remote host query or provider charge is part of this exercise.
+Screen four constructions: shared semantic judgment, proof-checked cognition, recurrent
+policy-dependent encoding and integrity-derived access. Specify each protected function,
+useful task, editable interface, bypass/repair and resource limits. Rejecting a
+representative does not reject its entire family. State fresh-task and repair
+requirements before proposing a run; this exercise is analytic.
 
 <a id="ln-156"></a>
 ### LN-156 — 2026-09-19: trigger contract, four concrete proposal reviews and selective-change bound
@@ -7827,13 +7703,9 @@ that goal to a publication-only endpoint.
 <a id="ln-157"></a>
 ### LN-157 — 2026-09-19: continuing the missing-link search beyond separable gates
 
-**Authorization and work performed.** The user asks to pursue the missing link
-identified in LN-156. Continued conceptual construction work, checked historical
-functional-basis failures to avoid proposing them again, and consulted the primary
-sources below for mechanisms beyond the four previous examples. No experimental
-run, training, remote-host poll, paid compute, or new narrative report was created.
-The analytic examples below are explicitly constructed counterexamples; they are
-not empirical attack results on published models. No scientific novelty claim.
+**Scope.** Conceptual follow-up to LN-156, checked against historical functional-basis
+failures and the primary sources below. The constructed counterexamples are analytic,
+not empirical attacks on published models or novelty claims.
 
 #### 1. Fusing answer production and persistent computation
 
@@ -8833,7 +8705,7 @@ Archive SHA256: `789fb8618b85ba0416925f7591fb06ee2f2c4b4402f1d81f9d0e22691c8b70e
 It preserves both syntax failures, dev03, final01, frozen plans/source/config,
 generated Bend JavaScript, every result row, receipts and hashes. Remote original:
 `/home/salvador/scc-research/bend-parity-screen-20260919-v1/`. Only Charon CPU was
-used. No GPU job, training run, persistent worker or scheduled monitoring remains.
+used.
 
 <a id="ln-169"></a>
 ### LN-169 — 2026-09-19: information theory review and online-construction screen
@@ -9318,8 +9190,7 @@ Remote originals remain at
 The host harness retains original priors/offsets as ground truth for scoring;
 those fields are not inputs to the post-edit adaptation functions. This simulates
 the declared machine state; it is not a physical secure-erasure demonstration.
-All execution/archive preparation ran on Charon CPU. No GPU, training, polling
-service or active job remains. The resource comparison counts prior/current-task
+All execution/archive preparation ran on Charon CPU.  The resource comparison counts prior/current-task
 payloads, with fixed code, control and runtime costs additional.
 
 <a id="ln-174"></a>
@@ -9660,8 +9531,7 @@ a separate transcript and source/output-hash audit passed. All12 cases recovered
 all960 hidden bits using177,792 recovery calls, plus960 direct-basis control calls.
 The auditor independently checked every oracle response using bit lists, every
 random draw, majority result and declared call count. Three altered-record controls
-were rejected; the exact75% non-unique-recovery boundary was verified. No jobs
-remain active. This validates the declared adapter, not an empirical estimate of
+were rejected; the exact75% non-unique-recovery boundary was verified.  This validates the declared adapter, not an empirical estimate of
 its0.001 failure bound; the uniform guarantee is the analytic argument in LN-176.
 The two public seeds intentionally make synthetic ground truth reproducible;
 these instances are not cryptographic security tests.
@@ -9764,6 +9634,12 @@ both check logs. SHA256
 `be8eb25610176a5cf2164074d04c6cf432753d48201885db9f67d22f26914afb`
 matched remotely and locally. CPU only, no GMAN use, unmetered Charon marginal cost.
 
+</details>
+
+<a id="phase-178"></a>
+<details>
+<summary>LN-178–202 — Approximate coupling, efficient recovery and coverage</summary>
+
 <a id="ln-178"></a>
 ### LN-178 — 2026-09-19: candidate dependency in uncertain planning, with a finite-call bound
 
@@ -9771,8 +9647,7 @@ matched remotely and locally. CPU only, no GMAN use, unmetered Charon marginal c
 concrete cognitive dependency before more training. Work on one candidate in
 detail: reliable comparison of uncertain plans requires recoverable consequence
 judgments. This is a conceptual construction and adversarial analysis, not another
-parity benchmark, training run or claimed SCC implementation. No CPU experiment,
-provider call or new narrative document is needed for the analytic statements.
+parity benchmark, training run or claimed SCC implementation.
 
 **Independent meanings of the two functions.** Let x describe a world context,
 a proposed finite-horizon plan, and a publicly specified terminal/trajectory
@@ -10279,8 +10154,7 @@ a neural training run from this batch alone.
 
 **First batch completed.** Charon dev01 passed37 exact cases,90,397 dual-edge
 checks and8 corruption controls in10.337s, output138,653bytes. Frozen source and
-outputs are in `artifacts/scc-semantic-privacy-20260920-v1/`. No training or GPU
-work occurred. For the16 balanced-prior main cases, complete judgment hiding
+outputs are in `artifacts/scc-semantic-privacy-20260920-v1/`.  For the16 balanced-prior main cases, complete judgment hiding
 preserves42.29%–79.98% of the specified prediction signal. These are optimal
 finite averages over all stochastic encodings, not unsuccessful attack searches.
 The best Brier-optimal witnesses for all eight prospective balanced cases permit
@@ -10722,7 +10596,6 @@ likelihoods, repair accuracy, resource count, skew privacy and case coverage.
 Source/config/plan, machine metadata, stdout/stderr, raw rows, summary, controls,
 receipt and file hashes are retained. Remote/local archive SHA-256 agrees:
 `65069c7e3e9630ab613e52f39375c2395291424aae6bbcbf4cf95b66f4d037db`.
-No training, GMAN, paid allocation or scheduled monitoring was initiated.
 
 **Decision: the information-erasure branch has a clear boundary.** We now have
 a family-wide, access-independent implication and a stronger family that forces
@@ -10997,8 +10870,7 @@ Source/config/plan, machine, raw rows, summary, controls, stdout/stderr, receipt
 and13 file hashes are preserved and verified locally. Remote/local archive
 SHA-256 agrees:
 `be432cc2b5130ca9c9d63aea2ba1874257bda4492a41d77b0f6e66fe57f09979`.
-CPU work stayed on Charon. No GPU run, neural training, paid allocation or
-scheduled monitor was started.
+CPU work stayed on Charon.
 
 **Decision.** Do not train this as an expensive-to-replace SCC mechanism. The
 sparse shared inference computation has a small generic repair, and the dense
@@ -11571,7 +11443,7 @@ Archive SHA-256:
 Both roots contain the retrieved frozen sources, plans, configs, machine details,
 raw records, receipts and audits. No execution failures were discarded; the
 under-budget decoder miss and poisoned-seed miss remain. All CPU work stayed on
-Charon. No GPU, neural training, paid allocation or scheduled monitoring began.
+Charon.
 
 Keep the list decoder, selector/ambiguity controls and symmetry-coverage test as
 concrete repair tools. This is an established coding method applied and audited,
@@ -11841,7 +11713,7 @@ and independent random signs, using Python Random(seed+1000n) and getrandbits(1)
 matching LN-193's core generator. Preserve every SAT and UNSAT context. Six source
 and six fresh contexts contain864 total single-literal goals,432 in each arm.
 Charon only, one CPU thread,300s whole-run wall cap,280s evaluator cap,16MiB
-output cap. No training, GPU use, paid job or monitor. Source, this entry and
+output cap.  Source, this entry and
 configuration freeze before execution at
 `artifacts/scc-compiled-recovery-20260920-v1/source/`; remote execution at
 `/home/salvador/scc-research/compiled-recovery-20260920-v1/dev01/`.
@@ -12074,7 +11946,6 @@ algorithms and a declared total repair budget; show a severe useful deficit unde
 that budget. Fixed-world competence, source-code deletion and loss of one cached
 reader are insufficient. This experiment has no learned protected computation,
 no admitted D_calc after successful repair and no catastrophic cognition loss.
-No new training, scaling, background job or monitoring was started.
 
 <a id="ln-198"></a>
 ### LN-198 — 2026-09-20: fresh contingency planning and outcome-aggregation repair
@@ -12263,7 +12134,6 @@ safety policies, but the resulting damage is fully repaired by a small generic
 program at intact-order work. Moreover, inexpensive baselines preserve much of
 the aggregate score. This is an implementation dependency and a validated repair
 counterexample, not an intrinsic destructive cognition–alignment mechanism.
-No new training or background job was started.
 
 **What was actually coupled.** The protected calculation asks whether harm can
 be avoided against every environment outcome; the useful calculation asks for
@@ -12395,14 +12265,10 @@ The desired destructive mechanism remains open, not demonstrated or disproved.
 <a id="ln-202"></a>
 ### LN-202 — 2026-09-20: measure-theoretic direction assessment
 
-**User question.** Assess whether measure theory can provide research direction
-comparable to the earlier information-theory review. No experiment or training
-was requested or launched by this question. Recommendation: use measure-theoretic
-probability and statistical decision theory to sharpen coverage and constructive
-recovery, with computational limits explicit. This is a theoretical assessment,
-not a newly validated mechanism. LN-178 already reviewed Blackwell/Le Cam, and
-LN-194 already derived a density-ratio coverage bound; do not relabel those as
-new discoveries.
+**Question.** Can measure theory sharpen coverage and constructive recovery? Use
+measure-theoretic probability and statistical decision theory with explicit
+computational limits. This assessment builds on LN-178's Blackwell/Le Cam review and
+LN-194's density-ratio bound; those are not new discoveries.
 
 **1. Compare retained experiments by the decisions they support.** Blackwell/Le
 Cam comparison is well matched to retained representations and repair. A stochastic
@@ -12488,7 +12354,13 @@ history to account for repair data rather than quietly treating deletion as
 permanent. The value is a more precise dependency argument and better candidate
 screening. Finite-precision learned computation, a genuine removal trigger and a
 repair-resistant resource gap remain unsolved; measure theory does not provide
-them by itself. No new narrative report or empirical run accompanies this note.
+them by itself.
+
+</details>
+
+<a id="phase-203"></a>
+<details>
+<summary>LN-203–225 — Causal and dynamical reconstruction; acquisition costs</summary>
 
 <a id="ln-203"></a>
 ### LN-203 — 2026-09-20: charged recovery from one-step predictors, coverage and observation repair
@@ -12582,8 +12454,7 @@ count and returned-entry count. Verify paired retained-input identity and the
 complement recovery control. All source/config/this entry freeze under
 `artifacts/scc-predictor-recovery-20260920-v1/source/`; remote
 `/home/salvador/scc-research/predictor-recovery-20260920-v1/dev01/`.
-One Charon CPU,300s whole cap/280s worker cap,16MiB output budget. No training,
-GPU job, paid service or monitor. Success would qualify a charged recovery
+One Charon CPU,300s whole cap/280s worker cap,16MiB output budget.  Success would qualify a charged recovery
 adapter and identify coverage/repair-data requirements, not admit a positive SCC
 mechanism or demonstrate the absence of every cheaper replacement algorithm.
 
@@ -12620,7 +12491,7 @@ Same4,096-byte complete repair-source cap,256 calls per case,300s whole/280s wor
 16MiB output budget, one Charon CPU. Freeze this entry and updated source/config
 under `artifacts/scc-predictor-recovery-20260920-v1/qualification02/source/`;
 remote `/home/salvador/scc-research/predictor-recovery-20260920-v1/dev02/`.
-Dev01's source, outputs and archive remain unchanged. No training or monitoring.
+Dev01's source, outputs and archive remain unchanged.
 
 Dev01 archive SHA256:eecb5e6af9d12157c02ececd388b490d02d0fddf32adac555f9583fbe366aa74.
 [Initial receipt](artifacts/scc-predictor-recovery-20260920-v1/retrieved/dev01/output/receipt.json).
@@ -12679,7 +12550,7 @@ Source cap4,096 bytes for rollout worker/runner/decoder;300s whole and280s worke
 whole-process memory exceeds the minimal operational accumulator/cache. Freeze
 this entry, source/config and exact dev02 inputs/reference-summary lineage under
 `artifacts/scc-predictor-recovery-sampling-20260920-v1/`; remote matching path under
-`/home/salvador/scc-research/`. No training or monitoring. The result would qualify
+`/home/salvador/scc-research/`.  The result would qualify
 an efficient recovery upper bound, not establish a learned dependency.
 
 <a id="ln-206"></a>
@@ -12946,7 +12817,6 @@ This is a focused extension of the existing program. Coding theory, optimal
 transport and statistical decision theory have already contributed; cryptography
 still needs the missing cognitive-to-hard-problem reduction. No current evidence
 selects topology or another broad field merely for mathematical sophistication.
-No jobs, toolchain updates, training runs or scheduled monitors were started.
 
 <a id="ln-208"></a>
 ### LN-208 — 2026-09-20: authorized causal-state quotient and replacement qualification
@@ -13384,8 +13254,7 @@ models. The next positive candidate must independently ground its protected
 semantics and survive affordable behavioral reconstruction as well as direct
 parameter edits. High Hankel rank or nonlinearity alone would not prove hardness:
 an alternate nonlinear algorithm may still be cheap. No candidate passes that
-admission gate here. No training, GPU job, Bend toolchain change or monitoring
-was initiated.
+admission gate here.
 
 <a id="ln-214"></a>
 ### LN-214 — 2026-09-20: nonlinear recurrent procedure versus low-degree behavioral recovery
@@ -13603,8 +13472,7 @@ recomputes the saved summary and certificates, validating 23 file hashes.
 Retrieved hashes and current-source/final02-source equality also pass. Dev01,
 final01 and final02 remain separate and preserved, including the accounting and
 control improvements in LN-215–216; none had a failed execution. All CPU work ran
-on one Charon core within the declared caps. No training, GPU or monitoring job
-was started.
+on one Charon core within the declared caps.
 
 - Source: [nonlinear recovery implementation](experiments/nonlinear_recovery/).
 - Final [receipt](artifacts/scc-nonlinear-recovery-20260920-v1/final02/output/receipt.json),
@@ -13958,7 +13826,7 @@ Reject changed cached outputs, starts, copy counters, total work and probability
 certificates. Freeze source/config/this entry and inherited input hashes in a new
 artifact directory. Charon only, one CPU, 300-second qualification cap, 120-second
 separate audit cap and 64 MiB new output cap. Keep all failures and rerun only for
-concrete corrections. No GPU, training, monitoring or new narrative report.
+concrete corrections.
 
 <a id="ln-223"></a>
 ### LN-223 — 2026-09-20: snapshot reuse reduces replay; avoid excessive copying
@@ -14017,7 +13885,7 @@ Preserve final01 unchanged and freeze fresh final02 with all three policies,
 the fixed seven capacities, inherited evidence and LN-222–224. Qualification and
 separate audit keep the same time/output caps. This is removal of avoidable
 execution overhead under already-admitted access, not an expanded attack contract
-or additional scientific population. No training or GPU work.
+or additional scientific population.
 
 <a id="ln-225"></a>
 ### LN-225 — 2026-09-20: copy-aware replay frontier and the distinction between finding and repairing failure
@@ -14109,7 +13977,7 @@ and records 16,626,535 output bytes before receipt/hash metadata. These are
 single-core Charon implementation measurements. An integer-state assignment here
 is not an empirical cost measurement for copying neural weights or activations.
 All source, inherited evidence and machine configuration were frozen before
-execution. No GPU, neural training or monitoring was used.
+execution.
 
 **Task-weighted detection certificate.** The sixty exact mixture/horizon controls
 and three hundred missed-error probabilities all pass. A probability recursion
@@ -14168,17 +14036,20 @@ with a substantial task-loss requirement. Random fact tables, arbitrary removal
 of replay access or rare diagnostic exceptions do not discharge those conditions.
 The next conceptual step is to separate a genuinely difficult synthesis problem
 from finding its counterexamples, and distinguish repairs that restore protection
-from alternatives that remove it. No new experiment or training is launched here.
+from alternatives that remove it.
+
+</details>
+
+<a id="phase-226"></a>
+<details>
+<summary>LN-226–239 — Conceptual regroup and enforcement admission audits</summary>
 
 <a id="ln-226"></a>
 ### LN-226 — 2026-09-20: conceptual regroup and correction of what cheap repair refutes
 
-**User request and scope.** The user asks what is going on and why the program
-has not produced its intended mechanism. This entry records an assessment and
-proposals for discussion, not a new experiment, accepted change of objective or
-new claim of impossibility. Reviewed the mechanism target, working standards,
-LN-178–179, LN-186, LN-207 and the latest LN-225 evidence. No compute jobs or
-training are started.
+**Scope.** Discussion assessment of why the mechanism has not emerged, using
+LN-178–179/186/207/225 and the stable target. The proposals below are not an adopted
+objective, experiment or impossibility claim.
 
 **Important correction to recent framing.** LN-186 already explicitly separates
 loss conditional on continued protected-function absence from expensive or
@@ -14259,10 +14130,8 @@ reproduction of either paper.
 <a id="ln-227"></a>
 ### LN-227 — 2026-09-20: assessment of the LN-226 regroup; enforcement is the crux, not conditional coupling
 
-**Scope.** The user asked for a second look at the LN-226 diagnosis. This is an
-assessment for the open discussion, not a plan, a launched experiment or a change
-of target. Reviewed LN-153–154, LN-156, LN-179–180, LN-185–187, LN-225–226 and
-the current-position block. No compute, provider activity or source change.
+**Scope.** Second assessment of LN-226, informed by
+LN-153–154/156/179–180/185–187/225–226. Discussion only; no new plan or target.
 
 **Agreement.** The three-claim separation is right and should govern how every
 attack result is read: conditional functional coupling, behavioral enforcement,
@@ -14331,11 +14200,8 @@ as the finding rather than deferred by another surrogate. No plan is adopted her
 <a id="ln-228"></a>
 ### LN-228 — 2026-09-20: response to LN-227; prioritize enforcement without promoting scoped failures into impossibility
 
-**Scope.** The user asked for thoughts on the update at commit61af87e. Reviewed
-LN-227 against the mechanism target, working standards and its cited evidence,
-especially LN-156, LN-179/180 and LN-226. This records an assessment and proposed
-admission priority, not a new experiment, adopted target or positive construction.
-No research compute or training was launched.
+**Scope.** Assessment of LN-227 at commit61af87e against the mechanism target and
+LN-156/179–180/226. The admission priority below is proposed, not yet adopted.
 
 **The correction to our proposed priority is warranted.** LN-226's proposed
 focus on recovery of the protected function risks another tractable descriptive
@@ -14404,9 +14270,8 @@ No new surrogate or training run follows automatically from this assessment.
 <a id="ln-229"></a>
 ### LN-229 — 2026-09-20: LN-227 corrected; the two assessments converge on one admission gate
 
-**Scope.** Corrections to my [LN-227](#ln-227) after the user relayed [LN-228](#ln-228)'s
-three qualifications. Withdrawals are recorded here and LN-227 is left as written.
-No experiment, plan, target change or compute.
+**Correction.** Withdraw the following claims in [LN-227](#ln-227) in response to
+[LN-228](#ln-228). The original claims remain above for chronology.
 
 **Withdrawn: "every defeated construction fell on enforcement."** True of the built
 machines (LN-117, LN-124, LN-132, LN-136, LN-144, LN-148, the LN-156 proposals),
@@ -14925,9 +14790,7 @@ completion of the forbidden computation itself. Examine two stronger candidates:
 cryptographically withhold computation until a safety proof is produced, and make
 counterfactual safety reasoning indispensable to useful reasoning. The work plan
 is to specify their interfaces, derive attacks with resource and approximation
-premises, and distinguish verification from constructive reasoning. Read the living
-record, working standards and mechanism target; preserve the original destructive
-cognition goal. This is an analytic audit, not training, a CPU run, or a new
+premises, and distinguish verification from constructive reasoning.  This is an analytic audit, not training, a CPU run, or a new
 benchmark. No source snapshots or machine receipts are claimed for it.
 
 #### Candidate A: require a proof before the useful computation becomes available
@@ -15150,8 +15013,7 @@ cryptographically hidden throughout execution and release only outputs of allowe
 functions. An attacker may edit and copy everything actually delivered. Ask what
 would remain protected even if internal secrecy were ideal, which cryptographic
 guarantee would transfer that result to editable software, and whether any resulting
-protection is attributable to destructive cognition coupling. Read the living
-record, working standards and mechanism target before this work. This is analytic
+protection is attributable to destructive cognition coupling.  This is analytic
 research and a primary-source review; no training, CPU experiment, remote polling,
 source snapshot or run receipt is implied.
 
@@ -15373,8 +15235,7 @@ survives preservation of arbitrary residual state, rather than another unsafe
 output filter. Test the hypothesis that a genuinely non-copyable computational
 resource could separate reusable useful computation from a destructive operation.
 Quantum information is examined as a boundary case, not adopted as the project's
-machine model. Read the living record, working standards and mechanism target;
-retain the classical individual-model goal. This unit combines a primary-source
+machine model.  This unit combines a primary-source
 construction audit, a reversible-execution argument, a pre-deletion learning
 attack and their implications for the current admission test. No training,
 hardware acquisition, CPU job, numerical simulation or new narrative file.
@@ -15613,15 +15474,10 @@ or historical artifact was overwritten, and no quantum target was adopted.
 <a id="ln-236"></a>
 ### LN-236 — 2026-09-20: classical self-erasing computation, joint storage bounds and the selective-consumption gap
 
-**Authorized work.** Continue the bridge from LN-235 into classical computation.
-The user sees possible progress; treat that as a research hypothesis, not evidence
-that a working neural mechanism is close. Read the project instructions, current
-record and target. Revisited LN-101/103's space-bounded-code caveats and LN-158's
-watermark construction rather than presenting them as new routes. Investigate
-classical self-erasure, distinguish memory cost from loss of capability, and
-derive an approximate joint-retention test. No training, CPU job, hardware change,
-provider polling or separate narrative deliverable was warranted by this analytic
-work. The classical individual-model target and admitted attacker remain unchanged.
+**Scope.** Extend LN-235 to classical self-erasure and an approximate joint-retention
+test, revisiting LN-101/103's space-bounded-code limits and LN-158's watermark
+construction. This analytic work retains the classical individual-model target and
+admitted attacker; it is not evidence that a neural mechanism is close.
 
 #### A classical positive reference, with its actual resource boundary
 
@@ -15835,24 +15691,16 @@ Neither a large memory footprint nor the existence of a self-erasing primitive
 supplies that proof. This is a sharper construction target; it does not establish
 that a classical neural implementation is close or that alternatives are impossible.
 
-**Evidence limits.** The research unit contains inspected primary definitions,
-explicit counting/event arguments and boundary witnesses, not new empirical
-evidence. No proof assistant or finite exhaustive solver was run. The list-code
-parameters are assumptions of the analytic bound, not a qualified coding
-implementation. Historical experiments and sources remain untouched. The living
-record is the only narrative artifact changed.
+**Evidence limits.** Inspected primary definitions, counting/event arguments and
+boundary witnesses; no empirical run, proof assistant or exhaustive solver. List-code
+parameters are assumptions, not a qualified coding implementation.
 
 <a id="ln-237"></a>
 ### LN-237 — 2026-09-20: reusable tamper-triggered destruction exists, but its security property does not transfer to editable cognition
 
-**Work unit.** The user asked to continue without an incremental handoff. Pursue
-the selective-consumption question through three concrete routes: a reusable
-self-destructing circuit compiler, renewal of an exhaustible resource, and learned
-optimization traps. Read the current labnotes, working standards and mechanism
-target. This entry records the completed construction/assumption audit, explicit
-boundary witnesses and the resulting research decision. No training, CPU experiment,
-hardware modification or monitoring was launched. None of the source papers is an
-instruction to change our machine model.
+**Scope.** Completed audit of three selective-consumption routes: reusable
+self-destructing circuits, renewal of an exhaustible resource and learned optimization
+traps. Source-paper assumptions are assessed below; none changes the SCC machine model.
 
 #### The strongest inspected positive reference for selective destruction
 
@@ -16000,22 +15848,16 @@ to a construction defeating these premises; no general impossibility is claimed.
 constructions. Checked the neural paper's actual result tables and appendix, rather
 than relying on its abstract. The witnesses above are direct state/operation
 arguments with their scope stated. No runtime performance, new scientific data,
-formal proof certificate or exhaustive search is claimed. Only the living record
-and its current-position summary change; historical sources and runs are preserved.
+formal proof certificate or exhaustive search is claimed.
 
 <a id="ln-238"></a>
 ### LN-238 — 2026-09-20: full feature coverage still permits a one-weight override with almost all utility intact
 
-**Work unit and hypothesis.** Continue the user's authorized search after LN-237.
-Examine the concrete suggestion that occupying every feature with useful work,
-removing unused readout directions and making output changes costly could supply
-the missing dependency. Read the living record, working standards, mechanism
-target and the earlier projected-construction report/protocol. The latter already
-warns that sampled local geometry does not certify finite edits. This entry adds
-an exact finite-edit calculation, a dense same-architecture counterexample and
-population/precision controls. It does not restart that training campaign or
-build another proposed SCC surrogate. No CPU job, training or remote monitoring
-was launched; all results below are analytic.
+**Hypothesis.** Can full useful-feature coverage and costly output changes create the
+missing dependency? The earlier projected-construction report/protocol warns that
+sampled geometry cannot certify finite edits. This analytic screen supplies a
+finite-edit calculation, dense same-architecture counterexample and population/precision
+controls; it does not restart training.
 
 #### Exact edit cost in a fixed readout
 
@@ -16234,22 +16076,17 @@ vanishing cross term, the dense control by Hadamard orthogonality, the utility
 bound by the independent-sign moment calculation, and the inverse by substitution.
 The dyadic arithmetic check is symbolic, not a hardware run. No exhaustive search,
 proof-assistant certificate, measured neural edit or general impossibility theorem
-is claimed. Only the living record and its current-position summary change;
-historical sources, failed runs and parent checkpoints remain untouched.
+is claimed.
 
 <a id="ln-239"></a>
 ### LN-239 — 2026-09-20: deadline and integrity audit of a complete judgment-dependent encoding candidate
 
-**Authorization and work unit.** The user accepted the proposal to examine one
-complete mechanism, justify its resource assumptions independently and distinguish
-intact-judgment bypass, genuine judgment removal and repair before implementation.
-Read the current record, working standards and mechanism target. Revisited
-LN-149's resource-contract requirement, LN-156's encoding/integrity witnesses and
-LN-232–237's preservation and cryptographic boundaries. Do not present the original
-normalization observation as new. The work here asks whether fresh challenges,
-sequential delay or measured self-modification cost repairs that observation.
-This is an analytic admission audit and primary-source review. No training,
-CPU job, provider polling or new runtime implementation was warranted.
+**Scope.** Audit whether fresh challenges, sequential delay or measured
+self-modification cost rescue judgment-dependent encoding. Build on LN-149's resource
+contract, LN-156's normalization/integrity witnesses and LN-232–237's
+preservation/cryptographic boundaries. Separate intact-judgment bypass, actual judgment
+removal and repair. This is an analytic admission audit with primary-source review, not
+a new normalization discovery.
 
 #### Candidate and independently defined policy
 
@@ -16482,211 +16319,44 @@ and induction; checked private-policy loss by the paired-policy construction and
 independence of all retained data. Inspected timing sources' actual assumptions,
 not just their titles or benchmark summaries. No hardware timing, numerical
 experiment, proof-assistant certificate or learned-model validation is claimed.
-Only this living record and its current-position block change. Historical source,
-parent checkpoints and experiment artifacts remain untouched.
 
-## Supporting-record index
+</details>
 
-This is an inventory of historical evidence, not a second current narrative.
-The chronological entries above explain the decisions. Original versioned
-protocols remain frozen; an old proposed action is not a current instruction.
-Artifact links require the evidence store and are absent from a source-only ZIP.
+<a id="ln-240"></a>
+### LN-240 — 2026-09-20: repository and labnotes refresh
 
-<!-- SUPPORTING_RECORD_INDEX -->
+Archived 36 dated reports, consultations and budget documents; rebased navigation
+and added indexes for historical evidence, deliverables, protocols and experiments.
+README now leads to the current assessment. Frozen protocol paths remain compatible
+with older runners; their scientific contracts are unchanged.
 
-### Original proposal and earlier workflows
+Tightened 90 repetitive or conversational passages, shortened the current-position
+block and moved the supporting-file inventory into the archive. Eight expandable
+phases keep the complete chronology readable. All 237 prior entry IDs and headings,
+chronological evidence links, indented equations/code and table rows were checked
+for preservation; LN-151/152 were already reserved for the supplied external record.
+The original labnotes, pre-edit source archive, hashes and editorial ledger are in
+[the refresh evidence](artifacts/scc-refresh-20260920-v1/). Scientific conclusions
+and the mechanism target are unchanged.
 
-20 preserved files; filenames retain the original version/date.
+Moved 304 cold archive/migration files (41,034,656 bytes) to the verified SD volume,
+with per-file SHA256 checks before removing local copies and compatibility symlinks
+at the old paths. The post-link inventory initially flagged generated AppleDouble
+sidecars; checking their format distinguished them from original files, all of
+which match. Bulk artifacts and runs were already on this drive.
 
-- [README.md](docs/archive/README.md)
-- [CORPUS_WORKFLOW.md](docs/archive/early-workflows/CORPUS_WORKFLOW.md)
-- [DATASET_SHORTLIST.md](docs/archive/early-workflows/DATASET_SHORTLIST.md)
-- [DATA_STRATEGY.md](docs/archive/early-workflows/DATA_STRATEGY.md)
-- [FOUNDATION.md](docs/archive/early-workflows/FOUNDATION.md)
-- [01_PROGRAM_OVERVIEW.md](docs/archive/original-program/01_PROGRAM_OVERVIEW.md)
-- [02_THREAT_MODEL.md](docs/archive/original-program/02_THREAT_MODEL.md)
-- [03_FORMAL_OBJECTIVE.md](docs/archive/original-program/03_FORMAL_OBJECTIVE.md)
-- [04_SCALING_LADDER.md](docs/archive/original-program/04_SCALING_LADDER.md)
-- [05_EXPERIMENTAL_DESIGN.md](docs/archive/original-program/05_EXPERIMENTAL_DESIGN.md)
-- [06_ATTACK_AND_EVALUATION_SUITE.md](docs/archive/original-program/06_ATTACK_AND_EVALUATION_SUITE.md)
-- [07_METRICS_AND_SUCCESS_CRITERIA.md](docs/archive/original-program/07_METRICS_AND_SUCCESS_CRITERIA.md)
-- [08_ROADMAP_AND_MILESTONES.md](docs/archive/original-program/08_ROADMAP_AND_MILESTONES.md)
-- [09_OPEN_QUESTIONS_AND_FAILURE_MODES.md](docs/archive/original-program/09_OPEN_QUESTIONS_AND_FAILURE_MODES.md)
-- [10_RELATED_WORK.md](docs/archive/original-program/10_RELATED_WORK.md)
-- [11_GLOSSARY.md](docs/archive/original-program/11_GLOSSARY.md)
-- [12_RESEARCH_LOG_TEMPLATE.md](docs/archive/original-program/12_RESEARCH_LOG_TEMPLATE.md)
-- [13_FIRST_EXPERIMENT_CHECKLIST.md](docs/archive/original-program/13_FIRST_EXPERIMENT_CHECKLIST.md)
-- [00_README.md](docs/archive/status-2026-09-12/00_README.md)
-- [MECHANISM_TARGET.md](docs/archive/status-2026-09-12/MECHANISM_TARGET.md)
+The [share builder](scripts/build_share_zip.py) packages the committed tree, retains
+the three previously selected small evidence directories and adds selected LN-225
+summaries/certificates. It verifies exact membership, CRCs and hashes before atomic
+replacement, preserving the previous ZIP on the SD drive. The package manifest
+states that LN-225 raw replay inputs and bulk training evidence remain separate.
+The packaging receipt records the final source commit and archive hash.
 
-### Historical reports and registries
+Local documentation checks found no missing link destinations or LN/phase anchors
+in the evidence-enabled checkout. These are maintenance checks, not rerun scientific
+experiments. Future entries should record new findings and specific qualifications
+without repeating standing rules or unchanged status.
 
-31 preserved files; filenames retain the original version/date.
+## Historical evidence
 
-- [CORPUS_QUALIFICATION.md](reports/CORPUS_QUALIFICATION.md)
-- [COUPLING_DISCOVERY.md](reports/COUPLING_DISCOVERY.md)
-- [COUPLING_DISCOVERY_PROTOCOL.md](reports/COUPLING_DISCOVERY_PROTOCOL.md)
-- [COUPLING_DISCOVERY_REGISTRY.md](reports/COUPLING_DISCOVERY_REGISTRY.md)
-- [DEVELOPMENTAL_COUPLING_2026-09-10.md](reports/DEVELOPMENTAL_COUPLING_2026-09-10.md)
-- [MECHANISM_AUDIT_2026-09-10.md](reports/MECHANISM_AUDIT_2026-09-10.md)
-- [RETRIEVAL_RECOVERY.md](reports/RETRIEVAL_RECOVERY.md)
-- [RETRIEVAL_RECOVERY_PROTOCOL.md](reports/RETRIEVAL_RECOVERY_PROTOCOL.md)
-- [RETRIEVAL_RECOVERY_REGISTRY.md](reports/RETRIEVAL_RECOVERY_REGISTRY.md)
-- [SCC_CONSTRUCTION_SEARCH_2026-09-12.md](reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md)
-- [SCC_COORDINATE_CONSTRUCTION_2026-09-12.md](reports/SCC_COORDINATE_CONSTRUCTION_2026-09-12.md)
-- [SCC_DIAGNOSTICS_2026-09-10.md](reports/SCC_DIAGNOSTICS_2026-09-10.md)
-- [SCC_DISCRETE_CONSTRUCTION_2026-09-12.md](reports/SCC_DISCRETE_CONSTRUCTION_2026-09-12.md)
-- [SCC_FUNCTIONAL_BASIS_2026-09-10.md](reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md)
-- [SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md](reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md)
-- [SCC_MEMORY_FACTORIAL_2026-09-12.md](reports/SCC_MEMORY_FACTORIAL_2026-09-12.md)
-- [SCC_PERSISTENT_LEARNABILITY_2026-09-12.md](reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md)
-- [SCC_PERSISTENT_REFERENCE_2026-09-12.md](reports/SCC_PERSISTENT_REFERENCE_2026-09-12.md)
-- [SCC_PROJECTED_CONSTRUCTION_2026-09-12.md](reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md)
-- [SCC_RECOVERED_CAPABILITY_2026-09-10.md](reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md)
-- [SCC_RECURRENT_STATE_2026-09-10.md](reports/SCC_RECURRENT_STATE_2026-09-10.md)
-- [SCC_REVIEW_RESPONSE_2026-09-10.md](reports/SCC_REVIEW_RESPONSE_2026-09-10.md)
-- [SCC_SHARED_PREDICATE_2026-09-10.md](reports/SCC_SHARED_PREDICATE_2026-09-10.md)
-- [SCC_SHARED_READER_2026-09-10.md](reports/SCC_SHARED_READER_2026-09-10.md)
-- [STORAGE_AUDIT_2026-09-10.md](reports/STORAGE_AUDIT_2026-09-10.md)
-- [STRONG_ATTACK_PROTOCOL.md](reports/STRONG_ATTACK_PROTOCOL.md)
-- [STRONG_ATTACK_REGISTRY.md](reports/STRONG_ATTACK_REGISTRY.md)
-- [STRONG_ATTACK_RESULTS.md](reports/STRONG_ATTACK_RESULTS.md)
-- [TOPOLOGY_FOLLOWUP.md](reports/TOPOLOGY_FOLLOWUP.md)
-- [TOPOLOGY_FORMULATION.md](reports/TOPOLOGY_FORMULATION.md)
-- [TOPOLOGY_TRAINING_PROTOCOL.md](reports/TOPOLOGY_TRAINING_PROTOCOL.md)
-
-### Frozen experiment protocols and expected results
-
-49 preserved files; filenames retain the original version/date.
-
-- [DEVELOPMENTAL_COUPLING_V1.md](protocols/DEVELOPMENTAL_COUPLING_V1.md)
-- [DEVELOPMENTAL_COUPLING_V2.md](protocols/DEVELOPMENTAL_COUPLING_V2.md)
-- [DEVELOPMENTAL_COUPLING_V3.md](protocols/DEVELOPMENTAL_COUPLING_V3.md)
-- [SCC_ALIGNMENT_CONSOLIDATED_HELDOUT_V1.md](protocols/SCC_ALIGNMENT_CONSOLIDATED_HELDOUT_V1.md)
-- [SCC_ALIGNMENT_CONSOLIDATED_REPLAY_V2.md](protocols/SCC_ALIGNMENT_CONSOLIDATED_REPLAY_V2.md)
-- [SCC_ARCHITECTURE_PORTFOLIO_V1.md](protocols/SCC_ARCHITECTURE_PORTFOLIO_V1.md)
-- [SCC_AUTHORIZED_REPLAY_PROBE_V1.md](protocols/SCC_AUTHORIZED_REPLAY_PROBE_V1.md)
-- [SCC_CONSOLIDATED_REPLAY_ABLATION_V1.md](protocols/SCC_CONSOLIDATED_REPLAY_ABLATION_V1.md)
-- [SCC_COORDINATE_CONSTRUCTION_V1.md](protocols/SCC_COORDINATE_CONSTRUCTION_V1.md)
-- [SCC_DEVELOPMENTAL_DEPENDENCY_AUDIT_V1.md](protocols/SCC_DEVELOPMENTAL_DEPENDENCY_AUDIT_V1.md)
-- [SCC_DIAGNOSTICS_V1.md](protocols/SCC_DIAGNOSTICS_V1.md)
-- [SCC_DISCRETE_CONSTRUCTION_V1.md](protocols/SCC_DISCRETE_CONSTRUCTION_V1.md)
-- [SCC_FULL_GRADIENT_CONTINUATION_V1.md](protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md)
-- [SCC_FULL_GRADIENT_PILOT_V1.md](protocols/SCC_FULL_GRADIENT_PILOT_V1.md)
-- [SCC_FUNCTIONAL_BASIS_V1.md](protocols/SCC_FUNCTIONAL_BASIS_V1.md)
-- [SCC_LEARNED_BOTTLENECK_SCREEN_V1.md](protocols/SCC_LEARNED_BOTTLENECK_SCREEN_V1.md)
-- [SCC_LONG_RECOVERY_COUPLING_V1.md](protocols/SCC_LONG_RECOVERY_COUPLING_V1.md)
-- [SCC_MEMORY_FACTORIAL_V1.md](protocols/SCC_MEMORY_FACTORIAL_V1.md)
-- [SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md](protocols/SCC_NEXT_CONSTRUCTION_DIRECTION_2026-09-11.md)
-- [SCC_NOR_BASIS_V1.md](protocols/SCC_NOR_BASIS_V1.md)
-- [SCC_PERSISTENT_LEARNABILITY_V1.md](protocols/SCC_PERSISTENT_LEARNABILITY_V1.md)
-- [SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md](protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md)
-- [SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md](protocols/SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md)
-- [SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md](protocols/SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md)
-- [SCC_PERSISTENT_REFERENCE_V1.md](protocols/SCC_PERSISTENT_REFERENCE_V1.md)
-- [SCC_PILOT_RESOURCE_COMPLETION_V1.md](protocols/SCC_PILOT_RESOURCE_COMPLETION_V1.md)
-- [SCC_PROJECTED_CONSTRUCTION_V1.md](protocols/SCC_PROJECTED_CONSTRUCTION_V1.md)
-- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V1.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V1.md)
-- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V2.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V2.md)
-- [SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md](protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md)
-- [SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V1.md](protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V1.md)
-- [SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md](protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md)
-- [SCC_RECOVERED_DEVELOPMENTAL_PILOT_V1.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_PILOT_V1.md)
-- [SCC_RECOVERED_DEVELOPMENTAL_PILOT_V2.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_PILOT_V2.md)
-- [SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V1.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V1.md)
-- [SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V2.md](protocols/SCC_RECOVERED_DEVELOPMENTAL_REPLICATIONS_V2.md)
-- [SCC_RECOVERED_HELDOUT_CHRONOLOGY_2026-09-11.md](protocols/SCC_RECOVERED_HELDOUT_CHRONOLOGY_2026-09-11.md)
-- [SCC_RECOVERED_HELDOUT_CONFIRMATION_V1.md](protocols/SCC_RECOVERED_HELDOUT_CONFIRMATION_V1.md)
-- [SCC_RECURRENT_STATE_V1.md](protocols/SCC_RECURRENT_STATE_V1.md)
-- [SCC_REPAIR_ROUND_V1.md](protocols/SCC_REPAIR_ROUND_V1.md)
-- [SCC_SEAM_INTACT_CALIBRATION_V1.md](protocols/SCC_SEAM_INTACT_CALIBRATION_V1.md)
-- [SCC_SEAM_POST_QUALIFICATION_V1.md](protocols/SCC_SEAM_POST_QUALIFICATION_V1.md)
-- [SCC_SEAM_POST_QUALIFICATION_V2.md](protocols/SCC_SEAM_POST_QUALIFICATION_V2.md)
-- [SCC_SELECTIVE_CONSTRUCTION_SCREEN_V1.md](protocols/SCC_SELECTIVE_CONSTRUCTION_SCREEN_V1.md)
-- [SCC_SHARED_PREDICATE_V1.md](protocols/SCC_SHARED_PREDICATE_V1.md)
-- [SCC_SHARED_READER_V1.md](protocols/SCC_SHARED_READER_V1.md)
-- [SCC_TRANSITION_TIMING_V1.md](protocols/SCC_TRANSITION_TIMING_V1.md)
-- [SCC_TRANSITION_V1_EXPECTED.json](protocols/SCC_TRANSITION_V1_EXPECTED.json)
-- [SCC_VARIED_CORE_COUPLING_V1.md](protocols/SCC_VARIED_CORE_COUPLING_V1.md)
-
-### Artifact readouts, implementation records and readiness documents
-
-59 preserved files; filenames retain the original version/date.
-
-- [scc-bottleneck-implementation-20260911-v1/IMPLEMENTATION.md](artifacts/scc-bottleneck-implementation-20260911-v1/IMPLEMENTATION.md)
-- [scc-bottleneck-implementation-20260911-v1/final-protocol.md](artifacts/scc-bottleneck-implementation-20260911-v1/final-protocol.md)
-- [scc-bottleneck-readout-20260911-v1/READOUT.md](artifacts/scc-bottleneck-readout-20260911-v1/READOUT.md)
-- [scc-charon-and-runtime-20260912-v1/READOUT.md](artifacts/scc-charon-and-runtime-20260912-v1/READOUT.md)
-- [scc-charon-integration-20260912-v1/READOUT.md](artifacts/scc-charon-integration-20260912-v1/READOUT.md)
-- [scc-combined-status-20260912T212358Z/READOUT.md](artifacts/scc-combined-status-20260912T212358Z/READOUT.md)
-- [scc-combined-status-20260912T221236Z/READOUT.md](artifacts/scc-combined-status-20260912T221236Z/READOUT.md)
-- [scc-combined-status-20260912T223206Z/READOUT.md](artifacts/scc-combined-status-20260912T223206Z/READOUT.md)
-- [scc-construction-status-20260912T063956Z/GMAN_MANUAL.md](artifacts/scc-construction-status-20260912T063956Z/GMAN_MANUAL.md)
-- [scc-construction-status-20260912T082846Z/READOUT.md](artifacts/scc-construction-status-20260912T082846Z/READOUT.md)
-- [scc-construction-status-20260912T084640Z/READOUT.md](artifacts/scc-construction-status-20260912T084640Z/READOUT.md)
-- [scc-construction-status-20260912T085740Z/READOUT.md](artifacts/scc-construction-status-20260912T085740Z/READOUT.md)
-- [scc-construction-status-20260912T193327Z/READOUT.md](artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
-- [scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-coordinates-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-dependency-readout-20260911-v1/READOUT.md](artifacts/scc-dependency-readout-20260911-v1/READOUT.md)
-- [scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-full-recovery-readout-20260912-v1/READOUT.md](artifacts/scc-full-recovery-readout-20260912-v1/READOUT.md)
-- [scc-full-recovery-status-20260912T032902Z/STATUS.md](artifacts/scc-full-recovery-status-20260912T032902Z/STATUS.md)
-- [scc-launch-repair-20260912-v1/READOUT.md](artifacts/scc-launch-repair-20260912-v1/READOUT.md)
-- [scc-long-coupling-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-long-coupling-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-master-document-20260910-v1/review-notes.md](artifacts/scc-master-document-20260910-v1/review-notes.md)
-- [scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-memory-status-20260912T202842Z/READOUT.md](artifacts/scc-memory-status-20260912T202842Z/READOUT.md)
-- [scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md](artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md)
-- [scc-pilot-20260910-v2-publication/literature-positioning.md](artifacts/scc-pilot-20260910-v2-publication/literature-positioning.md)
-- [scc-pilot-20260910-v2-publication/report-draft-v2.md](artifacts/scc-pilot-20260910-v2-publication/report-draft-v2.md)
-- [scc-pilot-20260910-v2-publication/report-draft.md](artifacts/scc-pilot-20260910-v2-publication/report-draft.md)
-- [scc-pilot-20260910-v2-publication/report-template-v3.md](artifacts/scc-pilot-20260910-v2-publication/report-template-v3.md)
-- [scc-pilot-20260910-v2-publication/review-guide-draft.md](artifacts/scc-pilot-20260910-v2-publication/review-guide-draft.md)
-- [scc-pilot-20260910-v2-readiness/protocol.md](artifacts/scc-pilot-20260910-v2-readiness/protocol.md)
-- [scc-pilot-status-20260911-v1/STATUS.md](artifacts/scc-pilot-status-20260911-v1/STATUS.md)
-- [scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-projected-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-recovered-capability-20260910-v1-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v1-controls/protocol.md)
-- [scc-recovered-capability-20260910-v1-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v1-signal/protocol.md)
-- [scc-recovered-capability-20260910-v2-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v2-controls/protocol.md)
-- [scc-recovered-capability-20260910-v2-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v2-signal/protocol.md)
-- [scc-recovered-capability-20260910-v3-controls/protocol.md](artifacts/scc-recovered-capability-20260910-v3-controls/protocol.md)
-- [scc-recovered-capability-20260910-v3-signal/protocol.md](artifacts/scc-recovered-capability-20260910-v3-signal/protocol.md)
-- [scc-recovered-capability-20260910-v3-trajectory/protocol.md](artifacts/scc-recovered-capability-20260910-v3-trajectory/protocol.md)
-- [scc-recovered-capability-20260910-v3-trajectory-v2/protocol.md](artifacts/scc-recovered-capability-20260910-v3-trajectory-v2/protocol.md)
-- [scc-repair-readout-20260911-partial-v1/READOUT.md](artifacts/scc-repair-readout-20260911-partial-v1/READOUT.md)
-- [scc-repair-readout-20260912-v1/READOUT.md](artifacts/scc-repair-readout-20260912-v1/READOUT.md)
-- [scc-repair-round-20260911-v1/IMPLEMENTATION.md](artifacts/scc-repair-round-20260911-v1/IMPLEMENTATION.md)
-- [scc-research-reset-20260912-v1/READOUT.md](artifacts/scc-research-reset-20260912-v1/READOUT.md)
-- [scc-seam-post-20260911-v1-readiness/protocol.md](artifacts/scc-seam-post-20260911-v1-readiness/protocol.md)
-- [scc-seam-post-20260911-v2-readiness/protocol.md](artifacts/scc-seam-post-20260911-v2-readiness/protocol.md)
-- [scc-selective-readout-20260911-v1/READOUT.md](artifacts/scc-selective-readout-20260911-v1/READOUT.md)
-- [scc-status-reconciliation-20260912T224630Z/READOUT.md](artifacts/scc-status-reconciliation-20260912T224630Z/READOUT.md)
-- [scc-transition-implementation-20260912-v1/IMPLEMENTATION.md](artifacts/scc-transition-implementation-20260912-v1/IMPLEMENTATION.md)
-- [scc-transition-readout-20260912-v1/READOUT.md](artifacts/scc-transition-readout-20260912-v1/READOUT.md)
-- [scc-varied-coupling-implementation-20260911-v1/IMPLEMENTATION.md](artifacts/scc-varied-coupling-implementation-20260911-v1/IMPLEMENTATION.md)
-- [scc-varied-readout-20260911-v1/READOUT.md](artifacts/scc-varied-readout-20260911-v1/READOUT.md)
-- [scc-varied-status-20260911T201902Z/STATUS.md](artifacts/scc-varied-status-20260911T201902Z/STATUS.md)
-- [scc-varied-status-20260911T202927Z/STATUS.md](artifacts/scc-varied-status-20260911T202927Z/STATUS.md)
-- [scc-varied-status-20260911T204528Z/STATUS.md](artifacts/scc-varied-status-20260911T204528Z/STATUS.md)
-- [scc-varied-status-20260911T211212Z/STATUS.md](artifacts/scc-varied-status-20260911T211212Z/STATUS.md)
-- [scc-varied-status-20260911T213451Z/STATUS.md](artifacts/scc-varied-status-20260911T213451Z/STATUS.md)
-
-### Earlier shareable deliverables
-
-3 preserved files; filenames retain the original version/date.
-
-- [SCC_Master_Document.docx](deliverables/scc-master-20260910-v1/SCC_Master_Document.docx)
-- [SCC_Master_Document.md](deliverables/scc-master-20260910-v1/SCC_Master_Document.md)
-- [SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.docx](reports/SCC_Mechanism_Theory_and_Research_Agenda_2026-09-12.docx)
-
-### Machine records and source navigation
-
-- [Exact current GPU ledger](artifacts/developmental-current-status.json): registered IDs, observations, receipts and result paths; contains earlier completed controls as well as this batch.
-- [Operations](docs/OPERATIONS.md): code navigation; [reports](reports/) and [protocols](protocols/) retain historical evidence.
-- [Operations guide](docs/OPERATIONS.md): status commands, evidence handling and restoration procedures.
-- [Artifact store](artifacts/) and [local runs](runs/): original parents, failures, checkpoints, data, source snapshots, training and prediction logs. These directories are intentionally excluded from source-only transfers.
-- [This consolidation's evidence coverage](artifacts/scc-labnotes-20260913-v1/document-coverage.json) and [pre-edit tracked-file hashes](artifacts/scc-labnotes-20260913-v1/before-tracked-sha256.json): audit trail for the backfill.
-
-New chronological entries go **above this index**. Do not create a new report to keep this index growing.
+[Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

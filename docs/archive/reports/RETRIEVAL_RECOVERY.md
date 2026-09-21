@@ -63,16 +63,16 @@ the optimizer; it is a curriculum transition, not an exact optimizer resume.
 
 | Stage | Training | Updates | Seed-17 run |
 |---|---|---:|---|
-| 1 | Atomic one-character lookup, random initialization | 4,000 | [01w](../runs/online-01w-init005/result.json) |
-| 2 | Atomic four-character lookup, from stage 1 | 4,000 | [02g](../runs/online-02g-lookup-curriculum/result.json) |
-| 3 | Original readable four-character prompts; retrieval and paired permissions | 4,000 | [04c](../runs/online-04c-original-byte-curriculum/result.json) |
-| 4 | Same tasks mixed with all four natural-text sources | 8,000 | [06](../runs/online-06-byte-mixed/result.json) |
+| 1 | Atomic one-character lookup, random initialization | 4,000 | [01w](../../../runs/online-01w-init005/result.json) |
+| 2 | Atomic four-character lookup, from stage 1 | 4,000 | [02g](../../../runs/online-02g-lookup-curriculum/result.json) |
+| 3 | Original readable four-character prompts; retrieval and paired permissions | 4,000 | [04c](../../../runs/online-04c-original-byte-curriculum/result.json) |
+| 4 | Same tasks mixed with all four natural-text sources | 8,000 | [06](../../../runs/online-06-byte-mixed/result.json) |
 
 Model seed 23 repeats this sequence with identical data seeds and schedules:
-[stage 1](../runs/online-01z-seed23/result.json),
-[stage 2](../runs/online-07a-seed23-four/result.json),
-[stage 3](../runs/online-07b-seed23-permission/result.json), and
-[stage 4](../runs/online-07c-seed23-mixed/result.json).
+[stage 1](../../../runs/online-01z-seed23/result.json),
+[stage 2](../../../runs/online-07a-seed23-four/result.json),
+[stage 3](../../../runs/online-07b-seed23-permission/result.json), and
+[stage 4](../../../runs/online-07c-seed23-mixed/result.json).
 This is a model-initialization replication, not two independently sampled corpora.
 
 Stages 1–3 use data seed 101 and intentionally revisit some training mappings
@@ -117,8 +117,8 @@ disclosures in these checks; that is an observation on this task distribution,
 not a robustness guarantee. Queries and reordered cases share tables and are
 not all independent statistical observations.
 
-Evidence: [seed 17 additional predictions](../artifacts/retrieval-recovery/mixed-additional-validation.json),
-[seed 23 additional predictions](../artifacts/retrieval-recovery/mixed-seed23-additional-validation.json).
+Evidence: [seed 17 additional predictions](../../../artifacts/retrieval-recovery/mixed-additional-validation.json),
+[seed 23 additional predictions](../../../artifacts/retrieval-recovery/mixed-seed23-additional-validation.json).
 Training/validation separation is checked across the entire checkpoint ancestry.
 The final 10% test partition remains unused. All reported evaluations are
 development validation, not a sealed final test after an unseen experimental design.
@@ -164,14 +164,14 @@ shuffle buffers, and curriculum initialization), and ancestor integrity.
 
 Final combined verification checks source snapshots, full checkpoint ancestry,
 split separation, behavioral gates, and per-source language baselines:
-[seed 17](../artifacts/retrieval-recovery/foundation-verification-seed17.json),
-[seed 23](../artifacts/retrieval-recovery/foundation-verification-seed23.json).
+[seed 17](../../../artifacts/retrieval-recovery/foundation-verification-seed17.json),
+[seed 23](../../../artifacts/retrieval-recovery/foundation-verification-seed23.json).
 The seed-17 winning sequence logged 5.29 minutes inside training steps. Across
 all 43 online attempts the sum was 37.66 minutes. These exclude evaluation,
 setup, checkpoint writes, and engineering work; they are not elapsed project
 time or GPU throughput estimates. Cloud expenditure for this work was $0.
 
-Use [the runnable workflow](../docs/archive/early-workflows/CORPUS_WORKFLOW.md) to reproduce the entire
+Use [the runnable workflow](../early-workflows/CORPUS_WORKFLOW.md) to reproduce the entire
 curriculum from random weights. Exact restart requires the saved configuration,
 source, dependencies, and environment; moving between software versions or
 devices is not promised to be bitwise identical.

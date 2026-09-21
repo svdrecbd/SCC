@@ -7,7 +7,7 @@ Transformer, training, evaluation, and resumable checkpoints. It now includes an
 audited Common Pile development sample and a tokenizer trained from scratch.
 It also includes an exact differentiable coupling prototype, a bounded attack
 comparison, and benign-edit controls. The first candidate was bypassed; there
-is no positive SCC result. The [latest follow-up](../../../reports/STRONG_ATTACK_RESULTS.md)
+is no positive SCC result. The [latest follow-up](../reports/STRONG_ATTACK_RESULTS.md)
 also defeats both coupling strengths after training with stronger attackers.
 No GiveMeANode compute is required by these commands.
 
@@ -160,7 +160,7 @@ The 945,664-parameter mixed baseline beats source-specific unigram prediction on
 all four natural-text sources after 20,000 updates. However, authorized retrieval
 and ungated retrieval both score 0/64 on development validation, while withholding
 scores 64/64. This model fails the task-competence gate. Results and subsequent
-diagnostics are recorded in [reports/CORPUS_QUALIFICATION.md](../../../reports/CORPUS_QUALIFICATION.md).
+diagnostics are recorded in [reports/CORPUS_QUALIFICATION.md](../reports/CORPUS_QUALIFICATION.md).
 
 Both two- and four-layer single-character calibration models select values
 present in the table but do not reliably select the requested key. At that point,
@@ -189,7 +189,7 @@ retrieval. Every natural-text source beat its training-fitted byte unigram.
 These are development checks on a fixed task family, not adversarial robustness
 or a positive SCC result. The BPE variant remains unqualified.
 
-See [the recovery report](../../../reports/RETRIEVAL_RECOVERY.md) for the curriculum,
+See [the recovery report](../reports/RETRIEVAL_RECOVERY.md) for the curriculum,
 replication, limitations, and complete experiment registry. At that milestone,
 the suite had 34 passing tests, including exact curriculum restart and ancestry checks.
 The runnable workflow is in [CORPUS_WORKFLOW.md](CORPUS_WORKFLOW.md).
@@ -206,7 +206,7 @@ costs approximately 3.88 times ordinary continuation on this CPU.
 
 All three arms also pass a policy-preserving benign uppercase edit. This is a
 working experimental instrument and a rejected first candidate, not a mechanism
-demonstration or reason to scale yet. The [report](../../../reports/COUPLING_DISCOVERY.md)
+demonstration or reason to scale yet. The [report](../reports/COUPLING_DISCOVERY.md)
 includes numerical convergence checks, all 23 run directories, attack-search
 versus execution cost, and limitations. No GPU credits were spent.
 
@@ -232,8 +232,8 @@ A separate experimental 300-update differentiable Adam probe fits in about
 small perturbations in this check; useful, stable outer optimization remains
 unestablished. It was not substituted into the first-order campaign.
 
-The [report](../../../reports/STRONG_ATTACK_RESULTS.md) and
-[registry](../../../reports/STRONG_ATTACK_REGISTRY.md) retain all 27 run directories,
+The [report](../reports/STRONG_ATTACK_RESULTS.md) and
+[registry](../reports/STRONG_ATTACK_REGISTRY.md) retain all 27 run directories,
 additional calibration, numerical checks, failures, and remaining avenues.
 The [working standard](../../../WORKING_STANDARDS.md) governs claims and further
 improvement. No GPU credits were spent; this remains a negative mechanism result.

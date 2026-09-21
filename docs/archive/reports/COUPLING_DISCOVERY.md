@@ -41,9 +41,9 @@ procedure, not the minimum possible attack cost. Small timing differences betwee
 arms are not evidence of a meaningful difference in resistance.
 
 Raw larger-check predictions and receipts are in
-[`additional-tables`](../artifacts/coupling-discovery/additional-tables/).
+[`additional-tables`](../../../artifacts/coupling-discovery/additional-tables).
 The exact comparisons and cost registry are in
-[`audit.json`](../artifacts/coupling-discovery/audit.json).
+[`audit.json`](../../../artifacts/coupling-discovery/audit.json).
 
 ## What was implemented and checked
 
@@ -72,7 +72,7 @@ finite differences that detect a detached inner gradient, parent immutability,
 serial/batched generation agreement, useful-answer scoring, and exact interrupted
 versus uninterrupted training for defense, attack, and benign edit. Resume checks
 include model weights, optimizer, both data streams, history, and counters.
-See [`tests.txt`](../artifacts/coupling-discovery/tests.txt).
+See [`tests.txt`](../../../artifacts/coupling-discovery/tests.txt).
 
 Float64 finite differences also check the actual 454,656-parameter model through
 three inner updates in a random direction and the gradient direction. The first
@@ -80,8 +80,8 @@ check failed along the gradient direction at perturbations 1e-4 and 1e-5.
 Reducing the perturbation demonstrates convergence: relative errors there are
 1.49e-4, 1.49e-6, and 1.69e-8 at 1e-6, 1e-7, and 1e-8. The analytic gradient was
 unchanged; no training objective was changed to obtain this agreement. Both
-[initial](../artifacts/coupling-discovery/full-model-gradient-check.json) and
-[converged](../artifacts/coupling-discovery/full-model-gradient-check-small-steps.json)
+[initial](../../../artifacts/coupling-discovery/full-model-gradient-check.json) and
+[converged](../../../artifacts/coupling-discovery/full-model-gradient-check-small-steps.json)
 checks remain available. Unit checks preceded training; this additional full-model
 audit finished after the defense runs, a deviation from the protocol's ideal order.
 

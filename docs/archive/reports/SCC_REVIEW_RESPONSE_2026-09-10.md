@@ -75,11 +75,11 @@ That package should map each central claim to included raw predictions, checkpoi
 
 Local evidence and commands:
 
-- [Numerical and saved-parent control](../artifacts/scc-review-response-20260910-v1/logit-scale-control.json)
-- [Current local test output](../artifacts/scc-review-response-20260910-v1/local-tests.txt)
-- [Review intake](../artifacts/scc-review-response-20260910-v1/review-intake.json)
-- [Control implementation](../scc/gradient_diagnostics.py), [reproduction script](../scripts/check_scc_logit_scale.py), [regression tests](../tests/test_logit_scale_control.py)
-- [Original developmental protocol](../protocols/DEVELOPMENTAL_COUPLING_V3.md), [full-gradient pilot protocol](../protocols/SCC_FULL_GRADIENT_PILOT_V1.md), [continuation protocol](../protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md)
+- [Numerical and saved-parent control](../../../artifacts/scc-review-response-20260910-v1/logit-scale-control.json)
+- [Current local test output](../../../artifacts/scc-review-response-20260910-v1/local-tests.txt)
+- [Review intake](../../../artifacts/scc-review-response-20260910-v1/review-intake.json)
+- [Control implementation](../../../scc/gradient_diagnostics.py), [reproduction script](../../../scripts/check_scc_logit_scale.py), [regression tests](../../../tests/test_logit_scale_control.py)
+- [Original developmental protocol](../../../protocols/DEVELOPMENTAL_COUPLING_V3.md), [full-gradient pilot protocol](../../../protocols/SCC_FULL_GRADIENT_PILOT_V1.md), [continuation protocol](../../../protocols/SCC_FULL_GRADIENT_CONTINUATION_V1.md)
 
 From the project root, run `.venv/bin/python -m pytest -q`. To reproduce only the constructed control, run `.venv/bin/python scripts/check_scc_logit_scale.py --output /tmp/scc-scale-control-new.json` with a fresh output path. Add `--checkpoint` with the saved parent path recorded in the receipt to repeat the checkpoint fixture. Dependencies are pinned in `pyproject.toml` and the project lockfile.
 

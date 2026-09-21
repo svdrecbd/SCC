@@ -7,7 +7,7 @@ challenges. This is a failure to qualify these constructions, not a demonstrated
 destructive transition. Both 32/hard models also fail text qualification; the
 other six pass text but fail required tasks. The ordinary 128/soft model solves
 arithmetic and composition yet fails lookup, making intact retrieval learning
-a concrete diagnosis target. See the [completed readout](../artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
+a concrete diagnosis target. See the [completed readout](../../../artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
 and [new theory agenda](SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
 These latest results are preliminary evaluator summaries, pending full artifact
 and prediction audits. No new discrete runs were launched.
@@ -16,7 +16,7 @@ and prediction audits. No new discrete runs were launched.
 
 A learned binary state is implemented as another candidate dependency. Local checks establish that we can train through its declared approximation, reject proposals that fail an actual score check, and evaluate several routes around the binary interface. **No trained discrete model has yet qualified, and no positive SCC result is established.** The exact-package H100 validation passed, its artifact was verified, and all eight scientific jobs have now been accepted. Their runtime results remain pending; no long jobs were polled after launch.
 
-This adds to the [architecture and memory search](SCC_CONSTRUCTION_SEARCH_2026-09-12.md), [global-coordinate construction](SCC_COORDINATE_CONSTRUCTION_2026-09-12.md), and [projected-direction construction](SCC_PROJECTED_CONSTRUCTION_2026-09-12.md). Their long jobs were not polled during this work. The [frozen protocol](../protocols/SCC_DISCRETE_CONSTRUCTION_V1.md) defines the new experiment; the [implementation ledger](../artifacts/scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md) records validation and launch status.
+This adds to the [architecture and memory search](SCC_CONSTRUCTION_SEARCH_2026-09-12.md), [global-coordinate construction](SCC_COORDINATE_CONSTRUCTION_2026-09-12.md), and [projected-direction construction](SCC_PROJECTED_CONSTRUCTION_2026-09-12.md). Their long jobs were not polled during this work. The [frozen protocol](../../../protocols/SCC_DISCRETE_CONSTRUCTION_V1.md) defines the new experiment; the [implementation ledger](../../../artifacts/scc-discrete-implementation-20260912-v1/IMPLEMENTATION.md) records validation and launch status.
 
 ## Hypothesis and alternatives
 
@@ -77,7 +77,7 @@ Eight full-sized CPU initialization checks used eight inner updates and both edi
 | 128 | hard | core | 0.18068023 | 0.17030843 | accepted | 5.66956 |
 | 128 | hard | all | 0.21981929 | 0.20065050 | accepted | 0.405316 |
 
-The very large soft 32-coordinate proposal norms are recorded, not interpreted as useful coupling strength. Normalization bounds the candidate displacement; actual reruns decide acceptance. These eight checks use initialization only. They do not show stable developmental optimization, intact competence, transfer to fresh episodes, or destructive coupling. The [complete calibration](../artifacts/scc-discrete-implementation-20260912-v1/proposal-calibration-v1/result.json) preserves every candidate and verification. Its snapshot predates the finite-direction norm fix, which that calibration does not invoke; the fresh runner fixtures cover the corrected module.
+The very large soft 32-coordinate proposal norms are recorded, not interpreted as useful coupling strength. Normalization bounds the candidate displacement; actual reruns decide acceptance. These eight checks use initialization only. They do not show stable developmental optimization, intact competence, transfer to fresh episodes, or destructive coupling. The [complete calibration](../../../artifacts/scc-discrete-implementation-20260912-v1/proposal-calibration-v1/result.json) preserves every candidate and verification. Its snapshot predates the finite-direction norm fix, which that calibration does not invoke; the fresh runner fixtures cover the corrected module.
 
 ## Scientific experiment and decision points
 

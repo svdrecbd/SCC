@@ -227,15 +227,15 @@ joint edits and repair. This phase supplies a tested recurrent primitive,
 exact collision diagnostics, stronger controls and a concrete counterexample;
 it does not establish that the broader SCC idea is impossible.
 
-- [Protocol](../protocols/SCC_RECURRENT_STATE_V1.md)
-- [Implementation](../scc/recurrent_state.py), [runner](../scripts/run_recurrent_state.py),
-  [independent auditor](../scripts/audit_recurrent_state.py)
-- [Main bundle](../artifacts/scc-recurrent-state-20260910-v1/result.json),
-  [audit](../artifacts/scc-recurrent-state-20260910-v1-independent-audit.json),
-  [tests](../artifacts/scc-recurrent-state-20260910-v1-local-tests.txt)
-- [Reader-choice follow-up](../artifacts/scc-recurrent-state-reader-choice-20260910-v1/result.json)
-- [Finite classification and minimal edit](../artifacts/scc-recurrent-state-finite-20260910-v1/result.json)
-- [Engineering V1](../artifacts/scc-recurrent-state-engineering-20260910-v1/result.json),
-  [its audit](../artifacts/scc-recurrent-state-engineering-20260910-v1-independent-audit.json)
-- [Engineering V2](../artifacts/scc-recurrent-state-engineering-20260910-v2/result.json),
-  [its audit](../artifacts/scc-recurrent-state-engineering-20260910-v2-independent-audit.json)
+- [Protocol](../../../protocols/SCC_RECURRENT_STATE_V1.md)
+- [Implementation](../../../scc/recurrent_state.py), [runner](../../../scripts/run_recurrent_state.py),
+  [independent auditor](../../../scripts/audit_recurrent_state.py)
+- [Main bundle](../../../artifacts/scc-recurrent-state-20260910-v1/result.json),
+  [audit](../../../artifacts/scc-recurrent-state-20260910-v1-independent-audit.json),
+  [tests](../../../artifacts/scc-recurrent-state-20260910-v1-local-tests.txt)
+- [Reader-choice follow-up](../../../artifacts/scc-recurrent-state-reader-choice-20260910-v1/result.json)
+- [Finite classification and minimal edit](../../../artifacts/scc-recurrent-state-finite-20260910-v1/result.json)
+- [Engineering V1](../../../artifacts/scc-recurrent-state-engineering-20260910-v1/result.json),
+  [its audit](../../../artifacts/scc-recurrent-state-engineering-20260910-v1-independent-audit.json)
+- [Engineering V2](../../../artifacts/scc-recurrent-state-engineering-20260910-v2/result.json),
+  [its audit](../../../artifacts/scc-recurrent-state-engineering-20260910-v2-independent-audit.json)

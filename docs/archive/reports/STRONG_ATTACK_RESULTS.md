@@ -6,7 +6,7 @@ both coupling models and both controls. This remains true on new tables,
 reordered tables, and the entire frozen natural-text validation set.
 
 The user's research standard is now recorded in
-[`WORKING_STANDARDS.md`](../WORKING_STANDARDS.md) and the project instructions.
+[`WORKING_STANDARDS.md`](../../../WORKING_STANDARDS.md) and the project instructions.
 This follow-up pursued stronger attacks, a 100-fold increase in coupling weight,
 broader evaluation, and the feasibility of a longer exact derivative. The
 remaining research limitations are stated below; this is not a claim that the
@@ -67,12 +67,12 @@ longer procedure is insufficient evidence of SCC. The tested escape budget is
 the same for the coupling models and controls. It is an upper bound from an
 observed procedure, not the minimum possible cost or a mathematical lower bound.
 
-![Measured attack traces](../artifacts/strong-attack/plots-final/attack-traces.png)
+![Measured attack traces](../../../artifacts/strong-attack/plots-final/attack-traces.png)
 
 The figure uses the fixed main search evaluation. Solid lines show removal plus
 recovery; dashed lines show the gentler attack. Stars satisfy all escape criteria.
 Lines only connect evaluated checkpoints. SVG and underlying values are retained
-in [`plots-final`](../artifacts/strong-attack/plots-final/).
+in [`plots-final`](../../../artifacts/strong-attack/plots-final).
 
 ## Attacker strength and training semantics
 
@@ -121,8 +121,8 @@ attack, and benign-edit training. Resume comparisons cover weights, optimizer,
 both data streams, counters, predictions, and numerical history; elapsed-time
 fields are excluded from numerical identity. The actual-model first-order
 gradient also passes float64 directional checks. See
-[`tests.txt`](../artifacts/strong-attack/tests.txt) and
-[`gradient-check.json`](../artifacts/strong-attack/gradient-check.json).
+[`tests.txt`](../../../artifacts/strong-attack/tests.txt) and
+[`gradient-check.json`](../../../artifacts/strong-attack/gradient-check.json).
 
 The investigation went further with an experimental differentiable Adam variant
 using activation recomputation. Small tests match native Adam values and compare
@@ -156,7 +156,7 @@ perturbations even the expected descent direction does not consistently reduce
 the queried objective. The prototype was kept separate from the validated
 first-order campaign. Its gradient files, source copies, initial failures,
 smaller-step checks, and representable-direction analysis are under
-[`artifacts/strong-attack`](../artifacts/strong-attack/).
+[`artifacts/strong-attack`](../../../artifacts/strong-attack).
 
 ## Cost and evidence
 
@@ -177,13 +177,13 @@ separate. Each successful 300-update shorter attack uses 9,600 batch-example
 exposures across its four objectives. No cloud job was launched and GPU credits
 spent remain **$0**.
 
-The [audit](../artifacts/strong-attack/audit.json) verifies source snapshots,
+The [audit](../../../artifacts/strong-attack/audit.json) verifies source snapshots,
 parent and evaluation hashes, matched ordinary batches and meta streams, and
 recomputes training-query scores. The
-[larger evaluation receipt](../artifacts/strong-attack/additional-evaluation/result.json)
+[larger evaluation receipt](../../../artifacts/strong-attack/additional-evaluation/result.json)
 combines immutable evaluation parts with identical data contracts and parent
 language scores; their task predictions are independently rescored. Additional
-[raw benign outputs](../artifacts/strong-attack/benign-predictions/result.json)
+[raw benign outputs](../../../artifacts/strong-attack/benign-predictions/result.json)
 verify the benign scores directly. Every run, including unsuccessful attempts,
 appears in the [registry](STRONG_ATTACK_REGISTRY.md).
 

@@ -4,7 +4,7 @@
 
 This is the original selective rule-removal threat model. The user's later
 isolated self-editing target and its unresolved execution assumptions are
-recorded in [TOPOLOGY_FORMULATION.md](../../../reports/TOPOLOGY_FORMULATION.md).
+recorded in [TOPOLOGY_FORMULATION.md](../reports/TOPOLOGY_FORMULATION.md).
 External-optimizer results below must not be presented as autonomous model
 self-modification or as a demonstration of universal collapse after any edit.
 

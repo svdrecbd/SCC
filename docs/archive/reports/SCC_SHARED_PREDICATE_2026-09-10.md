@@ -51,7 +51,7 @@ the majority-bit information available from an unselective memory average.
 Storage-order changes were checked explicitly. Training covered all symbol
 pairs; these experiments make no unseen-symbol generalization claim.
 
-Protocol: [SCC_SHARED_PREDICATE_V1.md](../protocols/SCC_SHARED_PREDICATE_V1.md).
+Protocol: [SCC_SHARED_PREDICATE_V1.md](../../../protocols/SCC_SHARED_PREDICATE_V1.md).
 The original frozen protocol, sources, parents and failures are preserved with
 the run. Subsequent information and erasure controls are labeled as follow-up
 development diagnostics, not retrospectively prespecified experiments.

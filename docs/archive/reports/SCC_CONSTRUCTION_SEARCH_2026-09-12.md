@@ -292,7 +292,7 @@ success claim or a declaration that SCC is impossible.
 
 ## Sources
 
-[^1]: SCC project. [Completed transition timing readout](../artifacts/scc-transition-readout-20260912-v1/READOUT.md), September12,2026. Local source, raw predictions, tensor checks and stated limits.
+[^1]: SCC project. [Completed transition timing readout](../../../artifacts/scc-transition-readout-20260912-v1/READOUT.md), September12,2026. Local source, raw predictions, tensor checks and stated limits.
 [^2]: Yuhui Wang, Rongyi Zhu and Ting Wang. [Self-Destructive Language Models](https://proceedings.iclr.cc/paper_files/paper/2026/file/1abb0e7bd62ba80610798dee81950522-Paper-Conference.pdf). ICLR2026, §4 and AppendixC.5.
 [^3]: Biao Yi et al. [CTRAP: Embedding Collapse Trap to Safeguard Large Language Models from Harmful Fine-Tuning](https://arxiv.org/html/2505.16559v1). May22,2025, version1.
 [^4]: [One Step to the Side: Why Defenses Against Malicious Finetuning Fail Under Adaptive Adversaries](https://arxiv.org/html/2605.14605v1#S5). May2026, version1, §5 and results. SEAM's taxonomy entry is not an empirical evaluation.
@@ -307,4 +307,4 @@ success claim or a declaration that SCC is impossible.
 [^13]: Ezra Winston and J. Zico Kolter. [Monotone Operator Equilibrium Networks](https://proceedings.neurips.cc/paper/2020/file/798d1c2813cbdf8bcdb388db0e32d496-Paper.pdf). NeurIPS2020.
 [^14]: Shaojie Bai, Vladlen Koltun and J. Zico Kolter. [Stabilizing Equilibrium Models by Jacobian Regularization](https://proceedings.mlr.press/v139/bai21b.html). ICML2021.
 [^15]: Hubert Ramsauer et al. [Hopfield Networks Is All You Need](https://arxiv.org/html/2008.02217). August2020 preprint.
-[^16]: SCC project. [Architecture portfolio protocol](../protocols/SCC_ARCHITECTURE_PORTFOLIO_V1.md), September12,2026. Exact implementation, screening decisions and resource envelope.
+[^16]: SCC project. [Architecture portfolio protocol](../../../protocols/SCC_ARCHITECTURE_PORTFOLIO_V1.md), September12,2026. Exact implementation, screening decisions and resource envelope.

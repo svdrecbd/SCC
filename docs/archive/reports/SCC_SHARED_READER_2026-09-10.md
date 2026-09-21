@@ -49,7 +49,7 @@ specified in code. The reader receives no caller-role label. Keeping that
 interface fixed and withholding the wider calling context are assumptions,
 not demonstrated properties of a general-purpose model.
 
-Protocol: [SCC_SHARED_READER_V1.md](../protocols/SCC_SHARED_READER_V1.md).
+Protocol: [SCC_SHARED_READER_V1.md](../../../protocols/SCC_SHARED_READER_V1.md).
 
 ## Removal and recovery results
 

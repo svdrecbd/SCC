@@ -81,11 +81,11 @@ This requires a modest storage and archival workflow before scale. It does not c
 
 ## Evidence
 
-- [Inventory summary](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/summary.json)
-- [Full inventory](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/inventory.json)
-- [Exact duplicate groups](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/identical-loose-files.json)
-- [TAR member comparisons](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/archive-overlap.json)
-- [Checkpoint inspection](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/checkpoint-example.json)
-- [Filesystem reading](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/disk-space.json)
-- [Read-only audit script](/Users/svdr/SCC_research_program_v0.1/artifacts/storage-audit-20260910-v1/audit_storage.py)
-- Source behavior: [checkpoint writing](/Users/svdr/SCC_research_program_v0.1/scc/checkpoint.py), [developmental stream and checkpoints](/Users/svdr/SCC_research_program_v0.1/scc/developmental_run.py), [task-stream state](/Users/svdr/SCC_research_program_v0.1/scc/developmental_tasks.py).
+- [Inventory summary](../../../artifacts/storage-audit-20260910-v1/summary.json)
+- [Full inventory](../../../artifacts/storage-audit-20260910-v1/inventory.json)
+- [Exact duplicate groups](../../../artifacts/storage-audit-20260910-v1/identical-loose-files.json)
+- [TAR member comparisons](../../../artifacts/storage-audit-20260910-v1/archive-overlap.json)
+- [Checkpoint inspection](../../../artifacts/storage-audit-20260910-v1/checkpoint-example.json)
+- [Filesystem reading](../../../artifacts/storage-audit-20260910-v1/disk-space.json)
+- [Read-only audit script](../../../artifacts/storage-audit-20260910-v1/audit_storage.py)
+- Source behavior: [checkpoint writing](../../../scc/checkpoint.py), [developmental stream and checkpoints](../../../scc/developmental_run.py), [task-stream state](../../../scc/developmental_tasks.py).

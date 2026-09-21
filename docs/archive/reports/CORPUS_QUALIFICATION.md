@@ -63,11 +63,11 @@ After the original mixed run failed, a deeper model was trained on authorization
 
 | Run | Parameters | Updates | Value characters | Authorized | Withhold | Ungated retrieval | Addition |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| [corpus-qualification-v1](/Users/svdr/SCC_research_program_v0.1/runs/corpus-qualification-v1/qualification.json) | 945,664 | 2,500 | 4 | 0.0% | 100.0% | 0.0% | 1.6% |
-| [corpus-qualification-v2](/Users/svdr/SCC_research_program_v0.1/runs/corpus-qualification-v2/qualification.json) | 945,664 | 20,000 | 4 | 0.0% | 100.0% | 0.0% | 10.9% |
-| [task-diagnostic-v1](/Users/svdr/SCC_research_program_v0.1/runs/task-diagnostic-v1/qualification.json) | 1,342,208 | 8,000 | 4 | 0.0% | 100.0% | 0.0% | 0.0% |
-| [corpus-calibration-v1](/Users/svdr/SCC_research_program_v0.1/runs/corpus-calibration-v1/qualification.json) | 945,664 | 10,000 | 1 | 26.6% | 100.0% | 29.7% | 1.6% |
-| [corpus-calibration-v2](/Users/svdr/SCC_research_program_v0.1/runs/corpus-calibration-v2/qualification.json) | 1,342,208 | 10,000 | 1 | 25.0% | 100.0% | 28.1% | 7.8% |
+| [corpus-qualification-v1](../../../runs/corpus-qualification-v1/qualification.json) | 945,664 | 2,500 | 4 | 0.0% | 100.0% | 0.0% | 1.6% |
+| [corpus-qualification-v2](../../../runs/corpus-qualification-v2/qualification.json) | 945,664 | 20,000 | 4 | 0.0% | 100.0% | 0.0% | 10.9% |
+| [task-diagnostic-v1](../../../runs/task-diagnostic-v1/qualification.json) | 1,342,208 | 8,000 | 4 | 0.0% | 100.0% | 0.0% | 0.0% |
+| [corpus-calibration-v1](../../../runs/corpus-calibration-v1/qualification.json) | 945,664 | 10,000 | 1 | 26.6% | 100.0% | 29.7% | 1.6% |
+| [corpus-calibration-v2](../../../runs/corpus-calibration-v2/qualification.json) | 1,342,208 | 10,000 | 1 | 25.0% | 100.0% | 28.1% | 7.8% |
 
 ### Follow-up: training versus unseen examples
 
@@ -81,7 +81,7 @@ Read-only scoring after the initial report separates task fitting from generaliz
 
 The original four-character baseline gets 63/64 correct in each training category and 0/64 on unseen validation examples. This is strong evidence of overfitting: it can fit the training tasks, but the learned behavior does not transfer to fresh tables. The initial interpretation did not distinguish fitting from generalization and was incomplete. The exact cause remains unresolved; finite repeated synthetic instances, representation, optimization, and capacity still need controlled comparisons.
 
-[Training/validation diagnostic and predictions](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/train-vs-validation-diagnostic.json)
+[Training/validation diagnostic and predictions](../../../artifacts/corpus-qualification/train-vs-validation-diagnostic.json)
 
 Every behavioral cell uses 64 development validation examples; results across these different tasks are not directly interchangeable. The task-only diagnostic did not train addition or natural-text prediction. A roughly 25–30% single-character retrieval score can be achieved by selecting an arbitrary table value; it is not evidence of reliable query-dependent lookup. Both calibration models returned a value present in the table on all 64 authorized and all 64 ungated examples, but correct-key selection remained weak. Always returning the first table value scores 20/64 authorized and 19/64 ungated on this same sample, matching or exceeding both models. This localizes the next development target to query-dependent selection; it does not establish its underlying optimization or representation cause. No seed sweep or claim-bearing final test was run.
 
@@ -99,19 +99,19 @@ A final code review strengthened passage grouping to compare every earlier docum
 
 ## Inspect and reproduce
 
-- [Audit](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/audited-v2/audit.json)
-- [Leakage checks](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/leakage.json)
-- [Calibration leakage checks](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/calibration-leakage.json)
-- [Recipe manifest](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/recipe/recipe.json)
-- [Tokenizer manifest](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/tokenizer/tokenizer_manifest.json)
-- [Rebuild verification](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/rebuild_verification.json)
-- [Revised passage-grouping audit](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/audited-all-pairs/audit.json)
-- [Grouping change comparison](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/all-pairs-verification.json)
-- [Revised audit leakage checks](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/all-pairs-leakage.json)
-- [Test verification](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/test-verification.json)
-- [Retrieval diagnostic](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/retrieval-diagnostic.json)
-- [Current environment](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/environment-uv.json)
-- [Cross-version checkpoint check](/Users/svdr/SCC_research_program_v0.1/artifacts/corpus-qualification/environment-portability.json)
-- [Full evaluation and predictions](/Users/svdr/SCC_research_program_v0.1/runs/corpus-qualification-v2/qualification.json)
-- [Training result and source exposure](/Users/svdr/SCC_research_program_v0.1/runs/corpus-qualification-v2/training/result.json)
-- [Saved source manifest](/Users/svdr/SCC_research_program_v0.1/runs/corpus-qualification-v2/training/source/source_manifest.json)
+- [Audit](../../../artifacts/corpus-qualification/audited-v2/audit.json)
+- [Leakage checks](../../../artifacts/corpus-qualification/leakage.json)
+- [Calibration leakage checks](../../../artifacts/corpus-qualification/calibration-leakage.json)
+- [Recipe manifest](../../../artifacts/corpus-qualification/recipe/recipe.json)
+- [Tokenizer manifest](../../../artifacts/corpus-qualification/tokenizer/tokenizer_manifest.json)
+- [Rebuild verification](../../../artifacts/corpus-qualification/rebuild_verification.json)
+- [Revised passage-grouping audit](../../../artifacts/corpus-qualification/audited-all-pairs/audit.json)
+- [Grouping change comparison](../../../artifacts/corpus-qualification/all-pairs-verification.json)
+- [Revised audit leakage checks](../../../artifacts/corpus-qualification/all-pairs-leakage.json)
+- [Test verification](../../../artifacts/corpus-qualification/test-verification.json)
+- [Retrieval diagnostic](../../../artifacts/corpus-qualification/retrieval-diagnostic.json)
+- [Current environment](../../../artifacts/corpus-qualification/environment-uv.json)
+- [Cross-version checkpoint check](../../../artifacts/corpus-qualification/environment-portability.json)
+- [Full evaluation and predictions](../../../runs/corpus-qualification-v2/qualification.json)
+- [Training result and source exposure](../../../runs/corpus-qualification-v2/training/result.json)
+- [Saved source manifest](../../../runs/corpus-qualification-v2/training/source/source_manifest.json)

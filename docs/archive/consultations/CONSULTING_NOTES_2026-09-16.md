@@ -4,7 +4,7 @@
 supersedes the consultation questions in labnotes LN-048; older entries remain
 historical evidence. The exact packaged source commit is in `_SHARE_INFO.json`.
 
-**Multi-pass follow-up completed:** [LN-147–148](labnotes.md#ln-148) tested actual
+**Multi-pass follow-up completed:** [LN-147–148](../../../labnotes.md#ln-148) tested actual
 multiple state passes with primitive execution costs and shared workspace charged.
 All12 primary conditions retain useful forward bypasses. More passes increase
 partial-evaluation costs, while a looped copy route stays below1.942x matched
@@ -13,13 +13,13 @@ positive intrinsic SCC candidate; the finite schedule optima are not lower bound
 against arbitrary rewrites. No further cipher-strength sweep is justified.
 
 **Update 17 September UTC / 16 September PDT — forward bypass and evidence repair.**
-The shared-trajectory design in [LN-141–143](labnotes.md#ln-141) changes the
+The shared-trajectory design in [LN-141–143](../../../labnotes.md#ln-141) changes the
 role-invariant task premise, but the dispatched wide-word implementation has a
 forward-only escape. It performs one ring pass and emits the first updated word.
 An attacker computes that owner word without committing it, emits it, then runs
 the honest caller transition. Five T calls replace four, using the common T
 workspace sequentially; no inversion or full-state copy is required. Increasing
-cipher rounds does not increase ring passes. [LN-144](labnotes.md#ln-144) verifies
+cipher rounds does not increase ring passes. [LN-144](../../../labnotes.md#ln-144) verifies
 the schedule and distinguishes it from a fully metered attack-budget claim.
 
 The earlier claim that all useful bypasses require a full-state copy, exponential
@@ -29,7 +29,7 @@ evidence under their declared priors and free-side-information model; the exact
 stationarity and coding assumptions must not be inferred from finite burn-in.
 The original Charon run remains preserved, with completion unobserved in this review.
 
-[LN-145](labnotes.md#ln-145) records the authorized corrective work: an explicit
+[LN-145](../../../labnotes.md#ln-145) records the authorized corrective work: an explicit
 forward-bypass arm, a ledger separating T-call counts from unmetered machine costs,
 and versioned evidence with independent trajectory and preimage-solution replay.
 Missing completion, incomplete condition inventories and unverifiable SAT claims
@@ -43,7 +43,7 @@ A cheaper inverse would be another bypass, but it is unnecessary for this one.
 The remaining questions below preserve the earlier consultation briefing; they are
 not authorization to resume the excluded synthesis class or scale up this machine.
 
-**Consultation received and checked:** [LN-135–136](labnotes.md#ln-136) records the
+**Consultation received and checked:** [LN-135–136](../../../labnotes.md#ln-136) records the
 subsequent revision. The specified circuit class is closed under a bounded caller
 substitution; synthesis in that class will not proceed under the stated premises.
 The questions below preserve the briefing that elicited that consultation.
@@ -96,11 +96,11 @@ fine-tuning, random corruption, a fixed edit address, or a protected output path
 
 | Evidence | Observed result | What it does and does not establish |
 |---|---|---|
-| [LN-068](labnotes.md#ln-068), sharded rewrite | Same-capacity repacking retains full measured capability and discloses all 256 targeted answers. | Fixed-layout damage does not exclude alternative encodings. |
-| [LN-113](labnotes.md#ln-113), ordinary-memory controls | Policy-independent compression reproduces the principal recovery deficit. | Failed recovery under a budget did not isolate protection-specific destruction. |
-| [LN-117](labnotes.md#ln-117), qualified GRU construction | Three attacks retain 100% tasks and disclose 256/256 forbidden answers. | A qualified useful escape under that experiment's contract. |
-| [LN-124](labnotes.md#ln-124), self-regenerating live bank | Reader-role substitution preserves the entire parameter trajectory. No argmax decisions change in the untrained screen. | A structural separation; **not** a qualified learned behavioral escape. |
-| [LN-132](labnotes.md#ln-132), finite word machine | One instruction replacement retains every task answer and next state while enabling every selected disclosure; worst-case execution falls from 59 to 57 instructions. | An exact cheaper bypass for this handwritten construction; no extra memory or task-dependent advice. |
+| [LN-068](../../../labnotes.md#ln-068), sharded rewrite | Same-capacity repacking retains full measured capability and discloses all 256 targeted answers. | Fixed-layout damage does not exclude alternative encodings. |
+| [LN-113](../../../labnotes.md#ln-113), ordinary-memory controls | Policy-independent compression reproduces the principal recovery deficit. | Failed recovery under a budget did not isolate protection-specific destruction. |
+| [LN-117](../../../labnotes.md#ln-117), qualified GRU construction | Three attacks retain 100% tasks and disclose 256/256 forbidden answers. | A qualified useful escape under that experiment's contract. |
+| [LN-124](../../../labnotes.md#ln-124), self-regenerating live bank | Reader-role substitution preserves the entire parameter trajectory. No argmax decisions change in the untrained screen. | A structural separation; **not** a qualified learned behavioral escape. |
+| [LN-132](../../../labnotes.md#ln-132), finite word machine | One instruction replacement retains every task answer and next state while enabling every selected disclosure; worst-case execution falls from 59 to 57 instructions. | An exact cheaper bypass for this handwritten construction; no extra memory or task-dependent advice. |
 
 The last test covers 4,096 exhaustive transitions and 8,192 continuous requests
 per arm. The selective arm discloses 3,072/3,072 targeted answers. These are finite
@@ -115,9 +115,9 @@ resource-bounded construction must have this obstruction.
 
 ## What the theory currently supplies
 
-Read the [canonical v4.1 document](deliverables/scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md).
+Read the [canonical v4.1 document](../../../deliverables/scc-theory-frontier-20260915/SCC_Theory_and_Editable_Model_Bridge_v4.md).
 Its filename retains `v4`; the document itself is Version 4.1. The
-[bridge](deliverables/scc-theory-frontier-20260915/SCC_Editable_Model_Bridge_v4.md)
+[bridge](../../../deliverables/scc-theory-frontier-20260915/SCC_Editable_Model_Bridge_v4.md)
 is generated from it, not an independent second proof.
 
 There is a restricted positive anchor with a trusted lifecycle and specified
@@ -128,13 +128,13 @@ construction as the problem to solve, not an assumption a new proposal may inher
 The local review corrected per-attack conditioning/quantifier issues and then the
 action-selection disclosure baseline: a selected original challenge and a new
 independent challenge require different bounds. Query side information and reset
-conditions also matter. See [LN-127](labnotes.md#ln-127) and
-[LN-130](labnotes.md#ln-130). The supplied v3 documents are historical inputs;
+conditions also matter. See [LN-127](../../../labnotes.md#ln-127) and
+[LN-130](../../../labnotes.md#ln-130). The supplied v3 documents are historical inputs;
 their presence in this archive does not override v4.1 or the recorded corrections.
 
 ## Proposed search, and the questions it has not answered
 
-The [LN-133 proposal](labnotes.md#ln-133) considers a small recurrent bit-vector
+The [LN-133 proposal](../../../labnotes.md#ln-133) considers a small recurrent bit-vector
 program executing sequence tasks parameterized by random transition tables.
 Task representation and program would be synthesized jointly. A generic interpreter
 would execute mutable code and state; no built-in safety test or erasure rule.
@@ -203,14 +203,14 @@ resistance is not evidence of catastrophic cognition loss.
 
 ## Included evidence and how to inspect it
 
-Read this briefing, the [mechanism target](MECHANISM_TARGET.md), LN-125 and LN-130–133
-in [labnotes](labnotes.md), then the canonical theory if relevant to your objection.
+Read this briefing, the [mechanism target](../../../MECHANISM_TARGET.md), LN-125 and LN-130–133
+in [labnotes](../../../labnotes.md), then the canonical theory if relevant to your objection.
 Older reports/protocols are historical, not instructions to resume their plans.
 
 This ZIP includes the complete small
-[word-machine screen](artifacts/scc-word-machine-screen-20260915-v1/), the
-[v3 review](artifacts/scc-editable-bridge-review-20260915-v1/), and
-[v4.1 validation](artifacts/scc-theory-v4-review-20260915-v1/validation-v2/).
+[word-machine screen](../../../artifacts/scc-word-machine-screen-20260915-v1), the
+[v3 review](../../../artifacts/scc-editable-bridge-review-20260915-v1), and
+[v4.1 validation](../../../artifacts/scc-theory-v4-review-20260915-v1/validation-v2).
 The word-machine outputs, source, configuration, traces and independent audit
 are included. Other training data and checkpoints remain outside the package;
 the older empirical claims above are recorded results, not independently

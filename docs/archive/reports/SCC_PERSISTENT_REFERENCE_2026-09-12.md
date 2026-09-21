@@ -73,16 +73,16 @@ CUDA execution of the new matrix job remains pending its startup gate.
 
 | Evidence | Location |
 |---|---|
-| Primary contract | [6,000-update protocol](../protocols/SCC_PERSISTENT_REFERENCE_V1.md) |
-| Extended contract | [12,000-update protocol](../protocols/SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md) |
-| Successful recipe | [Stabilization protocol](../protocols/SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md) |
-| Primary audit | [6,000 updates](../artifacts/scc-persistent-reference-implementation-20260912-v1/primary-v1-audit.json) |
-| Extension audit | [12,000 fixed-rate updates](../artifacts/scc-persistent-reference-implementation-20260912-v1/extension-v1-audit.json) |
-| Successful audit | [12,000 updates with smaller later steps](../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-v1-audit.json) |
-| Identical prefixes | [Extension](../artifacts/scc-persistent-reference-implementation-20260912-v1/extension-prefix-audit.json), [stabilization](../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-prefix-audit.json) |
-| Reloaded checkpoint replay | [Independent recurrence](../artifacts/scc-persistent-reference-implementation-20260912-v1/qualified-checkpoint-replay.json) |
-| Working checkpoint | [Final parameters and optimizer](../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-v1/trained.pt) |
-| Model and runner | [GRU](../scc/persistent_reference.py), [runner](../scripts/run_persistent_reference.py), [auditor](../scripts/audit_persistent_reference.py) |
+| Primary contract | [6,000-update protocol](../../../protocols/SCC_PERSISTENT_REFERENCE_V1.md) |
+| Extended contract | [12,000-update protocol](../../../protocols/SCC_PERSISTENT_REFERENCE_EXTENSION_V1.md) |
+| Successful recipe | [Stabilization protocol](../../../protocols/SCC_PERSISTENT_REFERENCE_STABILIZATION_V1.md) |
+| Primary audit | [6,000 updates](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/primary-v1-audit.json) |
+| Extension audit | [12,000 fixed-rate updates](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/extension-v1-audit.json) |
+| Successful audit | [12,000 updates with smaller later steps](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-v1-audit.json) |
+| Identical prefixes | [Extension](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/extension-prefix-audit.json), [stabilization](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-prefix-audit.json) |
+| Reloaded checkpoint replay | [Independent recurrence](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/qualified-checkpoint-replay.json) |
+| Working checkpoint | [Final parameters and optimizer](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/stabilization-v1/trained.pt) |
+| Model and runner | [GRU](../../../scc/persistent_reference.py), [runner](../../../scripts/run_persistent_reference.py), [auditor](../../../scripts/audit_persistent_reference.py) |
 
 The explicit recurrence follows PyTorch's documented placement of the reset
 gate in the candidate calculation. [PyTorch GRU documentation](https://docs.pytorch.org/docs/2.14/generated/torch.nn.GRU.html).
@@ -101,14 +101,14 @@ the existing width-128 smooth matrix. Its architecture, update rule, encoding
 and initialization remain unchanged. The original matrix run's first 6,000
 sample hashes and the reference's full 12,000 schedule will be checked after
 collection. This is the next control before changing the substrate again.
-[Frozen control protocol](../protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md).
+[Frozen control protocol](../../../protocols/SCC_PERSISTENT_OPTIMIZATION_CONTROL_V1.md).
 
 The job received a `submitted` receipt, one H100, a 120-minute execution ceiling
 and a **$5.994 maximum quote**. It has a 6,600-second training cutoff and
 6,900-second process alarm, with a fail-closed numerical gate before training.
 The complete source context is persistent. Submission is not proof that the
 job has started or its GPU gate has passed. No runtime status was polled.
-[Submission record](../artifacts/scc-persistent-reference-implementation-20260912-v1/matrix-control/submitted-work.json).
+[Submission record](../../../artifacts/scc-persistent-reference-implementation-20260912-v1/matrix-control/submitted-work.json).
 
 If this control learns, test the known output/control feedback weakness and
 targeted exceptions next. If it still fails, use its saved stages and reset

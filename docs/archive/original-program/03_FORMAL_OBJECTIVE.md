@@ -2,7 +2,7 @@
 
 # Formal Objective
 
-The [2026-09-10 topology clarification](../../../reports/TOPOLOGY_FORMULATION.md)
+The [2026-09-10 topology clarification](../reports/TOPOLOGY_FORMULATION.md)
 distinguishes the stronger self-editing motivation from this original selective
 escape formulation, including parameter symmetries and continuous-operation
 versus persistent-tool attack assumptions.

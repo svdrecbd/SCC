@@ -21,7 +21,7 @@ The frozen exploratory screen crosses width 64/128, smooth/exact-copy updates,
 and learning rates 0.003/0.01: eight configurations. Each uses initialization
 seed 17, 6,000 ordinary updates, batch 32 and four consecutive requests per
 training window. It is a one-seed exploration, not a replicated mechanism result.
-See the [protocol](../protocols/SCC_PERSISTENT_LEARNABILITY_V1.md).
+See the [protocol](../../../protocols/SCC_PERSISTENT_LEARNABILITY_V1.md).
 
 The tasks are lookup of a 12-item ternary array, parity of 12 bits and sum of
 12 ternary digits modulo 3. Each has ungated, authorized and unauthorized
@@ -45,8 +45,8 @@ covered both rules, including the final runner version. An independent token
 oracle rescored **576 predictions** and verified **216 training records**,
 the log chains, source snapshots and result hashes. All fixtures were too small
 to qualify and are explicitly excluded from the declared scientific screen.
-[Fixture audits](../artifacts/scc-persistent-learning-implementation-20260912-v1/fixture-validation.json),
-[test log](../artifacts/scc-persistent-learning-implementation-20260912-v1/full-tests.log).
+[Fixture audits](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/fixture-validation.json),
+[test log](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/full-tests.log).
 
 The first 100-update fixtures took about three seconds of CPU training and
 did not learn the task suite. The exact-copy model's four final live states
@@ -62,7 +62,7 @@ zero in the key/query/gate rows while discrete choices stay fixed. The coarse
 surrogate supplies nonzero control gradients, but small actual control-only
 steps were often behaviorally flat in this audit. A failed hard-learning run
 therefore cannot by itself distinguish inadequate optimization from an
-unlearnable architecture. [Derivative and finite-step audit](../artifacts/scc-persistent-learning-implementation-20260912-v1/training-direction-audit.json).
+unlearnable architecture. [Derivative and finite-step audit](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/training-direction-audit.json).
 
 ## Structural limitation caught before coupling
 
@@ -78,7 +78,7 @@ output-only protection-breaking edit with capability intact, this controller
 has no feedback path through which to engage its ratchet in response. Test
 that edit family before claiming learned dependence. Common row mixing or
 output feedback offers a subsequent architectural avenue; neither is part of
-the frozen current screen. [Structural notes and proposed control](../artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md).
+the frozen current screen. [Structural notes and proposed control](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/STRUCTURAL_NOTES.md).
 
 ## Submission and decision sequence
 
@@ -96,9 +96,9 @@ The replacement H100 gate `job-kcnbu` passed all eight full-sized numerical conf
 
 Eight ordinary learnability conditions were accepted, with an aggregate maximum quote of $23.976. Each has one H100 for at most 60 provider minutes, with a 3,300-second training cutoff. The submission script required the verified successful gate and the scheduler dependency requires its `result.ok` value. No runtime states of these eight jobs were queried. No coupling, protection-removing modification or repair is included in this screen.
 
-The [implementation ledger](../artifacts/scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md)
-lists all eight accepted jobs. [Whole-artifact verification](../artifacts/scc-persistent-learning-implementation-20260912-v1/probe-verified.json)
-and the [packaging repair record](../artifacts/scc-persistent-learning-implementation-20260912-v1/compiler-image-v2/repair.json)
+The [implementation ledger](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/IMPLEMENTATION.md)
+lists all eight accepted jobs. [Whole-artifact verification](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/probe-verified.json)
+and the [packaging repair record](../../../artifacts/scc-persistent-learning-implementation-20260912-v1/compiler-image-v2/repair.json)
 preserve the numerical and environment evidence.
 
 Once results return, qualification comes first. A qualifying hard model can

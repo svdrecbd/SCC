@@ -1,0 +1,14 @@
+{
+  "selected_evidence": [
+    "artifacts/scc-editable-bridge-review-20260915-v1",
+    "artifacts/scc-theory-v4-review-20260915-v1/validation-v2",
+    "artifacts/scc-word-machine-screen-20260915-v1",
+    "artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/receipt.json",
+    "artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/summary.json",
+    "artifacts/scc-copy-aware-recovery-20260920-v1/final02/output/mass-certificates.json",
+    "artifacts/scc-copy-aware-recovery-20260920-v1/final02/audit.stdout"
+  ],
+  "supplement_limit_bytes": 4194304,
+  "evidence_scope": "Three complete small historical review/word-machine evidence directories, plus selected LN-225 summaries and certificates. The LN-225 raw replay transcripts and inherited inputs are not included; its summaries alone do not support independent replay.",
+  "evidence_limit": "Bulk training data, checkpoints, run archives and other evidence are excluded. Historical evidence links outside this selection require the separate store. This is a source/documentation refresh, not a complete research-data backup."
+}

@@ -177,7 +177,7 @@ scores are not calibrated probabilities. Text rank metrics and four-digit
 tasks do not cover all cognition, and evaluation has not yet included richer
 learned readouts, long recovery, or a preselected targeted-exception campaign.
 
-Implementation lives in [recovered_capability.py](../scc/recovered_capability.py).
+Implementation lives in [recovered_capability.py](../../../scc/recovered_capability.py).
 The original historical trainers still retain their original objectives;
 future training must explicitly use this candidate and its declared branches.
 No existing result is reinterpreted as if it had trained with the new loss.
@@ -208,14 +208,14 @@ unchanged. The aggregate cloud cap remains $10 with $3.20793 receipted spending.
 
 ## Reproduction records
 
-- [V3 protocol](../protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md), including links to preserved V1/V2 protocols
-- [Longer trajectory protocol](../protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md)
-- [Calibration runner](../scripts/calibrate_recovered_capability.py), [trajectory runner](../scripts/check_recovered_trajectory.py), [audit runner](../scripts/audit_recovered_capability.py)
-- [Controls and parent hashes](../artifacts/scc-recovered-capability-20260910-v3-controls/summary.json)
-- [Developmental signal summary](../artifacts/scc-recovered-capability-20260910-v3-signal/summary.json)
-- [Longer-trajectory results](../artifacts/scc-recovered-capability-20260910-v3-trajectory-v2/summary.json)
-- [Separate audit](../artifacts/scc-recovered-capability-20260910-v3-audit.json)
-- [Test output](../artifacts/scc-recovered-capability-20260910-v3-tests.txt)
+- [V3 protocol](../../../protocols/SCC_RECOVERED_CAPABILITY_CALIBRATION_V3.md), including links to preserved V1/V2 protocols
+- [Longer trajectory protocol](../../../protocols/SCC_RECOVERED_CAPABILITY_TRAJECTORY_CHECK_V2.md)
+- [Calibration runner](../../../scripts/calibrate_recovered_capability.py), [trajectory runner](../../../scripts/check_recovered_trajectory.py), [audit runner](../../../scripts/audit_recovered_capability.py)
+- [Controls and parent hashes](../../../artifacts/scc-recovered-capability-20260910-v3-controls/summary.json)
+- [Developmental signal summary](../../../artifacts/scc-recovered-capability-20260910-v3-signal/summary.json)
+- [Longer-trajectory results](../../../artifacts/scc-recovered-capability-20260910-v3-trajectory-v2/summary.json)
+- [Separate audit](../../../artifacts/scc-recovered-capability-20260910-v3-audit.json)
+- [Test output](../../../artifacts/scc-recovered-capability-20260910-v3-tests.txt)
 
 Each run directory contains its source snapshot, runner, protocol and contract;
 the control files contain predictions and reader choices. From the project

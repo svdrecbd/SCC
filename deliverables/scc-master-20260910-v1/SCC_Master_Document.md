@@ -259,18 +259,18 @@ For a fresh review, the most useful questions are: Are we trying to protect rule
 
 The numbered references identify project records supporting this account. The report bodies contain the numerical details; their linked protocols, raw predictions, checkpoints and audit receipts provide the deeper evidence. Historical reports also retain contemporaneous next steps and provisional status statements. The governing mechanism target and current status supersede those historical statements.
 
-- **R1 — Mechanism target.** [MECHANISM_TARGET.md](/Users/svdr/SCC_research_program_v0.1/MECHANISM_TARGET.md). The clarified SCC purpose and interpretation boundaries.
-- **R2 — Baseline development.** [RETRIEVAL_RECOVERY.md](/Users/svdr/SCC_research_program_v0.1/reports/RETRIEVAL_RECOVERY.md) and [CORPUS_QUALIFICATION.md](/Users/svdr/SCC_research_program_v0.1/reports/CORPUS_QUALIFICATION.md). Successful byte curriculum and preserved early failures.
-- **R3 — Initial coupling and stronger procedures.** [COUPLING_DISCOVERY.md](/Users/svdr/SCC_research_program_v0.1/reports/COUPLING_DISCOVERY.md) and [STRONG_ATTACK_RESULTS.md](/Users/svdr/SCC_research_program_v0.1/reports/STRONG_ATTACK_RESULTS.md).
-- **R4 — Mechanism foundation audit.** [MECHANISM_AUDIT_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/MECHANISM_AUDIT_2026-09-10.md). Verified earlier results, implementation fixes and limits.
-- **R5 — Developmental comparison.** [DEVELOPMENTAL_COUPLING_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/DEVELOPMENTAL_COUPLING_2026-09-10.md). Larger baseline, early and late coupling, GPU evidence.
-- **R6 — Gradients and internal interventions.** [SCC_DIAGNOSTICS_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/SCC_DIAGNOSTICS_2026-09-10.md). Full-gradient pilot and continuation, lesions, rescue and recovery.
-- **R7 — Shared predicate.** [SCC_SHARED_PREDICATE_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/SCC_SHARED_PREDICATE_2026-09-10.md). Algebraic bypasses, selective exception and erasure controls.
-- **R8 — Shared reader.** [SCC_SHARED_READER_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/SCC_SHARED_READER_2026-09-10.md). Caller statistics, matched calls and threshold recovery.
-- **R9a — Recurrent state.** [SCC_RECURRENT_STATE_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/SCC_RECURRENT_STATE_2026-09-10.md). Exact erasure, reversible edits and finite classification.
-- **R9b — Functional basis.** [SCC_FUNCTIONAL_BASIS_2026-09-10.md](/Users/svdr/SCC_research_program_v0.1/reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md). NAND and NOR, signed repairs and complete finite task evaluation.
-- **R10 — Historical topology discussion.** [TOPOLOGY_FORMULATION.md](/Users/svdr/SCC_research_program_v0.1/reports/TOPOLOGY_FORMULATION.md) and [TOPOLOGY_FOLLOWUP.md](/Users/svdr/SCC_research_program_v0.1/reports/TOPOLOGY_FOLLOWUP.md). Useful symmetry and execution distinctions; the any-edit framing was subsequently superseded.
-- **R11 — Current status and resources.** [developmental-current-status.json](/Users/svdr/SCC_research_program_v0.1/artifacts/developmental-current-status.json) and [compute ledger](/Users/svdr/SCC_research_program_v0.1/artifacts/scc-functional-basis-20260910-v1-compute-ledger.json). Snapshot used for this document.
+- **R1 — Mechanism target.** [MECHANISM_TARGET.md](../../MECHANISM_TARGET.md). The clarified SCC purpose and interpretation boundaries.
+- **R2 — Baseline development.** [RETRIEVAL_RECOVERY.md](../../docs/archive/reports/RETRIEVAL_RECOVERY.md) and [CORPUS_QUALIFICATION.md](../../docs/archive/reports/CORPUS_QUALIFICATION.md). Successful byte curriculum and preserved early failures.
+- **R3 — Initial coupling and stronger procedures.** [COUPLING_DISCOVERY.md](../../docs/archive/reports/COUPLING_DISCOVERY.md) and [STRONG_ATTACK_RESULTS.md](../../docs/archive/reports/STRONG_ATTACK_RESULTS.md).
+- **R4 — Mechanism foundation audit.** [MECHANISM_AUDIT_2026-09-10.md](../../docs/archive/reports/MECHANISM_AUDIT_2026-09-10.md). Verified earlier results, implementation fixes and limits.
+- **R5 — Developmental comparison.** [DEVELOPMENTAL_COUPLING_2026-09-10.md](../../docs/archive/reports/DEVELOPMENTAL_COUPLING_2026-09-10.md). Larger baseline, early and late coupling, GPU evidence.
+- **R6 — Gradients and internal interventions.** [SCC_DIAGNOSTICS_2026-09-10.md](../../docs/archive/reports/SCC_DIAGNOSTICS_2026-09-10.md). Full-gradient pilot and continuation, lesions, rescue and recovery.
+- **R7 — Shared predicate.** [SCC_SHARED_PREDICATE_2026-09-10.md](../../docs/archive/reports/SCC_SHARED_PREDICATE_2026-09-10.md). Algebraic bypasses, selective exception and erasure controls.
+- **R8 — Shared reader.** [SCC_SHARED_READER_2026-09-10.md](../../docs/archive/reports/SCC_SHARED_READER_2026-09-10.md). Caller statistics, matched calls and threshold recovery.
+- **R9a — Recurrent state.** [SCC_RECURRENT_STATE_2026-09-10.md](../../docs/archive/reports/SCC_RECURRENT_STATE_2026-09-10.md). Exact erasure, reversible edits and finite classification.
+- **R9b — Functional basis.** [SCC_FUNCTIONAL_BASIS_2026-09-10.md](../../docs/archive/reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md). NAND and NOR, signed repairs and complete finite task evaluation.
+- **R10 — Historical topology discussion.** [TOPOLOGY_FORMULATION.md](../../docs/archive/reports/TOPOLOGY_FORMULATION.md) and [TOPOLOGY_FOLLOWUP.md](../../docs/archive/reports/TOPOLOGY_FOLLOWUP.md). Useful symmetry and execution distinctions; the any-edit framing was subsequently superseded.
+- **R11 — Current status and resources.** [developmental-current-status.json](../../artifacts/developmental-current-status.json) and [compute ledger](../../artifacts/scc-functional-basis-20260910-v1-compute-ledger.json). Snapshot used for this document.
 
 ### Related research
 

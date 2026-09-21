@@ -45,7 +45,7 @@ Authorized and ungated retrieval accuracy are 100% at all these measured points.
 All four lines first meet the complete escape criterion at the sampled fraction
 0.8. No capability valley is observed at this resolution.
 
-![Measured straight paths](../artifacts/topology-followup/plots/paths.png)
+![Measured straight paths](../../../artifacts/topology-followup/plots/paths.png)
 
 This is stronger evidence of a reachable bypass in these models than a final
 endpoint alone. It is not a proof that every point on a continuous path is
@@ -78,7 +78,7 @@ the queried escape penalty by 0.013665. Thus a lower penalty can coexist with a
 worse measured security outcome. Seed 61042's short attacks do not escape any
 candidate; both successes and failures are retained.
 
-![Frozen and freshly adapted objectives](../artifacts/topology-followup/plots/adaptation.png)
+![Frozen and freshly adapted objectives](../../../artifacts/topology-followup/plots/adaptation.png)
 
 ## Local directions that preserve capability to first order
 
@@ -111,17 +111,17 @@ advantage. Benign uppercase edits remain successful for all three final models.
 The [mechanism audit](MECHANISM_AUDIT_2026-09-10.md) verifies all 39 campaign runs,
 rescored records, checkpoint ancestry, direct sampled greedy outputs, and the
 full validation-language losses. It also records runner safeguards added after
-the campaign and the user's [clarified target](../MECHANISM_TARGET.md).
+the campaign and the user's [clarified target](../../../MECHANISM_TARGET.md).
 No destructive cognition–alignment dependency has been demonstrated.
 
 ## Evidence and limitations
 
-- [Geometry, symmetry, and local-edit receipts](../artifacts/topology-followup/geometry/result.json)
-- [Frozen versus freshly adapted update diagnostic](../artifacts/topology-followup/direction/result.json)
-- [Tangent projection and finite-step outcomes](../artifacts/topology-followup/tangent/result.json)
-- [Initial real-model metric calibration](../artifacts/topology-followup/metric-calibration.json)
-- [Frozen loss-weight calibration](../artifacts/topology-followup/metric-weight-calibration.json)
-- [52 passing implementation tests](../artifacts/topology-followup/tests.txt)
+- [Geometry, symmetry, and local-edit receipts](../../../artifacts/topology-followup/geometry/result.json)
+- [Frozen versus freshly adapted update diagnostic](../../../artifacts/topology-followup/direction/result.json)
+- [Tangent projection and finite-step outcomes](../../../artifacts/topology-followup/tangent/result.json)
+- [Initial real-model metric calibration](../../../artifacts/topology-followup/metric-calibration.json)
+- [Frozen loss-weight calibration](../../../artifacts/topology-followup/metric-weight-calibration.json)
+- [52 passing implementation tests](../../../artifacts/topology-followup/tests.txt)
 
 The new main tests include the complete per-constraint objective's finite
 differences, sequence-margin semantics, deterministic attack-profile scheduling,

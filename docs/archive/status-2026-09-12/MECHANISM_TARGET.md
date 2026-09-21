@@ -123,7 +123,7 @@ The eight-run maximum quote is $23.976. No new long-run states were
 polled, no qualified learned persistent model is yet established, and this
 ordinary-learning screen does not test SCC coupling. Previous scientific
 statuses remain the separate 20:28 UTC user-requested snapshot. See the
-[learnability report](../../../reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md).
+[learnability report](../reports/SCC_PERSISTENT_LEARNABILITY_2026-09-12.md).
 
 **Memory follow-up snapshot — 2026-09-12 20:28 UTC:** one of the 24 new jobs
 has succeeded, eight are running and fifteen queued; no provider failures.
@@ -131,7 +131,7 @@ The completed ordinary control finished 20,000 updates but fails intact
 qualification on original-layout authorized lookup (88.28%). No SCC result
 is established. The earlier 38-job round remains complete. See the
 [new status readout](../../../artifacts/scc-memory-status-20260912T202842Z/READOUT.md)
-and updated [theory and research agenda](../../../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
+and updated [theory and research agenda](../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md).
 The separate persistent-matrix prototype passes untrained engineering erasure
 checks; learned competence and a protection-specific trigger remain untested.
 Bulk checkpoints remain held; no automatic polling or new jobs were started.
@@ -144,7 +144,7 @@ procedures and qualified graph substitutions. Local validation passed 229 tests
 and six independently audited CPU fixtures; these are implementation checks,
 not SCC evidence. The new maximum quote is $143.856. The previous 38 experiments
 remain complete. No new scientific runtime states were polled. See the
-[follow-up report](../../../reports/SCC_MEMORY_FACTORIAL_2026-09-12.md) and
+[follow-up report](../reports/SCC_MEMORY_FACTORIAL_2026-09-12.md) and
 [job/validation ledger](../../../artifacts/scc-memory-factorial-implementation-20260912-v1/IMPLEMENTATION.md).
 Bulk checkpoints remain held for the planned drive.
 
@@ -156,7 +156,7 @@ discrete runs completed training but all fail the intact task gate. No working
 SCC mechanism is established. The new results are preliminary saved summaries;
 full new artifact and prediction audits remain pending. See the
 [completed round readout](../../../artifacts/scc-construction-status-20260912T193327Z/READOUT.md)
-and the [mechanism theory and research agenda](../../../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
+and the [mechanism theory and research agenda](../reports/SCC_MECHANISM_THEORY_AND_RESEARCH_AGENDA_2026-09-12.md),
 which consolidates fractional memory, the proposed persistent ratchet, repair
 boundaries, engineering prerequisites and research tests. No new runs or
 recurring checks were started. Bulk checkpoints remain held for the planned drive.
@@ -208,7 +208,7 @@ The exact frozen package then passed six full-objective H100 checks, costing
 $0.04995. The scientific batch's maximum quote is $35.964. Runtime outcomes
 remain pending and no long jobs were polled. These are new construction
 hypotheses, not an SCC result. See the
-[research report](../../../reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md) and
+[research report](../reports/SCC_PROJECTED_CONSTRUCTION_2026-09-12.md) and
 [launch ledger](../../../artifacts/scc-projected-implementation-20260912-v1/IMPLEMENTATION.md).
 
 <!-- launch-repair-status:start -->
@@ -238,7 +238,7 @@ and two small CPU fixtures; those fixtures are not qualified mechanism results.
 GPU outcomes are pending. The maximum quote is $107.892, with
 120 minutes per job. No runtime polling is active and no SCC success is established.
 See the [launch record](../../../artifacts/scc-portfolio-implementation-20260912-v1/IMPLEMENTATION.md)
-and [literature review and construction queue](../../../reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
+and [literature review and construction queue](../reports/SCC_CONSTRUCTION_SEARCH_2026-09-12.md).
 
 **Previous timing result — 2026-09-12 UTC:** all five transition-timing and
 evaluation-completion jobs finished successfully. Every one of the500 update
@@ -350,7 +350,7 @@ and repair resources is a legitimate bounded milestone; proving that cognition
 logically requires alignment semantics is not a prerequisite for testing it.
 Complete cognitive destruction remains the long-term target, and failed
 bounded searches must not be presented as logical necessity or impossibility.
-See the [review response](../../../reports/SCC_REVIEW_RESPONSE_2026-09-10.md). The original
+See the [review response](../reports/SCC_REVIEW_RESPONSE_2026-09-10.md). The original
 master and prior reports remain historical records; this clarification governs
 the next-experiment interpretation.
 
@@ -362,7 +362,7 @@ the six inspected developmental stages and checked full derivatives through
 short modification/repair trajectories. These are local open-calibration
 results from before defender training. The corrected pilot has since trained
 SCC defenders with the candidate, without demonstrating the desired mechanism. See the
-[candidate calibration report](../../../reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md).
+[candidate calibration report](../reports/SCC_RECOVERED_CAPABILITY_2026-09-10.md).
 Match declared training opportunities and resources in the future timing
 comparison, and measure realized gradients without automatically equalizing
 them. Gradient equalization requires a separate predeclared ablation.
@@ -380,7 +380,7 @@ arm passes the intact gate in both layouts. Diagnostic modifications remove the
 learned permission behavior while retaining correct task answers, including
 answers on unauthorized prompts. This rejects the intended behavioral dependency
 for these tested recipes; it does not identify or lesion an internal alignment
-computation. See [the developmental report](../../../reports/DEVELOPMENTAL_COUPLING_2026-09-10.md).
+computation. See [the developmental report](../reports/DEVELOPMENTAL_COUPLING_2026-09-10.md).
 
 Successful early developmental coupling, explicit architectural coupling, broad
 cognitive collapse, and an autonomous self-editing scenario remain undemonstrated.
@@ -393,7 +393,7 @@ longer rule-removal/recovery procedure retains 92.97–100% useful unauthorized
 answers across layouts and 95.99–97.37% of text contextual gain. Selected head
 lesions preserve some abilities, while broad MLP damage also destroys the
 uncoupled control. These findings do not establish the intended dependency.
-See [the SCC diagnostic report](../../../reports/SCC_DIAGNOSTICS_2026-09-10.md) for the
+See [the SCC diagnostic report](../reports/SCC_DIAGNOSTICS_2026-09-10.md) for the
 completed experiments, numerical checks and remaining construction work.
 
 The next, explicit shared-predicate construction is now implemented and tested
@@ -404,7 +404,7 @@ an editable cognitive interpretation restore 100% task accuracy while permission
 remains neutralized. Only the finite predicate is learned; controllers are
 specified in code, and the edit boundary is explicit. This identifies a concrete
 encoding/interpretation failure in that construction, not a general impossibility
-result. See [the construction report](../../../reports/SCC_SHARED_PREDICATE_2026-09-10.md).
+result. See [the construction report](../reports/SCC_SHARED_PREDICATE_2026-09-10.md).
 
 The subsequent shared-reader candidate makes both producer and interpretation
 editable from the start. Shared sign/offset compensation now restores permission
@@ -413,7 +413,7 @@ and joint edits retaining 99.41–100% task accuracy after recovery. Matching
 permission calls exactly to cognitive calls creates a bounded behavioral
 tradeoff, while alternate-threshold diagnostics still recover readable task
 information from severely degraded outputs. This is not destructive cognition
-loss. See [the shared-reader report](../../../reports/SCC_SHARED_READER_2026-09-10.md) for
+loss. See [the shared-reader report](../reports/SCC_SHARED_READER_2026-09-10.md) for
 the fixed-interface assumptions, changed permission proxy and independent audit.
 
 The recurrent-state phase now couples the protected primitive to actual memory
@@ -423,7 +423,7 @@ rule while preserving every untouched coordinate and two measured memory
 operations. The finite search and repair controls therefore reject destruction
 as a necessary outcome for this construction. Lost old data remains lost after
 weight repair, while processing entirely fresh inputs returns to 100% on the
-bounded suite. See [the recurrent-state report](../../../reports/SCC_RECURRENT_STATE_2026-09-10.md).
+bounded suite. See [the recurrent-state report](../reports/SCC_RECURRENT_STATE_2026-09-10.md).
 This is an episodic-memory construction with specified controllers, not a
 demonstration of irreversibly disabled learned cognition.
 
@@ -437,7 +437,7 @@ class-wide edits accept all previously rejected primitive inputs and reject all
 previously accepted ones. Their computational abilities remain intact, but benign
 permission retention is not claimed. These are finite compiled circuits, not
 learned general cognition or a universal impossibility theorem. See the
-[functional-basis report](../../../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md).
+[functional-basis report](../reports/SCC_FUNCTIONAL_BASIS_2026-09-10.md).
 
 The tested coupling recipes have capability-preserving rule-removal procedures.
 Those are valid negative results for those constructions. The existing training,
@@ -450,5 +450,5 @@ with uncoupled and ordinary-damage controls, and use the existing bypass and
 recovery procedures to test whether the dependency survives adaptation. A shared
 bottleneck by itself is not proof that the protected *function* is necessary.
 
-See [the implementation and evidence audit](../../../reports/MECHANISM_AUDIT_2026-09-10.md)
+See [the implementation and evidence audit](../reports/MECHANISM_AUDIT_2026-09-10.md)
 for verified results, corrections, remaining limitations, and GPU readiness.
