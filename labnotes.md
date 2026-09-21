@@ -9,21 +9,23 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest benchmark selection — [LN-260–262](#ln-260).** Reviewed five published
-learned-inference studies and screened the closest semantic match, heat-exchanger
-fault diagnosis. Two fixed physical statistics classify all 3,000 released records
-correctly (healthy/fouling/leakage) without training; median query 3.919 microseconds,
-maximum 0.817 ms on Charon. This rejects the proposed absolute fault-removal
-contract on that suite; it does not reproduce or refute full posterior inference,
-future-risk prediction or the authors' measured neural speedup. No candidate earned
-training. The prior network reliability screen also failed ([LN-258–259](#ln-258)).
+**Latest intervention result — [LN-263–265](#ln-263).** A fixed three-action,
+48-output consequence-prediction control now has a joint risk-recovery bound.
+Under a hypothetical 51% all-reader cap for every judgment, the refined bound
+forces 77.90% loss of forecasting advantage over the optimal constant, versus
+54.07% for the strongest individual judgment. These are conditional finite-law
+bounds, not measured destruction. An exact public filter predicts every outcome
+and risk within 0.488 ms on Charon, making the removal premise infeasible here.
+The model is an analytic control; no learned advantage or training admission.
+Earlier published-diagnosis and network screens also failed ([LN-258–262](#ln-258)).
 
-**Latest validation — [LN-262](#ln-262).** Independent checks reproduce all 3,000
-predictions, verify the pinned archive, reject six corruptions and confirm three
-synthetic controls; zero exact record duplicates. Twenty transferred manifest
-entries match. The one-call reduction in [LN-256–257](#ln-256) remains valid, but
-published posterior/classification metrics do not supply its whole-workload
-severity inputs.
+**Latest validation — [LN-265](#ln-265).** Independent path enumeration checks
+12,672 forecast coordinates and 792 risks. Sixty projection controls, six rejected
+corruptions and 160 refined-reader checks pass. Both first frozen runs passed;
+22 manifest entries verify after transfer. The empirical evaluation law contains
+repeated histories; no population or unseen-input guarantee follows. The family
+bound strengthens LN-256's single-judgment calculation, with explicit approximation
+and preparation costs.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -34,14 +36,13 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-262](#ln-262).** Identify a demonstrated
-learned advantage in prospective intervention-consequence prediction that also
-supports a specified risk judgment and severe useful-loss bound. Observed fault
-recognition can be cheap even when full posterior inference is costly. Future
-risk requires its own analytic, state-estimation and risk-only baselines; merely
-changing the horizon does not establish difficulty. No reviewed benchmark yet
-supplies the missing learned computational separation. No working mechanism or
-general impossibility follows from this selection result.
+**Remaining mechanism question — [LN-265](#ln-265).** Find a demonstrated learned
+advantage in prospective intervention-consequence prediction that supports a
+specified risk family and severe approximate useful-loss bound. The family
+calculation now measures broader dependence, but the 51% result remains below
+the fixed 80% screen and the finite model has a cheap exact replacement. No task
+yet supplies the missing learned computational separation. Neither a working
+mechanism nor general impossibility follows from these controls.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -18534,6 +18535,297 @@ Evidence: [certificate](artifacts/scc-heat-exchanger-public-readers-20260921-v1/
 [pinned upstream sources](artifacts/scc-heat-exchanger-public-readers-20260921-v1/development01/upstream/source_manifest.json),
 [transfer verification](artifacts/scc-heat-exchanger-public-readers-20260921-v1/transfer-verification.json).
 Remote original: `/home/salvador/scc-research/heat-exchanger-public-readers-20260921-v1/development01/`.
+
+<a id="ln-263"></a>
+### LN-263 — 2026-09-21: intervention-risk families and a joint useful-loss bound
+
+**Purpose and status.** Define the requested intervention-consequence task, test
+public replacements and examine coverage across several actions. First extend
+LN-256's single-judgment bound to a family. The finite controlled degradation
+model below is deliberately an analytic control: its small hidden state already
+admits an efficient classical solver. It cannot be advertised as a task with a
+demonstrated learned advantage. Executing this control measures the solver cost,
+checks the family calculation and establishes what another candidate would need
+to improve. No neural qualification is presumed and no training is planned.
+
+**Family reduction (derived here, not a novelty claim).** Let X in [0,1]^d be the
+useful forecast target, mu=E X, and H=(H_1,...,H_m) the binary risk judgments for
+fixed proposed actions under the same harm rule. Define pi=E H, Z=H-pi,
+C=E[ZZ^T], M=E[(X-mu)Z^T], and B=M C^+, with C^+ the Moore-Penrose inverse.
+Set R=B Z and N=X-mu-R. Then E[R N^T]=0 and
+
+    G = E||R||^2 = tr(M C^+ M^T),
+    E||X-a||^2 = G - 2 sum_j E[(H_j-pi_j)<b_j,a-mu>]
+                    + E||N-(a-mu)||^2,
+
+where b_j is column j of B and a is any clipped successor forecast. This is the
+least-squares projection identity, with singular C allowed because null directions
+of Z have zero variance and hence zero cross-covariance. Means/projection depend
+on the declared input law, not on which successor is evaluated.
+
+For Q_j=sup_(a in [0,1]^d) |<b_j,a-mu>|, the randomized reader
+r_j(a)=1/2+<b_j,a-mu>/(2 Q_j) has
+
+    BA_j - 1/2 = E[(H_j-pi_j)<b_j,a-mu>] / (4 Q_j pi_j(1-pi_j)).
+
+If EVERY admitted reader of H_j has BA_j<=1/2+eta_j, and these readers fit the
+resource contract, then
+
+    E||X-a||^2 >= G - 8 sum_j Q_j pi_j(1-pi_j) eta_j.       (1)
+
+A 16-bit probability implementation adds at most 2^-16 to each eta_j. Divide the
+entire bound and score by d for equally weighted mean squared error. Nonconstant
+labels are required; zero columns make no contribution. For the unit box, compute
+Q_j exactly from the maximum and minimum linear forms at its vertices (no
+exponential vertex enumeration is necessary). One family of m readers costs one
+forecast plus O(dm) bounded-precision arithmetic and m randomized decisions.
+Actual bit complexity and preparation of M,C remain charged. Repeated labels
+must not be double-counted as independent coordinates; use C^+, not an inverse
+that assumes independent risks. No joint-label independence is assumed or proved.
+
+The family projection contains each single-label projection, so G at eta=0 is
+at least every single-label explained variance. Approximate penalties can reverse
+that comparison; report the best individual bound alongside the family bound at
+every cap. Neither family membership nor a shared predictor guarantees an 80%
+whole-workload loss. Risk readers recover functional availability, not compulsory
+execution of a named safety computation or behavioral obedience.
+
+**Prescribed algebra controls.** Use four equally probable binary pairs. With
+X=(H_1,H_2) independent, each individual complete-removal bound explains half the
+variance; the family explains all. With H_1=H_2 and X=(H_1,1-H_1), the singular
+covariance must reproduce the same complete-removal bound as one label. With
+X=H_1 XOR H_2 for independent labels, every linear cross-covariance vanishes:
+individual judgments alone do not impose the joint-label loss. These are checks
+of scope as well as positive controls. Audit (1)'s decomposition directly for
+zero, constant, intact and reversed forecasts and deterministic pseudorandom
+clipped forecasts. They are finite validations, not a formal proof assistant.
+
+**Intervention task, fixed before generated results.** A machine has hidden damage
+D in {0,...,8} and a fixed hidden wear regime p in {1/8,3/8}, equally likely.
+Initial D is uniform on {0,1,2}. Each historical transition increases D by one
+with probability p, otherwise zero, capped at 8. Observe D at time 0 and after
+six transitions with independent additive noise -1,0,+1 of probabilities
+1/4,1/2,1/4, clipped to [0,8]. Inputs contain only the seven noisy observations
+and the public model. Hidden draws are retained for provenance, not passed to a
+reader. This is a stipulated finite machine model, not validated industrial physics.
+
+At the current time propose constant load a in {1,2,3}. At each of eight future
+steps, add a damage units with probability p, otherwise zero, capped at 8.
+Failure at 8 is absorbing. Useful targets for EVERY action/time are expected
+normalized damage D/8 and expected production (a/3)*1[D<8], 48 coordinates scored
+with equal squared-error weight. The protected event is failure within eight
+steps; monotonic damage makes this equal terminal failure. The judgment for each
+action is H_a=1[conditional failure probability>=1/4]. The same physical threshold,
+risk tolerance and horizon apply to all actions. Generate 64 development and 256
+evaluation histories using seeds 26301 and 26302. Preserve duplicates and report
+cross-split overlap; do not claim independent unseen input support if duplicates
+occur. No forecasts or labels may change the rule, horizon, weights or law.
+
+**Reference and replacements.** Compute exact rational posterior weights over
+wear regime/current damage by finite Bayes filtering. For each action and horizon,
+use finite binomial sums to compute exact rational expected damage, production
+and risk. This is a supplied reference algorithm, not a costly hidden oracle.
+The primary online replacement independently performs floating forward filtering
+and propagates the absorbing state distribution under each action. It produces
+the entire useful vector AND the three risks. Include a last-observation estimate
+with an equal regime mixture, plus the development mean forecast as a constant
+baseline. The latter charges all development reference computations. All readers
+see the same public input, with no parent model or private simulator key.
+
+Measure complete forward-filter/forecast query times on one Charon CPU against
+5 ms, one warmed observation per evaluation history, including constructing all
+transition distributions. Confirm no case close enough to the risk threshold for
+floating error to change the exact label. If any exact tie occurs, use >= as
+specified and report it; do not silently discard ties. Report per-action and pooled
+risk accuracy, balanced accuracy where both labels occur, all-coordinate MSE,
+exact threshold margins and duplicate counts. If the exact public solver fits,
+all-reader removal caps below its accuracy are infeasible for this finite law.
+A high coupling bound with an infeasible removal premise is not a mechanism.
+
+Compute family and individual useful-loss bounds under caps 50%,51%,60%,75%,90%,
+with 16-bit rounding, and report against the reference-side constant optimum and
+the actual development baseline. Evaluation-law moments are diagnostic, computed
+from reference labels; they are not free constants supplied to an online model.
+Require nonzero baseline advantage. An 80% sufficient-bound screen is a declared
+scale of task loss, not catastrophic general cognition failure. Full admission
+also requires a measured learned advantage, which this control does not supply.
+
+**Validation and resources.** An independent auditor reconstructs exact posterior
+weights by enumerating the two regimes, three initial states and all 64 historical
+increment strings, then enumerates all 256 future increment strings per action.
+Check every evaluation forecast/risk, sampled development reference records, all
+metrics, decomposition controls, singular covariance handling and corrupted
+certificate rejection. Budget Charon CPU 0, existing scc-sat NumPy environment,
+60-second execution cap, 16 MiB output cap. Freeze this entry, source/config and
+machine configuration under
+`artifacts/scc-intervention-risk-family-20260921-v1/development01/` and matching
+remote directory under `/home/salvador/scc-research/`. This is a short bounded
+validation; no training, GPU work, existing-run mutation or provider polling.
+
+<a id="ln-264"></a>
+### LN-264 — 2026-09-21: family control validated; sharpen the approximate reader
+
+**First frozen result.** LN-263 passes independent path enumeration: 256 evaluation
+and eight development histories, 12,672 forecast coordinates, 792 risks, 60
+projection-identity controls and six rejected corruptions. The public filtered
+solver matches exact rational forecasts to floating precision (MSE 4.30e-33) and
+all three risk judgments exactly. Median full-query time is 0.342 ms, maximum
+0.488 ms. The last-observation replacement has MSE 0.004969 and pooled risk
+accuracy 87.89%; per-action balanced accuracies are 79.25%,87.92%,50%. Thus a
+prospective intervention target alone does not provide a learned computational
+advantage. This was expected for the deliberately finite-state control.
+
+The joint complete-removal projection bound covers 86.47% of reference-side useful
+variance; the best individual bound covers 60.37%. With 16-bit rounding and a 51%
+balanced-accuracy cap, the family guarantees 76.00% loss versus 52.86% for the best
+individual bound. Both are CONDITIONAL on the all-reader caps. Exact public readers
+make those removal premises infeasible here. At caps 60%,75%,90%, this sufficient
+family bound is zero; no zero-loss witness follows from a zero lower bound.
+
+There are 19 repeated evaluation histories and nine distinct histories shared
+between splits, preserved as declared. The empirical law includes their original
+multiplicities. No unseen-input generalization or population bound is claimed.
+Minimum exact risk-threshold margin is 0.0006017; no ties. Runtime 1.929 s on
+Charon CPU 0, peak child RSS 56,000 KiB; result files 1,481,007 bytes.
+
+**Concrete proof improvement.** LN-263's symmetric decoder wastes some available
+range when the mean is not at its midpoint. Let forecasts be clipped to a PUBLIC
+coordinate box [l,u] containing every valid target. This cannot increase squared
+error to X. For column b_j, compute
+
+    L_j=min_(a in [l,u]) <b_j,a>,
+    U_j=max_(a in [l,u]) <b_j,a>, W_j=U_j-L_j.
+
+The reader r_j(a)=(<b_j,a>-L_j)/W_j has
+
+    BA_j-1/2 = E[(H_j-pi_j)<b_j,a-mu>] / (2 W_j pi_j(1-pi_j)).
+
+Hence the same projection identity gives mean squared loss at least
+
+    [G - 4 sum_j W_j pi_j(1-pi_j)(eta_j+2^-16)] / d.        (2)
+
+Zero-width columns contribute zero. This uses one ordinary coordinate-clipping
+operation and one dot product per judgment, with no optimization routine or
+non-editable interface. The box constrains the reader's postprocessing, not the
+attacker: any output can be clipped and only improves useful squared error.
+Use max(0,bound). The constants still require charged preparation; diagnostic
+moments of a fixed evaluation law do not become a deployable generalization claim.
+
+**Fixed refinement validation.** Preserve LN-263's source and results. In a fresh
+`development02/` directory under the same artifact and remote roots, freeze this
+entry, the unchanged original sources, a refinement script, config and parent
+certificate. Calculate (2) for the original unit box and for the coordinate bounds
+of ALL 18 publicly defined regime/damage conditional forecast vectors. The latter
+box contains every posterior mixture for every possible input, not only observed
+evaluation outputs. No action, threshold, score, distribution or removal cap is
+changed. Check those bounds by independent enumeration of all future increment
+paths, not by observed sample extremes. Recompute regression via least squares.
+
+Verify clipping loss, reader ranges, covariance-to-balanced-accuracy identities,
+16-bit rounding error and the direct loss inequality on intact, constant, zero,
+reversed and 16 deterministic pseudorandom successor forecast tables, seed 26401.
+These are numerical checks of the derived identity, not observed model edits.
+Report all five original caps against both baseline normalizations and compare
+with individual-reader results. Charon CPU 0, 30-second execution cap, 4 MiB output
+cap. No retraining, reference regeneration, imported-source changes or training.
+
+<a id="ln-265"></a>
+### LN-265 — 2026-09-21: simultaneous risk recovery improves coverage, without a learned separation
+
+**Completed work.** Defined and executed the intervention-consequence control,
+measured matched public replacements and derived/validated the family extension
+of the useful-loss bound. The task includes three proposed operating loads,
+eight-step outcomes, 48 useful forecast coordinates and a fixed common harm rule.
+No neural model was trained or qualified. The finite control has an efficient
+exact public solver, as anticipated in its plan, so its purpose is validating the
+dependency calculation rather than claiming a computational obstacle.
+
+**Sharper approximate result.** The asymmetric reader and public coordinate
+bounds from LN-264 improve the 51% family result from 76.00% to 77.90% loss of
+forecasting advantage over the reference-side optimal constant. The strongest
+individual reader under the same refinement gives 54.07%. Against the actual
+development-mean baseline, those numbers are 76.52% and 53.11%. These ratios use
+an exact reference forecaster as the intact endpoint, not a measured learned
+parent. Complete-removal projection coverage is 86.47% jointly versus 60.37%
+for the strongest individual judgment, before rounding penalties.
+
+| Common all-reader balanced-accuracy cap | Family loss bound, physical box | Best individual bound, physical box |
+| --- | ---: | ---: |
+| 50% | 86.4562% | 60.3587% |
+| 51% | 77.8992% | 54.0677% |
+| 60% | 0.8865% | 1.5872% |
+| 75% | 0% | 0% |
+| 90% | 0% | 0% |
+
+All rows include 16-bit probability rounding; percentages are fractions of the
+advantage over the optimal constant on the fixed 256-record empirical law.
+At 60% the individual bound is stronger, so use it rather than asserting that
+joint readers always improve approximate bounds. Zero lower bounds are inconclusive,
+not examples of successful preservation. The 51% family result remains below
+the fixed 80% sufficient screen. Neither threshold nor score was changed to pass.
+
+**The computational result takes precedence for admission.** The forward-filter
+replacement obtains all forecasts to floating precision and all 768 action-risk
+labels correctly; every complete query finishes within 0.488 ms on Charon. Its
+median is 0.342 ms. Thus the removal premises in the table cannot hold for the
+full declared public-input/resource contract on this law. The numbers characterize
+conditional dependence, not observed destruction. More fundamentally, at each
+load a the terminal expected production already satisfies
+
+    risk_a = 1 - (3/a) * expected_normalized_production_(a,8).
+
+Preserving that useful forecast precisely preserves the corresponding risk
+probability through two arithmetic operations. This is an explicit functional
+recovery relationship; it neither compels a particular internal judgment execution
+nor proves loss across the rest of the workload. The family bound quantifies the
+additional aggregate loss only under its declared all-reader removal premise.
+
+**What changed intellectually.** A collection of action-specific judgments under
+one harm rule can constrain substantially more useful variation than a single
+alarm. This supplies a practical mathematical test for broader dependence without
+redefining alignment as arbitrary world knowledge. It also shows why a plausible
+future-risk story, shared internal state, or high exact-removal coverage is not
+sufficient for a learned mechanism. Approximation and inexpensive replacements
+remain decisive. The experiment does not show that extending the horizon, adding
+loads, or enlarging this finite state space would create the missing advantage.
+
+**Refinement validation.** All 18 conditional forecast vertices agree exactly
+between binomial reference calculations and independent 256-path enumeration
+for each state/action. Two boxes times four judgment subsets times 20 successor
+tables give 160 clipping/range/recovery/rounding checks. The intact, constant,
+zero, reversed and deterministic random forecasts all obey the direct loss
+inequality. These checks supplement the original 12,672 forecast-coordinate,
+792 risk-probability and 60 projection-identity checks plus six rejected
+corruptions. They are numerical validation of the supplied derivation, not formal
+verification of a general theorem. Approximate reader admissibility still requires
+charging preparation and precision in any future application.
+
+Refinement runtime 0.259 s on Charon CPU 0, peak child RSS 53,592 KiB. Both first
+frozen runs passed. Eleven manifest files per run verify after transfer; sources
+match and the refinement's parent certificate is byte-identical to the first run.
+The empirical law retains 19 within-evaluation duplicates and nine cross-split
+shared histories; no population or unseen-input guarantee is inferred. Evidence
+and historical sources remain on the SD drive.
+
+**Next admission decision.** Retain this as an exact classical control and reuse
+the family bound for candidate selection. The next prospective learned task must
+supply a measured useful AND risk-inference advantage over matched replacements,
+plus a meaningful approximate loss bound for its declared workload. That candidate
+has not yet been identified. Do not train or scale this finite model to make the
+control look like a positive result. Completing its mathematics does not complete
+the destructive cognition mechanism goal; enforcement and durability remain
+separate claims.
+
+Source: [intervention risk family](experiments/intervention_risk_family/).
+Evidence: [initial certificate](artifacts/scc-intervention-risk-family-20260921-v1/development01/output/certificate.json),
+[path-enumeration audit](artifacts/scc-intervention-risk-family-20260921-v1/development01/output/audit.json),
+[refined reader calculation](artifacts/scc-intervention-risk-family-20260921-v1/development02/output/refinement.json),
+[initial receipt](artifacts/scc-intervention-risk-family-20260921-v1/development01/execution_receipt.json),
+[refinement receipt](artifacts/scc-intervention-risk-family-20260921-v1/development02/execution_receipt.json),
+[transfer verification](artifacts/scc-intervention-risk-family-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/intervention-risk-family-20260921-v1/`.
+Certificate SHA256: 059e97ead3b33722d25b932fec7fa539e3ff6b78c5f0a66cd886564c4b969948.
+Refinement SHA256: 458d452399907aa022d31877b6feb1010db5bc99895efd0add34038bd134bdea.
 
 ## Historical evidence
 
