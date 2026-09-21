@@ -6,6 +6,8 @@ A mathematical account of the intended mechanism, established results, and remai
 
 Evidence cutoff: LN-239. The subsequent repository refresh is administrative. This document is a dated synthesis of an active research program, prepared as a precursor to a formal paper. It reports neither a working intrinsic SCC mechanism nor a general impossibility theorem.
 
+![Cover illustration: circular sections with perspective construction lines](../geometric-studies/projected_sections.svg)
+
 <!-- DOCUMENT BODY -->
 
 # Executive summary

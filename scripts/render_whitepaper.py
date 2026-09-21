@@ -10,6 +10,7 @@ import hashlib
 import json
 import re
 import subprocess
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
@@ -25,6 +26,7 @@ DOCUMENT_TITLE = "Safety–Capability Coupling Program"
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE = REPOSITORY / "deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md"
 OUTPUT = REPOSITORY / "output/pdf/Safety_Capability_Coupling_Whitepaper.pdf"
+ILLUSTRATION = REPOSITORY / "deliverables/geometric-studies/projected_sections.svg"
 LATEX_HEADER = r"""
 \usepackage{fancyhdr}
 \usepackage{titlesec}
@@ -51,6 +53,34 @@ LATEX_HEADER = r"""
 """
 
 
+def draw_cover_illustration(document) -> None:
+    """Place the approved SVG polylines as native PDF vectors."""
+    root = ET.parse(ILLUSTRATION).getroot()
+    paths = []
+    for element in root.findall("{http://www.w3.org/2000/svg}polyline"):
+        coordinates = [tuple(map(float, point.split(","))) for point in element.attrib["points"].split()]
+        paths.append((coordinates, float(element.attrib["stroke-width"]), element.attrib["stroke"]))
+    minimum_x = min(x for coordinates, _, _ in paths for x, y in coordinates)
+    maximum_x = max(x for coordinates, _, _ in paths for x, y in coordinates)
+    maximum_y = max(y for coordinates, _, _ in paths for x, y in coordinates)
+    scale = 480 / (maximum_x - minimum_x)
+    document.saveState()
+    document.setLineCap(1)
+    document.setLineJoin(1)
+    for coordinates, width, color in paths:
+        path = document.beginPath()
+        for index, (x, y) in enumerate(coordinates):
+            point = (66 + (x - minimum_x) * scale, 235 + (maximum_y - y) * scale)
+            if index == 0:
+                path.moveTo(*point)
+            else:
+                path.lineTo(*point)
+        document.setStrokeColor(HexColor(color))
+        document.setLineWidth(width * scale)
+        document.drawPath(path, fill=0, stroke=1)
+    document.restoreState()
+
+
 def write_cover(destination: Path) -> None:
     """Create the cover using embedded type and vector drawing operations."""
     font_directory = Path(__import__("reportlab").__file__).parent / "fonts"
@@ -59,34 +89,35 @@ def write_cover(destination: Path) -> None:
     document = canvas.Canvas(str(destination), pagesize=(612, 792), invariant=1)
     document.setTitle(DOCUMENT_TITLE)
     document.setFillColor(HexColor("#18344A"))
-    document.rect(56, 683, 48, 5, fill=1, stroke=0)
+    document.rect(56, 743, 48, 5, fill=1, stroke=0)
     document.setFont("DocumentSans", 10)
-    document.drawString(56, 654, "RESEARCH WHITEPAPER")
+    document.drawString(56, 714, "RESEARCH WHITEPAPER")
     title_style = ParagraphStyle("DocumentTitle", fontName="DocumentSansBold", fontSize=30,
                                  leading=38, textColor=HexColor("#18344A"))
     title = Paragraph("Safety–Capability<br/>Coupling Program", title_style)
     _, title_height = title.wrap(500, 160)
-    title.drawOn(document, 56, 615 - title_height)
+    title.drawOn(document, 56, 675 - title_height)
     body_style = ParagraphStyle("CoverDescription", fontName="DocumentSans", fontSize=12,
                                 leading=19, textColor=HexColor("#3B4E5D"))
     description = Paragraph("A mathematical account of the intended mechanism,<br/>"
                             "established results, and remaining construction requirements.", body_style)
     _, description_height = description.wrap(495, 120)
-    description.drawOn(document, 56, 478 - description_height)
+    description.drawOn(document, 56, 562 - description_height)
+    draw_cover_illustration(document)
     document.setStrokeColor(HexColor("#B8C9CD"))
-    document.line(56, 355, 556, 355)
+    document.line(56, 210, 556, 210)
     document.setFillColor(HexColor("#18344A"))
     document.setFont("DocumentSansBold", 11)
-    document.drawString(56, 324, "Version 1.0")
+    document.drawString(56, 187, "Version 1.0")
     document.setFont("DocumentSans", 11)
-    document.drawString(56, 301, "20 September 2026")
+    document.drawRightString(556, 187, "20 September 2026")
     note_style = ParagraphStyle("CoverStatus", fontName="DocumentSans", fontSize=10,
                                 leading=16, textColor=HexColor("#3B4E5D"))
     note = Paragraph("Evidence through LN-239. A synthesis of an active research program, "
                      "prepared as a precursor to a formal paper. The record establishes "
                      "neither a working intrinsic SCC mechanism nor a general impossibility theorem.", note_style)
     _, note_height = note.wrap(470, 120)
-    note.drawOn(document, 56, 242 - note_height)
+    note.drawOn(document, 56, 152 - note_height)
     document.setFont("DocumentSans", 9)
     document.drawRightString(556, 57, "1")
     document.save()
@@ -148,7 +179,9 @@ def main() -> None:
         writer.write(output_stream)
     receipt = {"source": str(SOURCE), "source_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
                "output": str(OUTPUT), "output_sha256": hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),
-               "pages": len(PdfReader(OUTPUT).pages)}
+               "pages": len(PdfReader(OUTPUT).pages),
+               "illustration": str(ILLUSTRATION),
+               "illustration_sha256": hashlib.sha256(ILLUSTRATION.read_bytes()).hexdigest()}
     (work_directory / "render_receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt, indent=2))
 

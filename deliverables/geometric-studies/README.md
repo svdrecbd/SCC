@@ -1,10 +1,12 @@
 # Geometric cover studies
 
 Design drafts for the Safety–Capability Coupling Program cover.
-No study has been placed in the document. The selected direction is the original
-option 02, with its ovals changed to true circles and its rectangles reduced in
+The approved cover illustration is the original option 02, with its ovals changed
+to true circles and its rectangles reduced in
 height by 20% about their original centers. Circle sizes and spacing are unchanged;
 the surrounding construction lines follow the shortened rectangles.
+It is installed as vector artwork on the opening page of the
+[program whitepaper](../../output/pdf/Safety_Capability_Coupling_Whitepaper.pdf).
 The alternate circular-sequence and common-chord
 compositions were rejected and removed; do not use them for further development.
 

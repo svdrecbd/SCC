@@ -16379,8 +16379,10 @@ All work was local document maintenance; no research computation or training ran
 
 The subsequent cover revision uses the requested title “Safety–Capability Coupling
 Program” and removes the redundant program-name footer. Four separately drawn
-[geometric studies](deliverables/geometric-studies/README.md) are available for
-design review; none is installed in the document. The body text is unchanged.
+[geometric studies](deliverables/geometric-studies/README.md) were prepared for
+design review. The user approved option 02 with true circles and rectangles
+20% shorter; that exact geometry is now installed as vector artwork on the opening
+page. The body text is unchanged.
 
 ## Historical evidence
 
