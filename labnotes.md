@@ -22,13 +22,20 @@ unlimited prefix snapshots 125,362. All 1,714,167 repeated terminal answers matc
 Copying, lookup and storage costs remain separate. These strengthen recovery-cost
 and coverage controls; acquisition overhead has not supplied a mechanism.
 
-**Research gate — [LN-228–230](#ln-230).** Before implementation, explain why a
-candidate resists an intact-cognition behavioral bypass under its full, justified
-resource contract. Keep conditional functional coupling, enforcement and durable
-damage separate. Repair that restores protection does not refute conditional
-coupling; bypassing an intact judgment can defeat enforcement. No candidate in the
+**Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
+advancing a complete protective mechanism to implementation, explain why it resists
+an intact-cognition behavioral bypass under its full, justified resource contract.
+A narrower conditional coupling result is evaluated on genuine removal and useful
+loss; enforcement and durability require additional arguments when claimed.
+Restoring both functions does not refute conditional coupling. No candidate in the
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
+
+**Next conceptual question — [LN-242](#ln-242).** Determine whether reusable useful
+competence in a declared controller family requires functional availability of an
+independently fixed risk judgment. Seek a resource-accounted reduction or a
+certified separating successor. Numerical contracts remain to be specified; this
+is an intermediate availability question, not a demonstrated execution dependency.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -16383,6 +16390,45 @@ Program” and removes the redundant program-name footer. Four separately drawn
 design review. The user approved option 02 with true circles and rectangles
 20% shorter; that exact geometry is now installed as vector artwork on the opening
 page. The body text is unchanged.
+
+<a id="ln-242"></a>
+### LN-242 — 2026-09-21: canonical whitepaper and next-decision clarification
+
+Promoted the two-column [whitepaper](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)
+to canonical version 1.1, with the user-provided authorship and affiliation.
+Palatino now covers text, titles, headings, tables, captions and diagram labels;
+compatible Pagella mathematics supplies specialized symbols. Added that typography
+standard to project and personal instructions. Preserved the prior source and both
+PDF layouts in the [version 1.0 archive](docs/archive/whitepaper-v1/README.md).
+
+Reorganized the argument around the claim, preserving computations, bounded
+dependence and the next decision. A running risk-assessment controller grounds
+the definitions. A claim-and-state map distinguishes removal, behavioral override
+and repair without implying a modular architecture. The admission checklist now
+separates core conditional coupling from additional enforcement and durability
+claims; this clarifies the earlier gate rather than admitting a new complete
+mechanism. Recoverability of judgment information remains distinct from necessary
+execution of a judgment procedure.
+
+The proposed next conceptual question concerns a finite-state, partially observed,
+stationary controller family with public interfaces, an independently fixed harm
+event and threshold, and independently scored useful tasks. Specify all memory,
+execution, approximation, observation, copy and repair budgets before evaluation.
+Seek either a charged reduction from every high-utility successor to risk judgments,
+or a certified successor retaining utility while those judgments are unavailable.
+Paired worlds may certify information-level separation; failure of one decoder
+cannot. A reduction needs explicit error, coverage and severity bounds and still
+leaves the gap to necessary execution and destructive loss of a reusable procedure.
+Neither certificate has been established for this proposed family. Numerical
+contracts are not yet fixed, and no candidate or training run is admitted here.
+
+The revision retains the existing mathematical results, including all prior display
+equations, and moves correction history into the evidence appendix. Full-width
+tables and unhyphenated headings clarify the hierarchy. Document verification
+checks equations, fonts, links, page bounds and the rendered layout. Sources before
+editing, comparison receipts and rendering outputs are preserved in
+[the revision evidence](artifacts/scc-whitepaper-revision-20260920-v2/).
+This is a document revision and conceptual specification; no new experiment ran.
 
 ## Historical evidence
 

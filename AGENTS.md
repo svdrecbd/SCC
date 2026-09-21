@@ -8,6 +8,13 @@ This applies universally, not only to the one example that follows: a script tha
 deploys dashboards is `deploy_dashboards.sh`, not `push_dashboards.sh`. That is one
 illustration of the principle, not the extent of it.
 
+# Typography standard
+
+Use Palatino throughout human-facing documents: body text, titles, headings,
+bylines, tables, captions and figure labels, unless the user specifies otherwise.
+Use a compatible Palatino-family mathematics font where specialized mathematical
+symbols require it. Keep historical artifacts unchanged unless a revision is requested.
+
 # Project working instructions
 
 Read `labnotes.md` before research work or status interpretation. It is the

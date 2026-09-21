@@ -56,6 +56,7 @@ environment notes are in [operations](../OPERATIONS.md).
 - [Initial budget assessment](budget/ASSESSMENT_2026-09-09.md) and
   [pilot proposal](budget/PILOT_450_PROPOSAL.md) — dated assumptions, not current spend limits.
 - [Dated shareable deliverables](../../deliverables/README.md).
+- [Whitepaper version 1.0](whitepaper-v1/README.md) — source and both earlier layouts.
 - [Full supporting-evidence inventory](evidence-index.md), moved out of the labnotes.
 
 [Old-to-new path map](path-map.json). The September 20 refresh moved dated documents

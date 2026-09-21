@@ -9,8 +9,8 @@ Synthetic authorization tasks are laboratory proxies, not the intended endpoint.
 
 ## Start here
 
-1. **[Safety–Capability Coupling Program](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)** — readable mathematical synthesis through LN-239,
-   with proofs, limitations and references. [Editable source](deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md).
+1. **[Safety–Capability Coupling Program](output/pdf/Safety_Capability_Coupling_Whitepaper.pdf)** — canonical two-column whitepaper, version 1.1: mathematical results through LN-239,
+   claim boundaries and the next research decision. [Editable source](deliverables/scc-whitepaper/Safety_Capability_Coupling_Whitepaper.md).
 2. **[Labnotes: current position](labnotes.md#current-position)** — assessment,
    research gate and complete chronology, grouped into expandable phases.
 3. **[Mechanism target](MECHANISM_TARGET.md)** — what the project is trying to

@@ -163,10 +163,10 @@ def main():
                ("02", "Projected sections", "Successive sections under one perspective map.", projected_sections),
                ("03", "Intersecting planes", "Three coordinate planes and their shared axes.", intersecting_planes),
                ("04", "Ruled surface", "Two straight-line families forming one continuous surface.", ruled_surface)]
-    font_directory = Path(__import__("reportlab").__file__).parent / "fonts"
-    title_font = ImageFont.truetype(str(font_directory / "Vera.ttf"), 30)
-    label_font = ImageFont.truetype(str(font_directory / "Vera.ttf"), 23)
-    caption_font = ImageFont.truetype(str(font_directory / "Vera.ttf"), 17)
+    font_path = Path("/System/Library/Fonts/Palatino.ttc")
+    title_font = ImageFont.truetype(str(font_path), 30)
+    label_font = ImageFont.truetype(str(font_path), 23)
+    caption_font = ImageFont.truetype(str(font_path), 17)
     board = Image.new("RGB", (1680, 1570), PAPER)
     renderer = ImageDraw.Draw(board)
     renderer.text((58, 44), "GEOMETRIC STUDIES", fill=INK, font=title_font)
