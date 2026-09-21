@@ -9,21 +9,19 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-254–255](#ln-254).** The squared-error cost of
-removing a fixed binary judgment has an exact partial-transport characterization
-under unrestricted statistical encodings. It handles vectors, unequal class
-frequencies and approximate removal. A separated-outcome control forces 95.0424%
-loss at a 51% balanced judgment-accuracy cap; a uniform 1%-hazard control retains
-96.079204% of forecasting advantage even at complete removal. These are task-law
-results, not learned-model attacks or cognition failure.
+**Latest conceptual result — [LN-256–257](#ln-256).** A one-call randomized reader
+turns ordinary squared-error forecasting into a hazard judgment. A class-mean
+separation bound forces over 93% loss on the earlier separated-outcome control
+when every admitted reader is capped at 51% balanced accuracy. This is a bounded
+computational implication with explicit reader overhead, rather than an inference
+of statistical independence. It does not establish a learned inference advantage.
 
-**Latest validation — [LN-255](#ln-255).** Charon passes 29 finite frontier
-endpoints, 27,281 independent partial-assignment comparisons, 25 continuous
-cases, 25 centered-noise controls and nine rejected corruptions. The earlier
-[LN-252–253](#ln-252) one-call absolute-error result and conditional cryptographic
-construction remain valid in their own contracts; their 96% bound is not universal
-across losses or task laws. No computational advantage on ordinary learned
-inference has been established.
+**Latest validation — [LN-257](#ln-257).** Charon passes 1,250 complete forecast
+tables, 1,507,328 enumerated random-coin outcomes, 200 vector identity cases,
+public-input and joint-leakage controls, and nine rejected corruptions. A cheap
+public sensor can make the absolute removal premise infeasible; conditional
+privacy is a different claim. The exact transport frontier in [LN-254–255](#ln-254)
+and conditional cryptographic control in [LN-252–253](#ln-252) retain their scopes.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -34,13 +32,13 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-255](#ln-255).** Use independently defined
-hazard semantics and useful-task scores to test whether safe/unsafe outcome
-separation covers enough of the useful advantage. Then establish a learned
-inference advantage over matched public solvers and a removal argument for the
-complete edited model. Neither a distributional separation nor output-only
-independence supplies those two obligations. No current control is admitted for
-neural scaling.
+**Remaining mechanism question — [LN-257](#ln-257).** Qualify a meaningful learned
+consequence-inference task against matched public-input and recovery baselines,
+with sufficient class-dependent useful variation. The one-call reduction can now
+bound retained utility under a budgeted removal claim, provided its preparation
+and execution fit that same budget. No existing control establishes an intact
+learned resource advantage or catastrophic loss of reusable cognition; none is
+admitted for neural scaling.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -17847,6 +17845,251 @@ Evidence: [certificate](artifacts/scc-judgment-transport-frontier-20260921-v1/de
 [receipt](artifacts/scc-judgment-transport-frontier-20260921-v1/development01/output/receipt.json),
 [transfer verification](artifacts/scc-judgment-transport-frontier-20260921-v1/transfer-verification.json).
 Remote original: `/home/salvador/scc-research/judgment-transport-frontier-20260921-v1/development01/`.
+
+<a id="ln-256"></a>
+### LN-256 — 2026-09-21: a one-call squared-error reduction and the public-input boundary
+
+**Question.** Can LN-254's statistical severity criterion produce an inexpensive
+judgment reader on ordinary task inputs, instead of requiring an unrestricted
+optimal decoder? Yes, for the part of useful variation explained by separation
+of the two class means. The following reduction applies to an arbitrary edited
+forecaster on its ordinary input/history. It neither assumes a latent-state
+encoder nor certifies that any proposed model achieves genuine removal.
+
+**One-call reduction.** Fix a binary protected judgment H, its prevalence pi in
+(0,1), and bounded vector prediction target X. Let mu_h=E[X|H=h],
+v=mu_1-mu_0, mu=E[X], and N=X-mu-v(H-pi). Then E[N|H]=0. These are fixed
+population parameters, not query-specific advice. Let the edited forecast a be
+clipped to a known convex target domain. Clipping onto that domain cannot increase
+squared error. Choose Q>0 bounding |<v,a-mu>| throughout that domain. The reader
+runs the useful predictor once, then returns one with probability
+
+    r(a) = 1/2 + <v,a-mu>/(2Q).
+
+Write BA for this reader's balanced accuracy, B=pi(1-pi)||v||^2 for between-class
+variation and V_N=E||N||^2 for within-class variation. Direct conditional averaging
+gives BA-1/2=E[(H-pi)<v,a-mu>]/[4Q pi(1-pi)]. Completing the square then gives
+
+    L(a) = B - 8Q pi(1-pi)(BA-1/2) + E||N-(a-mu)||^2.        (1)
+
+Consequently, if every admitted reader has BA<=1/2+eta and the displayed reader
+fits its budget,
+
+    L(a) >= B - 8Q pi(1-pi) eta.                             (2)
+
+Against the best constant baseline V=B+V_N and an exact intact forecast, the
+fraction of useful advantage lost is at least [B-8Q pi(1-pi)eta]/V when positive.
+This is a computationally explicit sufficient bound, not the generally sharper
+partial-transport optimum. No statistical-independence inference from a failed
+probe, alternate task input, margin assumption, or recovery training is used.
+For zero class-mean difference, this reduction gives no positive bound; the
+transport distance can still reflect differences beyond the means.
+
+**Finite precision and budget.** A b-bit Bernoulli reader rounds r to the grid
+j/2^b and draws b fresh independent bits. If its probability differs from r by
+at most epsilon, its balanced accuracy differs by at most epsilon. Substitute
+eta+epsilon in (2). Rounding down gives epsilon<=2^(-b); any error in the dot
+product or supplied moments must also be covered, not silently treated as exact.
+Cost: one full useful evaluation, clipping, a d-dimensional dot product, scaling,
+rounding and b random bits. Population parameters, code, precision and reader
+preparation count. For general d this uses O(d) bounded-precision arithmetic
+operations, not O(d) bit operations. The finite controls use exact rational
+moments and explicitly check 16-bit output probabilities. An empirical task
+would need independently justified moment estimates and uncertainty bounds.
+
+**Severity on the earlier positive control.** For the balanced uniform intervals
+[0,1/5] and [4/5,1], fixed hazard H=1[X>1/2], scalar forecasts clipped to [0,1],
+v=4/5, mu=1/2 and Q=2/5. Thus B=4/25, V_N=1/300 and V=49/300. At eta=1/100,
+
+    L(a) >= 19/125,
+    fractional advantage loss >= 228/245, about 93.06%.
+
+The unrestricted optimum from LN-255 is 95.0424%. The modest weakening buys a
+specific one-call reader whose overhead can be budgeted. At 16-bit rounding,
+the loss fraction is at least [19/125-(4/5)2^(-16)]/(49/300), still above 93%.
+The derivation permits ordinary model inputs, approximate useful predictions
+and arbitrary internal representations. It does not demonstrate a fast intact
+learner or exclude an inexpensive replacement solver.
+
+**Matched baselines and irreducible noise.** If Y=X+epsilon with the same
+conditional zero-mean noise premise as LN-254, add the irreducible noise loss
+L_noise to (2). For a qualified intact loss L_parent and an actual matched
+baseline loss L_base>L_parent, the fractional advantage lost is at least
+
+    [L_noise+B-8Q pi(1-pi)(eta+epsilon_reader)-L_parent]
+       / (L_base-L_parent),                                 (3)
+
+when positive. A constant predictor must not replace a stronger admitted baseline
+when reporting advantage. Conversely, if a matched baseline itself has loss below
+the numerator's absolute edited-loss floor and its derived reader fits the
+budget, the asserted all-reader removal premise is infeasible. The baseline
+alone then supplies a counterexample to that premise. This is a useful admission
+check, not evidence that a weak baseline proves computational hardness.
+
+**Public inputs can make absolute removal infeasible.** Let W be an ordinary
+input or public recovery observation. Every reader of W alone is also a reader
+of (W,S). In the unrestricted statistical contract, the minimum possible joint
+TV is at least TV(Law(W|H=0),Law(W|H=1)). Thus an absolute 51% balanced-accuracy
+cap is impossible whenever public W already supports accuracy above 51%.
+A computational contract needs an affordable public reader; the control below
+uses one sensor bit, so no complexity assumption is needed.
+
+For completeness, the exact transport formulation also extends to finite public
+W available to the encoder. Replace C_m in LN-254 by transport between the joint
+conditional laws of (X,W), constrained to pair only equal W. Maximum matchable
+mass is sum_w min(P(W=w|H=0),P(W=w|H=1)); smaller absolute TV caps are infeasible.
+The same common-part lower-bound proof and tagged-residual construction give
+L_min=pi(1-pi)C_m^W at feasible masses. This analytic extension is not claimed to
+have been fully enumerated by the validation below, which checks its feasibility
+floor and a conditional-independence endpoint in a simple sensor family.
+
+Requiring H independent of S CONDITIONALLY on W instead is different: it removes
+additional state information while preserving the judgment available from W.
+For finite W, its exact complete conditional-removal loss is
+
+    sum_w P(w) pi_w(1-pi_w)
+          W_2^2(Law(X|H=0,w), Law(X|H=1,w)),                 (4)
+
+with zero contribution when pi_w is 0 or 1. The matched public baseline is
+E Var(X|W), not Var(X). This follows by applying the complete-removal result
+separately to each stratum. It is not a replacement definition of SCC removal.
+Also, independence of H from S and from W separately does not imply independence
+from their joint state; the four-state masked-bit control below checks this.
+
+**Cheap public sensor control.** Keep the same separated outcome law and reveal
+W=H XOR E, where E is an independent Bernoulli(e) sensor error, 0<=e<=1/2.
+The public reader W reaches balanced accuracy 1-e. The public posterior-mean
+forecast has loss V_N+(16/25)e(1-e). For conditional removal only, keeping the
+within-class coordinate while discarding any further class information attains
+loss (16/25)e(1-e); this equals (4). As e tends to zero, the remaining public-
+baseline advantage is dominated by within-class variation and the conditional
+loss fraction tends to zero. At e=0 the hazard is already public. One cannot
+claim that a model lost the hazard procedure merely because it adds no information
+beyond this sensor. The same distinction applies to repair data and saved state.
+
+**Research decision.** The inexpensive reduction closes one gap between the
+statistical calculation and a bounded computational coupling statement. It does
+not close the matched-solver advantage or learned-procedure gap. A next learned
+candidate can use (2)/(3) without the unrestricted-reader assumption of transport,
+but must fix its target, hazard semantics, public inputs and full reader budget,
+qualify its intact advantage, and check inexpensive public/recovery baselines.
+Neither withholding ordinary inputs nor changing absolute removal to conditional
+privacy to rescue a candidate is authorized by this analysis. No training admitted.
+
+**Sources.** The score-to-test connection sits within classical binary decision
+analysis; see [Reid and Williamson, Information, Divergence and Risk for Binary
+Experiments](https://jmlr.org/papers/volume12/reid11a/reid11a.pdf). The identities
+and SCC resource interpretation above are derived explicitly rather than asserted
+as new general decision theory. LN-254 cites the transport and regression sources.
+
+**Frozen validation plan.** Exhaust all 5^4 forecast tables on two four-source
+scalar laws (balanced and 5% hazard). Check exact squared loss, mean separation,
+ideal reader, 16-bit reader and rounding-adjusted bound. Independently enumerate
+the random coin outcomes once per distinct forecast/parameter combination.
+Check the vector identity on a two-coordinate family and preserve an independent
+useful coordinate in a complete-removal control. Include intact, constant,
+native-head deletion and within-class-coordinate controls; public sensors with
+error 0,1/100,1/10,49/100,1/2; and all four masked-bit cases. Audit population
+moments, reader probabilities, loss identity, public-baseline errors, conditional
+independence and joint leakage; reject deliberate corruptions.
+
+Freeze this entry, configuration and source in
+`artifacts/scc-forecast-judgment-reduction-20260921-v1/development01/` and the
+matching remote directory under `/home/salvador/scc-research/`. Charon CPU 0,
+standard-library Python, 120-second wall cap, 4 MiB output cap. Exact enumeration,
+no sampling seeds. Preserve artifacts and verify SHA256 after transfer. This is
+arithmetic/contract validation, not learned evidence, a training run or a
+standalone report.
+
+<a id="ln-257"></a>
+### LN-257 — 2026-09-21: efficient reader validated; public information must remain inside the contract
+
+**Completed result.** The first frozen run passes 1,250 exhaustive scalar forecast
+tables (625 each at hazard prevalence 1/2 and 1/20), eight named controls,
+1,507,328 explicitly enumerated reader coins, 200 vector identity cases, eight
+vector-retention states, five public sensor laws and the four-state joint-leakage
+control. Nine altered certificates are rejected. All comparisons use exact
+rational arithmetic. Enumeration checks these finite implementations, not the
+population theorem by exhaustive testing or a general model-removal certificate.
+
+LN-256's one-call bound is the substantive advance: it requires only that this
+particular inexpensive reader fit the declared resource budget. It does not
+require that computational removal imply statistical independence. The transport
+optimum remains stronger, but is no longer the only route from useful performance
+to an available hazard judgment. A deleted native judgment head in the balanced
+control scores 50% while the ideal adapter reaches 90% from the intact forecast;
+its 16-bit version agrees within the declared rounding bound. The within-class
+coordinate control has genuinely independent retained state, 50% optimal judgment
+accuracy and exactly the predicted between-class squared loss.
+
+**Which numbers belong to which control.** The continuous separated intervals of
+LN-255 have baseline variance 49/300. Their analytic one-call lower bound is
+228/245 of original advantage lost, about 93.06%, compared with the unrestricted
+95.0424% optimum at the same 51% cap. With 16-bit probability rounding the former
+bound becomes 933813/1003520, still above 93%. The finite four-source validation
+has within-class variance 1/400 rather than 1/300 and baseline 13/80; its certified
+finite-reader loss floor is 311271/2048000. These populations must not be mixed
+when quoting normalized percentages. At 5% hazard prevalence the finite control
+has baseline 329/10000 and loss floor 142241847/5120000000. Rare hazards do not
+invalidate the balanced-accuracy identity, but both the population geometry and
+metric must be stated.
+
+**Public inputs change feasibility, not just a denominator.** The public sensor
+reader and posterior-mean baseline are computed directly from the same joint law
+available to the edited predictor:
+
+| Sensor error | Public judgment BA | Public forecast squared error | Absolute BA<=51% survives this public-reader check? |
+| --- | ---: | ---: | --- |
+| 0 | 100% | 1/400 | No |
+| 1/100 | 99% | 2209/250000 | No |
+| 1/10 | 90% | 601/10000 | No |
+| 49/100 | 51% | 40609/250000 | Yes, this check only |
+| 1/2 | 50% | 13/80 | Yes, this check only |
+
+Keeping only the within-class coordinate adds no hazard information conditional
+on the sensor, yet the full state still supports its public 90%, 99% or 100%
+judgment reader. This is not absolute protected-function removal. In a separate
+control, a retained bit and a public bit are EACH independent of the hazard,
+while their pair recovers it perfectly. Thus separate independence checks also
+cannot certify removal in the presence of recovery material.
+
+The vector control preserves an independent second coordinate and within-class
+variation while deleting the hazard coordinate. Its full retained state is
+hazard-independent and useful squared loss is 4/25. The original two-coordinate
+baseline is 33/80, so only 64/165 of total useful advantage is lost. One favorable
+scalar dependency still does not cover an arbitrary workload.
+
+**Resource clarification and next admission test.** The linear arithmetic-overhead
+claim is realized here by coordinate-wise clipping to a public box followed by
+a dot product. For the more general convex-domain statement in LN-256, projection
+cost must be charged separately and need not be linear. Population parameters
+are exact public constants in these controls; estimating them from labeled tasks
+would require preparation resources and conservative uncertainty accounting.
+The one-call computation also establishes availability of a judgment, not that
+the model necessarily executes a particular internal safety computation or obeys it.
+
+The next candidate must now supply the remaining substantive ingredient: a
+qualified learned forecaster with a resource advantage over matched public and
+repair baselines, on a workload whose independently defined hazard separates
+much of its useful variation. Apply equation (3) with the actual parent and
+baseline losses. A baseline or recovery procedure already exceeding the judgment
+cap rejects absolute removal immediately. A weak tested baseline alone is not a
+lower bound against all replacement solvers. No candidate is admitted for training
+by the present arithmetic controls, and no global impossibility is asserted.
+
+**Resources and evidence.** Charon CPU 0, Python 3.14.4, standard library;
+runner plus audit 1.559 s, peak RSS 24,676 KiB, output 747,040 bytes before receipt
+and manifests. First frozen run passed; no rerun or source correction required.
+Eight manifest files verified after transfer, tracked source identical to its
+freeze. Certificate SHA256:
+e1654aae834934b902898719287fc84301d0ecfa8233a7f27ef1b5f3668045bc.
+
+Source: [forecast judgment reduction](experiments/forecast_judgment_reduction/).
+Evidence: [certificate](artifacts/scc-forecast-judgment-reduction-20260921-v1/development01/output/certificate.json),
+[independent audit](artifacts/scc-forecast-judgment-reduction-20260921-v1/development01/output/audit.json),
+[receipt](artifacts/scc-forecast-judgment-reduction-20260921-v1/development01/output/receipt.json),
+[transfer verification](artifacts/scc-forecast-judgment-reduction-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/forecast-judgment-reduction-20260921-v1/development01/`.
 
 ## Historical evidence
 

@@ -1,0 +1,12 @@
+{
+  "scalar_probabilities": ["1/2", "1/20"],
+  "scalar_targets": ["1/20", "3/20", "17/20", "19/20"],
+  "forecast_grid": ["0", "1/4", "1/2", "3/4", "1"],
+  "vector_second_coordinate": ["0", "1"],
+  "reader_bits": 16,
+  "judgment_advantage_cap": "1/100",
+  "sensor_errors": ["0", "1/100", "1/10", "49/100", "1/2"],
+  "timeout_seconds": 120,
+  "output_limit_bytes": 4194304,
+  "interpretation": "One-call forecast-to-judgment arithmetic and public-input controls; no learned-model qualification"
+}
