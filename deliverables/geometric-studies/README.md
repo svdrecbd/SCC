@@ -2,8 +2,10 @@
 
 Design drafts for the Safety–Capability Coupling Program cover.
 No study has been placed in the document. The selected direction is the original
-option 02, with only its ovals changed to true circles. Its boxes, projection lines,
-centers and spacing are unchanged. The alternate circular-sequence and common-chord
+option 02, with its ovals changed to true circles and its rectangles reduced in
+height by 20% about their original centers. Circle sizes and spacing are unchanged;
+the surrounding construction lines follow the shortened rectangles.
+The alternate circular-sequence and common-chord
 compositions were rejected and removed; do not use them for further development.
 
 ![Comparison](geometric_studies.png)

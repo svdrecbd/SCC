@@ -89,6 +89,7 @@ def projected_sections():
     vanishing_point = (716, 274)
     center = (218, 323)
     radius_x, radius_y = 100, 211
+    radius_y *= 0.8
 
     def project(horizontal, vertical, depth):
         scale = 1 / (1 + depth * 0.54)
