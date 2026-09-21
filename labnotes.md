@@ -9,20 +9,21 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-252–253](#ln-252).** A one-call randomized reader
-converts absolute-error prediction gain into a fixed-threshold judgment advantage.
-Genuine removal to at most 51% judgment accuracy forces at least 96% loss of the
-specified predictive advantage. Secure public-key encryption supplies a joint,
-conditional computational control with a nontrivial baseline. This establishes
-compatibility of the two mathematical ingredients, not a learned cognition
-mechanism: its fast capability is decryption of artificially encoded inputs.
+**Latest conceptual result — [LN-254–255](#ln-254).** The squared-error cost of
+removing a fixed binary judgment has an exact partial-transport characterization
+under unrestricted statistical encodings. It handles vectors, unequal class
+frequencies and approximate removal. A separated-outcome control forces 95.0424%
+loss at a 51% balanced judgment-accuracy cap; a uniform 1%-hazard control retains
+96.079204% of forecasting advantage even at complete removal. These are task-law
+results, not learned-model attacks or cognition failure.
 
-**Latest validation — [LN-253](#ln-253).** Charon passes 1,040 exact inequality
-cases, eight forecast controls, 1,232 elementary encryption cases and nine deliberate
-corruptions. All 32 deliberately small keys are recovered publicly. These are
-implementation checks, not finite-parameter security or learned-model evidence.
-The earlier complete-trajectory frontier in [LN-249](#ln-249) remains closed as
-a positive scaling route; the new result uses a different task and loss.
+**Latest validation — [LN-255](#ln-255).** Charon passes 29 finite frontier
+endpoints, 27,281 independent partial-assignment comparisons, 25 continuous
+cases, 25 centered-noise controls and nine rejected corruptions. The earlier
+[LN-252–253](#ln-252) one-call absolute-error result and conditional cryptographic
+construction remain valid in their own contracts; their 96% bound is not universal
+across losses or task laws. No computational advantage on ordinary learned
+inference has been established.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -33,12 +34,13 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-253](#ln-253).** Transfer the joint result to
-ordinary learned inference with an independently meaningful protected judgment and
-broad useful-task coverage. With a 96% bound on covered predictive advantage, an
-80% whole-workload bound requires at least five sixths of its original advantage
-to be covered. Neither that coverage nor a learned computational separation is
-established. The cryptographic control is not admitted for neural scaling.
+**Remaining mechanism question — [LN-255](#ln-255).** Use independently defined
+hazard semantics and useful-task scores to test whether safe/unsafe outcome
+separation covers enough of the useful advantage. Then establish a learned
+inference advantage over matched public solvers and a removal argument for the
+complete edited model. Neither a distributional separation nor output-only
+independence supplies those two obligations. No current control is admitted for
+neural scaling.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -17580,6 +17582,271 @@ Evidence: [audit](artifacts/scc-median-judgment-coupling-20260921-v1/development
 [execution receipt](artifacts/scc-median-judgment-coupling-20260921-v1/development01/output/receipt.json),
 [transfer verification](artifacts/scc-median-judgment-coupling-20260921-v1/transfer-verification.json).
 Remote original: `/home/salvador/scc-research/median-judgment-coupling-20260921-v1/development01/`.
+
+<a id="ln-254"></a>
+### LN-254 — 2026-09-21: squared-error coupling as a partial transport problem
+
+**Question and decision.** Transfer LN-252's severity question to ordinary squared-
+error forecasting without changing the protected judgment into an event chosen by
+our scoring rule. The relevant object is the distance between the useful-outcome
+laws in the two fixed judgment classes. This yields an exact statistical frontier,
+including approximate removal, rather than a claim that training will create a
+computational obstruction. Keep the original useful score and hazard definition
+fixed when applying this diagnostic.
+
+**Contract.** Let X be a scalar or Euclidean vector with finite second moment;
+H in {0,1} is a predetermined judgment, with P(H=1)=pi in (0,1). An encoder observes
+(X,H), retains arbitrary randomized state S, and forecasts X from S. When H is a
+fixed predicate of X, this adds no encoder information. All surviving instance
+information, including reader-visible randomness, must be included in S; there
+is no fresh correlated observation or uncounted parent copy. Fixed public laws
+are available on both sides. This is an unrestricted statistical representation
+problem, not a runtime-bounded model-editing game. Its intact forecaster observes X.
+
+Use balanced judgment accuracy BA=(true-positive rate+true-negative rate)/2.
+Writing P_h for Law(X|H=h), and mu_h for Law(S|H=h), the best unrestricted reader
+has BA=(1+TV(mu_0,mu_1))/2. Thus a 51% cap means TV<=delta=1/50, even for a rare
+hazard. Ordinary majority-class accuracy is a different criterion and does not
+certify independence. At delta=0 the whole retained state is independent of H.
+
+For m in [0,1], define the unnormalized partial transport cost
+
+    C_m(P_0,P_1) = inf integral ||x_0-x_1||^2 dGamma,
+
+where Gamma has mass m and its two marginals are dominated by P_0 and P_1.
+The exact minimum squared prediction error under the declared removal constraint is
+
+    L_min(delta) = pi(1-pi) C_(1-delta)(P_0,P_1).                 (1)
+
+At complete removal C_1=W_2^2, the squared Wasserstein distance. There is no
+normalization by the retained mass inside C_m. With an exact intact forecaster
+and the best constant baseline, the guaranteed fraction of useful advantage lost is
+
+    D(delta) = pi(1-pi) C_(1-delta)(P_0,P_1) / E||X-E X||^2.    (2)
+
+A nonzero denominator is required. These are population quantities, not estimates
+certified by a finite dataset.
+
+**Proof of the lower bound.** The common part nu=mu_0 wedge mu_1 has mass at least
+1-delta. Select a submeasure of that mass. At each retained state s, independently
+couple the conditional source laws X|H=0,S=s and X|H=1,S=s, and integrate against
+nu. The resulting Gamma has the required dominated marginals. For any forecast a,
+
+    (1-pi)||x_0-a||^2 + pi||x_1-a||^2
+      = pi(1-pi)||x_0-x_1||^2
+        + ||a-((1-pi)x_0+pi x_1)||^2.
+
+Retained-state mass outside the common part contributes nonnegative error. Integrate
+the identity and minimize Gamma to obtain (1)'s lower bound. Randomized predictors
+can include their independent coins in S without changing its conditional TV.
+
+**Attainment.** Choose an optimal partial coupling Gamma. For each matched source,
+retain its pair identifier (or the pair itself) and forecast its pi-weighted mean.
+Both conditional state laws give this common part mass 1-delta. On unmatched mass,
+retain the exact source with a class-specific tag; its prediction error is zero.
+The tags give disjoint residual state laws, hence TV=delta exactly. Conditional
+sampling of a partner implements this channel, including atom splitting when
+needed. This proves equality; when an optimizer is not supplied, approximating
+couplings yield the same infimum. It does not establish an inexpensive encoder
+for arbitrary distributions. For finite rational supports, partial assignment
+certificates below verify the construction. The complete-removal endpoint is a
+Wasserstein-barycenter calculation already present in the literature, not a claimed
+new transport theorem. The SCC-specific use here is a severity/admission diagnostic.
+
+**Explicit continuous cases.** In one dimension, for disjoint ordered uniform
+intervals [l_0,l_0+w_0] and [l_1,l_1+w_1], with gap g=l_1-l_0-w_0>=0, choose the
+upper m fraction of the lower interval and the lower m fraction of the upper one.
+Moving selected mass closer can only decrease squared distance; uncrossing pairs
+then gives the quantile coupling. Its cost is
+
+    C_m = integral_0^m [g+w_0 m+(w_1-w_0)t]^2 dt
+        = m [g+(w_0+w_1)m/2]^2 + (w_1-w_0)^2 m^3/12.          (3)
+
+For X uniform on [0,1] and the unchanged threshold H=1[X>tau], pi=1-tau and
+
+    D(delta) = 4 (1-delta)^3 tau(1-tau)(1-tau+tau^2).
+
+At tau=1/2, complete judgment erasure loses exactly 75% of squared-error advantage,
+leaving 25%; at BA<=51%, retained advantage is 29.4106%. LN-252's 96% absolute-error
+bound does not transfer to squared error. For tau=19/20, complete erasure retains
+81.9025%; for tau=99/100 it retains 96.079204%. These witnesses erase judgment
+information, not merely a native judgment output.
+
+At complete removal the encoder is especially simple: retain u=x/tau below the
+threshold and u=(x-tau)/(1-tau) above it. Both conditional u laws are uniform.
+Forecast tau(1-tau)+[tau^2+(1-tau)^2]u. This is a constant-operation statistical
+encoder/readout; a learned implementation that still computes or stores x has
+NOT removed H. Its program, weights, inputs, intermediate state and recovery
+resources would all need a separate removal argument.
+
+A positive severity control uses equally probable X uniform on [0,1/5] or [4/5,1],
+with the fixed H=1[X>1/2]. At complete removal, squared-error loss is 4/25 against
+baseline 49/300: loss of 48/49 of the advantage. Equation (3) also gives the exact
+approximate-removal value. Severe coupling under squared error is therefore
+possible for this statistical task when the safe/unsafe separation accounts for
+most useful variation. Choosing that distribution to manufacture an experiment
+would not establish that ordinary cognitive tasks have this property.
+
+**Noise and workload coverage.** For an actual forecast target Y=X+epsilon with
+E[epsilon|X,H,S]=0 and finite variance, the noise adds the same E||epsilon||^2 to
+intact, constant-baseline and edited losses. The normalized advantage in (2) is
+unchanged. This covers explicitly irreducible forecast noise; it does not permit
+the encoder to observe or exploit the noise, nor assert a learned Bayes predictor.
+For a vector target, the same proof uses squared Euclidean distance. Independent
+useful coordinates can dominate the baseline variance while leaving transport
+cost unchanged. Example: X=(H,N), balanced H and independent N uniform on {0,1,2,3}.
+Dropping H while retaining N loses only 1/6 of total squared-error advantage.
+This is an explicit failure of broad coverage, rather than an unspecified caveat.
+
+**Computational and semantic boundary.** A strong value of D is a necessary
+statistical test for a proposed severe-loss claim in this unrestricted contract;
+a weak value supplies a preserving channel. For a restricted computational
+contract, realizing that channel must also fit the allowed resources. The lower
+bound remains valid for a smaller encoder class IF genuine statistical removal is
+established; computational reader failure alone does not establish it. No source
+entropy, transport distance or output-only independence certificate proves that
+a reusable learned risk-assessment procedure was removed. If public task input
+already reveals H, it must be included and the stated removal premise can fail.
+Nor does the construction establish an intact advantage over matched public
+inference solvers. Both remaining mechanism obligations stay open.
+
+**Sources and relation to the record.** LN-245–249 used matching for finite
+categorical errors; this is its continuous, vector squared-error counterpart,
+with an exact partial-mass formulation and useful-advantage normalization.
+[Chzhen et al., Fair Regression with Wasserstein Barycenters, Theorem 2.3](https://papers.neurips.cc/paper_files/paper/2020/file/51cdbd2611e844ece5d80878eb770436-Paper.pdf)
+characterizes optimal demographic-parity regression through barycenters.
+[Gordaliza et al., Obtaining Fairness using Optimal Transport Theory](https://proceedings.mlr.press/v97/gordaliza19a/gordaliza19a.pdf)
+studies conditional-distribution repair, while
+[Rassouli and Gunduz, Optimal Utility-Privacy Trade-off with Total Variation Distance](https://arxiv.org/abs/1801.02505)
+provides related privacy/utility optimization. Their fairness or privacy criteria
+are mathematical references, not claims that SCC is an application of demographic
+fairness, and not evidence of destructive neural coupling. The proof above is
+included so its scope and approximate-removal constants can be audited directly.
+
+**Frozen validation plan.** Five finite rational families, including unequal
+conditional support sizes, separated outcomes and a two-dimensional independent
+coordinate. Expand conditional atom masses to at most six equally weighted atoms.
+A subset dynamic program computes every partial-mass optimum; an independent
+auditor enumerates every partial injection and reconstructs retained-state laws,
+optimal balanced and ordinary judgment accuracy, squared error and constant
+baselines. Five continuous interval families at TV caps 0,1/50,1/10,1/2,1 are
+checked by independent exact quadratic integration and two-point centered noise.
+Reject altered transport cost, mass, witness, prevalence, baseline, judgment score,
+continuous moment and noise accounting. These are finite arithmetic controls,
+not empirical task qualification or a machine-checked general proof.
+
+Freeze this entry and `experiments/judgment_transport_frontier/` in
+`artifacts/scc-judgment-transport-frontier-20260921-v1/development01/`, with matching
+remote source under `/home/salvador/scc-research/`. Charon CPU 0, standard-library
+Python, 120-second total wall cap, 4 MiB output cap. No random seeds are needed for
+exact enumeration. Preserve failures and transfer with SHA256 verification. No
+GPU, training, whitepaper revision or new standalone narrative document is planned.
+
+<a id="ln-255"></a>
+### LN-255 — 2026-09-21: exact transport frontier validated; task selection gains a severity criterion
+
+**Result.** The first frozen run passes all five finite families and their 29
+partial-removal endpoints. Independent enumeration checks 27,281 partial
+injections, and direct scoring checks 216 retained states, including conditional
+class laws and both judgment metrics. The 25 continuous cases agree with exact
+quadratic integration; 25 additional centered-noise calculations preserve the
+advantage ratios. Nine deliberate certificate corruptions are rejected. These
+are validation cases, not trained models, sampled reader attacks or a formal
+verification of the general proof.
+
+The finite optimization includes stochastic encoders through LN-254's reduction
+to partial transport. After replicating rational conditional atoms, the unit-
+capacity partial transport polytope at integer matched cardinality has matching
+vertices. One way to see this is to complete the matrix with unmatched-mass dummy
+rows and columns to a doubly stochastic matrix with a zero dummy/dummy block.
+Its permutation decomposition gives partial injections of the prescribed size.
+The auditor enumerates those injections independently of the runner's subset
+dynamic program. The continuous interval optimum follows from choosing the
+nearest tails and monotone pairing; integration checks its value, not optimality
+by a finite grid search.
+
+**How much useful advantage must be lost?** Each row uses its original constant-
+mean squared-error baseline and an exact intact forecaster. The hazard is a fixed
+threshold, not a learned classifier selected after observing the result.
+
+| Population | Complete judgment removal: useful advantage lost | BA at most 51%: useful advantage lost |
+| --- | ---: | ---: |
+| Uniform [0,1], threshold 1/2 | 75% | 70.5894% |
+| Uniform [0,1], threshold 3/4 | 60.9375% | 57.3538875% |
+| Uniform [0,1], threshold 19/20 | 18.0975% | 17.03322222% |
+| Uniform [0,1], threshold 99/100 | 3.920796% | 3.690221828832% |
+| Equal-mass [0,1/5] and [4/5,1], threshold 1/2 | 48/49, about 97.96% | 95.0424% |
+
+BA is balanced accuracy; equal weight is given to conditional sensitivity and
+specificity. At complete removal all instance state is independent of the hazard;
+for rare hazards the optimal ordinary accuracy remains the majority prior, not
+50%. The table does not silently rebalance the useful evaluation population.
+Approximate removal at 51% ordinary accuracy would be impossible for the rare-
+hazard rows and is not the premise used here.
+
+The separated-outcome control shows that strong coupling can survive squared
+error, approximate removal and irreducible forecast noise without encrypted
+inputs. It is a statistical positive result. The uniform controls demonstrate
+why that result depends on the actual distribution of useful variation. At a
+1% hazard rate, there is an explicit judgment-independent representation retaining
+over 96% of the scalar forecasting advantage. The independent-coordinate vector
+control retains 5/6 of full-vector advantage while erasing the hazard exactly.
+Neither the choice of squared error nor a broad output vector supplies coverage
+on its own.
+
+**What this advances.** Equation (2) in LN-254 turns the previously unspecified
+coverage obligation into a computable quantity for this representation contract:
+class probability product times partial transport cost, divided by useful target
+variance. It can reject a weak population before training, or identify one where
+genuine removal would be statistically destructive. The favorable scalar control
+passes the prior 80% severity screen, but it does not pass mechanism admission.
+No number here is a measured loss of general cognition.
+
+For a noisy ordinary forecast Y=X+epsilon, with the stated conditional zero-mean
+noise assumption, the intact Bayes loss is the noise variance. That variance
+cancels when normalizing useful advantage. If the actual intact learner has
+additional squared-error excess e_parent, the guaranteed fractional advantage
+loss is instead at least
+
+    (L_min(delta)-e_parent)/(Var(X)-e_parent),
+
+when the denominator is positive; a negative lower bound provides no severe-loss
+claim. Replace Var(X) by total coordinate variance for vectors. This guards
+against treating an exact statistical parent as a qualified learned model.
+
+**The surviving mechanism gap.** This work transfers the severity calculation to
+a standard forecasting loss and specifies favorable and unfavorable task laws.
+It does not transfer the cryptographic computational advantage to ordinary
+inference. The witness encoders are source-state transformations. A post-processing
+layer can make a forecast independent of H while the underlying model still
+contains the source forecast and fully supports risk assessment. That operation
+is not genuine removal in the intended editable-model threat model. Model weights,
+ordinary inputs, intermediate values, repair data and all permitted readers must
+be considered before making a procedural-removal claim.
+
+The next concrete admission question is therefore whether an independently useful
+consequence-inference task has both a high transport severity ratio across its
+whole useful score and an intact resource advantage over matched solvers. Fix the
+hazard boundary, input law and score before evaluating it; do not fabricate a
+separated population or redefine useful cognition to force a favorable ratio.
+Then assess the complete edited state, not just displayed predictions. A favorable
+ratio is evidence about a necessary statistical dependency, not proof of an
+unavoidable computational bottleneck. No training, hardware enforcement proposal,
+whitepaper revision or claim of general impossibility follows from this result.
+
+**Resources and evidence.** Charon CPU 0, Python 3.14.4, standard library, total
+runner/audit time 0.165 s, peak RSS 20,164 KiB; 58,819 output bytes before receipt
+and manifests. No failed qualification or duplicate run. Eight manifest entries
+matched SHA256 after transfer to the mounted SD store, and tracked source matches
+the executed freeze. Certificate SHA256:
+f46b54576bbf24dc324531282dd31b39d3ae87ef766bf20940a6bf91ea3918e8.
+
+Source: [judgment transport frontier](experiments/judgment_transport_frontier/).
+Evidence: [certificate](artifacts/scc-judgment-transport-frontier-20260921-v1/development01/output/certificate.json),
+[independent audit](artifacts/scc-judgment-transport-frontier-20260921-v1/development01/output/audit.json),
+[receipt](artifacts/scc-judgment-transport-frontier-20260921-v1/development01/output/receipt.json),
+[transfer verification](artifacts/scc-judgment-transport-frontier-20260921-v1/transfer-verification.json).
+Remote original: `/home/salvador/scc-research/judgment-transport-frontier-20260921-v1/development01/`.
 
 ## Historical evidence
 

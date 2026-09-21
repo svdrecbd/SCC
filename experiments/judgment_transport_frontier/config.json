@@ -1,0 +1,21 @@
+{
+  "finite_families": [
+    {"name": "balanced_intervals", "hazard_probability": "1/2", "lower_points": [["1/16"], ["3/16"], ["5/16"], ["7/16"]], "upper_points": [["9/16"], ["11/16"], ["13/16"], ["15/16"]]},
+    {"name": "unequal_support", "hazard_probability": "3/4", "lower_points": [["1/16"], ["3/16"]], "upper_points": [["3/8"], ["5/8"], ["7/8"]]},
+    {"name": "reversed_support", "hazard_probability": "1/4", "lower_points": [["1/8"], ["3/8"], ["5/8"]], "upper_points": [["13/16"], ["15/16"]]},
+    {"name": "separated_intervals", "hazard_probability": "1/2", "lower_points": [["1/40"], ["3/40"], ["5/40"], ["7/40"]], "upper_points": [["33/40"], ["35/40"], ["37/40"], ["39/40"]]},
+    {"name": "independent_coordinate", "hazard_probability": "1/2", "lower_points": [["0", "0"], ["0", "1"], ["0", "2"], ["0", "3"]], "upper_points": [["1", "0"], ["1", "1"], ["1", "2"], ["1", "3"]]}
+  ],
+  "continuous_families": [
+    {"name": "uniform_median", "hazard_probability": "1/2", "lower_interval": ["0", "1/2"], "upper_interval": ["1/2", "1"]},
+    {"name": "uniform_upper_quartile", "hazard_probability": "1/4", "lower_interval": ["0", "3/4"], "upper_interval": ["3/4", "1"]},
+    {"name": "uniform_rare_hazard", "hazard_probability": "1/20", "lower_interval": ["0", "19/20"], "upper_interval": ["19/20", "1"]},
+    {"name": "uniform_very_rare_hazard", "hazard_probability": "1/100", "lower_interval": ["0", "99/100"], "upper_interval": ["99/100", "1"]},
+    {"name": "separated_consequences", "hazard_probability": "1/2", "lower_interval": ["0", "1/5"], "upper_interval": ["4/5", "1"]}
+  ],
+  "conditional_variation_caps": ["0", "1/50", "1/10", "1/2", "1"],
+  "independent_noise_amplitude": "1/10",
+  "timeout_seconds": 120,
+  "output_limit_bytes": 4194304,
+  "interpretation": "Exact statistical representation frontier and arithmetic validation; no learned-model removal or computational separation claim"
+}
