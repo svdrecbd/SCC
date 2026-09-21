@@ -9,20 +9,20 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest conceptual result — [LN-245–247](#ln-247).** The finite judgment-removal
-versus useful-prediction frontier reduces to weighted matching across arbitrary
-stochastic retained-state encodings. Under the stated conditional-uniformity
-assumptions, complete binary judgment erasure can preserve at least half the
-intact predictive advantage. This is a source-information result with unrestricted
-readers, not a general obstruction to procedural SCC. Earlier editable-wrapper
-counterexamples remain in [LN-239](#ln-239).
+**Latest conceptual result — [LN-248–249](#ln-249).** Under the declared binary
+source-removal contract, a representative controller preserves at least half the
+intact expected nonnegative task reward, even for complete tasks. The earlier
+matching frontier and conditional-uniformity bound remain in [LN-245–247](#ln-247).
+These concern source information and expected performance, not removal of a reusable
+alignment procedure in each individual model. No general impossibility follows.
 
-**Latest experimental result — [LN-247](#ln-247).** Eighteen finite conditions and
-162 frontier endpoints pass independent exact audits on Charon. The linked
-controller optimally retains 75% useful-bit and 91.67% scalar accuracy after complete
-instance-judgment erasure at horizons4/8. A simple three-bit successor attains these
-values; its update procedure survives. This controller does not justify scaling.
-Earlier replay-cost evidence remains in [LN-222–225](#ln-225).
+**Latest experimental result — [LN-249](#ln-249).** Exact complete-trajectory
+frontiers pass 16 conditions and 144 endpoints on Charon. With the instance judgment
+fully erased, the linked controller retains 50.00076% whole-trajectory accuracy at
+64 steps. A separate world-feedback control restores the judgment to 99.99924%
+accuracy; its updater survived. Further scoring/horizon variants of this controller
+are closed as a positive scaling route. Earlier replay-cost evidence remains in
+[LN-222–225](#ln-225).
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -33,14 +33,12 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Next conceptual question — [LN-242](#ln-242).** Determine whether reusable useful
-competence in a declared controller family requires functional availability of an
-independently fixed risk judgment. Seek a resource-accounted reduction or a
-certified separating successor. The initial state-information control now has the
-exact boundary in [LN-247](#ln-247).
-A reusable-procedure contract must justify how it escapes that boundary with matched
-observation and repair resources; its numerical budgets remain unspecified. This
-is an intermediate availability question, not a demonstrated execution dependency.
+**Next conceptual question — [LN-242](#ln-242), refined in [LN-249](#ln-249).**
+Specify a reusable risk-assessment procedure across fresh environments, an independent
+useful adaptation task, and a whole-family functional-removal criterion. Explain
+why its proposed dependency survives alternative implementations and the charged
+recovery methods already in the record before another screen. Numerical budgets
+for that procedural contract remain unspecified; no new candidate is admitted.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -16748,6 +16746,211 @@ Evidence: [final independent audit](artifacts/scc-judgment-utility-frontier-2026
 [verified transfer](artifacts/scc-judgment-utility-frontier-20260921-v1/transfer-verification.json).
 Source: [runner and auditor](experiments/judgment_utility_frontier/).
 Remote originals: `/home/salvador/scc-research/judgment-utility-frontier-20260921-v1/`.
+
+<a id="ln-248"></a>
+### LN-248 — 2026-09-21: complete-task preservation bound and trajectory qualification
+
+**Question.** The user requested continued work after LN-247. Test whether moving
+from individual predictions to entire successful trajectories escapes the weak
+severity result, and separate that change from removal of a reusable procedure.
+LN-179 already warns against interpreting long-chain failure as lost cognition;
+the new obligation is an explicit optimum and a horizon-independent preservation
+argument, not another independent-error extrapolation. No positive scaling or
+learned training is proposed.
+
+**Analytic complete-task bound.** Let S be uniform on 2n source states, with a
+balanced binary judgment H(S). Pair opposite-H states and retain only the pair
+identifier. The full retained instance payload is independent of H. Select one
+member of the pair with an independent fair coin and execute the intact procedure
+initialized for that representative. The coin/representative identity can be
+public without revealing the actual H. The representative equals S with
+probability 1/2 for every S. On that event the entire computation is the intact
+one, for any task horizon. For rewards in [0,1], expected successor reward is
+therefore at least half the intact expected reward, because all other outcomes
+have nonnegative reward. If intact success is 1, complete-task success is at least
+1/2. A deterministic selection of representatives achieves at least the mean for
+a fixed evaluation law. This does not require conditional uniformity of useful
+answers. It does require an admitted way to encode pairs and execute representative
+procedures; general tables/code may be enormous, so it is not an efficient attack
+against arbitrary learned models. The concrete controller below has a cheap
+representative and needs no lookup table.
+
+The information-removal statement concerns the initial retained state and
+transcripts computed from it using source-independent queries/randomness. Real
+world feedback can reveal H; the initial independence argument does not guarantee
+removal after such feedback. The reward bound still applies to the matched branch
+in an interactive task, but persistent removal then needs its own premise.
+A nonzero baseline b must be accounted for separately: with intact reward 1, a
+1/2 success floor gives retained advantage at least (1/2-b)/(1-b), when positive.
+This is an analytic argument, not a novelty claim or a machine-checked theorem.
+It complements the perfect-privacy setting cited in LN-245; those sources are
+not claimed to prove this SCC interpretation.
+
+**Finite contract.** Reuse the exact LN-245 source (p,u,h), linked and independent
+transition families, uniform 16-state law, all-state encoders and unrestricted
+readers. The protected instance judgment remains h. Each query is a uniformly
+random binary action word of length L in {0,1,2,4,8,16,32,64}, independent of S.
+Success now requires EVERY (p,u) output, including the initial output and all L
+subsequent outputs, to match the intact trace. The full trace is one categorical
+answer per query, not a product of per-step accuracy estimates. Counterfactual
+queries supply no real-world observations. Bayes judgment-error thresholds remain
+k/16 for k=0..8, with the stochastic interpolation argument from LN-245.
+
+Compute exact disagreement counts without enumerating 2^64 action words. On the
+product of two controller graphs, an agreement recurrence discards a pair as soon
+as their observable outputs differ, then sums both possible next actions. Save all
+65 depth layers for both 16-by-16 product graphs. Use these integer counts as the
+matching costs and the frozen prior matching implementation for every threshold.
+An independent auditor imports neither runner nor parent implementation: derive
+agreement counts from the number of phase-zero opportunities, verify every layer,
+check the recurrence and all matching witnesses, and independently enumerate 8!
+assignments at each of the 16 family/horizon conditions. Also enumerate every
+source/action word at configured horizons through 8 and compare full traces.
+
+For initial phase p, let m_p(L) count times t<L with p+t=0 modulo 4. The candidate
+closed-form optimum for the linked family at complete removal is
+
+    A_L = 1/2 + (1/8) sum_p 2^(-m_p(L)).
+
+The simple witness keeps (p,u), erases h, and predicts with h=0. Opposite-H states
+with unequal initial (p,u) disagree immediately; equal ones agree throughout
+exactly when every exposing action is zero. Hence the eight diagonal pairing
+costs are no greater than any off-diagonal cost; taking the cheapest k diagonal
+edges is an independent optimality certificate. Verify the optimal constant-state
+baseline conditional on the public query, not an assumed constant fraction. For
+the linked family it is [2-product_p(1-2^(-m_p(L)))]/16, since source trace classes
+have size at most two and the four exposure-position sets are disjoint.
+
+**Matched feedback control, separately scored.** A second mode permits an actual
+(p,u) observation after each action to both intact and edited machines. Predict
+before observing. Retain the initial (p,u); initialize h estimate to zero. The
+first p=0,a=1 observation determines h from the useful-bit change. Thereafter
+predictions are exact. Record judgment recovery and per-step accuracy as restoration,
+not as continuing complete removal. Before an exposing observation, both hazard
+values produce identical data; afterwards the hazard is identified exactly in
+this noiseless family. Direct word enumeration verifies this learner through
+horizon 8; the closed-form exposure counts cover the longer horizons. This is
+ordinary source-dependent environmental evidence, explicitly counted as L observed
+useful bits (phase is already predictable), not free repair advice. The control
+shows whether the updater survived; it is not a newly discovered learning method.
+
+**Validation, resources and evidence.** Freeze this entry, new configuration and
+source, prior `judgment_utility_frontier/runner.py` as `matching_reference.py`,
+and `causal_quotient/models.py` as `parent_models.py`, before execution. Source:
+`experiments/trajectory_judgment_frontier/`. Require complete inventory, exact
+integer/rational agreement, source hashes and rejection of changed agreement
+counts, action-word denominator, recurrence cells, judgment error, feedback result
+and horizon inventory. Use Charon CPU 0, runner cap 120 seconds, independent audit
+cap 300 seconds, total qualification cap 600 seconds and output cap 64 MiB.
+Preserve development and use a fresh final path for corrections. Transfer and
+verify evidence on the mounted SD drive. No GPU, training, monitoring or changes
+to historical source. This is a bounded diagnostic of complete-task scoring and
+feedback restoration; it does not count source-bit erasure as procedural removal.
+
+<a id="ln-249"></a>
+### LN-249 — 2026-09-21: complete trajectories preserve a coherent branch; feedback restores judgment
+
+**Completed qualification.** The first frozen qualification, `development01`,
+passes without source corrections: 16 family/horizon conditions, 144 matching
+frontier endpoints, 33,280 product-graph agreement cells, 645,120 independent
+assignment comparisons, 8,928 explicitly enumerated source/action-word pairs,
+and six corrupted-certificate controls. No duplicate final run was necessary;
+the original path is retained. The horizon-64 result uses exact integer counts
+and an independently checked closed form, not enumeration of all 2^64 words.
+Source snapshots and all failed-certificate controls are preserved.
+
+**Complete-task scoring does not force accumulation of independent errors.**
+The table requires every output in a trajectory to be correct, including the
+initial one. No fresh world observations are supplied in these rows. The entire
+retained payload is independent of h, so optimal judgment accuracy remains 50%.
+
+| Horizon | Optimal entire-trajectory accuracy | Retained advantage over the query-conditioned constant-state baseline |
+| --- | ---: | ---: |
+| 4 | 75% | 71.56% |
+| 8 | 62.5% | 58.09% |
+| 16 | 53.125% | 49.23% |
+| 32 | 50.1953125% | 46.82% |
+| 64 | 50.000762939% | 46.67% |
+
+All independent-family conditions retain 100% trajectory accuracy. In the linked
+family, at L=4r, the exact complete-removal optimum is
+
+    A_(4r) = 1/2 + 2^(-r-1).
+
+Thus length alone drives success toward 1/2, not zero. The retained successor
+simulates with h=0 and is correct for every future input sequence when the actual
+h is zero. Errors on the other branch are correlated through the same missing
+bit. Multiplying individual prediction accuracies would miss this coherent
+surviving branch. The whole-trajectory baseline tends to 1/16, so the surviving
+advantage tends to 7/15; even this stricter score cannot reach the prior 80%
+advantage-loss screen. The full intermediate-removal frontier is certified by
+matching, not just the endpoint witness.
+
+LN-248's representative-selection argument also establishes a 1/2 intact-reward
+floor for arbitrary nonnegative bounded complete-task rewards under its binary,
+equal-fiber, unrestricted-representation assumptions. That analytic statement
+has no conditional-uniformity premise and does not depend on task length. Its
+general implementation may require large code/tables; the tested successor uses
+three retained instance bits and the ordinary update rule. No efficiency claim
+for a general neural replacement follows.
+
+**Feedback exposes the surviving learner.** In the separately scored control,
+both machines receive the actual useful bit after each action. The successor
+predicts first, then updates. The first phase-zero/action-one observation reveals
+h exactly via a single XOR relation. Before it, the observations cannot distinguish
+h; afterwards the judgment is functionally restored. No hazard label or saved
+parent state is supplied. The feedback control uses L actual useful-bit observations
+per trajectory; its three-bit current (p,u) state gains one learned h bit, plus
+ordinary fixed code and counters.
+
+At L=64, optimal judgment accuracy is 131071/131072 (99.9992371%) and useful-bit
+accuracy across the initial output plus 64 predicted updates is
+1690829/1703936 (99.2307810%). The learner makes at most one useful-bit prediction
+error, at the first exposing action if h=1, and is correct thereafter. Recovery
+probability and accuracy at shorter horizons match direct exhaustive execution.
+These figures belong to the feedback condition: they must not be combined with
+the no-observation condition's claim that the judgment remains erased. Restoring
+both functions does not refute conditional coupling; it shows that the generic
+updating ability survived this source-state deletion. No irreversibility claim
+was tested or required.
+
+**Object and quantifiers.** The statistical removal criterion is averaged over
+source instances; it is not a certificate that each individual successor has
+lost an alignment-related algorithm. In particular, the representative-selection
+argument preserves an entire branch of the source population. Calling S a
+"program" would not change this: hiding one binary property of a program is not
+hiding its full reusable input/output procedure. Conversely a large family of
+protected judgments cannot silently be replaced by one binary label. These
+results settle the declared information-removal models, not the individual-model
+procedural target in MECHANISM_TARGET.md.
+
+**Next research decision.** Close further scoring/horizon variants of this
+controller. The next proposed object must specify a reusable map from observation
+histories and prospective interventions to an independently fixed harm judgment,
+across fresh environments. Useful tasks should separately test adaptation to
+changed dynamics and goals with the same observations and resources. Its removal
+criterion must range over the whole declared judgment family and admitted readers;
+its evidence must distinguish unavailable current-world information from inability
+to execute or reconstruct the procedure. This is a specification requirement,
+not authorization to train or a claim that a suitable candidate has been found.
+Require an explicit proposed dependency and charged replacement analysis before
+another computational screen. The existing linear/nonlinear procedural replacement
+results in LN-211–218 remain applicable; simply making the rule unknown or giving
+it a larger state graph does not address them.
+
+**Resources and evidence.** Charon CPU 0, Python 3.14.4; runner 0.042 s, audit
+1.329 s, runner peak RSS 23,412 KiB. Evidence including source and transfer receipts
+is approximately 383 kB. All 14 remote non-metadata files transferred to the SD
+store with matching SHA256 hashes. Certificate SHA256:
+09176a14cd2c225c8ac0b1923e03ab9a6aad323ebbb05cff59adc78bb7d6361b.
+No GPU work, training, monitoring or historical-source edits occurred.
+
+Evidence: [independent audit](artifacts/scc-trajectory-judgment-frontier-20260921-v1/development01/audit.json),
+[complete certificate](artifacts/scc-trajectory-judgment-frontier-20260921-v1/development01/output/certificate.json),
+[execution receipt](artifacts/scc-trajectory-judgment-frontier-20260921-v1/development01/output/receipt.json),
+[transfer verification](artifacts/scc-trajectory-judgment-frontier-20260921-v1/transfer-verification.json).
+Source: [trajectory frontier](experiments/trajectory_judgment_frontier/).
+Remote originals: `/home/salvador/scc-research/trajectory-judgment-frontier-20260921-v1/`.
 
 ## Historical evidence
 

@@ -13,6 +13,7 @@ not evidence that its candidate meets the SCC target. CPU jobs run on Charon.
 | Causal and dynamical reconstruction | [predictor recovery](predictor_recovery/), [causal quotient](causal_quotient/), [procedure realization](procedure_realization/), [nonlinear recovery](nonlinear_recovery/) | [LN-203–225](../labnotes.md#phase-203) |
 | Observation and acquisition cost | [partial observation](partial_observation/), [copy-aware recovery](copy_aware_recovery/) | [LN-203–225](../labnotes.md#phase-203) |
 | Judgment removal and retained utility | [exact prediction frontier](judgment_utility_frontier/) | [LN-245–247](../labnotes.md#ln-245) |
+| Complete trajectories and feedback restoration | [trajectory frontier](trajectory_judgment_frontier/) | [LN-248–249](../labnotes.md#ln-248) |
 
 The loose `*topology*`, gradient and optimizer scripts in this directory reproduce
 earlier exploratory probes. They remain with their original code and tests;

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "families": ["independent", "linked"],
+  "horizons": [0, 1, 2, 4, 8, 16, 32, 64],
+  "explicit_word_horizon": 8,
+  "runner_timeout_seconds": 120,
+  "audit_timeout_seconds": 300,
+  "output_limit_bytes": 67108864
+}
