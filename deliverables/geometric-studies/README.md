@@ -1,7 +1,22 @@
 # Geometric cover studies
 
-Four separate design drafts for the Safety–Capability Coupling Program cover.
-No study has been placed in the document.
+Design drafts for the Safety–Capability Coupling Program cover.
+No study has been placed in the document. The selected direction is option 02,
+revised below with circular geometry and independent compositions. The references
+set line quality and visual restraint, rather than a composition to reproduce.
+
+## Circular revisions
+
+![Circular revisions](circular_studies.png)
+
+| Study | Construction | Vector source |
+|---|---|---|
+| 02A Circular sequence | Five overlapping true circles; adjacent intersections define transverse chords | [SVG](circular_sequence.svg) |
+| 02B Common chord | Five true circles sharing two intersection points | [SVG](common_chord.svg) |
+
+Rebuild these revisions with [the circular drawing source](../../scripts/render_circular_studies.py).
+
+## Initial studies
 
 ![Comparison](geometric_studies.png)
 
