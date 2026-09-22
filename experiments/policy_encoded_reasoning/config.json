@@ -1,0 +1,14 @@
+{
+  "classification": "finite implementation control for policy-encoded reasoning; not a learned mechanism",
+  "gate_counts": [1, 2, 3, 4],
+  "input_count": 2,
+  "policy_values": [0, 1],
+  "policy_prior": "uniform",
+  "protected_queries": "which of two input fields may be disclosed",
+  "retained_state": "complete edited primitive table and public executor; excludes parent state and policy-dependent logs",
+  "execution_host": "charon",
+  "cpu_count": 1,
+  "wall_limit_seconds": 30,
+  "seed": null,
+  "training": false
+}

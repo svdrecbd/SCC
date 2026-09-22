@@ -9,21 +9,25 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current result — [LN-278–279](#ln-278).** Certified planning now has a
-repair-aware bound on graded constraint-solving quality, using a genuine
-positive/negative score gap. A sufficiently good partial assignment recovers the
-protected judgment; complete-witness failure alone is insufficient. Established
-PCP gap constructions can supply the score gap in principle, but they do not
-supply an internal learned mechanism or preserve partial productive utility by
-default. Public compilation alone is not admitted as the mechanism.
+**Current construction decision — [LN-280–281](#ln-280).** Reject the
+policy-encoded logic construction. A confidentiality policy participates in
+every primitive operation, but decoding four table entries preserves all circuit
+computation while erasing the original private policy. Simple deletion damages
+computation without genuinely erasing the policy. This is an executable control
+for the existing replacement obstacle, not a new positive mechanism.
 
-**Latest validation — [LN-279](#ln-279).** All 14,488 finite assignment checks
-agree with an independent evaluator. Near-solutions recover judgments and all
-30 one-bit-damaged outputs admit local repair. Three padded negative examples
-violate the needed score gap and are correctly rejected. These tiny examples
-are cheaply decidable and cannot establish genuine removal or hardness. The
-conditional 80% advantage-loss bound needs coverage constant kappa<=1.2152 at
-the stated numerical settings. No training or new benchmark is admitted.
+**Latest validation — [LN-281](#ln-281).** Exact preservation holds in all
+120,128 circuit/world/input cases across 15,016 circuits; gatewise induction
+extends it to arbitrary finite circuits. The identical edited states give exact
+chance recovery of the original private policy under the stated information
+boundary. Generic confidentiality checking remains intact when supplied a policy.
+The useful primitive has a cheap public implementation; no learned advantage,
+training or destructive cognition result follows.
+
+**Retained mathematical tool — [LN-278–279](#ln-278).** The repair-aware graded
+constraint bound addresses partial-witness quality, conditional on a valid score
+gap, workload coverage and genuine judgment removal. Public compilation alone
+does not build the internal dependency. Its finite controls remain evidence.
 
 **Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
 Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
@@ -46,15 +50,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-278–279](#ln-278).** Which internal
+**Remaining mechanism question — [LN-277–281](#ln-277).** Which internal
 alignment-related operation is indispensable to independently useful reasoning
-under allowed replacement and repair? The graded bound improves the assessment
-of a candidate once it exists; it does not construct that dependency. Applying
-it to original planning needs an efficient score/utility conversion, justified
-workload coverage and a nonvacuous computational-removal premise. None has been
-instantiated together. The earlier learned-policy and scheduling escapes remain.
-No general impossibility, training, forecasting download or model replication
-follows from this result.
+under allowed replacement and repair? Useful computation has survived the
+examined learned-policy factorization, public compilation and primitive-decoding
+edits. These specific failures do not establish general impossibility. A further
+candidate must supply useful computational advantage and a dependency that
+survives replacement; neither every-gate participation nor a stronger score
+supplies those by itself. No new candidate has earned training.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -20034,6 +20037,176 @@ Frozen [plan](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/l
 [manifest](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/manifest.sha256),
 and [transfer verification](artifacts/scc-constraint-gap-dependency-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/constraint-gap-dependency-20260921-v1/validation01/`.
+
+<a id="ln-280"></a>
+### LN-280 — 2026-09-21: policy-encoded reasoning construction and removal control
+
+**Construction decision.** Examine a deliberately strong structural dependency:
+a confidentiality policy bit participates in every elementary operation of a
+universal Boolean reasoning procedure. The question is whether destructive
+ablation establishes genuine functional coupling, or whether the useful
+procedure can be decoded before removing the policy. This is an implementation
+control for an explicit design, not another proposed training task.
+
+Two input fields have a balanced private policy H identifying which field is
+confidential. The protected queries ask whether copying field 0 or field 1
+violates that policy; J_H(i)=1[H=i]. General useful computation evaluates NAND
+circuits. A paired-execution checker also compares executions that agree on the
+public input to detect disclosure. This is a confidentiality proxy with an
+explicit normative label, not a model of full alignment.
+
+The stored primitive table is T_H=(1,1,1,0) XOR H, with H applied to every entry.
+Every intact gate reads T_H[2a+b] XOR H. The policy therefore participates in
+every gate, including gates used for equivalence and confidentiality reasoning.
+Circuit descriptions and inputs are public and independent of H. The measured
+useful endpoint is exact circuit evaluation; this unlearned universal procedure
+is not evidence of acquired cognitive advantage.
+
+**Edits and trigger.** All state and executor code are editable. The naive
+control sets the explicit H coordinate to zero and leaves T_H unchanged. The
+strong edit first decodes the four table entries, deletes H, and replaces the
+executor with plain table lookup. A second implementation extracts the intact
+primitive by four input/output queries. Both should yield the same four-bit NAND
+table in both policy worlds. Source and intermediate state are available during
+preprocessing; the final operational successor contains only the edited table
+and the public executor. No policy-specific parent, transcript, cache, filename
+or log is supplied to the successor. Archival parents remain evidence outside
+this operational boundary. They would restore the policy if admitted.
+
+Genuine removal in this finite contract means that even an unrestricted reader
+of the complete successor, public query and source-independent auxiliary inputs
+has at most 1/2 accuracy on J, under balanced H. Identical successors and opposite
+projection labels establish this. A generic verification procedure remains
+available when an external policy is supplied; its survival must not be called
+policy retention under the private-policy contract, or policy removal under a
+public-policy contract. No enforcement or durability claim is tested.
+
+**Predeclared validation.** Enumerate all ordered, acyclic NAND circuits with
+two inputs and one through four gates; the last gate is the output, repeated
+wires and unused gates are allowed. Expected count is 15,016 circuits, with
+120,128 circuit/world/input cases. Compare intact and decoded evaluation against
+an independent scalar Boolean evaluator. Report naive mismatch counts without
+interpreting them as genuine removal. Check whether T_H still recovers H after
+naive ablation; verify exact successor equality and the protected Bayes accuracy.
+Check that the generic confidentiality procedure still works for externally
+supplied policies. These finite checks support, but do not replace, the gatewise
+induction proving preservation for arbitrary finite circuits.
+
+**Admission and resources.** Exact useful preservation together with genuine
+policy erasure rejects this construction's core coupling claim. Naive damage
+alone does not admit it. Four primitive queries or four XORs and four table
+writes are charged to preprocessing; logical payload falls from five to four
+bits, excluding public executor and serialization overhead. No repair is needed
+by the successful edit. Supplying the original H is a one-bit repair that restores
+both functions and therefore ends the removal premise. A fixed k-input Boolean
+primitive can be tabulated in 2^k queries, which can be prohibitive for large k;
+no cheap whole-model compilation follows from this two-input example.
+
+Run deterministic standard-library checks on one Charon CPU, 30-second wall
+limit, no GPU or training. Freeze this entry, configuration, source and machine
+receipt under `artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/`
+before execution. Preserve any failure and verify transferred evidence hashes.
+
+**Relation to prior work.** This specializes the earlier decoding/re-execution
+obstacle to every-gate policy participation. It tests a concrete confidentiality
+construction, not a new general impossibility theorem. The standard paired-run
+interpretation of confidentiality follows Barthe, D'Argenio and Rezk,
+[Secure Information Flow by Self-Composition](https://cs.famaf.unc.edu.ar/~dargenio/node/27.html).
+The policy encoding and preserving edit here are independent finite controls;
+the cited work is not evidence for SCC.
+
+<a id="ln-281"></a>
+### LN-281 — 2026-09-21: primitive decoding removes the policy and preserves reasoning
+
+**Result.** Reject the LN-280 construction. Exact useful preservation and exact
+policy erasure coexist after a constant-size edit. Every-gate participation
+creates an encoding dependency, not an indispensable policy computation. This
+is an executable instance of the existing replacement obstacle, not a new
+positive mechanism or a new general impossibility result.
+
+For the intact state (T_H,H), let N=(1,1,1,0). The edit produces
+
+    E(T_H,H) = T_H XOR H = N.
+
+For any gate inputs a,b, the edited lookup returns exactly the intact decoded
+output. Induction over a topological ordering therefore preserves every wire and
+the output of every finite NAND circuit, regardless of circuit depth or size.
+This is an algebraic preservation argument; the enumeration checks the code.
+
+Both policy worlds produce the same complete operational table N. With the
+public query i independent of balanced H, the protected labels 1[H=i] are
+opposite in those worlds. Hence every reader, including a randomized unrestricted
+reader, has Bayes accuracy 1/2. Arbitrarily many adaptive executions of the same
+policy-independent successor do not change that conclusion: their transcript
+law is also identical in the two worlds. Policy-correlated auxiliary information
+would change the premise and is excluded explicitly.
+
+**Why destructive ablation was misleading.** Setting only the explicit H field
+to zero changes the primitive from NAND to AND when H=1. Across that world's
+60,064 circuit/input cases, 35,128 outputs change; 13,148 of its 15,016 circuits
+have at least one changed output. Yet the supposedly removed policy is still
+recovered exactly as H=T_H[0] XOR 1. In contrast, decoding the table before
+removing H changes zero outputs and genuinely removes the original private
+policy. Thus the damaging edit fails the removal test, while the genuine removal
+edit fails the claimed damage implication.
+
+**Measured checks.** All 120,128 circuit/world/input cases agree with independent
+Boolean evaluation for both intact and edited states. Direct decoding and
+four-query behavioral extraction return identical tables. All 60,064 checks of
+the generic confidentiality procedure pass when a policy is supplied externally.
+The one- through four-gate circuit sets contain 3, 9, 13 and 15 distinct truth
+tables respectively; no exhaustive coverage of all Boolean functions by four
+gates is claimed. Circuit universality and preservation at greater size follow
+from NAND and the induction, not from these counts.
+
+**The erased object matters.** This removes knowledge of which original field
+is private. It preserves the reusable procedure for checking confidentiality
+under a supplied policy. If the original policy is public or supplied again,
+the protected function is available again. Nor are all program-level leak labels
+balanced: a constant function leaks under neither policy. The exact chance claim
+is for the two projection/disclosure queries, not every possible program. No
+loss of a generic judgment procedure, behavioral enforcement or durable damage
+has been demonstrated.
+
+**Replacement cost and scope.** Four XORs and four writes decode the table;
+four intact primitive queries give the same result. Because NAND is publicly
+specified here, direct installation of its known table is an even cheaper
+alternative in source-information requirements. The operational logical payload
+is four bits instead of five, excluding the shared public interpreter, code and
+serialization overhead. The implementation uses one public executor with a
+zero default decoding bit when the policy field is absent; a plain-lookup
+executor is equivalent. No model replacement, training or repair is needed.
+
+More generally, an intact stateless k-bit-input, r-bit-output primitive with a
+fixed accessible interface can be tabulated with 2^k queries and r*2^k table
+bits. If its useful input/output function is independent of the private policy,
+that table is policy-independent as well. This rejects policy encodings around
+small primitives when those costs fit the attack contract. It does not give a
+cheap table for a large-input learned procedure, handle a hidden or stateful
+interface, or prove that policy-independent useful semantics exist in general.
+The relevant scale is the primitive's input domain and replacement cost, not
+the number of times the primitive is used in a large circuit.
+
+**Construction decision.** Do not train an encoded-primitive architecture on
+the strength of destructive single-variable ablations, or scale circuit size to
+make this dependency appear stronger. The useful operation here has a public,
+cheap independent implementation, so it fails the existing computational
+admission condition before any learning experiment. This control makes the
+failure explicit; it does not advance us to a successful candidate. Further
+mechanism work needs an actual source of useful computational advantage whose
+replacement is not already supplied by the construction. No such source was
+established in this work unit.
+
+**Evidence.** One Charon CPU, 0.718 seconds, peak 12,496 KiB. No randomness,
+training or GPU work. Eight manifest entries verified after transfer to the SD
+evidence store. [Source](experiments/policy_encoded_reasoning/),
+[frozen plan](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/labnotes_entry.md),
+[configuration](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/config.json),
+[validation](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/validation.json),
+[machine](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/machine.json),
+[manifest](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/manifest.sha256),
+[transfer verification](artifacts/scc-policy-encoded-reasoning-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/policy-encoded-reasoning-20260921-v1/validation01/`.
 
 ## Historical evidence
 
