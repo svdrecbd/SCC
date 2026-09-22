@@ -1,0 +1,15 @@
+{
+ "maximum_total_bytes": 5000000,
+ "source_revision": "f5de0ede8430809180254ee957abf36ed62579ef",
+ "sources": [
+  {"file":"published_figure_3.xlsx","url":"https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-021-03854-z/MediaObjects/41586_2021_3854_MOESM3_ESM.xlsx"},
+  {"file":"published_figure_4.xlsx","url":"https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-021-03854-z/MediaObjects/41586_2021_3854_MOESM4_ESM.xlsx"},
+  {"file":"upstream_notebook.ipynb","url":"https://raw.githubusercontent.com/google-deepmind/deepmind-research/f5de0ede8430809180254ee957abf36ed62579ef/nowcasting/Open_sourced_dataset_and_model_snapshot_for_precipitation_nowcasting.ipynb"},
+  {"file":"upstream_readme.md","url":"https://raw.githubusercontent.com/google-deepmind/deepmind-research/f5de0ede8430809180254ee957abf36ed62579ef/nowcasting/README.md"},
+  {"file":"flood_archive_metadata.json","url":"https://zenodo.org/api/records/10397664"},
+  {"file":"nowcasting_model_metadata.json","url":"https://storage.googleapis.com/storage/v1/b/dm-nowcasting-example-data/o?prefix=tfhub_snapshots%2F256x256%2F&maxResults=30"},
+  {"file":"nowcasting_data_metadata.json","url":"https://storage.googleapis.com/storage/v1/b/dm-nowcasting-example-data/o?prefix=datasets%2F&maxResults=30"}
+ ],
+ "report_minutes": [30,60,90],
+ "curve_policy": "Report every published CRPS and economic-value panel; compare original and recalibrated DGMR separately against every tabulated alternative. Do not select panels or costs by outcome."
+}

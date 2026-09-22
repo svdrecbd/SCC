@@ -9,21 +9,25 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest learned-model screen — [LN-266–269](#ln-266).** An unchanged, publicly
-pretrained 8.39-million-parameter forecaster was evaluated on 32 fixed ERCOT
-COAST demand windows. Against the strongest simple baseline it reduces mean
-squared error by only 4.75%, while worsening shortage-risk Brier scores at two
-of three capacities. It fails the predeclared 10% joint-improvement screen;
-no training or parameter edits are admitted. This is an existing-model task
-qualification result, not a removal experiment or a general negative theorem.
+**Next replication target — [LN-270–272](#ln-270).** Published rainfall nowcasting
+provides a better-supported task than the failed demand screen. A numerical audit
+of DGMR's source tables confirms improvements in regional probabilistic forecasts
+and warning-decision curves against PySTEPS, with material calibration and
+scale dependence. These are reanalysed published aggregates, not forecasts we
+reproduced. Select the unchanged official model for bounded interface validation
+and a frozen-policy comparison; no training or removal experiment is admitted.
 
-**Latest validation — [LN-269](#ln-269).** All 160 origin/method score pairs check
-independently; four corrupted certificates are rejected. Forty manifest entries
-verify after transfer to the SD store, including the preserved first interface
-failure. Evaluation took 73.25 seconds on one Charon CPU. The test is one region
-and 32 adjacent days, with 64 sampled forecast trajectories per day; its apparent
-4.75% point-prediction advantage remains uncertain under the descriptive block
-resampling. No learned computational separation has been established.
+**Latest validation — [LN-272](#ln-272).** Two source workbooks, all six forecast
+panels and three warning curves were inspected; 15 exact-area checks and six
+corruption checks pass. All 23 manifest entries verify after transfer. The audit
+also identifies optimized decision cutoffs and importance sampling that a new
+replication must handle explicitly. No model inference or environment changes.
+
+**Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
+Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
+4.75% lower MSE than the strongest simple baseline and worse risk Brier scores at
+two of three capacities. No training or edits followed. Its 160 score pairs and
+four corruption checks passed; the apparent MSE advantage remains uncertain.
 
 **Latest conditional mathematics — [LN-263–265](#ln-263).** The intervention-risk
 family bound strengthens single-judgment accounting, but its 77.90% conditional
@@ -40,14 +44,13 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-269](#ln-269).** Establish a robust learned
-advantage on a prespecified consequence-prediction workload and alignment-related
-risk family, then test genuine functional removal with efficient recovery
-controls. The first real pretrained demand screen has not passed that prerequisite.
-Do not select only its favorable capacity or equate probabilistic forecast
-accuracy with mandatory safety computation. A future screen must justify why
-its trained advantage should survive strong replacements before committing to
-training. Neither a working mechanism nor general impossibility follows.
+**Remaining mechanism question — [LN-272](#ln-272).** Reproduce joint useful and
+hazard-prediction advantage before attempting genuine functional removal with
+efficient recovery controls. Rainfall nowcasting supplies a documented next task,
+not the missing destructive mechanism. Public radar, retained forecast samples
+and alternate decoders must remain in the recovery accounting. Accurate forecasts
+and better warning decisions do not establish mandatory safety computation or
+catastrophic useful loss after removal. No general impossibility follows.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -18986,6 +18989,177 @@ Evidence: [evaluation](artifacts/scc-pretrained-demand-risk-20260921-v1/developm
 Remote original: `/home/salvador/scc-research/pretrained-demand-risk-20260921-v1/`.
 Evaluation SHA256: `4981985fb747c24b3ea47128e410cd98da7f7f952b18c86fad61824069cfaf5b`.
 Audit SHA256: `f08c46ba033d11f0849594c38787f25de446346b4ef63e6f642502ea59478238`.
+
+<a id="ln-270"></a>
+### LN-270 — 2026-09-21: published useful-forecast and hazard evidence review
+
+Search for a demonstrated learned advantage before another model experiment.
+Review three primary-source families, separating published evidence from our
+own reproduction:
+
+- [GenCast](https://arxiv.org/html/2312.15796v2): comparisons against ECMWF ENS
+  include probabilistic weather scores, extreme-event Brier scores and idealized
+  regional wind-power prediction. This is strong evidence for jointly useful and
+  hazard-relevant prediction. It is not a lower bound against all replacements.
+  The [official release](https://github.com/google-deepmind/weathernext/blob/main/docs/weathernext1_gen/README.md)
+  explicitly says Mini performance is not representative of the main models.
+  Do not transfer full-model claims to a convenient small checkpoint.
+- [Ravuri et al., DGMR](https://www.nature.com/articles/s41586-021-03854-z):
+  PySTEPS provides an established motion-based comparator. Published evaluations
+  cover probabilistic rain fields and warning-related decision value. The
+  [official release](https://github.com/google-deepmind/deepmind-research/tree/f5de0ede8430809180254ee957abf36ed62579ef/nowcasting)
+  supplies pretrained models and public example data. Inspect numerical source
+  tables before deciding whether the evidence warrants reproduction.
+- [Nearing et al., flood prediction](https://www.nature.com/articles/s41586-024-07145-1):
+  learned streamflow and extreme-flood results are relevant, but the AI and
+  GloFAS input products differ. The [archive](https://zenodo.org/records/10397664)
+  contains runnable models; input products must be obtained separately. Archive
+  metadata lists 14.52 GB of model outputs, 3.65 GB of trained models and
+  625 MB of metadata. This is not the first bounded reproduction choice.
+
+**Bounded numerical source audit.** Freeze development01 with this entry,
+configuration and acquisition/parser source. Download only DGMR Figures 3 and 4
+source workbooks, the pinned official notebook/README, and public archive/object
+metadata: five MB total cap, 120 seconds, one Charon CPU. The notebooks are read
+as data, never executed. No dependency installation, forecast inference, model
+weights or large weather datasets. Preserve original workbooks unmodified and
+extract labeled cells to JSON using Python's standard-library XML/ZIP parser;
+CPU placement takes precedence over a local spreadsheet runtime. Reject formula
+cells rather than treating cached formulas as independently verified results.
+
+Before opening the numeric tables, fix reporting of every CRPS and economic-value
+panel, 30/60/90-minute checkpoints, and all tabulated comparator methods. Keep
+original and recalibrated model curves separate. This is a published-evidence
+audit, not a preregistered replication, significance test or relaxation of the
+failed demand screen. No universal 10% cutoff is inferred from that earlier
+experiment. Admit a forecasting task for replication only if there is documented
+useful and hazard-relevant advantage against meaningful alternatives and an
+identified reproducible artifact path. Admission to train or claim SCC remains
+separate: a weather predictor is not itself an alignment mechanism.
+
+<a id="ln-271"></a>
+### LN-271 — 2026-09-21: numerical published-forecast audit specification
+
+Acquisition and schema checks pass. The CRPS workbook has average- and
+maximum-pooled panels, three spatial scales (1, 4 and 16 km), six methods, and
+18 leads from five to 90 minutes. The decision-value workbook has three curves
+labeled 5/10/15 mm/h, five methods and 21 cost/loss ratios from zero to one.
+It also contains expert-preference summaries, which are separate from forecast
+accuracy and will not determine candidate admission.
+
+Freeze development02 before the comparative calculation. Report all 48
+model/baseline/scale/pooling comparisons across all leads, and every 30/60/90-minute
+checkpoint. Summarize the decision-value curves with trapezoidal areas on the
+published cost/loss grid and interior-point win/loss counts. Areas describe those
+curves, not a new operational objective; no cost/loss ratio is selected afterward.
+Check all 15 areas independently using exact rational arithmetic on the supplied
+decimal values. Reject six deliberate schema/data corruptions. Re-extract the
+original sheets and match every retained cell. This establishes extraction and
+arithmetic, not independent reproduction of the authors' forecast scores.
+
+Use only standard-library Python on one Charon CPU, 30-second wall limit. Preserve
+all original labels. Figure 4's caption describes 90-minute accumulations while
+the workbook labels rates; resolve that distinction before adopting numerical
+warning thresholds in a new experiment. No model or dataset acquisition beyond
+the small LN-270 sources, and no inference or training.
+
+<a id="ln-272"></a>
+### LN-272 — 2026-09-21: rainfall nowcasting selected for bounded replication
+
+**Decision.** Select DGMR precipitation nowcasting for the next existing-model
+replication. It has useful distributional forecasts, physically defined hazard
+queries, a substantive classical comparator and accessible pretrained artifacts.
+This is a task-selection decision supported by published data, not our own
+forecast reproduction or a positive SCC mechanism. GenCast remains a stronger
+large-scale reference; its main-model results cannot justify substituting its
+convenient Mini release. No training or parameter-removal experiment is admitted.
+
+**Numerical audit.** Recalculated all six pooling/scale panels, both DGMR variants,
+all four alternative forecast methods and all 18 leads: 48 comparison curves and
+144 prespecified checkpoint comparisons. The one-km average and maximum panels
+coincide and are not independent evidence. The following are relative reductions
+in published CRPS against PySTEPS at 30/60/90 minutes; CRPS evaluates predictive
+distributions and is not point-forecast MSE:
+
+| Pooling | Scale | Original DGMR | Recalibrated DGMR |
+| --- | ---: | --- | --- |
+| Average | 1 km | 5.39%, 4.34%, -0.07% | 11.70%, 10.85%, 7.78% |
+| Average | 4 km | 7.05%, 5.11%, 0.29% | 14.31%, 12.54%, 8.95% |
+| Average | 16 km | 11.07%, 7.43%, 1.54% | 20.76%, 17.64%, 12.74% |
+| Maximum | 1 km | 5.39%, 4.34%, -0.07% | 11.70%, 10.85%, 7.78% |
+| Maximum | 4 km | 9.05%, 6.85%, 2.93% | 15.06%, 12.86%, 9.59% |
+| Maximum | 16 km | 17.03%, 11.97%, 6.46% | 22.46%, 17.58%, 12.38% |
+
+All alternatives and full curves remain in the analysis artifact. PySTEPS is an
+important comparator, not asserted to be the strongest model in every panel.
+Original-model advantages are smaller than calibrated-model advantages and
+nearly disappear in some late forecasts. Preserve this distinction in replication.
+
+For the three published warning-rate labels (5/10/15 mm/h), recalibrated DGMR's
+trapezoidal economic-value areas are .24199/.11355/.07173, compared with PySTEPS
+.13734/.03970/.02481. Original DGMR's areas are .24449/.11287/.06999. Both DGMR
+variants have larger areas than every tabulated alternative at each warning
+level. Recalibrated DGMR is never worse than PySTEPS at the 19 interior cost/loss
+ratios, but can be worse than a neural alternative at individual ratios. Curve
+area is an audit summary, not a claim that every operating decision improves.
+
+**Protocol corrections from the methods.** The
+[supplement, F.3.2](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-021-03854-z/MediaObjects/41586_2021_3854_MOESM1_ESM.pdf)
+defines warning events using average rainfall over spatial and temporal regions,
+and maximizes decision value over a separate probability cutoff at each cost/loss
+ratio. Thus the displayed curves are optimized envelopes; they do not themselves
+establish a frozen policy's held-out performance. Their rate labels should not be
+silently used as millimetres of accumulated rain. A 90-minute mean rate of 5/10/15
+mm/h corresponds to 7.5/15/22.5 mm accumulation. The supplement also specifies
+importance weighting for sampled rainy tiles and central-region evaluation.
+These sampling and boundary conventions matter to a reproducible comparison.
+
+**Next experiment requirements.** First establish a working, unchanged official
+checkpoint interface in an isolated runtime on Charon. The release is a legacy
+TensorFlow snapshot; the two inspected Charon environments do not supply the
+needed runtime, so compatibility and per-sample cost remain unmeasured. Do not
+execute the supplied notebook's package-removal or training commands. The public
+256-pixel checkpoint objects total approximately 523 MB; the public padded test
+shard is approximately 455 MB. These metadata sizes are not downloads performed.
+
+After interface validation, freeze the case/date selection and resource budget
+before scoring test forecasts. Preserve the 1/4/16-km scale suite and 30/60/90-minute
+leads; do not retain only the favorable 16-km result. Include persistence and the
+published PySTEPS comparator, give the latter its documented larger input margin,
+and report original/calibrated DGMR separately. The published calibration changes
+sampling (latent standard deviation two and a unit-mean gamma input multiplier),
+not learned weights. Use separate calibration and evaluation cases. Assess hazard
+probabilities directly with Brier scores and decisions using fixed cost/loss rules,
+not cutoffs maximized on evaluation outcomes. Apply the recorded sampling weights,
+valid-pixel masks and central-region convention. Temporal dependence and rare
+hazard counts must remain visible; a single public shard cannot establish broad
+population superiority. Freeze those implementation details before inference.
+
+The meaningful workload includes regional and joint forecast properties. LN-261
+already shows why marginal predictive accuracy alone cannot guarantee recovery
+of joint hazards; this is an application of that distinction, not a new theorem.
+A future removal test must account for risk recovery from retained forecasts,
+raw public radar and alternative decoders. Loss of a warning output with those
+routes intact is insufficient. Forecasting skill is only the prerequisite for
+asking whether safety-related computation is indispensable to useful prediction.
+It does not make an external warning policy intrinsic alignment machinery.
+
+**Validation and evidence.** The audit covers two unmodified source workbooks,
+1,208 populated cells, 15 independent rational-area checks and six rejected
+corruptions. Re-extraction agrees exactly; this is extraction/arithmetic validation,
+not independent regeneration of the published scores or their uncertainty.
+Acquisition retained 112,533 bytes and took 1.80 seconds; analysis took 0.10 seconds,
+25,108 KiB peak memory. All 23 manifest entries verify on the SD evidence store.
+No model inference, training, GPU use or environment changes occurred.
+
+Source: [published forecast screen](experiments/published_forecast_screen/).
+Evidence: [analysis](artifacts/scc-published-forecast-screen-20260921-v1/development02/analysis.json),
+[original figure 3](artifacts/scc-published-forecast-screen-20260921-v1/development01/published_figure_3.xlsx),
+[original figure 4](artifacts/scc-published-forecast-screen-20260921-v1/development01/published_figure_4.xlsx),
+[acquisition receipt](artifacts/scc-published-forecast-screen-20260921-v1/development01/acquisition.json),
+[transfer verification](artifacts/scc-published-forecast-screen-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/published-forecast-screen-20260921-v1/`.
+Analysis SHA256: `c0660a114841a1d06f67092ef905f09036a9772b4e680d8b39cde0bd48d4dca2`.
 
 ## Historical evidence
 
