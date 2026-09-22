@@ -9,23 +9,27 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Latest intervention result — [LN-263–265](#ln-263).** A fixed three-action,
-48-output consequence-prediction control now has a joint risk-recovery bound.
-Under a hypothetical 51% all-reader cap for every judgment, the refined bound
-forces 77.90% loss of forecasting advantage over the optimal constant, versus
-54.07% for the strongest individual judgment. These are conditional finite-law
-bounds, not measured destruction. An exact public filter predicts every outcome
-and risk within 0.488 ms on Charon, making the removal premise infeasible here.
-The model is an analytic control; no learned advantage or training admission.
-Earlier published-diagnosis and network screens also failed ([LN-258–262](#ln-258)).
+**Latest learned-model screen — [LN-266–269](#ln-266).** An unchanged, publicly
+pretrained 8.39-million-parameter forecaster was evaluated on 32 fixed ERCOT
+COAST demand windows. Against the strongest simple baseline it reduces mean
+squared error by only 4.75%, while worsening shortage-risk Brier scores at two
+of three capacities. It fails the predeclared 10% joint-improvement screen;
+no training or parameter edits are admitted. This is an existing-model task
+qualification result, not a removal experiment or a general negative theorem.
 
-**Latest validation — [LN-265](#ln-265).** Independent path enumeration checks
-12,672 forecast coordinates and 792 risks. Sixty projection controls, six rejected
-corruptions and 160 refined-reader checks pass. Both first frozen runs passed;
-22 manifest entries verify after transfer. The empirical evaluation law contains
-repeated histories; no population or unseen-input guarantee follows. The family
-bound strengthens LN-256's single-judgment calculation, with explicit approximation
-and preparation costs.
+**Latest validation — [LN-269](#ln-269).** All 160 origin/method score pairs check
+independently; four corrupted certificates are rejected. Forty manifest entries
+verify after transfer to the SD store, including the preserved first interface
+failure. Evaluation took 73.25 seconds on one Charon CPU. The test is one region
+and 32 adjacent days, with 64 sampled forecast trajectories per day; its apparent
+4.75% point-prediction advantage remains uncertain under the descriptive block
+resampling. No learned computational separation has been established.
+
+**Latest conditional mathematics — [LN-263–265](#ln-263).** The intervention-risk
+family bound strengthens single-judgment accounting, but its 77.90% conditional
+loss bound at a 51% all-reader cap is below the fixed 80% screen. An exact public
+filter supplies all useful and risk outputs within 0.488 ms, making that removal
+premise infeasible. This remains a validated analytic control.
 
 **Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
 advancing a complete protective mechanism to implementation, explain why it resists
@@ -36,13 +40,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-265](#ln-265).** Find a demonstrated learned
-advantage in prospective intervention-consequence prediction that supports a
-specified risk family and severe approximate useful-loss bound. The family
-calculation now measures broader dependence, but the 51% result remains below
-the fixed 80% screen and the finite model has a cheap exact replacement. No task
-yet supplies the missing learned computational separation. Neither a working
-mechanism nor general impossibility follows from these controls.
+**Remaining mechanism question — [LN-269](#ln-269).** Establish a robust learned
+advantage on a prespecified consequence-prediction workload and alignment-related
+risk family, then test genuine functional removal with efficient recovery
+controls. The first real pretrained demand screen has not passed that prerequisite.
+Do not select only its favorable capacity or equate probabilistic forecast
+accuracy with mandatory safety computation. A future screen must justify why
+its trained advantage should survive strong replacements before committing to
+training. Neither a working mechanism nor general impossibility follows.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -18826,6 +18831,161 @@ Evidence: [initial certificate](artifacts/scc-intervention-risk-family-20260921-
 Remote original: `/home/salvador/scc-research/intervention-risk-family-20260921-v1/`.
 Certificate SHA256: 059e97ead3b33722d25b932fec7fa539e3ff6b78c5f0a66cd886564c4b969948.
 Refinement SHA256: 458d452399907aa022d31877b6feb1010db5bc99895efd0add34038bd134bdea.
+
+<a id="ln-266"></a>
+### LN-266 — 2026-09-21: existing-model demand-risk qualification plan
+
+Change the evidence type: evaluate an existing pretrained predictor before any
+training or parameter modification. Candidate: Amazon Chronos T5 tiny, pinned
+revision `29d808298f1a62493e7b9a5e08529d0d930fa189`, using the official Chronos
+inference implementation at `10afa9ebe016e514f9d7dc1aa873f66af57e116b`.
+ERCOT demand data comes from `autogluon/chronos_datasets`, revision
+`eeecad0b82a8c237e212ce6f8d1abecb513e2cec`; the authors list ERCOT in their
+zero-shot evaluation configuration. This is source provenance, not an independent
+training-contamination audit, and the original paper's aggregate performance is
+not evidence about this tiny model on the present test.
+
+First freeze an acquisition/interface check: at most 60 MB from pinned public
+URLs, safetensors and ordinary local T5 loading, no remote model code, no package
+installation, no model edits. Inspect dataset schema, length and missingness;
+measure one 512-context, 24-step, 64-sample synthetic sinusoid forecast on one
+Charon CPU. This stage reports no real-data forecast scores. Freeze machine
+configuration, source and this entry. Wall limit 120 seconds.
+
+Subject to interface validation, the fixed qualification uses the first dataset
+series and last 32 nonoverlapping 24-hour forecast windows, 512 observations of
+context, 64 trajectories, seed 26601 plus origin index. Reserve the preceding
+28 days as calibration. Fix three capacities at the 50th, 75th and 90th percentiles
+of calibration daily maxima. Useful output is the next day's demand path; risk
+is any demand exceeding each capacity. The decision proxy assumes capacity does
+not affect demand; it does not model feedback or causal effects on demand.
+
+Compare squared error and three Brier scores against previous-day, previous-week,
+seven-day seasonal-average forecasts with calibration residual trajectories, and
+an unconditional calibration-day trajectory distribution. No outcome-based
+baseline selection or capacity adjustment. A provisional admission requires at
+least 10% improvement over every baseline in mean squared error and in each
+nondegenerate risk task's Brier score, with inference under five seconds/query.
+These thresholds screen follow-up work; they are not catastrophic-collapse or
+statistical-significance criteria. Preserve all origin-level outcomes and report
+prevalence, temporal dependence and sample uncertainty. Failure of any gate is
+not a general statement about pretrained forecasting or SCC.
+
+No protected-function removal, enforcement, durability or severe-loss test is
+claimed at this stage. Genuine removal would require predeclared efficient
+recovery tests on the retained representation; poor output calibration alone
+would not qualify. Model edits and training remain unadmitted. Source:
+[pretrained demand risk](experiments/pretrained_demand_risk/).
+
+<a id="ln-267"></a>
+### LN-267 — 2026-09-21: isolated import repair before qualification
+
+Development01 acquired 48,175,218 bytes across eleven pinned files; both expected
+large-file SHA256 hashes matched. The interface check failed before prediction:
+our minimal package loader omitted the public `MeanScaleUniformBins` export that
+the official tokenizer factory resolves dynamically. Preserve that failed run.
+Development02 adds only that export and reuses the immutable downloaded files;
+it does not change the upstream code, checkpoint, dependencies, data or task.
+Repeat the synthetic interface check with a fresh frozen source and the same
+120-second limit. Real-data scores remain unopened. The downstream evaluation
+source is prepared but not executed until this check passes.
+
+<a id="ln-268"></a>
+### LN-268 — 2026-09-21: frozen pretrained evaluation admission
+
+The corrected synthetic interface passes: 8,394,496 parameters, one CPU,
+2.152 seconds for 64 trajectories of length 24, 1.23 GiB peak resident memory
+for the complete process. No training. The dataset has eight regions and columns
+`id`, `timestamp`, `target`; the preselected first row is COAST. Its 154,872 hourly
+values include 18 missing values historically, but the entire fixed calibration,
+context and evaluation region (indices 152920 onward) is finite and strictly
+hourly. Do not impute, change region or select a favorable window. Validation now
+requires finiteness in the actually used region rather than the unused prefix.
+This schema adaptation precedes all real-data prediction scores.
+
+Freeze development03 under LN-266's unchanged 32-day test. All forecasting
+baselines use the same calibration residual paths; their point predictions are
+the means of their predictive trajectories, including the calibration residual
+mean. This charges calibration as preparation, and avoids pretending a point
+forecast alone supplies calibrated risk. The unconditional baseline uses the
+28 calibration days directly. Forecast model loading is reported separately;
+query timing includes model inference, baseline timing includes baseline scoring.
+Measure peak process memory and total time as well. Maximum wall time 180 seconds
+for evaluation and 60 seconds for independent score audit, one Charon CPU.
+Expected evaluation time is about 75 seconds. No concurrent source changes.
+
+Archive every sampled model trajectory. Independently recalculate all 160
+origin/method score pairs from source data and sampled trajectories; reject four
+deliberately corrupted certificates. Report descriptive paired four-day block
+bootstrap intervals (eight blocks, 2,000 resamples, seed 26801) for baseline-minus-
+model scores. Thirty-two adjacent days do not support a general calibration or
+population claim. Sampled risks have only 64 draws; at probability one half the
+conditional Monte Carlo standard error is about 0.0625, before model error.
+
+<a id="ln-269"></a>
+### LN-269 — 2026-09-21: pretrained demand screen fails joint qualification
+
+**Result.** Development03 completes without training or changing model weights.
+The 32 fixed windows have shortage prevalences 26/32, 13/32 and 6/32 at capacities
+18,785.6543, 20,252.6621 and 20,768.1596 in the dataset's demand units. All risk
+tasks are nondegenerate. Lower squared error and lower Brier scores are better:
+
+| Predictor | Demand MSE | Risk Brier: capacity 1 | Capacity 2 | Capacity 3 |
+| --- | ---: | ---: | ---: | ---: |
+| Previous day + calibration residual paths | 799904.04 | .14425 | .15820 | .14664 |
+| Previous week + calibration residual paths | 2106735.40 | .16904 | .45161 | .35651 |
+| Seven-day seasonal average + residual paths | 1207360.56 | .16303 | .38943 | .25546 |
+| Calibration-day distribution | 1423741.08 | .25000 | .26563 | .15880 |
+| Chronos T5 tiny, unchanged | 761932.27 | .17106 | .17623 | .11950 |
+
+The strongest baseline is previous-day prediction for every reported score.
+Chronos improves demand MSE by 4.75%, below the fixed 10% gate. It worsens the
+first two Brier scores and improves the third by about 18.51%. Latency passes:
+median 2.073 seconds, maximum 2.121 seconds per model query; every measured
+baseline query is below 0.142 ms. These timings exclude shared preparation and
+model loading (0.30-second order; exact receipt retained), not total system cost.
+The complete evaluation takes 73.25 seconds and peaks at 1,401,368 KiB resident
+memory. The independent audit takes 0.90 seconds. One Charon CPU, no GPU work.
+
+**Uncertainty and interpretation.** The descriptive four-day block interval for
+previous-day-minus-Chronos MSE spans approximately -204,737 to +252,918; these
+32 adjacent days do not establish a reliable point-prediction advantage. The
+highest-capacity Brier difference has a positive descriptive interval, but choosing
+that capacity after seeing results would change the fixed three-risk question.
+The block calculation has only eight blocks and does not certify calibration or
+population performance. The conditional 64-draw sampling uncertainty and unknown
+training contamination remain limitations. This is no claim that the tiny model,
+other model sizes, other tasks or learned inference generally lack useful gains.
+
+**Validation and provenance.** An independent implementation reconstructs all
+baseline trajectories, realized labels, means, risks and scores: 160 origin/method
+pairs pass. Four deliberate corruptions of target, label, origin and capacity are
+rejected. All 40 manifest-listed files verify after transfer; the failed first
+interface run is preserved. Original upstream inference files remain unchanged;
+only a minimal package import wrapper was needed. Model and data hashes match
+pinned acquisition metadata. Source is [here](experiments/pretrained_demand_risk/).
+
+**Decision.** The new evidence is a real, unchanged learned predictor tested
+against explicit replacements, rather than another exact finite control. It
+still fails the task-admission question. Do not train, scale, damage the model,
+or relax the joint gate around the favorable risk. No removal/collapse experiment
+is justified by this outcome. Forecast-distribution access permits computing the
+three shortage risks, but that alone does not require execution of a safety
+judgment or prove severe useful loss upon genuine removal. LN-265's exact-law
+bound cannot be imported into these noisy empirical probabilities without another
+argument. The next substantive requirement remains a task with documented,
+reproducible learned advantage over strong cheap methods on both useful and risk
+outputs. Additional tests should be justified by that evidence, not by increasing
+parameter count or trying regions until one passes.
+
+Evidence: [evaluation](artifacts/scc-pretrained-demand-risk-20260921-v1/development03/evaluation.json),
+[independent audit](artifacts/scc-pretrained-demand-risk-20260921-v1/development03/audit.json),
+[interface validation](artifacts/scc-pretrained-demand-risk-20260921-v1/development02/inspection.json),
+[acquisition provenance](artifacts/scc-pretrained-demand-risk-20260921-v1/development01/acquisition.json),
+[transfer verification](artifacts/scc-pretrained-demand-risk-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/pretrained-demand-risk-20260921-v1/`.
+Evaluation SHA256: `4981985fb747c24b3ea47128e410cd98da7f7f952b18c86fad61824069cfaf5b`.
+Audit SHA256: `f08c46ba033d11f0849594c38787f25de446346b4ef63e6f642502ea59478238`.
 
 ## Historical evidence
 

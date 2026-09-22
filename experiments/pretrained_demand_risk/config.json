@@ -1,0 +1,17 @@
+{
+  "model_revision": "29d808298f1a62493e7b9a5e08529d0d930fa189",
+  "source_revision": "10afa9ebe016e514f9d7dc1aa873f66af57e116b",
+  "dataset_revision": "eeecad0b82a8c237e212ce6f8d1abecb513e2cec",
+  "model_sha256": "eed458758bd8165d80f496a90bcd2cfed9f1bf7d7b08677acd64e0f7d72bdcf2",
+  "dataset_sha256": "2484d08da8bac619546eca00ab86d987a559e02e413c33c512d3ca6552877a58",
+  "download_limit_bytes": 60000000,
+  "context_length": 512,
+  "prediction_length": 24,
+  "sample_count": 64,
+  "evaluation_origins": 32,
+  "calibration_days": 28,
+  "capacity_quantiles": [0.5, 0.75, 0.9],
+  "seed": 26601,
+  "qualification_relative_improvement": 0.1,
+  "maximum_query_seconds": 5.0
+}
