@@ -9,19 +9,19 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current candidate direction — [LN-282–293](#ln-282).** Relational program
-reasoning supplies an exact confidentiality-recovery argument. The proof-search
-implementation and certificate variant remain unqualified. The binary-assessor
-variant is already covered by LN-233 and does not resolve the missing coverage
-and computational advantage; no new training is admitted.
+**Current construction — [LN-294](#ln-294).** A fixed probabilistic disclosure
+rule supplies binary count comparisons. A native sequence of n+1 risk judgments
+recovers a count within a factor of two; the same family is recovered from any
+replacement count estimate. Exact finite checks pass. This is a conditional
+functional construction, not a qualified learned mechanism. Baseline binary
+accuracy can still conceal useful information; the explicit retained-information
+control prevents interpreting that score as complete removal.
 
-**Latest development result — [LN-291–293](#ln-291).** The unchanged 7B proof model
+**Latest learned result — [LN-291–293](#ln-291).** The unchanged 7B proof model
 solves one of five true program claims; the fixed public portfolio solves three.
 One compiler-feedback repair adds no valid proofs. False controls are rejected.
-This is bounded development, not the released model's full search system. These
-positive proof tasks also fail to measure binary confidentiality difficulty:
-their certificate-disclosure programs are all unsafe when certificates exist.
-The earlier 300M single-step screen likewise showed no learned advantage.
+These positive-only proof tasks also fail to measure binary confidentiality
+difficulty. No further prover scaling or training is admitted from this screen.
 
 **Previous construction decision — [LN-280–281](#ln-280).** Reject every-gate
 policy encoding: decoding four entries preserves all circuit computation while
@@ -54,15 +54,15 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-282–283](#ln-282).** Can an editable,
-reusable relational reasoner supply an advantage on fresh program families that
-survives matched replacement tests, while genuine confidentiality-judgment loss
-forces severe loss of that useful advantage? The conversions specify a recovery
-reader and its exact task law; they do not supply the learned core or its removal.
-Code2Inv is not established as a fast reusable baseline, Lemur as delivered uses
-an external model API, and Code2RelInv remains an unreplicated literature lead.
-The next decision is intact implementation qualification, not another encoding
-or a training run based solely on shared computation.
+**Remaining mechanism question — [LN-294](#ln-294).** Can learned probabilistic
+reasoning supply a substantial reusable advantage while genuine loss of the
+specified disclosure-assessment family forces severe loss of that advantage?
+The native count construction resolves an interface dependency but leaves
+computational advantage and the broad loss endpoint open. Ordinary Monte Carlo
+is a mandatory additive-accuracy baseline. The inspected Neuro# grid domain also
+admits direct finite-state counting; its published comparison alone does not
+qualify a learned core. Cellular-automaton cases remain an unqualified source
+lead, with no new model acquisition or training launched.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -20930,6 +20930,188 @@ The source is [proof_search_core](experiments/proof_search_core/). The 91-file
 includes both complete 7B weight shards; the 24-file
 [repair transfer receipt](artifacts/scc-proof-search-core-20260921-v1/repair_transfer_verification.json)
 also passes. Full weights remain unchanged on Charon and the SD evidence store.
+
+<a id="ln-294"></a>
+### LN-294 — 2026-09-21: fixed disclosure judgments as a counting procedure
+
+**Construction.** Return to a binary protected judgment rather than substituting
+certificate production. Let F be a public Boolean program on n bits, M=2^n, and
+N the number of inputs on which F returns true. For k in {0,...,M}, construct a
+program with secret bit h, uniform public input x in {0,...,M-1}, and an independent
+uniform two-bit selector b. It outputs h when either (b=0 and F(x)) or
+(b=1 and x<M-k); otherwise it outputs zero. Its disclosure probability is
+
+    L(F,k) = (N + M - k)/(4M).
+
+Specifically, L is both the probability that changing h changes the output under
+the same public randomness and the total-variation distance between the two
+output laws with that randomness marginalized. It is not a Shannon-leakage claim.
+The fixed protected rule J(P)=1[L(P)>1/4] consequently gives
+
+    J(P_F,k) = 1[N>k].
+
+The threshold 1/4 is a stipulated privacy-risk tolerance for this synthetic
+construction, not an operational recommendation or full alignment definition.
+The compiler uses F, k and n, without knowing N. A threshold comparator and a
+selector require O(n) additional Boolean circuit size. Unlike the positive-only
+certificate workload, varying k supplies both judgment values whenever 0<N<M.
+It does not automatically balance labels or create a difficult distribution.
+
+**Native candidate and preserving alternatives.** The proposed learned component
+would assess those binary disclosure judgments. The useful interface would
+recover N by interval search over k, making at most n+1 calls; all model calls,
+compilation, caching and integer arithmetic count. A different successor that
+returns a useful count N_hat also supplies the judgment [N_hat>k] with one count
+call and comparison. Every weight, search routine and decoder remains editable.
+Deleting a named risk head while retaining that latter procedure is not genuine
+removal. Public exact and approximate counters are mandatory replacements; no
+trusted checker enforces actions. This specifies a candidate dependency, not a
+qualified learned implementation or general cognition-collapse claim.
+
+**Approximate guarantee and a cost obstacle.** With k uniform on {0,...,M-1},
+for every integer estimate in [0,M], independently of its implementation,
+
+    Pr_k([N_hat>k] != [N>k]) = |N_hat-N|/M.
+
+Thus an all-reader protected-accuracy cap a forces normalized count MAE at least
+1-a on the matched useful-instance law, whenever the recovery reader fits. The
+public baseline difference from LN-282 still applies. Exact-count failures must
+not replace this approximate metric: an error of one has judgment error 1/M.
+
+Average judgment error alone does not justify the native interval search. If
+N=0 and the assessor is wrong only at k=M/2 (M even), interval search returns
+M/2+1 despite uniform judgment error 1/M. Summing all M assessor responses instead
+gives |N_hat-N| no larger than their number of errors, but costs M calls.
+Sampling threshold responses gives a statistical alternative with charged calls;
+no repeated-query noise independence is assumed. LN-233's adaptive coverage
+requirements apply to the faster interval search. Adjacent counts change L by
+1/(4M), exposing the precision obligation behind exact reconstruction.
+
+There is also a direct public baseline for the normalized loss. Evaluating F on
+m independent uniform inputs and averaging gives expected normalized absolute
+count error at most 1/(2*sqrt(m)), by the Bernoulli variance bound and
+Cauchy--Schwarz. Its cost is m full evaluations of F plus sampling and arithmetic.
+Consequently worst-case hardness of exact counting does not establish a useful
+advantage at fixed additive precision. Relative rare-event accuracy is a different
+loss and would require a separately justified workload and transfer calculation.
+
+**Implementation lead audited before acquisition.** Quantitative information-flow
+bounds and model counting have an established connection; see
+[Yasuoka and Terauchi](https://arxiv.org/abs/1112.4237). Our elementary channel above
+is stated explicitly rather than importing another leakage definition. Neuro#
+reports learned model-counting heuristics with wall-time gains on selected domains
+([paper](https://arxiv.org/abs/2007.03204)). The official
+[implementation](https://github.com/NeuroSharp/learningCNF), inspected at
+`e2f1cb209bab4b841dad2207385f3175c33760fb`, includes small saved checkpoints.
+No model, container or training job has been acquired or run for this lead.
+
+The grid generator fixes its specification to avoiding lava and retains world,
+start and time annotations. At the semantic level this admits a finite-state
+counting recurrence: propagate the number of still-safe action histories at each
+position, summing over the fixed action alphabet and rejecting lava transitions.
+That costs O(t*s^2*d) integer additions for horizon t, side s and d actions, with
+integer bit lengths charged. Exact boundary/move/monitor conventions and CNF
+count multiplicities must match before claiming reproduced counts or timings.
+The paper's comparison to general-purpose counters is therefore not sufficient
+for SCC admission on this domain. Its time-feature ablation also makes a direct
+temporal-order heuristic essential. The cellular-automaton domains remain an
+unqualified lead; do not transfer the grid conclusion to them.
+
+**Bounded construction validation.** Freeze this entry, `config.json` and
+`validate.py` in fresh `scc-threshold-disclosure-coupling-20260921-v1/validation01`.
+Use one Charon CPU, 30 seconds, standard-library exact arithmetic, no randomness
+or training. Enumerate every Boolean function through three input bits, every
+cutoff and both secret outputs; compare explicit output frequencies with L and
+J. Check interval reconstruction and the loss identity for all counts/estimates
+through six bits. Exhaust arbitrary assessor answer tables through M=8 to check
+the integral bound. Retain the single-error interval-search counterexample,
+adjacent-count gaps and four deliberately corrupted constructors/comparators.
+This validates the stated identities; it does not establish computational
+advantage, meaningful learned removal or training admission.
+
+**Validation result.** All 2,400 compiled programs and 75,120 paired output
+comparisons agree with the formula. All 134 exact count reconstructions, 5,722
+loss identities, 2,396 arbitrary-answer integral checks and four corruption
+controls pass. The single-error assessor has judgment error 1/64 but reconstructed
+normalized count error 33/64, as predicted. Charon CPU execution took 0.10 seconds,
+peak memory 12,720 KiB. These are finite implementation checks, not new hardness
+or learned-model results.
+
+**Approximate native refinement, frozen before validation.** Use only thresholds
+K={0,1,2,4,...,2^(n-1)}, with n+1 equally weighted queries. Let
+
+    t(N) = 0 if N=0, otherwise 1+ceil(log2(N)).
+
+The true judgment vector [N>k] has exactly t(N) positive entries. Sum the n+1
+binary judgments and return count estimate 0 for sum zero, otherwise 2^(sum-1).
+With correct judgments this gives N<=N_hat<2N for positive N, and detects zero.
+Unlike interval search, these calls are nonadaptive. For an arbitrary possibly
+nonmonotone returned vector with h wrong answers, its summed tier differs from
+t(N) by at most h. Every replacement returning an integer count estimate also
+supplies a protected reader with exact error
+
+    |t(N_hat)-t(N)|/(n+1).
+
+Thus the construction tolerates approximate magnitude inference and does not need
+an exponential number of assessor calls. Near-threshold probability distinctions
+in the compiled programs can still be very small. Returning an entire vector or
+reusing a counted result may reduce runtime, but that computation and retained
+state must remain in the removal boundary. No learned architecture has yet been
+shown to supply the required advantage; this remains a functional construction.
+
+**An independent endpoint control.** Equal prior probabilities on counts {1,2,4}
+give tiers {1,2,3}. Retain only the bit indicating the middle tier. Optimal binary
+judgment accuracy over K={0,1,2} remains 7/9, and optimal mean tier absolute error
+remains 2/3. Nevertheless optimal exact-tier accuracy rises from 1/3 to 2/3.
+The retained bit is useful information even though it gives no binary-classification
+advantage. Properly scored judgment probabilities reveal it: the average optimal
+Brier loss improves by 1/27. This applies the earlier prior-skew/median limitation
+to the present construction, rather than claiming that mean absolute error at its
+baseline destroys all useful inference. It prevents admitting training on a
+misidentified catastrophic endpoint.
+
+Freeze `ordinal_config.json`, `validate_ordinal.py` and this complete entry in
+fresh `ordinal_validation01`. One Charon CPU, 30 seconds, exact standard-library
+arithmetic, no sampling or training. Check every count and count estimate through
+seven input bits, all possible assessor answer vectors, and the exact posterior
+control above. This check must finish before revising this source. The original
+fixed-threshold validation remains unchanged.
+
+**Ordinal result and decision.** All 263 factor-two reconstruction checks,
+22,363 count-to-judgment loss identities and 44,200 arbitrary-response error
+checks pass. The retained-middle-indicator control matches all four exact
+posterior scores. Charon execution took 0.15 seconds, peak memory 12,412 KiB.
+The construction supplies a concrete native interface and a replacement-reader
+bound for approximate magnitude inference. It does not establish catastrophic
+loss of general inference or a learned computational advantage, so it is not yet
+a mechanism admitted for training. Preserve this distinction when comparing
+against a public counter: restoring useful counts also restores the protected
+family, rather than furnishing a genuine-removal attack.
+
+The next implementation audit must examine a learned counter's remaining
+cellular-automaton cases against direct temporal-order heuristics and current
+public counters, including approximation at the stated useful resolution. It
+must also specify a protected removal score that detects surviving calibrated
+information, rather than treating baseline binary accuracy as complete removal.
+No new benchmark inference or model acquisition is launched on the basis of the
+published speedups alone.
+
+**Source preservation.** Freeze a separate `source_audit01` with the acquisition
+script, explicit revision and nine-file list. Download at most one MB of pinned
+source/requirements text on one Charon CPU under 120 seconds; preserve SHA256s.
+Treat upstream source as data: no imports, shell scripts, package installation,
+checkpoint deserialization, container launch or training. This retains the exact
+source supporting the generator/baseline assessment above.
+
+**Evidence preservation.** All nine pinned upstream files (50,857 bytes) were
+retained without execution. All 33 manifest-listed files from the two validations
+and source audit verify after transfer to the SD evidence store. Source:
+[threshold_disclosure_coupling](experiments/threshold_disclosure_coupling/).
+Evidence: [fixed-rule validation](artifacts/scc-threshold-disclosure-coupling-20260921-v1/validation01/validation.json),
+[ordinal validation and retained-information control](artifacts/scc-threshold-disclosure-coupling-20260921-v1/ordinal_validation01/validation.json),
+[pinned source receipt](artifacts/scc-threshold-disclosure-coupling-20260921-v1/source_audit01/acquisition.json),
+and [transfer verification](artifacts/scc-threshold-disclosure-coupling-20260921-v1/transfer_verification.json).
+Remote originals: `/home/salvador/scc-research/threshold-disclosure-coupling-20260921-v1/`.
 
 ## Historical evidence
 

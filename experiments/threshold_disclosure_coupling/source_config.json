@@ -1,0 +1,13 @@
+{
+  "revision": "e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "base_url": "https://raw.githubusercontent.com/NeuroSharp/learningCNF/e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "maximum_total_bytes": 1000000,
+  "files": [
+    "README.md", "generators/samplers/grid_sampler.py", "run_experiments.sh",
+    "requirements.txt", "cellular_models.py", "mc_models.py", "config.py",
+    "sharp_env.py", "rllib_sharp_models.py"
+  ],
+  "cpu_count": 1,
+  "wall_seconds": 120,
+  "training": false
+}

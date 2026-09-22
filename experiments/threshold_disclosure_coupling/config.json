@@ -1,0 +1,10 @@
+{
+  "classification": "finite construction validation, not learned evidence",
+  "maximum_truth_table_variables": 3,
+  "maximum_count_variables": 6,
+  "precision_variables": [8, 16, 32, 64],
+  "wall_seconds": 30,
+  "cpu_count": 1,
+  "random_sampling": false,
+  "training": false
+}

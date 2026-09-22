@@ -1,0 +1,7 @@
+{
+  "classification": "ordinal construction validation; not learned evidence",
+  "maximum_variables": 7,
+  "wall_seconds": 30,
+  "cpu_count": 1,
+  "training": false
+}
