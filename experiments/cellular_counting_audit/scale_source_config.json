@@ -1,0 +1,12 @@
+{
+  "revision": "e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "base_url": "https://raw.githubusercontent.com/NeuroSharp/learningCNF/e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "maximum_total_bytes": 30000000,
+  "files": [
+    "data/cell_35_348_280_test/ecarev-35-348-20-280-0BhLW0cT.cnf",
+    "data/cell_35_348_280_test/ecarev-35-348-20-280-0R0ROw98.cnf",
+    "data/cell_49_256_200_test/ecarev-49-256-20-200-01SKVg7k.cnf",
+    "data/cell_49_256_200_test/ecarev-49-256-20-200-158XngtN.cnf"
+  ],
+  "training": false
+}

@@ -17,6 +17,12 @@ functional construction, not a qualified learned mechanism. Baseline binary
 accuracy can still conceal useful information; the explicit retained-information
 control prevents interpreting that score as complete removal.
 
+**Latest computational audit — [LN-295](#ln-295).** A pinned current public
+counter solves all six selected smaller cellular examples exactly within 1.67
+seconds. Four largest selected examples exceed ten seconds; that is an unresolved
+runtime comparison, not neural advantage or a lower bound. A proposed shallow
+algebraic shortcut fails exact checks and is rejected. No learned policy was run.
+
 **Latest learned result — [LN-291–293](#ln-291).** The unchanged 7B proof model
 solves one of five true program claims; the fixed public portfolio solves three.
 One compiler-feedback repair adds no valid proofs. False controls are rejected.
@@ -61,8 +67,9 @@ The native count construction resolves an interface dependency but leaves
 computational advantage and the broad loss endpoint open. Ordinary Monte Carlo
 is a mandatory additive-accuracy baseline. The inspected Neuro# grid domain also
 admits direct finite-state counting; its published comparison alone does not
-qualify a learned core. Cellular-automaton cases remain an unqualified source
-lead, with no new model acquisition or training launched.
+qualify a learned core. The larger cellular cases remain an unqualified source lead after the public
+counter audit in LN-295. A faithful existing-policy comparison is still needed;
+no new neural model acquisition or training has been launched.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -21112,6 +21119,226 @@ Evidence: [fixed-rule validation](artifacts/scc-threshold-disclosure-coupling-20
 [pinned source receipt](artifacts/scc-threshold-disclosure-coupling-20260921-v1/source_audit01/acquisition.json),
 and [transfer verification](artifacts/scc-threshold-disclosure-coupling-20260921-v1/transfer_verification.json).
 Remote originals: `/home/salvador/scc-research/threshold-disclosure-coupling-20260921-v1/`.
+
+<a id="ln-295"></a>
+### LN-295 — 2026-09-21: direct counting controls for the remaining cellular source lead
+
+**Question.** Does the remaining Neuro# cellular-automaton lead justify acquiring
+and adapting its learned policy? LN-294 already rejects using binary accuracy at
+its baseline as complete removal. LN-181–185 already supply the relevant
+proper-score/span correction; LN-250 explains why an information-theoretic
+posterior calculation alone cannot establish loss of a public computation. Do
+not repeat a hidden-world experiment as evidence of a destroyed learned procedure.
+
+**Source correction.** The pinned `generators/samplers/ecarev_sampler.py` uses
+periodic boundaries and samples the terminal configuration by evolving a random
+initial state for `fwd_steps`. It then constrains `rev_steps` transitions to that
+terminal state. These are separate parameters; a random terminal state in the
+paper's summary must not be interpreted as uniform over every bit string. The
+six selected files use forward/reverse depths 20/100 (rules 35,49) and 10/20
+(rule 9). A target generated after fewer steps does not automatically have a
+preimage at the longer requested horizon. Every complete satisfying trajectory
+is uniquely determined by its initial state, so counting trajectory assignments
+and initial preimages agrees for the complete deterministic transition encoding.
+
+**Bounded diagnostic, frozen before execution.** Acquire the pinned generator
+as data and the first two lexicographic CNFs from each of
+`cell_35_128_110_test`, `cell_49_128_110_test`, `cell_9_20_20_test`, at revision
+`e2f1cb209bab4b841dad2207385f3175c33760fb`. Cap acquisition at 4 MB and 120 seconds;
+no upstream execution, model files, package installation or training. This is a
+six-instance development screen, not a representative speed benchmark.
+
+Implement a public exact component-counting control: unit propagation, connected
+component decomposition, memoization, and either highest-occurrence or latest-time
+variable selection (variable numbering supplies time here). Each strategy gets
+three seconds and 50,000 recursive calls per formula. Preserve timeout as unknown,
+not zero. Validate counts against exhaustive enumeration on small independent
+truth-table encodings for rules 9,35,49, widths 3–7, horizons 1–3 and three fixed
+targets; also use arbitrary small CNFs to test free-variable and contradiction
+accounting. An independently corrupted rule and omitted terminal constraint must
+be detected. Record forced-variable fraction, residual components and both
+strategy results. One CPU on Charon, no learned inference. The screen may identify
+a cheap replacement or justify a stronger counter comparison; it cannot establish
+an all-algorithm lower bound or SCC.
+
+**Removal boundary.** All code, learned weights, decoders, caches and subsequent
+repair remain editable in the candidate contract. The inherited trigger is genuine
+loss of disclosure-assessment functionality; ignoring a retained answer remains a
+behavioral bypass. No trained candidate exists in this audit, so intact, removal,
+collapse and repair measurements are not fabricated. Training remains unadmitted.
+
+**Development result and implementation correction.** All 270 small cellular and
+210 arbitrary-CNF comparisons pass, both corruption controls are detected, and
+all twelve large formula/strategy evaluations reach the three-second limit. The
+large 128-cell formulas retain one connected component after initial unit
+propagation. The Python implementation spends 1.3–3.3 seconds just simplifying
+those inputs and reaches only 1–7 recursive calls. This is inadequate evidence
+about the public counting route; it measures an inefficient implementation.
+
+Freeze a new `compiled01` run with a C++ implementation of the same two public
+strategies, arbitrary-precision integer counts, and the unchanged three-second /
+50,000-call limits. Compile on one Charon CPU (60-second limit), then validate
+against the same independent small truth tables and random CNFs before evaluating
+the unchanged six files (90-second total limit). Independently enumerate all
+2^20 initial states for the two rule-9 instances using vectorized bit operations,
+with a 30-second limit, to check any completed counter answer. Both timeouts and
+count disagreements remain failures. Preserve the initial implementation and
+results. This is implementation validation/development; no neural advantage,
+removal, or training admission follows from a counter timing out.
+
+**Analytic candidate for a stronger public replacement.** For rule 35 write
+f(a,b,c)=(not b) and ((not a) or c). Direct composition gives the two-step
+coordinate update
+
+    G(s)_i = s_i and (not s_(i-1) or s_(i+1) or not s_(i+2)).
+
+G can only remove a 1 at the right edge of the pattern 1101. Every newly removed
+1 is adjacent to an existing zero, so it cannot create a new isolated zero
+between surviving ones. A new removable 1101 would therefore have been removable
+already. Thus G(G(s))=G(s), equivalently F^4=F^2. Rule 49 is the reflected rule,
+so it has the same identity. Consequently every even horizon at least two reduces
+to two steps, and every odd horizon at least three reduces to three steps.
+This is a proposed direct derivation to validate, not a measured result yet.
+
+Freeze `identity01` before execution. Check the local identity on all 512
+nine-cell neighborhoods for each rule; locality then supplies a universal
+identity, not an extrapolation from a finite ring size. Validate short-horizon
+preimage counting using a cyclic transfer graph: keep 2h consecutive bits for
+reduced horizon h<=3, append one bit, test the middle output, and close the walk
+after n transitions. The trace counts every labeled initial state once. Its
+arithmetic cost is O(n*2^(4h)), with O(n)-bit integer counts; h is at most three.
+Compare every target against exhaustive initial-state enumeration for widths
+3–8 and horizons 2,3,4,5,20,21,100. Verify the imported CNFs have exactly the
+claimed periodic transition templates and terminal units before applying the
+identity to them. Count the four pinned 128-cell examples, including parse and
+validation time separately. Corrupt one rule and one transition clause as controls.
+One Charon CPU, 60-second total limit, no training or model acquisition.
+
+Before the proposed transfer counter is implemented, the identity check is the
+admission test. It also tests F^4 against spatial shifts -2,...,2 of F^2 and F^6
+against the same shifts of F^4, using complete local truth tables (9 and 13 bits).
+Any failed identity prevents using the corresponding temporal reduction. The
+claimed two-step expansion is checked independently against direct composition.
+
+**Local-identity result.** The proposed F^4=F^2 shortcut is false. The complete
+9-bit local tables give counterexamples for both rules; allowing shifts -2,...,2
+also fails. The 13-bit tables likewise reject F^6 as those shifts of F^4. The
+hand expansion used the wrong outer Boolean expression. For rule 35 the correct
+two-step expression is ab OR a(not c) OR b(not c)d, with a=s_(i-1), b=s_i,
+c=s_(i+1), d=s_(i+2). No transfer-graph count or shallow-horizon reduction was
+implemented or used. The rejected derivation and counterexamples are preserved.
+
+**Compiled control result.** The same 480 comparisons, eight arbitrary-precision
+checks and corruption controls pass. Latest-time selection returns count 490 for
+both 20-cell rule-9 examples in 2.38–2.40 seconds. Independent enumeration of every
+one of the 1,048,576 initial states agrees, taking 0.59–0.64 seconds per instance.
+The other ten compiled evaluations time out. Cooperative time checks overshoot
+three seconds by up to 0.50 seconds; these are unknown results, not completed
+within-budget solutions. These minimal counters are development controls and
+are not a substitute for a current optimized counter.
+
+**Pinned reference solver, frozen before acquisition.** The official Ganak
+repository provides release binaries and a non-probabilistic mode `--prob 0`.
+Pin release/v2.7.0, the Linux-amd64 archive, and the GitHub release asset SHA256
+`ac84b42eb83a23ce8b09f2468ea59468ec4948321d9696216c6528603a33eb63`.
+Acquire at most 40 MB compressed / 300 MB extracted, within 60 seconds on Charon;
+extract within a fresh `reference01`, retain the archive and release metadata,
+and inspect version/help before configuring an evaluation. No system packages,
+training or neural weights are involved. A subsequent frozen reference evaluation
+will first check exact small counts and both known 490 answers, then evaluate the
+four unresolved formulas with a hard three-second process limit per invocation,
+on one CPU. Retain stdout/stderr, mode, exit status and timing; unknown/timeout
+never counts as zero. No probabilistic or approximate result will be labeled a
+non-probabilistic exact answer. This is a matched public computational baseline,
+not an intervention on a learned SCC candidate.
+
+LN-295 reference evaluation: use the verified Ganak release/v2.7.0 binary with
+--mode 0 --prob 0 --appmct -1 --threads 1 --seed 0 --fast, as confirmed by its
+retained help. Three-second hard subprocess timeout including process startup,
+input parsing and final output. First validate a disjunction (3), contradiction
+(0), 160 free variables (2^160), 40 independent two-literal clauses (3^40), and
+both exhaustively checked 20-cell counts (490). Only after those pass evaluate
+the four unchanged 128-cell inputs. Preserve each invocation's command, status,
+time, stdout and stderr. No learning; one Charon CPU; total limit 45 seconds.
+
+**Reference interface correction.** The first disjunction check returned the
+correct count 3, but the evaluator did not recognize Ganak’s `c s exact arb int`
+output prefix. It stopped before the scientific inputs. Preserve that failed
+interface and freeze `reference_evaluation02` with only the parser corrected;
+all solver arguments, known controls and limits remain unchanged.
+
+**Reference result and larger-case check.** The six controls pass. Non-probabilistic
+Ganak returns exact counts on all six original scientific inputs within 1.37–1.67
+seconds per process. This includes loading and parsing. The four large counts
+are solver-reported, not independently exhaustively verified. This is not a
+measured comparison against a neural policy, which has not been run.
+
+Before deciding whether the cellular lead remains useful, freeze a final bounded
+scale check. In the pinned source tree, select the greatest (width,reverse horizon)
+for each of rules 35 and 49, then the first two lexicographic files at that pair.
+This gives (348,280) and (256,200); it is a deterministic four-instance selection,
+not representative sampling or an assertion that the repository contains every
+case in the paper. Acquire the four named CNFs at most 30 MB total in 120 seconds
+on Charon; preserve source metadata and hashes. Reuse the verified reference
+binary and exact-mode arguments; freeze a new evaluation with the same three-
+second hard process cap and known controls. If any largest cases remain unresolved,
+retain that limit explicitly. Neither success nor timeout supplies an all-workload
+complexity conclusion. No model acquisition or training.
+
+**Scale result and bounded runtime extension.** All four largest selected inputs
+exceed three seconds. That limit was a diagnostic allowance, not an independently
+justified deployment constraint, so the timeouts do not establish an obstacle to
+repair. Freeze `extended_evaluation01` with ten seconds per process, the unchanged
+binary, exact-mode arguments and four input files, one CPU and 45 seconds total.
+Reuse the completed exact controls from `reference_evaluation02`; do not repeat
+them. This extension measures whether the public reconstruction costs only a few
+additional seconds. Preserve the three-second failures separately.
+
+**Final result and decision.** Ganak's ten-second extension also leaves all four
+largest selected formulas unresolved. The outcome is a concrete separation of
+questions, not a successful SCC mechanism:
+
+- Six selected 20-/128-cell instances have public exact solutions within 1.37–1.67
+  seconds with Ganak; the two 20-cell counts are also exhaustively verified.
+- Four larger published instances remain uncounted within ten seconds by this
+  fixed public configuration. This is a measured upper limit on our attempted
+  execution, not a lower bound on public computation or evidence of neural speed.
+- The hypothesized shallow temporal identity is false. Its counterexamples prevent
+  rejecting the large cases using an invalid algebraic simplification.
+
+The reference executable occupies 72,645,592 bytes; acquisition retained the
+30,035,227-byte archive. Initial six-instance reference execution peaks at 32,864
+KiB RSS; the three-second scale batch peaks at 215,184 KiB. The compiled development
+counter peaks at 1,474,828 KiB and is not a competitive storage baseline. These
+code/memory costs must be admitted explicitly before treating the public solver
+as a permitted individual-model replacement. They are not free reader resources.
+The ten-second scale batch peaks at 237,196 KiB. No actual deployment deadline
+has been established by choosing three or ten seconds.
+
+Keep the largest cellular cases as an unqualified computational lead. The next
+useful comparison is a faithful existing learned policy on these identical inputs,
+with complete solver/runtime costs, against the retained reference. Another toy
+counting identity or a new training run would not settle that comparison. The
+learned policy selects search branches; the complete counter supplies disclosure
+judgments through LN-294's construction. Those are different computational objects,
+and any candidate must keep the complete computation inside its removal/resource
+boundary. Even a measured speed advantage would leave the approximate
+proper-score removal criterion and severe useful-loss threshold to establish.
+The overarching mechanism objective remains unresolved; no training is admitted.
+
+**Preservation.** All 193 manifest-listed files (137,212,405 bytes) verify after
+transfer to the SD evidence store. This includes the failed Python controls,
+compiled controls, rejected temporal identity, failed parser interface, exact
+reference results and unresolved larger runs. Source:
+[public counting audit](experiments/cellular_counting_audit/). Evidence:
+[compiled validation](artifacts/scc-cellular-counting-audit-20260921-v1/compiled01/validation.json),
+[independent enumeration](artifacts/scc-cellular-counting-audit-20260921-v1/compiled01/enumeration.json),
+[rejected identity](artifacts/scc-cellular-counting-audit-20260921-v1/identity01/identity.json),
+[reference results](artifacts/scc-cellular-counting-audit-20260921-v1/reference_evaluation02/results.json),
+[larger-case results](artifacts/scc-cellular-counting-audit-20260921-v1/extended_evaluation01/results.json),
+and [transfer verification](artifacts/scc-cellular-counting-audit-20260921-v1/transfer_verification.json).
+Remote originals: `/home/salvador/scc-research/cellular-counting-audit-20260921-v1/`.
+All runs finished; no training or monitoring is active.
 
 ## Historical evidence
 

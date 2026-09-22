@@ -1,0 +1,24 @@
+{
+  "release_api": "https://api.github.com/repos/meelgroup/ganak/releases/tags/release%2Fv2.7.0",
+  "release_tag": "release/v2.7.0",
+  "asset_name": "ganak-v2.7.0-linux-amd64.tar.gz",
+  "sha256": "ac84b42eb83a23ce8b09f2468ea59468ec4948321d9696216c6528603a33eb63",
+  "maximum_archive_bytes": 40000000,
+  "maximum_extracted_bytes": 300000000,
+  "seconds_per_process": 3,
+  "cpu_count": 1,
+  "training": false,
+  "arguments": [
+    "--mode",
+    "0",
+    "--prob",
+    "0",
+    "--appmct",
+    "-1",
+    "--threads",
+    "1",
+    "--seed",
+    "0",
+    "--fast"
+  ]
+}

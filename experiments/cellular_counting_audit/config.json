@@ -1,0 +1,12 @@
+{
+  "classification": "public counting development control, not SCC evidence",
+  "cpu_count": 1,
+  "seconds_per_formula_strategy": 3,
+  "maximum_recursive_calls": 50000,
+  "strategies": ["occurrence", "reverse_time"],
+  "rules": [9, 35, 49],
+  "validation_widths": [3, 4, 5, 6, 7],
+  "validation_horizons": [1, 2, 3],
+  "random_cnf_seed": 295,
+  "training": false
+}
