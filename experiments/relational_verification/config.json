@@ -1,0 +1,15 @@
+{
+  "classification": "structural validation of a relational-reasoning candidate; not learned-mechanism evidence",
+  "public_input_count": 2,
+  "truth_function_count": 16,
+  "secret_input_name": "secret",
+  "decision_rule_count": 5,
+  "policy": "public output must be independent of the secret input",
+  "utility": "decide whether two total Boolean programs have identical outputs on every input",
+  "query_law": "uniform within equivalent and inequivalent pairs, with class weights one half each",
+  "execution_host": "charon",
+  "cpu_count": 1,
+  "wall_limit_seconds": 30,
+  "seed": null,
+  "training": false
+}

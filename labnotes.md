@@ -9,20 +9,24 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current construction decision — [LN-280–281](#ln-280).** Reject the
-policy-encoded logic construction. A confidentiality policy participates in
-every primitive operation, but decoding four table entries preserves all circuit
-computation while erasing the original private policy. Simple deletion damages
-computation without genuinely erasing the policy. This is an executable control
-for the existing replacement obstacle, not a new positive mechanism.
+**Current candidate direction — [LN-282–283](#ln-282).** Investigate learned
+relational program reasoning: the procedure used to compare programs for debugging
+can reconstruct a fixed public confidentiality judgment by comparing executions
+with different secret inputs. This is a dependency on a reusable reasoning
+procedure, not a hidden policy bit. Its value as a mechanism remains unqualified:
+no learned advantage, genuine removal or broad cognition loss is demonstrated.
 
-**Latest validation — [LN-281](#ln-281).** Exact preservation holds in all
-120,128 circuit/world/input cases across 15,016 circuits; gatewise induction
-extends it to arbitrary finite circuits. The identical edited states give exact
-chance recovery of the original private policy under the stated information
-boundary. Generic confidentiality checking remains intact when supplied a policy.
-The useful primitive has a cheap public implementation; no learned advantage,
-training or destructive cognition result follows.
+**Latest validation — [LN-283](#ln-283).** All 256 pair conversions and 1,280
+reader identities pass, with matching useful/protected accuracy for imperfect
+readers too. The fixtures are solved by public enumeration; even a single-input
+tester reaches 76.67% balanced accuracy. Qualification must therefore examine rare
+separating inputs and compare learned proof/invariant search against sampling and
+symbolic solvers, with total costs charged. No training is admitted.
+
+**Previous construction decision — [LN-280–281](#ln-280).** Reject every-gate
+policy encoding: decoding four entries preserves all circuit computation while
+erasing the private policy. Destructive naive ablation instead leaves that policy
+recoverable. The result remains a reference control, not a positive mechanism.
 
 **Retained mathematical tool — [LN-278–279](#ln-278).** The repair-aware graded
 constraint bound addresses partial-witness quality, conditional on a valid score
@@ -50,14 +54,15 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-277–281](#ln-277).** Which internal
-alignment-related operation is indispensable to independently useful reasoning
-under allowed replacement and repair? Useful computation has survived the
-examined learned-policy factorization, public compilation and primitive-decoding
-edits. These specific failures do not establish general impossibility. A further
-candidate must supply useful computational advantage and a dependency that
-survives replacement; neither every-gate participation nor a stronger score
-supplies those by itself. No new candidate has earned training.
+**Remaining mechanism question — [LN-282–283](#ln-282).** Can an editable,
+reusable relational reasoner supply an advantage on fresh program families that
+survives matched replacement tests, while genuine confidentiality-judgment loss
+forces severe loss of that useful advantage? The conversions specify a recovery
+reader and its exact task law; they do not supply the learned core or its removal.
+Code2Inv is not established as a fast reusable baseline, Lemur as delivered uses
+an external model API, and Code2RelInv remains an unreplicated literature lead.
+The next decision is intact implementation qualification, not another encoding
+or a training run based solely on shared computation.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -20207,6 +20212,215 @@ evidence store. [Source](experiments/policy_encoded_reasoning/),
 [manifest](artifacts/scc-policy-encoded-reasoning-20260921-v1/validation01/manifest.sha256),
 [transfer verification](artifacts/scc-policy-encoded-reasoning-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/policy-encoded-reasoning-20260921-v1/validation01/`.
+
+<a id="ln-282"></a>
+### LN-282 — 2026-09-21: relational program reasoning as the next mechanism candidate
+
+**Selection.** Investigate a learned procedure for relational program reasoning:
+determining whether two programs can produce different results on the same
+input. Its ordinary use is regression checking and verification of program
+transformations. Its protected use is detecting confidentiality violations under
+a fixed public rule: changing a designated secret input must not change the
+public output. The hypothesized internal resource is a reusable proof-search
+strategy, including learned representations and invariant-generation procedures.
+There is no secret policy bit to erase or small encoded primitive to decode.
+This specifies a candidate direction, not a qualified model or working SCC.
+
+**Exact interface and dependency.** Initially restrict statements to total,
+deterministic Boolean programs. Let E(A,B)=1 precisely when A(x)=B(x) for every
+public input x. Let J(P)=1 precisely when P(0,x)=P(1,x) for every x, where the
+first input is the designated secret bit. The policy is public and unchanged.
+Construct
+
+    F(A,B)(h,x) = if h=0 then A(x) else B(x),
+    G(P) = (P(0,·), P(1,·)).
+
+Then J(F(A,B))=E(A,B). A useful comparator C operating on any admitted successor
+M' supplies the protected reader R(M',P)=C(M',G(P)). Specializing the constructed
+outer selector gives G(F(A,B))=(A,B), including the program representations.
+Thus on a useful pair law D and its protected pushforward F(D),
+
+    accuracy_J(R on F(D)) = accuracy_U(C on D).
+
+This is a pointwise reader identity for every C, including inaccurate,
+randomized, distilled or differently represented successors. Couple the reader
+coins to see the equality. Program specialization takes linear syntax work and
+at most two program copies; it does not solve the equivalence problem. Reading,
+normalization, the complete comparator and any preparation/repair are charged.
+For arbitrary P the identity J(P)=E(G(P)) still holds, but accuracy transfers to
+its induced pair law, not automatically to an unrelated debugging population.
+
+The relation also preserves a counterexample: x with A(x)!=B(x) witnesses a
+secret-dependent output of F(A,B). Failure to produce such a witness is not proof
+of equivalence. Timeouts are unknown, not safe answers. Multiple secret bits can
+be handled with paired symbolic secret vectors in the comparator's public input;
+termination, nondeterminism and side channels require new semantics and are not
+covered by the Boolean statement.
+
+**What this buys.** Any exact useful-preserving edit leaves the protected
+judgment computable through the reader, provided its overhead fits. There is no
+one-read restriction, protected executor, or fixed neural decoder in this claim.
+Deleting a named safety head, removing privacy words, or retaining only an
+alternative comparator therefore fails to establish genuine removal on this
+family. The original verifier can remain editable: independent checking defines
+evaluation correctness and does not enforce the model's actions. An agent can
+still disregard a correct privacy judgment. No enforcement claim follows.
+
+**Approximation and resources.** On the specified balanced pair law, a cap a on
+ALL admitted protected readers implies useful decision accuracy at most a.
+If intact accuracy were .95 and the attainable cap were .51, at least 97.78% of
+advantage over a .50 reference would be lost. Those numbers are illustrative,
+not measurements or a warranted chance baseline. The public programs already
+determine their labels; a sufficiently fast public solver defeats a chance cap.
+Use LN-250's computational baseline diagnostic, not information erasure.
+
+More precisely, if the useful reader has budget B, the protected reader needs
+B+c for normalization. Write a_J^0(B+c) and a_U^0(B) for optimal admitted public
+baseline accuracies at those budgets. A removal condition capping protected
+accuracy at a_J^0(B+c)+eta yields
+
+    accuracy_U - a_U^0(B) <= eta + a_J^0(B+c) - a_U^0(B).
+
+The baseline difference cannot be silently dropped. Neither the optimal public
+baseline nor an all-reader upper bound is certified by failed finite attacks.
+This is a resource-relative loss-of-advantage diagnostic, not a redefinition of
+complete functional removal. Any empirical prototype must identify which it
+actually measures. The result concerns verification decisions, not program
+execution accuracy or every cognitive skill. For example, h AND (x1 AND ... AND
+xm) leaks for some input, yet constant-zero prediction has error only 2^(-m-1)
+on uniformly random executions. Approximate execution competence does not imply
+competence at detecting rare leaks.
+
+**Why this is not the previous compiler-only proposal.** The conversions identify
+a dependency already present if the comparator works on the needed inputs. They
+do not create it by scoring an unchanged planner differently. A comparator that
+never acquired the relevant relational reasoning does not become capable merely
+because the conversions exist. The learned search procedure, useful advantage,
+removal intervention and actual workload coverage remain to be instantiated.
+
+**Literature and implementation selection.** Self-composition is an established
+way to express confidentiality as a relation between executions:
+[Barthe, D'Argenio and Rezk (2011)](https://cs.famaf.unc.edu.ar/~dargenio/node/9.html).
+[Wang and Wang (ASE 2022)](https://par.nsf.gov/servlets/purl/10395800) explicitly
+study learned relational invariant synthesis for equivalence and noninterference.
+Their indexed abstract/introduction motivates the candidate; no full experimental
+audit or reproduction of Code2RelInv was completed, and direct PDF retrieval
+failed. These works are not SCC results or our new theorems.
+
+[Code2Inv's CAV 2020 paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC7363181/)
+provides an important caution: its main comparison uses SMT query counts; it
+reports generally slower runtime, with solved C cases taking up to 12 hours.
+Its transfer test uses variants of the same source programs. Do not infer a fast,
+frozen, broadly generalizing reasoner from that result. The
+[Lemur implementation](https://github.com/ai-ar-research/Lemur-program-verification)
+requires an external model API and public verifiers, so it is not an editable
+individual-model platform as delivered. Neither is selected for a training run.
+These checks favor relational invariant/proof search as an operation to investigate,
+without treating any reviewed implementation as qualified.
+
+**Structural implementation check, not a capability experiment.** Freeze this
+entry with the new `experiments/relational_verification/` source/configuration.
+Enumerate 16 two-input Boolean functions as expression trees and all 256 ordered
+pairs; check the conversions against independent truth-table identities and
+explicit paired executions. Check five different comparator behaviors, including
+constant, inverted and single-input readers, with exact class-balanced scores.
+Test counterexample conversion and non-selector program shapes. Demonstrate that
+a removed native head remains recoverable from an intact comparator, and that
+public enumeration restores both functions without private state. The tiny
+fixtures deliberately provide no learned advantage or genuine removal evidence.
+One Charon CPU, deterministic, 30-second wall cap, no model download or training.
+Artifacts: `artifacts/scc-relational-verification-20260921-v1/validation01/`.
+
+**Next substantive decision.** Before training, obtain an editable, reusable
+reasoning implementation and demonstrate an end-to-end advantage on fresh
+relational problems over the matched public solver portfolio. Include syntactic
+normalization, all verifier calls, initialization and reusable caches; split by
+program family, not renamed copies. A positive result would admit attacks on that
+same model with the protected reader already in place. No advantage means change
+the implementation/family, not weaken the baseline. This is an explicit
+qualification dependency; a structural check alone does not satisfy it.
+
+<a id="ln-283"></a>
+### LN-283 — 2026-09-21: relational recovery validated; rare differences determine qualification
+
+**Candidate status.** Retain relational program reasoning as a specific operation
+to investigate. Its useful comparator reconstructs the fixed confidentiality
+judgment, including after changes of implementation. This survives the earlier
+policy-bit deletion and elementary-table-decoding objections at the level of
+functional recovery. It remains a conditional task dependency: no learned core,
+nonvacuous removal intervention, or broad cognitive collapse is demonstrated.
+The finite checker below is a reference implementation, not the proposed learned
+mechanism. The protected operation is discovering an information-flow violation;
+the public privacy policy itself has not been learned or made indispensable.
+
+**Validation.** All 256 ordered function-pair conversions match independent
+truth-table equality and paired execution. All 1,280 reader checks preserve
+useful/protected accuracy exactly. All 240 inequivalent pairs supply valid leak
+counterexamples; 16 programs with a different syntax also pass the cofactor reader.
+Under equal class weights the exact, inverted, constant and single-input readers
+have respective accuracies 1, 0, 1/2 and 23/30, identically for utility and the
+recovered judgment. A removed native head at chance coexists with perfect
+recovery from the comparator. Public enumeration also solves both without model
+state; these fixtures cannot establish removal or computational advantage.
+
+**A concrete workload discriminator.** Let delta(A,B) be the probability that
+inequivalent programs disagree on a public input drawn from the declared test
+law. A public tester samples k independent inputs, reports inequivalent if any
+output differs, and reports equivalent otherwise. For total programs and balanced
+equivalence classes its accuracy is exactly
+
+    1 - (1/2) E[(1-delta(A,B))^k | inequivalent].
+
+It never falsely calls equivalent programs different; its error on an
+inequivalent pair is the probability of missing every distinguishing input.
+The work is k evaluations of each program, plus sampling, comparison and storage.
+These executions are charged; costly programs do not become cheap oracles.
+If every inequivalent pair has delta>=rho, accuracy is at least
+1-(1/2)(1-rho)^k. This elementary sampler must be a baseline. Random pairs with
+large disagreement regions can therefore make a seemingly difficult program
+reasoning task easy. The observed 23/30 single-input control illustrates the issue.
+
+This gives a concrete direction for qualification: program comparisons with rare
+separating inputs, where reusable invariant/proof reasoning might outperform both
+execution sampling and public symbolic solvers. Invariants are relations between
+program variables that remain true through a loop; deriving them is the candidate
+reasoning skill. Rare differences are necessary to defeat this sampling strategy
+when execution is cheap, not sufficient for hardness or learned advantage. A
+syntactic simplifier, SAT/SMT solver, abstract interpreter or stored generic lemma
+may still solve the family cheaply. Include all of them before claiming an
+advantage. For a program such as h AND all(x), rarity alone is useless: reading
+the expression reveals the leak immediately.
+
+**Next qualification is now specific.** Seek an editable, reusable relational
+invariant/proof-search model on independently selected program transformations
+and rare faults, evaluated on held-out program families. Compare total time,
+solver calls and retained advice with sampling, symbolic reasoning and a
+nonlearned search using the same grammar. Evaluate original pairs and their
+confidentiality conversions; measure the conversion cost rather than presuming
+it is negligible. Existing public solver superiority or transfer only between
+renamings rejects that implementation as the proposed source of cognitive
+advantage. Code2Inv's published runtime limitations and Lemur's external API
+prevent treating either reviewed implementation as already qualified. Code2RelInv
+is a literature lead, not a reproduced checkpoint or selected training platform.
+
+Only after intact qualification do edits to this same model become informative:
+head deletion and output suppression are recovery controls; specialization,
+distillation and retained-lemma extraction must preserve all recoverable state
+in the reader budget. Failure of these finite attacks cannot certify all-reader
+removal. The project still needs an actual learned advantage and a defensible
+removal claim, while any loss theorem initially covers relational verification,
+not all cognition. No training is admitted by this structural result.
+
+**Evidence.** Standard-library run on Charon CPU 0: 0.046 seconds, peak 12,700 KiB;
+eight transferred manifest entries verified. No randomness, model download,
+training or GPU work. [Source](experiments/relational_verification/),
+[frozen plan](artifacts/scc-relational-verification-20260921-v1/validation01/labnotes_entry.md),
+[configuration](artifacts/scc-relational-verification-20260921-v1/validation01/config.json),
+[validation](artifacts/scc-relational-verification-20260921-v1/validation01/validation.json),
+[machine](artifacts/scc-relational-verification-20260921-v1/validation01/machine.json),
+[manifest](artifacts/scc-relational-verification-20260921-v1/validation01/manifest.sha256),
+[transfer verification](artifacts/scc-relational-verification-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/relational-verification-20260921-v1/validation01/`.
 
 ## Historical evidence
 
