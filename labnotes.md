@@ -9,21 +9,21 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current direction — [LN-273–274](#ln-273).** Return to mechanism construction;
-set aside the rainfall replication. A concrete proposal makes the harm assessor
-supply every planning cost. Exact analysis shows that comparative planning needs
-risk differences but can discard absolute risk information. An explicit deletion
-preserves every planning choice while every absolute-judgment reader falls to
-chance. A known absolute reference gives conditional coupling for commitment
-decisions, while the broader comparative planning procedure survives.
+**Current direction — [LN-275–276](#ln-275).** A risk-dependent scheduler supplies
+a concrete link between absolute risk assessment and ordinary multi-step job
+ordering. It closes the earlier additive-offset escape, but erasing the risk bit
+leaves the generic scheduler intact. The next construction must identify an
+alignment-related inference or search operation whose removal damages reusable
+reasoning under matched replacement resources. Parameter knowledge alone did not
+supply that mechanism in either examined planning construction.
 
-**Latest validation — [LN-274](#ln-274).** The 32-state construction passes 10,368
-planning comparisons, 8,192 commitment cases and exact posterior checks on one
-Charon CPU. The restricted commitment task loses all predictive advantage after
-deletion; a mixed workload loses only the corresponding weighted advantage.
-This is an analytic architecture control, not a learned SCC mechanism. The
-published rainfall audit in LN-272 remains valid but supplies no mechanism and
-is no longer the next implementation instruction.
+**Latest validation — [LN-276](#ln-276).** Exact enumeration of 729 three-job lists
+and 8,748 permutation values verifies the scheduling rule. After genuine risk-bit
+deletion, the same algorithm with a fixed estimate retains 99.727% of expected
+completed reward on this declared suite. Even the strongest two-job dependency
+loses all knowledge advantage while preserving 96.10% of expected reward. These
+are analytic architecture controls, not learned cognition measurements. Neither
+candidate is admitted for training; rainfall replication remains set aside.
 
 **Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
 Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
@@ -46,14 +46,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-273–274](#ln-273).** Can an independently
-specified alignment function be indispensable to a reusable useful procedure,
-including its alternative implementations, rather than only to direct safety
-choices? The planning candidate now has an explicit deletion escape and an
-absolute-reference refinement with a precise limited benefit. Any further
-implementation must resolve a dependency that survives those controls. Increasing
-the weight of commitment queries cannot establish destruction of the surviving
-planner. No training, forecasting download or model replication is admitted.
+**Remaining mechanism question — [LN-275–276](#ln-275).** Which independently
+specified alignment-related operation could be indispensable to a reusable
+reasoning procedure after alternate implementations and repair are counted?
+The scheduler now supplies a functional dependency and a concrete failure of
+severe destruction. A new candidate must go beyond erasing an environmental
+parameter while leaving the algorithm available. A working expensive-to-replace
+operation has not been identified; the finite controls imply no general
+impossibility. No training, forecasting download or model replication is admitted.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -19403,6 +19403,218 @@ Frozen evidence: [entry](artifacts/scc-planning-risk-dependency-20260921-v1/vali
 [manifest](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/manifest.sha256),
 [transfer verification](artifacts/scc-planning-risk-dependency-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/planning-risk-dependency-20260921-v1/validation01/`.
+
+<a id="ln-275"></a>
+### LN-275 — 2026-09-21: risk-dependent scheduling as a reusable-procedure candidate
+
+**Question and mechanism.** Extend LN-273's cost-comparison proposal to a reusable
+scheduler. A hazardous incident terminates an operation; conditional on the
+world's fixed survival probability s, each time step survives independently.
+Jobs have public positive rewards r_i and positive integer durations d_i. A
+completed job earns its reward; earlier rewards remain earned if a later incident
+occurs. The useful function returns an entire static schedule before execution,
+maximizing expected completed reward. Protected assessment is J=1[1-s>=1/2].
+This is a physical-risk assessment proxy, not the whole normative content of
+alignment. The incident stops the modeled operation, not the computer doing
+this calculation; no trusted shutdown device is assumed.
+
+For a permutation pi, with completion times C_i(pi),
+
+\[
+ V_s(\pi)=\sum_i r_i s^{C_i(\pi)}.
+\]
+
+Unlike a common additive cost in LN-273, the same hazard affects jobs differently
+through their completion times. Risk information can therefore determine ordinary
+job ordering, without inserting an abstention action or adding safety questions
+to the useful evaluation. This is the proposed connection to a reusable procedure.
+
+**Explicit implementation and proof.** The scheduler sorts by decreasing
+
+\[
+ I_i(s)=\frac{r_i s^{d_i}}{1-s^{d_i}},\qquad 0<s<1.
+\]
+
+For adjacent jobs i,j after elapsed time t, putting i first rather than j changes
+expected reward by
+
+\[
+ s^t\{r_i s^{d_i}(1-s^{d_j})-r_j s^{d_j}(1-s^{d_i})\}.
+\]
+
+All later completion times are unchanged. The sign is that of I_i-I_j, so
+repeatedly removing adjacent inversions proves global optimality for any finite
+job list under this contract. Arbitrary alternate implementations giving the
+same optimal orders are included. The algorithm uses one index per job and
+O(m log m) comparisons; exponentiation, rational precision and integer bit costs
+are additional, not unit-cost arithmetic guarantees. Positive rewards and the
+static, no-release-time contract matter.
+
+This is established discounted scheduling mathematics, not a new scheduling
+algorithm. Yang's [author manuscript, introduction, page 3](https://ir.lib.cyut.edu.tw/bitstream/310901800/8381/1/J9.pdf)
+records the common-discount priority rule. The interchange calculation above is
+given directly for our survival interpretation; job-specific discount rates in
+the rest of that paper are not assumed here.
+
+**Genuine dependence and a quantified limit.** Let the complete source-specific
+state be a uniform bit selecting s=1/4 or s=3/4. The generic scheduler and job
+inputs are otherwise source-independent. Consider job A=(duration 1,reward 1)
+and job B=(duration 2,reward 3):
+
+| Survival probability | A then B | B then A | Optimal order |
+| --- | ---: | ---: | --- |
+| 1/4 | 19/64 | 13/64 | A then B |
+| 3/4 | 129/64 | 135/64 | B then A |
+
+The first job in an optimal returned schedule recovers J in one call, regardless
+of the scheduler's representation. Correct scheduling therefore retains the
+judgment; an alternate implementation is not a genuine-removal counterexample.
+The reader needs one complete schedule call and inspection of its first item,
+with no parent model, new observations or secret advice.
+
+In either world a wrong order loses 3/32 reward. If every admitted judgment
+reader, including this adapter, has accuracy at most 1/2+eta on the balanced
+worlds, expected regret is at least (3/32)(1/2-eta). This applies to any randomized
+successor returning a valid permutation with matched state/history. Invalid
+outputs are outside the interface guarantee and receive no useful credit.
+
+Now erase the world bit and every copy, retaining the generic scheduling code.
+All retained state and schedule transcripts are independent of that bit; genuine
+judgment error is 1/2. Either fixed order is Bayes optimal on this two-job task.
+Intact expected reward is 77/64; the erased planner earns 74/64. Thus deletion
+loses all of the 3/64 advantage supplied by knowing the world, while retaining
+74/77 (96.10%) of expected reward. At eta=.01 the conditional regret bound loses
+at least 98% of that narrow advantage. Neither percentage establishes destruction
+of the reusable procedure: sorting and recomputing a schedule remain available.
+This is not LN-179's vanishing-margin construction: the hazard probabilities
+are well separated, and the scheduling procedure and reward scale are explicit.
+It is another instance of its essential information-versus-procedure distinction.
+
+**Strongest cheap surviving implementation.** Reuse the identical index/sort
+routine with fixed s=1/2. This requires no source-dependent advice and works for
+arbitrary new job lists with the same asymptotic cost. It cannot be optimal in
+both worlds on the reference pair. Quantify its expected reward on a separately
+specified finite suite, and compare with the optimal no-state static schedule
+obtained by maximizing the two-world mean. Do not call the latter a bound on
+adaptive policies that observe outcomes while executing. No blanket numerical
+retention guarantee for every job list is inferred from the reference pair.
+
+**Repair accounting.** If k independent source-dependent survival trials are
+available, classify the world by the majority outcome for odd k and feed the
+estimated s into the unchanged scheduler. The judgment error is
+
+\[
+ e_k=4^{-k}\sum_{j=(k+1)/2}^{k}{k\choose j}3^{k-j}.
+\]
+
+The reference scheduling regret is (3/32)e_k. This restores both functions; it
+addresses durability, not an escape keeping J absent. Charge k actual trials,
+state reset/access where needed, a count, and computation. Independent trials
+are an explicit repair resource, not assumed safe or freely available from a
+single terminated operation. These are analytic probabilities, not executed
+physical trials. Repair is additional to the already surviving scheduler.
+
+**Bounded validation contract.** One Charon CPU, standard-library exact fractions,
+30-second wall limit, no randomness or training. Freeze this entry, configuration,
+source and machine receipt. Enumerate all 729 ordered three-job lists drawn from
+durations {1,2,3} and rewards {1,2,3}. For each of the two survival probabilities,
+compare the index order with all six permutations (8,748 objective evaluations).
+Report exact mean intact, fixed-parameter and optimal no-state rewards under the
+uniform job-list measure, and the number of lists with a common optimum in both
+worlds. Check the reference pair independently and calculate repair errors at
+k=1,3,5,9,17,33. Pass only if every index order is optimal and the exact reference
+values and one-call recovery agree. This validates the mechanism argument and its
+escape, not learned cognition, a computational lower bound or a training proposal.
+
+<a id="ln-276"></a>
+### LN-276 — 2026-09-21: the scheduling dependency is real, but the reusable procedure survives deletion
+
+**Outcome.** LN-275 connects a protected physical-risk assessment to ordinary
+multi-step scheduling, including all equivalent implementations of that useful
+function. Duration-dependent survival closes LN-273's additive-offset escape:
+the optimal order can reveal absolute risk without a direct safety query.
+Nevertheless, the candidate fails the destructive endpoint. The source bit can
+be genuinely erased while the same general scheduling algorithm continues to
+operate on new job lists using a fixed parameter. The deletion removes knowledge
+of which environment is present, not the reusable ordering procedure.
+
+**Completed validation.** Charon's exact-fraction calculation checked all 729
+prespecified three-job lists in both worlds, evaluating 8,748 permutation values.
+All 1,458 index-order optimality checks pass. On 591 lists at least one order is
+optimal in both worlds; on 138 no common optimum exists. The proof covers any
+finite job count under the static scheduling assumptions; these counts concern
+only the declared finite suite.
+
+| Static scheduler | Mean expected completed reward | Fraction of intact expected reward |
+| --- | ---: | ---: |
+| Knows the survival probability | 1.5671293471 | 100% |
+| Optimal under the two-world prior, without the bit | 1.5638896801 | 99.7933% |
+| Same index algorithm with fixed survival 1/2 | 1.5628515173 | 99.7270% |
+
+The inexpensive fixed-parameter replacement is a concrete preserving alternative,
+not a claim that an unsuccessful attack search found an optimum. Its code is the
+same general routine, with no parent advice, source-dependent observations or
+new training. Its complete state and query transcripts are independent of the
+erased bit, so the protected judgment is genuinely unavailable before additional
+source-dependent evidence. The more expensive optimal-prior reference exhausts
+six permutations per three-job instance; no polynomial scaling claim for that
+reference under a mixture of survival laws is supplied.
+
+**Severity and normalization.** The reference two-job construction gives exact
+conditional coupling: any useful scheduler's first action is a judgment reader.
+A 51% all-reader accuracy cap implies losing at least 98% of the 3/64 reward
+advantage attributable to knowing the world. Actual erasure loses that entire
+advantage while preserving 74/77 (96.10%) of reward. On the full declared suite,
+the entire value of knowing the world is only approximately 0.207% of intact
+reward. Thus the candidate lacks a substantial intact advantage over its matched
+no-state baseline even before a removal experiment could be admitted.
+
+The reward zero here means no completed work, so these retained fractions have
+a concrete operational interpretation. They are still scheduling rewards, not
+percentages of cognition. Neither normalizing by the small knowledge advantage
+nor amplifying exact-episode failure changes the demonstrated survival of the
+algorithm. This is a specific extension of LN-179 and LN-273–274, not a new
+claim that all risk-dependent useful computation is weakly coupled.
+
+**Repair is also explicit, under declared observations.** Nine independent trials
+reduce judgment error to 4.8927%; 17 reduce it to 1.2385%; 33 reduce it to 0.0951%.
+These are exact binomial calculations. They assume independent trials from the
+same hidden world, which may require new operations or resets after an incident.
+No such trials were executed or assumed free. Supplying the estimate to the
+unchanged scheduler restores both assessment and optimal scheduling with the
+corresponding reference regret. That is restoration, not a conditional-coupling
+counterexample with protection still absent. The already demonstrated surviving
+scheduler does not require these observations at all.
+
+**Consequential decision.** Do not scale or train the static-cost or
+survival-parameter constructions. We have supplied the missing procedural link
+for a scheduler, and the explicit implementation shows why that link alone is
+insufficient. The current class places the protected information in a parameter
+consumed by an otherwise intact generic algorithm. A useful next candidate must
+name an alignment-related *inference or search operation*, identify the reusable
+operations lost with it, and analyze a replacement implementation at matched
+resources. Merely learning the survival parameter or putting the index formula
+inside a network does not change the current counterexample.
+
+This is a construction requirement, not an existing positive candidate or an
+assertion that all parameter-dependent mechanisms fail. In particular, these
+small efficient schedulers do not prove that replacements for arbitrary learned
+inference are cheap. A specific expensive-to-replace operation, its actual
+alignment role, approximate useful loss and recovery cost remain to be supplied.
+No learned model, training run or forecasting replication is admitted by this
+result. The wider SCC problem remains open.
+
+**Evidence.** The Charon validation took 0.177 seconds and 13,572 KiB peak memory.
+No GPU, training, environment changes or physical observations. All eight
+manifest entries verify on the SD evidence store. Tracked source:
+[scheduling risk dependency](experiments/scheduling_risk_dependency/).
+Frozen [plan](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/labnotes_entry.md),
+[configuration](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/config.json),
+[validation](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/validation.json),
+[machine](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/machine.json),
+[manifest](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/manifest.sha256),
+and [transfer verification](artifacts/scc-scheduling-risk-dependency-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/scheduling-risk-dependency-20260921-v1/validation01/`.
 
 ## Historical evidence
 
