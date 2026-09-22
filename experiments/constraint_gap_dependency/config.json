@@ -1,0 +1,15 @@
+{
+  "classification": "finite validation of a conditional graded-score reduction; not a PCP compiler or learned mechanism",
+  "block_counts": [1, 2, 3, 4],
+  "variables_per_block": 3,
+  "clauses_per_block": 8,
+  "baseline": "7/8",
+  "reader_advantage": "1/100",
+  "gap_excess": "1/1000",
+  "coverage_constants": ["1", "6/5", "2", "10"],
+  "execution_host": "charon",
+  "cpu_count": 1,
+  "wall_limit_seconds": 30,
+  "seed": null,
+  "training": false
+}

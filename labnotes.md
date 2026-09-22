@@ -9,20 +9,21 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current direction — [LN-277](#ln-277).** A learned branch-guidance network can
-retain its complete search policy and computational advantage after genuine
-loss of absolute risk calibration in an explicit factorized architecture.
-Making that network expensive to replace does not address an edit that retains
-it. Certified constrained planning remains a conditional candidate: a useful
-witness-producing procedure can recover a safety-feasibility judgment.
+**Current result — [LN-278–279](#ln-278).** Certified planning now has a
+repair-aware bound on graded constraint-solving quality, using a genuine
+positive/negative score gap. A sufficiently good partial assignment recovers the
+protected judgment; complete-witness failure alone is insufficient. Established
+PCP gap constructions can supply the score gap in principle, but they do not
+supply an internal learned mechanism or preserve partial productive utility by
+default. Public compilation alone is not admitted as the mechanism.
 
-**Current construction obligation — [LN-277](#ln-277).** Supply a fixed
-alignment-related constraint and an independently justified productive planning
-family, with an efficient reduction and controlled query-distribution coverage.
-The one-call witness bound is exact, but no family has yet met those obligations
-and the matched replacement-cost test. This was an analytic review; no new
-experiment or training. The latest executed control remains LN-275–276: a
-risk-erased scheduler retained 99.727% of expected output on its finite suite.
+**Latest validation — [LN-279](#ln-279).** All 14,488 finite assignment checks
+agree with an independent evaluator. Near-solutions recover judgments and all
+30 one-bit-damaged outputs admit local repair. Three padded negative examples
+violate the needed score gap and are correctly rejected. These tiny examples
+are cheaply decidable and cannot establish genuine removal or hardness. The
+conditional 80% advantage-loss bound needs coverage constant kappa<=1.2152 at
+the stated numerical settings. No training or new benchmark is admitted.
 
 **Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
 Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
@@ -45,14 +46,15 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-277](#ln-277).** Can safety-feasibility
-computation be indispensable to independently useful planning, with severe loss
-under genuine removal and affordable repairs included? A one-call verified
-witness gives a conditional loss bound; its meaning depends on workload coverage,
-nontrivial computational advantage and the value of surviving partial reasoning.
-Those premises remain uninstantiated. The score-normalization escape concerns
-a specified architecture, not every learned search system. No training,
-forecasting download or model replication is admitted.
+**Remaining mechanism question — [LN-278–279](#ln-278).** Which internal
+alignment-related operation is indispensable to independently useful reasoning
+under allowed replacement and repair? The graded bound improves the assessment
+of a candidate once it exists; it does not construct that dependency. Applying
+it to original planning needs an efficient score/utility conversion, justified
+workload coverage and a nonvacuous computational-removal premise. None has been
+instantiated together. The earlier learned-policy and scheduling escapes remain.
+No general impossibility, training, forecasting download or model replication
+follows from this result.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -19778,6 +19780,260 @@ solvers. There is no new learned SCC result, no proof of general impossibility,
 and no reason to start another generic planning benchmark. The meaningful change
 is that replacement hardness alone has been shown insufficient for candidate A,
 while candidate B now has a precise semantic, resource and coverage obligation.
+
+<a id="ln-278"></a>
+### LN-278 — 2026-09-21: approximation gaps address partial witnesses in certified planning
+
+**Question and new mathematical tool.** LN-277 gives a loss bound for complete
+valid plans. A successor could fail that endpoint while preserving almost all
+useful partial reasoning. Examine gap-producing constraint reductions, including
+probabilistically checkable proofs (PCPs), to replace the complete-witness score
+with a graded score. The goal is an argument applying to alternative solvers and
+repair, not another empirical failure to recover a native judgment head.
+
+Fix the semantic judgment first: J(x)=1 when the finite transition system in x
+has a horizon-bounded plan reaching its specified goal without entering a
+specified hazardous state. A witness is an action sequence. The verifier checks
+transitions, the safety condition and the goal. With a polynomially bounded
+explicit horizon and efficiently evaluated transitions this is an NP relation;
+a public circuit can unroll the verifier. This is formal safety feasibility,
+not an assertion that a generic satisfiability predicate is learned alignment.
+
+**Gap premise.** Suppose a public, charged compiler produces constraints F_x and
+an assignment score Q(F_x,z) in [0,1], with:
+
+- J(x)=1: some assignment scores 1;
+- J(x)=0: every assignment scores at most s<1.
+
+The compiler receives x, not its label or a protected answer. For any edited
+solver, including any admitted repair preceding its output z, define a reader
+that predicts 1 exactly when Q(F_x,z)>s. Its budget includes compilation, the
+entire solver/repair and exact scoring. On an equal positive/negative protected
+population, if p is the probability of exceeding s on positive instances, reader
+accuracy is exactly 1/2+p/2. Therefore a cap 1/2+eta on every such admitted reader
+implies p<=2 eta. On every positive instance and output,
+
+\[
+ Q\le s+(1-s)\mathbf 1\{Q>s\},\qquad
+ \mathbb E[Q\mid J=1]\le s+2\eta(1-s).
+\]
+
+This is a bound on the fraction of constraints satisfied, not just complete-plan
+success. A repaired near-solution that exceeds s also recovers the judgment.
+An output encoding must be decoded to an assignment at charged cost; a claim
+about a different output object requires its own efficient scoring adapter.
+Timeouts and malformed assignments receive score zero. Randomized and stateful
+successors are covered with matched evaluation histories; reset and copy costs
+are not free. The ordinary verifier used by the reader is not a trusted device.
+
+**A standard compiler supplies the gap in principle.** Håstad's
+[Some optimal inapproximability results, Theorem 6.5](https://people.kth.se/~johanh/optimalinap.pdf)
+(author manuscript dated February 18, 2002, printed page 42) gives the
+satisfiable-versus-at-most-(7/8+epsilon) gap for clauses of exactly three literals.
+For every fixed positive epsilon, its NP-hardness reduction supplies a
+polynomial-size gap construction. Random independent Boolean assignments satisfy
+7/8 of clauses in expectation when each clause uses three distinct variables.
+The theorem and its perfect-completeness argument were inspected; no full PCP
+compiler was implemented or independently re-proved here. Its constants and
+size growth are not a practical execution estimate.
+
+Set b=7/8 and s=b+epsilon. Relative to a perfect intact solver's advantage over
+this explicit random-assignment baseline, the retained advantage is at most
+
+\[
+ \frac{\mathbb E[Q\mid J=1]-b}{1-b}
+ \le 8\epsilon+2\eta(1-8\epsilon).
+\]
+
+For epsilon=.001 and eta=.01, the score cap is .87848: at least 97.216% of the
+perfect solver's above-baseline advantage is lost. This does **not** mean that
+97.216% of constraints fail; a random assignment already achieves 87.5% expected
+satisfaction. For an actual intact score c and matched baseline beta<c, the
+retained fraction is bounded by (s+2 eta(1-s)-beta)/(c-beta), clipped below at
+zero for positive retained advantage. Qualification must measure c and beta;
+it cannot borrow a perfect solver's denominator.
+
+**Coverage remains explicit.** Let nu_+ be the compiled positive-instance law and
+D an independently justified useful assignment workload, both over the same
+scored problem type. If nu_+(A)<=kappa D(A) for every measurable A, then applying
+this domination to the nonnegative deficit 1-Q yields
+
+\[
+ \mathbb E_D Q\le 1-\frac{(1-s)(1-2\eta)}{\kappa}.
+\]
+
+At the numerical settings above, the guaranteed above-baseline advantage loss is
+97.216%/kappa. Achieving an 80% bound requires kappa<=1.2152. Gap amplification
+does not manufacture workload overlap. Renaming or permuting formula variables
+alone does not prove the compiler output has the distribution of independently
+chosen productive tasks.
+
+**Return to the original planning utility.** A constraint fraction is a new
+objective. To bound a graded productive utility U in the original planning
+system, an efficient converter K from the successor's actual output must satisfy
+a quantitative link, for example Q(F_x,K(output))>=a+d U with d>0. Then the
+score bound transfers to E[U]<=(score_cap-a)/d on the matched distribution.
+K's preparation, execution, auxiliary state and any repair all count. Complete
+witness preservation by a reduction does not establish this inequality for
+partial plans. Completing a partial plan may itself be the hard computation.
+Without such a link, amplifying constraint violations can amplify the reported
+failure without damaging the original planning procedure.
+
+**Hardness and removal limits.** Worst-case NP-hardness does not supply an
+average-case 51% all-reader cap, a learned solver advantage, or an actual removal
+edit. The compiler remains a public deterministic transformation; any information
+or advice used by the original solver and any alternative exact solver must be
+counted. If a matched no-model solver already exceeds the displayed cap inside
+the reader budget, the removal premise is infeasible. A PCP soundness statement
+is unconditional about assignments on negative instances; the assertion that
+finding good assignments is computationally hard is a separate statement with
+its own assumptions and quantifiers. No general SCC impossibility follows.
+
+**Bounded validation before drawing a conclusion.** Use standard-library exact
+arithmetic on one Charon CPU, 30-second wall limit, no random sampling or training.
+Freeze this entry, source, configuration and machine receipt. This validates
+small gap examples and counterexamples, not the asymptotic PCP construction:
+
+1. A three-variable negative block contains all eight signed clauses; every
+   assignment satisfies exactly seven. A positive block omits one clause and
+   duplicates a different clause, keeping eight clauses and admitting a unique
+   fully satisfying assignment. Check all 56 positive variants and all outputs
+   using independent literal and bit-mask evaluators.
+2. For 1,2,3,4 disjoint blocks, enumerate every assignment for all-positive and
+   all-negative formulas. Check the random-assignment baseline and soundness.
+   Corrupt each bit of a satisfying output, record complete-witness failure,
+   threshold-reader recovery and radius-one repair. Charge n+1 candidate scores
+   for that repair; it does not count as genuine removal while recovery survives.
+3. Include a negative formula with only one contradictory block and otherwise
+   positive blocks. Its best score is 1-1/(8k). For k>1 this violates the proposed
+   7/8 soundness bound. Reject that gap promise rather than mislabel a high-scoring
+   negative as positive. Ordinary padding or conjunction is not gap amplification.
+4. Check exact sensitivity at kappa=1,6/5,2,10 with eta=1/100 and epsilon=1/1000.
+
+All finite formulas are intentionally small and cheaply decidable, including by
+inspecting their block structure. They cannot instantiate protected-function
+unavailability. They qualify the score logic, recovery controls and identification
+of a failed premise. Preserve failures; do not fit a model or enlarge the run to
+suggest a hardness result.
+
+<a id="ln-279"></a>
+### LN-279 — 2026-09-21: a repair-aware graded coupling bound, with validated gap and coverage limits
+
+**Substantive result.** The certified-planning route now has an approximate
+constraint-score bound applying to arbitrary successor algorithms and admitted
+repair, rather than only to complete witnesses. With a sound gap s between
+positive and negative instances and an all-reader protected-accuracy cap
+1/2+eta, positive-instance score is at most s+2 eta(1-s). This is the elementary
+reduction proved in LN-278, using established gap constructions as a possible
+compiler. It is a new application in this record, not a claim to have invented
+PCP theory or a new hardness theorem.
+
+The concrete interpretation is useful: a successor cannot retain enough partial
+constraint-solving quality to cross the gap while claiming the judgment is
+unavailable. The partial output itself supplies a judgment reader. Any affordable
+repair that crosses the gap does the same. Both the complete solver cost and
+scoring/repair cost must fit the judgment-reader budget.
+
+**Finite checks.** All 14,488 assignment evaluations agreed between independent
+literal and bit-mask evaluators. The run covered 56 positive three-variable
+formulas and 12 multi-block formula families. Every family had exact random
+assignment mean 7/8. All fully negative families scored exactly 7/8 on every
+assignment, so no output crossed the reader threshold.
+
+The near-solution controls matter more than the count. For four positive blocks,
+all 12 one-bit-corrupted satisfying assignments fail the complete-witness test,
+but all 12 still exceed 7/8 and recover the positive judgment without repair.
+Their scores are 15/16 or 31/32. Searching the original assignment and its
+one-bit neighbors restores the complete solution for all 30 damaged assignments
+across the four block sizes. These are retained/recovered functions, not evidence
+of protected-function removal.
+
+**A failed premise was caught.** Adding satisfiable blocks to one contradictory
+block produces negative instances whose optimum is 1-1/(8k). For k=2,3,4 the
+optima are 15/16,23/24,31/32, violating the proposed 7/8 soundness premise. There
+are respectively 8,104,1,040 outputs that would fool an unjustified threshold
+reader. All three invalid gap claims were rejected. This gives a concrete
+counterexample to obtaining a robust bound by merely padding constraints or
+requiring a longer conjunction of otherwise useful steps.
+
+**Severity depends quantitatively on coverage.** With s=7/8+.001 and protected
+accuracy at most 51%, the perfect-intact, random-baseline example gives:
+
+| Positive-task coverage constant kappa | Useful score cap | Guaranteed above-baseline advantage lost |
+| ---: | ---: | ---: |
+| 1 | 87.8480% | 97.2160% |
+| 1.2 | 89.8733% | 81.0133% |
+| 2 | 93.9240% | 48.6080% |
+| 10 | 98.7848% | 9.7216% |
+
+These are conditional analytic bounds, not observed capability losses. Kappa
+bounds how much more mass the protected positive workload may put on any input
+set than the useful workload. The bound reaches 80% advantage loss only for
+kappa<=1.2152. The 87.5% random baseline and the assumed perfect intact score are
+part of this calculation; neither should be replaced with an actual model's
+unmeasured baseline or competence.
+
+**What has and has not been settled.** We can address the partial-witness issue
+for a compiled, graded constraint objective. We cannot transfer that conclusion
+to ordinary planning merely because the compiler preserves complete solutions.
+Such a transfer needs a resource-bounded conversion from retained partial plans
+to assignments with a score related to productive utility, as stated in LN-278.
+Otherwise a more stringent encoding can change the score while leaving the
+original reasoning procedure available. That is a specific failure of a
+compiler-only mechanism proposal, not a proof against every internal mechanism.
+
+The source hardness theorem is worst-case. It does not provide the average-case
+removal premise, independently meaningful workload coverage, an efficient
+positive model, or an alignment-related internal operation. Our tiny validation
+families are trivially decidable from their block structure; an ordinary solver
+can recover their labels without any retained model. They deliberately cannot
+satisfy a 51% all-reader cap. No small-example hardness claim or genuine erasure
+claim is made. No full PCP compiler, learned solver or real planning environment
+was implemented in this wave.
+
+**Why a public compiler alone cannot create the mechanism.** There is a simple
+closure argument under the project's editable-interface contract. Suppose an
+admitted edit leaves a reader A(M',x) computing original useful behavior from the
+successor state M'. A public preprocessing/postprocessing wrapper changes neither
+M' nor the availability of A. If the wrapper supplies a new protected reader B,
+compose its public operations with its calls to M'; this is already a reader of
+M', with all composition costs charged. If no such reader fits the original
+removal budget, the wrapper has not restored J within that budget. In either
+case A remains a useful procedure the attacker can retain. A new score may judge
+A poorly, but changing the score did not destroy A.
+
+This applies to adding a compiler or evaluator around an existing unchanged
+computation. It does not exclude training a different internal representation
+that actually changes which procedures survive an edit. It also does not assume
+that compilation is free, that a different interface has the same task law, or
+that a prohibited old interface remains admitted under a changed contract. For
+the current fully editable-interface target, however, disallowing A by fiat
+would supply the dependency through a new restriction. Thus a gap compiler can
+certify a dependency once present; it cannot substitute for building the internal
+dependency. This settles the public-compilation proposal at the mechanism level,
+while leaving the conditional mathematical tool useful.
+
+**Decision.** Retain the graded bound and its near-solution/repair controls as
+an improvement to candidate assessment. Do not promote public gap compilation
+into the missing SCC mechanism, launch a PCP benchmark, or start training on the
+strength of these bounds. The next mechanism must supply its internal dependency;
+then the score/utility conversion, useful-distribution coverage and actual
+replacement resources determine whether this stronger theorem applies. Those
+are concrete outstanding conditions, not a positive construction claimed here.
+The scientific contribution of this work unit is the repair-aware approximate
+bound and its explicit failure conditions, rather than another proposed task.
+
+**Evidence.** Standard-library exact arithmetic on one Charon CPU took 0.689
+seconds, peak memory 13,460 KiB. No randomness, training, GPU work or environment
+changes. Eight manifest entries verified on the SD evidence store. Source:
+[constraint gap dependency](experiments/constraint_gap_dependency/).
+Frozen [plan](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/labnotes_entry.md),
+[configuration](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/config.json),
+[validation](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/validation.json),
+[machine](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/machine.json),
+[manifest](artifacts/scc-constraint-gap-dependency-20260921-v1/validation01/manifest.sha256),
+and [transfer verification](artifacts/scc-constraint-gap-dependency-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/constraint-gap-dependency-20260921-v1/validation01/`.
 
 ## Historical evidence
 
