@@ -1,0 +1,278 @@
+{
+  "revision": "e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "base_url": "https://raw.githubusercontent.com/NeuroSharp/learningCNF/e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "maximum_bytes": 3000000,
+  "files": [
+    {
+      "path": "common_components.py",
+      "bytes": 942,
+      "git_blob_sha1": "6022f62057943c2477b62d3699cd6d51ce55b612",
+      "kind": "source"
+    },
+    {
+      "path": "config.py",
+      "bytes": 8095,
+      "git_blob_sha1": "59f6d393cdd204ed092bd20dbbfe78f84c13681c",
+      "kind": "source"
+    },
+    {
+      "path": "dgl_encoders.py",
+      "bytes": 23544,
+      "git_blob_sha1": "7504324250967ac8a06453473be46784fe91ca32",
+      "kind": "source"
+    },
+    {
+      "path": "dgl_layers.py",
+      "bytes": 3210,
+      "git_blob_sha1": "325fbb6c2cab1955c4261a65daf2b7f229842c9a",
+      "kind": "source"
+    },
+    {
+      "path": "es/es.py",
+      "bytes": 14290,
+      "git_blob_sha1": "79d4f340452a0bf33d038215a35899849fa5db26",
+      "kind": "source"
+    },
+    {
+      "path": "es/es_utils.py",
+      "bytes": 1604,
+      "git_blob_sha1": "2c18d07e4a86cf47f7ee3f01d7313ed8f15285dd",
+      "kind": "source"
+    },
+    {
+      "path": "es/policies.py",
+      "bytes": 3969,
+      "git_blob_sha1": "50f615a94940032cdf3564a7f87a3683c043b0d9",
+      "kind": "source"
+    },
+    {
+      "path": "graph_utils.py",
+      "bytes": 1420,
+      "git_blob_sha1": "221291dc06ff2bdeb320841f9b259e639056c6ce",
+      "kind": "source"
+    },
+    {
+      "path": "policy_base.py",
+      "bytes": 3518,
+      "git_blob_sha1": "29579931bbd5562adae9106703bee740d63dbf66",
+      "kind": "source"
+    },
+    {
+      "path": "rl_utils.py",
+      "bytes": 14929,
+      "git_blob_sha1": "3db6affe6063ddf2bb83c866425b717edc972c8d",
+      "kind": "source"
+    },
+    {
+      "path": "rllib_sharp_models.py",
+      "bytes": 5224,
+      "git_blob_sha1": "851cf291f7a9b44b86870c79c33ffebae31613b4",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/common_types.h",
+      "bytes": 585,
+      "git_blob_sha1": "b1947cd0e2616ec36fb36766aea559e15bc22e4e",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/pysolvers.cc",
+      "bytes": 119101,
+      "git_blob_sha1": "afa5316d2aed9a67d448b82f16e8f58f04780011",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/alt_component_analyzer.cpp",
+      "bytes": 6038,
+      "git_blob_sha1": "4f4cbf51d8aa5f2354d5e5f41ed7b054d086fc5b",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/alt_component_analyzer.h",
+      "bytes": 8317,
+      "git_blob_sha1": "a0baf4dff227930d69763d11e5426142dc9d9403",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/branching_oracle.h",
+      "bytes": 4659,
+      "git_blob_sha1": "09970d030b0400b1e8b34e4b590746dc69108e9e",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_cache-inl.h",
+      "bytes": 5661,
+      "git_blob_sha1": "15c8af301269eb62d1f52d5c201f3490b6d4c1ae",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_cache.cpp",
+      "bytes": 6871,
+      "git_blob_sha1": "1a03df98a5ed288776a8c4b1960f263f1a8cb794",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_cache.h",
+      "bytes": 5595,
+      "git_blob_sha1": "3199349b34ea0878b46ad33f45506089a4f278c9",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_management.cpp",
+      "bytes": 1646,
+      "git_blob_sha1": "ffc503bc82c4de9d76ebcce638919fa2cfe9f416",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_management.h",
+      "bytes": 5416,
+      "git_blob_sha1": "09296cd04091b61b59d953be286c06c93a92539c",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/base_packed_component.cpp",
+      "bytes": 1221,
+      "git_blob_sha1": "2ab79ddf4295e79bbe0b081e7801b4b6905655f2",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/base_packed_component.h",
+      "bytes": 5654,
+      "git_blob_sha1": "06a64b095d1e7a8ba631e677ea3418eb4b29dc4f",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/cacheable_component.h",
+      "bytes": 2645,
+      "git_blob_sha1": "0bc7a084fbc0e46d3f042fb92e26d3dbd4980eb7",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/component.h",
+      "bytes": 2863,
+      "git_blob_sha1": "582105cd593169f031741160c7240f646e24f807",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/component_archetype.cpp",
+      "bytes": 255,
+      "git_blob_sha1": "9b2515505edc0bd87ea806770511007ede5f78cc",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/component_archetype.h",
+      "bytes": 7444,
+      "git_blob_sha1": "181cf372affa203c9d73fe0433462aa81b1badea",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/component_types/difference_packed_component.h",
+      "bytes": 6964,
+      "git_blob_sha1": "b7a716b04409a94bb98cd1e54d13f8457e8c8916",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/containers.h",
+      "bytes": 1308,
+      "git_blob_sha1": "9bc367a9ee5ad6a571db6f9580c78c86ebe4e406",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/containers/binary_heap.h",
+      "bytes": 3736,
+      "git_blob_sha1": "7320a11a7283fbc57dc95076ceec771a93c1a20c",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/instance.cpp",
+      "bytes": 13431,
+      "git_blob_sha1": "ac79feb0ba06aa57e5f05efaa0a70161fda14f89",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/instance.h",
+      "bytes": 8108,
+      "git_blob_sha1": "4a4e4cc6f8c63a3c515e617273faec501c5d2f6f",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/main.cpp",
+      "bytes": 3459,
+      "git_blob_sha1": "df6aee513a8950ee5a0659ef11a59f53b4089c85",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/primitive_types.h",
+      "bytes": 676,
+      "git_blob_sha1": "713980a36d2ef46a339a99052162c9d581df4452",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/solver.cpp",
+      "bytes": 37114,
+      "git_blob_sha1": "f754c30c2c9d51520e3d3ed43d2a8af199fa4c43",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/solver.h",
+      "bytes": 9529,
+      "git_blob_sha1": "86e84892014af3072d4f627b1fe3f7b89cdd05c6",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/solver_config.h",
+      "bytes": 619,
+      "git_blob_sha1": "9a4172c83e3d37b522d3b525a5d552946d560b99",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/stack.h",
+      "bytes": 4929,
+      "git_blob_sha1": "73f1dc15eff948caffba450c3f2afeaa66c5d861",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/statistics.cpp",
+      "bytes": 4730,
+      "git_blob_sha1": "8e9567977be33ec04e955788d30cc10a31278761",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/statistics.h",
+      "bytes": 8062,
+      "git_blob_sha1": "5159f544c78c5ae81553b1f52c8c247c7a7ef4a1",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/solvers/sharpSAT/structures.h",
+      "bytes": 4868,
+      "git_blob_sha1": "fb6a57d218033fd1fa0dda7aff61616533fa9d82",
+      "kind": "source"
+    },
+    {
+      "path": "saved_models/cell35/checkpoint-981",
+      "bytes": 329036,
+      "git_blob_sha1": "76d41bdd4f70e252130fe1519ad21b2861db9119",
+      "kind": "checkpoint"
+    },
+    {
+      "path": "saved_models/cell49/checkpoint-581",
+      "bytes": 329034,
+      "git_blob_sha1": "8566aa351d733e6a4ddb96bd036b0dc104a465ab",
+      "kind": "checkpoint"
+    },
+    {
+      "path": "settings.py",
+      "bytes": 1204,
+      "git_blob_sha1": "a2f4a623105d86f15a1c9dc29c4498117ceca8b8",
+      "kind": "source"
+    },
+    {
+      "path": "sharp_env.py",
+      "bytes": 11235,
+      "git_blob_sha1": "786b52e06b60ccd08fd46b828bedbb527628832e",
+      "kind": "source"
+    }
+  ],
+  "training": false
+}

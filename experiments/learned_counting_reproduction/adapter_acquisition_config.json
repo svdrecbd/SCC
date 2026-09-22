@@ -1,0 +1,26 @@
+{
+  "revision": "e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "base_url": "https://raw.githubusercontent.com/NeuroSharp/learningCNF/e2f1cb209bab4b841dad2207385f3175c33760fb",
+  "maximum_bytes": 2000000,
+  "files": [
+    {
+      "path": "custom_rllib_utils.py",
+      "bytes": 4678,
+      "git_blob_sha1": "e1d0269da54877e0d54063b864dd4eeb935f011f",
+      "kind": "source"
+    },
+    {
+      "path": "sat-rl/pysat-master/pysat/solvers.py",
+      "bytes": 94624,
+      "git_blob_sha1": "3b10a8904c4fade369d846efaa04086fe9cbe885",
+      "kind": "source"
+    },
+    {
+      "path": "sudoku_models.py",
+      "bytes": 1529,
+      "git_blob_sha1": "de199e52803083282e7ad3eed2272ab849b79633",
+      "kind": "source"
+    }
+  ],
+  "training": false
+}

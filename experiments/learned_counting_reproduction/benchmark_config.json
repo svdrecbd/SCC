@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "path": "/home/salvador/scc-research/cellular-counting-audit-20260921-v1/development01/upstream/data/cell_35_128_110_test/ecarev-35-128-20-100-12LHKYPS.cnf",
+      "sha256": "810335222ee28879bdc33e0f3e6d618ed6fa295ffb83c66599198e69e3bb42e6",
+      "expected": 254270016000,
+      "checkpoint": "cell35"
+    },
+    {
+      "path": "/home/salvador/scc-research/cellular-counting-audit-20260921-v1/development01/upstream/data/cell_49_128_110_test/ecarev-49-128-20-100-DzhuyYXD.cnf",
+      "sha256": "07db0eda821049c1e3961cf9a45b5343770c4a9efe0451960db452d49866ca40",
+      "expected": 27703323648,
+      "checkpoint": "cell49"
+    },
+    {
+      "path": "/home/salvador/scc-research/cellular-counting-audit-20260921-v1/scale_acquisition01/upstream/data/cell_35_348_280_test/ecarev-35-348-20-280-0BhLW0cT.cnf",
+      "sha256": "9e81cdc0a311906b99ea0c8953b30d19a55e0c647793a65c4ec3041caea098ba",
+      "expected": null,
+      "checkpoint": "cell35"
+    },
+    {
+      "path": "/home/salvador/scc-research/cellular-counting-audit-20260921-v1/scale_acquisition01/upstream/data/cell_49_256_200_test/ecarev-49-256-20-200-01SKVg7k.cnf",
+      "sha256": "2928d300a39524783138ca9c0dea982c4a62a52630b905fb8d160571dc13e05c",
+      "expected": null,
+      "checkpoint": "cell49"
+    }
+  ],
+  "process_seconds": 10,
+  "cpu_count": 1,
+  "cache_bytes": 536870912,
+  "training": false,
+  "torch_threads": 1,
+  "gpu": false
+}

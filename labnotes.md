@@ -17,11 +17,13 @@ functional construction, not a qualified learned mechanism. Baseline binary
 accuracy can still conceal useful information; the explicit retained-information
 control prevents interpreting that score as complete removal.
 
-**Latest computational audit — [LN-295](#ln-295).** A pinned current public
-counter solves all six selected smaller cellular examples exactly within 1.67
-seconds. Four largest selected examples exceed ten seconds; that is an unresolved
-runtime comparison, not neural advantage or a lower bound. A proposed shallow
-algebraic shortcut fails exact checks and is rejected. No learned policy was run.
+**Latest learned counting result — [LN-296](#ln-296).** The released cellular
+policies were loaded and exercised through a validated port of the original
+counter. They reduce decisions but take longer than native branching on all four
+selected cases. The largest answers agree with an independent modern counter
+after correcting an expensive preprocessing configuration. The earlier ten-second
+timeouts therefore do not establish a public obstacle for these inputs. This
+learned core has not qualified for new training.
 
 **Latest learned result — [LN-291–293](#ln-291).** The unchanged 7B proof model
 solves one of five true program claims; the fixed public portfolio solves three.
@@ -67,9 +69,10 @@ The native count construction resolves an interface dependency but leaves
 computational advantage and the broad loss endpoint open. Ordinary Monte Carlo
 is a mandatory additive-accuracy baseline. The inspected Neuro# grid domain also
 admits direct finite-state counting; its published comparison alone does not
-qualify a learned core. The larger cellular cases remain an unqualified source lead after the public
-counter audit in LN-295. A faithful existing-policy comparison is still needed;
-no new neural model acquisition or training has been launched.
+qualify a learned core. The existing-policy comparison in LN-296 finds no learned speed advantage on
+the selected cellular cases; public exact replacements solve them. The count
+reduction remains a conditional interface construction, with no qualified learned
+core and no new training admitted.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -21339,6 +21342,225 @@ reference results and unresolved larger runs. Source:
 and [transfer verification](artifacts/scc-cellular-counting-audit-20260921-v1/transfer_verification.json).
 Remote originals: `/home/salvador/scc-research/cellular-counting-audit-20260921-v1/`.
 All runs finished; no training or monitoring is active.
+
+<a id="ln-296"></a>
+### LN-296 — 2026-09-22: reproduce the retained learned counting policy before training admission
+
+**Question and admission.** LN-295 is completed progress: a modern public counter
+solves the smaller cases, while four larger cases remain unresolved at ten
+seconds. Neither outcome establishes a learned advantage. Reproduce the existing
+Neuro# cellular policies with their original search backend before claiming that
+the fixed-disclosure construction has a viable learned core. No new training.
+The full counter, policy, task compiler, caches and reconstruction code remain
+inside the proposed editable boundary; a search-branch score is not itself the
+protected disclosure judgment.
+
+**Source and checkpoint acquisition.** Pin the same upstream revision
+`e2f1cb209bab4b841dad2207385f3175c33760fb`. Acquire the two cellular checkpoints
+(rule 35 checkpoint-981 and rule 49 checkpoint-581), inference/restore sources,
+and the modified SharpSAT backend needed to preserve search semantics. Freeze an
+explicit path/size/Git-blob list, source and this plan first. Limit to 3 MB and
+120 seconds on one Charon CPU. Verify each blob against the pinned tree and retain
+SHA256s. Initially inspect checkpoint structure without executing pickle globals;
+no training framework, container or upstream launcher is run. Model loading and
+any compatibility substitution require a separate recorded check.
+
+**Reproduction requirements.** Preserve parameter ordering, trained normalization,
+message aggregation, literal polarity pairing, time features and action-index
+mapping. Keep the original backend and preprocessing for the learned-vs-native
+comparison; retain Ganak as a separate reference. A lightweight adapter may omit
+Ray orchestration, but must validate numerical and action equivalence rather than
+call an approximate reimplementation faithful. Count accuracy must agree with
+known exact controls before any runtime comparison. No learned result is implied
+by acquiring weights or making a callback run. Freeze each subsequent bounded
+validation or measurement before executing it, with preparation, loading and
+online costs distinguished. CPU work stays on Charon.
+
+**Acquisition result and adapter preparation.** All 45 pinned blobs verify
+(1,042,758 bytes), including both original cellular checkpoints. Their serialized
+globals are NumPy array/dtype reconstruction and two Ray filter-state classes.
+Decode only those allowlisted types, replacing the filter classes with inert
+state containers; retain the original bytes and export numeric weights separately.
+Reject every other pickle global. Check dtype, dimensionality and finiteness.
+This is checkpoint inspection, not training or an inference result.
+
+Acquire the missing Sudoku decoder definition and PySAT Python interface at the
+same revision to verify the unused decoder's place in the flat parameter stream
+and the exact literal-index mapping. Extract, without installing system packages,
+the pinned Ubuntu GMP development/C++ runtime packages needed by this original
+backend. Versions 2:6.3.0+dfsg-5ubuntu2, expected package SHA256s are recorded in
+configuration. Use one Charon CPU; cap source/package acquisition at 2 MB and
+60 seconds. Compile an adapter only after reviewing the retained callback and
+count interfaces. No search algorithm or preprocessing substitutions are allowed
+in a result described as reproducing the original backend.
+
+**Adapter validation, frozen before compilation/inference.** Both checkpoints
+contain 82,098 finite float32 values, including an unused Sudoku decoder. The
+released cellular configuration uses two 32-dimensional GIN rounds and a
+32→256→64→1 branch head; it does not append an explicit time feature. Preserve
+that actual release contract rather than infer features from the paper's general
+method. The source policy does not apply the saved observation filter in compute.
+
+Build a shared library from unchanged pinned SharpSAT search sources, with a
+small C callback adapter and private GMP headers/static libraries. Set a common
+512 MB component-cache allowance and retain preprocessing. One compiler process,
+60 seconds. No system installation. Preserve the build command and all source
+hashes; library loading is an implementation check.
+
+Instantiate the exact upstream class definitions needed for parameter ordering,
+using a narrowly implemented graph-message interface in place of unavailable DGL
+and omitting Ray orchestration. Verify all 82,098 parameters are consumed exactly.
+Compare each message sum against an independent dense incidence implementation,
+then compare complete scores/actions on deterministic graphs for both checkpoints.
+Use fixed graph seeds 296,297,298, tolerance 1e-5 absolute / 1e-5 relative; report
+maximum discrepancies and tie margins. This checks the adapter's arithmetic and
+mapping, not the full historical software environment or original runtime.
+
+Validate the original solver plus both policies on small satisfiable,
+unsatisfiable, free-variable and independently enumerated cellular CNFs. Each
+process gets a ten-second outer limit; every complete count must match its
+independent reference. Preserve abort/timeout separately. Verify the callback's
+paired-polarity compression and returned global indices against the retained
+PySAT wrapper logic. Deliberately reversed polarity and omitted graph edges must
+be detected in controls before proceeding to a scientific runtime comparison.
+Use one Charon CPU, no GPU, no training. Small validation batches have at most
+60 seconds total; no long-running benchmark or monitoring is launched here.
+
+**Arithmetic validation and build correction.** All 82,098 checkpoint values map
+exactly onto the original class state; 35,778 parameters participate in inference.
+Six deterministic graph comparisons match actions, with maximum score discrepancy
+4.77e-7, and both polarity/edge controls are detected. This validates the explicit
+message adapter, not execution under historical DGL. The initial backend build
+fails because a legacy header relied on an implicit `uint64_t` declaration.
+Preserve it; freeze `implementation02` with an explicit compiler include of
+`cstdint`, leaving upstream sources and search algorithms unchanged.
+
+**Link correction.** The header-corrected source compiles but cannot link the
+non-PIC static GMP archive into a shared library. Freeze `implementation03` using
+the extracted GMP C++ shared library and installed GMP runtime, whose exact package
+version matches the pinned headers. This changes linkage only; preserve both
+failed builds. No scientific run has occurred during these build failures.
+
+**Count-control failure.** The first solver validation stops on opposing unit
+clauses (x) and (not x): the unmodified backend reports count 2 instead of zero,
+without invoking any policy callback. The retained preprocessing loop ignores a
+failed second assignment of an already set unit. Freeze `backend_diagnosis01`
+and repeat this one formula first in a fresh process, with no Python callback,
+to distinguish a persistent source failure from interaction with the preceding
+validation case. Ten seconds, one Charon CPU, no learned inference.
+
+**Isolated failure and input control.** A fresh-process invocation reproduces
+the incorrect count 2 with zero callbacks. Add a sound external input check for
+empty clauses and directly opposing units, accounting for duplicate literals and
+tautologies. It returns zero for those explicit contradictions; otherwise it
+passes the original one-clause-per-line file unchanged to the original search.
+Charge the entire parsing/check cost for both native and learned modes. This is
+a documented correctness guard, not an upstream algorithm repair or a claim about
+all historical solver inputs. Freeze `solver_validation02` and rerun the complete
+small exact-count suite before benchmarking. The failed unguarded case remains.
+
+**Validated replay and fixed comparison.** The input-guarded original backend
+and both released learned policies pass all 52 independent exact-count checks,
+exercising 233 callbacks. Polarity pairing and action reindexing match the pinned
+PySAT wrapper on every checked callback. This is a validated lightweight port,
+not a rerun of the full historical Ray/DGL environment; report that distinction.
+
+Freeze `native01`, `temporal01` and `learned01` before the first comparison. Use
+four fixed inputs: the first already retained 128-cell example for each rule and
+the first already retained largest example for each rule. Each is identified by
+path and SHA256 in configuration. Run native VSADS, highest-original-variable
+index (reverse time), and the matching unchanged cellular checkpoint. Preserve
+original search and preprocessing, with the common 512 MB cache. Each invocation
+has a ten-second hard process limit including Python/Torch initialization,
+checkpoint loading, input checks, graph construction, inference and solver work.
+Also report preparation and warm solver time separately when complete. One CPU,
+no GPU, at most four sequential ten-second invocations per batch; no monitoring.
+
+Known 128-cell counts must match the retained modern exact counter; an incorrect
+complete result fails qualification. For largest cases, cross-check every
+completed answer against other completed methods and label a lone answer as
+solver-reported. Keep the previous ten-second Ganak results as the separate modern
+reference. These four selected cases are development calibration, not a general
+speed claim. Neither a speed gain nor a timing failure is an SCC removal result.
+No weights are updated and no new training is authorized by this comparison.
+
+**Native result and independent large-count check.** The original backend's
+native policy solves all four inputs, including the two largest selected cases.
+The latter require 598 and 2,645 decisions; the reverse-time policy agrees on
+both counts. Thus the earlier modern-counter timeouts do not establish a public
+runtime obstacle on these inputs. Complete native process times are 1.97–3.57
+seconds, including the common Python/Torch wrapper. The large counts still need
+an independent counter check; agreement between branching policies shares a core.
+
+Retained Ganak timeout logs show execution remaining in Puura's backbone
+simplification. Freeze a separate `reference_check01`: same verified exact-mode
+binary and four input hashes, adding only `--puurabackbone 0`, ten seconds per
+process, one CPU, 45 seconds total. Compare every returned count with the native
+result, including the two previously established 128-cell counts. This is a
+baseline configuration control, not neural tuning. Preserve the original modern
+configuration and its timeouts. Source snapshots used by the running learned
+batch remain unchanged.
+
+**Comparison result.** All twelve native/temporal/learned invocations finish and
+agree on all four exact counts. Complete process times and warm counting times
+(including the common input check) are:
+
+| Rule, width, horizon | Native process / warm seconds | Temporal process / warm seconds | Learned process / warm seconds | Native / learned decisions |
+| --- | --- | --- | --- | --- |
+| 35,128,100 | 1.97 / 0.178 | 1.97 / 0.196 | 2.12 / 0.294 | 67 / 60 |
+| 49,128,100 | 1.97 / 0.166 | 1.97 / 0.185 | 2.12 / 0.293 | 75 / 67 |
+| 35,348,280 | 3.57 / 1.786 | 3.67 / 1.932 | 4.47 / 2.663 | 598 / 431 |
+| 49,256,200 | 3.02 / 1.215 | 3.47 / 1.658 | 4.72 / 2.900 | 2,645 / 843 |
+
+The learned policy reduces search decisions on every selected case but loses in
+elapsed time on each. A threefold decision reduction on the largest rule-49 case
+is not a threefold computational advantage: its learned callbacks cost 1.79
+seconds. This is a four-case development result from a validated port, not a
+replication of the paper's aggregate claims, a timing confidence interval, or a
+statement about every cellular input. No architectural training conclusion follows
+from treating node counts as runtime.
+
+**Independent verification and correction of the previous lead.** With only
+Puura backbone simplification disabled, the pinned non-probabilistic Ganak counter
+returns all four identical exact answers, explicitly reporting epsilon=delta=0.
+Its complete times are 0.720, 0.569, 4.826 and 5.476 seconds. The two largest counts
+are respectively 19521986230178796557505588756480000 and
+56163854860551297699840000. These are independently checked across the two counter
+implementations; branching-policy agreement alone would not suffice.
+LN-295's larger-case timeouts consequently identify one poor configuration for
+these cases, not an unresolved public computational obstacle after this audit.
+The native retained backend is faster than both learned inference and this modern
+configuration on the two largest inputs. A public portfolio must retain it.
+
+**Resource accounting and decision.** Neural inference uses one Charon CPU,
+82,098 retained float32 checkpoint values (35,778 used in the inference path),
+plus the original solver and Torch runtime. All initialization and input-check
+costs are included in process timings; warm values are reported separately. The
+largest learned process peaks at 614,436 KiB RSS. The native wrapper loads Torch
+for a matched implementation and peaks at 566,180 KiB; a standalone native
+implementation could avoid that unnecessary runtime. Thus the comparison does
+not disadvantage the learned route by granting its reference free initialization.
+The declared cache allowance is 512 MB, not a claim of 512 MB measured allocation.
+
+Do not admit new training from these checkpoints and selected instances. The
+native fixed-disclosure/count reduction remains correct, but this proposed learned
+core supplies no observed runtime advantage over the strongest tested public
+replacement. The existing checkpoints are a runnable reference/control; retaining
+them is not a demonstrated protection-removal mechanism. No general impossibility
+or all-workload rejection of learned counting has been established.
+
+**Next mechanism requirement.** A further candidate must identify what useful
+procedure the protected computation implements and why an allowed replacement
+cannot retain a large fraction of its value at comparable cost. Searching for a
+slower baseline or choosing a deadline that excludes the public counter would
+not supply that argument. In particular, the remaining problem is not solved by
+renaming a branch-selection heuristic as a safety judgment: the learned model,
+complete counter and disclosure-query construction are distinct parts of the
+resource account. Keep the original destructive-cognition target and the
+proper-score/approximation obligations of LN-294. No training, external outreach
+or monitoring was initiated.
+
+**Preservation.** All 449 manifest-listed files (5,285,487 bytes) were copied to the SD evidence store and verified by SHA256. The retained builds include both failures and the successful shared library; both failed and corrected count validations remain available. Evidence: [manifest](artifacts/scc-learned-counting-reproduction-20260922-v1/transfer_manifest.json), [transfer verification](artifacts/scc-learned-counting-reproduction-20260922-v1/transfer_verification.json), [learned comparison](artifacts/scc-learned-counting-reproduction-20260922-v1/learned01/), [independent counter](artifacts/scc-learned-counting-reproduction-20260922-v1/reference_check01/).
 
 ## Historical evidence
 

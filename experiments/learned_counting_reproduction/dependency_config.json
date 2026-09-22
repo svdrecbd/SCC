@@ -1,0 +1,8 @@
+{
+  "packages": [
+    {"name": "libgmp-dev", "version": "2:6.3.0+dfsg-5ubuntu2", "sha256": "b43e38f2d5ae4aa38471e1b3f90ed63e96c2ce614ffe496cdcd72f9944e87a4a"},
+    {"name": "libgmpxx4ldbl", "version": "2:6.3.0+dfsg-5ubuntu2", "sha256": "07bd53c587140613b3d551bdbd4a15a37002c1fe971962ab49e2c2c896cf7dda"}
+  ],
+  "maximum_bytes": 2000000,
+  "system_installation": false
+}
