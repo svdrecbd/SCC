@@ -9,21 +9,20 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current direction — [LN-275–276](#ln-275).** A risk-dependent scheduler supplies
-a concrete link between absolute risk assessment and ordinary multi-step job
-ordering. It closes the earlier additive-offset escape, but erasing the risk bit
-leaves the generic scheduler intact. The next construction must identify an
-alignment-related inference or search operation whose removal damages reusable
-reasoning under matched replacement resources. Parameter knowledge alone did not
-supply that mechanism in either examined planning construction.
+**Current direction — [LN-277](#ln-277).** A learned branch-guidance network can
+retain its complete search policy and computational advantage after genuine
+loss of absolute risk calibration in an explicit factorized architecture.
+Making that network expensive to replace does not address an edit that retains
+it. Certified constrained planning remains a conditional candidate: a useful
+witness-producing procedure can recover a safety-feasibility judgment.
 
-**Latest validation — [LN-276](#ln-276).** Exact enumeration of 729 three-job lists
-and 8,748 permutation values verifies the scheduling rule. After genuine risk-bit
-deletion, the same algorithm with a fixed estimate retains 99.727% of expected
-completed reward on this declared suite. Even the strongest two-job dependency
-loses all knowledge advantage while preserving 96.10% of expected reward. These
-are analytic architecture controls, not learned cognition measurements. Neither
-candidate is admitted for training; rainfall replication remains set aside.
+**Current construction obligation — [LN-277](#ln-277).** Supply a fixed
+alignment-related constraint and an independently justified productive planning
+family, with an efficient reduction and controlled query-distribution coverage.
+The one-call witness bound is exact, but no family has yet met those obligations
+and the matched replacement-cost test. This was an analytic review; no new
+experiment or training. The latest executed control remains LN-275–276: a
+risk-erased scheduler retained 99.727% of expected output on its finite suite.
 
 **Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
 Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
@@ -46,14 +45,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-275–276](#ln-275).** Which independently
-specified alignment-related operation could be indispensable to a reusable
-reasoning procedure after alternate implementations and repair are counted?
-The scheduler now supplies a functional dependency and a concrete failure of
-severe destruction. A new candidate must go beyond erasing an environmental
-parameter while leaving the algorithm available. A working expensive-to-replace
-operation has not been identified; the finite controls imply no general
-impossibility. No training, forecasting download or model replication is admitted.
+**Remaining mechanism question — [LN-277](#ln-277).** Can safety-feasibility
+computation be indispensable to independently useful planning, with severe loss
+under genuine removal and affordable repairs included? A one-call verified
+witness gives a conditional loss bound; its meaning depends on workload coverage,
+nontrivial computational advantage and the value of surviving partial reasoning.
+Those premises remain uninstantiated. The score-normalization escape concerns
+a specified architecture, not every learned search system. No training,
+forecasting download or model replication is admitted.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -19615,6 +19614,170 @@ Frozen [plan](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/
 [manifest](artifacts/scc-scheduling-risk-dependency-20260921-v1/validation01/manifest.sha256),
 and [transfer verification](artifacts/scc-scheduling-risk-dependency-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/scheduling-risk-dependency-20260921-v1/validation01/`.
+
+<a id="ln-277"></a>
+### LN-277 — 2026-09-21: learned search guidance preserves a calibration escape; certified planning has a stronger conditional obligation
+
+**Question.** Move the proposed dependency from an environmental parameter in a
+public scheduling algorithm to an expensive learned search operation. Examine
+both probabilistic branch guidance and safety-based feasibility pruning before
+choosing a learned experiment. This is an analytic mechanism review; no new
+benchmark, CPU job, checkpoint download or training was performed.
+
+**Candidate A: a learned harm assessor guides search.** Let an arbitrary learned
+network with retained parameters theta supply relative continuation scores
+v_theta(x,a) in [3/4,1]. Its computation may be expensive and its usefulness may
+come from learning; no cheap replacement for that network is assumed. An
+independent balanced calibration bit H sets c_0=3/4, c_1=1/4 and the assessed
+survival and harm probabilities are
+
+\[
+ s_H(x,a)=c_H v_\theta(x,a),\quad q_H(x,a)=1-s_H(x,a).
+\]
+
+The protected judgment J(x,a)=1[q_H(x,a)>=1/2] equals H on this family. The
+search uses the survival scores to form its local branch policy:
+
+\[
+ \pi_H(a\mid x)=\frac{s_H(x,a)}{\sum_b s_H(x,b)}
+              =\frac{v_\theta(x,a)}{\sum_b v_\theta(x,b)}.
+\]
+
+**Exact procedural escape.** Delete H and every H-dependent copy; retain theta
+and evaluate the expression on the right. For any search controller receiving
+only this policy, source-independent transitions, goal checks and other inputs,
+the entire search trajectory has the same distribution. Coupling random coins
+makes its branch choices, expansions, goal discovery and termination identical,
+step by step. This holds across fresh problem instances, not just a fixed answer
+table. It preserves the learned computation itself and all its search benefit;
+there is no need to replace it with brute force or a generic heuristic.
+
+Costs remain one original v_theta evaluation and normalization per queried state;
+the calibration multiplication is removed. State shrinks by the deleted bit and
+its copies. The same policy-driven search data structures and node counts remain.
+This is exact-arithmetic equality; a specific finite-precision implementation
+would need qualification before claiming bit-identical traces. It is not a claim
+of equal wall-clock timings measured here.
+
+With H independent of theta, public problems and retained randomness, the edited
+state and every resulting transcript are independent of H. Even an unrestricted
+reader has protected accuracy 1/2 under this source prior. Keeping the original
+calibrated evaluator and merely hiding its output would not establish this. This
+explicit factorized representation does. Its judgment family contains one bit,
+not broad learned alignment; it is a counterexample to the architectural argument,
+not an attack demonstrated on an arbitrary entangled network.
+
+This extends LN-250 and LN-273's calibration issue to retention of the *whole
+learned procedure and its computational advantage*. It is not a new normalization
+identity. Making the retained network harder to replace does not close an attack
+that retains it. No empirical search advantage is demonstrated for this score
+family here; whatever advantage it supplies is preserved by the identity. If real
+transition outcomes, known probability anchors or public history reveal H, the
+information-removal premise changes. If the controller
+uses absolute probabilities for pruning, stopping, transitions or value backup,
+the displayed invariance alone no longer settles that controller.
+
+**Literature and application boundary.** Orseau and Lelis,
+[Policy-Guided Heuristic Search with Guarantees](https://arxiv.org/pdf/2103.11505),
+sections 2–3, separates learned policy guidance from heuristic guidance and
+accounts for search effort. It supports the choice of operation, not an SCC
+claim. The calculation above applies when the consumed policy and all other
+search inputs are preserved. It is not an audit of PHS's learned models.
+[DeepCubeA](https://deepcube.ics.uci.edu/static/files/SolvingTheRubiksCubeWithDeepReinforcementLearningAndSearch_Final.pdf),
+page 2, also makes a relevant distinction: it uses a learned cost-to-go heuristic
+and explicitly sets goal-state heuristic values to zero. Arbitrary changes of
+non-goal calibration cannot be declared trace-preserving in that algorithm by
+appealing to common-offset invariance. Neither paper supplies alignment coupling.
+
+**Candidate B: safety feasibility is the search operation.** Specify a different
+protected function before assessing it. An instance x contains a finite symbolic
+transition model, goal, horizon and safety condition. Let R(x,w) be a public,
+sound check that plan w reaches the goal while respecting that condition, and
+let J(x)=1 iff such a plan exists. The useful procedure constructs plans under
+ordinary public constraints, rather than only ranking precomputed alternatives.
+This protects safety feasibility, not the absolute harm probability of candidate
+A. Its possible relation to a learned alignment operation still needs an actual
+instantiation; formal safety under a symbolic model is not unrestricted safety.
+
+If a retained general planner can solve these constraints, it can reconstruct J
+by producing a valid witness. The strongest proposed genuine-removal edit must
+therefore preserve useful planning while defeating *every* admitted witness
+recovery, rather than only removing a native judgment head. Bypassing a pruning
+call while retaining an equivalent solver retains the protected function when
+that solver remains an affordable reader.
+
+**A one-call approximate bound with explicit coverage.** Give the protected
+evaluation an equal mixture of feasible and infeasible instances. Run any edited
+planner once under a fixed timeout and output-size cap; return 1 exactly when
+R accepts its output. Infeasible instances cannot yield false positives. If its
+valid-plan success on the positive half is delta, this reader's accuracy is
+
+\[
+ \operatorname{Acc}_J=\tfrac12+\tfrac\delta2.
+\]
+
+Consequently, an all-reader cap of 1/2+eta implies delta<=2 eta. Any valid witness
+counts; matching a reference plan is unnecessary. The reader costs one complete
+planner execution, public input preparation and a full witness check. For a
+length-L plan in an explicit transition model, checking costs L transitions plus
+all specified safety and goal checks, including their bit costs. The verifier
+is ordinary editable public code the reader can supply, not a trusted enforcement
+boundary. A timeout is a negative prediction, not a proof of infeasibility.
+The admitted judgment-reader budget must include preparation, planner and verifier
+costs together; a cap for a smaller budget gives no implication. The balanced
+population does not supply its labels to the planner. Its efficient acquisition
+and a nontrivial no-model baseline also need separate justification.
+
+To transfer the statement to an independently defined useful workload D, let
+nu_+ be the planner-input distribution induced by feasible protected instances
+(including a fixed reduction/compilation if needed). Require
+nu_+(A)<=kappa D(A) for every measurable input set A. Both distributions here
+concern feasible instances for the same output relation. If useful valid-plan
+failure on D is epsilon, then delta>=1-kappa epsilon and
+
+\[
+ \epsilon\ge\frac{1-2\eta}{\kappa}.
+\]
+
+At a 51% reader cap this gives 98% failure only when kappa=1; kappa=10 gives
+9.8%, and no finite domination gives no transferred bound. The public reduction,
+its cost, feasible/infeasible population and domination constant are construction
+obligations. They have not been instantiated here. Average accuracy on unrelated
+planning tasks cannot fill them in. For stateful planners the same matched
+state/history distribution and charged reset/copy resources are required.
+
+**Strongest escape and present limitation.** A successor can concentrate failure
+on the constrained subfamily while solving unrelated goals. The coverage bound
+accounts for that possibility; it does not assume it away. An efficient generic
+solver might also recover both functions, defeating the removal premise at the
+claimed budget. A failed finite solver search is not evidence against that
+replacement. Even large valid-plan failure can coexist with useful partial
+reasoning or repairable near-solutions; LN-188–191's repair controls still apply.
+No claim of catastrophic cognition loss follows from the displayed bound alone.
+
+This combines the witness-recovery and distribution-coverage tools already in
+LN-188–193 and LN-233 for this operator. It does not claim a new complexity
+result. An assessor able to answer arbitrary prefix-feasibility queries can in
+turn construct a witness with O(L) calls, as LN-233 proves. Keeping such an
+assessor and changing action selection remains an enforcement question, distinct
+from the genuine functional-removal premise used here.
+
+**Decision and next concrete obligation.** Reject calibrated-score guidance as
+an adequate mechanism argument: its expensive learned computation can survive
+unchanged. Retain certified constrained planning as a *conditional candidate*,
+not an admitted training project. Before implementing it, supply a fixed
+alignment-related constraint and an independently justified productive planning
+family with an efficient, measure-controlled reduction between them. Then test
+whether useful partial solutions and generic replacement solvers retain that
+function within the same resource budget. This is the next construction problem;
+there is no identified family meeting those requirements in this entry.
+
+Do not obtain an apparent positive by renaming generic feasibility as alignment,
+choosing the useful distribution solely to equal nu_+, or prohibiting alternative
+solvers. There is no new learned SCC result, no proof of general impossibility,
+and no reason to start another generic planning benchmark. The meaningful change
+is that replacement hardness alone has been shown insufficient for candidate A,
+while candidate B now has a precise semantic, resource and coverage obligation.
 
 ## Historical evidence
 
