@@ -1,0 +1,9 @@
+{
+  "maximum_states": 5,
+  "simplex_denominator": 4,
+  "recovery_step": "1/4",
+  "wall_seconds": 30,
+  "cpu_count": 1,
+  "arithmetic": "exact_rational",
+  "training": false
+}

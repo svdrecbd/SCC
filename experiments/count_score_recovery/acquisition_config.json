@@ -1,0 +1,35 @@
+{
+  "maximum_bytes": 2000000,
+  "wall_seconds": 60,
+  "repositories": [
+    {
+      "repository": "jkuck/BPNN",
+      "revision": "b7f88b766b2869a123960f66ed12790998b26376",
+      "files": [
+        "README.md",
+        "learn_BP_SAT.py"
+      ],
+      "issue": 4
+    },
+    {
+      "repository": "zhaoyu-li/NSNet",
+      "revision": "2e460219133cae6b2dd2b686b0562ef575df6b14",
+      "files": [
+        "README.md",
+        "src/models/nsnet.py",
+        "src/utils/dataset.py",
+        "scripts/mc_data.sh",
+        "scripts/mc_nsnet_bird.sh"
+      ],
+      "issue": 3
+    },
+    {
+      "repository": "GaiaSaveri/GNN-sharpSAT",
+      "revision": "4f11bd5bbd93d72b2ed42d983340212e75cbc9de",
+      "files": [
+        "README.md"
+      ],
+      "issue": null
+    }
+  ]
+}

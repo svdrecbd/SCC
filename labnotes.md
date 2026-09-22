@@ -17,6 +17,13 @@ functional construction, not a qualified learned mechanism. Baseline binary
 accuracy can still conceal useful information; the explicit retained-information
 control prevents interpreting that score as complete removal.
 
+**Latest score-recovery result — [LN-297](#ln-297).** For arbitrary useful count-tier
+predictions, an explicit inexpensive decoder recovers protected proper-score
+improvement. The bound does not assume posterior calibration and catches gains
+missed by the direct decoder. Complete-vector paired scores have a dimension-
+independent bound. Exact checks pass; a qualified learned inference core and a
+genuine removal intervention remain missing.
+
 **Latest learned counting result — [LN-296](#ln-296).** The released cellular
 policies were loaded and exercised through a validated port of the original
 counter. They reduce decisions but take longer than native branching on all four
@@ -70,9 +77,10 @@ computational advantage and the broad loss endpoint open. Ordinary Monte Carlo
 is a mandatory additive-accuracy baseline. The inspected Neuro# grid domain also
 admits direct finite-state counting; its published comparison alone does not
 qualify a learned core. The existing-policy comparison in LN-296 finds no learned speed advantage on
-the selected cellular cases; public exact replacements solve them. The count
-reduction remains a conditional interface construction, with no qualified learned
-core and no new training admitted.
+the selected cellular cases; public exact replacements solve them. LN-297 supplies
+a stronger proper-score recovery reader for direct distributional estimation.
+The inspected direct-estimation releases lack immediately usable checkpoints;
+their published results are leads, not our validation or training admission.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -21561,6 +21569,196 @@ proper-score/approximation obligations of LN-294. No training, external outreach
 or monitoring was initiated.
 
 **Preservation.** All 449 manifest-listed files (5,285,487 bytes) were copied to the SD evidence store and verified by SHA256. The retained builds include both failures and the successful shared library; both failed and corrected count validations remain available. Evidence: [manifest](artifacts/scc-learned-counting-reproduction-20260922-v1/transfer_manifest.json), [transfer verification](artifacts/scc-learned-counting-reproduction-20260922-v1/transfer_verification.json), [learned comparison](artifacts/scc-learned-counting-reproduction-20260922-v1/learned01/), [independent counter](artifacts/scc-learned-counting-reproduction-20260922-v1/reference_check01/).
+
+<a id="ln-297"></a>
+### LN-297 — 2026-09-22: constructive proper-score recovery from useful count predictions
+
+**Question.** LN-294's middle-tier control defeats binary accuracy as a removal
+criterion. Requiring a proper score alone also leaves a decoder choice: a useful
+prediction can improve one proper score while worsening another. Before selecting
+another model, construct a charged reader that transfers useful score improvement
+into protected score improvement for arbitrary predictions on public inputs.
+This must not assume that a computationally bounded predictor is a Bayes posterior.
+
+**Objects.** Retain LN-294's fixed disclosure rule and ordinal thresholds. Write
+m=n+1 and T in {0,...,m} for the true count tier. A useful output q is a probability
+vector on those m+1 tiers, evaluated with multiclass Brier loss
+L_U(q,T)=||q-e_T||^2. This explicitly measures distributional count prediction;
+it is not log-count MSE, exact-count accuracy or every cognitive ability.
+The corresponding protected labels are u_j=1[T>j], j=0,...,m-1. A protected
+probability vector r is scored by L_J(r,T)=||r-u||^2/m. Its coordinates are
+confidence in the fixed binary disclosure judgments, not estimates of the
+program's disclosure probability itself. The exponentially small probability
+margins in the compiled programs remain an acquisition obligation.
+
+Let C contain the nonincreasing vectors in [0,1]^m. Tail probabilities define
+a bijection between probability vectors q and C: r_j=sum_{i>j}q_i. Its inverse is
+q_0=1-r_0, q_i=r_(i-1)-r_i for 0<i<m, and q_m=r_(m-1). Write this inverse as
+q=b+D r. The signed first-difference matrix satisfies ||D^T d||^2<=4||d||^2.
+
+**Constructive recovery.** Fix any public baseline q^0(X), let r^0 be its tails,
+and let d=q-q^0 for ANY useful successor output. Define the protected reader
+
+    r* = projection_C(r^0 + (1/4) D^T d).
+
+Projection is Euclidean isotonic regression with the [0,1] bounds. It uses
+linear-time pooling and O(m) arithmetic/storage, in addition to obtaining q and
+the public baseline. All weights, decoders and executor code remain editable.
+No access restriction, hidden source entropy or compelled execution is assumed.
+The reader is available even if a named risk head has been deleted.
+
+For every individual input, true tier and pair of predictions,
+
+    L_J(r^0,T) - L_J(r*,T)
+      >= [L_U(q^0,T) - L_U(q,T)] / (4m).
+
+Proof: put v=D^T d. Since e_T-q^0=D(u-r^0), the unprojected reduction in squared
+risk error is (1/2)<d,e_T-q^0>-(1/16)||v||^2. This is at least one quarter of
+2<d,e_T-q^0>-||d||^2, the useful Brier improvement. Projection cannot increase
+distance to u, which belongs to C. Divide by m. The statement is pointwise, so
+it also holds under any input law and correlated/randomized successor outputs,
+without fitted calibration, independent query noise or a posterior assumption.
+
+**Why the extra decoder matters.** Take three tiers, true middle tier,
+q^0=(3/10,4/10,3/10), q=(0,11/20,9/20). Useful Brier loss improves from .54 to
+.405, but the direct tail decoder's average risk loss worsens from .09 to .10125.
+The constructed reader instead returns (13/16,3/10), with risk loss .062578125.
+Its improvement exceeds .135/8=.016875 as required. An evaluation that tested
+only the direct tail decoder could therefore falsely declare loss of risk skill.
+This is a score/decoder control, not a learned-model intervention.
+
+**Conditional loss bound and budgets.** If every admitted protected reader has
+expected improvement at most eta relative to r^0, every useful successor whose
+reader and baseline fit the charged budget has Brier improvement at most 4m*eta
+relative to q^0. To force at least 80% loss of a measured intact useful gain G,
+one would require eta<=G/(20m). This severity rule follows the loss convention;
+it is not evidence that the premise is attainable. It becomes demanding for many
+tiers and cannot be replaced by baseline classification accuracy.
+
+If removal is instead defined relative to an optimal public protected baseline,
+retain delta=E L_J(r^0,T)-R_J^public. The bound becomes 4m*(eta+delta). Do not
+silently cancel this baseline mismatch. Alternatively, start from a monotone
+optimal protected baseline and include its inverse distribution in the public
+useful class; that is an explicit closure and cross-budget assumption, not a
+free solver. Public counting, calibration and decoder preparation remain charged
+as in LN-250. A finite collection of unsuccessful readers cannot certify the
+all-reader cap. This result supplies a concrete necessary recovery test and a
+conditional quantitative bound, not certified removal or general impossibility.
+
+**Native implementation and scope.** A future risk-assessment network can return
+m judgment confidences in one shared pass. Isotonic projection followed by the
+inverse differences supplies a valid useful tier distribution without a separate
+count predictor. Conversely every alternative useful distribution exposes the
+constructed risk reader above. This is a trainable interface specification with
+a representation-independent score relation. It still needs an intact learned
+advantage and an attainable removal intervention. It does not turn an unchanged
+counting heuristic into alignment machinery or establish complete cognition loss.
+
+**Bounded validation plan.** Freeze this entry, configuration and source in
+`scc-count-score-recovery-20260922-v1/validation01`. On one Charon CPU, 30 seconds,
+standard-library rational arithmetic, enumerate simplex predictions and baselines
+with denominator four through five tier states, and every true tier. Check the
+pointwise inequality against independently computed cumulative probabilities and
+losses. Independently certify isotonic projection's optimality using the convex
+first-order condition at all step-vector vertices of C. Preserve the three-tier
+counterexample and LN-294's retained-middle-information example. Reject reversed
+recovery sign and the excessive unit step when they violate the claimed bound.
+No fitting, inference, new data benchmark or training is part of this check.
+
+**Direct-estimation literature check.** BPNN estimates counts directly, unlike
+Neuro# branch selection. Its published or_50 comparison reports CPU median
+speedups of 2.2 over F2 and 32 over ApproxMC3 with log-count RMSE .30; these are
+historical paper results, not our reproduction or current solver comparisons
+([paper, section 4.3](https://proceedings.neurips.cc/paper/2020/file/07217414eb3fbe24d4e5b6cafb91ca18-Paper.pdf)).
+Read-only inventories of official BPNN, NSNet and GNN-sharpSAT repositories at
+b7f88b766b2869a123960f66ed12790998b26376,
+2e460219133cae6b2dd2b686b0562ef575df6b14 and
+4f11bd5bbd93d72b2ed42d983340212e75cbc9de contain no released weight files.
+The inspected BPNN and NSNet issues request pretrained weights; their scripts
+reference locally produced checkpoints. This establishes no immediate replay
+path in those inspected trees, not global checkpoint unavailability or a reason
+to initiate training automatically. No outreach or package execution occurred.
+
+**Validation result.** All 30,125 pointwise score-transfer checks pass, including
+13,278 cases of strictly positive useful improvement. The independently evaluated
+projection certificates pass at all 30,125 tested vertices. Both corrupted readers
+are rejected. The retained-middle control gives useful Brier improvement 1/3;
+the constructive reader recovers average risk improvement 11/324, exceeding the
+required 1/36. Exact rational arithmetic took 2.46 seconds on one Charon CPU,
+12,996 KiB peak memory. These checks validate implementation; the general result
+rests on the algebra above.
+
+**A simpler reader and a measurement correction.** The recovery reader may use
+coordinatewise clipping to [0,1] instead of isotonic projection. The same proof
+holds because the true binary vector lies in that cube. Such a reader need not
+return a coherent count distribution; the native useful inverse still requires
+monotonicity. This distinction separates admissible risk recovery from the native
+architecture rather than imposing the architecture on every attacker.
+
+For the clipped reader, the *summed* paired risk improvement S satisfies
+
+    S >= (L_U(q^0,T)-L_U(q,T))/4,     |S| <= 2.
+
+Indeed clipping does not increase displacement from r^0, which is already in the
+cube. Its L1 displacement is at most ||D^T d||_1/4 <= ||d||_1/2 <=1, and each
+squared-error difference is at most twice the coordinate displacement. Evaluating
+the complete risk vector therefore gives a bounded paired observation independent
+of the number of thresholds. The small average-score margin eta~1/m does not by
+itself require sample size growing as m^2: the paired observation also shrinks by
+1/m. This statement assumes full-vector evaluation with its cost charged; randomly
+sampling a single threshold is a different measurement design. It does not give
+an all-reader certificate or a claim about arbitrary risk-score differences.
+
+Freeze an additional `clipped_validation01` before execution. Retain the same
+simplex grid and exact arithmetic; check this simpler reader's pointwise bound,
+L1 displacement and dimension-independent paired range, and preserve controls
+where direct tail decoding misses useful score improvement. One Charon CPU,
+30 seconds. The completed isotonic validation remains unchanged.
+
+**Clipped-reader result.** All 30,125 exact checks pass. On this grid, 2,301
+positive useful improvements produce no improvement under the direct tail reader;
+the constructed reader recovers the guaranteed positive improvement in every
+case. Summed paired improvements range from -99/256 to 29/32, within the proved
+[-2,2] range; maximum L1 displacement is one. Execution took 3.08 seconds,
+13,784 KiB peak memory. Grid counts are implementation checks, not population
+frequencies. No neural core or intervention was evaluated.
+
+**Acquisition clarification.** The NSNet author explains in
+[the checkpoint issue](https://github.com/zhaoyu-li/NSNet/issues/3) that access to
+the former cluster and experimental data was lost. The BPNN weight-request issue
+has no replies in the inspected response. New fitting would therefore be a new
+reproduction effort, not reuse of available released checkpoints. NSNet's inspected
+factor-graph constructor enumerates assignments within clauses; preparation can
+scale exponentially with clause width and must be counted. Its existing scalar
+log-count output is also not the calibrated tier distribution required above.
+Neither difference is silently bridged by attaching the new score formula.
+
+Preserve the inspected repository inventories, checkpoint-issue responses and
+selected implementation/README files in `source_audit01`, as data only. Freeze
+an explicit file list, revision and acquisition source first. Maximum two MB,
+60 seconds, one Charon CPU; verify Git blob hashes on pinned source. No archive,
+model download, upstream import, package installation, dataset generation or
+training follows from this preservation step.
+
+**Decision.** The new constructive reader resolves a specific proper-score
+recovery gap and provides a necessary attack/control for a direct-estimation
+candidate. It is not an instantiated destructive mechanism. In particular the
+bound applies to any useful distribution predictor, so it does not prove that a
+particular training loss created an internal dependency or that a named judgment
+operation must execute. The remaining experiment must establish useful procedural
+advantage, measure genuine functional removal with the recovered reader included,
+and retain the matched-baseline and resource terms. Do not reuse LN-296's failed
+branching-policy comparison as evidence for that missing direct-estimation core.
+
+**Preservation.** The source audit retained 18 primary-source files/responses
+(123,064 bytes) without executing upstream code. All 46 manifest-listed files
+from both validations and the source audit (189,238 bytes) verify after transfer
+to the SD evidence store. [Isotonic validation](artifacts/scc-count-score-recovery-20260922-v1/validation01/validation.json),
+[clipped validation](artifacts/scc-count-score-recovery-20260922-v1/clipped_validation01/validation.json),
+[source acquisition](artifacts/scc-count-score-recovery-20260922-v1/source_audit01/acquisition.json),
+[manifest](artifacts/scc-count-score-recovery-20260922-v1/transfer_manifest.json),
+[transfer verification](artifacts/scc-count-score-recovery-20260922-v1/transfer_verification.json).
+Remote originals: `/home/salvador/scc-research/count-score-recovery-20260922-v1/`.
 
 ## Historical evidence
 
