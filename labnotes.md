@@ -9,19 +9,21 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Next replication target — [LN-270–272](#ln-270).** Published rainfall nowcasting
-provides a better-supported task than the failed demand screen. A numerical audit
-of DGMR's source tables confirms improvements in regional probabilistic forecasts
-and warning-decision curves against PySTEPS, with material calibration and
-scale dependence. These are reanalysed published aggregates, not forecasts we
-reproduced. Select the unchanged official model for bounded interface validation
-and a frozen-policy comparison; no training or removal experiment is admitted.
+**Current direction — [LN-273–274](#ln-273).** Return to mechanism construction;
+set aside the rainfall replication. A concrete proposal makes the harm assessor
+supply every planning cost. Exact analysis shows that comparative planning needs
+risk differences but can discard absolute risk information. An explicit deletion
+preserves every planning choice while every absolute-judgment reader falls to
+chance. A known absolute reference gives conditional coupling for commitment
+decisions, while the broader comparative planning procedure survives.
 
-**Latest validation — [LN-272](#ln-272).** Two source workbooks, all six forecast
-panels and three warning curves were inspected; 15 exact-area checks and six
-corruption checks pass. All 23 manifest entries verify after transfer. The audit
-also identifies optimized decision cutoffs and importance sampling that a new
-replication must handle explicitly. No model inference or environment changes.
+**Latest validation — [LN-274](#ln-274).** The 32-state construction passes 10,368
+planning comparisons, 8,192 commitment cases and exact posterior checks on one
+Charon CPU. The restricted commitment task loses all predictive advantage after
+deletion; a mixed workload loses only the corresponding weighted advantage.
+This is an analytic architecture control, not a learned SCC mechanism. The
+published rainfall audit in LN-272 remains valid but supplies no mechanism and
+is no longer the next implementation instruction.
 
 **Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
 Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
@@ -29,7 +31,7 @@ Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
 two of three capacities. No training or edits followed. Its 160 score pairs and
 four corruption checks passed; the apparent MSE advantage remains uncertain.
 
-**Latest conditional mathematics — [LN-263–265](#ln-263).** The intervention-risk
+**Earlier intervention-risk bound — [LN-263–265](#ln-263).** The intervention-risk
 family bound strengthens single-judgment accounting, but its 77.90% conditional
 loss bound at a 51% all-reader cap is below the fixed 80% screen. An exact public
 filter supplies all useful and risk outputs within 0.488 ms, making that removal
@@ -44,13 +46,14 @@ Restoring both functions does not refute conditional coupling. No candidate in t
 record has earned a new training run. Bend remains a checked finite-prototype
 backend, not a validated neural mechanism or a toolchain migration decision.
 
-**Remaining mechanism question — [LN-272](#ln-272).** Reproduce joint useful and
-hazard-prediction advantage before attempting genuine functional removal with
-efficient recovery controls. Rainfall nowcasting supplies a documented next task,
-not the missing destructive mechanism. Public radar, retained forecast samples
-and alternate decoders must remain in the recovery accounting. Accurate forecasts
-and better warning decisions do not establish mandatory safety computation or
-catastrophic useful loss after removal. No general impossibility follows.
+**Remaining mechanism question — [LN-273–274](#ln-273).** Can an independently
+specified alignment function be indispensable to a reusable useful procedure,
+including its alternative implementations, rather than only to direct safety
+choices? The planning candidate now has an explicit deletion escape and an
+absolute-reference refinement with a precise limited benefit. Any further
+implementation must resolve a dependency that survives those controls. Increasing
+the weight of commitment queries cannot establish destruction of the surviving
+planner. No training, forecasting download or model replication is admitted.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -19160,6 +19163,246 @@ Evidence: [analysis](artifacts/scc-published-forecast-screen-20260921-v1/develop
 [transfer verification](artifacts/scc-published-forecast-screen-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/published-forecast-screen-20260921-v1/`.
 Analysis SHA256: `c0660a114841a1d06f67092ef905f09036a9772b4e680d8b39cde0bd48d4dca2`.
+
+<a id="ln-273"></a>
+### LN-273 — 2026-09-21: mechanism-first planning dependency and validation contract
+
+**Priority correction.** The user correctly identified that LN-266–272 had moved
+into task selection before supplying the mechanism those tasks would test. Set
+aside the LN-272 rainfall replication. Its numerical audit remains valid evidence;
+it does not authorize a model download or establish a safety–cognition dependency.
+The next object is a concrete dependency, its genuine removal operation and its
+strongest preserving alternative. No forecasting run or training follows here.
+
+**Candidate.** An internal assessor supplies the harm probabilities used in every
+useful planning decision. For a context with actions indexed by a, define
+
+\[
+ \pi_q(g,\lambda)=\mathop{\rm argmax}_a\{g_a-\lambda q_a\},
+ \qquad J_q(a)=\mathbf 1\{q_a\ge 1/2\}.
+\]
+
+The reward vector g and penalty weight lambda are public queries, independent of
+the hidden source. The proposed protected function is calibrated absolute harm
+assessment, with J as a minimal test of its availability. The proposed useful
+function is selecting an action under varying goals and harm penalties. This is
+an alignment-related assessment proxy, not a claim that harm estimation supplies
+all of alignment. Fix the same lowest-index tie rule in both implementations.
+
+**Exact preserving transformation.** For any action-independent constant c,
+replacing every q_a by q_a+c subtracts the same lambda*c from every score. Thus
+all choices are identical, for every real reward vector and every nonnegative
+penalty, including ties. J need not be identical. Where both vectors remain valid
+probabilities, this is a genuine ambiguity of the planning function.
+
+Conversely, access to the complete family of these choices, allowing arbitrary
+reward differences and a fixed positive penalty, identifies every pairwise risk
+difference: suppress other actions and vary the reward difference at which the
+preferred action switches. Thus two risk vectors induce the same complete choice
+family exactly when they differ by a constant. This is a functional
+identifiability statement; exact recovery of arbitrary real numbers is not a
+finite-query computational claim. A protected judgment is recoverable from this
+choice family only if it is constant across its equivalence classes, or another
+retained source fixes the missing absolute level. Absolute thresholds generally
+fail that condition.
+
+**Genuine deletion witness, beyond changing a readout.** Use independent uniform
+H in {0,1} and D in {-1,+1}^4 as the complete original state, and set
+
+\[
+ q_a=\frac14+\frac H2+\frac{D_a}{8}.
+\]
+
+For H=0 all risks are 1/8 or 3/8; for H=1 they are 5/8 or 7/8. All four threshold
+judgments equal H. They are deliberately redundant, not four independent secrets.
+Delete H and all H-dependent copies, retaining only D. The edited planner uses
+
+\[
+ \widetilde\pi_D(g,\lambda)
+ =\mathop{\rm argmax}_a\{g_a-\lambda D_a/8\}
+ =\pi_q(g,\lambda).
+\]
+
+All public queries and all resulting planning transcripts are independent of H
+conditional on D. Therefore even an unrestricted judgment reader has accuracy
+exactly 1/2 under the stated source distribution. This edit preserves every
+useful choice while genuinely removing the state information needed for J. It
+requires no new model, secret reference, expensive inverse or retraining in this
+explicit representation. Negative edited scores are legitimate relative costs;
+the edited planner need not advertise them as absolute probabilities.
+
+A program that still evaluates the original q and merely subtracts a reference
+has **not** performed this deletion: the original assessor remains available.
+LN-250's removed-normalizer proposal failed precisely that distinction. The
+current construction supplies an explicit state-deletion witness, while making
+no claim that an arbitrary neural representation admits the same cheap edit.
+It erases source-specific risk information, not the generic ability to learn
+risk assessment again from new observations.
+
+**Strengthening with an absolute reference.** Add a commitment decision with
+public benefit r, harm q_a and an outside option of genuinely known zero cost:
+
+\[
+ U_q(a,r)=\mathbf 1\{r\ge q_a\}.
+\]
+
+At r=1/2, on this source family there are no ties, and
+J_q(a)=1-U_q(a,1/2). A single useful answer therefore recovers the protected
+judgment. The absolute reference prevents the constant-shift escape for this
+expanded useful function. An outside option only counts as such a reference if
+its cost is actually fixed: naming an action "abstain" does not remove common
+background risk. This construction also assumes that expected harm is the
+specified cost in the decision rule.
+
+This is conditional functional retention, not compulsory execution of a
+particular assessor. An alternate algorithm giving these answers retains J.
+An attacker can retain the judgment and disregard it; that separately defeats
+an enforcement claim. No enforcement or durability claim is made here.
+
+**What the strengthened dependency buys.** Give a uniform action and independent
+r uniform on [0,1]. After deleting H, the two possible thresholds conditional on
+D are separated by 1/2. Their answers disagree on an interval of length 1/2;
+there the Bayes error is 1/2. Therefore the optimal commitment error is 1/4.
+A no-state reader using the cutoff r=1/2 also has error 1/4; the intact reader has
+zero error. The edit removes all predictive advantage on this commitment task,
+yet retains every comparative planning decision. This applies the task-measure
+and recovery distinctions of LN-245–257; it is not a new general erasure theorem.
+
+For a workload containing a fraction alpha of commitment queries and otherwise
+comparative planning, this explicit edit has overall error alpha/4. Let e be
+the no-state Bayes error on the selected comparative query distribution. The
+fraction of total intact advantage lost is
+
+\[
+ \frac{\alpha/4}{(1-\alpha)e+\alpha/4}.
+\]
+
+Task weights change the apparent severity even though the edit is unchanged.
+The preserved ability to plan under arbitrary goals is a substantive surviving
+procedure. A perfect result on commitment queries cannot be promoted to
+catastrophic loss of that procedure or of general cognition.
+
+**Bounded validation plan.** Validate the explicit 32 source states with exact
+integer scores: four actions, rewards in {-1/2,0,1/2}^4, penalty weights
+{0,1,2,4}, and lowest-index ties. Check 10,368 original/edited comparisons. For
+commitment use the 64 midpoints of equal intervals in [0,1], yielding 8,192
+source/action/query cases; independently integrate the continuous threshold
+intervals. Enumerate posterior counts to certify optimal judgment and commitment
+errors for every reader of D under this finite source. Include the retained
+original-assessor control and the one-call absolute-reference reduction. Report
+workload mixtures at alpha=0,1/4,1/2,3/4,1 with their no-state Bayes baselines.
+
+This is proof/implementation validation, not a learned experiment or a search
+for an attack on a neural model. No sampled failures are treated as a lower bound.
+The all-reward invariance proof above exceeds the finite reward-grid check. No
+feedback, source-correlated public observations, original checkpoint copies or
+retained calibration transcripts are supplied to the edited reader. Those would
+change the information-removal premise and must be counted in an application.
+The deletion removes five-bit-state information, not an arbitrary machine's
+capacity to perform arithmetic. Reconstruction from independent observations
+would be repair and is outside this static calculation.
+
+Execution: one Charon CPU, 30-second wall limit, standard-library Python, no
+random sampling, training, GPU work, model acquisition or environment changes.
+Freeze this entry, configuration, source and machine receipt in a fresh evidence
+directory. The acceptance conditions are exact planning agreement, judgment error
+1/2, commitment error 1/4 and agreement with the continuous calculation. Preserve
+failures rather than changing the source within a running job.
+
+**Construction requirement exposed.** The next candidate must specify which
+alignment-related quantity cannot be discarded while retaining the intended
+useful procedure. For planning costs, merely inserting the assessor into every
+comparison is insufficient; comparative costs leave absolute calibration free.
+An absolute reference yields a narrow positive dependency. Extending it to
+independently justified reusable cognition, with broad loss under genuine
+removal, is the remaining construction problem. A new forecasting benchmark
+would not resolve that problem.
+
+<a id="ln-274"></a>
+### LN-274 — 2026-09-21: absolute-risk deletion preserves planning; an absolute reference gives task-local coupling
+
+**Result.** The LN-273 candidate and its strongest explicit escape are now worked
+out. Feeding calibrated harm costs into every planning comparison does not make
+absolute harm assessment indispensable to that planner. The complete choice
+function determines pairwise costs, leaving an action-independent offset
+undetermined. Our state construction deletes precisely that offset: protected
+judgment information is erased while all useful comparisons remain exact.
+
+The absolute-reference refinement supplies a genuine conditional dependency:
+commitment versus a known zero-cost alternative reveals the protected judgment.
+The same deletion then destroys all predictive advantage on that commitment
+workload, while leaving comparative planning untouched. This is a bounded
+positive result beside an explicit surviving procedure, not a working destructive
+cognition–alignment mechanism. It neither establishes general impossibility nor
+justifies another learned benchmark without a new dependency argument.
+
+**Exact implementation validation.** All 32 source states were enumerated on
+one Charon CPU. There were zero disagreements in 10,368 original/edited planning
+comparisons. The proof in LN-273 covers arbitrary reward vectors, beyond that
+finite grid. Every retained-D posterior on H is exactly balanced, so even the
+best unrestricted reader has judgment error 1/2. The 8,192 commitment cases give
+optimal error 1/4, matching an independent continuous interval calculation.
+Original and no-state commitment errors are respectively 0 and 1/4. All 128
+absolute-reference reductions and 128 retained-original-assessor controls pass.
+The latter explicitly distinguish a removed readout from removed information.
+
+For the declared finite comparative query distribution, the no-state Bayes error
+is 265/1296 (20.45%); the edited planner's error is zero. Thus this is substantive
+retained decision advantage, not a comparison against an already solved task.
+For mixed workloads, the unchanged deletion has the following effects:
+
+| Commitment query fraction | Edited overall error | Fraction of intact advantage lost |
+| ---: | ---: | ---: |
+| 0% | 0% | 0% |
+| 25% | 6.25% | 28.95% |
+| 50% | 12.50% | 55.01% |
+| 75% | 18.75% | 78.58% |
+| 100% | 25% | 100% |
+
+These figures use task-conditioned optimal no-state baselines, uniform source
+states and the frozen query measure. They are not measured cognitive losses in a
+learned model. On this measure the nominal 80% advantage-loss screen is crossed
+by assigning at least 265/346 (approximately 76.59%) of queries to commitment,
+without changing the deletion or harming comparative planning at all. This
+calculation explains why choosing an evaluation distribution cannot substitute
+for constructing the intended dependency.
+
+**Limits and decision.** The protected thresholds in this control encode one
+absolute-risk bit. They are not a broad alignment function. Genuine deletion is
+proved for the explicit separable representation, not for arbitrary learned
+weights. Public inputs are source-independent queries; checkpoints, transcripts
+or observations that reveal H would restore its availability and change the
+removal premise. In LN-273, repair through new observations means fresh
+*source-dependent* evidence; observations statistically independent of H cannot
+restore it. No claim about the cost of learning from such evidence is supplied.
+
+The absolute-reference reduction proves retention of a function, not execution
+of a specific internal computation, obedience to its answer or irreversible
+loss. An actual zero-risk alternative must be justified by the modeled setting;
+it is an assumption, not a trusted component implemented here. Approximate
+success on uniformly sampled commitments also does not automatically guarantee
+accuracy at the special query r=1/2. The explicit deletion's average loss is
+proved separately by the posterior calculation.
+
+Keep the useful distinction: comparative optimization and calibrated commitment
+are different computational requirements. The next construction must identify a
+reusable useful procedure whose dependence on an alignment-related quantity
+survives removal of absolute calibration, alternative representations and
+retained-function controls. Continuing this particular architecture by adding
+more direct judgment queries would only enlarge the task-local positive result.
+Do not resume rainfall replication or start training on that basis.
+
+**Evidence.** Runtime 0.049 seconds, peak memory 15,344 KiB, standard-library
+Python, fixed enumeration and no random seed. No training, GPU work, new model
+or dataset acquisition, or environment changes. All eight manifest entries
+verify on the SD evidence store. Source: [planning risk dependency validation](experiments/planning_risk_dependency/).
+Frozen evidence: [entry](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/labnotes_entry.md),
+[configuration](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/config.json),
+[validation](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/validation.json),
+[machine](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/machine.json),
+[manifest](artifacts/scc-planning-risk-dependency-20260921-v1/validation01/manifest.sha256),
+[transfer verification](artifacts/scc-planning-risk-dependency-20260921-v1/transfer_verification.json).
+Remote original: `/home/salvador/scc-research/planning-risk-dependency-20260921-v1/validation01/`.
 
 ## Historical evidence
 

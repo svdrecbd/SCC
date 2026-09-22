@@ -1,0 +1,21 @@
+{
+  "classification": "exact validation of an explicit dependency and deletion counterexample",
+  "action_count": 4,
+  "risk_denominator": 8,
+  "risk_base_numerator": 2,
+  "risk_offset_numerator": 4,
+  "deviation_values": [-1, 1],
+  "reward_numerators": [-4, 0, 4],
+  "penalty_values": [0, 1, 2, 4],
+  "commitment_reward_midpoints": 64,
+  "commitment_workload_fractions": [0, 0.25, 0.5, 0.75, 1],
+  "source_distribution": "uniform independent offset bit and four deviation bits",
+  "public_information": "query only; no source-dependent observations or retained transcripts",
+  "edited_state": "four deviations; delete offset bit and every source-dependent copy of it",
+  "tie_rule": "lowest action index",
+  "seed": null,
+  "execution_host": "charon",
+  "cpu_count": 1,
+  "wall_limit_seconds": 30,
+  "training": false
+}
