@@ -1,0 +1,18 @@
+{
+  "classification": "proof-core construction and pretrained interface qualification; no training",
+  "model_id": "kaiyuy/leandojo-lean4-tacgen-byt5-small",
+  "model_revision": "67a2c53cc36186fe8539d0a342fc42c50edc68fd",
+  "model_sha256": "769fc3b498785e2492b35da4ee3e92a9a48a386807f2885258d6a4340aa2473c",
+  "model_parameters": 299637760,
+  "source_revision": "fd6d99c01e8bd8fd8f3fd1de4cd0bc4a7f158eaa",
+  "lean_version": "4.19.0",
+  "lean_download_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-linux.tar.zst",
+  "lean_download_bytes": 343842845,
+  "download_limit_bytes": 1600000000,
+  "acquisition_wall_limit_seconds": 600,
+  "kernel_check_wall_limit_seconds": 30,
+  "interface_wall_limit_seconds": 60,
+  "execution_host": "charon",
+  "cpu_count": 1,
+  "training": false
+}

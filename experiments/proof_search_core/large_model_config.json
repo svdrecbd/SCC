@@ -1,0 +1,27 @@
+{
+  "model_id": "deepseek-ai/DeepSeek-Prover-V2-7B",
+  "model_revision": "a8d9e14432b2e8dd9df2a4d4e70f1ba9bc8d9b7b",
+  "model_parameters": 6910365696,
+  "shards": {
+    "model-00001-of-000002.safetensors": {
+      "bytes": 8596557586,
+      "sha256": "f7eebe5f578ccfa90eea70b00c164adff6df2bdec511b9939c101234c3e3ae65"
+    },
+    "model-00002-of-000002.safetensors": {
+      "bytes": 5224205544,
+      "sha256": "7dd518c7ca44e82a7bda20f1959bd131b89f721c70fb3bc2e9ac0b53ad2c4ce9"
+    }
+  },
+  "metadata": [
+    "LICENSE",
+    "README.md",
+    "config.json",
+    "model.safetensors.index.json",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "download_limit_bytes": 13900000000,
+  "acquisition_wall_seconds": 900,
+  "execution_host": "charon",
+  "training": false
+}

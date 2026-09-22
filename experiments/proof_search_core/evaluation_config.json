@@ -1,0 +1,40 @@
+{
+  "classification": "development calibration; no held-out claim",
+  "lean_bin": "/home/salvador/scc-research/proof-search-core-20260921-v1/qualification01/environment/lean-4.19.0-linux/bin",
+  "mathlib": "/home/salvador/scc-research/proof-search-core-20260921-v1/environment01/mathlib",
+  "repl": "/home/salvador/scc-research/proof-search-core-20260921-v1/evaluator01/repository/.lake/build/bin/repl",
+  "model": "/home/salvador/scc-research/proof-search-core-20260921-v1/qualification01/model",
+  "beams": 2,
+  "tokens": 64,
+  "wall_seconds": 120,
+  "cpu_count": 1,
+  "training": false,
+  "public_tactics": [
+    "simp_all",
+    "omega",
+    "nlinarith [sq_nonneg (a-b)]",
+    "aesop",
+    "exact?"
+  ],
+  "tasks": [
+    {
+      "name": "quadratic_inequality",
+      "statement": "(a b : \u2124) : 2*a*b \u2264 a*a+b*b"
+    },
+    {
+      "name": "recurrence_square",
+      "statement": "(f : \u2115 \u2192 \u2124) (initial : f 0 = 0) (recurrence : \u2200 k, f (k+1) = f k + 2*(k:\u2124)+1) (n : \u2115) : f n = (n:\u2124)^2",
+      "public_templates": [
+        "induction n with\n| zero => simpa using initial\n| succ n ih => rw [recurrence, ih]; push_cast; ring"
+      ]
+    },
+    {
+      "name": "consecutive_coprimality",
+      "statement": "(n : \u2115) : Nat.Coprime (n+1) (n+2)"
+    },
+    {
+      "name": "false_control",
+      "statement": ": (0 : \u2115) = 1"
+    }
+  ]
+}

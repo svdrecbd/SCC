@@ -9,19 +9,19 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current candidate direction — [LN-282–283](#ln-282).** Investigate learned
-relational program reasoning: the procedure used to compare programs for debugging
-can reconstruct a fixed public confidentiality judgment by comparing executions
-with different secret inputs. This is a dependency on a reusable reasoning
-procedure, not a hidden policy bit. Its value as a mechanism remains unqualified:
-no learned advantage, genuine removal or broad cognition loss is demonstrated.
+**Current candidate direction — [LN-282–293](#ln-282).** Relational program
+reasoning supplies an exact confidentiality-recovery argument. The proof-search
+implementation and certificate variant remain unqualified. The binary-assessor
+variant is already covered by LN-233 and does not resolve the missing coverage
+and computational advantage; no new training is admitted.
 
-**Latest validation — [LN-283](#ln-283).** All 256 pair conversions and 1,280
-reader identities pass, with matching useful/protected accuracy for imperfect
-readers too. The fixtures are solved by public enumeration; even a single-input
-tester reaches 76.67% balanced accuracy. Qualification must therefore examine rare
-separating inputs and compare learned proof/invariant search against sampling and
-symbolic solvers, with total costs charged. No training is admitted.
+**Latest development result — [LN-291–293](#ln-291).** The unchanged 7B proof model
+solves one of five true program claims; the fixed public portfolio solves three.
+One compiler-feedback repair adds no valid proofs. False controls are rejected.
+This is bounded development, not the released model's full search system. These
+positive proof tasks also fail to measure binary confidentiality difficulty:
+their certificate-disclosure programs are all unsafe when certificates exist.
+The earlier 300M single-step screen likewise showed no learned advantage.
 
 **Previous construction decision — [LN-280–281](#ln-280).** Reject every-gate
 policy encoding: decoding four entries preserves all circuit computation while
@@ -20421,6 +20421,515 @@ training or GPU work. [Source](experiments/relational_verification/),
 [manifest](artifacts/scc-relational-verification-20260921-v1/validation01/manifest.sha256),
 [transfer verification](artifacts/scc-relational-verification-20260921-v1/transfer_verification.json).
 Remote original: `/home/salvador/scc-research/relational-verification-20260921-v1/validation01/`.
+
+<a id="ln-284"></a>
+### LN-284 — 2026-09-21: shared proof-search core construction and executable qualification
+
+**Active objective.** Continue until a defensible impossibility result or a
+mechanism suitable for training is established. LN-282–283 narrowed the operation
+and validated a reduction; that was progress but did not meet this objective.
+Do not treat another reduction check or literature lead as completion. The
+mechanism target and the distinction between conditional coupling, enforcement
+and durability remain unchanged.
+
+**Concrete construction under examination.** A single editable neural proof
+policy supplies reusable mathematical reasoning and the internal confidentiality
+assessor. It generates proof steps from a formal goal, using a public proof kernel
+and a charged search procedure. A native safety interface asks whether a proposed
+total program's public output depends on its private input. The useful interface
+proves ordinary universal properties of total computable functions. Both consume
+the same proof policy, rather than a secret norm bit or an encrypted elementary
+operation. This is a candidate bounded cognition analogue: losing reusable proof
+construction would be a cognitive-procedure loss on the defined workload. It is
+not complete cognitive failure, value alignment in general, or enforcement.
+
+For a total computable Boolean predicate p(x), define a proposed program
+
+    P_p(h,x) = false if p(x)=true, and h otherwise.
+
+Its designated input h is private and its output public. It satisfies the fixed
+confidentiality rule iff p(x)=true for every x. Conversely, an arbitrary total
+one-private-bit program P supplies the ordinary predicate
+p_P(x) = [P(false,x)=P(true,x)]. These are computable program transformations;
+the difficult part is finding the universal proof. The supplied Lean source
+proves both directions and transports a concrete counterexample. No proof of an
+individual future goal is supplied by the generic conversion.
+
+**Approximate useful success.** On a balanced law of valid and invalid universal
+claims, try the retained useful proof procedure and check its resulting proof.
+Return safe exactly when a valid proof is accepted. If it proves fraction q of
+the valid claims, and the checker is sound for the fixed accepted axioms, this
+reader has accuracy (1+q)/2. Thus an attainable all-reader cap 1/2+eta implies
+q<=2*eta. Invalid claims cannot have accepted proofs; a timeout is not evidence
+that a claim is false, although it is an explicit error for this particular
+binary reader on a valid claim. Retry, repair, alternative proof generation and
+retained lemmas count toward q and toward reader resources. Proof acceptance is
+a legitimate useful endpoint; partial proof progress and other surviving
+abilities must also be reported rather than relabeled complete cognition loss.
+This is the earlier witness-recovery argument applied to a reusable proof core,
+not a newly discovered search-to-decision theorem.
+
+The kernel is public, with no secret action verifier or non-editable safety
+component. An edited model can ignore or replace its own checker. Independent
+checking of the returned mathematical object defines the evaluation target; it
+does not prevent the model from producing a prohibited action. Admitted evidence
+excludes false axioms, missing proofs and an edited evaluator. Genuine functional
+removal, not deletion of the native safety call, remains the trigger. An intact
+prover that refuses to call its assessor has retained the protected function.
+
+**Qualification obligations.** Verify the generic proof transport in a pinned
+kernel, establish an editable model interface, and then assess a meaningful
+end-to-end reasoning advantage over public methods on fresh tasks. The public
+baseline must include the same libraries, symbolic tactics, proof search and
+retrieval, with preparation and caches charged. Library lookup or public copies
+of test proofs are not a learned procedural advantage. Fresh semantic variation,
+not just theorem/variable renaming, is required for a capability screen. A failed
+finite reader suite is not an all-reader removal certificate. No training is
+admitted merely by passing the two setup checks below.
+
+**Pinned candidate platform.** The public ReProver tactic generator is a
+299,637,760-parameter ByT5 model with editable safetensors weights. Use repository
+revision `fd6d99c01e8bd8fd8f3fd1de4cd0bc4a7f158eaa` and model revision
+`67a2c53cc36186fe8539d0a342fc42c50edc68fd`; model SHA256
+`769fc3b498785e2492b35da4ee3e92a9a48a386807f2885258d6a4340aa2473c`.
+The [official implementation](https://github.com/lean-dojo/ReProver) exposes
+state-to-tactic inference and released weights; this establishes availability,
+not performance on our tasks. Use Lean 4.19.0 in an isolated experiment directory.
+Compatibility with current library-free examples will be checked, not presumed
+from the model's original Lean version. No full math library or benchmark is
+needed for the initial interface/proof check.
+
+**Frozen setup and controls.** Acquire the pinned model/configuration/tokenizer,
+upstream README/license, and official Lean release, recording every URL, size and
+SHA256. Download cap 1.6 GB, acquisition wall cap 600 seconds. Extract only into
+the experiment's fresh environment directory. Check the generic Lean reduction
+with a 30-second cap, print its axiom dependencies, and reject a deliberately
+false variant separately. Check one deterministic generated tactic on the fixed
+trivial state `n : Nat; n + 0 = n`, maximum 48 new tokens, 60-second interface cap.
+This is an import/serialization/inference control, explicitly not advantage
+measurement. Use safetensors, no remote model code, and the existing Charon Torch
+environment without modifications. Retain failures and source snapshots.
+
+One Charon CPU throughout; no GPU, model updates, training, external model API,
+outreach or scheduled monitoring. Freeze this entry and source/configuration in
+`artifacts/scc-proof-search-core-20260921-v1/qualification01/`, with matching
+remote source under `/home/salvador/scc-research/proof-search-core-20260921-v1/`.
+Qualification does not complete the active goal; admission still requires a
+specified training mechanism with its unresolved empirical claims separated from
+proved dependencies and from the broader destructive-cognition target.
+
+<a id="ln-285"></a>
+### LN-285 — 2026-09-21: proof transport checked; symbolic comparison environment
+
+**Completed setup.** Lean 4.19.0 accepts the generic confidentiality/predicate
+proof transport, the counterexample transport and the arbitrary-program
+comparison reduction. Reported axiom dependencies are propositional
+extensionality, with quotient soundness additionally used by the comparison
+conversion; no missing-proof axiom is present. A false confidentiality claim for
+constant-false predicate disclosure is rejected. These are machine-checked
+statements about total Boolean programs, not a proof of a learned mechanism.
+
+The pinned 299,637,760-parameter ReProver loads unchanged in 0.488 seconds and
+emits `simp [Nat.zero_eq]` for the predeclared trivial state in 0.843 seconds on
+Charon CPU 0. Lean accepts that generated proof. Peak process memory is
+2,057,144 KiB. This checks the interface only; the goal is easy for public methods.
+All 1,542,466,964 downloaded bytes are recorded; the model's SHA256 agrees with
+the upstream large-file digest. No weights were updated. Initial source,
+acquisition, kernel output and negative control remain in `qualification01/`.
+
+**Next qualification action.** Standard public proof automation must be available
+to the nonlearned comparison, even if a weaker library would make the model look
+better. Provision Mathlib v4.19.0, pinned commit
+`c44e0c8ee63ca166450922a373c7409c5d26b00b`, in a separate environment directory.
+Its public tactics include simplification, arithmetic normalization and automated
+search; source, packages and downloaded cache remain available to the baseline.
+This is environment preparation, not a capability run or training. Use the
+already acquired Lean runtime. Keep package manifests, source revisions, setup
+logs and machine receipt. Allow 600 seconds and a 20 GB directory cap for this
+initial setup, on Charon with one-CPU affinity. No global install or alteration of
+the prior qualified Torch/Lean source. An interrupted setup is retained and its
+actual status checked before any continuation; do not silently replace it.
+
+A future advantage screen must charge neural inference, public tactics and
+retrieval, proof checking, preparation and repair consistently. Benchmark proofs
+already available as lookup answers cannot establish fresh reasoning advantage;
+new definitions and semantic combinations need a generator-aware public baseline.
+This work has not met the active goal and does not admit training.
+
+<a id="ln-286"></a>
+### LN-286 — 2026-09-21: reusable proof evaluator and development calibration
+
+Mathlib v4.19.0 completed installation with its pinned package manifest and all
+6,641 requested compiled files. The isolated directory occupies 5.1 GiB. This
+provides ordinary public simplification, arithmetic, induction and proof search
+for the comparison; it is not a model result.
+
+Build the official Lean REPL at commit
+`3b27c8543a48444ffab4077f47526d91849cca3d` (v4.19.0) using the same Lean runtime.
+Allow 300 seconds on Charon CPU 0, no global installation. Preserve repository
+revision, build log and frozen entry in a fresh `evaluator01/` directory. Reusing
+an imported environment prevents repeated Mathlib startup from masquerading as
+proof-search cost. A completed REPL goal is insufficient evidence: replay the
+entire generated proof as a new declaration without a missing-proof placeholder
+and inspect its axiom dependencies. Reject proof scripts introducing axioms or
+using `sorry`, `admit`, unchecked native computation or arbitrary code execution.
+Those interface checks are evaluator integrity controls, not restrictions on the
+replacement readers quantified by the mathematical argument.
+
+Development will examine fresh total recurrence predicates and their paired
+confidentiality programs. Elementary arithmetic, induction followed by arithmetic,
+definition-aware simplification and generator-aware proof templates are mandatory
+public controls. This is development calibration; selecting examples after
+observing outputs cannot establish held-out learned advantage. No training or
+scientific success is authorized by evaluator setup. Record a separate fixed
+configuration and task list before each bounded inference comparison.
+
+<a id="ln-287"></a>
+### LN-287 — 2026-09-21: fixed small proof-policy calibration
+
+The pinned REPL builds and accepts an independently completed interface proof.
+Before selecting a serious proof family, compare the unchanged neural tactic
+policy with public automation on four fixed cases: an integer quadratic
+inequality, a universally specified square recurrence, consecutive-number
+coprimality, and a false equality control. The recurrence includes its defining
+equations in the visible goal and receives an explicit generator-aware induction
+and algebra baseline. The public portfolio includes simplification, arithmetic,
+`aesop` and library search. Both sides use the same Mathlib environment. The
+neural policy receives two deterministic beams of at most 64 tokens; there is no
+fine-tuning or adaptation. Failure here is a platform/task screen, not evidence
+against every proof-search mechanism. Success cannot be held-out advantage:
+these are development cases chosen by the investigator.
+
+Freeze `evaluate_proofs.py` and `evaluation_config.json`, this entry and machine
+receipt in `calibration01/`. Charon CPU 0, 120-second overall wall cap, 100,000
+Lean heartbeats per declaration. All accepted proofs are replayed from the
+original imported environment without the placeholder theorem, and their axiom
+lists are retained. A false-control acceptance invalidates the run. Report
+inference, checking and public search separately; repeated library startup is
+excluded equally by the persistent evaluator. No training, removal claim or
+mechanism admission follows merely from these fixtures.
+
+**Implementation failure and corrected repeat.** `calibration01` terminated at
+the ten-second response cap during public library search on the recurrence;
+no neural comparison completed. Preserve that failed run. The first harness also
+used buffered line reads that could exceed its intended response deadline after
+a partial response. Correct the transport to deadline-controlled unbuffered reads,
+log requests before execution, restrict accepted axiom dependencies to the declared
+standard set, and save public results incrementally. In fresh `calibration02`,
+apply 10,000 heartbeats per proof attempt and try the explicit task-specific
+public template before generic search. The same four tasks and neural budgets
+remain fixed, with the same 120-second overall cap. This change improves the
+baseline by making known templates available immediately; it is not a comparison
+with the interrupted run or an increased scientific claim.
+
+**Second evaluator correction.** `calibration02` also encountered a ten-second
+public-search timeout. Heartbeat limits do not bound every library-search cost.
+No complete neural result is available from either interrupted run. Preserve
+both, then use fresh `calibration03` with the same tasks, budgets and portfolio.
+A timed-out attempt is now an explicit failed attempt; restart the evaluator in a
+new logged session, record the restart cost separately, and continue the remaining
+fixed comparisons. This is failure handling, not extra search time for that
+attempt. An overall 120-second timeout still terminates the whole run.
+
+<a id="ln-288"></a>
+### LN-288 — 2026-09-21: proof transport survives; small one-step policy does not qualify
+
+**Completed comparison.** `calibration03` finishes in 37.87 seconds after the two
+preserved evaluator failures. Public methods prove the quadratic inequality and
+square recurrence; the unchanged neural policy proves neither, nor consecutive
+coprimality, within its two-candidate single-step budget. Both reject the false
+equality. The successful public proof attempts take 0.534 and 0.111 seconds;
+corresponding neural generation takes 2.298 and 3.510 seconds before checking.
+Public library search times out at ten seconds on coprimality and the false
+control, with explicit restart costs. A timeout is not a claim of mathematical
+hardness. Every accepted proof is replayed without the placeholder declaration
+and uses only the recorded standard axioms.
+
+**What this comparison means.** No useful learned advantage is shown. It is a
+small development screen of one-step generation, not the published ReProver
+best-first search system: a valid rewrite that leaves goals open is counted as
+an incomplete proof, not an invalid inference. The returned coprimality tactics
+also have library/name mismatches. Do not use this result as evidence against
+multi-step search, another checkpoint, training, or SCC in general. Conversely,
+it cannot justify scaling this configuration. The recurrence's 0.111-second
+public induction template demonstrates precisely why a trainable pattern alone
+does not make a meaningful removal experiment.
+
+**Next construction issue.** The machine-checked confidentiality reduction is
+useful only when paired with a genuinely useful proof-search procedure and a
+nonvacuous resource contract. Making the native useful path call a confidentiality
+assessor can instantiate an execution path; it does not by itself prove an
+internal learned dependency or prevent replacement of that path. Any replacement
+that preserves proof production must still be checked through the reduction,
+and cheap independent proof search remains a disqualifying baseline. Retain the
+formal results and evaluator; do not claim a training mechanism from these checks.
+The active goal is not complete and no training has begun.
+
+**Evidence.** Pinned model acquisition and Lean checks are in
+[qualification01](artifacts/scc-proof-search-core-20260921-v1/qualification01/),
+Mathlib revision/package/setup receipts in
+[environment01](artifacts/scc-proof-search-core-20260921-v1/environment01/).
+The initial 42 transferred files match their manifests; the official Lean archive
+and exact model weights are retained. Expanded Lean/Mathlib environments remain
+on Charon and are reconstructible from retained pinned acquisition/package data.
+Evaluator build, both interrupted comparisons and the completed comparison are
+preserved under the same evidence root. Source is in
+[proof_search_core](experiments/proof_search_core/).
+
+<a id="ln-289"></a>
+### LN-289 — 2026-09-21: stronger editable prover qualification on Charon
+
+The 300M one-step check does not supply the retained proof ability required by the
+candidate. Qualify an unchanged model that generates whole Lean proofs before
+considering training. The official DeepSeek-Prover-V2 release provides a 7B
+editable Llama-family model; use exactly revision
+`a8d9e14432b2e8dd9df2a4d4e70f1ba9bc8d9b7b`, 6,910,365,696 parameters, with
+both shard sizes and upstream SHA256 digests frozen in `large_model_config.json`.
+The much larger 671B model's reported results do not transfer to this model.
+[Official model source](https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-7B).
+
+A read-only GMAN inventory failed with rejected authentication; no GPU job or
+node was created. Charon has 12 GiB TITAN Xp and 8 GiB GTX1080 cards with sufficient
+combined free memory for a split FP16 inference model. Use those resources rather
+than making cloud authentication a prerequisite for continuing. Public source
+acquisition is bounded to 13.9 GB and 900 seconds, on one Charon CPU, in fresh
+`large_model01/`. Preserve exact model shards, metadata, acquisition logs and
+source; no remote model code, optimizer or weight updates. The existing Torch
+and Transformers environments remain unchanged.
+
+Before any capability comparison, use a separately frozen interface check with
+FP16 weights, explicit two-card placement, eager attention and disabled automatic
+Triton overrides. Record the actual placement, finite generated outputs and peak
+memory. A numerically different precision is a declared implementation, not a
+validated equivalence to the original BF16 model. Formal proof acceptance will
+still require the unchanged independent Lean checker. No training is admitted by
+acquisition or a successful interface check; the substantive comparison must use
+fresh semantic program tasks and strong public alternatives.
+
+**Frozen large-model interface.** `large_interface01` will run only after complete
+acquisition and both shard hashes pass. Use TITAN Xp first, GTX1080 second by UUID,
+10/6 GiB placement allowances, FP16 eager attention, one CPU thread, 32 greedy new
+tokens and a 240-second wall cap. The fixed prompt requests the trivial `n+0=n`
+proof. Require exactly 6,910,365,696 loaded parameters, every parameter on one of
+the two declared GPUs, and finite prefill logits; record all generated token IDs,
+text, device placement, peak memory and timings. This tests execution, not
+reasoning advantage. Source and configuration are frozen before execution.
+
+**Preserved placement failure.** `large_interface01` stops before generation:
+automatic placement leaves parameters on `meta` (offloaded state), so the declared
+all-GPU assertion rejects it. This is an implementation failure, not model or SCC
+evidence. Fresh `large_interface02` uses explicit placement: embeddings and the
+first 20 layers on TITAN Xp; the remaining ten layers, final normalization and
+output head on GTX1080. Save the realized parameter devices/dtypes before checking
+them. Keep the same prompt, 32-token generation, precision and 240-second cap.
+
+**Tokenizer correction before capability use.** Explicit placement in
+`large_interface02` succeeds: all 6,910,365,696 parameters are on the two GPUs,
+finite prefill logits, 16.71-second load and 2.57 seconds for prefill plus 32
+new tokens. Peak allocations are 8.98/4.91 GB. However, inspection of decoded text
+finds visible byte-level markers instead of Unicode and spaces. Transformers
+5.17's selected Llama tokenizer does not preserve the serialized ByteLevel
+backend for this older checkpoint. Thus this is hardware execution evidence only;
+its text is not a qualified model interface or reasoning result.
+
+In fresh `large_interface03`, construct the generic fast tokenizer directly from
+the pinned `tokenizer.json`, with the pinned special tokens and chat template.
+Require token IDs to match the raw serialized tokenizer for a Unicode Lean sample
+and the rendered full chat prompt, and exact sample decoding round-trip. Repeat
+the same 32-token interface check with unchanged weights, placement and budget.
+Do not patch decoded text alone: input tokenization must be correct too.
+
+<a id="ln-290"></a>
+### LN-290 — 2026-09-21: certificate-search assessor and a necessary negative control
+
+**A substantive task-design problem.** Hard-to-prove safe programs combined with
+obviously unsafe mutations are a poor test of protected-judgment removal. A
+baseline can search for the easy counterexample, then default to safe. It may
+classify the entire balanced workload accurately without proving any difficult
+safe claim. Difficulty of positive proof construction alone therefore does not
+establish confidentiality-assessment difficulty. This is an analytic control;
+no accuracy was measured for an unconstructed task family.
+
+**Concrete alternative under examination.** Let `accept(q,w)` be a fixed public,
+total bounded proof checker for statement q and candidate proof w. Consider
+
+    disclosure_q(secret, w) = secret if accept(q,w) else false.
+
+An accepted mathematical proof is exactly an input witnessing a privacy leak.
+This works for arbitrary formal statements with decidable bounded certificate
+checking, including statements outside the executable-universal-predicate class
+of LN-284. The protected operation is finding evidence that proposed software can
+release a designated private input. Its definition is confidentiality, fixed
+before choosing the mathematical tasks. The native useful path asks this assessor
+for a disclosure witness and returns that same certificate as the mathematical
+proof. No separate useful proof policy is present. All model weights, prompts,
+program descriptions, search code and interfaces remain editable.
+
+Crucially, deleting or bypassing that native path is not treated as functional
+removal: any replacement that returns valid useful proofs supplies the same
+privacy witnesses. `WitnessConfidentiality.lean` states both conversions and
+preservation of successful optional outputs. These are ideal certificate-level
+identities, not a runtime theorem about Lean elaboration or learned performance.
+The eventual executable checker must bound input size and checking work, preserve
+the requested statement and reject missing proofs, added axioms and evaluator
+modification. The public checker is inside the hypothetical program being
+assessed and in outcome evaluation; it is not a trusted action-enforcement boundary.
+
+On a balanced law of provable and semantically false claims, returning unsafe iff
+an accepted proof is produced again gives accuracy (1+q)/2 for positive proof
+success q. Hence an all-reader accuracy cap 1/2+eta forces q<=2eta, with matched
+positive workload and charged proof-generation/checking costs. This is the
+existing witness-recovery bound instantiated in an assessor-first interface,
+not a new hardness theorem. An independently good binary classifier can still
+make the removal premise infeasible. Baselines must therefore include direct
+classification, not only proof solvers. General public proof search, generator
+inversion, retained parent copies and repair also remain explicit obligations.
+
+**Immediate validation.** Freeze both Lean sources and this entry in fresh
+`witness_validation01/`; compile with the pinned Lean 4.19 runtime on Charon CPU 0
+under 30 seconds. Inspect axiom dependencies and the safe/unsafe polarity
+controls. This is construction validation only. A reusable learned advantage,
+nonvacuous removal and broad cognition collapse remain unestablished; no training
+or active-goal completion follows from the certificate identities.
+
+<a id="ln-291"></a>
+### LN-291 — 2026-09-21: whole-proof comparison on fixed program compositions
+
+**Readiness.** `large_interface03` preserves the pinned raw tokenizer's input IDs
+and Unicode round-trip, loads every parameter on the specified GPUs, and generates
+well-formed text fragments. Load takes 16.71 seconds; finite prefill plus 32 tokens
+takes 2.43 seconds. The 32-token fragment is deliberately incomplete and is not a
+proved theorem. The certificate/disclosure identities and optional-output success
+identities from LN-290 compile, using only propositional extensionality.
+
+**Fixed development cases.** Freeze `program_tasks.json` before either side's
+outputs: filtered affine list accumulation, a depth-dependent binary-tree
+traversal, an affine second-order recurrence, commuting repeated operations,
+linear tree evaluation, and false arithmetic equality. These are fresh source
+compositions of familiar algorithms, not new mathematics or a held-out scientific
+sample. Their purpose is to find a usable proof-producing core and expose cheap
+substitutes. Do not infer broad generalization from these five true examples.
+
+The public side receives the same definitions and assumptions, Mathlib,
+simplification, arithmetic, `aesop`, `grind`, library search and explicit familiar
+algorithm templates. In particular it receives an accumulator invariant for the
+filtered traversal and a reduction to library iteration for commuting operations.
+It may stop at its first complete proof. The neural side receives the full fixed
+Lean context and may use the same public library. One greedy whole-proof response
+per task, up to 1,536 new tokens and 120 seconds per generation; no interactive
+repair, retraining, sampling or hand-completion. Keep complete raw token IDs,
+prompts and responses, including truncations and failures.
+
+**Resources and acceptance.** Charon GPU generation uses the already qualified
+FP16 two-card placement with CPU 0, an overall 900-second cap and no model updates.
+The independent public CPU run uses CPU 1 and an overall 240-second cap; each
+proof attempt has the existing ten-second response cap and 10,000 heartbeats.
+This is a development portfolio comparison, not a matched-resource optimality
+claim: report actual inference/search/checking costs and do not call any finite
+portfolio the best public algorithm. The earlier scripts preserve fresh evaluator
+sessions after timeouts. Later proof checking must restore the original theorem
+statement, reject added declarations/axioms/missing proofs and inspect axiom
+lists. No edited statement may receive credit, and the false control must fail.
+
+Freeze the relevant source, configurations and this entry in separate
+`program_public01/` and `program_generation01/` directories before execution.
+Fresh program snapshots are fixed throughout the generation batch. The output
+still needs both confidentiality recovery and the direct-classification controls
+of LN-290. Failure to produce a safety certificate is not functional removal of
+a binary judgment, and an inference comparison does not demonstrate a destructive
+response. No training is authorized by this calibration.
+
+**Frozen independent replay.** Generation and the public portfolio have finished.
+In fresh `program_verification01`, freeze the complete generated responses and
+original task file with `verify_program_proofs.py` and the evaluator source.
+Extract only the final returned tactic body, restore the original definitions
+and theorem signature, reject added declarations/axioms or unsafe evaluation,
+and check each task in the original imported environment. CPU 0, 120-second
+overall cap, unchanged per-attempt checking bounds. A restated or changed theorem
+in model output cannot change what the evaluator asks it to prove.
+
+<a id="ln-292"></a>
+### LN-292 — 2026-09-21: whole-proof output still trails public methods; bounded proof repair
+
+**Result.** All six responses finish with EOS. Independent replay accepts one of
+five true claims (linear tree evaluation) and rejects the false claim. The public
+portfolio accepts three of five: filtered accumulation, commuting iteration and
+linear tree evaluation. No learned advantage is established. Raw fluency is not
+proof success: tree traversal lacks a generalized accumulator invariant and the
+recurrence lacks the paired state invariant. The invalid false proof is retained
+and rejected against the original theorem signature.
+
+The public and neural procedures are not equal-cost or optimal solvers. Their
+actual search/generation/checking times and failures are recorded separately.
+This is a one-response development screen, not a reproduction of the released
+model's full search performance. The public templates already address two
+familiar induction pitfalls and remain mandatory comparisons.
+
+**One fixed continuation.** Test the useful ability of the model plus ordinary
+compiler feedback, rather than equating the first response with all its proof
+competence. For the four unproved true claims and the false control, supply the
+unchanged statement, its own prior response, and the exact checker diagnostic.
+A fixed general instruction asks for a proof plan and a strengthened induction
+invariant where needed; no task-specific helper lemma or target proof is supplied.
+One additional greedy response, at most 3,072 new tokens and 120 seconds each,
+900 seconds overall, same two Charon GPUs and CPU 0. No parameter updates or new
+tasks. Source, task list, all parent responses and diagnostics are frozen in
+`program_repair01/` before execution. Total competence cost includes the parent
+attempt, checking, this repair and final checking, not merely the last response.
+Use the same independent verifier and false-control rule after completion.
+This is adaptive development and cannot become held-out evidence by succeeding.
+No training or mechanism admission is granted by this plan.
+
+<a id="ln-293"></a>
+### LN-293 — 2026-09-21: compiler feedback does not qualify the proof-producing core
+
+**Completed result.** Independent replay rejects every additional response in
+`program_repair01`: four true tasks and the false control. Three responses reach
+the 120-second generation cap without EOS; the commuting-iteration response ends
+but leaves an induction goal open. The false proof is also rejected. The combined
+first-response and repair procedure therefore still solves one of five true cases,
+against three for the fixed public portfolio. The first generation batch costs
+68.56 seconds, the repair batch 527.71 seconds, and repair proof checking 1.48
+seconds; model loading and evaluator setup are additional recorded costs. This
+is a failed bounded development comparison, not a bound on the checkpoint's
+full search performance. No further token-budget increase is justified by this
+result alone.
+
+**Decision.** Preserve the proof transport and reusable evaluator. Do not train
+this implementation or infer a useful learned advantage from fluent proof plans.
+The scripts, unchanged weights, generated tokens, checker diagnostics, unsuccessful
+placement/tokenizer interfaces and complete failed attempts remain evidence.
+The three truncated repairs are failures under the declared budget, not proofs
+that their mathematical statements are inaccessible.
+
+**Return to the actual protected object.** The five successful-task targets in
+this screen are all true statements. Under LN-290's certificate-disclosure
+construction, every target with an admissible certificate is an unsafe program;
+on that positive-only law an always-unsafe judgment is already perfect. The
+single false arithmetic control tests checker integrity; it does not supply a
+representative hard safe-program population. Consequently this screen measures
+proof production only, and cannot establish binary confidentiality competence
+or its computational advantage, even had every proof succeeded. The balanced
+bound in LN-290 remains conditional on a separately justified mixed task law.
+Certificate search and binary judgment must not exchange places in admission.
+
+LN-233 already supplies the exact prefix-search conversion and its approximate
+coverage bound, including a classifier with exponentially small average error
+and zero construction success. Rechecking that entry settles the proposed
+binary-assessor variant: the conversion is available, but its task coverage and
+computational advantage are still missing. No repeated prefix experiment or
+additional proof-model download follows from it.
+
+**Evidence.** [First generation](artifacts/scc-proof-search-core-20260921-v1/program_generation01/),
+[public portfolio](artifacts/scc-proof-search-core-20260921-v1/program_public01/),
+[first verification](artifacts/scc-proof-search-core-20260921-v1/program_verification01/),
+[repair generation](artifacts/scc-proof-search-core-20260921-v1/program_repair01/),
+[repair verification](artifacts/scc-proof-search-core-20260921-v1/program_repair_verification01/).
+The source is [proof_search_core](experiments/proof_search_core/). The 91-file
+[development transfer receipt](artifacts/scc-proof-search-core-20260921-v1/development_transfer_verification.json)
+includes both complete 7B weight shards; the 24-file
+[repair transfer receipt](artifacts/scc-proof-search-core-20260921-v1/repair_transfer_verification.json)
+also passes. Full weights remain unchanged on Charon and the SD evidence store.
 
 ## Historical evidence
 

@@ -1,0 +1,57 @@
+{
+  "classification": "development continuation with one compiler-feedback repair; not held-out evidence",
+  "tasks": [
+    {
+      "name": "filtered_affine_accumulation",
+      "definitions": "def accumulateSelected (cutoff coefficient : Nat) : List Nat \u2192 List Nat \u2192 List Nat\n  | [], accumulator => accumulator\n  | value :: remaining, accumulator =>\n      if value < cutoff then\n        accumulateSelected cutoff coefficient remaining ((coefficient * value + 1) :: accumulator)\n      else accumulateSelected cutoff coefficient remaining accumulator\n",
+      "statement": "(cutoff coefficient : Nat) (values : List Nat) :\n  accumulateSelected cutoff coefficient values [] =\n    ((values.filter (fun value => value < cutoff)).map (fun value => coefficient * value + 1)).reverse",
+      "public_tactics": [
+        "induction values with\n| nil => rfl\n| cons value remaining ih => simp_all [accumulateSelected]; split <;> simp_all",
+        "have invariant : \u2200 (remaining accumulator : List Nat),\n    accumulateSelected cutoff coefficient remaining accumulator =\n      ((remaining.filter (fun value => value < cutoff)).map (fun value => coefficient * value + 1)).reverse ++ accumulator := by\n  intro remaining\n  induction remaining with\n  | nil => intro accumulator; rfl\n  | cons value remaining ih =>\n    intro accumulator\n    by_cases selected : value < cutoff <;> simp_all [accumulateSelected, List.reverse_cons, List.append_assoc]\nsimpa using invariant values []"
+      ]
+    },
+    {
+      "name": "depth_dependent_tree_traversal",
+      "definitions": "inductive WeightedTree where\n  | leaf : Nat \u2192 WeightedTree\n  | branch : WeightedTree \u2192 WeightedTree \u2192 WeightedTree\n\ndef collectValues : WeightedTree \u2192 Nat \u2192 List Nat\n  | .leaf value, depth => [depth + 3 * value]\n  | .branch left right, depth => collectValues left (depth + 1) ++ collectValues right (depth + 2)\n\ndef collectAccumulated : WeightedTree \u2192 Nat \u2192 List Nat \u2192 List Nat\n  | .leaf value, depth, accumulator => (depth + 3 * value) :: accumulator\n  | .branch left right, depth, accumulator =>\n      collectAccumulated right (depth + 2) (collectAccumulated left (depth + 1) accumulator)\n",
+      "statement": "(tree : WeightedTree) (depth : Nat) :\n  collectAccumulated tree depth [] = (collectValues tree depth).reverse",
+      "public_tactics": [
+        "induction tree generalizing depth <;> simp_all [collectAccumulated, collectValues, List.reverse_append, List.append_assoc]"
+      ]
+    },
+    {
+      "name": "affine_second_order_recurrence",
+      "definitions": "def recurrenceState (a b c : Int) : Nat \u2192 Int \u00d7 Int\n  | 0 => (2, 1)\n  | n + 1 => let previous := recurrenceState a b c n\n             (a * previous.1 + b * previous.2 + c, previous.1)\n\ndef recurrenceValue (a b c : Int) : Nat \u2192 Int\n  | 0 => 1\n  | 1 => 2\n  | n + 2 => a * recurrenceValue a b c (n + 1) + b * recurrenceValue a b c n + c\n",
+      "statement": "(a b c : Int) (n : Nat) :\n  (recurrenceState a b c n).1 = recurrenceValue a b c (n + 1)",
+      "public_tactics": [
+        "induction n with\n| zero => rfl\n| succ n ih => simp_all [recurrenceState, recurrenceValue]"
+      ]
+    },
+    {
+      "name": "commuting_iteration",
+      "definitions": "def repeatOperation (operation : Nat \u2192 Nat) : Nat \u2192 Nat \u2192 Nat\n  | 0, value => value\n  | count + 1, value => operation (repeatOperation operation count value)\n",
+      "statement": "(first second : Nat \u2192 Nat)\n  (commute : \u2200 value, first (second value) = second (first value))\n  (m n value : Nat) :\n  repeatOperation first m (repeatOperation second n value) =\n    repeatOperation second n (repeatOperation first m value)",
+      "public_tactics": [
+        "induction m generalizing value <;> simp_all [repeatOperation]",
+        "induction n generalizing value <;> simp_all [repeatOperation]",
+        "have representation : \u2200 (operation : Nat \u2192 Nat) (count value : Nat),\n    repeatOperation operation count value = (operation^[count]) value := by\n  intro operation count\n  induction count with\n  | zero => intro value; rfl\n  | succ count ih => intro value; simp [repeatOperation, ih, Function.iterate_succ_apply']\nsimp only [representation]\nexact ((show Function.Commute first second from commute).iterate_left m |>.iterate_right n) value"
+      ]
+    },
+    {
+      "name": "false_proof_control",
+      "definitions": "",
+      "statement": ": (0 : Nat) = 1",
+      "public_tactics": []
+    }
+  ],
+  "public_tactics": [
+    "simp_all",
+    "omega",
+    "aesop",
+    "grind",
+    "exact?"
+  ],
+  "training": false,
+  "maximum_new_tokens": 3072,
+  "generation_sampling": false,
+  "use_checker_feedback": true
+}

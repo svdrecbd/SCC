@@ -1,0 +1,7 @@
+{
+  "model": "/home/salvador/scc-research/proof-search-core-20260921-v1/large_model01/model",
+  "tokens": 32,
+  "wall_seconds": 240,
+  "training": false,
+  "prompt": "Complete the following Lean 4 theorem. Return only the proof code.\n```lean4\nimport Mathlib\ntheorem interfaceControl (n : Nat) : n + 0 = n := by\n  sorry\n```"
+}
