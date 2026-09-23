@@ -1,0 +1,12 @@
+{
+  "seed": 34637,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "exhaustive_vertices": 2,
+  "exhaustive_priorities": 4,
+  "random_vertices": 3,
+  "random_priorities": 6,
+  "random_games": 128,
+  "neural_training": false
+}

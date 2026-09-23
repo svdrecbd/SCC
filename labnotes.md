@@ -134,6 +134,19 @@ an attack on the visual parent. Complete coverage of a smaller declared world
 is a different contract. Conditional generation alone therefore does not resolve
 the severe-loss argument; coverage must include the claimed adaptation domain.
 
+**Controller-synthesis direction — [LN-346–347](#ln-346).** A determined-game
+construction supplies a genuinely balanced binary confidentiality workload and
+bounded winning-policy certificates. Any complete controller synthesizer gives
+a judgment reader with accuracy (1+q)/2, where q is its synthesis success; an
+attainable all-reader judgment cap of 51% therefore forces synthesis success to
+at most 2% on the matched workload. The compiler, verifier and assessor-first
+construction pass 5,896 policy checks. This establishes a bounded procedural
+relation, not a learned mechanism or destruction of all cognition. SemML 2.0 is
+a concrete learned-synthesis implementation lead with published controller and
+counterstrategy support. Source/release documents are preserved; model execution,
+learned-contribution isolation, public replacements and the costed adapter remain
+unqualified. No training has begun.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
@@ -27301,6 +27314,219 @@ including the frozen plan, source, configuration, machine record, terminal log,
 results and completed entry. Manifest SHA256:
 `6e007be5104a134ce434ede6fba88f3bb4a33547d7051dab349369648cdee086`.
 Executed source matches the worktree; the run is terminal.
+
+<a id="ln-346"></a>
+### LN-346 — 2026-09-23: a determined-game construction supplies both confidentiality labels
+
+**Selection after the conditional-generation result.** LN-345 is completed
+progress, not a training mechanism. Revisited the procedural proof-search route
+because LN-284/290 gives a severe, one-call implication for reusable construction
+success. LN-293's positive-only workload remains unqualified. A larger prover
+alone cannot repair that label-law defect, so no new model is acquired. The
+stable target permits bounded analogues on specified learned abilities; it does
+not newly require permanent inability to learn. We retain the distinction between
+core coupling, enforcement and durability.
+
+**A different source of balanced instances.** Use a finite total parity game:
+a public directed graph, vertex owners 0/1, nonnegative priorities and a start
+vertex. Every vertex has at least one successor. The player whose parity equals
+the greatest priority seen infinitely often wins. Finite parity games are
+positionally determined: exactly one player has a winning policy depending only
+on the current vertex. This is an established result, including a formalized
+[Isabelle proof](https://www.isa-afp.org/entries/Parity_Game.html), not a new SCC
+theorem. Opposing winning policies would generate the same play and contradictory
+outcomes; determinacy supplies existence and bounded positional certificates.
+
+For player a, let C(G,s,a,w) be a total public checker of a positional winning
+policy w. Define the proposed program
+
+    disclosure(G,s,a,secret,w) = secret if C(G,s,a,w) else false.
+
+The fixed protected question is whether any public input w can disclose the
+private bit. It is a binary confidentiality judgment, not a substitution of
+certificate search for that judgment. Its answer is exactly whether a wins from
+s. The policy needs at most n ceiling(log2 n) bits plus framing; verification is
+polynomial in the explicit graph. Thus the two programs for a=0 and a=1 have
+exactly one unsafe member even under an explicit sufficient certificate-length
+and checking-work allowance. This avoids presuming that every true general Lean
+statement has a short proof. The allowance bounds a program's input/checking
+interface, not the attacker's reads or modification budget.
+
+Choose any base law D of (G,s), independently of a uniform query role a. This
+produces exactly balanced protected labels without outcome rejection sampling.
+It does not imply computational difficulty: a constant *role-dependent* rule can
+still succeed on a degenerate base law. Public winner classification, not just
+strategy search, remains an essential baseline.
+
+**Useful procedure and exact loss relation.** Useful work is synthesizing a
+winning controller for either side of a fresh (G,s), returning (p,w). It is
+scored by C on the complete returned controller, not a native output head or a
+single successful trajectory. A reader runs any retained useful procedure once,
+independently of a, checks its certificate, and returns [p=a] if accepted;
+otherwise it flips a fair coin. If complete useful success has probability q,
+then protected accuracy is exactly (1+q)/2. Consequently an attainable all-reader
+cap 1/2+eta forces q<=2 eta on the SAME D. At eta=.01, complete synthesis success
+is at most .02. This is the established witness reduction with a concretely
+balanced, certificate-bounded two-sided law. It covers arbitrary replacement
+encodings and strategies, not just the original search algorithm. Charge the
+whole synthesis, input handling, certificate checking, code and state to the
+reader. It is not a zero-cost adapter or a claim that synthesis is all cognition.
+
+**Assessor-first candidate operation.** An exact winner assessor also constructs
+a policy by successive edge restrictions. Determine the winning player p, then
+for each vertex owned by p choose an outgoing edge whose restriction leaves p
+winning from s in the currently restricted game. Such an edge always exists by
+positional determinacy. Preserve previous restrictions. After all p-vertices
+are fixed, the resulting policy wins. There are at most 1+m assessor calls, plus
+charged graph copies and parsing. Merely choosing any edge within the original
+winning region is insufficient for a recurring objective; sequential restriction
+preserves the relevant game property. Approximate or distribution-limited judges
+require coverage of these adaptively restricted games and error accumulation;
+they are not licensed by the exact construction.
+
+All components are editable. The public checker defines returned-object
+correctness and the hypothetical disclosure program's behavior; it is not a
+trusted action gate. Ignoring an intact judgment remains a behavioral bypass.
+Restoring both planning and judgment is compatible with conditional coupling.
+This family provides a more concrete possible planning core, not broad alignment,
+a demonstrated learned advantage, genuine neural removal or a training admission.
+
+**Verifier construction and frozen validation.** Fix the proposed player's
+policy edges, retain every opponent edge, and first compute all reachable
+vertices. For each priority t with the opposite parity, restrict that reachable
+graph to priorities at most t. Reject if it has a cycle containing a vertex of
+priority t. Checking only the maximum priority of each full strongly connected
+component is unsound: an opponent may remain on a smaller bad cycle. At most n
+priority passes give O(n(n+m)) graph operations with a linear-time SCC routine;
+the initial small implementation instead uses direct reachability from each
+candidate vertex, with the higher executed operation count reported honestly.
+
+Freeze source/configuration/entry/machine before one Charon CPU validation,
+60 seconds, 10 MiB outputs, seed 34637. Exhaust every two-vertex total graph,
+owner assignment and priority assignment in 0..3; add 128 seeded three-vertex
+games with priorities 0..5. Compare every positional policy against independent
+enumeration of all opposing positional policies and direct eventual-cycle
+outcomes, at every start. Check exclusivity/completeness, both disclosure labels,
+exact fair-coin fallback accuracy, and assessor-first synthesis on all starts.
+Require the hidden bad subcycle, unreachable bad cycle, invalid edge and
+non-total-graph controls. This is proof/compiler validation, not an empirical
+complexity comparison. No optimizer, neural invocation, new model or paid
+allocation. A modern public solver such as
+[Oink](https://github.com/trolando/oink) must be assessed before considering a
+learned-core run; a slow exhaustive validation oracle is not that baseline.
+
+**Completed validation.** All 704 games and 1,536 starting positions pass.
+The 5,896 candidate policies agree with exhaustive enumeration of opposing
+policies and direct eventual-cycle outcomes; every corresponding disclosure
+program has the predicted private-input dependence. Each paired start has
+exactly one unsafe role. All 1,536 assessor-first constructions return verified
+winning policies, using 3,716 assessor calls and 6,626 copied edge entries in
+total. The verifier records 17,657 vertex and 19,731 edge visits across candidate
+checks. Exact rational scoring agrees for useful success 0, 1/3, 2/3 and 1.
+All five boundary controls pass, including the bad subcycle hidden inside an
+even-maximum component and the failure of arbitrary winning-region moves.
+
+Runtime is 0.2095 seconds inside Python, 0.27 seconds process time, with 16,548
+KiB peak memory. This validates the implementation of the construction, not a
+neural advantage. The exhaustive reference solves these tiny games perfectly;
+their role is semantic/certificate validation, not computational nonvacuity.
+The usable improvement over LN-290 is the explicit paired-label and short-
+certificate guarantee. The exact useful-to-judgment implication is unaffected
+by a change of search algorithm or representation. Severe loss is scoped to
+complete controller synthesis; it says nothing about every residual cognitive
+ability. No training is admitted by this result.
+
+**Evidence.** All 10 manifest-listed files (524,063 bytes) are verified in
+[determined game core](artifacts/scc-determined-game-core-20260923-v1/).
+Manifest SHA256:
+`536ea228d281217758afd2e27d340a23697ebb4e5fd181b8cf6c58b11f4be37c`.
+The validation is terminal; executed source and configuration are preserved.
+
+<a id="ln-347"></a>
+### LN-347 — 2026-09-23: inspect a learned reactive-synthesis implementation with both witness types
+
+LN-346 fixes the paired binary-label construction but has no learned core.
+[SemML 2.0](https://arxiv.org/abs/2604.24102) is a concrete implementation lead:
+the authors report improved reactive synthesis with learned exploration guidance,
+and support both satisfying controllers and environment counterstrategies.
+Their comparison also includes substantial algorithmic and output-extraction
+changes; reported total-tool gains do not isolate the learned contribution.
+The earlier GNN parity-game work predicts winning regions rather than furnishing
+a verified complete synthesis procedure, so it is not automatically the needed
+core. No performance claim here is our reproduction.
+
+**Source/packaging inspection, frozen before acquisition.** Pin the current
+SemML source to `20ad6ec7916d204b45106d224bf1c761c337eae8` (GitLab project
+53718945). The authors' CAV26 artifact is Zenodo record 19763388, file
+`Artifact_SemML_Cav26.zip`, 5,358,390,531 bytes, published MD5
+`fc7ad57b4edb69bcecbcf8fb3091a849`. Inspect the source-root inventory and its
+README/build/usage documents; inspect the artifact's ZIP central directory using
+exact HTTP byte ranges. Cap this run at 5 MiB downloaded, 24 requests, 12 seconds
+per request, 60 seconds total, one Charon CPU and 10 MiB output. Abort a range
+request if the server does not return the exact requested range. Preserve raw
+responses, response metadata, hashes, configuration, source and machine record.
+Partial archive inspection does not verify its full published checksum.
+Do not execute upstream code, download the full artifact, install packages or
+initiate training. Charon currently has no `java` or `docker` on PATH; packaging
+inspection will determine a concrete dependency plan before execution.
+
+**Integration boundary.** The LN-346 verifier is for an explicit parity graph.
+An LTL formula is a succinct game description; automaton construction, strategy
+representation and independent controller checking must be accounted for before
+transferring the relation. Preserve the actual order of system/environment moves:
+negating a formula and swapping variable names does not by itself establish the
+paired-game contract. The learned ranking component is not itself the binary
+confidentiality function. The complete editable synthesis/checking implementation
+would be the candidate endpoint. An ML-disabled configuration and established
+public solvers must receive the same inputs and charged resources. Removal of
+learned guidance, continued successful synthesis, and genuine protected-function
+removal are distinct outcomes. This inspection selects an implementable route to
+qualification, not a training admission or completion of the active goal.
+
+**Inventory result and next bounded acquisition.** Root and ZIP inventories
+complete in 3.02 seconds process time, 25,888 KiB peak memory, downloading 17,675
+bytes. The archive has 94 members, including a 181,444,369-byte compressed SemML
+source package, a much larger container, tool sources and published result tables.
+No model or upstream executable ran. Current source documentation uses uppercase
+`BUILD.md` and `USAGE.md`; the first exact-path inventory therefore retained only
+README. The source README specifies a Java 17+ distribution build.
+
+Freeze `documents01` with the same source revision and archive. Acquire BUILD.md,
+USAGE.md, build.gradle.kts and the root listings of config, models and learning.
+Read only the archive README.md, Dockerfile and sources/sources.sh, checking ZIP
+CRC during extraction. Retain all byte-range receipts and extracted documents.
+One Charon CPU, 60 seconds, 5 MiB downloaded, 48 requests, 12 seconds per request,
+10 MiB output. No full source package, runtime installation or upstream execution.
+This resolves how to obtain editable model parameters and disable learned guidance
+before choosing a runtime/comparison plan. It does not verify the full ZIP MD5.
+
+**Completed document inspection.** The follow-up downloads 37,685 bytes and
+finishes in 8.93 seconds process time with 25,984 KiB peak memory. All three
+selected archive documents pass ZIP extraction/CRC checks. Source inventories
+identify separate primary/backtracking model directories and a learning directory.
+Current source has a Java-native command interface and CAV26/default presets;
+the archived release instead builds through `build.py` and its Python wrapper.
+These are distinct versions and must not be silently combined in a reproduction.
+Both document sets and the raw network receipts are preserved. No upstream
+source was executed, and no full-archive checksum is claimed.
+
+**Concrete next implementation.** Inspect the archive's 181 MB SemML source
+member and its model/configuration files before building the published version;
+it avoids acquiring the 4.2 GB container or changing the host system. The release
+also contains reference-tool sources and the benchmark harness. Its suggested
+short benchmark lists were selected to illustrate favorable published outcomes;
+use them for implementation reproduction only, not as independent evidence of
+advantage. Learned-guidance ablation, direct public winner classification and
+independent certificate validation remain qualification requirements. The source
+has not yet established a working guidance-disabled configuration or a matched
+costed confidentiality adapter. No candidate training is admitted yet.
+
+**Evidence.** All 51 manifest-listed files (168,800 bytes) are verified in
+[semantic synthesis inventory](artifacts/scc-semantic-synthesis-inventory-20260923-v1/).
+Manifest SHA256:
+`24ae171efb75422c8a97546dce1d931caeb4e444c0df90413373ef2654ec47a3`.
+Both acquisition processes are terminal. All executed source/configuration files
+match the worktree, and no model execution or training is active.
 
 ## Historical evidence
 
