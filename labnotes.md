@@ -112,6 +112,18 @@ whose joint log score decomposes into confidentiality-risk log scores. It change
 the public-input law, does not establish neural removal or catastrophic loss, and
 does not yet admit training.
 
+**Executable conditional core — [LN-342–344](#ln-342).** Exact Gaussian-mixture
+conditioning, interval-risk probabilities and deterministic derivatives now run
+through the unchanged visual parent. Independent probability, density and gradient
+checks pass. In a sequential 64-ray task on the reused 16 development scenes,
+the initialized neural mixture fails against matched public inference. Replacing
+its covariance with the public winner's fixed spatial covariance gives a positive
+mean learned contribution: MSE 0.2192 versus the lowest public MSE 0.3496, and
+log loss 2.1291 versus the lowest public log loss 2.2987. The revised diagnostic
+still fails the declared simultaneous confidence screen. It is a development
+control, not independent confirmation. No neural parameters changed. Score
+recovery is now implemented; severe loss of reusable cognition remains unproved.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
@@ -26827,6 +26839,333 @@ machine record, are verified in
 [conditional risk coverage](artifacts/scc-conditional-risk-coverage-20260923-v1/).
 Manifest SHA256: `cefbb1cd2af2b34b72e14e8ce4b35adea07b845f431a3dead9118185b37ee7f2`.
 The run is terminal, and both executed sources match the worktree.
+
+<a id="ln-342"></a>
+### LN-342 — 2026-09-23: construct an exact conditional spatial assessment core
+
+**Construction question.** LN-341 identifies conditional predictions as the
+relevant object, but neither a posterior sampler nor an autoregressive name
+supplies an efficient probability evaluator. Build exact conditioning for the
+existing four-component, low-rank Gaussian log-depth model. This is a concrete
+trainable candidate component; its uncertainty parameters remain initialized,
+not learned. No optimizer or training is authorized by this validation.
+
+**Declared operation.** A scene component has log depths Z=mu+F h+epsilon,
+where h is standard Gaussian and epsilon has positive diagonal covariance D.
+For observed coordinates O and their actual log-depth measurements z_O, define
+
+    A = I + F_O^T D_O^-1 F_O,
+    c = A^-1 F_O^T D_O^-1 (z_O-mu_O).
+
+The remaining coordinates T have conditional mean mu_T+F_T c, covariance
+D_T+F_T A^-1 F_T^T, and component weights multiplied by the component observation
+likelihood. A rank-sized Cholesky solve evaluates this law without sampling or
+an exponential conditional search. Observation likelihood uses the determinant
+lemma and Woodbury identity. Histories, array storage, arithmetic and the parent
+forward pass are charged. Observed and target coordinates must be distinct;
+target labels never enter their own conditioning context. Exact continuous
+measurements, rather than quantized or noisy observations, are assumed here.
+
+For each unobserved ray, a fixed 64-bin log-depth partition gives a categorical
+forecast. The partition includes both unbounded tails; no outcome is discarded.
+A binary subdivision of that partition supplies six successive disclosure-risk
+queries. Each query discloses an independent private bit iff the depth exceeds
+its split threshold, conditional on the previously reported interval and measured
+history. The six selected branch log probabilities sum exactly to the selected
+bin log probability. Each interval fact is additional public input, supplied to
+both the model and every comparator. This identity concerns one conditional
+forecast; it is not a claim that conditioning on exact preceding measurements
+is equivalent to conditioning on their quantized bins. Neither is it evidence
+that changing an output head constitutes protected-function removal.
+
+**An implemented-reader transfer beyond Bayes assumptions.** Let b in [a,1-a]
+be any public binary risk forecast, q any implemented rival forecast, and Y the
+binary outcome. Define d=(q-b)/[b(1-b)]. Concavity of the outcome log score gives
+
+    log[Q(Y)/B(Y)] <= d(Y-b).
+
+For any fixed nonnegative step lambda, the explicit reader
+p=clip(b+lambda*d,0,1) has Brier gain at least
+
+    2 lambda E[d(Y-b)] - lambda^2 E[d^2].
+
+Thus a rival with expected log-score gain at least g>0 nats yields a reader
+with gain at least a^2 g^2 by choosing lambda=a^2*g, since |d|<=1/a.
+There is no calibration or accessible Bayes-decoder assumption. The step uses a
+predeclared useful-gain threshold; it does not consult test labels. Under an
+all-reader removal bound epsilon, a useful predictor in the admitted class has
+log gain at most sqrt(epsilon)/a. For an L-bit path, normalize its joint gain by
+L before applying this statement under uniform path-position sampling. Tiny
+baseline probabilities weaken the coefficient; no lower floor is free. This
+is a score-transfer statement, not a claim that any finite reader portfolio
+certifies removal. The protected log-score identity itself needs no floor,
+provided scored branch probabilities are positive.
+
+**Frozen checks.** Validate the low-rank conditional law and observation
+likelihood against independent dense covariance conditioning for 12 seeded
+mixtures, including reordered observations and an empty history. Check the
+continuous joint-density chain identity, conditional covariance, normalized
+64-bin masses, and all 64 binary-path identities. Check gradients against central
+finite differences, including mixture weights, locations, factors and variances.
+Reject repeated, overlapping and out-of-range coordinates. Preserve a control
+where positive log gain accompanies negative raw Brier gain; verify that the
+explicit adjusted reader restores the guaranteed gain. Check rational Brier
+projection inequalities and numerical logarithmic inequalities over a fixed grid.
+The no-floor negative control must invalidate an assumed floor-dependent bound.
+
+Then run one forward and one backward pass through the pinned 24.8-million-
+parameter parent on the original diagnostic scene, using the existing 8-by-8 ray
+grid, the first 16 unique rays as observed history and the remaining 48 as
+unobserved targets. Keep every parent and distribution parameter unchanged.
+Use 64 bins with 63 finite boundaries logarithmically spaced from 0.1 to 10 m.
+Check selected-bin negative log likelihood against the six disclosure branches,
+finite nonzero gradients into the parent and every parameter family, and exact
+before/after parameter hashes. This is implementation validation on a reused
+scene, not a public-baseline capability screen or independent evidence. Freeze
+source/configuration/entry/machine first; one Charon CPU; 60 seconds each for
+validation and integration; 10 MiB output per run; seeds 34237 and 34238.
+No neural optimization, new dataset or model acquisition. A failed check is
+preserved and repaired in a fresh run, with the reason documented.
+
+**Admission boundary.** A learned conditional assessor must still outperform
+matched public conditional predictors and connect genuine functional removal to
+severe loss of specified reusable cognition. Exact score equivalence and a working
+backward pass alone do not establish those conditions. This work tests whether
+the proposed core is an executable object before making a training decision.
+
+**Completed result.** All 12 independent dense-conditioning comparisons pass;
+all 3,840 selected bin paths agree with their categorical log probability. Four
+invalid-coordinate cases are rejected. Extreme-tail log masses remain finite
+down to -5,450.57 nats with finite derivatives. Central differences across all
+22 coordinates agree with automatic differentiation within 6.32e-10. All 990
+rational Brier projection checks and 180 numerical log-concavity checks pass.
+The positive-log/negative-Brier control has log gain 0.072019 nats and raw Brier
+gain -0.0144; the fixed-step recovered reader has gain 0.0000218035, exceeding
+its declared 0.00000025 guarantee. The false probability-floor control is
+rejected. Validation takes 1.230 seconds inside Python, 3.07 seconds process,
+632,444 KiB peak memory.
+
+The unchanged parent reproduces all 64 diagnostic ray depths exactly. Conditioning
+on 16 observations leaves 48 target rays and 288 disclosure branches. The maximum
+selected-path log identity error is 1.78e-15. All nine reported parent/distribution
+parameter groups have finite nonzero derivatives; the parent final-weight norm
+is 51.60. The 64-bin negative log likelihood is 3.351665 nats per target, which is
+not a qualified advantage without a matched public comparison. The initialized
+posterior assigns 99.856% weight to the widest component; its uncertainty model
+is untrained. Conditional evaluation takes 0.00785 seconds, forward computation
+3.033 seconds and backward computation 6.301 seconds. Total process time is
+17.49 seconds with 2,077,324 KiB peak memory. Parent SHA256 remains
+`b421be3848510f81abd64bf4f4fd4a77d68da1703fef54d36e40ea59403f8068`;
+integrated-state SHA256 remains
+`ab0ae04b8709dc954c6ddd69906cbe757a0f73fe5c6344b26fc66f9c225f8162`.
+No parameter changes or optimizer steps occurred.
+
+**Decision.** Exact conditional risk probabilities and useful quantized forecasts
+now have an executable common distribution and deterministic training derivatives.
+This resolves an implementation obstacle in the conditional direction, not the
+severe-loss requirement. Compare the unchanged core with conditional public
+procedures before considering neural optimization. The log-to-Brier reduction
+also makes its floor-dependent weakness explicit rather than assuming calibrated
+Bayes access or treating raw Brier and log gains as interchangeable.
+
+**Evidence.** All 27 manifest-listed files (173,999 bytes), including both
+terminal runs, frozen source and configuration, independent validation results,
+conditional predictions and runtime source, are verified in
+[conditional spatial core](artifacts/scc-conditional-spatial-core-20260923-v1/).
+Manifest SHA256: `a680e32e0d4395ecaff297cc536b9ec0f84779a762e8c2830b8c21f5b7252b97`.
+At preservation the executed implementation and validation sources matched the
+worktree. LN-344 records the subsequent exact-boundary convention correction to
+the future integration script; the original is preserved.
+
+<a id="ln-343"></a>
+### LN-343 — 2026-09-23: compare sequential learned prediction with matched public inference
+
+**Decision test.** LN-342 establishes executable conditional probabilities.
+Determine whether the unchanged learned scene model contributes a measurable
+advantage after admitting the same observation history to inexpensive public
+procedures. A scalar output mean and an unconditional public baseline would
+not answer this question. Use the existing 16 development scenes; this remains
+development evidence, not fresh confirmation.
+
+**Task and implementation.** Use the existing fixed 8-by-8 grid of rays in row
+order. Predict the next ray before revealing its actual log depth; update the
+component weights and latent Gaussian posterior, then move to the next ray.
+Every reader receives exactly the same 0-to-63 preceding exact measurements.
+The source image and order are public. Evaluate the 64-bin predictive mass at
+the true bin and expected clipped depth MSE. Bins include both tails. Exact boundary observations belong to the lower bin,
+matching strict threshold exceedance; check all 63 ties explicitly. For each
+step, the six binary disclosure branches reproduce its bin log score. This is
+a proper sequential conditional forecasting score under a continuous-history
+input law, not the likelihood of a quantized joint law. The complete sequence
+of Gaussian observation densities does give the continuous joint density.
+
+Implement rank-sized sequential Gaussian updates. Independently compare all
+prefixes against direct conditioning, joint density against its dense evaluation,
+and bin masses against the LN-342 implementation for 12 seeded mixtures.
+All 16 scene arrays, histories, predictions and public comparisons are retained.
+Four short inference blocks each evaluate four scenes with the pinned parent,
+identical initialization seed 34238 and no parameter changes. Verify existing
+prediction arrays at all 64 rays and before/after parameter hashes.
+
+**Public readers.** Reuse only the original 16 calibration scenes and saved six
+public predictors: global mean, spatial mean, quadratic position, position/RGB,
+nearest image and three-nearest-image weighted mean. For each public mean, use
+a Gaussian log-depth covariance with spatial radial-basis lengths 80, 160, 320
+or 640 pixels, scale 0.2, 0.5 or 1.0 log metres, and diagonal standard deviation
+0.1. Add 1e-12 to the correlation diagonal before its Cholesky factorization;
+this numerical stabilizer is part of the specified covariance. These 72 fixed public procedures condition on the same measured prefixes.
+Also evaluate four equally weighted mixtures of the 16 calibration depth fields
+with independent log-depth standard deviations 0.1, 0.2, 0.4 or 0.8. Include a
+uniform 64-bin predictor for score reference only. No hyperparameters are fitted
+or selected using test labels; report all readers. The best aggregate comparator
+is an intentionally strong development portfolio, not an all-public optimum.
+All calibration arrays, feature computation and conditioning resources are charged.
+
+**Qualification rule and limits.** The primary screen requires positive average
+conditional log-score gain against every specified public procedure and a
+positive one-sided 95% simultaneous scene-bootstrap lower bound for the minimum
+of those gains. Use 10,000 paired resamples, seed 34337. Report MSE and history
+strata 0-15, 16-31, 32-47 and 48-63 separately. No pixel-level confidence claim;
+16 reused scenes limit precision. Failure does not prove that training cannot
+improve the uncertainty model. Success would establish a conditional prediction
+advantage, not functional removal or catastrophic cognition loss. The initialized
+model is not silently recalibrated after seeing results.
+
+**Resources.** One Charon CPU. Validation and each inference block have a
+60-second wall limit; comparison has 60 seconds. Each run has a 10 MiB output
+cap. Freeze configuration, source, this entry and machine record. Save completed
+results and any failures separately. No optimization, training, new data/model
+acquisition or GPU use. The observed physical history and within-ray interval
+facts remain explicit inputs to protected readers; they are not free repairs.
+
+**Completed result.** The sequential filter passes 96 prefix comparisons and
+36 future-label independence checks. Its maximum discrepancy from direct dense
+conditioning is 2.14e-14. All four neural inference blocks reproduce the 1,024
+saved ray depths exactly and preserve parent and integrated-state hashes. Each
+block takes 19.16-19.31 seconds process and at most 1,327,560 KiB peak memory.
+
+The learned initialized core **fails** the declared qualification screen. The
+strongest tested public reader uses the saved quadratic-position mean with
+80-pixel correlation length and log-depth scale 0.5. It achieves 2.298707 nats
+per-ray negative log likelihood and 0.374430 clipped-depth MSE, compared with
+3.434067 nats and 1.075028 MSE for the initialized neural mixture. Lower is
+better for both. The learned log-score advantage is -1.135359 nats; its minimum
+simultaneous-bootstrap lower bound is -2.413027. The failure occurs already at
+the point estimate. The four successive history strata favor the public reader
+in both scores; the full per-scene arrays and all 77 public/reference procedures
+are retained. The model has 76 substantive public procedures and a uniform-bin
+reference, rather than 77 independent research comparators.
+
+The categorical/disclosure-path identity holds within 7.11e-15 throughout.
+No calibration values require imputation. The comparison takes 22.806 seconds
+inside Python (24.63 seconds process, 767,548 KiB peak memory). No optimization
+or parameter intervention occurred. These results qualify neither a training
+mechanism nor a destructive dependence. They show that differentiability and
+exact conditional computation do not themselves establish useful learned
+conditional inference. This failed screen remains fixed.
+
+**Next discriminating control.** The initialized neural mixture uses very small
+random factors and narrow component noise, whereas the public comparator has an
+explicit spatial covariance. Hold the winning public covariance fixed and replace
+only its mean field by the already computed neural mean. This isolates learned
+geometry from the uncertainty/conditioning initialization. It is a new diagnostic
+on reused development scenes, not a retrospective correction of the failed run
+or an independent confirmation. No parameter fitting is required.
+
+**Evidence.** All 102 manifest-listed files (5,549,417 bytes), including the
+validation, four unchanged neural inference blocks, comparison, all source
+snapshots, configurations and per-scene arrays, are verified in
+[sequential spatial prediction](artifacts/scc-sequential-spatial-prediction-20260923-v1/).
+Manifest SHA256: `c407eaf1adaff2b80b2586885e445e21dffd04ddb63bcca159cef636ca09ed7e`.
+All six runs are terminal.
+
+<a id="ln-344"></a>
+### LN-344 — 2026-09-23: separate learned geometry from conditional covariance initialization
+
+**Frozen diagnostic.** LN-343's initialized neural core failed against public
+conditional inference. Use exactly the strongest tested public covariance:
+80-pixel squared-exponential length, log-depth standard deviation 0.5,
+independent standard deviation 0.1, and the recorded 1e-12 correlation-diagonal
+stabilizer. Replace only its quadratic-position mean by the saved neural log-depth
+mean at the same 64 rays. All four initial component means are identical; verify
+this explicitly. The new reader is a single Gaussian with a learned image-derived
+mean and the public spatial covariance. It is fully editable. This is an output
+inference control, not a learned covariance or a removal intervention.
+
+Reuse LN-343's exact scene order, observations, 64 bins and all saved public
+scores. No neural forward call, fitting, calibration search, extra scene or
+optimization is required. Report paired changes against the fixed covariance's
+public mean, and against every public procedure. Use the same 10,000 paired
+scene resamples (seed 34337) and centered maximum-error simultaneous-bootstrap
+construction. A positive bound is only a development screen: the covariance
+was chosen using these scenes in the preceding public comparison. The original
+failed screen remains failed. Fixed future confirmation must use unused scenes.
+
+Verify all source arrays against LN-343's frozen transfer manifest, normalization
+and all disclosure-path score identities. Save per-ray scores, mean forecasts,
+risk paths and comparisons. One Charon CPU, 60 seconds, 10 MiB output. Freeze
+source, configuration, entry and machine record first. No training is admitted.
+If this control succeeds, the justified change is a useful common conditioner;
+if it fails, the present data provide no evidence that learned image geometry
+adds to this conditional task under the tested procedure.
+
+**Boundary convention correction.** The initial LN-342 integration assigned an
+observation exactly equal to a split threshold to the upper bin, while its prose
+specified strict exceedance. LN-343 assigns such a tie to the lower bin. Use that
+strict convention in future integration as well, test all 63 boundary values,
+and count exact ties in LN-342's saved diagnostic target values. The normal-law
+probabilities themselves assign zero mass to a boundary; finite observed labels
+still need an explicit convention. Preserve the original source and scores.
+
+**Completed result.** Holding the public covariance fixed and substituting the
+learned mean improves mean conditional negative log likelihood to 2.129099 nats,
+compared with 2.298707 for the strongest tested public reader. Clipped-depth MSE
+falls from 0.374430 to 0.219155, a 41.47% reduction. The point estimates favor
+the learned mean in all four history strata. The original initialized mixture's
+MSE was 1.075028: the covariance/conditioning choice therefore explains much of
+that implementation's poor result. This is a practical initialization diagnosis,
+not evidence that conditioning itself makes the learned geometry unnecessary.
+
+The diagnostic still **fails its simultaneous-bootstrap screen**. Its mean log
+advantage is 0.169608 nats, while the predeclared common maximum-error critical
+value is 1.376356, giving a minimum lower bound of -1.206748. This simultaneous
+construction is deliberately conservative across heterogeneous public readers;
+it must not be silently replaced after inspecting the scores. Moreover, the
+covariance choice used the same development scenes. Neither the favorable mean
+nor the MSE reduction is independent confirmation or a training-admission result.
+
+All 17 LN-343 source arrays are verified against its manifest. The maximum
+categorical/disclosure-path identity error is 3.56e-15. All 63 exact split-boundary
+checks pass with the strict-exceedance convention. LN-342's saved integration has
+zero exact boundary ties, so its previous scores and labels are unchanged by the
+correction. Its historical source remains preserved; the future integration
+source now assigns ties to the lower bin. The diagnostic takes 0.366 seconds
+inside Python (2.11 seconds process, 626,360 KiB peak memory), with no new neural
+calls, fitting or optimization.
+
+**Mechanism assessment.** We now have an exact conditionable scene core, a
+working deterministic training derivative, a failed native-initialization screen,
+and a matched-conditioner control showing a positive mean learned contribution.
+These are more concrete than a posterior-sampling proposal. They do not resolve
+genuine functional removal or severe loss of indispensable cognition. The exact
+score relation constrains the declared conditional forecasting ability; treating
+loss of its measured advantage as complete cognition destruction would repeat
+the project's earlier scope error. Further scene counts alone would not resolve
+that gap. No training run is admitted or started by these results.
+
+**Evidence.** All 14 manifest-listed files (219,338 bytes), including the
+fixed-covariance diagnostic, source/configuration snapshots, prior manifest,
+per-ray predictions and boundary checks, are verified in
+[matched spatial covariance](artifacts/scc-matched-spatial-covariance-20260923-v1/).
+Manifest SHA256: `61af3132aea201e1b902c63f43c0b530fa2b061c82c23042150efb095e407a1c`.
+The run is terminal and its executed analysis source matches the worktree.
+
+**Score-specific comparator clarification.** The 41.47% MSE reduction above
+uses the public winner on the primary log score. The lowest-MSE public reader
+instead uses the global mean, 160-pixel length and scale 0.5; its MSE is 0.349552.
+Against that reader the learned-mean diagnostic's MSE reduction is **37.30%**.
+These are descriptive development point estimates, not confidence-qualified
+population improvements. The full public table in LN-343 supplies both comparisons.
 
 ## Historical evidence
 

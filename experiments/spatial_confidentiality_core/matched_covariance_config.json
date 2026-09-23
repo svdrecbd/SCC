@@ -1,0 +1,13 @@
+{
+  "seed": 34337,
+  "length_scale_pixels": 80,
+  "log_depth_standard_deviation": 0.5,
+  "diagonal_standard_deviation": 0.1,
+  "correlation_diagonal_stabilizer": 1e-12,
+  "bootstrap_repetitions": 10000,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "neural_training": false,
+  "stage": "posthoc development diagnostic with fixed public covariance"
+}

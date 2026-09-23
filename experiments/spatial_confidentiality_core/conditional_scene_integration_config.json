@@ -1,0 +1,15 @@
+{
+  "seed": 34238,
+  "rows": [100, 140, 180, 220, 260, 300, 340, 380],
+  "columns": [80, 140, 200, 260, 320, 380, 440, 500],
+  "observed_rays": 16,
+  "finite_boundaries": 63,
+  "minimum_boundary_metres": 0.1,
+  "maximum_boundary_metres": 10,
+  "path_tolerance": 0.00000001,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "neural_training": false,
+  "source_evidence_manifest_sha256": "fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16"
+}

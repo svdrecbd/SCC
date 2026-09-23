@@ -1,0 +1,15 @@
+{
+  "seed": 34237,
+  "mixture_cases": 12,
+  "components": 4,
+  "coordinates": 8,
+  "rank": 3,
+  "probability_tolerance": 1e-11,
+  "density_tolerance": 1e-9,
+  "gradient_tolerance": 0.000002,
+  "finite_difference_step": 0.000001,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "neural_training": false
+}
