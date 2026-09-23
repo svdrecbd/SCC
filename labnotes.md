@@ -78,6 +78,15 @@ passes analytic checks and a full backward pass through the actual 24.8-million-
 parameter parent; all parameters remain unchanged. This is a validated candidate
 component, not a trained mechanism or an all-reader removal certificate.
 
+**Program-learning feasibility — [LN-334–336](#ln-334).** Exact variance
+calculations expose prohibitive sampling costs for some longer parity judgments.
+Conditional integration over disjoint comparisons removes that noise source in
+a tractable subclass; a centered expression also repairs FP32 derivative loss.
+Both pass analytic, numerical and unchanged-parent integration checks. On the
+reused diagnostic scene, XOR-32 still has a tiny computed derivative,
+while majority-32 has a substantial one. These checks improve implementation
+and constrain a future curriculum; they do not admit a destructive-mechanism run.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
@@ -25718,6 +25727,275 @@ Both component and full-parent runs are terminal. Actual executed sources,
 configurations, pre-execution entries, complete derivative estimates, runtime
 snapshots and integration results are preserved; no earlier run was overwritten.
 The source checkpoint and image retain LN-324's evidence manifest identity.
+
+<a id="ln-334"></a>
+### LN-334 — 2026-09-23: distinguish valid derivatives from usable program-learning signals
+
+**Question.** LN-332–333 establish derivative correctness, not efficient learning.
+The program-to-disclosure conversion already preserves prediction error exactly;
+repeating that identity would not settle the remaining mechanism obligation.
+Before any training, determine whether the sampled derivative can resolve the
+signal of a longer program even in a tractable, favorable control.
+
+**Analytic control.** Let X_i be independent Bernoulli(p) predicates and let f
+be their parity. A common logit parameter controls p. Put a=1-2p. Then
+
+    r=E f=(1-a^n)/2,
+    d=dr/dtheta=n*p*(1-p)*a^(n-1),
+    S=sum_i(X_i-p),
+    g=2*(A-y)*mean_B[(f-A)*S].
+
+Here A is the event frequency of an independent N-scene batch, B contains N
+other scenes, and y is a fixed binary training target. This is the shared-logit
+restriction of the existing two-batch likelihood-score estimator. Its mean is
+2(r-y)d. Conditional on A=t, its variance is
+
+    4*(t-y)^2/N * [(1-2t) E(f*S^2)+t^2 E(S^2)-d^2].
+
+The total variance adds 4*d^2*r*(1-r)/N. Evaluate the expectation over t exactly
+using its first four binomial moments; evaluate the score moments by exact
+rational binomial sums. Compare with independently enumerated estimator outcomes
+for n=1..4, N=1,2, and both binary targets. Report n=4,8,16,32,64 at p=.9,.99 and
+N=1,024. Find a sufficient batch size whose signal-to-standard-deviation ratio
+is at least three, with its immediately preceding size failing; do not claim a
+global optimum without establishing monotonicity. This is a variance calculation,
+not a proposal to allocate that many samples. No trained-model distribution or
+joint-scene Gaussian approximation is asserted to be independent Bernoulli.
+
+**Potential correction.** In this control, exact parity integration gives r and
+its derivative directly, eliminating sampling variance while retaining any small
+true derivative. If sampling is the obstacle, next test conditional integration
+for disjoint comparisons in the existing joint scene model; if the true derivative
+is small, variance reduction alone cannot create missing predictive information.
+No training, intervention, or destructive-cognition conclusion follows from this
+control. One Charon CPU, 30 seconds, immutable source/configuration/entry/machine
+under `program-gradient-variance-20260923-v1/exact01`.
+
+**Completed variance control.** All 16 exact moment comparisons pass over 380
+enumerated estimator outcomes. At p=.9 and 32 predicates, N=1,024 gives signal
+only 0.1075 times its standard deviation; a sufficient N is 796,533 for y=0.
+At 64 predicates it is 0.0001204, and a sufficient N is 634,485,459,314 per batch
+(1,268,970,918,628 scenes for both). These are exact variance calculations, not
+executed sample counts, optimizer convergence bounds, or neural measurements.
+At p=.99 the 64-predicate ratio is 14.35 for y=0 at the same N=1,024; length alone
+is not the obstacle. Here p is a model predicate probability, not a measured
+per-predicate accuracy. Exact integration has zero estimator variance in this
+control, but retains the small derivative. Runtime .132 seconds inside Python,
+.17 seconds total, peak memory 13,044 KiB. The run is terminal. Proceed to the
+conditional integration check below; do not increase training sample counts.
+
+**Evidence.** Eight manifest-listed files (33,249 bytes), including exact moment
+results and frozen source/configuration/plan, are verified in
+[program derivative variance](artifacts/scc-program-gradient-variance-20260923-v1/).
+Manifest SHA256: `eb9b2bcf94c2a77082f8d261b58e612e7d24937550da3a4d0857106bda4ab2e9`.
+
+<a id="ln-335"></a>
+### LN-335 — 2026-09-23: integrate independent scene comparisons before differentiating
+
+**Change motivated by LN-334.** Conditional on a mixture component and shared
+Gaussian factors g, distinct rays in LN-333 have independent residual Gaussian
+noise. For disjoint comparison pairs (a,b), calculate
+
+    p_ab(g,m) = Phi((mu_b-mu_a+(F_b-F_a)g)/sqrt(v_a+v_b)).
+
+Integrate XOR by its independent-Bernoulli recurrence. Integrate strict majority
+by a dynamic count distribution, O(k^2) operations for k comparisons. Then sum
+over mixture weights exactly and average only over sampled shared factors. Pair
+indices must be globally distinct: reject overlapping pairs, rather than silently
+assuming their events independent. The earlier general sampled evaluator remains
+available for arbitrary Boolean programs and shared rays. This method integrates
+a tractable subclass, not all Boolean circuits or all physical scene laws.
+
+For two independent shared-factor batches with differentiable probability means
+r_A,r_B, use (r_A-y)(r_B-y), differentiating both factors. Its expected gradient
+is the population Brier gradient under the declared positive diagonal Gaussian
+model and fixed query. No hard event is differentiated and neither mean is
+silently treated as an independent detached likelihood-score baseline. Sharing a
+batch between factors would generally differentiate an additional variance term.
+Exact integration removes conditional sampling noise, not the possible smallness
+of the true derivative or uncertainty caused by an inadequate learned model.
+
+**Frozen validation.** Independently enumerate all outcomes for 1..8 independent
+predicates and both XOR and majority; compare probabilities and all derivatives.
+At 4,32,64 independent Gaussian comparison pairs with event probability .9,
+compare the integrated XOR derivative with the analytic formula and show that
+shared-factor samples have no effect when factor loadings are zero. On a
+three-component correlated eight-ray distribution, compare both integrated
+probabilities with 131,072 actual joint-scene samples; use 4,096 shared-factor
+draws and a six-combined-standard-error plus .001 numerical gate. This gate is a
+seeded implementation check, not a universal confidence guarantee. Check all
+mixture logits, means, factors and diagonal parameters by central finite
+differences on a fixed shared-factor batch. Reject four malformed or overlapping
+ray groups. Seed 33537, one Charon CPU, 45 seconds, fresh
+`conditional-program-assessment-20260923-v1/validation01`, source/configuration,
+entry and machine frozen. No training, model intervention or SCC admission.
+
+**Completed component checks and integration plan.** The sixteen independent
+probability/derivative enumerations pass. Exact integrated Gaussian controls
+recover the analytic 4-,32-,64-comparison derivatives; all shared-factor draws
+produce the same result when their loadings vanish. On the correlated mixture,
+XOR integrated/sample probabilities are .478931/.479408 and majority probabilities
+.425528/.425293. Differences are within .30 combined standard errors. Per-draw
+probability variance is .002911 versus .249578 for hard XOR events, and .008243
+versus .244421 for majority. These value-variance comparisons do not establish a
+universal gradient-variance ordering between different estimators. All parameter
+finite-difference checks pass and all four invalid ray groups are rejected.
+Runtime 1.10 seconds inside Python, 2.94 seconds total, peak 670,732 KiB.
+
+Next verify the actual unchanged parent with the same pinned checkpoint and
+selection image as LN-332–333. Supply a fixed 8x8 ray grid (configuration records
+all rows/columns); pair adjacent columns, using disjoint prefixes of 1,8,32
+comparisons for XOR and majority. Labels come from the recorded ideal depth
+field, not from the model. This reused image is an implementation diagnostic,
+not a new accuracy or generalization test. Use two independent 128-draw batches
+per objective and one backward pass on their mean. Require exact parent depth
+reproduction within 1e-6 m, finite nonzero parent-final and eight new parameter
+group gradients, and unchanged whole-model state digests. The gradient check
+only verifies connectivity of the combined objective, not every program's
+population derivative. No optimizer or parameter edit. One Charon CPU, 60
+seconds, seed 33537, fresh `conditional-program-assessment-20260923-v1/integration01`;
+freeze current source, configuration, entry, runtime model/processor and machine.
+
+**Preserved integration failure and correction.** `integration01` completes its
+forward/backward computation but fails the requirement that every parameter group
+have a nonzero gradient. Mean-projection biases and shared-factor projection
+biases have exactly zero gradients. This is mathematically required for this
+comparison-only objective: adding a common log-depth displacement or common
+factor-loading displacement to every ray in one component cancels from every
+pair difference. The prior positive-gradient admission check was incorrect for
+these parameters. Finite sampling noise in a score estimator need not respect
+these exact null directions on an individual draw; nonzero noise would not be
+proof of a useful training signal.
+
+Preserve the failed source/configuration, logs and exit status. Rerun as
+`integration02`, changing only the derivative gate: require finite gradients for
+all groups, exact zero for those two invariant bias groups, and positive norms
+for the parent and remaining groups. Probability computations, labels, grid,
+seed and budgets remain unchanged. Whole-model unchanged-state checks must still
+pass. This corrects a check to an explicit symmetry, rather than accepting a
+broken derivative. Comparison-only supervision cannot set a global depth scale;
+the existing absolute-visibility task is still required if absolute geometry is
+claimed. No training admission follows from either outcome.
+
+**Corrected full-model integration.** `integration02` passes. The 24.8-million-
+parameter parent reproduces its recorded depths exactly; parent and integrated
+state digests remain unchanged. Parent-final gradient norm is .97148; six
+non-invariant new parameter groups have finite positive gradients, while the
+two symmetry directions have exact zero gradients. The six objectives include
+1-,8-,32-comparison XOR and majority on the reused diagnostic image. The
+32-comparison XOR probability rounds to .5 in both batches. This must not be
+reported as a successful long-program learning signal merely because the
+combined objective has a nonzero derivative. Forward/backward take 3.03/6.32
+seconds, full process 17.44 seconds, peak 2,081,400 KiB. No optimizer step occurs.
+
+**Next numerical obligation.** The independent probability recurrence can round
+its intermediate parity probability to .5, erasing later predicate derivatives
+through cancellation even when a centered-product derivative is representable.
+Check long-program derivatives separately, including FP32 and the recorded
+32-comparison case, before interpreting this combined integration as learning
+readiness. The protection-removal and severe-cognition obligations remain open.
+
+**Evidence.** Forty-two manifest-listed files (193,620 bytes) preserve the
+component check, failed first integration, corrected integration and their
+source/configuration/entry snapshots in
+[conditional program assessment](artifacts/scc-conditional-program-assessment-20260923-v1/).
+Manifest SHA256: `8bfa4918d1990bcf4e6b1515c85c588cc71f206fc8be3dec9627adf2ccfb815b`.
+All three runs are terminal; source weights remain unchanged.
+
+<a id="ln-336"></a>
+### LN-336 — 2026-09-23: preserve long-program derivatives below probability rounding precision
+
+**Numerical correction.** LN-335's integrated parity recurrence is exact over
+real numbers, but intermediate probabilities can round to .5 in FP32. Later
+predicate derivatives then contain an artificial zero (1-2r). Maintain instead
+
+    c=product_i(1-2p_i),  r=(1-c)/2.
+
+The final risk can still round to .5, while automatic differentiation through c
+retains derivatives that fit the number format. This does not create a straight-
+through estimator or a new objective: it is an algebraically identical expression.
+Product underflow at still greater length and CDF rounding remain real limits.
+The majority dynamic program is unchanged. Preserve the previous executed sources
+and results; the recurrence's short-program checks remain valid but did not cover
+this long-program FP32 failure.
+
+**Frozen checks.** Test homogeneous independent predicates at (length,p)=(32,.64),
+(64,.7),(128,.9), using FP64 reference derivatives at the exact FP32 input values.
+Require every centered-product derivative nonzero and maximum relative error
+<=1e-4; the old recurrence must lose at least one derivative. Include exact
+balanced-predicate and deterministic-predicate controls, where zero derivatives
+can be correct. Run on Charon CPU with a 30-second cap, fresh
+`program-derivative-precision-20260923-v1/precision01`. Then rerun the existing
+LN-335 component checks on the revised source (`validation01` under this new
+root). If both pass, rerun the unchanged model/scene/grid/targets/seed in a fresh
+`integration01` under this root, adding each objective's separate location
+partial derivative to the receipt. Whole-model state must remain unchanged and
+the established comparison symmetries must remain exact. This catches a long
+program with no usable derivative hidden behind shorter terms in a combined
+loss. No optimizer or training, and no removal certificate, is implied.
+
+**Preserved precision-test failure.** `precision01` fails the negative control's
+requirement that the earlier recurrence have an exactly zero derivative. The
+correct product derivative checks preceding that assertion pass. A recurrence
+can also settle near .5 and produce a spurious roundoff-scale gradient rather
+than an exact zero. Both behaviors disagree with the mathematical derivative;
+zero-count alone is the wrong numerical failure criterion. Preserve this run.
+For `precision02`, keep inputs and the product accuracy gate unchanged, but
+require the old recurrence's maximum error to exceed 1% of the reference
+maximum derivative, recording both errors and nonzero counts. This changes the
+negative control, not the evaluated method. A meaningful numerical failure is
+inaccuracy, not necessarily a zero value. Component and integration follow-ups
+remain contingent on the corrected check passing.
+
+**Completed precision and integration results.** `precision02` passes. The
+centered product retains all 32,64,128 predicate derivatives, with maximum
+relative errors below 5.2e-7 against FP64 evaluated at the actual FP32 inputs.
+The recurrence retains only 14 of 32 derivatives and 19 of 64 in the first two
+controls. In the 128-predicate case it retains nonzero derivatives but its
+maximum error is 2.384e-7 against a reference magnitude of 4.925e-13. Thus
+checking only nonzero gradients would also accept a badly inaccurate result.
+All balanced/deterministic boundary controls pass. Precision-check runtime is
+.033 seconds inside Python, 1.77 seconds total, peak 590,876 KiB.
+
+The complete component validation passes on the revised expression: all sixteen
+probability/derivative enumerations, analytic Gaussian derivatives, correlated
+mixture comparisons, finite differences and invalid-ray rejections. Runtime
+1.059 seconds inside Python, 2.89 seconds total, peak 670,892 KiB.
+
+Full pretrained integration also passes with no parameter changes. Crucially,
+the separate 32-comparison XOR objective has a maximum location derivative of
+4.363e-12, whereas the 32-comparison majority objective has .14157 on the same
+ray pairs. All 256 component-by-ray XOR location derivatives are representably
+nonzero, while its probability rounds to .5. The short XOR-8 objective has a
+maximum location derivative .022108. These are objective partial derivatives
+at one initialization and one reused scene, not norms of a trained network's
+population gradient, convergence predictions, or new competence measurements.
+They show why a nonzero combined gradient is an inadequate training gate.
+Forward/backward take 3.027/6.253 seconds; full process 17.41 seconds, peak
+2,081,412 KiB. The parent digest remains
+`b421be3848510f81abd64bf4f4fd4a77d68da1703fef54d36e40ea59403f8068`;
+the integrated digest is unchanged at
+`b628464ab24a3e529b4956c6cd2daa3d9cfcd44766ff8a5a0910b77844b6992f`.
+
+**Decision.** Conditional integration and the centered expression remove two
+avoidable obstacles: sampling noise in a tractable program class and premature
+derivative cancellation. The long-parity signal can remain intrinsically tiny
+under the initialized distribution. Do not use a broad long-program training run
+to infer mechanism success or failure. Any later curriculum needs absolute
+judgments (to constrain metric scale), short judgments with usable learning
+signals, and independently qualified joint judgments; local supervision alone
+cannot identify arbitrary higher-order correlations (LN-333). This does not
+resolve genuine-removal semantics, adaptive coverage or catastrophic loss of a
+specified reusable cognitive procedure. The active mechanism objective remains
+open; no neural training or optimizer step has occurred in these runs.
+
+**Evidence.** Forty-two manifest-listed files (140,544 bytes), including the
+failed negative-control assertion, corrected precision check, repeated component
+validation and separate-program full integration, are verified in
+[program derivative precision](artifacts/scc-program-derivative-precision-20260923-v1/).
+Manifest SHA256: `4714b15bf47c688e9ac15408f816d79ba13cf6f667e2c440c3ecde1ce8f95c8e`.
+All jobs in LN-334–336 are terminal; their failures and executed sources remain
+immutable. The final worktree implementation matches the last executed source.
 
 ## Historical evidence
 

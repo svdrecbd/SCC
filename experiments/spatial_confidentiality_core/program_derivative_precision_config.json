@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {"length": 32, "probability": 0.64},
+    {"length": 64, "probability": 0.7},
+    {"length": 128, "probability": 0.9}
+  ],
+  "relative_derivative_tolerance": 0.0001,
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

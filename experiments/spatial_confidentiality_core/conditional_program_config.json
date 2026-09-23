@@ -1,0 +1,8 @@
+{
+  "seed": 33537,
+  "probability_samples": 131072,
+  "conditional_samples": 4096,
+  "processor_count": 1,
+  "wall_seconds": 45,
+  "neural_training": false
+}

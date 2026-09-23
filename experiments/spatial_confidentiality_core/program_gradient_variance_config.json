@@ -1,0 +1,9 @@
+{
+  "probabilities": ["9/10", "99/100"],
+  "lengths": [4, 8, 16, 32, 64],
+  "samples_per_batch": 1024,
+  "signal_to_noise_requirement": 3,
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}
