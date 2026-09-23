@@ -1,0 +1,14 @@
+{
+  "maximum_bytes": 100000000,
+  "wall_seconds": 120,
+  "gpu": false,
+  "training": false,
+  "files": [
+    {
+      "path": "checkpoint.cpkt",
+      "bytes": 84322242,
+      "git_blob_sha1": "08cb2c4807b109ae4bebe2d2a7245cffdbe67f4f",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/artifacts/model_submitit_0ccc_id_171b69db_epoch_-1.cpkt"
+    }
+  ]
+}

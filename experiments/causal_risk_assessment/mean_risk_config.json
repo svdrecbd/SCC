@@ -1,0 +1,8 @@
+{
+  "threshold_counts": [1, 2, 3, 4],
+  "denominator": 4,
+  "weightings": ["uniform", "geometric"],
+  "cpu_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

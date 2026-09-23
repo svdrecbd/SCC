@@ -25,12 +25,17 @@ uncertain and fails the fixed screen. A 0.024-second public learner retains abou
 The exact semantic/recovery controls pass, but neither a qualifying computational
 separation nor destructive loss follows. No training is admitted.
 
-**Latest score-recovery result — [LN-297](#ln-297).** For arbitrary useful count-tier
-predictions, an explicit inexpensive decoder recovers protected proper-score
-improvement. The bound does not assume posterior calibration and catches gains
-missed by the direct decoder. Complete-vector paired scores have a dimension-
-independent bound. Exact checks pass; a qualified learned inference core and a
-genuine removal intervention remain missing.
+**Latest score-recovery result — [LN-301](#ln-301).** Any improvement in bounded
+mean prediction supplies at least as much integrated threshold-risk Brier
+improvement through a scalar shift and clipping. The pointwise result has no
+threshold-count penalty or calibration premise. All 37,100 exact checks pass.
+A small incremental advantage still cannot establish severe cognitive loss.
+
+**Active procedural lead — [LN-300](#ln-300).** Inspect the released Do-PFN
+interventional predictor as a candidate for reusable consequence inference.
+Its pinned architecture, checkpoint and source are preserved; no causal model
+has been evaluated or admitted to training. Distribution readout and fair public
+causal replacements must be validated before qualification.
 
 **Latest learned counting result — [LN-296](#ln-296).** The released cellular
 policies were loaded and exercised through a validated port of the original
@@ -21993,6 +21998,192 @@ remain available. [Screen summary](artifacts/scc-contextual-disclosure-assessmen
 [replacement audit](artifacts/scc-contextual-disclosure-assessment-20260922-v1/public_replacement_audit01/audit.json),
 [manifest](artifacts/scc-contextual-disclosure-assessment-20260922-v1/transfer_manifest.json),
 [verification](artifacts/scc-contextual-disclosure-assessment-20260922-v1/transfer_verification.json).
+
+<a id="ln-299"></a>
+### LN-299 — 2026-09-22: inspect direct architectural coupling claims before adopting a training objective
+
+**Question.** Do recent explicit claims of capability–constraint coupling supply
+the missing training mechanism? Inspect their stated guarantees and removal tests.
+
+Wei and Shu's [constraint-coupled reasoning paper](https://arxiv.org/html/2603.25022v1),
+sections 4–7, excludes unrestricted white-box replication. Equation 9 states the
+desired capability–stability implication as a coupling condition; Proposition 1 is
+explicitly a hypothesis. The concrete burden/feasibility functionals and training
+procedure are withheld. Its displayed loss therefore does not establish that
+training produces the condition. It is a related formulation, not an executable
+construction meeting this project's contract.
+
+Eastwood's [Paper VI](https://www.michaeldariuseastwood.com/research/papers/paper-vi-honey-architecture)
+uses a multiplicative capability/safety objective. Its current scope note concedes
+that capability can rise and safety fall while their product rises. The broader
+point is algebraic: C*S=0 when S=0 does not imply C=0. For independent coordinates
+u,s, take C=1-u^2 and S=1-s^2 on [-1,1]^2. Product optimization prefers (0,0), yet
+the edit (0,0)->(0,1) leaves C=1 while S=0. A product objective alone therefore
+cannot establish functional necessity; specific architectures may still do so.
+
+The companion [Paper VIII](https://www.michaeldariuseastwood.com/research/papers/paper-viii-the-load-bearing-proof),
+sections 4.4–5.1, explicitly identifies its zero-capability removal row as numerical
+instability. Reducing adapter influence restores baseline capability. Its positive
+simulation uses an acceptance gate on proposed modifications, with a separate
+sandbox. Those observations do not supply intrinsic destructive dependence under
+our fully editable contract. This is a source-level review, not reproduction or
+an audit of that entire research program.
+
+**Decision.** Do not replace the missing mechanism with a multiplicative loss,
+stability penalty, or gate. Preserve the distinction between a condition imposed
+in a definition and a property established for trained computation. This excludes
+these inspected public formulations as current training recipes, not every future
+instantiation of their ideas.
+
+<a id="ln-300"></a>
+### LN-300 — 2026-09-22: native intervention-risk inference, with an explicit procedural target
+
+**Construction to inspect.** Return to the causal-risk operation rather than
+attach another safety label to observational classification. For a fresh system
+context D, observed covariates x and proposed intervention a, the protected family
+is the probability of exceeding each declared consequence threshold:
+
+    R_j(D,x,a) = Pr(Y_a > t_j | D,x).
+
+Thresholds and the interpretation of adverse consequences are fixed before model
+selection. The bounded useful procedure forecasts the entire outcome distribution
+under interventions on new systems, from which a planner can evaluate actions.
+This is an alignment-related risk-assessment component; neither obedience to its
+assessment nor complete cognition is claimed. Observational prediction alone is
+not the useful target. The distinction must be exercised by intervention controls,
+including cases where conditioning on an action gives the wrong effect.
+
+A native risk-vector implementation reconstructs a prespecified binned outcome
+distribution by adjacent differences; LN-297's pointwise recovery applies to these
+bins. This supplies conditional functional necessity on this procedure. It neither
+proves a neural advantage nor shows that a particular loss created a dependency.
+A surviving distribution predictor with a risk decoder retains the protected
+function. Erasing old observations without disabling inference on fresh systems
+is not the trigger. Public causal estimators, intact-checkpoint copies, alternative
+representations and all retained repair information remain within the accounting.
+In particular LN-298's lesson applies: loss of only a small excess advantage is
+not a severe-loss endpoint.
+
+**Existing core lead.** [Do-PFN](https://arxiv.org/html/2506.06039v2) trains a frozen
+in-context predictor of interventional distributions on synthetic causal systems.
+Its model differs from the observational classifier tested in LN-298; its causal
+prior is an assumption, not a solution to general nonidentifiability. The paper's
+section 3 and appendix E motivate inspection, but their performance is not our
+reproduction. Its [official source](https://github.com/jr2021/Do-PFN) includes a
+29,396,282-byte serialized model and configuration. Pin revision
+90d67433b43c4d52d752dc336070f525ff856e0b. CausalPFN's treatment-effect estimates
+and DINOv2's visual features are adjacent leads; neither is selected or evaluated
+here because a stronger predictor alone does not close the mechanism gap.
+
+**Preparation contract.** Freeze source and this entry in
+`scc-causal-risk-assessment-20260922-v1/source_acquisition01`. Acquire only the
+pinned model/configuration, source needed to inspect its loading/inference interface,
+the repository inventory and the versioned paper. Maximum 40 MB, 120 seconds,
+one Charon CPU. Verify the Git blob hashes of pinned repository files and record
+SHA256 for every file. Inspect serialization globals without executing them before
+any model load. No upstream training scripts, package installation, model execution,
+new dataset or experiment follows automatically. A separate frozen implementation
+check and a substantive causal-computation/removal contract are required before
+any comparative evaluation; discuss before neural training as usual.
+
+**Preparation failure retained.** An acquisition command was issued before source
+transfer completed and exited because its script was absent. No upstream file was
+loaded. Preserve `source_acquisition01` and its failure log; freeze the same declared
+acquisition as `source_acquisition02` and verify transfer completion before execution.
+
+**Loader finding.** The first successful acquisition verifies 24 files totaling
+30,549,727 bytes. Static pickle inspection finds the expected upstream neural
+module/configuration classes and Torch reconstruction functions; nothing has been
+deserialized. The native loader does not use the serialized model's weights alone:
+it overwrites them from a separate 84,322,242-byte checkpoint and takes its inference
+configuration. Evaluating the first file alone would therefore not reproduce the
+released predictor. Acquire the pinned checkpoint separately in
+`checkpoint_acquisition01`, maximum 100 MB and 120 seconds on one Charon CPU,
+with its recorded Git blob hash. Preserve the original serialized architecture,
+configuration and checkpoint separately. This remains preparation, not model
+qualification or permission to train.
+
+<a id="ln-301"></a>
+### LN-301 — 2026-09-22: mean prediction has a dimension-independent risk-recovery reader
+
+**Purpose.** LN-300 need not redefine useful cognition as outputting an entire
+probability vector. Ordinary prediction of a bounded consequence's mean already
+supports a direct, inexpensive reader for the protected threshold-risk family.
+This is a proper-score result for a family, distinct from LN-256's single binary
+judgment and balanced-accuracy bound.
+
+**Pointwise construction.** Normalize the actual consequence Y to [0,1]. Let
+r0(t) be any baseline risk forecast for H_t=1[Y>t], with t uniform on [0,1], and
+let mu0=integral r0(t) dt. An edited useful predictor returns a scalar mu in [0,1].
+Set d=mu-mu0 and define
+
+    r*(t) = clip(r0(t)+d, 0, 1).
+
+The layer-cake identity integral 1[Y>t] dt=Y gives, before clipping,
+
+    integral [(r0-H_t)^2-(r0+d-H_t)^2] dt
+      = 2*d*(Y-mu0)-d^2
+      = (Y-mu0)^2-(Y-mu)^2.
+
+Projection onto [0,1] cannot increase squared error to H_t. Therefore the
+*integrated protected Brier improvement is at least the useful mean-squared-error
+improvement*, pointwise for every Y and every forecast. There is no calibration,
+Bayes-optimality, covariance or independence premise, and no factor growing with
+number of thresholds. If r0 is a coherent nonincreasing survival function, the
+clipped shift remains nonincreasing and describes a distribution, allowing endpoint
+atoms. A useful forecast is read once; each queried risk value then requires its
+baseline value and a scalar shift/clipping. Full-vector evaluation and baseline
+preparation still count.
+
+The same identity holds exactly on any ordered outcome grid with interval weights
+w_j summing to one, H_j=1[Y>t_j], Y=sum_j w_j H_j, and mu0=sum_j w_j r0_j.
+These weights are the lengths of the threshold intervals, not an invented uniform
+law over unequally spaced bins. For continuous Y queried at t_j=j/m, j=0,...,m-1, define
+Z=(1/m)*sum_j 1[Y>t_j]. Then |Z-Y|<=1/m. The finite-grid calculation uses Z,
+and its guarantee for useful MSE against Y loses at most 2/m, since changing the
+outcome from Z to Y changes the paired useful gain by 2*d*(Y-Z). Exact continuous
+integration has no discretization term.
+
+**Removal and baseline accounting.** Let G=L_U(mu0)-L_U(parent)>0. If every
+admitted risk reader has at most eta integrated Brier improvement over r0, every
+edited useful forecaster has improvement at most eta over mu0. The fraction of
+this parent advantage lost is at least 1-eta/G. If the removal cap instead refers
+to a stronger public risk baseline, add its advantage delta over r0: the bound is
+1-(eta+delta)/G. An 80% loss of this *increment* requires eta+delta<=G/5. All
+physical-unit squared errors scale by the squared consequence range. This result
+still does not turn loss of a small increment into severe total cognitive loss;
+LN-298's preserving public learner remains an explicit counter-control.
+
+**Native use and a reader control.** A model can be trained to return the
+intervention-risk curve and obtain its useful mean by integration. Retaining an
+alternative mean forecaster also retains the risk improvement above, so deleting
+the native head or changing its encoding does not establish removal. Conversely,
+treating the mean as a point-mass distribution can miss retained risk skill. For
+Y~Bernoulli(1/10), changing a mean forecast from 0 to 1/10 improves MSE from 1/10
+to 9/100, while point-mass integrated risk loss worsens from 1/10 to 9/50. The
+constructed reader has risk loss 9/100 and recovers the entire useful improvement.
+The protected target is risk *probability*, not a binary permission decision.
+
+**Validation plan.** Freeze `mean_recovery_validation01` before execution.
+Use exact rational arithmetic for one through four thresholds, quarter-grid
+baseline risk vectors and mean forecasts, every ordered outcome, and both uniform
+and geometric interval weights. Check the pre-clipping equality, projected lower
+bound, preservation of monotonicity, the misleading point-mass control and rejection
+of a reversed-sign reader. One Charon CPU, 30 seconds. This validates implementation
+of the algebra; it is not a model qualification or removal experiment.
+
+**Validation result.** All 37,100 exact pointwise checks pass, including 15,156
+positive useful gains and 5,540 configurations requiring clipping. The reversed-sign
+reader violates the bound in 16,647 cases. The point-mass control has the predicted
+1/10 -> 9/100 useful improvement, 1/10 -> 9/50 naive risk deterioration, and
+9/100 repaired risk loss. One Charon CPU took 3.57 seconds, 12,732 KiB peak memory.
+These grid counts validate implementation; the general result follows from the
+pointwise identity. No causal model or removal intervention has yet been evaluated.
+
+**Evidence preservation.** The causal preparation and exact recovery validation
+are preserved in `artifacts/scc-causal-risk-assessment-20260922-v1/`.
+All 56 manifest-listed files (114,968,569 bytes) verify locally;
+manifest SHA256 `e9826ed8df50c3b71a3ec42920e1061345fa2a8b79610b93da658a4e25032f4d`. Failed preparation is retained.
 
 ## Historical evidence
 

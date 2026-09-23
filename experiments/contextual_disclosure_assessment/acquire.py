@@ -31,6 +31,9 @@ def main(directory):
                 assert count == specification["bytes"]
             if "sha256" in specification:
                 assert digest.hexdigest() == specification["sha256"]
+            if "git_blob_sha1" in specification:
+                header = f"blob {count}\0".encode()
+                assert hashlib.sha1(header + destination.read_bytes()).hexdigest() == specification["git_blob_sha1"]
             receipt["files"].append({**specification, "bytes": count, "sha256": digest.hexdigest()})
         receipt["status"] = "complete"
     except Exception as error:

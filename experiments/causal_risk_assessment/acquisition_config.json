@@ -1,0 +1,148 @@
+{
+  "maximum_bytes": 40000000,
+  "wall_seconds": 120,
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/README.md",
+      "bytes": 4541,
+      "git_blob_sha1": "b663c0d9b57c4bf5af5a3a57ed6a11c01665f0ae"
+    },
+    {
+      "path": "artifacts/dopfn_config.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/artifacts/dopfn_config.pkl",
+      "bytes": 955,
+      "git_blob_sha1": "f28ae42b1118a17528fbb1f1909dcf5e0cd9ee77"
+    },
+    {
+      "path": "artifacts/dopfn_model.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/artifacts/dopfn_model.pkl",
+      "bytes": 29396282,
+      "git_blob_sha1": "65473d525489a6f91a4f1b20d798af440c97c26b"
+    },
+    {
+      "path": "inference_example.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/inference_example.py",
+      "bytes": 686,
+      "git_blob_sha1": "b372762260089e8015f87112aa4b6a3a55ed48b8"
+    },
+    {
+      "path": "model/__init__.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/__init__.py",
+      "bytes": 140,
+      "git_blob_sha1": "ac33c7ff25c3ba9ad92dd0c7eed8da244e14e970"
+    },
+    {
+      "path": "model/bar_distribution.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/bar_distribution.py",
+      "bytes": 28027,
+      "git_blob_sha1": "def5283d2e649540ed1fe57406e8a2877e46e8ef"
+    },
+    {
+      "path": "model/decoders.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/decoders.py",
+      "bytes": 1070,
+      "git_blob_sha1": "fcd579e88c41f9591523fbd00f2fc2487d514105"
+    },
+    {
+      "path": "model/encoders.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/encoders.py",
+      "bytes": 29801,
+      "git_blob_sha1": "bcdbbb63b93c3ebfb828c1c643c8b01d8fd1d318"
+    },
+    {
+      "path": "model/initializers.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/initializers.py",
+      "bytes": 243,
+      "git_blob_sha1": "ec931193175bc7233870fb262a0f02b8b3ed612f"
+    },
+    {
+      "path": "model/layer.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/layer.py",
+      "bytes": 29814,
+      "git_blob_sha1": "f651d06f0d5c11a592b03aaa2f3ecca847c1c7a1"
+    },
+    {
+      "path": "model/layer_norm.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/layer_norm.py",
+      "bytes": 9372,
+      "git_blob_sha1": "094fb711b22aa5708a0e3f46f14d77aea2da9c3f"
+    },
+    {
+      "path": "model/multi_head_attention.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/multi_head_attention.py",
+      "bytes": 27970,
+      "git_blob_sha1": "a7a236d1e05c0bc9d9e4ad83e7a4b70a58b17949"
+    },
+    {
+      "path": "model/parameter_free_layer_norm.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/parameter_free_layer_norm.py",
+      "bytes": 7712,
+      "git_blob_sha1": "e7b4d767e8119402f6c0a56264c3364e2b29cb14"
+    },
+    {
+      "path": "model/positional_encodings.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/positional_encodings.py",
+      "bytes": 2738,
+      "git_blob_sha1": "d33ea847894abb8bb95fb18c82d455ccb7a46302"
+    },
+    {
+      "path": "model/transformer.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/model/transformer.py",
+      "bytes": 42687,
+      "git_blob_sha1": "295673fc9f24453f7baeac2d2037e3ae7155f92d"
+    },
+    {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/requirements.txt",
+      "bytes": 1212,
+      "git_blob_sha1": "6a2b7eeb9c8cd66f074731e1d9b053edc61332ff"
+    },
+    {
+      "path": "scripts/transformer_prediction_interface/__init__.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/scripts/transformer_prediction_interface/__init__.py",
+      "bytes": 211,
+      "git_blob_sha1": "be33aea69dea8855d0e57bfa841f5f86dae7c8d8"
+    },
+    {
+      "path": "scripts/transformer_prediction_interface/base.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/scripts/transformer_prediction_interface/base.py",
+      "bytes": 79323,
+      "git_blob_sha1": "8e29a1fbdb1b1e0c104a4e3ec3be029898595665"
+    },
+    {
+      "path": "scripts/transformer_prediction_interface/configs.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/scripts/transformer_prediction_interface/configs.py",
+      "bytes": 3709,
+      "git_blob_sha1": "8b7ac82b0a379404353ec6d5e62a1c31f84b5801"
+    },
+    {
+      "path": "scripts/transformer_prediction_interface/model_builder.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/scripts/transformer_prediction_interface/model_builder.py",
+      "bytes": 2568,
+      "git_blob_sha1": "5971ce5cc8aa8f0bf0e2595cee6c3e16aa9ae857"
+    },
+    {
+      "path": "scripts/transformer_prediction_interface/preprocessing.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/scripts/transformer_prediction_interface/preprocessing.py",
+      "bytes": 3573,
+      "git_blob_sha1": "d7bc382e1216eb5c0d7de902133b08b7fb44bf0f"
+    },
+    {
+      "path": "utils.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/utils.py",
+      "bytes": 31326,
+      "git_blob_sha1": "a0c1255f652d99c725f6b989c1c03f9340a5b7c6"
+    },
+    {
+      "path": "repository_inventory.json",
+      "url": "https://api.github.com/repos/jr2021/Do-PFN/git/trees/90d67433b43c4d52d752dc336070f525ff856e0b?recursive=1"
+    },
+    {
+      "path": "paper.html",
+      "url": "https://arxiv.org/html/2506.06039v2"
+    }
+  ],
+  "training": false,
+  "gpu": false
+}
