@@ -9,31 +9,29 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Active construction — [LN-300–301](#ln-300).** A reusable causal predictor
-estimates the consequences of interventions on new systems. Its protected component
-is quantitative risk across declared consequence thresholds. A scalar mean forecast
-recovers threshold-risk proper-score improvement through an inexpensive reader:
-retained useful MSE improvement implies at least as much integrated risk Brier
-improvement, with no calibration or threshold-count penalty. All 37,100 exact
-checks pass. This establishes conditional functional recovery, not mandatory
-execution of a particular computation or behavioral enforcement.
+**Computational lead — [LN-309](#ln-309).** On 32 newly generated causal systems
+with independently chosen interventions, the unchanged Do-PFN predictor has 14.52%
+lower MSE than the strongest locked public procedure. That procedure retains 87.25%
+of the total predictive improvement. The released-data advantage therefore survives
+this fresh test at a smaller magnitude. These are exploratory computational results;
+no protected-function removal or catastrophic loss is established.
 
-**Latest computational result — [LN-305–308](#ln-305).** The unchanged released
-Do-PFN core, with validated distribution readout, has 49.39% lower MSE than the
-strongest fixed public replacement on 24 released causal systems. The difference
-is positive in all eight families and survives 55 fixed procedures plus eight
-portfolios. Two upstream readout discrepancies were controlled before scoring.
-Every acquired benchmark row flips natural treatment; controls exploiting that
-selection rule do not remove the advantage. Fresh systems with independent
-intervention choices remain necessary; this is exploratory released-data evidence.
+**Fixed-judgment gap — [LN-310–311](#ln-310).** Useful mean prediction can survive
+complete loss of a specified safety judgment. More generally, any finite collection
+of polynomial moments admits smooth bounded outcome laws with identical useful
+predictions and opposite fixed judgments. The original mean-to-integrated-risk-score
+reduction [LN-301](#ln-301) remains correct, but cannot be promoted to that stronger
+fixed-judgment claim. Exact controls pass; these are scope results, not general
+impossibility or efficient extraction from arbitrary trained models.
 
-**Open destructive-loss premise — [LN-308](#ln-308).** The strongest fixed public
-replacement retains 80.48% of total useful improvement and supplies substantial
-risk competence. A hindsight per-system selector nearly matches the neural model,
-but uses test outcomes and is not an attack. The learned computational advantage
-is real on the evaluated sample; genuine functional removal and catastrophic loss
-have not been demonstrated. A public replacement retaining both functions does
-not refute conditional coupling. No new neural training is admitted.
+**Full-procedure boundary — [LN-312](#ln-312).** A sufficiently accurate reusable
+generative predictor permits fixed-judgment recovery by repeated simulation, with
+explicit margin, error and execution costs. The sharp probability-law calculation
+also permits risk alteration while preserving all within-event predictive structure.
+A genuine regime-removal control validates that this loss can be small. The missing
+mechanism is a computational dependency preventing preservation of that useful
+structure after removal, with severe loss measured against strong public baselines.
+No new neural training is admitted.
 
 **Prior controls.** Contextual disclosure [LN-298](#ln-298), learned counting
 [LN-296](#ln-296), proof generation [LN-291–293](#ln-291) and forecasting
@@ -22462,6 +22460,326 @@ runs, including failed attempts, are preserved under
 `224b20016b49ef54970fb6d71a704dad00fc7b461e4e57b0056a271b9c619657`.
 The combined numerical receipt is
 `treatment_selection_evaluation01/summary.json`; no research job remains running.
+
+<a id="ln-309"></a>
+### LN-309 — 2026-09-23 UTC: fresh systems with independent interventions
+
+**Prior turn classification: progress.** LN-302–308 established a reproducible
+causal inference advantage on released systems, identified readout corrections and
+quantified public recovery. They did not satisfy the mechanism or training goal.
+No run is pending. The next scientific test concerns independent new systems;
+a passing result remains distinct from genuine protected-function removal.
+
+**Fixed generator.** Create four new systems in each of eight templates: observed
+confounder (ordinary and small context), observed mediator, mediator plus confounder,
+hidden confounder, front-door, back-door and common effect. Functions are a uniformly
+chosen square, tanh or rectified linear function of a weighted sum. Each weight is
+uniform on +/-1/sqrt(parent count). Gaussian roots have standard deviation uniform
+on [1,3]; additive noise standard deviation is 0.3*Beta(1,5). Binary natural
+treatment thresholds use an independent 2,048-row median calibration sample;
+root treatments in mediator/common-effect cases are fair Bernoulli draws. Seeds
+are 30901+1000*family index+replicate index. Preserve every generated system, with
+no performance-based exclusion. Generate 224 rows per ordinary system and 40 for
+small-context systems. This explicit new prior is inspired by the published
+function classes; it is not claimed to reproduce the exact upstream prior.
+
+The new requested action is an independent fair Bernoulli draw. Reuse each
+subject's noise to propagate both natural and intervened systems. Predictors receive
+pre-intervention covariates, requested action and observational context only.
+They receive neither natural query treatment, graph, coefficients, latent variables,
+simulator seeds nor query outcomes. Simulator provenance remains evaluator data;
+this qualification interface is not itself a complete SCC threat model. Include
+factual re-execution equality, unchanged-action equality, zero-effect back-door/
+common-effect controls, and an independent linear-mediator calculation where the
+correct effect is 5*(a-T), while incorrectly freezing the mediator gives 3*(a-T).
+
+**Prediction contract.** Reuse the validated frozen checkpoint and audited readout.
+Before examining outputs, lock the six public competitors: LN-305's five methods
+and the additive spline ridge winner from LN-307. Use the same context-only
+normalization and three-fold observational selector; source/query permutations
+use seed 30911 plus sorted case index. Maximum 128 context and 96 query rows;
+small systems give 32 and eight. No query targets enter fitting or selection.
+Report both the released-data-selected spline and the best aggregate method, plus
+family results, risk readers and public retained improvement. The fixed preliminary
+screen remains >=10% MSE advantage over selected and best aggregate public methods,
+positive in at least six of eight families, and positive whole-system bootstrap
+lower bound (10,000 draws, seed 30912). A pass does not supply a collapse gate or
+admit training; that requires a separate genuine-removal argument.
+
+**Execution.** Freeze generator, configurations, source and this entry in fresh
+`scc-causal-independent-intervention-20260923-v1/generation01` before generating;
+one Charon CPU, 15 seconds. After its controls pass, freeze `evaluation01` and
+run the unchanged pretrained predictor and public fits on one CPU for at most
+60 seconds, offline. No neural training or model modification. Preserve failures
+before any correction or limit change. Existing source snapshots remain unchanged.
+
+**Generator validation.** All 32 systems and 6,432 factual replay checks pass;
+3,278 actions change natural treatment. The linear-mediator control detects both
+incorrect changed-action predictions. Generation takes 0.25 seconds on Charon.
+These checks precede model scoring and do not select or discard systems.
+
+**Fresh result.** All 32 systems finish in 45.00 seconds on one Charon CPU
+(906,888 KiB peak). The predictor's MSE is 0.0249587 versus the locked spline's
+0.0291996, the selected portfolio's 0.0332724 and the context mean's 0.0582175.
+The advantage is 14.52% against the spline and 24.99% against selection, with
+positive selected differences in seven of eight families and paired interval
+[0.00429,0.01286]. Thus the prespecified preliminary screen passes on this new
+prior, while the advantage is smaller than on the released cases. The public
+spline retains 87.25% of total useful improvement. All recovery checks pass to
+8e-17 rounding. No training or genuine removal test has occurred. Further routine
+prediction benchmarks alone will not resolve the remaining mechanism question.
+
+<a id="ln-310"></a>
+### LN-310 — 2026-09-23 UTC: preserving means can erase a particular risk judgment
+
+**Question.** Does LN-301's recovery of some proper-score improvement guarantee
+that an independently specified, competent harm judgment survives? It does not.
+The quantifier over total risk-information loss must remain distinct from removal
+of a particular judgment or accurate probability computation. This control tests
+that distinction directly, rather than scaling another predictor.
+
+**Exact counter-control.** Let M be uniform on {1/4,1/2} and let V be an independent
+fair bit. If V=0, consequence Y=M; if V=1, Y is Bernoulli(M). In both cases
+E[Y|M,V]=M. The parent state retains (M,V); the successor retains only M. No
+ordinary input, observation history or repair payload in this finite contract
+contains V. Fix the harm event Y>3/4 and risk tolerance 1/8 before defining the
+reader. Its probability is p=M*V, so the protected judgment 1[p>1/8] is exactly V.
+
+Erasing V therefore makes every reader of retained state and independent randomness
+chance on the balanced judgment. Yet the optimal mean forecast remains M on every
+instance. Parent and successor useful MSE are both 7/64; the best constant's loss
+is 1/8, so 100% of useful improvement survives. The best retained-state probability
+reader p_hat=M/2 has MSE 5/128 against the intact probability, versus 11/256 for a
+constant. Some probability information remains even though the judgment is lost.
+LN-301 still applies: its reader recovers useful mean improvement as integrated
+risk-score improvement. It cannot be used to claim that this fixed judgment
+remains competent or that its removal destroys the mean procedure.
+
+The construction can attach to an arbitrary procedure returning M(x) in (1/8,3/4),
+with an independent retained regime bit V; keeping that whole procedure while
+removing V preserves all its means. This demonstrates a compatible preserving
+representation. It is not an efficient extraction theorem for arbitrary entangled
+weights, a demonstrated Do-PFN edit, a loss-of-learning result, or a general SCC
+impossibility. If ordinary observations reveal V, that information must be included
+and the stated chance-removal premise no longer follows. The protected threshold
+is physical within the toy law; it is not retrospectively chosen from model errors.
+
+**Validation.** Freeze `mean_preserving_risk_validation01`, source, configuration,
+this entry and machine in the fresh independent-intervention evidence root.
+Enumerate the exact rational source law, verify both MSEs and optimal retained
+probability error, enumerate all 17^2 randomized-reader probability pairs, and
+integrate full-family Brier losses exactly over the outcome breakpoints. Confirm
+that the LN-301 reader still satisfies its lower bound while the particular
+judgment is lost. One Charon CPU, 15 seconds, no sampling, model execution or
+training. The general reader claim follows from V independent of M, not grid search.
+
+**Mechanism implication.** A trainable construction must state whether protection
+means competence on a fixed judgment, calibrated risk probabilities, or absence
+of any extra risk information. These are different targets. The current scalar-
+forecast theorem supports only the stated score-recovery implication. A fresh
+predictive advantage does not convert that implication into a destructive response
+for a different protected operation. Retain the causal model as a computational
+lead; do not admit training on that conversion.
+
+**Counter-control result.** Exact enumeration passes in 0.04 seconds. Both useful
+MSEs are 7/64 and all 289 randomized-reader pairs attain exactly 1/2 judgment
+accuracy after erasure. The retained probability reader's error is 5/128.
+Integrated family Brier losses are 49/256 (constant baseline), 7/64 (parent),
+21/128 (Bayes reader of retained M), and 45/256 (LN-301 shift reader). The shift
+reader improves by exactly 1/64, matching all useful improvement, while the fixed
+judgment has been completely lost. Thus the score theorem is correct and still
+insufficient for that different protected operation.
+
+<a id="ln-311"></a>
+### LN-311 — 2026-09-23 UTC: the finite-expectation boundary for a fixed harm event
+
+**General finite-support criterion.** Let a useful interface return expectations
+of fixed features phi_1,...,phi_k on a finite outcome set. Let h be a fixed harm
+indicator. Over all probability laws on that outcome set, harm probability is
+determined by the useful expectations if and only if
+
+    h is in span{1, phi_1, ..., phi_k}.
+
+The forward direction follows by taking the corresponding affine combination of
+expectations. For the converse, form the matrix A with those features as rows,
+including the constant row. If h is outside its row span, there is a signed vector
+v with A*v=0 but h*v!=0. Start with a strictly positive law P0; P0 +/- epsilon*v
+are probability laws for sufficiently small epsilon, have identical useful
+expectations and different harm probabilities. For any fixed tolerance q in (0,1)
+and a nonempty proper harm set, choose a strictly positive P0 assigning mass q to
+that set. The same perturbations then lie on opposite sides of that fixed tolerance.
+This is elementary linear algebra, not a claim of a new general moment theorem.
+
+**Uniform implication.** No finite set of polynomial moments determines a threshold
+probability over an unrestricted bounded outcome family. Consequently preserving
+those predictions cannot, by information content alone, force retention of the
+particular calibrated risk or judgment. Adding variance, skewness or another
+finite moment does not uniformly repair LN-310. This rules out that inference,
+not architectures with a separately established computational dependency or
+restricted physical distribution families. It is not a general SCC impossibility.
+
+**Explicit smooth counterfamilies.** For any requested moment order k, let n be
+the smallest odd integer greater than k. Put weights C(n,i)/2^(n-1) on even i for
+one law and odd i for the other. Centers are 1/4+i/(2n)+s, with
+s in {-1/(16n),+1/(16n)}. Replace each point by a uniform band of half-width 1/(8n).
+All bands lie strictly inside [0,1] and none crosses the fixed harm threshold 1/2.
+The n-th finite difference annihilates polynomials of degree below n; convolution
+with the same uniform noise and either shift preserves that equality. Thus all
+first k moments agree between the two regimes in each shift context.
+
+The harm probabilities sum to one and differ by C(n-1,(n-1)/2)/2^(n-1), so they
+straddle the independently fixed tolerance 1/2. At k=2 they are 1/4 and 3/4:
+retaining exact mean and variance still permits complete loss of this judgment.
+Keeping the shift while erasing the independent regime bit preserves every useful
+moment forecast. The two shifts ensure positive useful prediction gain over a
+constant baseline; this is not a zero-skill control. Any reader of retained moments,
+shift and independent randomness remains chance on the balanced judgment.
+Adding the harm indicator itself to the useful feature set distinguishes the laws,
+as the criterion predicts; that addition would be an explicit extra task.
+
+**Scope and next dependency.** The construction supplies preserving representations,
+not an efficient compiler that extracts them from every trained network. It does
+not withhold originally available observations: its declared finite contract has
+no additional regime-revealing input. A richer reusable update procedure may encode
+more than its finite outputs on one query; LN-251's Gaussian two-query result is
+an example. Any next positive proposal must exploit and justify such a procedure
+or a physical-family restriction. It must recover the specified judgment at a
+competence level, rather than merely some integrated risk-score improvement.
+Further mean-only predictive advantage cannot fill this logical gap.
+
+**Frozen validation.** Test k=1 through 12 with exact rational arithmetic. Verify
+all moment equalities after smoothing, the fixed thresholds and margins, positive
+useful signal across shifts, all 17^2 randomized readers per family, and rejection
+when the event feature is added. Freeze source/configuration, this entry and
+machine in `finite_moment_risk_validation01`. One Charon CPU, 30 seconds, no model
+execution or training. Independence and the finite-difference identity prove the
+general claims; enumeration validates these implementations and controls.
+
+**Validation result.** All 156 moment equalities and 3,468 randomized-reader
+checks pass for the twelve smooth families in 0.14 seconds on Charon. The event-
+feature positive control distinguishes every pair. This validates the construction;
+the all-orders claim follows from the finite-difference proof above.
+
+<a id="ln-312"></a>
+### LN-312 — 2026-09-23 UTC: full predictive procedures recover fixed judgments, with a sharp damage limit
+
+**Question.** LN-311 excludes recovery of an arbitrary fixed harm judgment from
+finitely many moments at one query. Replace those moments by a reusable generative
+procedure for the whole finite outcome trajectory. Does this repair the dependency,
+and does it force severe useful loss? These are separate questions.
+
+**Fixed-judgment recovery.** For each ordinary context x, let P_x be the actual
+trajectory law and Q_x the successor's law, implemented by normalized sequential
+conditional predictions over L symbols. Let h be the specified, publicly computable
+harm event, p_x=P_x(h), and J_x=1[p_x>q] for a fixed tolerance q. Assume the declared
+context distribution has margin |p_x-q|>=gamma>0. Define useful excess total log
+loss in natural units, Delta=E_x KL(P_x || Q_x). This equals the sum of expected
+conditional log-loss excesses under actual histories. It is a joint-law requirement,
+not an assertion that finite empirical next-symbol accuracy establishes it.
+
+Sample N independent trajectories from Q_x and threshold their empirical harm
+frequency at q. Pinsker and Hoeffding give
+
+    Pr(reader judgment != J_x) <= 2 Delta / gamma^2 + delta,
+    N >= (2/gamma^2) log(2/delta).
+
+Proof: contexts with KL>gamma^2/2 have probability at most 2 Delta/gamma^2.
+On the others, |P_x(h)-Q_x(h)|<=gamma/2. Empirical frequency differs from Q_x(h)
+by at most gamma/2 except with probability delta (strict inequalities or a limit
+resolve ties). The reader uses at most N*L successor calls, N event evaluations,
+one trajectory of workspace and a counter, plus random bits and finite-precision
+sampling costs. Approximate samplers need an additional error budget. No new world
+observation, intact answer or deleted parameter is supplied. All generated prefixes
+must be accepted by the reusable interface. A finite average per-symbol regret e
+only gives Delta=L*e, so increasing trajectory length weakens the bound.
+
+At gamma=1/4 and delta=.01, N=170 trajectories suffice for this conservative
+bound. This is a genuine fixed-judgment reduction, unlike LN-301's integrated
+score implication. It supports conditional recoverability; it does not force a
+particular internal computation or obedience to its answer. If every permitted
+reader has accuracy at most b+eta, the reduction gives
+
+    Delta >= (gamma^2/2) * (1-b-eta-delta).
+
+Only a positive right side is informative. Public-input readers remain included.
+A protected operation must have independently specified semantics and the margin
+must be justified, rather than chosen after observing performance.
+
+**Sharp information-level damage calculation.** Partition a finite outcome law P
+by h, with p=P(h) in (0,1). For any edited event mass r in (0,1), define
+
+    Q_r(y) = r P(y|h=1) on h=1,
+             (1-r) P(y|h=0) on h=0.
+
+The relative-entropy chain rule gives exactly
+
+    KL(P||Q_r) = d(p||r),
+
+where d is binary relative entropy. Every alternative with event mass r has at
+least this loss; the remaining terms are conditional divergences within the two
+parts. Thus an entire trajectory law can change its risk judgment while retaining
+all within-event predictive structure. The infimum cost to cross tolerance q is
+d(p||q), with the tie convention determining whether the boundary is attained.
+This describes probability laws; it is not an efficient white-box compiler for
+arbitrary trained weights. Computing or representing P(.|h) can itself be hard.
+
+There is also an executable genuine-removal family: an independent balanced
+retained regime V selects p=1/4 or 3/4, while both conditional outcome generators
+are identical across regimes. Erase V and keep the generators with r=1/2. Every
+reader of that retained state and independent randomness is chance on J=V, while
+predictive loss rises by only
+
+    d(1/4||1/2) = log(2) - H_binary(1/4) = 0.130812... nats.
+
+Ordinary inputs/history are required not to reveal V in this explicitly limited
+control. Fresh informative feedback may restore it (LN-174). This is statistical
+regime erasure, not a demonstrated edit of learned alignment. Independent useful
+components may retain arbitrarily much predictive advantage; their preservation
+is a counterexample to inferring severe total loss from this reduction alone.
+At b=.5, eta=0, gamma=.25, delta=.01 the conservative removal lower bound is only
+.0153125 nats. Neither a positive lower bound nor exact event identification means
+catastrophic cognition loss.
+
+**Interpretation and next gate.** Full generative prediction repairs the fixed-
+judgment identifiability gap, but leaves the severity and computational extraction
+questions. The positive construction would have to make useful conditional
+computation within the harm partition inaccessible after genuine removal, or
+establish that risk-dependent work accounts for the required useful advantage.
+Adding distribution outputs alone does not establish either premise. This connects
+the newer mean/finite-moment controls to LN-174's conditional-information budget;
+it is not a claim that this standard mathematics is new. The chain-rule reference
+is [Stanford EE376A, Lecture 20, section 1](https://web.stanford.edu/class/ee376a/files/lecture_20.pdf).
+
+**Frozen validation.** On Charon, enumerate finite rational trajectory laws and
+their sequential kernels, check normalization and exact within-event preservation,
+compare full KL with the binary term and sequential log-loss sums, and check
+strictly larger loss for a changed conditional distribution. Verify exact binomial
+judgment error for the prescribed sample counts, the public reader bound, and the
+regime-erasure mixture. One CPU, 30 seconds, no model training, search, or claim of
+learned evidence. Freeze this entry, source, configuration and machine in
+`generative_judgment_validation01` under the independent-intervention evidence root.
+
+**Validation result.** All 24 partition/chain-rule cases and 24 conditional-
+alteration controls pass. The maximum floating chain-rule discrepancy is
+1.11e-16. Exact binomial enumeration verifies the six sampling controls at three
+margins; at margin 1/4, 170 samples require 850 calls for the five-symbol control,
+and worst-side error is .00059733, below the declared .01 bound. Regime removal
+has exactly chance judgment accuracy and measured KL .13081203594113697 nats.
+Runtime is .16 seconds on one Charon CPU. These are mathematical implementation
+checks, not a trained mechanism or empirical estimate of neural editability.
+
+**Evidence preservation for LN-309–312.** All 167 manifest-listed files,
+11,700,984 bytes, were copied from Charon and verified by size and SHA256 on the
+SD evidence drive. [Fresh-system summary](artifacts/scc-causal-independent-intervention-20260923-v1/evaluation01/results/summary.json),
+[mean-preservation control](artifacts/scc-causal-independent-intervention-20260923-v1/mean_preserving_risk_validation01/validation.json),
+[finite-moment controls](artifacts/scc-causal-independent-intervention-20260923-v1/finite_moment_risk_validation01/validation.json),
+[generative recovery and damage controls](artifacts/scc-causal-independent-intervention-20260923-v1/generative_judgment_validation01/validation.json),
+and [preservation receipt](artifacts/scc-causal-independent-intervention-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `2f5b59799566a22208f2e4eee0a3e43c11bec8a229dea47398aaf3cd2419fb83`.
+The source/configuration and pre-execution entry are frozen in each run directory;
+remote originals remain under
+`/home/salvador/scc-research/causal-independent-intervention-20260923-v1/`.
+All runs are complete; no neural training was initiated.
 
 ## Historical evidence
 

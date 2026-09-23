@@ -17,7 +17,7 @@ from sklearn.kernel_ridge import KernelRidge
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import KFold, cross_val_predict
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, SplineTransformer
 from causal_model_interface import RestrictedModelUnpickler, load_predictor, model_state_digest
 from distribution_readout import ConsequenceDistribution
 
@@ -32,6 +32,15 @@ class DatasetPrefixUnpickler(RestrictedModelUnpickler):
 def extract_dataset(path):
     """Stop before the serialized causal model; never reconstruct embedded code."""
     data = path.read_bytes()
+    if path.suffix == '.npz':
+        with np.load(path, allow_pickle=False) as saved:
+            arrays = {name:saved[name] for name in ('x_obs','x_int','y_obs','y_int')}
+        count = len(arrays['y_obs'])
+        assert all(len(value)==count and np.all(np.isfinite(value)) for value in arrays.values())
+        assert arrays['x_obs'].shape == arrays['x_int'].shape
+        assert all(set(np.unique(arrays[name][:,0])) <= {0,1} for name in ('x_obs','x_int'))
+        return arrays, {'source_sha256':hashlib.sha256(data).hexdigest(), 'rows':count,
+            'features':arrays['x_obs'].shape[1], 'embedded_causal_code_loaded':False}
     operations = list(pickletools.genops(data))
     segments = []
     for index, (operation, argument, position) in enumerate(operations):
@@ -57,14 +66,18 @@ def extract_dataset(path):
         'embedded_causal_code_loaded':False}
 
 
-def public_estimators(seed):
-    return {
+def public_estimators(seed, include_structural_control=False):
+    methods = {
         'ridge':make_pipeline(StandardScaler(),Ridge(alpha=1)),
         'kernel_ridge':make_pipeline(StandardScaler(),KernelRidge(alpha=.1,kernel='rbf',gamma=.25)),
         'random_forest':RandomForestRegressor(n_estimators=80,min_samples_leaf=3,random_state=seed,n_jobs=1),
         'extra_trees':ExtraTreesRegressor(n_estimators=80,min_samples_leaf=3,random_state=seed,n_jobs=1),
         'histogram_gradient_boosting':HistGradientBoostingRegressor(max_iter=100,max_leaf_nodes=7,l2_regularization=1,random_state=seed),
     }
+    if include_structural_control:
+        methods['additive_spline_ridge'] = make_pipeline(StandardScaler(),
+            SplineTransformer(n_knots=5,degree=3,include_bias=False),Ridge(alpha=.1))
+    return methods
 
 
 def main():
@@ -82,7 +95,8 @@ def main():
     (output/'loading.json').write_text(json.dumps(metadata,indent=2)+'\n')
     results=[]
     thresholds=np.arange(configuration['threshold_count'])/configuration['threshold_count']
-    paths=sorted(Path(arguments.datasets).glob('data/prior_sampling/*/*.pkl'))
+    extension=configuration.get('dataset_format','pkl')
+    paths=sorted(Path(arguments.datasets).glob('data/prior_sampling/*/*.'+extension))
     assert len(paths)==configuration['expected_cases']
     for case_index,path in enumerate(paths):
         arrays,receipt=extract_dataset(path)
@@ -116,7 +130,7 @@ def main():
         means={'empirical_mean':np.full(len(query),baseline_mean),'causal_predictor':learned_mean,
             'native_mean':np.clip((prediction['mean']-lower)/span,0,1)}
         validation_losses={};public_seconds={}
-        for name,estimator in public_estimators(configuration['seed']+case_index).items():
+        for name,estimator in public_estimators(configuration['seed']+case_index,configuration.get('include_structural_control',False)).items():
             started=time.perf_counter()
             validation=cross_val_predict(clone(estimator),context,bounded_outcomes,
                 cv=KFold(3,shuffle=True,random_state=configuration['seed']),n_jobs=1)

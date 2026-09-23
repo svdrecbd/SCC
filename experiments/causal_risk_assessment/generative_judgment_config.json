@@ -1,0 +1,9 @@
+{
+  "trajectory_length": 5,
+  "contexts": 4,
+  "margins": ["1/8", "1/4", "3/8"],
+  "failure_probability": "1/100",
+  "cpu_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}
