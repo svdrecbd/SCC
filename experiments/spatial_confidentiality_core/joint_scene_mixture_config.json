@@ -1,0 +1,14 @@
+{
+  "seed": 33337,
+  "component_standard_deviation": 0.35,
+  "mixture_samples": 65536,
+  "gradient_repetitions": 32,
+  "samples_per_batch": 2048,
+  "standard_error_multiplier": 6,
+  "probability_absolute_tolerance": 0.001,
+  "gradient_absolute_tolerance": 0.002,
+  "log_density_tolerance": 1e-10,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "neural_training": false
+}

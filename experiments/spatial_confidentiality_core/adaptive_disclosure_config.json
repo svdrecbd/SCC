@@ -1,0 +1,14 @@
+{
+  "subspace_cases": [
+    {"dimension": 4, "rank": 2, "expected_subspaces": 35},
+    {"dimension": 5, "rank": 3, "expected_subspaces": 155}
+  ],
+  "operator_case": {"dimension": 4, "rank": 2, "input_dimension": 2},
+  "large_cases": [
+    {"dimension": 128, "erased_directions": 8},
+    {"dimension": 1024, "erased_directions": 16}
+  ],
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

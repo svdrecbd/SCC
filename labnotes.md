@@ -68,13 +68,23 @@ can be exponential: this is a conditional boundary, not an efficient neural atta
 or general impossibility. Training-induced origin is not a new requirement for
 valid conditional functional coupling; representation mixing alone is insufficient.
 
+**Adaptive coverage and native joint assessor — [LN-331–333](#ln-331).** No
+fixed weighting of the complete parity-policy family guarantees a large average
+judgment advantage against every linear retained representation. Adaptive queries
+can expose the surviving procedure in the declared controls. An executable
+four-component joint scene model now preserves shared-ray logical dependencies
+and higher-order scene alternatives. Its likelihood-score training derivative
+passes analytic checks and a full backward pass through the actual 24.8-million-
+parameter parent; all parameters remain unchanged. This is a validated candidate
+component, not a trained mechanism or an all-reader removal certificate.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
-with joint-geometry coverage justified. An alternative implementation that still
+with adaptive joint-geometry coverage justified. An alternative implementation that still
 recovers protection is compatible with coupling; mandatory execution of a named
 head is not a core requirement. Public-parent reload restores both functions and
 limits removal/durability claims when that repair is allowed. No smaller resource
-budget is silently imposed. Marginal calibration training alone would not settle
+budget is silently imposed. Neither marginal nor joint calibration alone settles
 these obligations, and no neural training has begun.
 
 **Semantic boundary — [LN-317–320](#ln-317).** The preceding three-way semantic
@@ -25262,6 +25272,452 @@ Both frozen runs, including the initial one-step-distinguishable control, are
 retained with their source, configurations, plans, machines, transition graphs,
 partitions, pairwise distinguishing sequences and full learning trajectories.
 Both Charon jobs are terminal; no original checkpoint was modified.
+
+<a id="ln-331"></a>
+### LN-331 — 2026-09-23: distinguish fixed-average from adaptive disclosure coverage
+
+**Previous-turn classification and next decision.** LN-328–330 changed the
+admission argument and supplied preserved executable evidence, so the preceding
+goal turn was progress. The active objective remains a trainable destructive
+mechanism or a defensible impossibility result. Here assess whether LN-327's
+sequential disclosure family closes the joint-information gap well enough to
+justify training. It does not follow merely from allowing longer policies.
+
+**Current policy-length limitation.** Each of the tested policies reads at most
+32 pair comparisons, hence at most 64 source coordinates. LN-326's degree-limited
+field construction can preserve residual relations while removing every marginal
+on that many coordinates, under its uniform field-source law. This is an analytic
+counterexample to a source-unrestricted inference from local assessment loss;
+it is not a claimed attack on the measured natural images. Source structure that
+excludes this example would need its own argument. Increasing the fixed maximum
+length only changes the locality parameter.
+
+**Allowing every parity still leaves an average-score problem.** For uniform
+Z in F2^n, retain W=HZ for a fixed public rank-r matrix H. For any nonzero query
+q, the protected sequential policy observes the nonsecret coordinates selected
+by q, forms their parity, and emits a designated private bit s iff that parity
+is one. Under the fixed confidentiality norm its violation bit is q dot Z.
+The policy has at most n observations and an XOR register. The assessor receives
+its retained state and the program, not a free fresh observation oracle. The
+same idealized sensing convention as LN-327 is explicit; no real optical actuator
+or neural policy execution is established.
+
+If q is in the row space S of H, its label is determined by W. Otherwise it is
+balanced in every retained-state fibre. Hence for any public query distribution
+nu on the nonzero vectors, independent of Z,
+
+    accuracy_Bayes(H,nu) = 1/2 + nu(S excluding zero)/2.
+
+The uniform-query instance is already present in LN-176; it is not a new recovery
+formula. The additional issue is whether a better FIXED query weighting could
+prevent the escape. For a uniformly selected r-dimensional subspace S, each
+nonzero vector belongs to S with probability
+
+    p = (2^r - 1)/(2^n - 1).
+
+Therefore E_S nu(S)=p for EVERY nu. Some S has mass at most p, while uniform nu
+assigns exactly p to every S. Thus, within rank-r linear retained representations,
+
+    max_nu min_H accuracy_Bayes(H,nu) = 1/2 + p/2.
+
+Allowing nonlinear representations cannot improve this defender-side upper
+bound; no equality for the larger class is asserted. Reweighting a fixed complete
+parity family therefore cannot guarantee large average advantage whenever much
+source information survives. Dropping k independent directions leaves n-k bits
+while the best worst-case advantage is approximately 2^(-k-1). For n=1,024,k=16,
+98.4375% of source entropy survives and this advantage is about 0.0000076294.
+This is an exact finite-source statement about Bayes competence, not unsuccessful
+reader search, information destruction or a learned cognition result.
+
+**Adaptive exposure and resource accounting.** Once the PUBLIC source-independent
+encoding H is specified, select any nonzero basis row h_j as the next policy.
+Its violation bit is exactly W_j, so a retained-state reader reaches accuracy one
+while its public prior is balanced. Query selection depends on H, not on Z or the
+answer W_j; the query does not smuggle in a source-dependent answer. The known
+row-space procedure survives fixed-average near-chance scoring and supplies a
+concrete adaptive recovery witness.
+
+H's description is not free. An explicit matrix requires rn logical bits, in
+addition to r source-dependent retained bits and runtime overhead. An arbitrary
+minimizing subspace can be expensive to find and describe. This is an information
+coverage counterexample, not a same-total-storage saturation attack. A coordinate
+projection is compact and suffices for the uniform-law example; arbitrary-law
+minimization does not inherit that compactness automatically. The adaptive reader
+selects a stored row and one retained bit; the hypothetical policy executes
+popcount(h_j) sensor reads and parity updates. No efficient method for extracting
+an analogous program from arbitrary neural weights is established.
+
+The same example preserves a reusable map: for uniform A in F2^(n by d), retain
+B=HA and evaluate x -> Bx on fresh d-bit inputs. For nonzero x and q, the protected
+query q^T A x is known iff q is in S. An arbitrary fixed joint distribution on
+(q,x) reduces to its q marginal in the subspace argument. Adaptive q=h_j exposes
+row j of Bx. This extends the coverage statement to a provisioned algebraic
+procedure, not a trained model or proof of destroyed future learning.
+
+**Exhaustive validation.** Enumerate all reduced-row-echelon rank-r subspaces for
+(n,r)=(4,2),(5,3), expected counts 35 and 155. Enumerate every source state and
+nonzero query; independently compute retained-state posterior counts and verify
+the exact known-versus-balanced criterion. Check subspace incidence counts and
+average/minimum mass for uniform, coordinate-only, odd-weight, sparse-weighted
+and concentrated query laws. Uniform weighting must attain the stated minimax
+value; every other fixed law must admit a subspace no better than it.
+
+For every basis row and every source, evaluate the actual conditional-release
+policy on secrets zero and one and compare its leak bit with the retained bit.
+Also exhaust (n,r,d)=(4,2,2): every source matrix, nonzero x and q, retaining B
+as the complete source-dependent state. Verify the posterior criterion, exact
+new-input operator outputs and adaptive disclosure recovery. Save all subspaces,
+query-law optima, posterior verification counts, policy costs and large-size
+analytic comparisons. A deliberately reversed row-space criterion must fail.
+
+One Charon CPU, 30-second wall cap, standard-library arithmetic, no randomness,
+training, model parameter changes or GPU work. Freeze this entry, source, config
+and machine under `adaptive-disclosure-coverage-20260923-v1/exhaustive01` before
+execution. Preserve immutable evidence on the SD store. The next admission
+question is whether a proposed native assessor has a justified adaptive coverage
+argument for the useful procedures it claims to protect, rather than a favourable
+average over a fixed query suite. This control alone is not that mechanism.
+
+**Completed result.** The two vector cases enumerate all 35 and 155 subspaces,
+respectively. All 40,540 vector posterior-fibre checks pass. Every one of the ten
+fixed-law/case combinations has the predicted average incidence, and its minimum
+is no larger than the uniform-law value. Uniform laws attain minimax accuracies
+3/5 and 19/31. The reversed criterion fails all 5,330 query/subspace controls.
+All 16,000 adaptive vector-policy cases recover the exact retained parity.
+
+The matrix case checks every one of 256 source matrices under all 35 rank-two
+subspaces: 25,200 posterior fibres, 26,880 fresh-input operator evaluations and
+53,760 conditional-disclosure cases. All pass. Those disclosure policies read
+actual selected matrix bits and incur popcount(q)*popcount(x) observations;
+they receive no precomputed matrix product oracle. The maximum in this control
+is six observations. The n=1,024 comparison is analytic from the verified formula,
+not a separately enumerated large-source experiment. Runtime is 0.7908 seconds
+inside Python, 0.82 seconds including startup, peak 13,528 KiB.
+
+**Training consequence.** Fixed average disclosure accuracy cannot serve as a
+broad functional-removal certificate even when the fixed family contains every
+nonzero parity. The next native implementation must preserve joint scene outcomes
+and admit recovery policies tied to specified surviving useful procedures.
+An efficient selector is explicit for these public linear encodings. Extraction
+from arbitrary neural representations, the source assumptions needed for real
+images and an all-reader severe-loss result remain unresolved. This supports
+an adaptive coverage requirement; it does not supply the learned mechanism.
+
+**Evidence.** Nine manifest-listed files, 81,129 bytes, are verified on the SD
+store at [adaptive disclosure coverage](artifacts/scc-adaptive-disclosure-coverage-20260923-v1/).
+Manifest SHA256:
+`4293c3e5190edbf90d53964cdd1b120596fa10789c6c7064ec4a0e00b3d576df`.
+The exhaustive subspaces, fixed query laws, selected minimizing matrices, counts,
+source/configuration, machine and frozen plan are preserved. The Charon job is
+terminal; no model was trained or modified.
+
+<a id="ln-332"></a>
+### LN-332 — 2026-09-23: implement joint scene assessment and its training derivative
+
+**Concrete candidate component.** LN-331 rejects using a fixed average judgment
+score as broad removal evidence. It also makes marginal-only implementations
+insufficient: policies can use relations among many scene coordinates. Build a
+joint scene assessor whose useful interface evaluates a geometric Boolean program
+by assessing the policy that releases a private bit exactly when that program
+returns true. This is the native computational component for the existing
+semantic-coupling candidate, not a new norm, a training admission, or a claim that
+this implementation alone supplies destructive cognition coupling.
+
+**Representation and exact forward semantics.** For the unique ray locations
+used by a query group, predict a joint Gaussian vector of LOG depths,
+
+    L = mu + F g + diag(sigma) e,
+
+where g and e are independent standard normal vectors, F has a small number of
+columns, and sigma is strictly positive. Depth is exp(L), so all sampled depths
+are positive. This is a low-rank-plus-diagonal modelling assumption, not a claim
+that real conditional scene geometry is Gaussian. It differs from LN-324's
+bounded 65-atom marginals and must be qualified independently on scenes.
+
+A trainable projection consumes per-ray decoder features and parent depth. Start
+mu at log(parent depth), use a zero mean residual, a positive diagonal standard
+deviation and small NONZERO covariance factors. Zero factors would have zero
+covariance derivative and cannot initiate their own learning. Initial depth
+medians, not lognormal means, equal the parent. One sample supplies every node
+of a policy: comparisons, positive depth thresholds, NOT, AND, OR, XOR and strict
+majority. Repeated references to a ray use the same sampled coordinate, and
+repeated predicates use the same Boolean value. There is no assumption that
+predicate outcomes are independent. A caller must supply unique physical rays;
+full image integration must enforce coordinate deduplication.
+
+For a program f and sampled scene L, the hypothetical public output is s*f(L).
+The two secret values give different public outputs iff f(L)=1. The assessor's
+risk is p=E f(L); a useful prediction for f uses this same probability. This
+identity holds for each admitted program. Uniform removal over a declared useful
+program class would imply loss throughout that class by the same compiler;
+a low average score on a fixed sample of programs does not establish that premise.
+Alternative implementations retaining predictions also retain the recoverable
+judgment. Enforcement, general cognition and necessary execution of this named
+module are not claimed.
+
+**Differentiating actual policy outcomes.** Hard comparisons have zero ordinary
+pathwise derivative almost everywhere. Smoothing each predicate separately also
+breaks logical dependence (for example, treating two copies of a fair predicate
+as independent assigns probability 1/2 to their XOR instead of zero). Use a
+likelihood-score estimator for the actual joint Boolean event instead.
+
+For a fixed binary target y, the population Brier gradient is
+
+    grad (p-y)^2 = 2(p-y) E[f(L) grad log density_theta(L)].
+
+Draw independent batches A and B. With p_A their first empirical event mean,
+backpropagate only through log density on detached samples from B, using
+
+    2(p_A-y) mean_B[(f(L_B)-p_A) log density_theta(L_B)].
+
+The p_A baseline is independent of B, and the expected density score is zero,
+so the expected derivative is the population Brier derivative. Both p_A and
+f(L_B) are detached. Reusing the same draw for both batches breaks this argument;
+with one reused draw the displayed coefficient is identically zero. The recorded
+surrogate VALUE is not the Brier loss. Report the separate independent-product
+estimate (p_A-y)(p_B-y), which is unbiased for population Brier and nonnegative for the declared binary
+targets, alongside a clearly labelled plug-in diagnostic. Variance and
+sample cost remain real training constraints. No straight-through gradient is
+silently substituted.
+
+This uses established likelihood-score gradient estimation; see
+[Schulman et al., Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254).
+The Gaussian log density uses the documented
+[PyTorch low-rank multivariate normal](https://docs.pytorch.org/docs/2.14/distributions.html#lowrankmultivariatenormal).
+The two-independent-batch formula and the stated finite controls are derived
+explicitly here; the sources do not establish SCC.
+
+**Predeclared validation.** On one Charon CPU, with fixed seed 33237 and FP64:
+compare vectorized program outcomes against independent scalar evaluation on
+all 16 sign-valued four-ray worlds for a fixed eight-program grammar control;
+check repeat-XOR, repeat-AND and complement identities on the SAME samples;
+reject independent-predicate and reused-single-draw gradient controls. Check
+a correlated versus anticorrelated pair of finite worlds with equal marginals
+but opposite XOR outcomes.
+
+For one two-ray comparison, compute the Gaussian CDF probability and its Brier
+gradient analytically. Compare 32 independent gradient-estimator repetitions,
+2,048 samples in each batch, to that derivative for both y=0 and y=1. A check
+passes within six empirical standard errors plus absolute 0.002 for each
+component; this is a numerical consistency criterion, not a coverage theorem
+for an estimated confidence interval. Record all estimates and errors rather
+than only the pass indicator. Check low-rank log density against an independent
+full covariance implementation at 1e-10 tolerance. Check finite, nonzero gradients
+to parent means, covariance factors, diagonal scales and trainable projections,
+and verify that no parameter value changes. No optimizer is constructed.
+
+Freeze source, configuration and this entry before `joint-scene-assessment-20260923-v1/validation01`;
+60-second wall cap, one CPU, no neural training, GPU or pretrained-weight change.
+This checks an executable candidate component. Full pretrained integration,
+empirical joint calibration, gradient variance at useful scale, adaptive coverage,
+genuine-removal evidence and severe cognitive loss remain to be established.
+
+**Component validation completed.** All 128 scalar-versus-vector program cases
+and four malformed-input controls pass. Equal marginal distributions give XOR
+risk zero or one depending on their joint law; independent-copy arithmetic gives
+an incorrect 1/2 risk for a predicate XOR itself. Low-rank and full-covariance
+log densities agree within 3.56e-15. All 12 mean gradient components (six for each
+binary target) satisfy the frozen criterion against the analytic Gaussian result;
+the largest observed absolute discrepancy is 0.004459. The intentionally reused
+single-draw estimator gives zero in every component despite a nonzero analytic
+gradient. A hard-pathwise derivative is absent as expected.
+
+The new projection has 198 parameters. All six parameter-group gradients, feature
+gradients and parent-depth gradients are finite and nonzero in the declared
+control. Initial depth medians match exactly in FP64; the module state digest is
+unchanged after backward evaluation. Runtime is 0.547 seconds inside Python,
+2.35 seconds including imports, peak 632,792 KiB. These validate the estimator
+and implementation, not gradient efficiency on full images or learned calibration.
+
+**Full pretrained integration plan.** In fresh `integration01`, use the same
+pinned 24,785,089-parameter parent and scene zero from LN-324's immutable source
+root. Retain its final 32-channel decoder activation and parent depth, resize
+with the established convention, and gather six declared ray references:
+(100,100),(100,200),(200,100),(200,200),(100,100),(300,300). Deduplicate them before
+constructing the joint law, and remap every program's ray references. Repeated
+physical rays must refer to the same sample coordinate.
+
+Check gathered parent depths against the saved map at 1e-6 metre tolerance,
+and initialized lognormal medians against those parent values at the same
+tolerance. Draw 1,024 shared scenes and check same-ray comparison is always false,
+duplicate-predicate XOR is always false, repeated AND preserves its predicate,
+and complement probabilities sum exactly to one. One derivative-diagnostic
+threshold equals the DETACHED current parent median on ray zero; it is fixed for
+that derivative evaluation and provides a nonsaturated event. Its empirical risk
+must lie within 0.05 of 1/2. This adaptive diagnostic is not a held-out accuracy
+measurement or a source of scientific task labels.
+
+Run one two-batch backward evaluation against diagnostic target zero, without an
+optimizer. Require finite nonzero final-parent-layer and new mean/scale/factor
+projection gradients. Verify full parent and integrated state digests remain
+unchanged; record forward/backward time, ray mapping, probabilities and gradient
+norms. Freeze the actual wrapper, evaluator, imported local source, selection,
+configuration and entry. One Charon CPU, 60 seconds, no GPU or training; references
+to the old raw data/checkpoint retain LN-324's manifest identity. Do not edit
+imported source while this run is executing.
+
+**Full integration completed.** The interrupted client session was resumed and
+returned authoritative exit status zero; no duplicate run was launched. The
+24,785,287-parameter integrated model reproduces all gathered parent depths
+exactly and its initial medians within 2.39e-7 metres. Six ray references become
+five distinct physical rays. Same-ray comparison and duplicate XOR are zero on
+every draw; the predicate, complement and repeated AND probabilities are
+0.50390625,0.49609375,0.50390625. Final-parent-layer and all new projection
+gradients are finite and nonzero. The complete parent digest remains
+`b421be3848510f81abd64bf4f4fd4a77d68da1703fef54d36e40ea59403f8068`;
+no optimizer step or parameter change occurred.
+
+Forward and backward take 3.063 and 6.323 seconds, respectively; process time
+including imports is 17.44 seconds and peak memory 2,075,612 KiB. This establishes
+an executable gradient path into the actual learned parent for joint-program
+assessment. It does not establish empirical calibration, representational
+adequacy for arbitrary higher-order dependencies, genuine removal, severe
+cognitive loss or training admission. The previous goal turn was progress:
+it produced the fixed-query coverage result, validated a joint estimator and
+completed this full integration. The active objective remains unresolved.
+
+**Evidence.** Twenty-seven manifest-listed files, 140,879 bytes, are verified on
+the SD store at [joint scene assessment](artifacts/scc-joint-scene-assessment-20260923-v1/).
+Manifest SHA256:
+`02e83786626b992b7ac7f3b57b19d600e3198c3fb8067e7afedb927a3511e169`.
+Both actual executed sources, frozen plans/configurations, complete gradient
+estimates, runtime snapshots and integration receipts are retained. Both jobs
+are terminal. The checkpoint and image are referenced from LN-324's immutable
+evidence root rather than duplicated.
+
+<a id="ln-333"></a>
+### LN-333 — 2026-09-23: retain higher-order scene alternatives in the native assessor
+
+**Representational failure to address before training.** A single joint Gaussian
+fixes an independence error but cannot represent arbitrary higher-order scene
+relations. Let three log depths have means drawn uniformly from the four sign
+vectors with EVEN positive-sign parity, then add independent Gaussian noise of
+standard deviation s=0.35. Define a second law from the ODD parity vectors.
+Both laws have identical one-ray and two-ray distributions, zero mean and full
+covariance (1+s^2)I. They differ in the confidentiality risk of a policy that
+releases a private bit iff an odd number of the depths exceed one metre.
+
+Each mean sign flips with probability d=Phi(-1/s). The even law has risk
+
+    a = [1-(1-2d)^3]/2,
+
+and the odd law has risk 1-a. A centered nonsingular Gaussian has odd-sign-parity
+risk exactly 1/2 by the symmetry L -> -L, regardless of its covariance. Preserving
+balanced univariate sign probabilities in a Gaussian forces its means to zero.
+Thus covariance adjustment cannot fix this example while preserving those
+marginal probabilities. This is an analytic model-class limitation, not evidence
+about the distribution of the NYU scenes or a new impossibility result for SCC.
+
+**Concrete representation revision.** Implement a mixture of four low-rank-plus-
+diagonal Gaussian log-depth fields. One categorical scene component and its
+shared Gaussian factors are drawn once per scene sample; all policy nodes use
+that same sampled scene. Mixture weights depend on a global image feature vector,
+not the selected query rays, so changing a query subset does not change the
+underlying scene law. Per-ray component means, factors and scales depend on that
+ray's features. The joint log density is a log-sum-exp over component densities.
+The likelihood-score estimator from LN-332 differentiates this marginal mixture
+density, including the mixing weights, on detached samples.
+
+Initialize all component means at log parent depth, with zero mean residual.
+Use distinct positive component scales and small nonzero covariance projections
+to avoid identical-component symmetry; initialize small nonzero image-to-mixture
+weight projections. Every component's marginal median then equals the parent,
+and their mixture has that same marginal median, regardless of initial weights
+or scales. This is median preservation, not preservation of arithmetic means.
+Four components represent the stated counterexample; there is no claim that a
+fixed four-component mixture covers arbitrary coding constructions or all real
+scene uncertainty. Required component count and training variance remain open.
+
+**Frozen validation.** On Charon CPU 0 in FP64, enumerate the eight sign means and
+check exact equality of all one- and two-coordinate component marginal laws,
+means and covariance. Sample 65,536 worlds from each four-component law using
+seed 33337 and evaluate the actual three-threshold XOR program. Compare each
+risk to the analytic expression within six binomial standard errors plus 0.001;
+record empirical counts and the numerical criterion. The moment-matched Gaussian
+control must predict 1/2 analytically and fail to match either risk.
+
+For a two-component, two-ray mixture, compare the exact weighted Gaussian-CDF
+risk and its Brier derivatives with 32 independent two-batch estimates for each
+binary target, 2,048 samples per batch. Use LN-332's six-empirical-standard-error
+plus 0.002 check and save every estimate. Independently construct full component
+covariances and compare mixture log densities at 1e-10 tolerance. Check that
+component marginal parameters and mixture weights on any declared subset equal
+those obtained by restricting the full ray group while keeping global image
+features fixed. Require finite nonzero gradients to all projection groups in a
+nondegenerate diagnostic and unchanged module parameter digests. No optimizer.
+
+Freeze entry, sources, config and machine in
+`joint-scene-mixture-20260923-v1/validation01`; one CPU, 60 seconds. After component
+checks pass, repeat LN-332's declared full-parent integration in fresh
+`integration01` with the four-component model and otherwise unchanged rays,
+sampling count, diagnostic threshold, gradient checks and 60-second CPU cap.
+Record all mixing-layer gradients, preserve original and integrated state hashes,
+and keep the original Gaussian evidence immutable. No training or GPU allocation
+is initiated. This constructs a more adequate joint assessor component; adaptive
+coverage, calibrated competence, genuine removal and severe cognitive loss are
+still independent admission obligations.
+
+**Component checks completed.** All six one- and two-coordinate marginal laws
+match exactly between the two controls. Their analytic disclosure risks are
+0.006384729971469216 and 0.9936152700285308; 65,536 sampled scenes from each give
+0.0064697265625 and 0.993804931640625, within the frozen criteria. The moment-
+matched Gaussian gives 1/2 for both. Mixture and independently constructed full-
+covariance log densities agree within 1.78e-15. All 28 mean gradient components
+satisfy the fixed check; maximum absolute discrepancy is 0.002377.
+
+Query-subset restriction preserves component parameters and global mixture
+weights. The 924-parameter module preserves initial marginal medians exactly in
+FP64; all eight projection-group gradients and parent/local/global feature
+gradients are finite and nonzero in the stated diagnostic. Parameter digests
+remain unchanged. Runtime is 0.723 seconds inside Python, 2.63 seconds including
+imports, peak 636,832 KiB. Proceed only to the predeclared integration check.
+
+**Score-value correction.** LN-332's initial plan incorrectly said the independent-
+product Brier estimator could be negative for these targets. With y in {0,1},
+both factors (p_A-y),(p_B-y) have the same sign, so their product is nonnegative.
+The living explanation is corrected; frozen plans remain unchanged. This does
+not change the derivative estimator, any measured result or the distinction
+between the surrogate value and Brier risk. Negative products are possible with
+interior soft targets, which this implementation explicitly rejects.
+
+**Full mixture integration completed.** The four-component wrapper contains
+24,786,013 parameters, including 924 new projection parameters. It reproduces
+selected parent depths exactly and initial marginal medians within 2.39e-7 metres.
+Coordinate deduplication and repeated-predicate semantics pass. The diagnostic
+predicate, complement and repeated AND probabilities are 0.4765625,0.5234375,
+0.4765625; same-ray comparison and repeated XOR remain zero. Final parent-layer
+and every new projection group have finite nonzero sampled gradients.
+
+Forward and backward take 3.057 and 6.293 seconds; total process time is 17.73
+seconds, peak memory 2,081,268 KiB. The entire parent and integrated parameter
+states are unchanged. The parent's digest remains the original LN-322 digest;
+the integrated state digest is
+`76767daf926ab745b6a2b033c192717986018cfa53a10426e49fd85a2f96a302`.
+This is gradient connectivity and initialization evidence. In particular, a
+nonzero Monte Carlo gradient does not prove a nonzero population derivative for
+every diagnostic parameter: centered-mixture weight derivatives at the exact
+common median can have zero expectation. The separate analytic comparison test
+establishes the estimator's nondegenerate mixing-weight derivative case.
+
+**Current admission decision.** A complete trainable joint-assessment component
+now replaces the earlier marginal-only implementation for this candidate's next
+investigation. It supports exact logical dependencies within each sampled scene,
+higher-order alternatives, and a checked risk-loss derivative into the existing
+learned parent. It has not been trained. Four components are not asserted to
+represent every joint scene law. Nor do initialization and gradient checks prove
+calibrated competence, manageable gradient variance at long programs, adaptive
+functional coverage, or destructive loss after genuine removal. The next actual
+mechanism claim must address these obligations; this work does not close the
+active goal or admit a calibration run as if it were an SCC mechanism test.
+
+**Evidence.** Twenty-eight manifest-listed files, 176,455 bytes, are verified on
+the SD store at [joint scene mixture](artifacts/scc-joint-scene-mixture-20260923-v1/).
+Manifest SHA256:
+`144c14a297d22214cd81e23ea5c0ec2ac0885a444486f3da4f41d40fb586bedd`.
+Both component and full-parent runs are terminal. Actual executed sources,
+configurations, pre-execution entries, complete derivative estimates, runtime
+snapshots and integration results are preserved; no earlier run was overwritten.
+The source checkpoint and image retain LN-324's evidence manifest identity.
 
 ## Historical evidence
 

@@ -1,0 +1,12 @@
+{
+  "seed": 33237,
+  "selection_index": 0,
+  "ray_coordinates": [[100,100], [100,200], [200,100], [200,200], [100,100], [300,300]],
+  "samples_per_batch": 1024,
+  "parent_depth_tolerance_metres": 1e-6,
+  "median_probability_tolerance": 0.05,
+  "source_evidence_manifest_sha256": "fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16",
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "neural_training": false
+}
