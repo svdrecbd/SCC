@@ -1,0 +1,10 @@
+{
+  "calibration_scenes": 16,
+  "lengths": [1, 2, 4, 8, 16, 32],
+  "programs_per_scene": 2048,
+  "program_seed": 32737,
+  "bootstrap_seed": 32738,
+  "bootstrap_replicates": 10000,
+  "wall_seconds": 45,
+  "neural_training": false
+}

@@ -45,6 +45,17 @@ This is an information-level and algebraic-procedure control, not an attack on
 the visual model or a theorem for the natural-image distribution. Local judgment
 coverage alone cannot support a claim of broad spatial destruction.
 
+**Sequential disclosure assessment — [LN-327](#ln-327).** Static joint sharing
+can be exactly informative yet weak at finite error: under the parity control,
+the strongest monotone exposure predicate has Brier gain that falls as 1/n.
+A sequential conditional-disclosure policy directly exposes that global bit
+with constant gain and linear observation cost. The learned geometry supports
+32-comparison majority policies at 81.36% versus 66.90% for the strongest tested
+public predictor, while 32-comparison XOR is near chance. These are code-executed
+controllers over saved learned predictions, not trained neural program reasoning.
+The compiler establishes a conditional label relation; a learned destructive
+mechanism and a genuine-removal result remain missing.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with joint-geometry coverage justified. An alternative implementation that still
@@ -24636,6 +24647,176 @@ the SD evidence store. Manifest SHA256:
 All three Charon jobs are terminal with successful exit statuses. Their frozen
 source/configuration/entry, machine record, exact outcomes and negative controls
 are preserved. Original model weights and all preceding evidence are unchanged.
+
+<a id="ln-327"></a>
+### LN-327 — 2026-09-23: distinguish static joint disclosure from sequential policy assessment
+
+**Question.** LN-326 is completed progress, not a mechanism admission. Joint
+judgments must detect retained global structure at meaningful error and resource
+levels. Test whether simply allowing larger static disclosure groups suffices,
+and whether a sequential disclosure policy avoids the resulting limitation.
+The fixed norm remains independence of an observer's output from a private bit.
+
+**Exact completeness versus usable accuracy.** Let Z be uniform on {0,1}^n and
+retain only its parity W. If a static n-of-n sharing policy reveals its secret
+exactly when all selected rays are visible, its judgment on a subset S is
+J_S=product_{i in S} Z_i. For every proper subset its conditional distribution
+is unchanged by W. For the full set, the public probability is 2^-n and the
+conditional probability is either 0 or 2^(1-n). The Bayes Brier improvement is
+4^-n. Therefore any source-independent distribution over these subset policies
+has gain at most 4^-n, despite perfect retained parity. For n>=2, optimal hard
+classification gains nothing even on the full set. All conjunction probabilities
+jointly determine a finite binary distribution by inclusion-exclusion, but that
+exact fact supplies no dimension-independent approximate recovery guarantee.
+
+**A wider static bound.** More generally, fix a transmission protocol whose
+observer sees a subset of its shares/signals. Adding observations cannot restore
+independence from the secret after it has been lost. Its binary leakage predicate
+f(Z) is therefore monotone in the visible set. Define
+
+    c_f = E[f(Z)*(-1)^W],   p = E[f(Z)].
+
+The conditional leakage probabilities are p+c_f and p-c_f, so the best Brier
+improvement from W is c_f^2. Let mu_j be the mean of f over visibility sets of
+size j. A uniformly random maximal chain couples these levels, giving
+mu_0<=...<=mu_n. With d_r=mu_r-mu_(r-1)>=0, the alternating binomial identity gives
+
+    c_f = 2^-n * sum_{r=1}^n d_r*(-1)^r*C(n-1,r-1).
+
+The d_r sum to at most one. Hence
+
+    abs(c_f) <= C(n-1,floor((n-1)/2))/2^n,
+    Brier gain <= [C(n-1,floor((n-1)/2))/2^n]^2.
+
+A cardinality-threshold predicate attains the bound. It decays proportionally
+to 1/n for Brier gain, more slowly than n-of-n conjunction's exponential decay,
+but still allows a perfectly retained global bit under a fixed positive removal
+tolerance at sufficiently large n. This is a bound for static monotone exposure
+protocols under this source law, not all confidentiality judgments or all useful
+cognition. Arbitrary changes in the transmitted messages with Z are outside it.
+
+**Sequential alternative.** A declared policy can inspect ordinary non-secret
+scene relations, update a one-bit register by XOR, and disclose s only if the
+final register is one. Its violation judgment is exactly that final register.
+This is not monotone in the sensed relations because the policy changes what it
+transmits. On the uniform-bit control, retained parity predicts the judgment
+perfectly with Brier gain 1/4, independently of n. The cost is n observations,
+n register updates and one conditional disclosure. This is an ordinary policy
+being assessed; no trusted component enforces its decision or stops model edits.
+Executing the real policy to obtain its observations is not a free prediction
+oracle. The assessor must predict before execution from its allowed input/state.
+
+The same compiler applies to a majority controller or other explicitly specified
+finite program over scene relations: append conditional disclosure to its terminal
+bit. A surviving predictor of that bit supplies an equally accurate judgment
+reader. This is conditional functional recovery for the supplied program/query
+law, not a guarantee over arbitrary real-world policies, obedience, durable
+removal, or every cognitive ability. The learned factual calculation and its
+normative use still need a meaningful destructive-dependence experiment.
+
+**Exact validation.** In `static_and_sequential01`, enumerate every Boolean
+function on at most four bits and retain precisely those satisfying all monotone
+cube edges. Check the coefficient bound and threshold attainment. Exhaust all
+subset conjunctions through n=8. Simulate the XOR controller and both secrets on
+all worlds through n=10. Report exact bounds also for n=16,64,256,1024 using
+integer binomial coefficients. Reject the claim that sequential XOR is monotone
+for n>=2. One Charon CPU, 30 seconds, frozen source/configuration/entry/machine;
+no neural model or optimization.
+
+**Learned sequential prediction screen.** If the exact check passes, evaluate
+native and six already fitted public depth predictors on XOR and majority
+controllers with 1,2,4,8,16,32 comparisons. Use 2,048 programs per scene, seed
+32737+selection_index, with prefix sharing across lengths. Each program compares
+specified valid-pixel depths with strict '<'; truth/prediction ties give false.
+The majority register is true only if more than half the comparisons are true.
+Use the existing 16 calibration scenes only to fit each controller/length's
+constant outcome-frequency baseline. All public depth coefficients stay frozen.
+Score the remaining 16 scenes equally, report true outcome prevalence, useful
+terminal-bit and confidentiality accuracy, every public predictor and a paired
+scene-bootstrap comparison against the strongest public accuracy selected inside
+each resample (10,000 draws, seed 32738). Only native performance on the new law
+is measured; earlier pairwise accuracy must not be multiplied to predict it.
+
+The simulator obtains relation truth from the ideal depth field to execute the
+policy and score its output. Readers receive RGB, program instructions and pixel
+coordinates, not true depth readings or executed outcomes. Actual sensing would
+be a separately charged acquisition/repair action. These are related spatial
+programs and adaptive development reuse, not evidence of general reasoning or a
+fresh confirmation population. A positive joint-prediction result would justify
+further mechanism analysis; it does not automatically admit training.
+
+Freeze the empirical run separately in `learned_policy01` after the exact check,
+one Charon CPU, 45 seconds. Reuse existing maps/data by explicit immutable-root
+reference; copy selection and prior public parameters into the run. Preserve all
+case metrics, calibration frequencies, input/prediction digests and failed controls.
+No neural execution, parameter modification or training is authorized by this entry.
+
+**Exact result before the learned screen.** Exhaustive Boolean checks find
+3, 6, 20 and 168 monotone functions for n=1,2,3,4, and the maximal coefficients
+and threshold attainments match the formula exactly. All 510 subset conjunctions
+and 2,046 sequential worlds pass; XOR violates monotonicity for all nine checked
+sizes n>=2. At n=1,024 the strongest static monotone predicate exposes retained
+parity with Brier gain at most 0.000155349, while the sequential controller has
+gain 1/4. The exact run takes 0.072 seconds on one Charon CPU. This permits the
+prespecified learned policy screen; it does not qualify a learned mechanism.
+
+**Learned policy result.** The frozen screen completes in 4.87 seconds on one
+Charon CPU, scoring 32,768 evaluation programs for each of 12 controller/length
+specifications. All useful terminal-bit and confidentiality accuracies agree
+exactly. The interpreter is ordinary code operating on the learned geometry;
+this is not evidence that the neural model learned to interpret programs.
+
+| Comparisons | Native XOR | Best tested public XOR | Native majority | Best tested public majority |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 89.7430% | 73.4894% | 89.7430% | 73.4894% |
+| 2 | 82.9590% | 63.6841% | 90.6189% | 77.4170% |
+| 4 | 73.3734% | 55.2368% | 87.4573% | 72.4579% |
+| 8 | 62.6190% | 51.3306% | 84.3872% | 69.3878% |
+| 16 | 54.1595% | 50.6348% | 82.4799% | 67.7216% |
+| 32 | 50.4120% | 50.4364% | 81.3629% | 66.9006% |
+
+For majority-32, the paired comparison interval against the best public predictor
+selected inside each resample is [10.9924,17.9506] percentage points. Actual
+positive prevalence is 42.6147%, so a constant negative answer already scores
+57.3853%; chance is not the only public baseline. XOR-32 has comparison interval
+[-1.0163,0.6744] points and no demonstrated learned advantage. XOR-16 retains a
+small positive interval [1.5258,5.4597] points. The screen is adaptive reuse of
+16 scenes; intervals are exploratory and are not a simultaneous confirmation
+across the controller families. Every public method and prevalence is preserved.
+
+**Interpretation and next construction.** Static conjunction completeness was
+too weak quantitatively, and the monotone bound shows why merely choosing a
+better static sharing threshold does not give uniform protection of global
+parity. Sequential policies can make a global computation directly determine
+confidentiality, with a linear execution cost and no rare-event factor. This
+provides an explicit way around the static bound, not a violation of it.
+
+The learned instance supports some of these longer computations, while long XOR
+reveals a clear capability limit. A next candidate should make assessment of
+scene-dependent programs the protected operation and specify the useful program
+family it actually covers. Program interpretation, world observations, input
+translation and recovery must all be charged. The policy compiler is a semantic
+reduction; adding its disclosure suffix or a classifier does not itself create
+an indispensable learned alignment mechanism. We still need genuine functional
+removal and severe loss of a specified reusable cognitive procedure. The useful
+and protected labels being identical under translation is not by itself evidence
+of that causal role in a trained model.
+
+Retain the spatial and sequential results as candidate components. Do not launch
+marginal calibration training as if it would close the joint-computation or
+removal gap. No parameter was changed, no neural training was run, and neither
+general SCC impossibility nor completion of the mechanism goal is established.
+
+**Evidence preservation.** All 54 manifest-listed files (15,083,069 bytes) in the
+[policy-disclosure audit](artifacts/scc-spatial-policy-disclosure-20260923-v1/)
+verify on the SD evidence store. Manifest SHA256:
+`f81706b9202fe9e151bbe4acf7ed3c30ea737acc5c27f2dc77bc202ece8aed4c`.
+The empirical run preserves all 32 generated program-coordinate arrays, frozen
+selection/public coefficients, calibration frequencies and per-scene outcomes.
+Raw frames, prediction maps and the isolated h5py dependency are referenced from
+LN-324's immutable spatial-core root, manifest
+`fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16`.
+Both new Charon jobs are terminal; no source or preceding artifact was overwritten.
 
 ## Historical evidence
 
