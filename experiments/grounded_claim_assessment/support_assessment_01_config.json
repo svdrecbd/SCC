@@ -1,0 +1,14 @@
+{
+  "article_offset": 0,
+  "article_count": 16,
+  "selection_seed": 31537,
+  "maximum_input_tokens": 512,
+  "maximum_option_tokens": 64,
+  "null_option": "none of the above",
+  "expected_parameter_digest": "bb0f6953b9aed44f11c8219233cf22de82eb2a90cf4ede0f45bccf366d0ec44b",
+  "wall_seconds": 60,
+  "neural_training": false,
+  "excluded_article_ids": [
+    "middle1470.txt"
+  ]
+}

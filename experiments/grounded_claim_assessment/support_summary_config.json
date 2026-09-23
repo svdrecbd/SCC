@@ -1,0 +1,7 @@
+{
+  "bootstrap_seed": 31538,
+  "bootstrap_replicates": 10000,
+  "expected_parameter_digest": "bb0f6953b9aed44f11c8219233cf22de82eb2a90cf4ede0f45bccf366d0ec44b",
+  "wall_seconds": 15,
+  "neural_training": false
+}

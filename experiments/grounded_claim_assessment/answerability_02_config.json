@@ -1,0 +1,14 @@
+{
+  "selection_seed": 31637,
+  "paragraph_pairs": 32,
+  "maximum_input_tokens": 512,
+  "maximum_new_tokens": 24,
+  "null_phrase": "<no answer>",
+  "expected_parameter_digest": "bb0f6953b9aed44f11c8219233cf22de82eb2a90cf4ede0f45bccf366d0ec44b",
+  "bootstrap_seed": 31638,
+  "bootstrap_replicates": 10000,
+  "neural_training": false,
+  "paragraph_offset": 8,
+  "block_paragraph_pairs": 8,
+  "wall_seconds": 60
+}

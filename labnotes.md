@@ -9,22 +9,29 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Active computational lead — [LN-313–314](#ln-313).** Evidence-grounded claim
-assessment has a direct recovery relation to passage-based question answering.
-The unchanged 60.5-million-parameter reader scores 71.875% on 64 distinct released
-articles, versus 37.5% for the strongest fixed inexpensive control. The advantage
-replicates on a disjoint block. Removing the passage lowers accuracy to 40.625%,
-confirming substantial evidence dependence on this sample. A surviving answer
-procedure recovers 81.25% balanced claim accuracy even if its claim output is
-suppressed. No genuine protected-function removal has been demonstrated.
+**Reading result and semantic correction — [LN-313–315](#ln-313).** The unchanged
+60.5M-parameter model has a replicated 71.875% RACE answer-selection score versus
+37.5% for the strongest frozen inexpensive control; passage omission reduces it
+to 40.625%. The answer-comparison identity is exact for benchmark correctness.
+Some rejected benchmark answers are nevertheless supported but incomplete, so
+its recovered 81.25% score must not be identified with factual-support assessment.
+The paired answer-removal diagnostic does not repair that semantic mismatch.
 
-**Remaining mechanism gap — [LN-314](#ln-314).** The theorem covers the declared
-closed set of alternatives with exactly one correct answer. It does not yet cover
-open-ended claim assessment, unanswerable questions, broad cognitive loss or an
-internal dependency created by training. The strongest public answer control retains
-26.67% of above-uniform advantage; an illustrative public-relative removal cap would
-force about 70% loss of that advantage, not established catastrophic cognition loss.
-The lead warrants further construction work; no neural training is admitted.
+**Direct answerability screen — [LN-316](#ln-316).** On 32 independently annotated
+SQuAD 2.0 paragraph pairs, free-response answerable accuracy is 71.875%, but
+unanswerable recognition is 43.75%. Overall exact-match accuracy is 57.8125%,
+versus 50% for always abstaining, with a paired advantage interval crossing zero.
+Calibrated null-likelihood readers reach 56.25% on the held-out half, matched by
+simple public controls. This checkpoint fails the frozen broader qualification.
+The data are released development examples, not fresh unseen evidence. No genuine
+function removal, internal dependency or catastrophic cognitive loss is established.
+
+**Next construction requirement.** Connect retained useful reasoning to an
+independently specified support judgment with an efficient recovery procedure that
+does not need a supplied correct option or an additional semantic oracle. Ordinary
+answer ranking and training an abstention output do not establish that dependency.
+The current reading checkpoint is not admitted for SCC training; the general
+mechanism objective remains open.
 
 **Forecasting boundary — [LN-309–312](#ln-309).** The fresh causal predictor retains
 a 14.52% MSE advantage, while a public procedure preserves 87.25% of useful gain.
@@ -23031,6 +23038,234 @@ Remote originals remain under
 No process remains running and no neural training has been initiated. The main
 mechanism objective remains unresolved; this work is completed progress toward
 identifying a qualifying shared cognitive operation, not goal completion.
+
+<a id="ln-315"></a>
+### LN-315 — 2026-09-23 UTC: remove the guaranteed-valid-answer promise
+
+**Question and mathematical boundary.** LN-313's answer-comparison identity is
+exact on its promised task. To test the missing absolute-support judgment, retain
+the same passages and questions but allow every offered substantive answer to be
+incorrect. A ranking alone cannot distinguish these cases: adding a common offset
+to every candidate's support score preserves every pairwise comparison and changes
+which scores exceed a validity threshold. This is the LN-277 calibration boundary
+applied to reading, not a new impossibility theorem. Including an explicit null
+answer makes answerability observable in the useful output; it does not prove that
+ordinary cognition requires answerability or that training creates the dependence.
+
+**Fixed paired experiment, before execution.** Use all 64 previously selected
+articles in their original frozen order. For each article construct two four-option
+questions. In the supported arm replace one deterministically hash-selected wrong
+option with `none of the above`; in the unsupported arm replace the original gold
+option with that same phrase. Independently hash-permute the three remaining
+substantive options into positions 0..2 and put the null option at position 3 in
+both arms. Thus null position and its presence do not disclose the arm. Gold labels
+construct and score the benchmark; the predictor receives only the new question,
+menu and passage. All text and selections are frozen before any model predictions.
+Original benchmark labels define validity; this is missing valid *offered answers*,
+not a claim that the passage itself cannot answer the question. Existing answer
+phrases with menu-relative references are a possible semantic confound and must
+be audited before interpreting aggregate scores.
+
+Use the unchanged 60.5M-parameter checkpoint, strict legacy architecture loading,
+original tokenizer/format, mean option log probability primary and total log
+probability diagnostic. No truncation or score-dependent sample replacement; log
+and fail any input violating the frozen bounds. Measure supported-answer accuracy,
+null detection on unsupported menus, balanced answerability, paired success and
+overall exact answer accuracy. Compare the existing inexpensive public controls,
+constant answerability decisions and a fixed always-null answer. Preserve every
+candidate score so alternative score-based readers can be assessed separately;
+a failed argmax is not functional removal. No weights or original data are edited.
+
+Four fixed blocks of 16 articles (32 inputs each), each one Charon CPU, 60 seconds.
+Freeze source, prior selection files, configuration, this entry and machine details
+in fresh `support_assessment01` through `support_assessment04` directories. No
+neural training, adaptive expansion, or learned threshold fitting in these runs.
+A provisional diagnostic requires >=60% supported-answer accuracy and >=60%
+balanced answerability; report both rather than substituting a combined score.
+The result tests the extension of the current lead, not catastrophic cognition.
+Aggregate only after all terminal blocks; bootstrap at article-pair level, seed
+31538, 10,000 replicates. This is development evidence on a reused sample.
+
+**Pre-execution semantic audit.** The frozen sample contains one menu-relative
+option (`both A and B`, article `middle1470.txt`). Exclude that article from both
+arms without replacement, before scoring; 63 article pairs remain. A separate
+`all of them` phrase refers to students and is retained. Freeze the exact excluded
+ID in every configuration. This prevents answer shuffling/removal from changing
+the meaning of a surviving menu-relative alternative.
+
+**Alternative-reader control, fixed before inspecting scores.** After the four
+blocks, use first-half articles (blocks 01–02) only to choose a scalar threshold
+for `maximum substantive option score minus null score`, maximizing balanced
+answerability there. Evaluate that fixed threshold on blocks 03–04. Do this
+separately for the already-declared mean and total log-probability selectors;
+report both without selecting the better test result. Include all-negative and
+all-positive thresholds; break ties by smallest absolute threshold and then
+numerical order. Fit no model weights. Report threshold cost, test AUROC and
+article-pair bootstrap intervals. This stronger permitted reader guards against
+calling a miscalibrated null option genuine judgment loss. Reused articles and
+small calibration/test sets limit the finding; this remains development evidence.
+
+Apply the same scalar calibration to every already-fixed public control, with
+the same calibration/test partition. This extension is fixed after block 01 but
+before blocks 03–04; report the strongest test control conservatively and select
+the strongest control inside each test bootstrap when comparing to the primary
+reader. This is a comparison bound, not test-set selection of a deployed reader.
+
+**Completed paired results.** All four blocks finish within 41 seconds each,
+with unchanged model digest. On 63 article pairs the primary reader selects the
+retained designated answer in 38/63 supported menus (60.3175%), selects null in
+26/63 designated-answer-removed menus (41.2698%), and classifies presence/absence
+of the designated answer at 60.3175% (paired bootstrap [54.7619,65.8730]%). Overall
+agreement with the transformed labels is 64/126 (50.7937%), versus 50% for always
+null; both arms are correct for only 14/63 pairs (22.2222%). The provisional two
+60% diagnostics technically pass. They do not supply the missing useful advantage:
+the combined task is almost matched by the constant null control.
+
+A scalar threshold selected on the first 32 articles achieves 59.6774% on the
+remaining 31 for either likelihood selector. The primary threshold's interval is
+[53.2258,67.7419]%; passage overlap reaches 54.8387%. Selecting the strongest public
+control within each paired resample gives a learned advantage interval of
+[-3.2258,12.9032] percentage points. Thus calibration exposes some signal but no
+clear conservative public-relative separation on the held-out development block.
+A failed reader is still not an all-reader upper bound or removal intervention.
+
+**Semantic correction discovered in the completed audit.** The labels in this
+transformation mean *the original designated RACE answer is absent*, not that all
+remaining answers lack evidential support. This distinction is material. In
+`middle4203.txt`, the passage explicitly places a computer and an alarm clock on
+the table. The benchmark designates “A computer and an alarm clock” and rejects
+“A computer”, although the latter is a supported but incomplete answer. Likewise,
+`middle7292.txt` asks for the best title, a comparative choice whose remaining
+alternatives do not become unsupported statements when the chosen title is removed.
+Excluding menu-relative references before execution did not fix this broader issue.
+Do not retroactively remove these cases to improve the aggregate or describe these
+scores as a validated truthfulness/unanswerability test. Preserve the complete
+run as an annotation-preservation diagnostic with a failed semantic identification.
+The LN-313 recovery identity remains exact for benchmark correctness; its numerical
+81.25% score is not by itself factual-support verification. A successor's wrong
+benchmark choice need not be an unsupported assertion.
+
+**Decision.** The broader epistemic-alignment interpretation needs independently
+annotated answerability or entailment labels. Keep the original computational
+reading result, retract the stronger identification of its correctness labels
+with normative evidence support, and do not start training from this screen.
+The next check must directly distinguish answerable and unanswerable questions
+without inventing labels by deleting a designated multiple-choice answer.
+
+**Preservation.** All 55 manifest-listed files (1,284,206 bytes) verify on the SD
+store. [Summary](artifacts/scc-grounded-support-assessment-20260923-v1/aggregation01/summary.json)
+and [receipt](artifacts/scc-grounded-support-assessment-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `530846b7ad72ba5d45214bfc5b5082d0a8d60d97d7d92e2705bcbbfc28a6b120`.
+Original checkpoint and prior selections remain in LN-314's separately verified
+store; this wave reuses them without duplication or mutation. No neural training.
+
+<a id="ln-316"></a>
+### LN-316 — 2026-09-23 UTC: directly annotated answerability and free response
+
+**Correction-driven next check.** LN-315 exposes a semantic confound in converting
+RACE answer labels into factual support. Use the official SQuAD 2.0 development
+set's human-annotated `is_impossible` labels directly. The
+[official dataset](https://rajpurkar.github.io/SQuAD-explorer/) includes questions
+constructed to be unanswerable from their passage. The
+[UnifiedQA training mixture](https://github.com/allenai/unifiedqa/blob/master/tasks.py)
+includes SQuAD 2.0, and its
+[encoder](https://github.com/allenai/unifiedqa/blob/master/encode_datasets.py)
+uses `<No Answer>` for unanswerable examples. Thus this is an existing-capability
+check on released development data, not unseen-domain or contamination-free
+scientific evidence. No additional checkpoint or neural training.
+
+Acquire official `dev-v2.0.json`, the upstream task/encoding source and the official
+SQuAD evaluation script as data only; record URLs, lengths and SHA256, a combined
+10 MB and 60-second cap. Never execute downloaded source. Reuse LN-314's pinned
+checkpoint, strict architecture and tokenizer, and freeze source/configuration,
+entry and machine environment in a new evidence root.
+
+**Predeclared sample and procedure.** Hash-sort paragraphs with seed 31637 using
+title and full context. Within each paragraph hash-sort answerable and unanswerable
+questions separately by their original IDs, retaining the first question of each
+kind whose full lowercased question + literal separator + title/context is <=512
+tokens. Retain first 32 eligible paragraph pairs, one pair per paragraph, with
+exclusions and every selected original question/answer frozen before generation.
+Both labels occur in the identical context; annotations and reference answers
+are never inputs. No answer options are supplied. Four fixed sequential blocks
+of eight pairs, one Charon CPU and 60 seconds each; no score-dependent extension.
+
+Greedy free generation, maximum 24 new tokens, cache disabled consistently with
+legacy evaluation; record raw token IDs, text, EOS termination and time for every
+case. Nonterminated generations remain failures/partial answers, not exclusions.
+Treat the normalized documented null phrase (and its tokenizer-decoded spelling)
+as abstention. Record exact-match and token-F1 against all supplied references,
+using the published lowercase/punctuation/article/whitespace normalization;
+these are answer-agreement metrics, not a semantic truth oracle. On annotated
+unanswerable questions, only recognized abstention gets full credit. Report
+answerable-only EM/F1, null recall, balanced answerability and overall EM/F1.
+
+Also score the documented null sequence by teacher forcing, preserving mean and
+total log likelihood. A larger null likelihood predicts unanswerability. Use the
+first 16 paragraph pairs to choose one threshold per selector, maximizing balanced
+classification accuracy, with smallest-absolute then numerical tie breaking.
+Evaluate unchanged thresholds on the remaining 16 pairs. Public controls use
+question length, passage length and question-word overlap with the passage and
+best matching sentence, each with both score orientations and the same calibration
+partition; constants are included. Charge preparation, scoring and generation.
+Bootstrap by paragraph pairs (10,000, seed 31638), selecting the strongest public
+control inside each resample for a conservative comparison. A provisional useful
+qualification requires overall EM >=65% (15 points above always abstaining),
+answerable EM >=50%, and balanced answerability >=65%; a positive bootstrap lower
+bound is additionally required for a calibrated-reader advantage claim. Failure
+does not establish impossibility; success does not instantiate removal, enforcement
+or the destructive cognition endpoint. These are gates for further construction.
+
+**Acquisition and completed results.** The official development JSON is
+4,370,528 bytes, SHA256
+`80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8`.
+All four blocks finish in 19–22 seconds including imports, with the original
+parameter digest unchanged. All selected inputs fit 512 tokens; the logged
+558-token warning concerns an excluded question. One answer reaches the fixed
+24-token generation limit; retain its zero exact-match credit and partial token
+F1 under the frozen rule. The 18 missed unanswerable cases generate substantive
+answers, not alternate spellings of the documented abstention phrase.
+
+Across 32 answerable questions, exact agreement is 23/32 (71.875%) and token F1
+79.3967%. Across 32 unanswerable questions, abstention recall is 14/32 (43.75%).
+Balanced answerability is 41/64 (64.0625%), paired interval [53.125,75]%. Overall
+exact agreement is 37/64 (57.8125%), versus 32/64 for always abstaining; its paired
+advantage interval is [-3.125,18.75] percentage points. Overall token F1 is
+61.5734%. These are the original direct labels, not labels inferred from RACE
+choice rankings. The fixed 65% overall and answerability gates fail.
+
+**Recovery control and generalization.** Null-likelihood calibration reaches
+87.5% on the first 16 pairs and only 56.25% on the second 16, interval
+[43.75,68.75]%. Mean and total null scores agree because the null target length is
+constant; they are not independent readers. Two frozen public overlap controls
+also reach 56.25% on that held-out half. The selection-aware learned-minus-public
+interval is [-21.875,12.5] points. Thus these controls do not establish a robust
+extra judgment capability, but their failure is not evidence that all alternative
+readers fail. The sample, paragraph-level resampling and released training-domain
+provenance limit all intervals and prevent a broad transfer claim.
+
+**Consequential decision.** LN-313's useful reading advantage survives as an
+answer-selection result. Its normative interpretation was too strong. The revised
+labels establish that this model can sometimes recognize inadequate evidence, but
+neither the native output nor the fixed alternative reader clears the broader
+computational screen. Do not scale or train this candidate on the strength of the
+old 81.25% claim score. Merely teaching an abstention response could improve this
+benchmark while leaving ordinary answer computation intact; it is not the missing
+coupling mechanism. The next construction must identify the computation from
+which an independently defined support judgment is efficiently recoverable,
+including when no answer exists. No general impossibility follows from these runs.
+
+**Preservation.** All 60 manifest-listed files (4,861,343 bytes) verify on the SD
+store, including official annotations/reference source, every selected pair,
+frozen source/configurations, unchanged-parent receipts, all 64 generations and
+score records, and the calibrated-reader aggregation.
+[Summary](artifacts/scc-grounded-answerability-assessment-20260923-v1/aggregation01/summary.json)
+and [receipt](artifacts/scc-grounded-answerability-assessment-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `f6ce95b343cd9bd761638ee833e72e72ad0f0793f2b4d48f5b1597abc295d0bb`.
+Remote originals remain at
+`/home/salvador/scc-research/grounded-answerability-assessment-20260923-v1/`.
+No process remains running. No neural training or model edit was performed; the
+active mechanism goal is unresolved, with a narrowed and corrected reading lead.
 
 ## Historical evidence
 

@@ -1,0 +1,10 @@
+{
+  "maximum_bytes": 10000000,
+  "wall_seconds": 60,
+  "sources": {
+    "dev-v2.0.json": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+    "evaluate-v2.0.py": "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/master/evaluate-v2.0.py",
+    "unifiedqa_tasks.py": "https://raw.githubusercontent.com/allenai/unifiedqa/master/tasks.py",
+    "unifiedqa_encode_datasets.py": "https://raw.githubusercontent.com/allenai/unifiedqa/master/encode_datasets.py"
+  }
+}
