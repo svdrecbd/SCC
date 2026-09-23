@@ -1,0 +1,9 @@
+{
+  "seed": 34537,
+  "processor_count": 1,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "neural_training": false,
+  "finite_case": {"field_degree": 2, "modulus": 7, "coordinates": 4, "dimension": 2, "correlation": [1, 2]},
+  "large_case": {"field_degree": 10, "modulus": 1033, "coordinates": 1024, "dimension": 64, "observations": 63, "correlation": [4, 5], "trials": 16}
+}

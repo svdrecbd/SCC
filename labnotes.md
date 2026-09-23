@@ -124,6 +124,16 @@ still fails the declared simultaneous confidence screen. It is a development
 control, not independent confirmation. No neural parameters changed. Score
 recovery is now implemented; severe loss of reusable cognition remains unproved.
 
+**Conditional generation boundary — [LN-345](#ln-345).** An exact polynomial-time
+conditional sampler retains at least 91.4157% of predictive information in a
+1,024-coordinate algebraic world while every next-coordinate judgment after
+at most 63 reveals is uninformative. Finite conditional laws are checked exactly;
+larger sampling takes 1.42–2.38 ms after about 0.2 seconds preparation. This is
+an executable joint-generation escape for the short-history query family, not
+an attack on the visual parent. Complete coverage of a smaller declared world
+is a different contract. Conditional generation alone therefore does not resolve
+the severe-loss argument; coverage must include the claimed adaptation domain.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
@@ -27166,6 +27176,131 @@ instead uses the global mean, 160-pixel length and scale 0.5; its MSE is 0.34955
 Against that reader the learned-mean diagnostic's MSE reduction is **37.30%**.
 These are descriptive development point estimates, not confidence-qualified
 population improvements. The full public table in LN-343 supplies both comparisons.
+
+<a id="ln-345"></a>
+### LN-345 — 2026-09-23: exact conditional generation with uninformative short-history judgments
+
+**Decision before execution.** LN-341 shows that sufficiently long observation
+histories expose information hidden from isolated judgments. LN-342–344 implement
+64-ray conditional forecasts. Test the missing converse before treating this
+interface as coverage of reusable joint prediction: can an efficient conditional
+generator survive while every next-coordinate judgment on short histories is
+exactly uninformative? This is an explicit algebraic control, not a proposed
+neural attack or a new mechanism-training run.
+
+**Construction and all-reader statement.** Let Z be uniform in F_q^n. Let V be
+the evaluation matrix for degree-less-than-k polynomials at n distinct field
+points. Retain W=HZ, where H has rank n-k and kernel image(V). Use the systematic
+syndrome W=Z_nonanchor-V_nonanchor Z_anchor. Conditional on W, Z is uniform on
+an affine polynomial-code coset. Every k coordinates are uniform and independent
+of W. Set Y=Z+E, with independent refresh noise: E is zero with probability
+rho+(1-rho)/q and each nonzero field value has probability (1-rho)/q.
+Every k coordinates of Y remain uniform and independent of W.
+
+For any history of m<=k-1 distinct revealed coordinates, every unseen next
+coordinate is uniform even given W and the whole history. The coordinate choices
+may depend on W, public randomness and previous reveals: conditioning on those
+choices adds no constraint on an unobserved value once W and the reveals are
+fixed. Thus every reader, not just a linear or tested reader, has zero advantage
+over the public uniform law on any next-coordinate predicate. The same holds
+for any unseen block of size at most k-m. Choices cannot use unrevealed values.
+This claim is restricted to the stated judgment family and history length; it
+does not cover longer histories, arbitrary global policies or full SCC removal.
+
+**An efficient conditional generator survives.** For any fixed observed set S
+with m<=k and observed values y_S, posterior noise E_S still has its original
+product law: Z_S is uniform independently of W and E_S. Draw E_S, set the m
+polynomial evaluations to y_S-E_S-offset(W)_S, draw independent uniform values
+at k-m additional distinct points, and interpolate the degree-less-than-k
+polynomial. Add the coset offset. Draw fresh independent noise on the remaining
+coordinates. This is exactly Law(Y_unobserved | W,Y_S=y_S). It also works at
+realized adaptive histories, since the selection rule uses only the revealed
+history and W. Simply overwriting observed coordinates in an unconditional
+sample is a different procedure and is an explicit negative control.
+
+Interpolation is O(n k^2) field operations to prepare and O(n k) per draw, with
+O(n k) stored field elements in the straightforward implementation; noise and
+history costs are included. The syndrome is (n-k) log2(q) bits. This is a
+polynomial-time generator, not an uncharged conditional-probability oracle.
+Actual array representation, preparation time and process memory will be saved.
+
+For a fixed (nonadaptive) set S of size at most k, independence gives
+I(W;Y_unobserved | Y_S)=I(W;Y). Further,
+I(W;Y)>=I(Z;Y)-k log2(q), with
+I(Z;Y)=n[log2(q)-H(E_1)]. This is retained predictive information, not a measure
+of indispensable cognition or an assertion about natural-image distributions.
+The information equality is not claimed for an adaptive index transcript that
+itself communicates W to the public observer.
+
+**Frozen validation.** One Charon CPU, 60 seconds, 10 MiB outputs, seed 34537;
+no neural invocation, optimization, cloud rental or new dataset. Freeze the
+source, configuration, this entry and machine record before execution.
+For q=4,n=4,k=2,rho=1/2, enumerate all original Z,Y pairs and all syndromes.
+Use integer probability numerators to check every short fixed history and unseen
+block, an explicitly adaptive selection rule, and the complete conditional
+sampler law for every syndrome with histories at {}, {0}, {2}, {0,2} and every
+observed value. Reject the unconditional-overwrite alternative in each nonempty
+context. Verify the fixed-history information identity and positive next-bit
+Brier gain after k observations, outside the zero-advantage guarantee.
+For q=1024,n=1024,k=64,rho=4/5, validate 16 conditional draws with 63 adaptively
+chosen observations, preserved syndrome and exact observed values. Record
+preparation/sampling costs and the analytic information bound. Sixteen draws
+validate constraints and implementation size; they do not estimate a sampling
+law. Exact finite enumeration and the constructive proof justify that law.
+
+**Admission consequence to evaluate.** If validated, bounded short-history
+coverage cannot by itself certify loss of conditional joint generation. A future
+candidate must justify history coverage against its retained representation or
+supply a different efficient reduction from the useful procedure to its actual
+protected judgments. This does not reinstate enforcement as an unconditional
+requirement for core coupling. No training is admitted by this control.
+
+**Completed result.** The exact sampler passes all 400 finite conditional
+contexts, totaling 262,144 enumerated sampling paths. All 4,864 block-marginal
+checks (including 3,328 singleton checks) and 256 adaptive branch checks pass
+with integer probability arithmetic. The incorrect unconditional-overwrite
+procedure is rejected in all 384 nonempty contexts. At exactly k=2 observations,
+the next bit has Brier gain 1/256, confirming that the short-history boundary
+must not be extended beyond its stated range. Retained predictive information
+is 0.1044177151 bits in the small noisy case; the two fixed-history conditional
+calculations agree within 8e-15 bits.
+
+In the larger construction, all 16 sampled latent sources preserve the retained
+syndrome and all 63 observed values. The fixed-history analytic information bound
+is 6,815.434205 of 7,455.434205 intact predictive bits, or **at least 91.4157%**.
+The retained syndrome occupies 9,600 packed bits versus 10,240 original source
+bits. The implementation stores integer arrays rather than packed field elements:
+the largest sampler's persistent arrays occupy 541,184 bytes, plus the shared
+field tables (16,376 bytes), inputs, transient arithmetic arrays and interpreter.
+Preparing interpolation takes 0.197–0.206 seconds and drawing a conditional sample
+1.42–2.38 milliseconds. Total validation is 4.450 seconds inside Python,
+4.56 seconds process time, with 40,552 KiB peak process memory on one Charon CPU.
+There is no new paid compute allocation or neural parameter change.
+
+**Consequential limit.** Efficient conditional generation itself does not close
+the local-judgment escape. The complete law of a generated scene can remain useful
+even when every reader of a short-history next-coordinate judgment has exactly
+zero gain. The surviving procedure is executable and its cost is measured; this
+is stronger than retaining an abstract high-dimensional statistic alone. It is
+still an algebraic source model, not an edit compiler for the visual parent or
+a demonstration of retained general cognition. The 1,024-coordinate example
+does not contradict complete sequential coverage of a genuinely 64-coordinate
+world: the declared world's size, retained dependencies and observation horizon
+must agree. LN-341's longer-history recovery remains compatible with this result.
+
+The next construction must cover the observation and adaptation capabilities it
+claims to destroy. Increasing the neural scene count or improving its covariance
+cannot supply that coverage argument. Full-history score identities remain valid;
+the unresolved issue is an efficient, nonvacuous connection from the specified
+reusable learned abilities to the protected procedure across their whole declared
+interaction domain. The goal remains open and this result admits no training.
+
+**Evidence.** All 10 manifest-listed files (39,623 bytes) are verified in
+[conditional code sampler](artifacts/scc-conditional-code-sampler-20260923-v1/),
+including the frozen plan, source, configuration, machine record, terminal log,
+results and completed entry. Manifest SHA256:
+`6e007be5104a134ce434ede6fba88f3bb4a33547d7051dab349369648cdee086`.
+Executed source matches the worktree; the run is terminal.
 
 ## Historical evidence
 
