@@ -1,0 +1,40 @@
+{
+  "maximum_bytes": 40000000,
+  "wall_seconds": 120,
+  "files": [
+    {
+      "path": "checkpoint.ckpt",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/f851f2a3c941544733b712d8c0f96dfae9b28862/tabpfn-v2-classifier.ckpt",
+      "sha256": "f65a35685aeef42e31b796d9bfa34e68d6fc780bc98e7bff7763802964cf435f",
+      "bytes": 29016968
+    },
+    {
+      "path": "tabpfn-8.0.5-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d5/59/628b6eb5c403c86f2940ce40fc1282bff67c9aa793ec408cf49d25768d65/tabpfn-8.0.5-py3-none-any.whl",
+      "sha256": "5ca7ac2b54a7b0b548a9d5959abd6da021fc9e8826babedd20aa42c7d8307351",
+      "bytes": 744533
+    },
+    {
+      "path": "LICENSE.txt",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/f851f2a3c941544733b712d8c0f96dfae9b28862/LICENSE.txt"
+    },
+    {
+      "path": "README.md",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/f851f2a3c941544733b712d8c0f96dfae9b28862/README.md"
+    },
+    {
+      "path": "config.json",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/f851f2a3c941544733b712d8c0f96dfae9b28862/config.json"
+    },
+    {
+      "path": "model_metadata.json",
+      "url": "https://huggingface.co/api/models/Prior-Labs/TabPFN-v2-clf/revision/f851f2a3c941544733b712d8c0f96dfae9b28862"
+    },
+    {
+      "path": "package_metadata.json",
+      "url": "https://pypi.org/pypi/tabpfn/8.0.5/json"
+    }
+  ],
+  "gpu": false,
+  "training": false
+}

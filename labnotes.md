@@ -17,6 +17,14 @@ functional construction, not a qualified learned mechanism. Baseline binary
 accuracy can still conceal useful information; the explicit retained-information
 control prevents interpreting that score as complete removal.
 
+**Latest procedural candidate — [LN-298](#ln-298).** A frozen 7.24-million-parameter
+in-context learner was evaluated on 16 fresh tasks against 17 ordinary learners
+and their selected/averaged portfolios. Its 2.1% aggregate Brier advantage is
+uncertain and fails the fixed screen. A 0.024-second public learner retains about
+96% of its improvement over context frequencies and retains disclosure assessment.
+The exact semantic/recovery controls pass, but neither a qualifying computational
+separation nor destructive loss follows. No training is admitted.
+
 **Latest score-recovery result — [LN-297](#ln-297).** For arbitrary useful count-tier
 predictions, an explicit inexpensive decoder recovers protected proper-score
 improvement. The bound does not assume posterior calibration and catches gains
@@ -81,6 +89,8 @@ the selected cellular cases; public exact replacements solve them. LN-297 suppli
 a stronger proper-score recovery reader for direct distributional estimation.
 The inspected direct-estimation releases lack immediately usable checkpoints;
 their published results are leads, not our validation or training admission.
+The subsequent contextual-inference screen in LN-298 also fails admission; its
+relative score bound cannot be substituted for loss of the underlying procedure.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -21759,6 +21769,230 @@ to the SD evidence store. [Isotonic validation](artifacts/scc-count-score-recove
 [manifest](artifacts/scc-count-score-recovery-20260922-v1/transfer_manifest.json),
 [transfer verification](artifacts/scc-count-score-recovery-20260922-v1/transfer_verification.json).
 Remote originals: `/home/salvador/scc-research/count-score-recovery-20260922-v1/`.
+
+<a id="ln-298"></a>
+### LN-298 — 2026-09-22: in-context quantitative disclosure assessment as a procedural candidate
+
+**Selection and changed object.** Investigate a learned inference procedure that
+uses new labeled examples to predict new outcomes on fresh tasks. The protected
+operation is now *quantitative disclosure-risk assessment*, rather than LN-294's
+binary decision about whether an exactly computed probability exceeds 1/4.
+This is a new candidate with an explicit protected function. It avoids importing
+exponentially precise count comparisons into a probabilistic predictor. It does
+not claim that retaining risk estimates forces obedience to a risk threshold.
+The original destructive-cognition target remains unachieved; changing the
+protected object must not be reported as completion of the earlier construction.
+
+**Mechanism.** Let D be the current context of labeled examples, x a new query,
+and Y in {0,...,c-1} its subsequently observed outcome. For a declared release
+condition j, program P_j emits a designated private bit h if Y>j and emits zero
+otherwise. Conditional on D,x, its disclosure probability and the TV distance
+between its two private-bit output laws are both
+
+    R_j(D,x) = Pr(Y>j | D,x),       j=0,...,c-2.
+
+The private bit is independent of the outcome process. This is a synthetic
+conditional-release privacy task, not an operational privacy guarantee. The
+release condition is part of the program being assessed; the meaning of private
+bit disclosure is fixed. Neither the bit nor Y is supplied to the predictor
+before its decision. After Y is observed, 1[Y>j] supplies an unbiased squared-loss
+assessment of the predicted probability. It is not the binary decision
+1[R_j>1/4]; that would need another construction and measurement.
+
+The native proposed network returns this complete vector of risk estimates.
+Monotone projection and adjacent differences reconstruct the useful outcome
+probability vector. Thus its learned task is risk assessment, and its ordinary
+use is learning to predict a fresh task from examples. A point forecast or a
+separate classification head is not substituted for the full useful distribution.
+LN-297 applies with m=c-1 and T=Y: every useful distribution predictor supplies
+an explicit risk reader recovering at least one quarter of its useful multiclass
+Brier improvement in summed protected Brier improvement, relative to the stated
+public baseline. The result is pointwise in Y; it does not require knowing the
+true conditional probabilities or assuming calibrated model outputs.
+
+**Trigger and surviving state.** Genuine removal concerns availability of this
+risk-assessment procedure across fresh contexts and queries, including all
+weights, examples, caches, preprocessing, readouts and permitted repair. Deleting
+a risk display while keeping a competent classifier does not qualify; the
+constructive reader recovers risk skill. Erasing a single context tests loss of
+examples, not removal of the learned inference procedure. Permuting class labels
+or re-encoding the output preserves functionality when its decoder remains.
+Relearning both functions ends the removal premise. Behavioral enforcement and
+durability remain separate. The theorem alone neither identifies an unavoidable
+internal execution step nor certifies every permitted removal intervention.
+
+**Existing-model qualification lead.** TabPFN performs inference on new tasks
+with frozen pretrained weights and ordinary context examples. Its published
+comparisons against logistic regression, SVMs, random forests and boosted trees
+motivate inspecting it as a learned core ([v2 paper](https://www.nature.com/articles/s41586-024-08328-6)).
+Those published speed/accuracy results are not our measurements or SCC results.
+The v2 classifier repository is publicly accessible without an access gate and
+provides a 29,016,968-byte base checkpoint. Select that base model, not one of the
+real-data-finetuned variants or the newer gated releases. Pin model revision
+f851f2a3c941544733b712d8c0f96dfae9b28862 and file
+`tabpfn-v2-classifier.ckpt`, SHA256
+f65a35685aeef42e31b796d9bfa34e68d6fc780bc98e7bff7763802964cf435f.
+Use the maintained implementation tabpfn 8.0.5 explicitly with this v2 checkpoint;
+record implementation/model versions separately. No published benchmark numbers
+transfer automatically across implementations or to this development screen.
+
+**Predeclared preparation.** Freeze this entry and source/configuration in
+`scc-contextual-disclosure-assessment-20260922-v1/acquisition01`. Acquire only the
+pinned checkpoint, its license/README/config/metadata, and the pinned 8.0.5 wheel
+(SHA256 5ca7ac2b54a7b0b548a9d5959abd6da021fc9e8826babedd20aa42c7d8307351).
+Maximum 40 MB, 120 seconds, one Charon CPU. Verify expected hashes before loading.
+Resolve only missing runtime dependencies against the existing Charon Python
+3.14/Torch 2.14 environment using a dry run first; preserve its exact report.
+Freeze and inspect a separate dependency acquisition before installing anything
+into a private artifact-local directory. No existing environment is modified.
+Disable optional telemetry and automatic model downloads; subsequent inference
+must use the preserved local checkpoint. No user data or remote inference API.
+
+First validate the release-channel identities with exact rational arithmetic on
+all denominator-four class distributions for two through five classes, both
+secret values and every release condition. Check the native inversion and a
+label permutation with its inverse decoder. This validates the candidate semantics,
+not the learned model. One Charon CPU, 30 seconds. A later frozen existing-model
+screen must report proper-score gains against meaningful matched public learners,
+including context preparation, baseline fitting and complete prediction costs.
+No model weights are updated by this preparation; actual neural training still
+requires the user's requested discussion before launch.
+
+**Preparation results and runtime plan.** The pinned acquisition verifies seven
+files totaling 29,811,840 bytes. Exact semantic validation passes for 125 class
+distributions, 420 release channels and 9,340 label-permutation controls. The
+checkpoint contains only standard tensor reconstruction/ordered-dictionary pickle
+globals. Its loader uses the current Torch default restricted weight loading.
+The selected implementation's ordinary fit builds preprocessing and an inference
+engine with inference mode enabled; no gradient optimizer is invoked by that path.
+Temperature/decision tuning will remain disabled explicitly.
+
+The preserved dependency dry run selects 14 distributions, including the selected
+wheel. Freeze their exact URLs and SHA256 values in `dependency_acquisition01`,
+with a 30 MB acquisition cap and 120-second wall limit on one Charon CPU. Install
+these preserved wheels only, without dependency resolution, into that directory's
+private runtime. Audit the optional telemetry switch before importing the model.
+Do not modify the existing environment or invoke new default-model acquisition.
+
+**Interface validation plan.** With the 7,798,780-byte private runtime acquisition
+verified, freeze `interface_validation01`: seed 298, 48 constructed labeled examples,
+four features, three classes and eight queries. Use one ensemble member on one
+Charon CPU for at most 45 seconds. This case checks loading, finite normalized
+probabilities, repeated predictions, native risk inversion and unchanged parameter
+state; it supplies no comparative evidence. Record safe checkpoint payload types,
+parameter count and elapsed fit/prediction costs. Explicit local checkpoint,
+float32, no tuning, no weight updates. Block socket connections as an additional
+check that all model evaluation remains local.
+
+**Interface result and fixed comparative screen.** The 7,244,554-parameter base
+model loads with restricted weight loading, returns normalized repeatable outputs,
+and preserves its parameter state. The development call takes 0.250 seconds for
+context preparation and 0.222 seconds for prediction; complete interpreter/import/
+validation execution is 4.82 seconds. This validates the interface only.
+
+Freeze `fresh_task_evaluation01` before any comparative prediction. Evaluate four
+publicly specified task families: random linear softmax, smooth random hidden-layer
+interactions, axis partitions, and Gaussian class mixtures. Each has eight features,
+three classes, 128 context examples and 128 future queries. Fixed seeds 29801–29804
+are used in each family; failed seeds remain failures. Task parameters and future
+outcomes remain hidden from all predictors, while the family law is public. Preserve
+the conditional ground-truth probabilities as a diagnostic oracle, not an attainable
+baseline. These fresh tasks screen contextual inference rather than stored answers.
+
+The learned model uses four frozen ensemble members. Public comparisons include
+three regularized logistic models, two radial SVMs, random forests and extra trees
+at two leaf sizes each, histogram and LightGBM boosting, three neighbor counts,
+linear/quadratic discriminants and Gaussian naive Bayes. Every fit uses the same
+context. Three-fold context-only Brier validation selects a public model or their
+unweighted average; report all individual scores as well. Charge validation, fitting,
+preprocessing, ensemble inference and full output generation. The oracle choice of
+the best *aggregate* public method is an additional conservative comparison, not a
+claim that test labels are available during inference.
+
+Admission as a computational lead requires at least 10% lower aggregate multiclass
+Brier loss than both the context-selected public portfolio and the best aggregate
+public method, a positive gain in at least three of four families, and a positive
+95% task-bootstrap lower bound (10,000 replicates, seed 29805). Preserve per-task
+and per-query results; 16 tasks are a development screen, not general validation.
+Check LN-297's constructed reader pointwise on every model/public score pair.
+Failure of this computational screen does not disprove the mathematical construction.
+Passing it alone does not identify an alignment-removal intervention or establish
+catastrophic cognition loss. One Charon CPU, at most 60 seconds per separately
+executed case, no neural fitting or changing source while the batch executes.
+
+**Uncertainty clarification before aggregation.** The same four seeds are used
+across families, so a 16-task independent bootstrap alone can understate dependence.
+Retain the predeclared task bootstrap, and additionally resample four seed blocks
+(each block contains all four families). Require a positive lower bound from both
+for admission. Four blocks are a small development sample. Freeze the aggregation
+source before reading aggregate results. This strengthens the uncertainty check;
+it does not change the generated tasks, predictions or gain threshold.
+
+**Analysis execution correction.** The first aggregation was started before the
+last case wrote its result and failed with a missing-file exception. The complete
+batch then finished normally. Preserve that failed log and source in
+`fresh_task_analysis01`; freeze the unchanged aggregation in `fresh_task_analysis02`
+and run only after observing all 16 result files. No prediction is repeated or
+case substituted.
+
+**Comparative result.** All 16 cases finish, preserving 2,048 future-query
+predictions. Multiclass Brier loss is 0.433976 for TabPFN and 0.443330 for the
+context-selected public portfolio, a 2.11% reduction. The 95% task-bootstrap
+absolute-gain interval is [-0.007784, 0.026761]; the seed-block interval is
+[-0.011183, 0.027786]. Linear discriminant analysis alone averages 0.443436,
+leaving a similarly uncertain 2.13% learned advantage. The selected public method
+wins on the axis-partition family; TabPFN wins the other three. Mean model
+preparation plus inference is 3.264 seconds versus 3.061 seconds for the complete
+public validation/fit portfolio. All 2,048 pointwise recovery checks pass. The
+learned core fails the fixed computational admission screen. No neural training
+or removal intervention follows from these results.
+
+**Endpoint audit plan.** Freeze `public_replacement_audit01`, using the preserved
+predictions only. Report how much useful gain over context-frequency prediction
+is retained by the public portfolio and by linear discriminant analysis alone,
+as well as their direct disclosure-risk scores and complete recorded fitting costs.
+One Charon CPU, 30 seconds; no rerunning predictors. This is a preserving replacement
+control, not a claimed risk-removal attack. A public learner retaining both functions
+makes absolute-removal premises infeasible at its cost; measuring only loss of the
+small learned increment is a different endpoint from severe loss of the procedure.
+
+**Replacement result and decision.** Linear discriminant analysis alone retains
+95.94% of the learned model's useful Brier improvement over context frequencies,
+using no neural parameters. Its mean 0.0236-second recorded cost includes three
+validation fits, the full-context fit and query prediction. It also retains real
+risk-assessment skill: summed risk Brier loss is 0.291676 versus 0.284620 for
+TabPFN and 0.442886 for context frequencies. This is preservation of both functions,
+not genuine removal of the protected risk function.
+
+The distinction exposes two different premises. Absolute unavailability of risk
+assessment cannot be established by damaging this checkpoint while this cheaper
+public procedure remains permitted. Removal of only the model's increment over
+the public procedure is a coherent relative premise, but in this screen losing
+that increment leaves approximately 96% of measured useful improvement intact.
+LN-297 bounds that relative increment; it does not convert it into catastrophic
+loss of the inference procedure. No threshold or denominator is changed after the
+result, and this 16-task screen does not establish that TabPFN lacks advantages on
+other distributions.
+
+Do not start native-risk training from this screen. The candidate has exact
+release semantics and a constructive recovery guarantee, but lacks both the
+required computational separation and a demonstrated destructive endpoint. An
+additional risk head or equivalent output relabeling would not supply either.
+The next mechanism must specify a useful *procedure* whose loss matters, an
+alignment-related protected operation fixed independently of the desired loss,
+and an obstruction to retaining that procedure after genuine removal. Finding a
+stronger classifier alone would address only one of those requirements. The
+original goal remains open; no general impossibility is inferred.
+
+**Preservation.** All 137 manifest-listed files (39,536,575 bytes)
+verify after transfer to the SD evidence store. Frozen sources, configurations,
+checkpoint, exact runtime wheels, machine/environment records, all 16 task/prediction
+arrays, the premature analysis failure and completed analyses are retained. Installed
+runtime copies and bytecode are reconstructible exclusions; original remote files
+remain available. [Screen summary](artifacts/scc-contextual-disclosure-assessment-20260922-v1/fresh_task_evaluation01/summary.json),
+[replacement audit](artifacts/scc-contextual-disclosure-assessment-20260922-v1/public_replacement_audit01/audit.json),
+[manifest](artifacts/scc-contextual-disclosure-assessment-20260922-v1/transfer_manifest.json),
+[verification](artifacts/scc-contextual-disclosure-assessment-20260922-v1/transfer_verification.json).
 
 ## Historical evidence
 

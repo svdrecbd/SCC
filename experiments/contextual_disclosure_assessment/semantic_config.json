@@ -1,0 +1,7 @@
+{
+  "classes": [2, 3, 4, 5],
+  "denominator": 4,
+  "cpu_count": 1,
+  "wall_seconds": 30,
+  "training": false
+}
