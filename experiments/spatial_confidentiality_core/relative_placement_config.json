@@ -1,0 +1,10 @@
+{
+  "calibration_scenes": 16,
+  "pair_seed": 32537,
+  "pairs_per_scene": 4096,
+  "bootstrap_seed": 32538,
+  "bootstrap_replicates": 10000,
+  "wall_seconds": 45,
+  "neural_training": false,
+  "action_family": "reference_surface_depth_placement"
+}

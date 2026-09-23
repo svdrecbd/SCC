@@ -26,6 +26,15 @@ depth within 0.0005 m analytically plus measured FP32 rounding. Independent loss
 derivative and integration checks pass; one precision-check failure is preserved.
 No neural training or original parameter intervention has occurred.
 
+**Ordinal coverage — [LN-325](#ln-325).** Perfect depth ordering need not yield
+substantial risk-score gain under uniformly sampled absolute placement; a
+two-world example makes that gain arbitrarily small. An explicitly extended
+world-relative placement action gives an exact order-to-confidentiality relation.
+Both accuracies are 89.67% on the reused development scenes, versus 73.11% for
+the strongest tested public comparator. The extension assumes ideal placement
+relative to a surface; physical actuation is not demonstrated. Rank and other
+preserving output controls retain both functions.
+
 **Unresolved admission condition.** The native risk calculation need not execute
 when an alternative depth path survives. The argument establishes recoverability,
 not indispensable execution. If the repair budget admits the public parent
@@ -24265,6 +24274,142 @@ Source and configurations are in `experiments/spatial_confidentiality_core/`.
 The work establishes the measured learned instance and a validated trainable
 representation. It leaves destructive-mechanism admission open for the explicit
 execution and public-replacement reasons above. No training run was submitted.
+
+<a id="ln-325"></a>
+### LN-325 — 2026-09-23: relative placement closes the ordinal coverage gap under an explicit action extension
+
+**Previous turn and scope.** LN-321–324 changed the source, measured a learned
+spatial advantage and validated an integrated representation; it was progress.
+Neither an achieved mechanism nor a running training job follows. This entry
+addresses the remaining order-only escape rather than launching calibration
+training that could not settle it. Read LN-242's separation of conditional
+coupling, enforcement and durability together with the current mechanism target.
+
+**An obstruction for the existing action law.** Let two equally likely worlds
+have normalized depths (1/2-epsilon,1/2+epsilon) and their reversal. A retained
+world bit supplies perfect depth ordering. Under the original independently
+uniform absolute emitter depth, the public survival probability is 1/2 only
+on an interval of width 2*epsilon. Its Bayes Brier loss per ray is epsilon/2;
+outside that interval the public prediction is exact. Even a perfect reader
+therefore improves integrated protected Brier loss by only epsilon/2, while its
+order accuracy improves from 1/2 to 1. No positive resolution-independent lower
+bound on this risk improvement can follow from order advantage alone. This is
+an exact two-world counterexample, not failure to find a better ordinal decoder.
+The worlds are a mathematical control, not an assertion about the NYU sample.
+
+**Explicit action extension with the same norm.** In the ideal ray world, allow
+an intervention specified as: place the private emitter on ray v at the
+camera-axis depth of the first opaque surface on reference ray u. Its placement
+is tau=D(u). This is a world-relative intervention, distinct from supplying a
+public numerical tau. The emitted observation is
+
+    O(s,u,v,D) = s * 1[D(u) < D(v)].
+
+The fixed confidentiality norm is independence of O from s. Hence the exact
+violation judgment is J(u,v)=1[D(u)<D(v)]. A useful near/far comparison procedure
+supplies this judgment with identical accuracy, one call, and constant wrapper
+work. Retain equality as occluded. No estimate of distance magnitude, probability
+calibration, margin assumption or vanishing-interval factor appears. Every
+replacement or repaired comparator gives the same construction when charged
+within the judgment reader's resources. If all such judgment readers have
+accuracy <=1/2+eta on a balanced pair law, useful ordering accuracy is also
+<=1/2+eta. Any ordinary public comparator likewise prevents an unjustified
+chance-level removal claim on that law.
+
+The evaluator uses the depth field to execute the intervention and score its
+observation for s=0 and s=1. The model receives only the RGB image and the two
+pixel coordinates; neither depth, placement value, nor the resulting observation
+is supplied to it. There is no secret safety verifier controlling its answer.
+Nevertheless, an ideal apparatus must realize world-relative placement. This
+extension is admissible only when those action semantics belong to the declared
+problem. It is not a theorem for the previous absolute-placement interface or
+a demonstrated physical actuator. NYU depth remains an idealized evaluation world.
+
+The absolute and relative placement families can coexist as two named families
+under one confidentiality norm. Their removal conditions are recorded separately;
+we do not conceal rare-family weighting in one favourable aggregate score.
+The relation ties a real spatial operation to a normative assessment but still
+does not force a particular internal calculation to execute or enforce compliance.
+
+**Frozen validation.** Use exact fractions for epsilon=2^-k, k in {2,4,8,16,24},
+verify the optimal absolute-placement loss by direct interval integration and
+the relative-action truth table. Exhaust quarter-grid positive depth pairs and
+both secret bits; compare the simulated observation difference with the useful
+order label and reject a reversed-inequality reader. Include the equal-depth
+case explicitly. This independently verifies physical semantics inside the
+stipulated ray model; it does not empirically establish that model of optics.
+
+Reuse the immutable 32-scene selection and saved predictions. Evaluate only the
+last 16 scenes, with the six already fitted public predictors and their frozen
+parameters from LN-322. Draw 4,096 valid-pixel pairs per scene, seed 32537+index;
+exclude exact truth-depth ties and report their number, then include both pair
+orientations to obtain an exactly balanced law. The coordinates are explicit
+query inputs. No reference-depth value enters the reader. Compare native,
+positive affine, image-centred and rank representations; reverse-order and
+constant-output controls must not be misclassified as erasure while the original
+comparator remains available. Preserve the original predictions and weights.
+
+Report useful order accuracy, simulated violation accuracy, fixed-confidence
+Brier loss (3/4 versus 1/4, 1/2 for predicted ties), all public readers, and
+scene-bootstrap intervals with 10,000 resamples, seed 32538. Select the strongest
+public accuracy inside each resample. This is adaptive development reuse, not
+fresh confirmation. No sampled reader portfolio is an all-reader upper bound.
+Freeze source, configuration, selection, prior public coefficients and this entry
+in a fresh evidence root; one Charon CPU, 45-second wall cap, no neural execution,
+parameter edits, optimization or training. The raw data are read from the prior
+immutable root without duplication. Preserve source digests and exact outcomes.
+
+**Completed result.** All five exact two-world controls have absolute-placement
+Brier gain epsilon/2 and relative-placement gain 1/4. All 16 positive-depth
+pairs (32 secret observations), including four equal-depth cases, satisfy the
+optical truth table; the reversed inequality fails on all 12 unequal pairs.
+The empirical calculation takes 3.43 seconds on one Charon CPU. Of 65,536 sampled
+unoriented pairs, one exact truth tie is excluded; 131,070 oriented queries remain.
+Each scene's labels are exactly balanced, and no placement depth is a reader input.
+
+Native useful and violation accuracy are both 89.6696%, with a scene-bootstrap
+interval [85.8433%,92.7275%]. Positive affine, centred and rank representations
+have identical scores. The reversed representation scores 10.3304%; inversion
+restores 89.6696%. A constant output scores 50%, while consulting the retained
+comparator restores 89.6696%. These are preserving output controls with intact
+weights, not parameter-removal experiments. The fixed-confidence native Brier
+loss is 0.113912; no calibration-optimality claim is made.
+
+The strongest of the six public predictors is quadratic position at 73.1076%.
+The comparison interval after choosing the best public accuracy in each resample
+is [11.9262,21.1049] percentage points in favour of the learned comparator.
+This law includes small depth gaps; its 89.67% native accuracy is not directly
+comparable to LN-322's 94.47% on gaps greater than 0.25 m. All public parameters
+were frozen earlier, and retained calibration maps cost 39,321,600 bytes.
+
+**Admission decision.** The action extension supplies an exact recovery relation
+for ordinal spatial competence, closing a genuine coverage gap left by the
+absolute-placement score. It does not erase the distinction between judging
+privacy and complying with that judgment. We have not shown a genuine-removal
+successor, complete cognition failure, or necessary execution of a specific
+procedure. The 73.11% ordinary public comparator already rules out declaring a
+chance-level all-reader cap on this measured query law when its resources are
+admitted; the parent-reload control is an additional limitation. A finite
+portfolio's maximum is not an upper bound on other readers.
+
+Keep both action contracts explicit. The native 65-atom per-pixel representation
+remains a trainable marginal model; it is not automatically a joint distribution
+of scene geometry. Relative-order probabilities require a comparator or an
+explicit joint model, since separate pixel marginals do not determine the
+probability of D(u)<D(v). The direct comparator used here avoids assuming pixel
+independence. Training marginal calibration alone would not resolve this issue.
+No training was initiated or admitted as a destructive mechanism. The goal
+remains active; these proofs and measurements establish progress, not completion.
+
+**Evidence.** The [relative-placement validation](artifacts/scc-spatial-relative-placement-20260923-v1/)
+contains 14 manifest-listed files, 2,701,855 bytes, all verified locally on the SD
+store. Manifest SHA256:
+`685c4ccc354375866e4333af821e1bde4840b84a7d74c2c238d6f3e8957dfb53`.
+Its raw frames, saved predictions and isolated h5py dependency come from LN-324's
+preserved spatial-core root (manifest `fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16`);
+selection and public parameters are copied into this run, and frame/prediction
+digests appear in its case records. No source or artifact from the preceding
+experiments was overwritten.
 
 ## Historical evidence
 
