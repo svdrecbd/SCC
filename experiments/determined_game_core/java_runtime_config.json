@@ -1,0 +1,18 @@
+{
+  "version": "17.0.20.1+1-1~26.04",
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "neural_training": false,
+  "packages": [
+    {
+      "name": "openjdk-17-jre-headless",
+      "sha256": "bed7ea25ac704932b8658c77a0642040e6d46713f4e2f43830ea82d063814716",
+      "bytes": 48133612
+    },
+    {
+      "name": "openjdk-17-jdk-headless",
+      "sha256": "e440a910fd940d2f7eb49d91aad25b2200703b3ebc76e6eadabe9c0b3eed382a",
+      "bytes": 71779420
+    }
+  ]
+}

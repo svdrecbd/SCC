@@ -143,13 +143,24 @@ at most 2% on the matched workload. The compiler, verifier and assessor-first
 construction pass 5,896 policy checks. This establishes a bounded procedural
 relation, not a learned mechanism or destruction of all cognition. SemML 2.0 is
 a concrete learned-synthesis implementation lead with published controller and
-counterstrategy support. Source/release documents are preserved; model execution,
-learned-contribution isolation, public replacements and the costed adapter remain
-unqualified. No training has begun.
+counterstrategy support. The released implementation now runs on Charon; qualification remains open
+as described below. No training has begun.
+
+**Executable synthesis and public replacements — [LN-348–352](#ln-348).** The
+pinned release and its fully nonlearned configuration both pass eight independent
+controller/counterstrategy checks, including move-order controls. Published plots
+replace negative-case controller data with decision data; raw records are now
+preserved separately. A constant output solves the entire collector family.
+On two selected chain examples, nonlearned judgment takes 18.53/47.25 seconds,
+versus 23.54/53.56 seconds for learned controller construction. These examples
+therefore do not establish indispensable learned judgment. The larger returned
+controllers are not yet independently verified. The conditional theorem survives;
+a fresh mixed-winner workload, learned contribution and costed large-domain
+verification remain missing. No training mechanism has been admitted.
 
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
-with adaptive joint-geometry coverage justified. An alternative implementation that still
+with coverage of its complete declared task domain justified. An alternative implementation that still
 recovers protection is compatible with coupling; mandatory execution of a named
 head is not a core requirement. [LN-338](#ln-338) distinguishes coupling at each
 repaired endpoint from requiring removal to survive every allowed repair. Public-
@@ -27527,6 +27538,231 @@ Manifest SHA256:
 `24ae171efb75422c8a97546dce1d931caeb4e444c0df90413373ef2654ec47a3`.
 Both acquisition processes are terminal. All executed source/configuration files
 match the worktree, and no model execution or training is active.
+
+<a id="ln-348"></a>
+### LN-348 — 2026-09-23: inspect the released synthesis models and search controls
+
+**Question.** Can the LN-347 implementation lead support an isolated learned-
+guidance comparison? Inspect source and model/configuration files before running
+upstream programs. The initial 181 MB ZIP-member acquisition reaches its frozen
+60-second limit (exit 124); no completed payload or CRC result is claimed.
+The partial receipts remain preserved.
+
+The published packaging script names `CAV-26`. Its pinned GitLab revision is
+`13ea58d8075b2d36432ad7db93d1d24de4c98189`. Small API inspection takes 2.27 seconds
+and 16,023 downloaded bytes. A repository archive excluding datasets, experiments,
+learning and third-party directories then supplies 785 files: 7,647,037 compressed
+and 77,130,060 extracted bytes, in 2.64 seconds process time. Archive SHA256:
+`fdfba5c4b3d04f8690c08654b8fa9b23f048d9ed3f5d13941e68f61f4bfb951b`.
+This pins release-branch source; byte identity with the unfinished Zenodo member
+has not been established. Required excluded dependencies remain to be acquired.
+
+**Finding.** CAV26 uses learned edge rankings (`POST_TACAS_COMBO`) and a separate
+learned initial-perspective predictor (`BOTH_HEUR`). Disabling only edge ranking
+would leave learned guidance active. A fully nonlearned configuration uses
+`STRIX_SCORE` rankings/backtracking and `BOTH` exploration, preserving the same
+search and controller-extraction implementation. The model directory also contains
+historical alternatives; its total size is not the size of one active model.
+
+All acquisition runs use one Charon CPU and separately frozen 60-second contracts.
+Their exact byte/request limits, pre-run entries, code and configurations remain
+in the evidence directory; no upstream source executes in this entry. The entries
+in this completed wave are condensed after execution; frozen plans remain intact.
+
+**Evidence.** 828 verified files, 85,023,798 bytes:
+[release evidence](artifacts/scc-semantic-synthesis-release-20260923-v1/).
+Manifest SHA256:
+`a96a6c2cef70dfbf8b6381fc2f89585ea2b3ae1cdcd3db7441dec621f88dce38`.
+
+<a id="ln-349"></a>
+### LN-349 — 2026-09-23: build the isolated synthesis runtime
+
+**Method.** Unpack Ubuntu's OpenJDK 17.0.20.1+1-1~26.04 runtime/compiler privately,
+verifying the two package hashes against pinned configuration and package metadata.
+Resolve configuration links within that tree and create its Java certificate store
+from the host's existing CA bundle. The 119,913,032-byte package acquisition and
+initialization take 8.59 seconds; 121 certificates are imported. No system package,
+shell profile or system trust-store modification occurs.
+
+Build a copy of the pinned source with one Charon CPU, a private dependency cache,
+one Gradle worker and a 4 GiB JVM heap. Four 60-second stages reach their limits
+while acquiring/configuring dependencies and compiling; preserve every failed
+stage. Copying working directories causes repeated build work. After `build04`
+completes Java compilation and resources, `build05` carries those outputs forward
+and excludes the completed compiler/grammar tasks from distribution assembly.
+The final assembly succeeds in 20.29 seconds, with 292,516 KiB peak memory.
+
+The distribution has 44 files totaling 42,873,541 bytes. Principal JAR SHA256:
+`03562fb088c02fd78907319e02623995bcd1717c45333ea8369d3796eb0196c5`.
+All 785 acquired source files remain byte-identical. LN-350's first execution
+exposes an excluded dependency: the pinned 1,372,912-byte, statically linked
+Kissat binary is then acquired into this private runtime. Its SHA256 is
+`db1c1db97888b683ac692c7cea466c36c63e87304a26a9044ac5c705a777ccac`.
+Subsequent invocations receive it through a private PATH.
+
+**Limits and evidence.** These are implementation costs, not solver-performance
+or SCC measurements. Aggregate dependency-network traffic was not separately
+metered; packages, cache, logs, source snapshots and binary hashes are retained.
+No training occurs. All build processes are terminal.
+10,505 verified files, 1,438,694,951 bytes:
+[runtime evidence](artifacts/scc-semantic-synthesis-runtime-20260923-v1/).
+Manifest SHA256:
+`5bce62530c9b67c9288e4928c5bf51c343483263514e35a47e16f981c252c8e0`.
+
+<a id="ln-350"></a>
+### LN-350 — 2026-09-23: independently validate controllers and causal counterstrategies
+
+**Frozen controls.** With environment r chosen before system g, test
+`G(r <-> g)` and `G(r <-> X g)` (realizable), and `G(g <-> X r)` and `G r`
+(unrealizable). Run both learned guidance and LN-348's fully nonlearned configuration,
+with identical deterministic extraction and bisimulation minimization. These easy
+fixtures are implementation validation, not evidence of learned advantage.
+
+**Independent verifier.** Parse the printed HOA transition relation; check input
+totality and declared control roles. Form its finite product with explicit one-step
+temporal monitors. A system controller must have no reachable violation. For an
+environment counterstrategy, removing violating edges must leave no reachable
+cycle: otherwise the system can satisfy the specification indefinitely. Environment
+output choices must be independent of the current system action. The upstream
+product checker assumes well-formed controllers, making this interface check
+necessary for externally supplied certificates; no upstream synthesis error is
+alleged. This verifier covers the four fixtures, not arbitrary LTL.
+
+Reject an environment that reacts to the current system choice, an incorrect
+system output, an input-incomplete controller and a counterstrategy permitting a
+satisfying cycle. Also accept two hand-derived positive controls. Freeze source,
+configuration, entry and machine before each one-CPU, 60-second Charon batch,
+with 4 GiB JVM heap and 10 MiB output allowance.
+
+**Results.** The first batch preserves seven missing-Kissat extraction failures
+and one five-second learned-call timeout; its independent hand-derived controls
+pass. After acquiring Kissat, repeat the unchanged fixtures with a separately
+frozen six-second invocation limit. All eight invocations pass independent
+verification, all four invalid controls are rejected, and both hand-derived
+positives are accepted. Controllers have one to three states; monitor products
+have one to five. Checking takes 0.15–0.86 ms per certificate.
+
+The successful batch takes 25.28 seconds process time, 165,088 KiB peak memory.
+Learned calls take 4.92–5.22 seconds including cold startup; nonlearned calls take
+1.21–1.31 seconds. This validates the interface and ablation, not a resource
+separation, genuine removal or a training mechanism.
+
+**Evidence.** Both attempts: 51 verified files, 104,824 bytes:
+[controller validation](artifacts/scc-semantic-synthesis-validation-20260923-v1/).
+Manifest SHA256:
+`e04532883731238782b0e4b82ae1ad333724121c8b778628375ba9064b8303c7`.
+
+<a id="ln-351"></a>
+### LN-351 — 2026-09-23: audit published timing evidence and identify public solutions
+
+**Question and method.** Find structural workload leads before launching a fresh
+computational screen. Acquire paired SemML/Strix/ltlsynt Mealy and decision-time
+CSVs and their cactus tables from the pinned Zenodo ZIP; verify each selected
+member's CRC. Freeze one-CPU, 60-second acquisition and analysis contracts with
+5 MiB network and 10 MiB output allowances. Acquisition downloads 363,068 bytes
+in 14.32 seconds. No solver benchmark or training occurs.
+
+Pairwise plot tables have different filtered populations (1,393, 1,406, 1,416 and
+1,455 names), with 1,390 common identifiers. They contain winner labels and plotted
+times but omit solver status. Analyze reported-time categories, not confirmed
+solves/timeouts: learned controller time at most 30 seconds versus both public
+**decision** times at least 300; also 60 versus 600 seconds. These thresholds
+select literature leads, not SCC budgets. The categories contain eight and twelve
+instances. Their majority-winner rules already give 75% and 66.7% role-aware
+judgment accuracy. A balanced role bit alone does not eliminate such shortcuts.
+
+**Measurement provenance.** Identical negative-instance controller and decision
+times motivate inspection of the original benchmark harness. Its 22 MB source
+member passes ZIP CRC; bounded acquisition/inspection takes 36.43 seconds and
+20,038,612 network bytes. The original evaluation code calls
+`remove_unreal_timeouts`, which replaces shared columns for every unrealizable
+controller row with the decision row, including time/status. It is not restricted
+to actual timeouts. This fits an evaluation convention where counterstrategies
+are optional; it does not measure our required two-sided certificate task.
+No claim is made that the tool's decisions are incorrect.
+
+Extract the eight original real/Mealy CSVs for SemML's competition/fast variants,
+Strix and ltlsynt, plus the selected chain/collector specifications. Freeze a
+separate one-CPU, 60-second audit, with 10 MiB extraction and 20 MiB output limits.
+Require successful reported Mealy status and positive state count before treating
+a row as a controller lead. Keep public decision statuses visible. The upstream
+harness is read, not executed; original result fields are preserved.
+
+**Raw results.** The competition variant reports 1,365 successful Mealy outcomes
+(617 realizable, 748 unrealizable), and the fast variant 1,394 (625 and 769).
+These are authors' status counts, not our checked certificates. The eight tables
+share 1,563 identifiers; the paper describes 1,585 benchmarks, and the discrepancy's
+cause has not been established here. The raw 30/300 category contains four
+competition-variant and six fast-variant cases; the 60/600 category contains
+eleven each. Actual negative-case extraction times replace the substituted values
+in further assessment. Full names, statuses, times and sizes are retained.
+
+**Collector has a uniform public solution.** Its specification requires
+`!all_finished W finished[i]`, an implication from `F all_finished` to eventual
+arrivals, and constraints triggered by `all_finished`. Setting `all_finished = false`
+forever satisfies every weak-until clause and makes every other antecedent false,
+for every client count n. No learned information or search is needed. This family
+therefore cannot establish indispensable learned planning merely because general-
+purpose tools run slowly. This is a solution of that specified family, not general
+SCC impossibility. Chain and counterstrategy examples remain development leads;
+known labels and identifiers cannot establish computational nonvacuity.
+
+**Evidence.** 110 verified files, 46,287,819 bytes:
+[published synthesis comparison](artifacts/scc-semantic-synthesis-comparison-20260923-v1/).
+Manifest SHA256:
+`f7a5671b33f503addaf770646e507063f72f51e294d3b512f1e9f3aae9c2a51f`.
+All acquisition/analysis processes are terminal; no training occurs.
+
+<a id="ln-352"></a>
+### LN-352 — 2026-09-23: test the same implementation as a public replacement
+
+**Frozen screen.** On `chain-5-real.tlsf` and `chain-60.tlsf`, compare the runtime's
+fully nonlearned **decision** configuration with learned **controller** construction.
+This tests whether improvements over external tools require learned guidance.
+Read exact expanded formulas from the pinned harness, strip identifiers from
+solver input, and preserve input bytes/hashes. Use one fresh artifact directory
+per batch, one Charon CPU, 4 GiB JVM heap and 10 MiB output. These published
+examples are development controls, not fresh qualification.
+
+Initially declare 25 seconds per call in a 60-second batch. Before executing the
+second example, revise that contract: its published learned time already exceeds
+40 seconds. Use separate 60-second batches with a 55-second limit per method;
+no 25-second second-example run occurs. Neither limit is a claimed SCC resource
+boundary. Retain larger controller outputs without claiming coverage by LN-350's
+four-fixture verifier. No source edit, model intervention or training.
+
+| Input | Nonlearned decision | Learned controller | Reported controller states |
+| --- | ---: | ---: | ---: |
+| chain-5-real | 18.53 s | 23.54 s | 19 |
+| chain-60 | 47.25 s | 53.56 s | 22 |
+
+All calls return REALIZABLE without reaching their limits. The first batch takes
+42.77 seconds and 634,768 KiB peak memory. The second example's separate processes
+take 47.96 and 54.27 seconds, with peaks of 1,787,488 and 1,826,140 KiB. The larger
+controllers are retained but not independently verified. Artifact preservation
+runs concurrently with part of this development screen; do not promote these
+single measurements to a controlled speed benchmark or a population claim.
+
+**Conclusion.** For both examples, the public implementation obtains the required
+judgment before learned controller construction finishes. An advantage over
+Strix/ltlsynt alone therefore does not establish indispensable learned judgment.
+A decision procedure suffices for this replacement even without returning a
+controller. This does not refute LN-346: preserved judgment means genuine removal
+has not occurred. Alongside the uniform collector solution, it removes the fast
+realizable examples identified in LN-351 as current nonvacuity evidence. It does
+not eliminate every synthesis workload or establish general impossibility.
+
+**Next scientific gate.** Identify a fresh mixed-winner family with a learned
+contribution against the same implementation without guidance, direct public
+decision, and simple policy constructions. Test family/label shortcuts; independently
+verify and charge larger certificates. Known all-negative benchmark families
+cannot provide that mixed law: a constant-winner judgment already succeeds there.
+No training is admitted; the active mechanism goal remains unresolved.
+
+**Evidence.** Three terminal assessments: 36 verified files, 196,953 bytes:
+[guidance replacement assessment](artifacts/scc-semantic-synthesis-guidance-20260923-v1/).
+Manifest SHA256:
+`489f35573d17205f7f7996a23e953a585d9dba1bfe3eb3d9ece4de2919cd89c0`.
 
 ## Historical evidence
 

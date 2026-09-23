@@ -1,0 +1,24 @@
+{
+  "source_archive": "/home/salvador/scc-research/semantic-synthesis-comparison-20260923-v1/harness01/semml.tar.gz",
+  "source_archive_sha256": "6be4d444f6c46495bcd46fdc3aa696b62d3078bec752a2e571e3c7ad0130ca84",
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "maximum_extraction_bytes": 10485760,
+  "threshold_pairs_seconds": [
+    [
+      30,
+      300
+    ],
+    [
+      60,
+      600
+    ]
+  ],
+  "specification_names": [
+    "chain-5-real.tlsf",
+    "chain-60.tlsf",
+    "collector_v3_pb_11_pe_.tlsf",
+    "collector_v3_pb_12_pe_.tlsf"
+  ],
+  "training": false
+}

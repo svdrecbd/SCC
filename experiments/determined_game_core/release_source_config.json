@@ -1,0 +1,16 @@
+{
+  "record": 19763388,
+  "archive_url": "https://zenodo.org/api/records/19763388/files/Artifact_SemML_Cav26.zip/content",
+  "archive_bytes": 5358390531,
+  "upstream_archive_md5": "fc7ad57b4edb69bcecbcf8fb3091a849",
+  "maximum_download_bytes": 209715200,
+  "maximum_requests": 20,
+  "request_timeout_seconds": 45,
+  "wall_seconds": 60,
+  "output_bytes_limit": 440401920,
+  "processor_count": 1,
+  "execute_upstream_source": false,
+  "neural_training": false,
+  "source_member": "sources/semml.tar.gz",
+  "maximum_selected_bytes": 33554432
+}

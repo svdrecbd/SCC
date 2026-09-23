@@ -1,0 +1,10 @@
+{
+  "source_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build02/working_source",
+  "source_revision": "13ea58d8075b2d36432ad7db93d1d24de4c98189",
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "heap_limit_bytes": 4294967296,
+  "task": "installDist",
+  "training": false
+}
