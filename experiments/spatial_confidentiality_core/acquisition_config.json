@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/model.safetensors",
+      "destination": "model/model.safetensors"
+    },
+    {
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/config.json",
+      "destination": "model/config.json"
+    },
+    {
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/preprocessor_config.json",
+      "destination": "model/preprocessor_config.json"
+    },
+    {
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/README.md",
+      "destination": "model/README.md"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sayakpaul/nyu_depth_v2/resolve/50579a0b591445f91bf7269b28611ad1cc6a05d2/data/val-000000.tar",
+      "destination": "validation_000000.tar",
+      "expected_sha256": "a75d57458afe063e6d9158a6cb3f41eabd859699f46043b0b8def2e2995049bb"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sayakpaul/nyu_depth_v2/resolve/50579a0b591445f91bf7269b28611ad1cc6a05d2/data/val-000001.tar",
+      "destination": "validation_000001.tar",
+      "expected_sha256": "92dc10ad1b799fb810011fcf5e85b017f949baae919903d66612e32d37e40bf2"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sayakpaul/nyu_depth_v2/resolve/50579a0b591445f91bf7269b28611ad1cc6a05d2/nyu_depth_v2.py",
+      "destination": "dataset_loader.py"
+    }
+  ],
+  "maximum_bytes": 1200000000,
+  "wall_seconds": 60,
+  "neural_training": false
+}

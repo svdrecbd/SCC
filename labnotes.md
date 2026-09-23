@@ -9,35 +9,37 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Shared semantic operation — [LN-317–319](#ln-317).** Three explicit disclosure
-plans connect entailment, contradiction and uncertainty to the same fixed
-confidentiality norm. For the specified plan distribution, any surviving
-three-way reader supplies a judgment reader with accuracy
-`1/4 + (3/4) * useful_accuracy`, including alternative encodings and repairs
-whose complete costs fit the reader budget. This is an exact conditional recovery
-relation for the declared semantics, not a demonstrated destructive response.
-The learned two-query reader scores 83.3333% against the held-out development
-annotations; its constructed judgment score is 87.5%. Stronger public textual
-readers reach 66.6667% and 75%; the conservative advantage interval includes zero.
+**Spatial candidate — [LN-321–324](#ln-321).** A 24.8-million-parameter metric
+vision model supplies a concrete learned spatial operation. In an ideal opaque
+ray world, the same geometry determines whether an emitter reveals a private bit.
+On 16 held-out development scenes it reduces depth MSE by 45.48% against the
+strongest of six tested public predictors, with a positive scene-bootstrap
+comparison interval. This is a capability screen, not a lower bound against all
+public replacements. Depth, relative shape and ordering remain related abilities.
 
-**Qualification boundary — [LN-320](#ln-320).** An all-source table of 160 public
-input/label pairs occupies 29,312 bytes and answers all 96 reconstruction cases
-exactly. This retains both functions and defeats a sub-perfect removal cap on
-this published finite support when the table fits the budget. It says nothing
-about fresh-query generalization. Two calibration-group English pairs also fail
-exact complement identification (arrival versus current location; starting versus
-completion). Historical predictions remain unchanged; formal denotations do not
-by themselves certify their English interpretation. This implementation is not
-admitted for training as a destructive mechanism.
+**Recovery and trainable implementation — [LN-323–324](#ln-323).** Exact
+proper-score recovery covers both absolute depth and signed depth differences;
+relative-geometry and calibrated ordinal controls retain measurable confidentiality
+assessment. A 65-atom visibility representation, continuous proper loss and full
+pretrained-model integration are implemented. Initialization preserves parent
+depth within 0.0005 m analytically plus measured FP32 rounding. Independent loss,
+derivative and integration checks pass; one precision-check failure is preserved.
+No neural training or original parameter intervention has occurred.
 
-**Next construction requirement.** The candidate remains a reusable semantic
-reasoning core from which a fixed confidentiality judgment is efficiently
-recoverable. It needs a fresh-query workload with justified semantics, useful
-coverage beyond one classification task, and a measured resource advantage over
-admitted public replacements. Quantified semantic error can be included in the
-recovery bound; perfect English formalization is not required. A larger set of
-published templates or an added output head does not establish those properties.
-No genuine all-reader removal or catastrophic cognition loss has been shown.
+**Unresolved admission condition.** The native risk calculation need not execute
+when an alternative depth path survives. The argument establishes recoverability,
+not indispensable execution. If the repair budget admits the public parent
+checkpoint and its runtime, reloading it restores both functions; the current
+all-reader removal premise then cannot hold below its measured gain. No smaller
+budget is silently imposed. A pilot can test joint trainability, but its success
+would not resolve genuine removal, complete cognition failure or enforcement.
+Settle the claimed removal/resource contract before calling it a destructive
+mechanism or launching training on that premise.
+
+**Semantic boundary — [LN-317–320](#ln-317).** The preceding three-way semantic
+reader has an exact conditional judgment-recovery relation. Public finite-support
+lookup and two English complement mismatches limit its interpretation; it is not
+admitted as a destructive mechanism. Those results and predictions are preserved.
 
 **Earlier reading screens — [LN-313–316](#ln-313).** RACE answer selection
 showed a learned advantage, but its designated-answer labels were not equivalent
@@ -23755,6 +23757,514 @@ and [preservation receipt](artifacts/scc-semantic-interface-audit-20260923-v1/lo
 Manifest SHA256: `707d21f6980f4748eb0d7505906d7cc57aae59ea58812472c0895d9465757810`.
 The earlier evidence root and manifest remain unchanged. No process remains
 running; no model parameters were edited and no neural training was initiated.
+
+<a id="ln-321"></a>
+### LN-321 — 2026-09-23 UTC: examine a learned spatial inference core
+
+**Previous turn: progress.** LN-317–320 completed semantic recovery checks,
+qualified their language interpretation, and measured a finite public replacement.
+The source and evidence are preserved and main is synchronized. No running job,
+training-ready destructive mechanism, or general impossibility result exists.
+
+**Candidate and reason for selection.** Examine learned image-to-geometry
+inference as a reusable cognitive operation on new scenes. Useful uses include
+metric reconstruction and spatial relations. The protected function assesses
+whether a proposed placement of a private optical signal would disclose its bit
+to a camera. The norm is fixed: the camera output must not depend on that bit.
+This avoids equating an arbitrary answer label with safety and provides an
+operational ground truth separate from the model's own assessment. It is a
+bounded spatial-cognition candidate, not complete cognition or an enforcement
+mechanism. Existing learned depth models supply an editable candidate core; their
+published accuracy is not our qualification evidence.
+
+**Physical idealization and reduction.** Fix a camera ray and let D be its first
+opaque surface's positive camera-axis depth, in a declared interval [0,L]. Place
+an ideal point emitter carrying bit s at camera-axis depth t on that ray. Under
+straight-ray opaque visibility, with no reflections, transmission, other light
+paths or placement-induced scene changes, the observed signal is
+
+    O(s,t,D) = s * 1[t < D].
+
+The placement violates confidentiality iff t<D. Equality is assigned to occlusion;
+it has zero mass under a continuous threshold law. The geometric scene and
+physical interpretation define evaluation truth. They are not an uneditable
+component inside the learned model, and the model remains free to choose a
+revealing placement. This is judgment coupling, not a hardware enforcement claim.
+Real optical privacy requires additional physics and is not established here.
+
+Normalize Y=D/L and select the public placement threshold uniformly on [0,1],
+independently of depth. LN-301's existing proper-score reader applies pointwise:
+from any surviving depth forecast mu and a charged baseline survival curve r0
+with mean mu0, use r*(t)=clip(r0(t)+mu-mu0,0,1). Integrated protected Brier
+improvement is at least normalized depth-MSE improvement. Query one retained
+geometry forecast and add the stated normalization/baseline operations; alternative
+encodings and repairs count. This is an application of the existing result, not
+a new theorem or a proof that a network has acquired the dependency.
+
+**Surviving-function controls are essential.** Monotone depth transformations
+can retain ordering, and uniform scene scaling retains surface normals while
+changing absolute distances. Neither poor native threshold decisions nor high
+metric error therefore establishes destruction of spatial reasoning. Track
+metric, shape and order separately, and admit public recalibration and alternative
+readers. Quantifying depth-MSE loss alone cannot complete the mechanism objective.
+Camera-axis depth must not be silently substituted for Euclidean range. The
+emitter parameter above deliberately uses the same camera-axis convention.
+
+**Candidate implementation and data inspection.** Inspect the official
+[Depth Anything V2 metric indoor small checkpoint](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
+and its [documentation](https://huggingface.co/docs/transformers/en/model_doc/depth_anything_v2).
+The model card reports 24.8M parameters and Hypersim metric training, with a
+20-metre output range. Select metric weights explicitly; relative depth would
+leave the placement units unspecified. The
+[NYU Depth V2 source](https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html)
+describes aligned RGB and metric depth, including filled and raw measurements.
+A mirror's image encoding, depth units, frame grouping and correspondence must
+be inspected before selecting an evaluation sample. Published labels remain
+an all-source lookup control on their finite support; they cannot certify a
+population-wide removal cap. No new-scene generalization claim follows merely
+from reading public validation images.
+
+**Bounded preparation.** First acquire only repository metadata, model
+configuration/card, and dataset loader/listing, at most 5 MB, no checkpoints or
+image archives yet, one Charon CPU and 60 seconds. Pin revisions and record URLs,
+size and SHA256 in a fresh `scc-spatial-confidentiality-core-20260923-v1` root.
+Do not install packages or execute downloaded source. Use this inspection to
+choose an explicit unit-preserving, scene-grouped qualification contract before
+any model predictions. No neural training is authorized by this preparation.
+
+**Metadata result and acquisition decision.** The inspection downloads 18,499
+bytes. Pin model revision `8078d68a9c75a972131914f6afd0c1723be0da7f` and NYU
+mirror revision `50579a0b591445f91bf7269b28611ad1cc6a05d2`. The mirror retains
+original HDF5 RGB arrays and depth arrays inside tar archives; use those members
+directly rather than relying on an image-column conversion of metric floats.
+Its validation archives are 1,001,553,920 and 14,786,560 bytes. Acquire both,
+the approximately 99.2 MB safetensors checkpoint, its three configuration/card
+files, and the pinned loader into `acquisition01`, total cap 1.2 GB and 60-second
+wall cap. Verify the two archive SHA256 values against the pinned LFS metadata.
+Extract only regular HDF5 members into a fresh directory after checking paths;
+inspect array types, ranges and scene identifiers before freezing the sample.
+The complete validation archive permits grouping by scene instead of treating
+correlated frames as independent cases. No inference or metric fitting in this
+acquisition step. Keep partial files and an error receipt if the bounded download
+fails; a timeout will not authorize an unrecorded extension.
+
+**Acquisition completed; isolated reader dependency.** All seven files download
+within 34.30 seconds; both archive hashes match. `inspection01` fails before
+reading any arrays because the existing Charon environment lacks h5py. Preserve
+that failure. Add h5py only to this experiment's isolated dependency directory,
+using a pinned binary CPython 3.14 Linux wheel and its PyPI SHA256; do not modify
+the shared environment or install its NumPy dependency. Freeze package metadata,
+wheel, extraction record and import versions in `dependency01`, at most 15 MB
+and 60 seconds. Rerun the unchanged inspection source in `inspection02` with the
+isolated path. This is a data-reader repair, not a model or dataset change.
+
+**Array inspection and scene-metadata correction.** With isolated h5py 3.15.1,
+`inspection02` reads the archive successfully: 654 regular HDF5 members, RGB
+uint8 arrays of shape 3x480x640 and finite float32 depth arrays of shape 480x640.
+The six inspected depth maps have metre-scale values. The archive paths are
+`val/official/<original index>.h5`; contrary to the preparation expectation,
+they do not retain room names. Do not invent scene groups from those indices.
+Retrieve the `scenes` references from a pinned
+[mirror of the original labeled MAT file](https://huggingface.co/andrew-healey/nyuv2)
+using bounded HTTP ranges and the isolated HDF5 reader, saving each fetched
+range and its digest. Cap this metadata inspection at 64 MB and 60 seconds.
+Read only scene metadata initially, not image/depth arrays. Preserve response
+range checks and the mirror's pinned file identity. This avoids downloading a
+second full image corpus merely to recover grouping information.
+
+**Scene metadata recovered.** Eight checked byte ranges (1,048,576 bytes)
+recover all 1,449 original frame-to-scene assignments, covering 464 scenes, in
+7.59 seconds. Pin original-MAT mirror revision
+`742f4d8a35f024263c6a9f7f316954b06ec5a817`; its LFS SHA256 is
+`2d724b0c0ab358aa1ce5df855e5bd14a2279ab7202efe22f32a30d612dcb86aa`.
+Only fetched ranges have been independently hashed locally; the full-file hash
+is mirror metadata, not a completed full-file verification. Before relying on
+the original-index mapping, compare RGB and depth arrays for original indices
+1 and 9 between this source and the downloaded HDF5 archive, allowing only the
+explicit axis transpose and float roundoff <=1e-6 m. Freeze source and prior
+metadata in `correspondence01`, at most 64 MB and 60 seconds. Reject the mapping
+if that check fails; do not select a different image pair after seeing mismatch.
+
+<a id="ln-322"></a>
+### LN-322 — 2026-09-23 UTC: qualify spatial inference and test preserving transformations
+
+**Cross-source check passed.** Original indices 1 and 9 have identical RGB and
+depth arrays across the two sources (maximum depth difference zero); 4,718,592
+range bytes were fetched in 23.59 seconds. This supports the index mapping used
+for scene grouping without assuming filenames encode room identity.
+
+**Frozen capability question.** Conditional on LN-321's cross-source correspondence
+check, evaluate the unchanged metric depth core on 32 distinct NYU validation
+scenes. Group by original scene name, stripping only trailing letter variants
+following the numeric room identifier, and hash-order groups with seed 32237.
+Within each group hash-order original member names and select one. First 16
+scenes calibrate public controls; last 16 evaluate them. Freeze all selections
+before model inference. These are previously released images, not freshly captured
+scenes or a contamination-free generalization test. The model card reports
+synthetic metric training; the full image-pretraining provenance does not prove
+these photographs were unseen.
+
+**Inputs and targets.** Feed only full RGB to the official pinned processor/model,
+FP32 inference, one Charon CPU, no parameter changes. Strictly load safetensors,
+record full state digests before/after, and fail on an unmatched key. Bilinearly
+resize raw predicted camera-axis depth to the original 480x640 grid without any
+ground-truth scale fitting. Primary evaluation uses the fixed interior crop
+rows 45:471 and columns 41:601 and finite target depths in (0.1,10) metres;
+record every excluded pixel. Clip evaluated predictions to [0.1,10] metres and
+report clipping fraction. Normalize by L=10 only for the coupling calculation.
+This evaluates the bounded ray-placement domain; it does not change the model's
+20-metre architecture or claim a reproduction of published benchmark numbers.
+
+**Useful outcomes and preserving controls.** Primary utility is per-scene metric
+MSE, averaged equally over scenes. Also report absolute-relative error, the
+fraction within a 1.25 depth ratio, centred log-depth error (removing one global
+log scale), and deterministic within-scene depth-order accuracy on 4,096 pixel
+pairs separated by more than 0.25 metres in the reference map. Ties receive half
+credit. Pair filtering is fixed in advance and its counts remain visible.
+Depth, shape and ordering are related views of spatial inference, not evidence
+for three independent cognitive faculties or complete cognition.
+
+Public controls: calibrated global mean; mean depth at each image position;
+least-squares quadratic position predictor; fixed-ridge position/RGB polynomial
+predictor; and nearest/three-nearest calibration-image depth retrieval using
+16x12 RGB thumbnails. Fit only the first 16 scenes. Charge stored reference maps,
+coefficients, features, fitting and inference. Include the known published-label
+lookup as a finite-support limit, not a purported fresh-scene predictor.
+
+Preserving transformations of the learned output are (i) half scale plus one
+metre, (ii) positive per-image rescaling to the calibration global mean, and
+(iii) replacing each depth by its within-image rank followed by the calibration
+marginal depth quantile. The latter discards metric values while retaining order.
+The first transformation has an explicit public inverse; report its exact
+restoration separately. These are output/representation controls, not claims of
+genuine function removal. They determine which apparently damaged measurements
+can coexist with useful spatial structure and judgment recovery.
+
+**Protected reader.** Use the empirical per-position distribution of the 16
+calibration depths as baseline r0. Replace invalid calibration values by the
+calibration global mean and record their number. Integrate the Brier loss exactly
+across its sorted depth breakpoints and the actual depth, rather than approximating
+it by a favourable threshold grid. For every predicted or transformed mean use
+LN-301's clipped-shift reader. Check its gain is at least normalized metric-MSE
+gain up to 1e-10 numerical tolerance. A native point-depth threshold is a separate
+control; its error is not an all-reader removal measurement. Public preparation,
+prediction, calibration maps and recovery arithmetic are charged.
+
+**Qualification and uncertainty.** A development capability pass requires at
+least 25% held-out MSE reduction against every tested public predictor fitted without held-out labels, with a
+positive conservative scene-bootstrap lower bound (10,000 resamples, seed 32238),
+and depth-order accuracy >=75%. Report absolute losses and every public result;
+select the strongest public reader inside each resample. Passing would justify
+further mechanism investigation, not severe cognitive-collapse or all-reader
+claims. Failing rejects this checkpoint/workload pair, not the whole direction.
+
+**Execution.** Freeze the selection in `selection01`, one CPU and 30 seconds.
+Eight sequential four-image inference blocks, each one CPU and 60 seconds;
+freeze source, configuration, selection and this entry in each run. Finish all
+blocks before changing their imported source. A separate analysis run has a
+60-second cap. Save every raw depth map and processing/runtime record, retain
+failed blocks, and preserve all evidence on the SD store. No neural training,
+GPU allocation, parameter intervention or monitoring is initiated.
+
+**Implementation and label qualifications fixed before held-out scoring.** The
+first inference block loads all weights strictly: 24,785,089 parameters, complete
+state SHA256 `b421be3848510f81abd64bf4f4fd4a77d68da1703fef54d36e40ea59403f8068`
+before and after. Four images take about 18.6 seconds including imports. The
+installed processor selects its PIL backend; the deprecation warning changes
+no configuration. The 32 selected images represent 32 distinct groups from 215
+available validation groups.
+
+The NYU targets are measured/inpainted depth fields. They define the geometry of
+the idealized ray world used here; they do not certify optical privacy in the
+photographed room, where sensor error, mirrors and indirect paths matter. If a
+physical depth field differs by absolute error e, uniform placement thresholds
+have label-disagreement probability e/L on that ray. No physical-error bound is
+established by these images. This is a bounded geometry-to-confidentiality proxy
+with explicit semantics, not deployment evidence for an optical safety system.
+
+The analysis computes exact interval integrals using prefix sums for efficiency
+and cross-checks them against direct interval summation at 64 fixed pixel positions
+per scene/reader. The pointwise recovery inequality is checked at every scored
+pixel. These checks validate the existing recovery formula's implementation; they
+do not turn a tested reader portfolio into an all-reader upper bound.
+
+**Completed capability screen.** All eight blocks finish in approximately
+18.4–18.6 seconds each, with the identical full state digest. On 16 held-out
+scenes, native MSE is 0.971255 m^2 versus 1.781621 m^2 for the strongest tested
+public predictor (quadratic image position): a 45.4848% reduction. The conservative
+scene-bootstrap MSE advantage interval is [0.250904,1.434288] m^2. Native
+separated-pair order accuracy is 94.4691%, versus 78.3626% for quadratic position.
+The frozen development gates pass. Analysis takes 19.32 seconds on one CPU.
+This establishes a measured spatial-inference advantage over these controls,
+not optimal public complexity or a destructive SCC result.
+
+The empirical visibility baseline has Brier loss 0.0715152. The recovered native
+reader reduces it to 0.0561347, an improvement of 0.0153805, exceeding the
+normalized depth-MSE gain 0.00825485 as required. All per-pixel inequalities and
+prefix-versus-direct integration checks pass. The uncalibrated point-depth reader
+has Brier loss 0.0700265; evaluating only that reader would miss most recoverable
+judgment improvement.
+
+The prescribed affine transformation unexpectedly *improves* metric MSE to
+0.448690 m^2; it is a useful calibration control, not damage. Its exact inverse
+restores native results. Per-image mean normalization preserves centred-log error
+and order accuracy while changing MSE to 1.238603 m^2. Rank-to-public-quantile
+replacement preserves 94.4691% order accuracy but gives MSE 2.002222 m^2 and
+recovered judgment gain only 0.00153400. These results make the remaining issue
+concrete: ordinal spatial skill can remain strong while this particular metric
+reader loses most of its advantage. That is not yet genuine judgment removal;
+a relative-geometry reader must be tested before interpreting the loss.
+
+<a id="ln-323"></a>
+### LN-323 — 2026-09-23 UTC: recover confidentiality assessment from relative geometry
+
+**Construction addressing the preserving control.** The protected ray family can
+also read relative depth, without demanding that the surviving model retain a
+scene's absolute offset. Let Y1,Y2 be normalized depths of two public pixel
+locations, let m1,m2 be their public baseline means, and let a surviving useful
+procedure predict their signed difference as g. Set g0=m1-m2 and d=g-g0. Define
+
+    m1* = clip(m1 + d/2, 0, 1),
+    m2* = clip(m2 - d/2, 0, 1).
+
+Before clipping, average improvement in the two depth squared errors equals
+one quarter of the contrast squared-error improvement:
+
+    mean_i[(mi-Yi)^2 - (mi*-Yi)^2]
+      = ((g0-(Y1-Y2))^2 - (g-(Y1-Y2))^2) / 4.
+
+Clipping can only improve the left side. Apply the existing LN-301 visibility
+reader to each reconstructed mean and select either ray with probability 1/2.
+Its integrated protected Brier improvement is therefore at least one quarter
+of useful signed-depth-difference improvement, pointwise for arbitrary predictions.
+No baseline calibration assumption, correct absolute offset, original encoding,
+or native safety head is required. This is a two-coordinate application of the
+existing squared-error recovery method, not a claim of a new general theorem.
+An all-reader improvement cap eta under this exact contract would cap the useful
+contrast improvement at 4*eta; stronger public baselines add their measured or
+proved advantage as before. No such all-reader cap has been established.
+
+**Query and resource contract.** A protected request contains the image, both
+public pixel locations, a selected ray and the placement threshold. The second
+location is auxiliary public input. The optical confidentiality norm is unchanged;
+the public query law is explicitly extended. The reader calls the retained
+contrast procedure once and obtains the baseline curves/means, then uses the
+formula. Uniform valid-pixel pairs define the development law; both coordinates
+are supplied to the reader, so it does not get an uncharged oracle for the
+reference depth or for sampling valid pixels. Ray selection and thresholds are
+independent. This result is not silently asserted for a protected input interface
+that disallows the second location or for an unrelated pair distribution.
+
+Pure ordering is not signed-distance prediction. A calibrated order reader can
+sometimes supply the latter, which is an empirical recovery question here.
+Retaining the ability to compare two points may therefore preserve more judgment
+information than LN-322's marginal-quantile adapter exposed. This provides a
+specific next test instead of declaring the rank-only control destructive.
+
+**Frozen exact and empirical validation.** Exhaust quarter-grid Y1,Y2,m1,m2 and
+signed eighth-step differences g on [-1,1], verify the unclipped equality and the
+clipped protected inequality with exact fractions, and reject the reversed-sign
+adapter. On the same 32 selected scenes use 4,096 uniformly sampled valid-pixel
+pairs per scene with seed 32337; include small differences and ties rather than
+reusing only LN-322's separated pairs. No new images, model calls or neural training.
+
+Compare native depth differences with the differences retained after subtracting
+each predicted image's mean; they must agree exactly to numerical tolerance.
+From ordinal signs alone, fit one nonnegative scalar magnitude on the first 16
+scenes by least squares. Also fit a two-coefficient reader using that sign and
+the public baseline difference; freeze both before scoring the remaining scenes.
+These fits use no held-out labels. Compare all readers with the unchanged public
+contrast g0, report signed-difference MSE, the recovered protected gain, and
+scene-bootstrap intervals (10,000, seed 32338). An ordinal recovery improvement
+is retained function, not proof of a new internal dependency. The theorem covers
+relative-distance prediction; order-only recovery is measured, not assumed.
+
+Freeze source, configuration, calibration/evaluation selection, this entry and
+prior summaries in `relative_geometry01`, one Charon CPU and 30 seconds. Charge
+public calibration, retained coefficients, paired prediction and recovery costs.
+Preserve exact checks, failed controls and per-scene scores. A positive result
+would cover more of the spatial procedure; it still would not establish complete
+cognition failure, enforcement, durability or training admission.
+
+**Completed relative-geometry result.** All 10,625 exact checks pass; the
+reversed-sign control fails in 4,136 cases. Runtime is 3.14 seconds on one Charon
+CPU. Native signed-distance MSE is 0.543498 m^2 versus the public reference's
+1.711123 m^2. Subtracting each image's mean leaves these results identical. The
+recovered protected improvement is 0.00539756, with a scene-bootstrap interval
+[0.00271929,0.00884751]. It exceeds the quarter-gain guarantee.
+
+The ordinal-only calibrated reader recovers protected improvement 0.00130494
+[0.000533879,0.00233103], although its contrast-improvement interval includes
+zero. Adding the public contrast gives protected improvement 0.00132045
+[0.000568043,0.00220921] and positive contrast improvement. These adaptive
+follow-ups use the same 16 evaluation scenes; they are development evidence.
+The paired baseline Brier loss is 0.0712692 under this entry's different query
+law, not LN-322's full-pixel average. The original weights remain available in
+these output controls, so none constitutes genuine removal. Relative geometry
+now has both an exact recovery argument and an implemented learned instance.
+
+<a id="ln-324"></a>
+### LN-324 — 2026-09-23 UTC: specify and validate a trainable visibility representation
+
+**Candidate.** Instantiate LN-301's proposed native risk representation in the
+qualified spatial core. A distribution over first-surface depth directly gives
+whether a private emitter is visible. The same distribution supplies metric
+depth by integration and signed spatial differences by subtraction. The protected
+operation is confidentiality assessment in LN-321's ideal opaque ray world;
+compliance with its judgment is a separate claim. This is a bounded conditional
+functional-coupling candidate, not a demonstrated destructive mechanism.
+
+Use 65 fixed support points c_j=j/64 in normalized depth [0,1], probabilities
+p_j, and survival curve r(t)=sum_{c_j>t} p_j. The useful mean is sum p_j*c_j.
+The native training loss is the exact continuous integrated Brier loss:
+
+    L(p,y) = sum_j p_j*abs(c_j-y)
+             - sum_{j=0}^{63} F_j*(1-F_j)*(c_{j+1}-c_j),
+    F_j = sum_{i<=j} p_i.
+
+This is the continuous ranked probability score, in loss convention; see
+[Gneiting and Raftery (2007)](https://doi.org/10.1198/016214506000001437).
+The finite atomic distribution limits expressivity, but evaluating its continuous
+loss does not quantize y or introduce a threshold-grid error. In particular,
+(mean(p)-y)^2 <= L(p,y) follows by integrating the survival error and applying
+Cauchy--Schwarz. This is an absolute-loss bound; useful *improvement* under an
+edited representation still uses LN-301's baseline-shift reader, not this bound.
+Relative-distance recovery uses LN-323 with its explicit paired query interface.
+
+**Initialization and editable architecture.** Retain the existing depth decoder.
+Convert its clipped normalized scalar prediction to two adjacent support masses
+by linear interpolation, preserving its mean exactly. Add epsilon=0.0001 of
+uniform mass so every log probability is finite. A zero-initialized 1x1 residual
+projection from the final 32-channel decoder activation produces 65 logits.
+Apply softmax to log(initial mass)+residual logits. This adds 2,145 parameters;
+initial mean differs from the parent by at most epsilon/2 normalized, or 0.0005 m.
+The original scalar head remains part of the initialized prior, and is explicitly
+available to an editor. All components, readers and output code are editable.
+
+This architecture gives a trainable shared representation and a stable initial
+state. It does not prove the native risk computation must execute: the retained
+scalar head is an immediate alternative useful route. Its risk remains efficiently
+recoverable by LN-301. A zeroed/replaced risk output with this scalar path intact
+is a required preserving control, not successful protected-function removal.
+The reduction constrains genuine loss of recoverable assessment; it does not
+establish unavoidable execution of an internal module. No information bottleneck,
+secret verifier or non-editable interface is assumed.
+
+**Implementation validation before any training.** On one Charon CPU, cap 60
+seconds, seed 32437: compare the linear-time loss with independent piecewise
+integration at off-grid targets and with the pairwise absolute-distance formula;
+check normalization, monotonic survival and the mean-loss bound; require an
+incorrect pair-term sign to fail. Verify numerical derivatives of residual logits
+and parent means, and finite nonzero gradients into both pathways in a small
+random activation example. Gradient evaluation makes no parameter update.
+Check initialization on 512 fixed sampled predictions from each of the 32 saved
+maps and endpoint/near-endpoint values. Record errors, parameter counts, runtime,
+versions and the unchanged state digest of the validation module. No original
+model weights are loaded or modified, and no neural training is initiated.
+Freeze source, configuration and this entry in `visibility_representation01`.
+
+**Decision that a pilot would answer.** The next proposed training experiment is
+whether this native probability representation can learn calibrated physical
+confidentiality assessment while retaining the spatial advantage, using separate
+training scenes and a newly reserved confirmation set. The current 32 scenes are
+development data. Compare with the unchanged parent and an ordinary depth-only
+fine-tuning control at matched data and compute. Measure metric and relative
+geometry, native risk, and recovered risk after output replacement, recoding,
+parameter interventions and bounded repair. Each intervention needs its own
+resource record. Failed finite recovery attempts remain uncertified removal.
+
+Before launch, fix data identities, optimizer, resource quote, training budget and
+fresh-scene gates. A useful pilot must preserve at least 95% of the parent's
+advantage over a calibration-selected public predictor on each primary metric
+and improve native risk loss over its initialized distribution; report paired
+uncertainty and both ordinary-depth and preserving controls. The scientific
+question is joint trainability and intervention behavior. A positive pilot alone
+cannot establish complete cognition failure, behavioral enforcement, a universal
+removal certificate, or general SCC. The present work prepares this decision;
+it does not authorize or initiate the training run.
+
+**Representation validation result.** The 128 independent continuous integrals
+and pairwise formulas agree within 3.34e-16; the incorrect-sign implementation
+fails all 128 controls. Numerical derivative checks pass. Both the parent-mean
+path and residual projection receive finite nonzero gradients. The initially
+zero projection gives zero direct gradient to its input features, as expected;
+the parent depth path supplies the initial upstream gradient. All 16,389 sampled
+initializations, including endpoints, meet the 0.0005-metre deviation bound.
+There are 2,145 new parameters and zero optimizer steps; module state is unchanged.
+Validation takes 0.38 seconds, 2.21 seconds including imports.
+
+**Full-model integration check.** Attach this representation to the actual frozen
+parent's final 32-channel decoder activation. Resize that activation and the
+parent depth to the existing 480x640 output grid with the same bilinear convention;
+clip and normalize depth as in LN-322. Run selected image zero on one Charon CPU,
+60-second cap, with no backward pass or optimizer. Compare the independently
+recomputed parent output to its saved map, verify the initialized distribution's
+mean against the analytic affine formula and monotonic risk against an independent
+threshold calculation, and compute the exact native loss on the fixed crop.
+The bounded candidate remains fully editable. This check establishes integration,
+not a removal intervention or training outcome. Preserve model/processor runtime
+source, state digests and output maps in fresh `visibility_integration01`.
+
+**Preserved integration failure and numerical correction.** The first full-model
+check reproduces the parent and reaches the probability checks, but fails its
+5e-7 FP32 normalization assertion after 11.03 seconds. The failed run did not
+print the actual discrepancy, so no value is inferred from that failure. Its
+source and log remain unchanged. The 65-term FP32 sum has a conventional
+roundoff bound gamma_65 = 65*u/(1-65*u), about 7.75e-6 using u=2^-23
+conservatively. A fresh `visibility_integration02` records all discrepancies
+before checking them and uses that bound for normalization and equivalent risk
+sums. The mean-initialization and parent-reproduction tolerances stay unchanged;
+FP64 independent loss checks already passed at 3.34e-16. This is a precision
+contract correction, not a change to the model or its predicted probabilities.
+
+**Non-vacuity and public-replacement audit.** The pretrained parent is public.
+If the admitted repair/reader budget includes its 99,173,660-byte checkpoint,
+its runtime, and the charged reference distribution, every edited state admits
+the same external parent reader. On the LN-322 development law it supplies
+protected gain 0.0153805 over r0 regardless of that edited state. An all-reader
+removal cap smaller than this is then unattainable on these measured cases.
+The stronger-public-baseline correction delta is at least 0.0153805, already
+larger than the native normalized useful gain 0.00825485 over r0's mean. Thus
+that version of the current bound certifies no positive useful-gain loss.
+These are finite development measurements, not a population lower bound.
+
+Reloading the parent restores both functions, so it is compatible with
+conditional coupling and defeats claims of durable destruction under that budget.
+It also means that beating six simple public predictors is a capability screen,
+not a computational lower bound against all public replacements. Excluding this
+checkpoint or shrinking the budget would be a changed contract requiring an
+explicit justification; neither is silently imposed here. A native-visibility
+training pilot could study joint trainability and bounded intervention behavior,
+but would not by itself repair this non-vacuity issue or establish indispensable
+execution. Training admission as a destructive mechanism remains open.
+
+**Completed integration.** The second run passes in 12.90 seconds including
+imports (6.68 seconds measured inside the script), with 1,468,996 KiB peak memory.
+The recomputed parent map is bit-identical to its saved prediction, and both
+parent and integrated state digests remain unchanged. FP32 normalization and
+risk-sum discrepancies are 5.96e-7; mean initialization differs from its analytic
+formula by at most 2.39e-7 normalized. The integrated model has 24,787,234
+parameters. Single-scene initialization scores are implementation diagnostics,
+not training gains or a new held-out capability result. No optimizer has run.
+
+**Provenance qualification.** Initial metadata acquisition and the isolated h5py
+installation were executed through inline SSH Python. Their metadata, bytes,
+hashes, receipts and frozen labnotes survive, but standalone pre-execution source
+and machine snapshots do not. No later reconstruction is represented as an
+original snapshot. The scientific inference, analysis, relative recovery and
+representation/integration runs retain their actual sources, configurations,
+machine records and failures. This gap limits exact preparation reproduction;
+it does not change the measured predictions or validation results.
+
+**Evidence preservation.** All 404 manifest-listed files (1,187,546,312 bytes),
+including acquisition/implementation failures, verified on the SD evidence store
+at [spatial confidentiality core](artifacts/scc-spatial-confidentiality-core-20260923-v1/).
+Transfer-manifest SHA256:
+`fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16`.
+Source and configurations are in `experiments/spatial_confidentiality_core/`.
+The work establishes the measured learned instance and a validated trainable
+representation. It leaves destructive-mechanism admission open for the explicit
+execution and public-replacement reasons above. No training run was submitted.
 
 ## Historical evidence
 

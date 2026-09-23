@@ -1,0 +1,24 @@
+{
+  "selection_seed": 32237,
+  "scene_count": 32,
+  "calibration_scenes": 16,
+  "bootstrap_seed": 32338,
+  "bootstrap_replicates": 10000,
+  "minimum_mse_reduction": 0.25,
+  "minimum_order_accuracy": 0.75,
+  "depth_range_metres": 10,
+  "valid_depth_minimum": 0.1,
+  "crop": [
+    45,
+    471,
+    41,
+    601
+  ],
+  "order_pairs": 4096,
+  "order_minimum_separation_metres": 0.25,
+  "ridge_regularization": 0.001,
+  "calibration_pixels_per_scene": 4096,
+  "neural_training": false,
+  "pair_seed": 32337,
+  "wall_seconds": 30
+}

@@ -1,0 +1,9 @@
+{
+  "seed": 32437,
+  "support_count": 65,
+  "feature_count": 32,
+  "uniform_fraction": 0.0001,
+  "samples_per_image": 512,
+  "wall_seconds": 60,
+  "neural_training": false
+}
