@@ -5,6 +5,7 @@ import io
 import json
 import os
 import re
+import resource
 import subprocess
 import sys
 import tarfile
@@ -14,12 +15,23 @@ import time
 def main():
     directory = Path(sys.argv[1])
     configuration = json.loads((directory / 'config.json').read_text())
-    archive_path = Path(configuration['source_archive'])
-    if hashlib.sha256(archive_path.read_bytes()).hexdigest() != configuration['source_archive_sha256']:
-        raise ValueError('Input archive checksum mismatch.')
-    with tarfile.open(archive_path, 'r:gz') as archive:
-        stream = archive.extractfile('syntcomp_at_home/benchmarks/ssi/syntcomp25.ssi')
-        matches = [line.strip() for line in io.TextIOWrapper(stream) if line.split(maxsplit=1)[0] == configuration['input_name']]
+    output_limit = configuration.get('output_bytes_limit', 10 * 1024 * 1024)
+    resource.setrlimit(resource.RLIMIT_FSIZE, (output_limit, output_limit))
+    if 'source_ssi' in configuration:
+        path = Path(configuration['source_ssi'])
+        data = path.read_bytes()
+        if hashlib.sha256(data).hexdigest() != configuration['source_ssi_sha256']:
+            raise ValueError('Input specification checksum mismatch.')
+        lines = data.decode().splitlines()
+    else:
+        archive_path = Path(configuration['source_archive'])
+        if hashlib.sha256(archive_path.read_bytes()).hexdigest() != configuration['source_archive_sha256']:
+            raise ValueError('Input archive checksum mismatch.')
+        with tarfile.open(archive_path, 'r:gz') as archive:
+            stream = archive.extractfile('syntcomp_at_home/benchmarks/ssi/syntcomp25.ssi')
+            lines = list(io.TextIOWrapper(stream))
+    matches = [line.strip() for line in lines
+               if line.split() and line.split(maxsplit=1)[0] == configuration['input_name']]
     if len(matches) != 1:
         raise ValueError('Input identifier is missing or ambiguous.')
     name, inputs, outputs, formula = matches[0].split(maxsplit=3)

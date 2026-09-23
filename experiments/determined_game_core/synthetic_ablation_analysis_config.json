@@ -1,0 +1,12 @@
+{
+  "tables": {
+    "learned": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory04/selected_source/experiments/240917_final_run_tacas/precomputed_dfs/semml_synthetic_full.csv",
+    "public": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory04/selected_source/experiments/240917_final_run_tacas/precomputed_dfs/semmlA_synthetic_full.csv",
+    "external": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory04/selected_source/experiments/240917_final_run_tacas/precomputed_dfs/strix_synthetic_full.csv"
+  },
+  "learned_seconds_limit": 30,
+  "public_seconds_minimum": 60,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "output_bytes_limit": 10485760
+}

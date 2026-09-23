@@ -1,0 +1,12 @@
+{
+  "source_ssi": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory03/selected_source/experiments/240917_final_run_tacas/overhuge.ssi",
+  "source_ssi_sha256": "8ccd24d3aa6e614573fb8c0e6f7d069211c37825169dd8ec41935ad6f43d4346",
+  "seed": 2026092301,
+  "formula_count": 4,
+  "assumption_count": 2,
+  "guarantee_count": 4,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "output_bytes_limit": 10485760,
+  "training": false
+}

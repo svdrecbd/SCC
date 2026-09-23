@@ -1,0 +1,22 @@
+{
+  "repositories": {},
+  "maximum_download_bytes": 10485760,
+  "maximum_requests": 20,
+  "request_timeout_seconds": 10,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "output_bytes_limit": 20971520,
+  "execute_upstream_source": false,
+  "neural_training": false,
+  "revisions": {
+    "reactive-systems/ml2": "33d9696c94de6d27aa836ae8118118a7277ff35c"
+  },
+  "resources": {
+    "README.md": "https://zenodo.org/api/records/10557155/files/README.md/content",
+    "INSTALL.md": "https://zenodo.org/api/records/10557155/files/INSTALL.md/content"
+  },
+  "continue_on_http_error": true,
+  "archive_url": "https://zenodo.org/api/records/10557155/files/artifact.zip/content",
+  "archive_bytes": 4183000534,
+  "upstream_archive_md5": "1fea620dee61b7df35ad8cf0f624dcf5"
+}

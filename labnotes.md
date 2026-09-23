@@ -158,6 +158,18 @@ controllers are not yet independently verified. The conditional theorem survives
 a fresh mixed-winner workload, learned contribution and costed large-domain
 verification remain missing. No training mechanism has been admitted.
 
+**Public-policy and fresh-task screens — [LN-353–356](#ln-353).** A generic
+nonlearned constructor gives explicit one-state policies for 16 of 35 published
+learned-positive synthetic cases, including six of ten where the published public
+guidance timed out. Successful construction takes about one second including
+startup. The fastest remaining published lead is unresolved in exploratory
+55-second calls; their launch overlap prevents a clean timing comparison. Four
+fresh conjunctive specifications all have short counterpolicies, and public
+judgment again precedes learned synthesis. These screens expose construction
+shortcuts, not general impossibility. The archived direct neural strategy generator and checkpoint are now acquired
+and CRC-checked ([LN-357–358](#ln-357)); inference and qualification remain open.
+No training mechanism or genuinely mixed difficult workload has been established.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -27763,6 +27775,319 @@ No training is admitted; the active mechanism goal remains unresolved.
 [guidance replacement assessment](artifacts/scc-semantic-synthesis-guidance-20260923-v1/).
 Manifest SHA256:
 `489f35573d17205f7f7996a23e953a585d9dba1bfe3eb3d9ece4de2919cd89c0`.
+
+<a id="ln-353"></a>
+### LN-353 — 2026-09-23: inspect the structured synthetic synthesis workload
+
+**Question and plan.** The 2025 SemML study reports an advantage of learned
+exploration over the same framework using public guidance on structured synthetic
+formulas. Inspect the pinned generator, pattern library and original ablation data
+before choosing a fresh mixed-winner law. The proposed formulas combine alternative
+environment assumptions and system guarantees; their construction may itself
+admit simple decision rules. Published advantages are leads, not qualification.
+
+Freeze source acquisition on Charon: one CPU, at most 60 seconds per bounded
+inspection, 10 MiB download/output, at most 24 requests. Read upstream source
+without executing it. Preserve exact revision, responses and hashes. Any subsequent
+generation or solver assessment needs a separately frozen contract. No training,
+model modification, removal claim or changed SCC resource boundary.
+
+Primary reference: [SemML (2025), Sections 3.3 and 4.2](https://arxiv.org/html/2501.17496v1).
+
+**Ablation audit contract.** Retain and join the three published synthetic decision
+tables by identifier. Count both winner labels and unresolved cases; select leads
+with learned decision at most 30 seconds and public decision at least 60 seconds
+or unresolved. These thresholds prioritize inspection only. Check conflicting
+successful labels, preserve original statuses/times, and do not impute timeouts
+as solved cases. Run a separate one-CPU, 60-second bounded analysis on Charon.
+
+**Results.** The archived tables report 35 realizable and 48 unrealizable
+learned decisions, versus 27 and 40 with public guidance. Learned guidance has
+20 exclusive decisions; public guidance has four. These remain published decision
+outcomes, not newly verified controller evidence. The three selected fast leads
+are P4_l_1002 (11.10 versus 669.00 s), P0_l_1017 (20.35 versus 112.42 s), and
+P3_l_1009 (27.29 versus 75.53 s). The first two are reported unrealizable.
+The generator's explicit negative-oriented branch means source construction tags
+must not be mistaken for an outcome-independent law.
+
+**Evidence.** 81 files, 1,167,841 bytes verified:
+[immutable assessment](artifacts/scc-synthetic-synthesis-inspection-20260923-v1/).
+Manifest SHA256: `cc7a2e0139430ffcab1e1e3352af965d696c41d803c2b8a1ad700801e51ff43f`.
+
+<a id="ln-354"></a>
+### LN-354 — 2026-09-23: construct simple public policies before learned screening
+
+**Source finding.** The three archived synthetic tables contain 200 common
+instances. Learned/public guidance reports 83/67 decisions respectively, with
+both labels represented. The 30/60-second lead rule selects two unrealizable
+inputs and one realizable input, `P3_l_1009`. Its fourth guarantee branch permits
+a simple input-reactive policy: fix o0 true and let o2 track its stated Boolean
+input expression. This observation motivates a general constructor, not a
+case-specific answer table. The source generator also has an explicit
+negative-oriented branch; do not use generator tags as protected evidence.
+
+**Frozen public constructor.** Enumerate constant system outputs and policies
+with one output bound to an input-only Boolean expression extracted from a
+G-equivalence in the public specification. All other outputs are constant.
+Also enumerate constant environment inputs. Substitute each policy throughout
+the formula using the pinned Owl parser and local equivalence-preserving
+constructors; accept only a literal true (system) or false (environment) residual.
+Unresolved formulas remain unknown. Input-reactive outputs follow Mealy ordering;
+environment choices never depend on current system output. Limit each controlled
+variable set to 12 bits. This is sound incomplete construction, not a new
+hardness claim or exhaustive synthesis.
+
+Check five small controls, including current-input reaction, impossible access
+to future input, and an obligation requiring memory; then screen all three
+published leads. One Charon CPU, 2 GiB Java heap, 6 seconds search/8 seconds
+process per formula, 60 seconds per frozen batch, 10 MiB output. Freeze Java,
+Python, configuration, formulas and runtime reference before execution. Learned
+models remain unchanged. No training. Search failure does not admit a candidate.
+
+**Validation and expansion.** All five implementation controls pass. The
+constructor discovers a one-state policy for P3_l_1009 after 65 candidates:
+o2 = i2 OR (NOT i0 AND i1) OR (i3 AND i4), with every other output false.
+Substitution reduces the entire original formula to true. Search takes 0.100 s;
+the full cold process takes 1.013 s. The two negative leads remain unknown.
+These are local public-construction costs, not matched-machine speedup estimates
+against the historical timing table.
+
+Freeze a follow-up over all other 34 inputs reported realizable by learned
+synthesis, ordered by the published learned time. Four disjoint batches contain
+at most ten formulas; each has a 2-second search/4-second process limit, plus
+15-second compilation, within a 60-second one-CPU batch. The shorter search is
+only a cheap public comparator; unresolved cases receive no hardness credit.
+No source changes or new labels are used. This selected-positive audit measures
+shortcut prevalence, not mixed-law judgment accuracy or fresh qualification.
+
+**Expanded result.** The unchanged constructor supplies explicit one-state
+policies for 16 of the 35 published learned-positive cases, including six of the
+ten where the published public guidance timed out. Successful cold processes take
+0.708–1.013 seconds; search itself takes 0.032–0.100 seconds. No policy-search
+limit is reached. The remaining 19 positive cases and two negative leads are
+unknown to this restricted constructor. Their unknown status is not a lower bound
+against other policies or algorithms. No benchmark outcome is consulted by the
+constructor. The policy and true residual are preserved for every success.
+
+**Evidence.** 197 files, 314,123 bytes verified:
+[immutable assessment](artifacts/scc-propositional-policy-assessment-20260923-v1/).
+Manifest SHA256: `eac2799ea6d68b91dd8685dacccaa34e2c7b330665677fcef7c48ddf7a1a360f`.
+
+<a id="ln-355"></a>
+### LN-355 — 2026-09-23: assess the remaining positive synthesis lead
+
+**Selection.** The fixed public constructor supplies policies for 16 of the 35
+published learned-positive formulas, including six of the ten positives where
+published nonlearned guidance timed out. Remaining unknowns are not hardness
+evidence. Select P2_l_1004 as the fastest published learned-positive formula
+with a public-guidance timeout that the simple-policy constructor does not solve.
+This is an explicit development selection, not fresh evaluation.
+
+**Frozen execution.** Run the current pinned runtime with the historical
+TACAS_GBT guidance and fixed BOTH perspective to construct a controller; compare
+with STRIX_SCORE throughout and BOTH for decision only. Each invocation gets a
+separate 60-second one-CPU Charon batch with 55-second process limit, 4 GiB heap,
+10 MiB output. Save exact SSI source hash and input formula, commands, output,
+status and full process cost. These are exploratory process limits, not an SCC
+resource boundary. A timeout warrants no impossibility inference. General
+controller verification remains separate from reported extraction. No training.
+
+**Result and scheduling limitation.** Both methods reach the 55-second limit
+without a reported winner or controller. The two batches overlap briefly on their
+shared pinned CPU, so these wall times are not a clean latency comparison. Preserve
+both runs and do not infer either a method advantage or failure at a matched CPU
+budget. The calls consume about 50 CPU seconds each. This lead remains unresolved;
+it has not supplied the intact learned competence needed for admission.
+
+**Evidence.** 23 files, 25,249 bytes verified:
+[immutable assessment](artifacts/scc-synthetic-guidance-assessment-20260923-v1/).
+Manifest SHA256: `f6343927026b5831ea2fded18b52fb9e7fd0190906da34b07ac326900b564e2b`.
+
+<a id="ln-356"></a>
+### LN-356 — 2026-09-23: generate a common-law conjunctive development set
+
+**Purpose.** Original DNF guarantees let a controller satisfy whichever complete
+branch is easiest. Construct a small new workload without that top-level choice
+before considering training. Extract conjunctive clauses from the antecedent and
+consequent of top-level implications in all 200 frozen synthetic inputs, without
+reading outcome labels. Skip source formulas without a top-level implication.
+Keep exact clauses and variable names; do not infer their semantic independence.
+
+**Frozen law.** Sort distinct extracted assumption/guarantee clauses. With Python
+Random seed 2026092301, sample two distinct assumptions and four distinct
+guarantees uniformly without replacement, form their conjunctions A and B, and
+emit A implies B. Produce four specifications without filtering or resampling by
+solver outcome. Preserve the library, selected indices, formulas and source hash.
+All formulas have the same clause-count law. Any missing player or source overlap
+is an explicit failure. This is fresh composition of existing public patterns,
+not distribution-independent confirmation, a guaranteed balanced winner law,
+or evidence that the generated task requires learned computation.
+
+Generate on one Charon CPU within 60 seconds and 10 MiB output. Then freeze
+public-policy and solver assessment configurations against the generated hash.
+Use all four cases, preserving unknowns and timeouts. Runtime controls and label
+balance must be evaluated; no candidate is admitted merely because the small
+policy class fails. No training or model editing.
+
+**Frozen assessment.** Generation extracts 1,144 distinct assumption clauses
+and 3,464 guarantee clauses from 154 source implications; all four generated
+formulas are new exact strings. Apply LN-354's public constructor to all four
+(2-second search, 4-second process, 60-second batch). Separately run each formula
+through historical TACAS_GBT/BOTH controller synthesis and fully nonlearned
+STRIX_SCORE/BOTH decision, with 12 seconds per invocation and 60 seconds per
+two-invocation batch. Enforce a 10 MiB per-file output limit in these solver
+children. Use the unchanged 4 GiB, one-CPU runtime. These short calls
+calibrate task difficulty and outcome mix; they cannot establish absence of a
+public replacement. Preserve every controller, but do not label larger outputs
+independently verified. Charge startup and extraction. No labels were consulted
+to choose or replace a generated case.
+
+**Results.** Both methods report UNREALIZABLE on all four generated cases.
+The public constructor's four unknowns therefore reflected its limited rules,
+not observed task difficulty. The full public decision procedure succeeds on all
+four before learned controller extraction completes:
+
+| Specification | Learned controller | Public decision | Reported states |
+| --- | ---: | ---: | ---: |
+| 0001 | 4.918 s | 2.213 s | 1 |
+| 0002 | 4.218 s | 1.915 s | 1 |
+| 0003 | 4.219 s | 2.015 s | 1 |
+| 0004 | 5.323 s | 2.609 s | 5 |
+
+These are sequential one-CPU calls, with complete startup charged. The generated
+batch supplies neither mixed outcomes nor a learned advantage. Four outcomes do
+not establish the winner distribution of the whole generator. No resampling or
+postselection is used to reclassify this failed development batch as success.
+
+**Independent counterpolicies.** The original formulas also admit short analytic
+refutations. These are direct derivations after inspection, not discoveries timed
+as part of the generic public constructor:
+
+- 0001: hold i0,i1,i4,i5,i6 true and i7 false (i3 arbitrary). Both assumptions
+  hold. One guarantee requires o0 false at every time after the initial step;
+  another repeatedly requires an eventual o0 true. They are inconsistent.
+- 0002: hold i1,i2,i4,i6 true (i3 arbitrary). Both assumptions hold. Two next-step
+  guarantees require o1 and o3 to have opposite fixed values at the same step.
+- 0003: hold i7 true and i0,i2 false (other inputs false). Both assumptions hold.
+  The first guarantee forces o0 and o1 always false. A later equivalence has
+  FG(not i0) true on one side and a disjunction requiring GF(o0) or GF(o1) on the
+  other, which is false.
+- 0004: alternate i0 between true and false; hold i4 true and every other input
+  false. Both assumptions hold. G(i0 OR F(i3 OR i7)) is false, so its equivalence
+  requires GF(o2) false. The response obligation triggered by i0 AND not i1 AND i4
+  nevertheless requires GF(o2) true. A two-state environment policy suffices.
+
+Thus the reported negative outcomes have explicit semantic witnesses independent
+of the returned HOA files. General HOA verification is still not implemented by
+these four derivations. The conclusion is to strengthen the task-construction
+method, not increase this batch's scale or declare general SCC impossible.
+
+**Evidence.** 88 files, 514,125 bytes verified:
+[immutable assessment](artifacts/scc-conjunctive-synthesis-development-20260923-v1/).
+Manifest SHA256: `512dc593533fc693231be7ad3a2e9956bb74a81b9d6f71857c7a66324fa942d4`.
+
+<a id="ln-357"></a>
+### LN-357 — 2026-09-23: inspect direct neural strategy generation
+
+**Implementation lead.** [NeuroSynt](https://github.com/reactive-systems/NeuroSynt)
+and its [TACAS 2024 paper](https://arxiv.org/abs/2401.12131) describe a neural
+engine that proposes controller/counterstrategy circuits for model checking.
+This retains LN-346's complete-strategy relation while placing the learned
+contribution in program generation. The portfolio's reported wins do not by
+themselves qualify its neural engine or eliminate simple public constructions.
+Check the neural component separately; known benchmark labels are not fresh
+judgment evidence. No training mechanism is declared from this literature lead.
+
+**Frozen source inspection.** Resolve and preserve exact GitHub revisions for
+NeuroSynt and ML2; acquire complete source-tree metadata and selected build,
+configuration and model-loading files. One Charon CPU, 60 seconds per bounded
+inspection, at most 20 requests and 10 MiB download; no upstream execution,
+container installation or weight download at this stage. Inspect input semantics,
+counterstrategy support, checkpoint access, generator and verification costs
+before deciding whether inference is practical. No training or changed threat
+model. CPU work remains on Charon.
+
+**Acquisition correction.** The first inspection preserves both resolved trees
+but stops at HTTP 404: ML2 uses README.rst, not README.md. Retain the failed run.
+Inspect the observed README and loading sources in a fresh directory pinned to
+ML2 revision 33d9696c94de6d27aa836ae8118118a7277ff35c. NeuroSynt resolves to
+aaed8707d28cbd8e5dfd30160e0b3b9ec9dd938d. The follow-up saves metadata before
+individual files so a later failed request cannot hide an acquired tree.
+
+**Checkpoint access.** The pinned loader names the public ML2 storage prefix
+ltl-syn/ht-50/train/pipe. Anonymous bucket listing returns HTTP 401; the complete
+response metadata and successfully acquired source remain preserved. Inspect the
+specific documented configuration object and the paper's independent Zenodo
+archive through public endpoints. Record HTTP errors without substituting success.
+No authentication, private storage access or container execution is attempted.
+
+**Public archive alternative.** The documented checkpoint object returns HTTP
+403 anonymously. The paper's public Zenodo record resolves to version 10557155,
+which exposes a 4,183,000,534-byte ZIP plus installation documents. Inspect its
+central directory using checked byte ranges under the same 10 MiB allowance;
+read the published README/INSTALL files. Preserve the advertised full-file MD5
+without claiming to have verified an archive not yet downloaded. Public release
+availability is distinct from the unavailable storage endpoint.
+
+**Inspection result.** The ZIP directory contains 5,359 members. Its selected
+source and model files can be recovered by byte range without installing the
+multi-gigabyte tool containers. The original storage service failure therefore
+does not block this implementation lead. Source inspection also exposes random
+proposition renaming and beam-search verification settings that must be frozen
+before inference. Published performance is still only a lead.
+
+**Evidence.** 88 files, 2,926,311 bytes verified:
+[immutable release evidence](artifacts/scc-neural-synthesis-inspection-20260923-v1/).
+Manifest SHA256: `2035a12d02846377e62229a0d636db8c3dfe9b7a4b5f717be2cbc4960e4577cd`.
+All processes are terminal; no inference or training has occurred.
+
+<a id="ln-358"></a>
+### LN-358 — 2026-09-23: acquire the released direct synthesis implementation
+
+**Acquisition decision.** The public ZIP contains the complete archived ML2 and
+NeuroSynt source, tokenizers/configuration, and the ht-50 TensorFlow checkpoint.
+Its weight-data member is 177,772,214 bytes (160,979,793 compressed). This supplies
+an independent published source for the checkpoint whose original storage object
+is unavailable. Use the archived source/configuration together; modern GitHub
+code is an inspection reference, not assumed interchangeable.
+
+**Frozen source acquisition.** Download only the contiguous source/tokenizer
+regions and selected installation/configuration members. Check each HTTP byte
+range and each extracted ZIP member CRC; retain responses, file hashes and
+original relative paths. Reject traversal and symlink entries. One Charon CPU,
+60 seconds, at most 40 requests, 10 MiB download and 10 MiB extracted data.
+No upstream source, installation script, container or model is executed. Full
+archive MD5 remains unverified. A checkpoint download and inference setup require
+separate frozen resource records; neither constitutes training admission.
+
+**Source result and checkpoint contract.** 662 selected release files pass CRC,
+with 2,446,966 extracted bytes from 1,797,013 downloaded bytes in 18.51 seconds.
+The archived requirements specify TensorFlow 2.13.1 and Keras 2.13.1. Acquire only
+the checkpoint directory in a new batch: one Charon CPU, 60 seconds, at most ten
+requests, 180 MiB download and 200 MiB extracted data. Keep the compressed response
+and CRC-checked checkpoint/index/locator, with SHA256s. Do not import TensorFlow,
+load checkpoint objects, change the source, or start training in this batch.
+
+**Checkpoint result and next gate.** All three checkpoint members pass CRC:
+177,846,411 extracted bytes from 161,623,404 downloaded bytes in 20.65 seconds,
+with 691,440 KiB peak process memory. The checkpoint has not been loaded or run.
+The saved configuration is a hierarchical Transformer with four local encoder,
+four global encoder and eight decoder layers, 256-dimensional embeddings and
+128 target tokens. These architectural fields are configuration evidence, not
+a parameter count or measured competence.
+
+Next establish a compatible private inference environment and verify that the
+unchanged checkpoint/tokenizers produce well-formed, correctly ordered controller
+and counterstrategy candidates. Check those candidates with a charged independent
+semantic verifier before any capability comparison. Test public replacements and
+mixed-outcome task construction with the same care as above. Do not count the
+availability of this model, a successful load, or an easy demonstration as a
+training-ready SCC mechanism. The original goal remains active and unresolved.
+
+**Evidence.** 714 files, 343,893,784 bytes verified:
+[immutable release evidence](artifacts/scc-neural-synthesis-release-20260923-v1/).
+Manifest SHA256: `c5aa79f33abd7961024ca9010ab6e7dae7a5d83dcede559fa4a71c092f420f07`.
+All processes are terminal; no inference or training has occurred.
 
 ## Historical evidence
 

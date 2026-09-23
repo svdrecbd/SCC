@@ -1,0 +1,55 @@
+{
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "library_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/lib",
+  "source_ssi": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory03/selected_source/experiments/240917_final_run_tacas/overhuge.ssi",
+  "source_ssi_sha256": "8ccd24d3aa6e614573fb8c0e6f7d069211c37825169dd8ec41935ad6f43d4346",
+  "input_names": [
+    "P4_l_1002",
+    "P3_l_1009",
+    "P0_l_1017"
+  ],
+  "fixtures": [
+    {
+      "name": "constant_output",
+      "inputs": "i0",
+      "outputs": "o0",
+      "formula": "G o0",
+      "expected_result": "REALIZABLE"
+    },
+    {
+      "name": "reactive_output",
+      "inputs": "i0",
+      "outputs": "o0",
+      "formula": "G(i0 <-> o0)",
+      "expected_result": "REALIZABLE"
+    },
+    {
+      "name": "environment_control",
+      "inputs": "i0",
+      "outputs": "o0",
+      "formula": "G i0",
+      "expected_result": "UNREALIZABLE"
+    },
+    {
+      "name": "future_input_control",
+      "inputs": "i0",
+      "outputs": "o0",
+      "formula": "G(o0 <-> X i0)",
+      "expected_result": "UNKNOWN"
+    },
+    {
+      "name": "delayed_output_control",
+      "inputs": "i0",
+      "outputs": "o0",
+      "formula": "G(i0 <-> X o0)",
+      "expected_result": "UNKNOWN"
+    }
+  ],
+  "search_seconds": 6,
+  "invocation_seconds": 8,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "heap_bytes": 2147483648,
+  "output_bytes_limit": 10485760,
+  "training": false
+}

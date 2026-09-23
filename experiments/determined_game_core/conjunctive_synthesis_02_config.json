@@ -1,0 +1,29 @@
+{
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "executable": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/bin/semml",
+  "wall_seconds": 60,
+  "invocation_seconds": 12,
+  "processor_count": 1,
+  "heap_bytes": 4294967296,
+  "training": false,
+  "methods": [
+    {
+      "name": "learned_controller",
+      "ranking": "TACAS_GBT",
+      "perspective": "BOTH",
+      "decision_only": false
+    },
+    {
+      "name": "public_decision",
+      "ranking": "STRIX_SCORE",
+      "perspective": "BOTH",
+      "decision_only": true
+    }
+  ],
+  "dependency_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/dependency01/selected_source/thirdparty/kissat",
+  "dependency_sha256": "db1c1db97888b683ac692c7cea466c36c63e87304a26a9044ac5c705a777ccac",
+  "input_name": "specification_0002",
+  "source_ssi": "/home/salvador/scc-research/conjunctive-synthesis-development-20260923-v1/generation01/specifications.ssi",
+  "source_ssi_sha256": "5ac14a87d837ee6a2b00e87d38acb52676d1a23313716f6796583369e940feb1",
+  "output_bytes_limit": 10485760
+}

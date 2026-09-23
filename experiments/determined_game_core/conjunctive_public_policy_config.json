@@ -1,0 +1,20 @@
+{
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "library_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/lib",
+  "source_ssi": "/home/salvador/scc-research/conjunctive-synthesis-development-20260923-v1/generation01/specifications.ssi",
+  "source_ssi_sha256": "5ac14a87d837ee6a2b00e87d38acb52676d1a23313716f6796583369e940feb1",
+  "input_names": [
+    "specification_0001",
+    "specification_0002",
+    "specification_0003",
+    "specification_0004"
+  ],
+  "fixtures": [],
+  "search_seconds": 2,
+  "invocation_seconds": 4,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "heap_bytes": 2147483648,
+  "output_bytes_limit": 10485760,
+  "training": false
+}

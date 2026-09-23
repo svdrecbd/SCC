@@ -1,0 +1,19 @@
+{
+  "repositories": {},
+  "maximum_download_bytes": 10485760,
+  "maximum_requests": 20,
+  "request_timeout_seconds": 10,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "output_bytes_limit": 20971520,
+  "execute_upstream_source": false,
+  "neural_training": false,
+  "revisions": {
+    "reactive-systems/ml2": "33d9696c94de6d27aa836ae8118118a7277ff35c"
+  },
+  "resources": {
+    "checkpoint_config.json": "https://storage.googleapis.com/ml2-public/ltl-syn/ht-50/train/pipe/config.json",
+    "published_archive.json": "https://zenodo.org/api/records/10046523"
+  },
+  "continue_on_http_error": true
+}
