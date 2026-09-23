@@ -1,0 +1,7 @@
+{
+  "source_states": 4,
+  "score_levels": [0.5, 0.75, 1.0],
+  "processor_count": 1,
+  "wall_seconds": 15,
+  "neural_training": false
+}

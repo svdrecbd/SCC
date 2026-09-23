@@ -95,10 +95,13 @@ and constrain a future curriculum; they do not admit a destructive-mechanism run
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
 recovers protection is compatible with coupling; mandatory execution of a named
-head is not a core requirement. Public-parent reload restores both functions and
-limits removal/durability claims when that repair is allowed. No smaller resource
-budget is silently imposed. Neither marginal nor joint calibration alone settles
-these obligations, and no neural training has begun.
+head is not a core requirement. [LN-338](#ln-338) distinguishes coupling at each
+repaired endpoint from requiring removal to survive every allowed repair. Public-
+parent reload restores both functions and limits the latter claim; it is not by
+itself a veto on endpoint coupling. Protected and useful competence must be
+assessed on the same complete endpoint with all actually used material included.
+No resource budget is reduced. The neural removal criterion and severe-loss
+argument remain unresolved, and no neural training has begun.
 
 **Semantic boundary — [LN-317–320](#ln-317).** The preceding three-way semantic
 reader has an exact conditional judgment-recovery relation. Public finite-support
@@ -26159,6 +26162,127 @@ configuration and machine record, are verified in
 [fixed judgment minimax](artifacts/scc-fixed-judgment-minimax-20260923-v1/).
 Manifest SHA256: `d0a7e2cae480f3745db5c169a8206553967e0b94b6bc6248cbc8d443d7acff2c`.
 The run is terminal. The source matches the preserved executed version.
+
+<a id="ln-338"></a>
+### LN-338 — 2026-09-23: distinguish coupling at each repaired endpoint from repair-closed removal
+
+**Admission audit.** LN-337 settles a fixed-average information criterion, not the
+individual-model cognitive target. A separate quantifier distinction matters to
+the current admission gate. The user permits restoration of both functions and
+distinguishes core coupling from durability. A criterion that requires the
+protected function to remain unavailable after every admitted repair is a
+stronger removal notion than loss in a particular individual-model endpoint.
+It must not silently become necessary for every core coupling proposal.
+
+Let s be the complete model endpoint being evaluated and R the admitted repairs,
+including identity. All installed code, retained decoders, caches and actually
+introduced advice belong to the resulting endpoint r(s). Let P and U measure
+functional protected and useful competence there, not merely the accuracy of a
+named head. Fix a protected-removal level epsilon and a severe useful-loss level
+delta, defined independently for the actual proposed cognitive task. The core
+endpoint requirement is
+
+    for every r in R:
+        P(r(s)) <= epsilon  implies  U(r(s)) <= delta.        (E)
+
+Restoration of both functions is allowed. A restoration producing high U with
+low P is a counterexample at that endpoint. A recoding that retains a competent
+resident decoder has high functional P, even if its original named head fails.
+
+By contrast, define P_max(s)=sup_r P(r(s)) and U_max(s)=sup_r U(r(s)). The statement
+
+    P_max(s) <= epsilon  implies  U_max(s) <= delta          (M)
+
+has a different antecedent: protection must remain unavailable across the entire
+repair set. (E) implies (M); the converse fails. For example, suppose identity
+produces (P,U)=(.5,1) and parent restoration produces (1,1), with epsilon=delta=.5.
+(M) is vacuously true while (E) rejects the first endpoint. A successful repair
+of protection in one outcome cannot establish that another outcome retaining
+usefulness still has protection.
+
+Even when (E) holds, non-vacuity of (M)'s antecedent need not hold. A coupled
+system with possible endpoints (.5,.5) and (1,1), and an allowed restoration to
+(1,1), has genuine current-state loss and exact endpoint coupling in that finite
+control. Its protection is never unavailable under the maximum over repairs.
+This is a logical distinction, not an assertion that this two-score example
+constitutes cognition or supplies a neural protected-function measure.
+
+**Correction to use of the older gate.** LN-250's non-vacuity conditions are
+appropriate for its explicitly repair-inclusive availability diagnostic. They
+are not necessary conditions for every claim of (E). Treating them as such would
+add a repair-resistance condition to the core target. LN-324's public-parent
+calculation remains correct: its repair-inclusive cap is unattainable when the
+parent reader fits the budget. That result limits that cap and durability claims;
+it does not alone veto all endpoint-based conditional coupling mechanisms.
+The earlier quantitative theorems and source snapshots remain unchanged.
+
+This is not a prohibition on reloads, independent solvers or large decoders, and
+no resource budget is reduced. If a permitted construction imports a parent,
+solver or new information, evaluate the resulting endpoint with that material
+included. If an availability definition instead treats all such external
+resources as already present before a repair, it is the repair-inclusive claim
+again and retains the original non-vacuity limitation. The two state boundaries
+must be named, not exchanged halfway through an experiment.
+
+**What remains unresolved.** P still needs an independently specified,
+representation-tolerant functional definition. A current output score cannot
+establish absence from weights, intermediate states, other interfaces or retained
+advice. An unsuccessful resident-reader portfolio is not an all-reader upper
+bound, and the quantifier correction does not supply one. Ordinary permitted
+inference and mere interpretation of existing material must not be mislabeled
+as external restoration to manufacture removal. The spatial candidate therefore
+still needs an explicit individual-model boundary, a defensible removal witness
+or scoped certification, and a severe-loss implication for its actual reusable
+abilities. No neural training is admitted by this correction alone.
+
+**Executable logical controls.** Enumerate every nonempty subset of the nine
+score pairs in {.5,.75,1}^2 and verify (E) implies (M), recording all converse
+counterexamples. Separately use a uniform two-bit source (a,b): protected target
+a; useful target either a (coupled control) or b (independent control). Enumerate
+complete-state Bayes predictions for intact, invertibly recoded, empty and b-only
+states. The b-only independent case must have (P,U)=(.5,1); the empty coupled
+case must have (.5,.5). Adding the explicitly external archived two-bit source
+restores both targets at a new endpoint; it is charged as two materialized source
+bits. It must not conceal the independent case's identity-endpoint failure.
+These are information and logic controls, not learned procedures or physical
+secure erasure. One Charon CPU, 15 seconds, fresh
+`repair-quantifiers-20260923-v1/exhaustive01`; freeze configuration, source, entry
+and machine. No neural computation, parameter intervention or training.
+
+**Completed quantifier controls.** All 511 nonempty outcome sets are checked:
+127 satisfy both requirements, six fail both, and 378 satisfy the maximum-based
+implication while violating an endpoint implication. None violates the proved
+forward implication (E) => (M). These are exhaustive logical configurations on
+the declared score grid, not frequencies of real model failures. Twelve minimal
+two-endpoint counterexamples are saved.
+
+All eight source-state controls and eight repair cases agree with complete-state
+Bayes calculations. Invertible recoding retains both functions. The empty coupled
+state loses its source information, and explicit restoration supplies it again.
+The independent b-only state retains useful accuracy one while protected accuracy
+is .5; parent restoration does not erase that endpoint counterexample. The
+maximum-based test is vacuous in all eight repair cases because restoration is
+available. Runtime .0037 seconds inside Python, .03 seconds total, peak 12,736
+KiB. This validates the distinction between measurement stages; it does not
+establish individual-model procedural loss from a population information test.
+
+**Prospective decision.** Keep repair-inclusive availability as a separately
+named, stronger removal diagnostic when it is actually claimed. For the core
+target, require protected and cognitive competence to be assessed at the same
+complete endpoint, including any decoder, reconstruction or repair already
+applied. Establish interpretation invariance and account for all material used
+there; do not relabel ordinary inference as repair to discard a surviving
+function. A public backup restoring both functions remains allowed and is not
+by itself a veto on conditional endpoint coupling. Apply this correction before
+another mechanism admission decision; no existing empirical result is promoted
+to a demonstrated destructive mechanism by changing the quantifiers.
+
+**Evidence.** Eight manifest-listed files (28,203 bytes), including every
+logical counterexample, exact source-state scores, repair cases and frozen
+source/configuration/entry/machine, are verified in
+[repair quantifiers](artifacts/scc-repair-quantifiers-20260923-v1/).
+Manifest SHA256: `c03dea1c19091d88d51dd6c521e3cef28005996dc6386f77056bb7b232ee0e99`.
+The run is terminal and its executed source matches the worktree.
 
 ## Historical evidence
 
