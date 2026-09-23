@@ -1,0 +1,17 @@
+{
+  "seed": 34137,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "processor_count": 1,
+  "neural_training": false,
+  "large_case": {
+    "field_degree": 10,
+    "modulus": 1033,
+    "coordinates": 1024,
+    "anchors": 16,
+    "observations": 128,
+    "correlation": [4, 5],
+    "trials": 16,
+    "seed": 34137
+  }
+}

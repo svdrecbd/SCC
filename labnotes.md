@@ -91,15 +91,26 @@ reused diagnostic scene, XOR-32 still has a tiny computed derivative,
 while majority-32 has a substantial one. These checks improve implementation
 and constrain a future curriculum; they do not admit a destructive-mechanism run.
 
-**Reusable-input recovery — [LN-339](#ln-339).** A retained spatial procedure
-can reveal additional geometry through transformed inputs when its observations
-span the missing quantities. Exact finite controls distinguish recovery from
-transformation-invariant hidden information. A two-call reflection reader on the
-unchanged visual model retains 96.90% of measured protected gain on 16 reused
-development scenes, but fails the predeclared positive comparison-interval gate.
-The task-level recovery identity requires performance on a reflection-closed
-input law, not an equivariant neural architecture. This is a recovery control,
-not a parameter-removal experiment or training admission.
+**Recovery beyond full reconstruction — [LN-339–340](#ln-339).** Input reuse
+can reveal missing geometry, while invariant subspaces may remain hidden. The
+reflection screen retains 96.90% of measured protected gain but fails its declared
+comparison-interval gate. A separate real-linear-summary result does not require
+full reconstruction: useful projected-field MSE gain yields an explicit risk
+reader. Reflection-even, reflection-odd, global-mean and centered controls all
+retain positive protected gain on the reused scenes. Pair-XOR is a nonlinear
+exception to this linear argument. These remain output controls, not parameter
+removal experiments.
+
+**Conditional predictive direction — [LN-341](#ln-341).** A noisy coded-world
+control preserves at least 97.854% of intact predictive information while every
+isolated Boolean judgment has tiny advantage. Conditioning on declared observation
+histories exposes that retained information. A charged decoder recovers the source
+from 128 noisy observations with an analytic failure bound below 3e-10; finite
+controls and 16 larger validation cases pass, including the required wrong-neighbour
+control outside its error guarantee. This motivates a conditional predictive core
+whose joint log score decomposes into confidentiality-risk log scores. It changes
+the public-input law, does not establish neural removal or catastrophic loss, and
+does not yet admit training.
 
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
@@ -26454,6 +26465,368 @@ machine logs and parameter checks, are verified in
 [input reuse](artifacts/scc-spatial-input-reuse-20260923-v1/). Manifest SHA256:
 `9d08e42ea207c71851d7d5e7c0871e3929e35a5944b7ca6d1e824ed755cb4338`.
 All processes are terminal; executed current sources match the worktree.
+
+<a id="ln-340"></a>
+### LN-340 — 2026-09-23: distinguish hidden coordinates from loss of risk assessment
+
+**Question.** LN-339's unobservable subspace does not itself certify removal of
+confidentiality assessment. A useful linear summary can retain protected predictive
+value without reconstructing the whole scene. Derive that value directly, then
+test reflection-invariant geometric summaries and an explicit nonlinear exception.
+This extends LN-301 and LN-323; it is not a claim that the familiar projection
+identities are new general mathematics.
+
+**General linear reader.** Normalize the true depth vector z into [0,1]^n. Let
+r0_i(t) be the fixed public threshold-risk baseline for each coordinate, with
+b_i=integral r0_i(t) dt. A useful procedure predicts H z by g, where H is a
+specified real m-by-n matrix. Put d=g-Hb and choose L>=||H||_op^2, L>0. Return
+
+    b* = clip(b + H^T d/L, 0, 1).
+
+Before clipping, expansion and ||H^T d||^2<=L||d||^2 give
+
+    ||b-z||^2 - ||b+H^T d/L-z||^2
+      >= [||Hb-Hz||^2 - ||g-Hz||^2]/L.
+
+Coordinatewise clipping improves the squared error to z. LN-301's risk reader
+then supplies integrated Brier improvement, averaged over uniformly selected
+coordinates and thresholds, of at least the right-hand side divided by n.
+Equivalently, a per-summary-coordinate MSE gain G gives protected gain at least
+m*G/(n*L). There is no calibration, Gaussian-source or independence assumption.
+All forecasts may come from any edited implementation. This recovers risk skill,
+not necessarily the exact coordinates and not every judgment at a fixed threshold.
+The scale of H and the chosen utility loss must both be retained; arbitrary
+rescaling of g cannot increase the guaranteed physical prediction gain.
+
+For an orthogonal projection Q, Q^T=Q=Q^2, and any g in its image, the *unclipped*
+identity is exact with L=1:
+
+    ||b-z||^2 - ||b+(g-Qb)-z||^2
+      = ||Qb-Qz||^2 - ||g-Qz||^2.
+
+Thus the mean per-pixel gain of a retained projected-field predictor transfers
+with coefficient one. It is not necessary to recover the complementary subspace.
+A global mean, the field after subtracting its mean, and reflection-even or
+reflection-odd fields are examples. Rank alone is not the normalized utility
+score, and this is not a bound on how much information an arbitrary encoding
+retains. Obtaining g, H or Q, the baseline, matrix products, output and code all
+count. A dense representation may make this reader costly; the examples below
+have linear-time arithmetic in the number of pixels and use no inversion.
+
+**Invariant nonlinear exception.** Let z consist of four independent fair bits.
+Retain the two within-pair XORs (z0 xor z1,z2 xor z3). This encoding is invariant
+under swapping each pair and leaves every singleton bit independent of the
+complete retained state. It preserves two reusable pair-parity answers exactly,
+but supplies zero singleton threshold-risk gain. Treating XOR as a real sum would
+incorrectly apply the displayed theorem. By contrast, retaining the real pair
+sums supplies singleton Bayes Brier gain 1/8, despite failing exact coordinate
+reconstruction. Both controls expose local information limits; neither is a
+learned visual edit. The XOR state retains protected competence when the protected
+query family includes its corresponding joint disclosure policies (LN-327).
+
+**Registered exact checks.** With rational arithmetic, enumerate quarter-grid
+z,b in [0,1]^2 and five fixed predictor pairs in [-1,1]^2 for reflection-even,
+reflection-odd, identity and zero projections. Project each proposed predictor
+into the appropriate image; verify the exact gain identity, clipped inequality
+and integrated risk guarantee using Bernoulli baseline curves r0_i(t)=b_i for
+0<=t<1. This baseline has mean b_i. Check general real H controls with operator
+bounds supplied by ||H||_F^2, including a scaled, nonorthogonal matrix, and reject
+an underestimated bound on a recorded counterexample. Enumerate every four-bit
+source for real-sum and XOR encodings and compute the complete-state Bayes
+singleton scores; the latter must be exactly zero gain and the former exactly
+1/8. One Charon CPU, 30 seconds; no neural calls or training.
+
+**Registered learned check.** Reuse all original and reflected predictions from
+LN-322 and LN-339; no new neural execution. Align each reflected-input output to
+original coordinates and average it with the original prediction, obtaining an
+exactly equivariant two-call procedure F. Apply the projections Q_even=(I+R)/2,
+Q_odd=(I-R)/2, Q_mean=11^T/n and Q_centered=I-Q_mean to F. Even and odd projection
+subspaces are reflection-invariant: further reflection gives the same even
+observation or the negative odd observation, not the missing components.
+
+Use the intersection of the original crop with its reflection, and include a
+pixel pair only if both true depths are valid in the original range. This makes
+the scoring support reflection-closed. Missing labels only select evaluation
+positions; they do not enter the retained predictor. For global mean/centering,
+define each projection on the entire fixed rectangular intersection crop before
+truth validity is known; use only scenes with all labels valid for those two
+exact projection identities, and report exclusions rather than changing Q using
+truth. If none qualifies, report that and retain their rational validation.
+
+The protected baseline is the original 16-scene empirical threshold curve with
+its original invalid-label imputation, as in LN-322. No baseline is fitted again.
+For each projection return clip(b+g-Qb), evaluate projected-field useful gain,
+full-field recovery gain and integrated protected gain. For even/odd projections,
+paired validity makes restriction commute with projection; verify the identity
+and both inequalities independently per scene. Record raw negative gains, retained
+fractions where the denominator is positive, and paired scene-bootstrap intervals
+(10,000 draws, seed 34037). Positive recovery requires positive mean protected
+gain with a positive interval lower endpoint. Do not confuse this with a bound
+against every public comparator, an all-reader removal result, or confirmation on
+fresh scenes. This is a development recovery experiment on the known parent.
+
+**Resources and decision.** Freeze this entry, source, configuration, public
+coefficients and selection in a fresh artifact root. Use one Charon CPU, 60
+seconds for the learned analysis, no GPU, no optimizer, no parameter intervention.
+Keep the original and reflected output sources immutable and charge both parent
+calls to the two-call procedure. A passing linear result removes that specific
+objection to local risk recovery; nonlinear relational procedures remain separate
+obligations. Neither inaccessible coordinates nor retained entropy alone settles
+whether the specified reusable cognitive ability has been destroyed. The core
+mechanism objective and non-vacuous functional-removal requirement remain open.
+
+**Completed result.** All 21,875 rational checks pass, including 3,905 positive
+summary gains and 10,550 cases requiring clipping. The underestimated operator
+bound is rejected. Complete-state enumeration gives singleton Brier gain exactly
+1/8 for real pair sums and zero for pair XORs, as predicted. The exact run takes
+2.605 seconds inside Python (2.64 seconds process, 12,672 KiB peak memory).
+
+All 32 reused prediction files match their frozen manifest hashes. All 16 scenes
+have complete valid labels on the fixed intersection crop, so no global-mean or
+centered case is excluded. Every projection identity and protected-gain bound
+passes. The four pointwise bootstrap intervals are exploratory, not simultaneous
+confidence guarantees and not comparisons against every public reader.
+
+| Retained projected field | Normalized useful MSE gain | Recovered protected Brier gain | Paired scene-bootstrap interval for protected gain |
+| --- | ---: | ---: | --- |
+| Reflection-even | 0.00660429 | 0.01315086 | [0.00387364, 0.02545356] |
+| Reflection-odd | 0.00150903 | 0.00252946 | [0.00143799, 0.00368005] |
+| Global mean | 0.00238018 | 0.00640072 | [0.00010729, 0.01416895] |
+| Mean-centered | 0.00573314 | 0.01001881 | [0.00507230, 0.01647206] |
+
+All four pass the declared positive-recovery screen. The mean-only interval is
+close to zero; no strong precision claim is warranted. Analysis takes 9.650
+seconds inside Python (9.84 seconds process, 702,372 KiB peak memory), with no
+new model calls, fits or parameter changes. These are output-representation
+controls; the underlying weights remain present.
+
+**Consequence for the candidate.** A transformation-invariant missing subspace
+is not sufficient evidence of protected-function removal. For the declared real
+linear summaries, any positive gain supplies an explicit charged reader even
+when exact full-field reconstruction is impossible. The quantitative coefficient
+and baseline remain part of the claim. Nonlinear relational encodings, efficient
+conditional prediction, genuine parameter-level removal and severe cognitive
+loss still require separate analysis. This result does not admit training.
+
+**Evidence.** All 22 manifest-listed files (2,803,888 bytes), including the
+source, fixed configuration, selected input manifests, per-scene scores and
+exact checks, are verified in
+[linear risk recovery](artifacts/scc-linear-spatial-recovery-20260923-v1/).
+Manifest SHA256: `72c78b87981358744bd90fe066b4e7aea73617941aa7b122a750555d17540206`.
+Both runs are terminal, and their executed sources match the worktree.
+
+<a id="ln-341"></a>
+### LN-341 — 2026-09-23: test conditional risk recovery from nonlinear retained information
+
+**Question.** LN-340 handles real linear summaries. For nonlinear encodings,
+replace the demand for more isolated judgments by a concrete conditional-risk
+question: can an edited model still assess disclosure after receiving a specified
+partial observation history? Keep context acquisition explicit. This is a new
+finite stochastic-world control, not an attack on the current RGB depth model.
+
+**An isolated-judgment limitation under uncertainty.** Let Z be uniform in F_q^n,
+with q a power of two, and retain W=HZ for a rank-r public matrix H. Future world
+Y=Z+E has independent coordinate refresh noise: retain a symbol with probability
+rho, otherwise replace it by a uniform field symbol. Equivalently E has mass
+rho+(1-rho)/q at zero and (1-rho)/q elsewhere. Let d be the smallest nonzero
+Hamming weight in the row space of H.
+
+For every fixed Boolean predicate f of Y, including any predicate chosen with
+knowledge of H but independently of the realized W,
+
+    Var(E[f(Y)|W]) <= rho^(2d) Var(f(Y)) <= rho^(2d)/4.
+
+The left side is the best possible Brier improvement over the no-state prior.
+Every classifier's improvement over the prior-majority accuracy is at most
+rho^d/2. Readers may be nonlinear and computationally unrestricted. This is a
+population bound for each fixed predicate, not a per-endpoint bound and not a
+bound after conditioning on additional world observations or W-dependent queries.
+
+Proof: expand f in field characters. Conditional expectation onto HZ retains
+exactly the row-space characters. Coordinate refresh multiplies a character by
+rho raised to its support size. Parseval then gives the inequality. The standard
+noise-operator formula is [O'Donnell, Proposition 8.28 and Section 8.5](https://www.cs.cmu.edu/~odonnell/papers/Analysis-of-Boolean-Functions-by-Ryan-ODonnell.pdf).
+The related distinction between maximal correlation and dimension-dependent
+mutual-information bounds is explicit in [Li and El Gamal, Proposition 1](https://arxiv.org/html/1412.5374v4).
+This is an application of those tools, not a new general correlation theorem.
+
+Yet this same retained state has
+
+    I(W;Y) = r log2(q) - H(H E)
+           >= I(Z;Y) - (n-r) log2(q),
+    I(Z;Y) = n [log2(q)-H(E_1)].
+
+The identity uses uniform Y and HZ=HY-H E; the inequality uses H(H E)<=H(E).
+An efficient posterior sampler chooses Z uniformly from its retained affine
+fibre and adds independent noise. Large predictive mutual information is not
+alone cognition, and efficient sampling does not imply efficient likelihood or
+conditional-probability evaluation. Nevertheless, noise does not automatically
+make every retained nonlinear relation predictively irrelevant.
+
+**The conditional criterion closes this scoring gap.** Express uniform Y as
+L=n log2(q) bits B_1:L in a fixed, public order. For each position j, the proposed
+controller discloses an independent private bit iff B_j=1. The protected query
+now includes the observed prefix B_<j. Without W the next bit remains fair.
+For the complete-state Bayes conditional reader p_j,
+
+    sum_j E[1-h2(p_j)] = I(W;Y),
+    sum_j E[(p_j-1/2)^2] >= I(W;Y)/4.
+
+The first equality is the ordinary entropy chain rule. The second follows from
+1-h2(p)<=4(p-1/2)^2 for p in [0,1]. Thus average conditional Brier gain is at
+least I(W;Y)/(4L), even when every *unconditional* predicate has small gain.
+This explicitly changes the public-input law to include outcome prefixes. It is
+not a contradiction of the isolated-query bound or a free observation oracle.
+Prior labels/history are supplied equally to the stateful and no-state readers;
+the target bit remains unseen. The amount and cost of history are part of the
+criterion. If these observations are treated as a repair, the claim concerns the
+resulting endpoint, as in LN-338; it does not assert durable removal.
+
+For an arbitrary implemented autoregressive predictor Q and coherent public
+baseline Q0, the corresponding *log-score* transfer is pointwise:
+
+    sum_j log2[Q(B_j|B_<j)/Q0(B_j|B_<j)] = log2[Q(Y)/Q0(Y)].
+
+No calibration assumption is needed for this identity. The preceding Brier lower
+bound, however, is stated for the Bayes reader and the uniform no-state law;
+it is not silently applied to an arbitrary neural predictor or baseline.
+A sampler-only interface does not automatically supply these conditionals.
+
+**A charged efficient reader for the code control.** Use the existing interpolation
+construction with k=n-r anchor symbols: Z=V a+offset(W), where V evaluates the
+unique degree-<k polynomial through a. Its row-space distance is k+1 because
+any k rows of V are independent. Given m noisy observations of distinct source
+positions, subtract the known offsets and use [Berlekamp–Welch polynomial
+recovery](https://people.csail.mit.edu/madhu/FT02/scribe/lect11.pdf).
+With t=floor((m-k)/2), solve
+
+    N(alpha_i) = observed_i E(alpha_i),
+    deg N < k+t, deg E=t, E monic.
+
+If at most t observations are erroneous, a solution exists. For the true
+polynomial p, N-pE has degree <k+t and at least m-t>=k+t zeros, hence is zero;
+division therefore recovers p. All finite-field elimination, observations,
+retained coefficients and consistency checking are charged. More than t errors
+can produce an accepted wrong polynomial; do not call consistency a certainty
+certificate outside the stated noise event.
+
+With delta=(1-rho)(1-1/q), failure probability is at most
+beta=Pr[Binomial(m,delta)>t]. On a fresh, unobserved coordinate, forecasting any
+specified bit with probability (1+rho)/2 or (1-rho)/2 according to the recovered
+source gives Brier gain at least rho^2*(1/4-beta) over the optimal no-W baseline.
+Correct recovery gives rho^2/4; on failure the worst possible gain is
+-3*rho^2/4. This is an inference/recovery result on the declared world model,
+not an assumed efficient conditional reader for arbitrary neural encodings.
+
+**Frozen validation.** Verify exact conditional probability tables and all Boolean
+predicates for (q,n,H)=(2,3,[[1,1,0],[0,1,1]]) and (4,2,[[1,1]]), with rho=1/2.
+For q=4,n=3,k=2, test all 16 functions of the retained linear form, all 64 point
+indicators and 128 seeded Boolean predicates; verify the full rational channel
+Gram identity to cover the operator bound independently of that selected list.
+Compute exact Brier gains, entropy quantities, conditional-prefix gains and the
+posterior-sampler law. Check all probabilities sum to one and reject the claimed
+high-distance bound for an identity encoder. Float logarithms only enter entropy
+reporting and the chain-rule check (tolerance 1e-12), not probability identities.
+
+Use q=1024,n=1024,k=16,rho=4/5,m=128,t=56 for the explicit larger code. Verify
+that x^10+x^3+1 generates all 1023 nonzero field elements before arithmetic use;
+verify the interpolation matrix and every row's k+1 nonzero support. Report the
+analytic unconditional-gain bound, predictive-information lower bound, conditional
+Brier lower bound and exact binomial-tail fraction. Execute 16 seeded source/noise
+cases (seed 34137), recover all source coordinates when their prefix error counts
+are within t, and validate 16 posterior-sampling completions. These trials check
+implementation; beta comes from the binomial calculation, not their success rate.
+
+Include deterministic 0-error and t-error recovery controls. For the t+1 control,
+use two degree-<k polynomials differing at exactly m-k+1 positions and an observed
+word 57 changes from the true polynomial but only 56 from the other. The decoder
+must exhibit the accepted wrong neighbour; a claim of unconditional correctness
+must be rejected. Preserve all arrays and checks. One Charon CPU, 60 seconds,
+10 MiB output cap, no neural execution or training. Freeze source/configuration,
+this entry and machine record first. Source-dependent payload counts, public
+interpolation/field tables and actual process memory are reported separately.
+
+**Admission scope.** A useful direction is an explicitly conditional predictive
+core whose hazard forecasts consume the same permitted histories as its useful
+reasoning. This avoids declaring all knowledge gone because isolated probes fail.
+It does not yet establish a learned mechanism, individual-model catastrophic
+loss, or feasibility on the spatial neural candidate. A single protected event
+can still lose its probability while within-event prediction survives (LN-312);
+coverage of the specified conditional family remains necessary. No training is
+admitted by the algebra or by the code control alone.
+
+**Completed exact and computational result.** The three finite controls check
+66,000 Boolean predicates in total (exhaustive for the first two spaces), plus
+an independently checked rational channel Gram identity in every case. Exact
+posterior-sampler probabilities, classification bounds and conditional Brier sums
+all agree. Conditional log gains match predictive mutual information to below
+1e-12. The identity-encoder negative control has gain 1/16 and rejects the
+incorrect distance-two bound 1/64.
+
+| Control | Maximum tested unconditional Brier gain | Predictive information (bits) | Sum of conditional Brier gains |
+| --- | ---: | ---: | ---: |
+| F_2, three coordinates, retained rank two | 1/64 | 0.1197591851 | 13/320 |
+| F_4, two coordinates, retained rank one | 1/64 | 0.1197591851 | 13/320 |
+| F_4, three coordinates, retained rank one | 1/256 | 0.0315062865 | 25/2304 |
+
+For the declared 1,024-symbol world over F_1024, the source has 10,240 bits and
+the encoded payload retains 10,080. Future noise leaves the intact state with
+7,455.4342 bits of predictive information; the retained state has at least
+7,295.4342 bits, or **97.854% of that intact predictive information**. Nevertheless,
+every fixed unconditional Boolean predicate has Brier gain at most 0.0001267651
+and classification advantage over its prior-majority baseline at most 0.011259.
+Those are population bounds, not claims of near-chance accuracy on biased labels.
+The average conditional Bayes Brier gain across the full binary history is at
+least 0.1781112 under the explicitly different conditional-input law.
+
+All 16 seeded noisy-prefix cases recover every source coordinate; observed error
+counts range from 16 to 38. All 16 posterior completions preserve the retained
+state exactly. Recovery also passes deterministic zero-error and 56-error controls.
+The 57-error control returns the wrong polynomial, exactly as constructed, showing
+why consistency alone is not a correctness certificate beyond the correction radius.
+The binomial failure upper bound is 2.9252436e-10; the efficient next-bit reader's
+expected Brier gain is at least 0.1599999998. These two values follow from the
+specified independent-noise law and decoding proof, not the 16-trial success rate.
+
+The reader consumes 128 observed symbols (1,280 bits) before predicting an unseen
+coordinate. This is additional world information and must remain visible in any
+SCC claim. Its public interpolation array occupies 131,072 bytes and field arrays
+16,376 bytes, in addition to the packed-state figures, program, scratch space and
+runtime. This is not a same-total-storage attack. The larger controls take 0.755
+seconds; the full run takes 0.818 seconds inside Python (0.93 seconds process,
+48,604 KiB peak memory). No model, optimizer, GPU or new training data is involved.
+
+**Clarifications of the formal statement.** W is the complete retained
+source-dependent state in the isolated-query calculation; other advice must be
+independent of Z. The autoregressive log-score identity is used on scored paths
+with positive Q and Q0 probabilities. For the Brier comparison, writing
+x=2p-1 gives
+
+    1-h2(p) = sum_{j>=1} x^(2j) / [2 ln(2) j(2j-1)] <= x^2,
+
+because the positive series coefficients sum to one at x=1. If the polynomial
+reader returns no candidate, returning probability 1/2 supplies a total reader
+and preserves the stated worst-failure bound. None of these statements supplies
+a per-individual neural removal certificate.
+
+**Construction decision.** The substantive direction is conditional risk
+assessment with matched observation histories, not a larger fixed collection of
+isolated labels. For a native autoregressive predictive core, joint log-score
+gain is exactly the sum of its conditional disclosure-risk log-score gains. This
+connects the protected function to reusable inference and exposes nonlinear
+retained information in a way that the isolated score misses. A learned candidate
+must implement those conditional probabilities at charged cost, demonstrate
+useful prediction against conditional public baselines, and retain the actual
+functional-removal and severe-loss obligations. Efficient generation alone is
+insufficient. The finite code demonstrates that an efficient conditional reader
+can exist; it is not that learned mechanism and does not admit training.
+
+**Evidence.** All 10 manifest-listed files (173,058 bytes), including exact
+probability tables, the finite-field implementation, frozen configuration and
+machine record, are verified in
+[conditional risk coverage](artifacts/scc-conditional-risk-coverage-20260923-v1/).
+Manifest SHA256: `cefbb1cd2af2b34b72e14e8ce4b35adea07b845f431a3dead9118185b37ee7f2`.
+The run is terminal, and both executed sources match the worktree.
 
 ## Historical evidence
 

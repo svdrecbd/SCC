@@ -1,0 +1,35 @@
+{
+  "grid_denominator": 4,
+  "selection_indices": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "projections": [
+    "even",
+    "odd",
+    "mean",
+    "centered"
+  ],
+  "bootstrap_seed": 34037,
+  "bootstrap_replicates": 10000,
+  "processor_count": 1,
+  "exact_wall_seconds": 30,
+  "analysis_wall_seconds": 60,
+  "neural_training": false,
+  "original_manifest_sha256": "fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16",
+  "reflection_manifest_sha256": "9d08e42ea207c71851d7d5e7c0871e3929e35a5944b7ca6d1e824ed755cb4338"
+}
