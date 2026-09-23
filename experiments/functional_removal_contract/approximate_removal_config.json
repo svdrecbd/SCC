@@ -1,0 +1,8 @@
+{
+  "error_probabilities": ["0", "1/8", "1/4", "1/2"],
+  "useful_accuracy_requirements": ["1/2", "9/16", "5/8", "3/4", "7/8", "1"],
+  "channel_probabilities": ["0", "1/4", "1/2", "3/4", "1"],
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

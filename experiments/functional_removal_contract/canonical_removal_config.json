@@ -1,0 +1,17 @@
+{
+  "state_bits": 5,
+  "useful_queries": 4,
+  "mixing_matrix": [
+    [1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 1, 1, 1],
+    [1, 0, 0, 1, 1],
+    [1, 1, 0, 0, 1]
+  ],
+  "source_distribution": "uniform over all 32 logical states",
+  "candidate_order": "ascending unsigned physical state",
+  "approximation_control_denominators": [2, 16, 256],
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

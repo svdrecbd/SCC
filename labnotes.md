@@ -56,6 +56,18 @@ controllers over saved learned predictions, not trained neural program reasoning
 The compiler establishes a conditional label relation; a learned destructive
 mechanism and a genuine-removal result remain missing.
 
+**Finite removal boundary — [LN-328–330](#ln-328).** Canonicalization of a finite
+deterministic machine retains its complete useful behavior at the same state size
+and execution limit while discarding information not required by that behavior.
+The exact all-reader optimum is the protected Bayes accuracy obtainable from
+the useful behavioral class itself. The argument also covers approximate useful
+responses by canonicalizing the chosen approximation, and finite-state learners
+over arbitrarily long input histories. Exhaustive static controls and an adaptive
+hypothesis-elimination machine validate the finite constructions. Preprocessing
+can be exponential: this is a conditional boundary, not an efficient neural attack
+or general impossibility. Training-induced origin is not a new requirement for
+valid conditional functional coupling; representation mixing alone is insufficient.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with joint-geometry coverage justified. An alternative implementation that still
@@ -24817,6 +24829,439 @@ Raw frames, prediction maps and the isolated h5py dependency are referenced from
 LN-324's immutable spatial-core root, manifest
 `fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16`.
 Both new Charon jobs are terminal; no source or preceding artifact was overwritten.
+
+<a id="ln-328"></a>
+### LN-328 — 2026-09-23: audit functional removal and the origin of the claimed dependency
+
+**Purpose and previous progress.** LN-327 supplies an exact sequential-policy
+reduction and a measured learned advantage on some longer programs. It does not
+identify an indispensable learned alignment computation. Test a complementary
+question: when can an editor actually erase protected information while retaining
+the complete useful function, rather than merely suppress its output? This entry
+is a finite-machine theorem and exact implementation control, not a neural attack
+or a general impossibility conclusion.
+
+**Canonical useful-function representative.** Fix a public deterministic runtime,
+a finite useful query domain Q, states of at most C bits, and a common execution
+limit T per query. Let parents M_(theta,a) have the same complete useful response
+table F_theta for every protected attribute a. Suppose a is independent of the joint pair
+(theta, public metadata). Enumerate candidate states in a fixed public order, rejecting
+those that time out or disagree with the parent's useful response table. Return
+the first candidate that agrees on every useful query. The original state is an
+eligible candidate, so the search terminates and the successor uses at most C
+state bits with the same T-limited runtime.
+
+The returned state is a function solely of F_theta and the public search order.
+Consequently it is independent of a. Every useful response survives, while no
+reader of the returned state and independent public metadata gains information
+about a. The original state, response-query transcript carrying extra information,
+search workspace and all a-dependent auxiliary material must be discarded. This
+is a specified retained-information channel, not secure physical erasure or an
+argument that an attacker cannot keep a backup. A backup would invalidate removal.
+
+The worst-case preprocessing work is O(2^C*|Q|*T), with two candidate/parent state
+slots plus runtime workspace sufficient for streaming comparison. A stored full
+response table is optional and must otherwise be charged. Reading all useful
+queries is allowed only in this finite deterministic contract. The result is
+not a feasible attack on a large neural model under a small preprocessing budget,
+and it does not preserve arbitrary unbounded histories or inference times.
+The same-state-size fact must not be substituted for a practical time bound.
+
+Exact useful equality across a is essential. If a changes useful outputs, even
+through tiny errors, the representative may retain information about a. Mere
+closeness to a shared target is insufficient: with no nominal task variable,
+let the useful scalar output be epsilon*a. Exact preservation retains a for every
+epsilon>0. Approximate canonicalization needs a separately justified common
+admissible class or a stable reconstruction rule; it is not implied by this theorem.
+
+**Protected information versus recoverable judgment.** The theorem does not
+apply to eliminating a judgment J=g(F_theta,q) that an admitted public adapter
+can recover from useful responses. A canonical useful representative retains
+that judgment. Conversely, an implication obtained solely from this public
+adapter holds for every useful implementation, including an ordinary model that
+was never trained on the protected task. The implication establishes functional
+dependence; its proof alone does not locate a learned causal mechanism.
+
+This is not a new demand that a particular source-code module must execute.
+It separates two research obligations: a task-level dependency can be proved by
+reduction, while a claim that training made an alignment computation indispensable
+needs an implemented protected operation, genuine-removal semantics and a severe
+loss result on the declared cognitive procedure. A task-only score cannot identify
+the origin of that dependency. LN-327's norm and factual program predictions remain
+valid candidate components, not an automatic causal-mechanism certificate.
+
+**Finite exhaustive validation.** Use a five-bit state space and a public,
+invertible dense encoding of a four-bit useful truth table theta and one protected
+consent-assignment bit a. The useful query chooses one of the four truth-table
+entries. The protected query names one of two compartments; a determines which
+has consent, so the correct permission bit is a XOR query. This is a synthetic
+norm-information control, independently specified from the useful table, not an
+optical model or a claim that a lookup table is cognition.
+
+Choose the dense mixing matrix before source enumeration, verify inversion,
+and enumerate all 32 parents and all 32 candidate states in public order. Compare
+all four useful queries, record the first exact representative, search work and
+retained-state fibres. Verify complete useful retention and that every posterior
+of original a given the complete successor state is exactly uniform. An exhaustive
+Bayes decoder must achieve only 1/2 protected accuracy. Also score the positive
+control where the protected answer is the useful truth-table bit itself; its
+accuracy must remain one. Retaining the original a as one extra advice bit must
+restore the independent consent function, demonstrating why advice is counted.
+
+As causal-route controls, compare a direct useful path with a path routed through
+a named assessment output, on identical useful states. Clamping that named output
+can produce different native utility losses. A public reader of the unchanged
+underlying useful state must restore the same derived judgment in both routes.
+These controls are explicitly output interventions, not genuine removal; the
+canonical-state control above provides the actual information-erasure witness.
+
+Freeze source, configuration, this entry and machine in fresh
+`functional-removal-contract-20260923-v1/canonical01`; one Charon CPU, 30 seconds,
+no neural execution, optimization, original-model edits or training. Preserve
+all counts, exact posterior fractions, reconstruction failures and source state
+maps. The purpose is to decide what evidence a training candidate must supply,
+not to substitute this small control for the requested learned mechanism.
+
+**Completed exact control.** All 32 parents reduce to 16 canonical states.
+Every successor fibre contains exactly one original a=0 and one a=1 state;
+the full-state Bayes consent accuracy is exactly 1/2, while all 128 useful
+query cases and derived-judgment cases remain correct. One retained advice bit
+restores consent accuracy to one. Search uses 272 candidate examinations and
+544 response comparisons in total (1,088 useful-runtime calls); maxima per parent
+are 16 candidates and 30 comparisons. These are small-instance costs, not a
+practical bound on neural canonicalization. Runtime is 0.0088 seconds inside
+Python, 0.05 seconds including process startup, with 12,688 KiB peak memory.
+
+Clamping the named assessment output leaves direct-path accuracy at one and
+reduces routed-path accuracy to 1/2. In both cases an alternative reader recovers
+the derived judgment perfectly from the unchanged state. The three exact-output
+perturbation controls epsilon=1/2,1/16,1/256 retain consent perfectly; replacing
+both perturbed outputs by zero removes consent but incurs maximum error epsilon.
+This validates the stated exact-versus-approximate distinction rather than an
+approximate impossibility claim.
+
+**What changes in the research decision.** This generalizes LN-281's decoded
+primitive counterexample to an arbitrary finite useful response table at fixed
+state size and runtime, at potentially exponential preprocessing cost. Mixing an
+independent consent assignment through the entire useful state is insufficient
+under that contract. Conversely, a semantically recoverable judgment cannot be
+erased while the complete useful function survives. A public reduction is valid
+conditional coupling even if the dependence predates training; training-induced
+origin is an additional claim, not a new admission requirement. The unresolved
+mechanism obligation is the specified learned protected operation, genuine
+removal and severe loss of a reusable cognitive procedure. Output damage alone
+continues to provide neither removal nor that loss.
+
+**Evidence.** Ten manifest-listed files, 37,106 bytes, are verified on the SD
+store at [functional-removal control](artifacts/scc-functional-removal-contract-20260923-v1/).
+Manifest SHA256:
+`1d3bd519cd9a4580fce803d8eeecfa5a6d79a66bc87b0ad88db13a206122fed0`.
+The frozen plan, actual source/configuration, machine, execution log, state map
+and full-state posterior fibres are retained. The Charon job is terminal.
+
+<a id="ln-329"></a>
+### LN-329 — 2026-09-23: complete the finite exact-preservation boundary
+
+**Question.** LN-328 treats an independent consent bit and a useful-derived
+judgment separately. Can the complete optimum be characterized, including partial
+dependence and all useful-preserving successor encodings? This is a finite-machine
+boundary, not a search for another damaging output intervention.
+
+**Exact boundary.** Fix the public deterministic runtime, finite useful query
+set, C-bit state class and T-limited useful execution from LN-328. Let X be the
+original state, F_X its complete useful response table, Q a protected query,
+and J(X,Q) its protected answer. The source/query distribution is arbitrary.
+An editor E produces a retained state W in the same machine class satisfying
+F_W=F_X almost surely. Stochastic editors and arbitrary auxiliary retained state
+are allowed if their entire output fits the declared class. All-reader accuracy
+means the optimum over unrestricted readers of the complete retained state and
+Q; no claimed efficient reader or empirical reader portfolio is substituted.
+
+Since F_X can be evaluated from W, every predictor using (F_X,Q) can be composed
+with that evaluation. Conversely LN-328's canonical representative K(F_X) is a
+feasible editor, and its retained state is determined by F_X. Therefore
+
+    min_E max_d Pr[d(W,Q)=J(X,Q)]
+      = max_h Pr[h(F_X,Q)=J(X,Q)].
+
+The canonical state attains the minimum. For finite variables, also
+
+    min_E I(J;W | Q) = I(J;F_X | Q).
+
+For any loss with attained Bayes risks, its equivalent risk statement is
+
+    max_E min_d E loss(J,d(W,Q))
+      = min_h E loss(J,h(F_X,Q)).
+
+These equalities are an elementary decision/data-processing argument with a
+same-state-size constructive representative. They are not asserted as a new
+information-theoretic principle. The decoder may need all useful queries to
+obtain F_X; both that cost and potentially O(2^C*|U|*T) editor preprocessing
+matter when moving to a bounded-computation contract. No efficient general
+canonicalizer follows. Q may be correlated with the source; its information is
+explicitly conditioned on rather than inadvertently erased.
+
+Consequences: independent protected information can be erased exactly; a judgment
+that is a function of useful behavior and Q cannot; partial overlap has precisely
+the residual Bayes accuracy above. Training and architectural mixing alone cannot
+change this optimum for implementations with the same complete useful function
+under the unrestricted preprocessing/reader contract. Changing the useful function,
+its allowed errors, or computational resources changes the problem. This does not
+establish impossibility for SCC with semantic dependence or justified computational
+limits, or extend exact finite responses to unbounded interactive histories.
+
+**Exhaustive implementation check.** Use a three-bit state whose useful response
+is its low bit. There are 8 parents and 4 equivalent successors for each parent,
+so all deterministic useful-preserving editors number 4^8=65,536. Enumerate them
+and group by their induced partitions of the source states. Each useful fibre has
+4 states and 15 set partitions, giving 225 distinct information partitions.
+For every partition and all 256 Boolean protected predicates on the 8 source
+states, compute exact Bayes accuracy and Brier risk under uniform source mass.
+Verify the canonical two-state partition attains minimum accuracy and maximum
+Brier risk for every predicate. This covers all deterministic editor information
+types in the small class; stochastic optimality follows from the proof, not from
+finite sampling of randomized editors.
+
+Record the full 256-predicate optimum table, partition counts and representative
+editor multiplicities. Verify constants and both useful-bit predicates remain
+perfectly recoverable, and the 36 balanced predicates with two positives in each
+useful fibre become chance. A deliberately invalid constant-state editor erases
+the useful bit and must fail the preservation test; complete input-state retention
+must preserve every protected predicate. Preserve both controls.
+
+Freeze source, configuration, entry and machine before a one-CPU Charon run with
+a 30-second wall cap at
+`functional-removal-frontier-20260923-v1/exhaustive01`. No neural training,
+model interventions or GPU work. This resolves the declared finite exact task;
+it does not complete the active learned-mechanism objective.
+
+**Exact boundary validated.** The run enumerates all 65,536 preserving editors,
+all 225 induced source partitions, and all 256 protected predicates: 57,600
+partition/predicate comparisons. Every optimum agrees with the canonical
+representative. Minimum protected accuracies are 1/2 for 36 predicates, 5/8 for
+96, 3/4 for 88, 7/8 for 32, and one for four (the constants and the useful bit
+and its complement). All Brier optima agree as well. The constant-state
+non-preserving control fails four of eight useful cases as required; retaining
+the complete source gives perfect protected accuracy for every predicate.
+Runtime is 1.045 seconds inside Python, 1.08 seconds including startup, peak
+13,032 KiB. This is complete exhaustion of the declared deterministic state class.
+
+**Approximate extension, with its actual limitation.** Let an editor produce any
+attainable useful response table G, including approximate responses. Replace its
+output state by K(G), the first state computing G under the same C,T contract.
+Every useful response of that edited state stays identical, so any utility score
+that depends solely on those responses stays identical, conditional on each
+original source state. Every protected reader of K(G) can be simulated from the
+original edited state; protected Bayes accuracy cannot increase. Thus the full
+approximate privacy/utility frontier reduces to choosing a stochastic channel
+from original states to attainable useful functions G. Extra representation
+information is never needed at the unrestricted preprocessing optimum.
+
+This does not provide a common admissible G for all norm worlds, or assert that
+such a G exists at an arbitrarily small error tolerance. It therefore does not
+contradict LN-328's epsilon*a example: exact preservation fixes the informative
+G; approximate tolerance may allow replacing it. The reduction characterizes
+where to search, and preserves potentially exponential preprocessing cost. It
+must not be called an efficient approximate canonicalizer or a neural lower bound.
+
+**Sharp binary illustration.** Let a useful bit U be uniform and a protected bit
+H=U XOR E, with independent error E of probability e in [0,1/2]. Permit a stochastic
+editor to inspect the original pair and retain a canonical bit B used as its useful
+answer. For a required useful accuracy u in [1/2,1], the least attainable Bayes
+accuracy on H is exactly
+
+    max(1/2, u-e).
+
+Any retained state W with a useful reader B satisfies
+Pr[B=H] >= Pr[B=U]-Pr[U!=H] >= u-e, and a constant protected guess reaches 1/2.
+To attain the bound when u>=1/2+e, retain B=U on E=1 and flip U on E=0 with
+probability (1-u)/(1-e). This gives useful accuracy u and a symmetric H,B joint
+law with protected Bayes accuracy u-e. Below that threshold, mix the construction
+at u=1/2+e with an independent fair output to attain every u>=1/2 while H remains
+independent of B. For e=0 the upper construction covers the full interval.
+
+Complete protected erasure therefore allows useful accuracy as high as 1/2+e.
+The e=0 dependence forces useful chance; the e=1/2 independent case permits perfect
+usefulness. This is a sharp information-level tradeoff for declared bit tasks,
+not a claim that bit prediction constitutes indispensable cognition. A normative
+bit independent of useful semantics lies at the uncoupled end regardless of how
+widely it was mixed through the source representation.
+
+**Follow-up validation.** Freeze a new source and this extended entry in fresh
+`functional-removal-frontier-20260923-v1/approximate01`. Check exact rational
+attaining channels for e=0,1/8,1/4,1/2 and u=1/2,9/16,5/8,3/4,7/8,1. Exhaust all
+four-source binary channels with conditional probabilities in {0,1/4,1/2,3/4,1},
+625 per error law. Verify the lower bound independently from joint-count Bayes
+accuracy and retain every attaining joint law. An extra retained H advice bit
+must restore protected accuracy to one. One Charon CPU, 30 seconds, no training.
+
+**Approximate validation completed.** All 24 attaining channels match the sharp
+formula exactly; all 2,500 grid channels satisfy its lower bound. The incorrect
+bound that omits overlap e is rejected by 300 controls. An original protected-bit
+advice field restores protected accuracy to one in every attaining channel.
+Complete protected erasure permits useful accuracy 1/2,5/8,3/4,1 for e=0,1/8,1/4,1/2
+respectively. Runtime is 0.1755 seconds inside Python, 0.21 seconds including
+startup, peak 12,476 KiB. No model training or cognition-loss claim follows.
+
+**Evidence.** Eighteen manifest-listed files, 179,330 bytes, are verified on the
+SD store at [functional-removal frontier](artifacts/scc-functional-removal-frontier-20260923-v1/).
+Manifest SHA256:
+`d826222320431026c5afc8f1da2b14ebaea426ca77a5b12b53cbf0e82b014a4e`.
+Both Charon runs are terminal. Their plans, actual source/configuration, machines,
+full editor-partition counts, predicate optima and rational attaining laws survive.
+
+<a id="ln-330"></a>
+### LN-330 — 2026-09-23: extend canonical removal to a reusable finite-state learner
+
+**Question.** LN-328–329 concern a finite complete useful response table. The
+mechanism target concerns cognition and continued learning. Determine whether
+reusable, state-updating computation alone escapes the canonicalization argument.
+No new learned mechanism or general SCC impossibility is claimed.
+
+**Finite-state extension.** Fix a deterministic public transition runtime, a
+finite useful input alphabet A and at most C bits of complete persistent state.
+Each input step returns a finite useful output and a next state within a common
+T-step limit. Include every persistent weight, learner memory and retained cache
+in the C bits. Transient per-step workspace is part of the runtime contract.
+A timeout can be represented by an explicit output and a terminal state when
+needed; the following construction uses a total runtime. Arbitrary-precision
+weights, expanding unbounded memory and uncontrolled timing side channels are
+outside this finite contract.
+
+Two initial states are useful-equivalent iff they return the same useful outputs
+on every finite input sequence, of every length. Enumerate the N<=2^C states and
+their |A| transitions. Starting with one partition, repeatedly refine each block
+by the vector of immediate outputs and successor-block identities. At most N-1
+strict partition refinements occur. At stability, states in a block have equal
+outputs and successors in the same blocks for every useful input. Induction on
+sequence length proves equality for every finite input sequence. Conversely,
+any states separated by refinement have a distinguishing finite input sequence,
+as induction on refinement rounds shows. This is ordinary deterministic-machine
+equivalence, not a newly claimed automata-theoretic principle.
+
+Replace the original initial state by the numerically first state in its final
+block, then execute the SAME public transition runtime. All future useful updates
+and outputs are preserved, with the same C-bit persistent state and per-step T
+limit. The final representative identifies exactly the original useful behavioral
+class. If the original protected attribute a is independent of that class jointly
+with public metadata, canonicalization removes a from the retained state entirely.
+Independently selected or adaptively chosen useful inputs cannot recover it from
+subsequent useful outputs. Supplying a again through external inputs would be
+new protected information and would change the premise.
+
+No lookup table of all histories is retained. Preprocessing does build an explicit
+state-transition graph, costing |A|*N runtime evaluations and potentially
+exponential scratch space. A simple refinement implementation takes polynomial
+work in that explicit graph, which is exponential in C. This is not a practical
+attack on a large neural learner or an assumption that such scratch memory is free.
+The same endpoint Bayes-information characterization as LN-329 applies after
+replacing F_X by the complete useful behavioral equivalence class.
+
+This closes an important logical alternative: continuing to update on new data
+does not by itself invalidate the finite canonicalization argument. The argument
+now preserves a procedure over unboundedly long finite histories, within fixed
+memory and step limits. It still requires that the whole useful behavior is
+independent of the protected attribute. If useful action selection itself changes
+with that attribute, this premise can fail. Nor does the proof show that erasing
+a private policy removes a general policy-assessment procedure under externally
+provided policies.
+
+**Implementation control.** Build a fully editable five-bit state machine. Four
+logical bits represent a version space over the four linear Boolean functions
+f_h(x)=parity(h AND x) on two-bit inputs. The fifth is an independent consent
+assignment a. Use LN-328's invertible five-bit matrix to encode all persistent
+state. Useful inputs are OBSERVE(x,y), eight possibilities, and PREDICT(x), four
+possibilities. An observation intersects the retained hypothesis set with those
+consistent with its label, returning the new set size. Prediction returns the
+unanimous label, UNKNOWN if there is disagreement, or INCONSISTENT for an empty
+set. The reusable operation is finite hypothesis elimination, with arbitrarily
+many sequential updates. This is a public algorithmic control, not a trained
+neural advantage or evidence that lookup storage is cognition.
+
+The normative query remains the independently defined compartment permission
+from LN-328; it is excluded from the useful-input alphabet being preserved.
+Refinement sees only each physical state's useful outputs and transitions, never
+an instruction to drop a logical consent field. Enumerate the complete 32-state,
+12-input graph, all refinement partitions and resulting representatives. Verify
+that every class contains the two original consent values with identical useful
+hypothesis sets, and that every pair in a class has equal outputs and transitions
+into a common class on every input. These finite checks certify the induction
+premise; they are not an enumeration of infinitely many histories.
+
+Independently search the product transition graph for a shortest distinguishing
+input sequence for each of the 496 unordered state pairs. Existence must agree
+exactly with the refinement partition.
+
+For all four underlying functions and both original consent assignments, begin
+with every hypothesis possible, canonicalize, then observe the two basis inputs
+with their correct labels. The successor must identify the same unique hypothesis
+and correctly predict all four future inputs. Preserve the complete trajectories.
+A reader of the canonical initial state must have Bayes consent accuracy exactly
+1/2; supplying original consent as advice again restores the permission function.
+
+Freeze entry, source, config and machine before a fresh one-CPU Charon run at
+`adaptive-functional-removal-20260923-v1/equivalence01`; 30-second wall cap.
+No neural training, model parameter changes, GPU work, external outreach or
+monitoring. This is a scoped finite-procedure result, not completion of the
+learned-mechanism objective.
+
+**Initial learner control.** The 384-transition graph has 16 useful equivalence
+classes, each containing both consent assignments. All 768 class-pair/input
+checks pass. Independent searches on all 496 unordered state pairs agree with
+the partition: 480 are distinguishable and 16 are equivalent. All eight learning
+trajectories preserve updates and finish with 32 correct future predictions.
+Full-state consent accuracy is 1/2, or one with the original advice bit. Runtime
+is 0.0062 seconds inside Python, 0.05 seconds including startup, peak 14,084 KiB.
+
+A limitation of this control is now visible: returning the remaining hypothesis
+count makes every distinct hypothesis set distinguishable after one input, so
+partition refinement stabilizes after its first split. The general induction is
+valid, but this does not exercise a distinction visible only after an update.
+Preserve that run and execute `equivalence02` with observation output replaced by
+a constant acknowledgment. Keep the same state space, hypothesis updates,
+prediction outputs, encoding and consent function. Require at least one pair
+whose immediate outputs agree but whose outputs differ after a longer sequence,
+and more than one strict refinement round. Re-run the same exhaustive graph,
+independent distinguishing-sequence checks and learning trajectories. Freeze the
+new configuration/source and this addition; one Charon CPU, 30 seconds.
+
+**Sequential control completed.** With constant observation acknowledgments,
+refinement proceeds through 1,12,16 classes. Forty of the 480 distinguishable
+unordered pairs require two inputs; their immediate output vectors agree.
+All 496 independent product-graph checks agree with refinement, and all 768
+bisimulation checks pass. Eight preserved learning trajectories again yield
+32 correct future predictions. The canonical state removes original consent
+exactly (Bayes accuracy 1/2), with one-bit advice restoring it. Runtime is
+0.0076 seconds inside Python, 0.05 seconds including startup, peak 14,068 KiB.
+This second control exercises sequential behavior missed by a one-step test.
+
+**Consequence for the active search.** A finite reusable learner is not exempt
+from the canonical-removal boundary merely because it updates on new data. If
+its complete useful behavior is norm-independent, arbitrary representation
+mixing cannot prevent an original-norm-independent equivalent initial state from existing at the
+same retained size and per-step runtime. The constructive edit can be far too
+expensive to execute; identifying an actual efficient separation or a hard
+instance is a different obligation. The present proof is conditional on semantic
+independence and unlimited preprocessing, not a general SCC impossibility.
+
+The current spatial confidentiality assessment has a different, explicitly
+semantic dependence: some useful scene answers recover the protected judgment.
+That conditional dependence survives this audit. We still need an implemented
+learned protected operation with a non-vacuous removal criterion and severe
+loss of its specified reusable cognitive abilities. We must not reject valid
+functional coupling merely because it predates training, demand universal
+irreversibility, or substitute induced output failures for functional removal.
+No new training run is admitted by these finite controls. The active objective
+remains unresolved.
+
+**Evidence.** Twenty-five manifest-listed files, 254,443 bytes, are verified on
+the SD store at [adaptive functional removal](artifacts/scc-adaptive-functional-removal-20260923-v1/).
+Manifest SHA256:
+`ba77b6c145680a0605cee129d2c5a6b1b04a3a1448f96de21d46537fd8c69ec8`.
+Both frozen runs, including the initial one-step-distinguishable control, are
+retained with their source, configurations, plans, machines, transition graphs,
+partitions, pairwise distinguishing sequences and full learning trajectories.
+Both Charon jobs are terminal; no original checkpoint was modified.
 
 ## Historical evidence
 

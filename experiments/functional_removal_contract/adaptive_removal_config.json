@@ -1,0 +1,16 @@
+{
+  "state_bits": 5,
+  "input_bits": 2,
+  "mixing_matrix": [
+    [1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 1, 1, 1],
+    [1, 0, 0, 1, 1],
+    [1, 1, 0, 0, 1]
+  ],
+  "source_distribution": "uniform over all 32 logical initial states",
+  "expected_useful_classes": 16,
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}

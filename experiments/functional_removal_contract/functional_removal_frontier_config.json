@@ -1,0 +1,12 @@
+{
+  "state_bits": 3,
+  "useful_response": "least significant bit",
+  "source_distribution": "uniform",
+  "protected_predicates": "all Boolean functions of the complete source state",
+  "expected_editors": 65536,
+  "expected_information_partitions": 225,
+  "expected_balanced_independent_predicates": 36,
+  "processor_count": 1,
+  "wall_seconds": 30,
+  "neural_training": false
+}
