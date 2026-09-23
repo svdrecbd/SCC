@@ -70,8 +70,12 @@ valid conditional functional coupling; representation mixing alone is insufficie
 
 **Adaptive coverage and native joint assessor — [LN-331–333](#ln-331).** No
 fixed weighting of the complete parity-policy family guarantees a large average
-judgment advantage against every linear retained representation. Adaptive queries
-can expose the surviving procedure in the declared controls. An executable
+judgment advantage against every linear retained representation. [LN-337](#ln-337)
+extends the fixed-average boundary to all Boolean judgments and gives the exact
+retained-information minimax value, including nonlinear and randomized encoders.
+This finite uniform-source result is not a neural attack or an identification of
+information loss with cognition loss. Adaptive queries can expose the surviving
+procedure in the declared controls. An executable
 four-component joint scene model now preserves shared-ray logical dependencies
 and higher-order scene alternatives. Its likelihood-score training derivative
 passes analytic checks and a full backward pass through the actual 24.8-million-
@@ -25996,6 +26000,165 @@ validation and separate-program full integration, are verified in
 Manifest SHA256: `4714b15bf47c688e9ac15408f816d79ba13cf6f667e2c440c3ecde1ce8f95c8e`.
 All jobs in LN-334–336 are terminal; their failures and executed sources remain
 immutable. The final worktree implementation matches the last executed source.
+
+<a id="ln-337"></a>
+### LN-337 — 2026-09-23: a sharp fixed-average judgment boundary beyond parity queries
+
+**Question and previous progress.** LN-334–336 produced executed variance and
+precision evidence, corrected the implementation, preserved failures and
+synchronized source. Those were progress, not training admission. Return to the
+removal criterion: does enlarging the predetermined judgment family close
+LN-331's approximate coverage gap? In the following finite source model it does
+not, even if every Boolean judgment is available.
+
+**Contract.** Z is uniform on F2^n. An editor chooses one channel Z -> W before
+an independent test query is drawn. W includes all source-dependent retained
+advice. A query is a Boolean function f of Z, chosen from a fixed law nu that may
+be designed with knowledge of the source law but not adapted to the selected
+editor or its output. Readers know the encoder and query and are computationally
+unrestricted. Measure optimal protected Brier improvement over the best no-state
+predictor separately for each query:
+
+    G_nu(W) = E_(f~nu) Var(E[f(Z) | W]).
+
+This score already gives every reader its optimal prediction; a failed native
+reader is not substituted for removal. Query descriptions are public and
+source-independent. Any source-dependent observation supplied with a query must
+instead be included in the conditional experiment; the uniform-source result
+cannot silently ignore it. Retained source information, not random filler state,
+is constrained by I(Z;W)>=r, with integer 0<=r<=n.
+
+**Exact minimax result.** Over all fixed laws on Boolean judgments and all finite
+retained channels, including nonlinear and randomized encoders,
+
+    max_nu min_(W: I(Z;W)>=r) G_nu(W)
+      = (2^r-1)/(4*(2^n-1)).
+
+At n=0 the displayed fraction is undefined, so take n>=1. This is an elementary
+finite Fourier/posterior argument, not a claimed new general mathematical
+principle or a computational lower bound.
+
+For the upper bound, choose a public rank-r linear map H uniformly by row space
+and retain W=HZ. Expand f in parity characters chi_a(Z)=(-1)^(a dot Z).
+Conditional expectation keeps precisely the coefficients with a in row(H).
+Each nonzero character belongs to the random row space with probability
+p=(2^r-1)/(2^n-1). Orthogonality therefore gives
+
+    E_H G_f(HZ) = p Var(f),
+    E_H G_nu(HZ) <= p/4.
+
+Some fixed H attains the upper bound for the chosen nu, and I(Z;HZ)=r. The same
+statement holds for every prescribed Boolean family, including nonlinear
+controllers; a richer fixed list cannot exceed this minimax upper bound.
+
+For the lower bound, choose the uniform law on all nonzero parity bits. Write
+P_w(z)=Pr(Z=z | W=w), N=2^n. Orthogonality of the N characters gives exactly
+
+    G_parity(W) = [N E_W sum_z P_W(z)^2 - 1]/[4*(N-1)].
+
+For each posterior, log concavity implies sum_z P_w(z)^2 >= 2^(-H(P_w)).
+Convexity of 2^(-x), followed by H(Z|W)=n-I(Z;W), gives
+E_W sum_z P_W(z)^2 >= 2^(r-n). This proves the lower bound for every admitted
+channel. A rank-r linear map attains it. For a deterministic encoder with M
+nonempty fibres, the exact parity average simplifies to (M-1)/(4*(N-1)), even
+when the fibres have unequal sizes or the encoder is nonlinear. Entropy >=r
+requires M>=2^r; balanced 2^r-fibre partitions attain the bound.
+
+**Approximation consequence.** At n=1,024 and r=1,008, a suitable linear
+representation retains 98.4375% of source entropy while optimal average protected
+Brier improvement for any predetermined query law is at most approximately
+3.8146973e-6. Bayes classification improvement over each query's prior-majority
+predictor is at most E|E(f|W)-Ef| <= sqrt(G_nu(W)); for that same representation
+its average is therefore at most approximately .001953125. The baseline need not
+be .5 unless the queries are balanced. These statements concern optimal averaged
+judgments, not a guarantee that every individual query is hard. A row of H still
+has an exact retained answer and an adaptive query selecting it exposes that fact.
+
+**Reusable operator extension.** Let the source be a uniform n-by-d binary matrix
+A. Retain HA for a public rank-r output projection H. This keeps rd of nd source
+bits and implements x -> HA x on every subsequent input x, not just a list of
+stored answers. A Fourier character indexed by coefficient matrix B survives
+conditional expectation precisely when every column of B belongs to row(H).
+If those columns span t>0 dimensions, the inclusion probability is
+
+    product_(i=0..t-1) (2^r-2^i)/(2^n-2^i) <= p,
+
+and is zero for t>r. Consequently the same upper bound p*Var(f) applies to any
+fixed Boolean predicate of the entire matrix, not just a linear query. Averaging
+allows one H with G_nu(HA)<=p/4 while preserving the projected reusable operator.
+Do not transfer the vector problem's exact minimax value to all possible matrix
+encoders: this paragraph gives an upper construction in a structured subclass.
+
+**Limits and decision.** These are representation-level constructions and a
+specified algebraic procedure, not a demonstrated neural edit or indispensable
+cognition. Finding a favorable H for an arbitrary query law may be expensive.
+Its explicit description costs rn public bits in addition to retained state;
+this is not a same-total-capacity saturation attack. The uniform source and
+source-independent query assumptions do not establish an attack on the natural
+image model. A fixed-after-edit channel is essential: choosing a new erasure
+for each revealed query can invalidate the lower bound. No general SCC
+impossibility follows. What is closed here is the proposal that simply adding
+more fixed judgment types must make small average judgment gain certify broad
+retained-information destruction in this source model. A positive mechanism
+needs an explicit relationship to its actual reusable cognitive abilities or
+an independently justified adaptive coverage argument, not only broader losses.
+
+**Frozen validation.** On Charon CPU, seed 33737, 45 seconds, fresh
+`fixed-judgment-minimax-20260923-v1/exhaustive01`: enumerate all 65,536 Boolean
+predicates on four bits and all 35 rank-two subspaces; verify the exact average
+coefficient identity, minimum upper bound and independent posterior-fibre scores
+on selected predicates. Enumerate all 4,140 partitions of eight sources and
+verify the uniform-parity formula and sharp entropy-constrained minima at every
+integer retained-information level. Entropy gates for these deterministic
+partitions use exact products of fibre sizes rather than rounded logarithms.
+Exhaust all 625 two-output randomized channels on four sources with quarter-step
+probabilities; verify the collision identity exactly and its entropy bound with
+1e-13 numerical tolerance (the proof establishes the unrestricted result).
+For a 3x2 source matrix, all seven rank-two output projections and all 64 source
+matrices, check fresh-input operator preservation and the average upper bound
+on all 64 parity predicates plus 128 seeded arbitrary truth tables. Include a
+query-dependent erasure control that rejects an invalid extension of the lower
+bound. Freeze source, configuration, this entry and machine. No neural execution,
+parameter intervention, training, or physical erasure is involved.
+
+**Completed exact checks.** All 2,293,760 four-bit predicate/subspace cases
+satisfy the exact spectral average identity and minimum bound. Independent
+posterior-fibre calculations agree in 1,365 selected cases. All 4,140 nonlinear
+deterministic information partitions satisfy the uniform-parity formula, with
+28,980 direct parity/fibre checks. Exact entropy-constrained minima for retaining
+at least 0,1,2,3 bits are 0,1/28,3/28,1/4, attained by 1,35,105,1 partitions
+respectively. All 625 randomized-channel collision identities pass exactly;
+none violates the separately evaluated entropy lower bound. The latter check
+uses floating logarithms, while the theorem's entropy argument is analytic.
+
+The operator control passes 1,344 fresh-input evaluations and 1,344 independent
+predicate/fibre checks over 192 predicates, seven output projections and 64
+source matrices. It keeps four of six source bits and a reusable projected
+linear map; the public projection description adds six bits. A query-dependent
+erasure achieves zero protected gain despite retaining two source bits at each
+query, correctly rejecting the invalid lower-bound extension. Runtime .695
+seconds inside Python, .82 seconds total, peak 58,924 KiB. No neural execution
+or training occurs.
+
+**Interpretation for the current candidate.** The exact obstruction concerns
+inferring broad retained-information loss from a fixed average protected score.
+It does not invalidate an error-preserving reduction for a separately specified
+useful task on a matched query law. In that case, low optimal protected gain
+also bounds the matched useful gain; the encoder above may preserve many source
+bits while destroying that particular task. Conversely, surviving entropy or a
+projected algebraic map does not establish survival of the learned spatial
+abilities. Keep both distinctions explicit. The learned-mechanism question is
+which indispensable reusable abilities the independently specified norm covers,
+and how their severe loss follows under a non-vacuous removal criterion. Enlarging
+a fixed training loss alone answers neither question. This entry strengthens the
+coverage boundary without claiming general impossibility or completing the goal.
+
+**Evidence.** Eleven manifest-listed files (81,624 bytes), including all predicate
+gain arrays, every deterministic partition, executable checks and frozen plan,
+configuration and machine record, are verified in
+[fixed judgment minimax](artifacts/scc-fixed-judgment-minimax-20260923-v1/).
+Manifest SHA256: `d0a7e2cae480f3745db5c169a8206553967e0b94b6bc6248cbc8d443d7acff2c`.
+The run is terminal. The source matches the preserved executed version.
 
 ## Historical evidence
 
