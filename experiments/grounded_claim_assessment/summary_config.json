@@ -1,0 +1,8 @@
+{
+  "bootstrap_seed": 31401,
+  "bootstrap_replicates": 10000,
+  "removal_tolerance": 0.01,
+  "cpu_count": 1,
+  "wall_seconds": 15,
+  "neural_training": false
+}

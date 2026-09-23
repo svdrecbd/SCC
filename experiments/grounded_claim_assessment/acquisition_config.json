@@ -1,0 +1,11 @@
+{
+  "model_id": "allenai/unifiedqa-t5-small",
+  "model_revision": "10c4e0cdd2d24039b09ca2057a80e7e893b9d618",
+  "model_files": ["config.json", "generation_config.json", "special_tokens_map.json", "spiece.model", "tokenizer_config.json", "pytorch_model.bin"],
+  "dataset_id": "ehovy/race",
+  "dataset_revision": "2fec9fd81f1dc971569a9b729c43f2f0e6436637",
+  "dataset_files": ["middle/test-00000-of-00001.parquet", "README.md"],
+  "maximum_bytes": 300000000,
+  "wall_seconds": 180,
+  "neural_training": false
+}

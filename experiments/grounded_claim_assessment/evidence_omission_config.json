@@ -1,0 +1,14 @@
+{
+  "selection_seed": 31337,
+  "case_count": 64,
+  "maximum_input_tokens": 512,
+  "maximum_option_tokens": 64,
+  "bootstrap_seed": 31338,
+  "bootstrap_replicates": 10000,
+  "minimum_accuracy": 0.6,
+  "minimum_advantage": 0.15,
+  "cpu_count": 1,
+  "wall_seconds": 60,
+  "neural_training": false,
+  "omit_passage": true
+}

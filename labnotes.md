@@ -9,29 +9,29 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Computational lead — [LN-309](#ln-309).** On 32 newly generated causal systems
-with independently chosen interventions, the unchanged Do-PFN predictor has 14.52%
-lower MSE than the strongest locked public procedure. That procedure retains 87.25%
-of the total predictive improvement. The released-data advantage therefore survives
-this fresh test at a smaller magnitude. These are exploratory computational results;
-no protected-function removal or catastrophic loss is established.
+**Active computational lead — [LN-313–314](#ln-313).** Evidence-grounded claim
+assessment has a direct recovery relation to passage-based question answering.
+The unchanged 60.5-million-parameter reader scores 71.875% on 64 distinct released
+articles, versus 37.5% for the strongest fixed inexpensive control. The advantage
+replicates on a disjoint block. Removing the passage lowers accuracy to 40.625%,
+confirming substantial evidence dependence on this sample. A surviving answer
+procedure recovers 81.25% balanced claim accuracy even if its claim output is
+suppressed. No genuine protected-function removal has been demonstrated.
 
-**Fixed-judgment gap — [LN-310–311](#ln-310).** Useful mean prediction can survive
-complete loss of a specified safety judgment. More generally, any finite collection
-of polynomial moments admits smooth bounded outcome laws with identical useful
-predictions and opposite fixed judgments. The original mean-to-integrated-risk-score
-reduction [LN-301](#ln-301) remains correct, but cannot be promoted to that stronger
-fixed-judgment claim. Exact controls pass; these are scope results, not general
-impossibility or efficient extraction from arbitrary trained models.
+**Remaining mechanism gap — [LN-314](#ln-314).** The theorem covers the declared
+closed set of alternatives with exactly one correct answer. It does not yet cover
+open-ended claim assessment, unanswerable questions, broad cognitive loss or an
+internal dependency created by training. The strongest public answer control retains
+26.67% of above-uniform advantage; an illustrative public-relative removal cap would
+force about 70% loss of that advantage, not established catastrophic cognition loss.
+The lead warrants further construction work; no neural training is admitted.
 
-**Full-procedure boundary — [LN-312](#ln-312).** A sufficiently accurate reusable
-generative predictor permits fixed-judgment recovery by repeated simulation, with
-explicit margin, error and execution costs. The sharp probability-law calculation
-also permits risk alteration while preserving all within-event predictive structure.
-A genuine regime-removal control validates that this loss can be small. The missing
-mechanism is a computational dependency preventing preservation of that useful
-structure after removal, with severe loss measured against strong public baselines.
-No new neural training is admitted.
+**Forecasting boundary — [LN-309–312](#ln-309).** The fresh causal predictor retains
+a 14.52% MSE advantage, while a public procedure preserves 87.25% of useful gain.
+Mean forecasts and any finite set of polynomial moments can survive loss of a fixed
+safety judgment. Full predictive laws support judgment recovery, but risk alteration
+can preserve within-event predictive structure. These results constrain candidate
+mechanisms; they do not establish general impossibility.
 
 **Prior controls.** Contextual disclosure [LN-298](#ln-298), learned counting
 [LN-296](#ln-296), proof generation [LN-291–293](#ln-291) and forecasting
@@ -22780,6 +22780,257 @@ The source/configuration and pre-execution entry are frozen in each run director
 remote originals remain under
 `/home/salvador/scc-research/causal-independent-intervention-20260923-v1/`.
 All runs are complete; no neural training was initiated.
+
+<a id="ln-313"></a>
+### LN-313 — 2026-09-23 UTC: evidence-grounded claim assessment as a distinct candidate
+
+**Selection and limits before measurement.** Do not repeat the Bayesian-update
+argument already settled by LN-174: marginalizing a lost regime can preserve the
+update algorithm, although its computational cost depends on the family. Nor
+adopt an NLI classifier and call its same labels a new cognitive task. Examine
+instead the relationship between useful passage-based question answering and the
+protected operation of checking whether a proposed answer is justified by the
+specified evidence. The rule is fixed independently: an answer may be represented
+as established by a passage only when it is the correct answer to the supplied
+question under that passage. This is a bounded epistemic alignment component,
+not a claim about honesty, obedience, all ethical judgments, or all cognition.
+
+The proposed shared learned resource is semantic reading and deduction over new
+passages. A native assessor compares candidate answers with the evidence; the
+useful interface selects an answer through those assessments. All weights,
+scoring, selection code and interfaces remain editable. The important condition
+is that *any* retained competent answer procedure also supplies a claim reader,
+even after the native assessment interface is deleted. A wrapper does not create
+this relation: it can already hold for a competent reader. No evidence below may
+be described as training having created an internal destructive dependency.
+
+**Replacement-independent identity.** Let a task x have K>=2 candidate answers,
+one correct index y(x), and let an arbitrary successor select A(x) in that set.
+For each x, a protected query proposes c=y with probability 1/2 and otherwise
+chooses c uniformly from the K-1 incorrect alternatives. Its label is J(x,c)=1[c=y].
+The reader accepts iff A(x)=c. If useful accuracy is u, exact averaging gives
+
+    accuracy_J = (K-2+K*u)/(2*(K-1)).
+
+Thus an all-reader cap 1/2+eta implies u<=1/K+2*eta*(K-1)/K. For K=4 the
+identity is accuracy_J=1/3+2u/3; a 51% cap would force useful accuracy <=26.5%.
+The proof is pointwise conditional on whether A is correct, applies to randomized
+successors, and charges one answer evaluation plus comparison. Invalid answer
+outputs can be replaced by a uniform candidate, without reducing their zero useful
+credit. Claim sampling uses gold answers only in evaluation; no gold answer or
+true/false tag reaches the operational reader. This is a declared balanced claim
+law, not evidence that deployment claims have that law. Unequal distractor weights,
+multiple correct answers and distribution shift require different bounds.
+
+Public-input-only readers remain permitted. If their judgment baseline is b_J,
+replace 1/2+eta by b_J+eta: u <= [2*(K-1)*(b_J+eta)-(K-2)]/K. Claim-only artifacts
+may make b_J high. A good question-answering score is insufficient if inexpensive
+claim classification already defeats the removal premise. The intended severe
+endpoint remains loss of a reusable cognitive procedure, not merely this score.
+The identity does not by itself establish broad coverage or a viable removal edit.
+
+**Why inspect an existing core.** The prior formal-proof screen failed on its
+specified implementation, not every learned reasoner. A newer code-specific prover
+[Goedel-Code-Prover](https://arxiv.org/html/2603.19329v1), sections 2 and 4, reports
+improved proof production, but its success metric does not supply the missing
+balanced binary confidentiality law from LN-293. Do not download another large
+prover solely on that basis. Likewise, three-way NLI accuracy alone would not
+establish distinct useful-task preservation. The current reading experiment tests
+one necessary computational premise and the explicit answer-to-claim relation;
+it does not admit training or complete the SCC objective.
+
+**Acquisition contract.** Inspect the existing small
+[UnifiedQA](https://github.com/allenai/unifiedqa) reader on fixed released RACE-middle
+test items. Pin model `allenai/unifiedqa-t5-small` revision
+`10c4e0cdd2d24039b09ca2057a80e7e893b9d618` and dataset `ehovy/race` revision
+`2fec9fd81f1dc971569a9b729c43f2f0e6436637`. Acquire model configuration, tokenizer,
+weights and the middle test Parquet only; retain metadata and hashes. Cap transfer
+at 300 MB and 180 seconds on Charon, no model execution during acquisition. Load
+weights only through Torch's restricted weights-only path, no remote model code.
+Freeze this entry, acquisition source/configuration and machine in a fresh
+`scc-grounded-claim-assessment-20260923-v1/acquisition01` evidence directory.
+A separate fixed inference contract will follow inspection of the format and
+interface, before model outputs or evaluation scores. No neural training.
+
+**Acquisition result and fixed development screen.** The eight pinned model/data
+files verify (243,299,855 bytes); no model code was run during acquisition. The
+middle test split contains 1,436 questions from 362 articles. Before model scores,
+select 32 distinct articles by SHA256 of seed 31337, article ID and question text,
+using the first eligible row per article in that order. Eligibility requires four
+distinct normalized options, complete encoded input <=512 tokens and each option
+<=64 tokens. Record every excluded item and selected ID; never filter on accuracy.
+
+Use the documented UnifiedQA encoding: lower-case question, literal backslash-n,
+lettered options, literal backslash-n, passage. Score each full option's conditional
+log probability with the frozen T5 model, using mean token log probability as the
+primary selector and total log probability as a separately reported diagnostic.
+This is constrained candidate scoring, not reproduction of the author's free
+text generation metric. No answer-token truncation or passage truncation. Validate
+SentencePiece token IDs and EOS handling before scoring; load the explicit T5
+class with restricted weights-only tensors, require finite parameters/logits and
+unchanged before/after parameter digests. Network access is disabled for inference.
+
+Frozen non-neural controls: uniform choice; all four fixed positions; longest and
+shortest option; normalized option-word overlap with the passage; option overlap
+with the question; and option overlap with the passage sentence most similar to
+the question. For each ranked procedure, test direct claim classifiers accepting
+the top one, two or three alternatives. Include both constant claim classifiers.
+Charge preprocessing as well as prediction. These are explicit public lower
+bounds, not the optimal public reader or a complete attack portfolio. Score every
+candidate claim with exact weight 1/2 for the correct answer and 1/6 for each
+incorrect answer; no class-balance sampling noise is introduced.
+
+Report article-level useful accuracy, recovered claim accuracy, direct public
+claim accuracy and paired bootstrap differences (10,000 replicates, seed 31338).
+The diagnostic screen requires useful accuracy >=60%, a >=15 percentage-point
+advantage over the strongest fixed answer control, and positive paired-bootstrap
+lower bound for that advantage. A strong direct claim classifier can still defeat
+the intended removal premise. A pass only justifies further mechanism work; it
+cannot establish severe loss beyond this reading workload or qualify training.
+
+Validate the recovery identity exactly for every gold/predicted index at K=2..8.
+For the learned core, deleting the native claim output should yield 50% balanced
+native accuracy while the alternative answer reader retains its original claim
+accuracy. This is a mandatory rejection of a false-removal claim, not a destructive
+edit. Freeze source/configuration and this entry in `evaluation01`, one Charon CPU,
+60 seconds, no neural training. Record timeout as failure under the declared cap;
+never relabel a partial sample as the fixed completed screen.
+
+**Interface failure and dependency correction.** `evaluation01` stops before
+model loading or item selection because the installed Transformers tokenizer
+conversion lacks Protobuf. Preserve the failure. Acquire the pure-Python
+`protobuf-6.33.5-py3-none-any.whl` from PyPI, SHA256
+`69915a973dd0f60f31a08b8318b73eab2bd6a392c79184b3612226b0a3f8ec02`,
+170,687 bytes; install only that pinned wheel into the existing Charon environment,
+with no dependency upgrades. Freeze the dependency receipt and replay the unchanged
+source/configuration in `evaluation02`, with the same 60-second CPU cap. No model
+result or score-dependent change is implied by this environment repair.
+
+**Legacy architecture correction.** `evaluation02` passes tokenizer validation
+but strict loading rejects one released tensor: the first decoder cross-attention
+relative-position bias (32 by 8, nonzero). Modern Transformers explicitly ignores
+that key in its ordinary loader; Transformers 3.1's T5Block instead gives the first
+cross-attention layer this bias. Do not silently discard it. Freeze `evaluation03`
+with that original embedding restored and strict loading of every checkpoint key.
+Retain the tensor unchanged, disable unused inference caches, and compare its
+position buckets against an independent scalar implementation of the original
+T5 rule before scoring. All other source, selection and 60-second limits stay fixed.
+This checks the identified compatibility issue, not every difference from the
+historical software environment. Sources: installed Transformers 5.17 and
+[Transformers 3.1 T5Block/T5Attention](https://raw.githubusercontent.com/huggingface/transformers/v3.1.0/src/transformers/modeling_t5.py).
+
+**First completed screen and one fixed replication.** `evaluation03` completes
+all 32 articles: useful accuracy is 22/32 (68.75%), versus 13/32 (40.625%) for
+selected-sentence overlap. Both candidate likelihood selectors give the same
+accuracy. Recovered claim accuracy is 79.1667%, against best direct public claim
+accuracy 60.4167%. The 203 exact recovery identities pass and every tensor digest
+is unchanged. Native output suppression is an interface-level control, not a
+weight edit or genuine removal: its 50% score coexists with the 79.1667% alternative
+reader. The tokenizer warning concerns an excluded overlength row; no scored
+input is truncated or exceeds 512 tokens.
+
+The fixed-comparator paired bootstrap interval is [.03125,.53125], but selecting
+the strongest public control inside each resample gives [0,.40625]. The conservative
+predeclared screen therefore does not pass. Execute one disjoint 32-article
+replication, the next eligible distinct articles in the same hash ordering,
+without changing the model, controls, selectors or accuracy gates. Freeze offset
+32 in `replication01`; 60 seconds, one Charon CPU. Report that block separately
+and the pooled 64-article development result. This is a predeclared continuation
+of exploratory qualification, not a fresh held-out scientific claim or permission
+to keep extending until significance. Preparation was 4.23 seconds; inference
+28.29 seconds and total wall time 40.48 seconds in the completed first screen.
+
+**Severity remains separate.** Even the first block's strongest answer control
+retains (13/32-1/4)/(22/32-1/4)=5/14 of the above-uniform useful advantage. Its
+claim recovery also makes a 51% absolute all-reader cap infeasible at that cost.
+The meaningful matched public-baseline criterion and the full cognitive scope
+remain obligations after any replicated advantage. A new reading benchmark does
+not by itself establish a training mechanism or replace the original endpoint.
+
+<a id="ln-314"></a>
+### LN-314 — 2026-09-23 UTC: the reading advantage replicates; test whether it depends on evidence
+
+**Independent block result.** The next 32 articles give 24/32 useful answers
+(75%), versus 14/32 (43.75%) for passage overlap. The conservative bootstrap
+interval, selecting the best fixed public control inside each resample, is
+[.09375,.46875]. This block passes the fixed computational screen. Its native
+answer-to-claim reader has exactly 83.3333% balanced claim accuracy; the strongest
+direct public claim control has 62.5%. The complete state digest equals the first
+block's digest. Preparation takes 4.27 seconds, inference 28.49 seconds and total
+wall time 40.77 seconds. No parameter training or further sample extension follows.
+
+Across the two fixed blocks the reader answers 46/64 (71.875%) correctly and
+passage overlap answers 24/64 (37.5%). This is a substantial computational lead on
+this limited released workload, with a direct fixed-judgment reader. It does not
+establish that the model's observed performance is evidence-dependent: question
+and answer-option regularities might account for part of it. Nor does it establish
+broad loss of language, reasoning or learning after a genuine removal edit.
+
+**Next discriminating control, frozen before execution.** Remove only the article
+from the input to the unchanged reader, retaining question and all alternatives.
+Use exactly the same 64 eligible article/question IDs selected from the full
+inputs, no new selection or token-length filter based on ablated inputs. Report
+all original-task answer scores and paired changes, including answers that become
+correct after omission. This measures reliance on evidence in the benchmark; it
+is not a safety-removal attack and must not be assigned hypothetical replacement
+labels. The classifier can ignore an available passage under the original task
+contract, so this is also a stronger permitted public-path diagnostic.
+
+Freeze `evidence_omission01`, source/configuration and this entry, one Charon CPU,
+60 seconds, no training. Keep literal input separators, original candidate scoring,
+all model tensors and controls fixed. Separately freeze a 15-second aggregation
+that verifies disjoint article IDs, identical model hashes, the exact recovery
+identity and all 64 prediction records, and reports pooled bootstrap intervals,
+public retained advantage, public claim-derived utility caps and ablation effects.
+Only the completed two blocks and omission control may enter this aggregation.
+The small corpus and released-checkpoint training provenance remain limits; these
+runs cannot establish broad out-of-distribution transfer or rule out contamination.
+
+**Evidence-dependence result and pooled audit.** Removing the passage reduces
+accuracy from 46/64 to 26/64 (40.625%). Twenty-six previously correct answers are
+lost and six previously wrong answers become correct. The paired difference is
+31.25 percentage points, with bootstrap interval [15.625,46.875] points. Thus this
+sample contains a substantial evidence-dependent learned advantage; answer-only
+regularities still support nontrivial performance. Omission preserves the model's
+weights and is not genuine loss of the full reading or judgment procedure.
+
+The pooled learned-vs-best-public difference has a conservative resampled interval
+[18.75,43.75] percentage points. The learned answer reader recovers 81.25% balanced
+claim accuracy. The strongest frozen public answer control retains 26.6667% of the
+above-uniform advantage. The best observed direct public claim score is 58.3333%.
+If an actual all-reader removal cap were that score plus .01, the identity would
+bound useful accuracy by 39%, implying at least 70.1333% loss of above-uniform
+advantage from this parent. That cap is an illustration, not an established
+all-reader upper bound; it cannot be substituted for measured removal. These
+quantities are task scores, not percentages of overall cognition.
+
+**Consequential boundary and next requirement.** This candidate now combines a
+fixed-judgment recovery identity with an independently replicated learned reading
+advantage and evidence-omission controls. Preserve it as a stronger computational
+lead than the previous scalar-forecast route. It still does not establish a
+training mechanism satisfying the full target. The current task promises exactly
+one correct offered answer: the guarantee does not cover open-ended claims, cases
+where no offered answer is justified, or other cognitive work. A ranking procedure
+can survive while absolute support calibration is lost outside this promise.
+Nor does adding a comparison interface show that training created an indispensable
+internal operation. Further construction work must address those specific scope
+and severity gaps, not merely attach a claim head or rename answer accuracy as
+alignment. No new neural training is admitted by these results.
+
+**Preservation.** All 70 manifest-listed files, 244,659,372 bytes, verify by size
+and SHA256 on the SD evidence store. This includes the original model/tokenizer/data,
+pinned Protobuf wheel, both failed interfaces, frozen sources and configurations,
+all three complete inference runs, selected and excluded items, pooled audit, and
+runtime compatibility sources. [Pooled summary](artifacts/scc-grounded-claim-assessment-20260923-v1/aggregation01/summary.json),
+[replication](artifacts/scc-grounded-claim-assessment-20260923-v1/replication01/summary.json),
+[evidence omission](artifacts/scc-grounded-claim-assessment-20260923-v1/evidence_omission01/summary.json),
+and [preservation receipt](artifacts/scc-grounded-claim-assessment-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `9cf8e3c5b354356102f21a9cc193834620c6fb567663650d5e6007929b618ef1`.
+Remote originals remain under
+`/home/salvador/scc-research/grounded-claim-assessment-20260923-v1/`.
+No process remains running and no neural training has been initiated. The main
+mechanism objective remains unresolved; this work is completed progress toward
+identifying a qualifying shared cognitive operation, not goal completion.
 
 ## Historical evidence
 
