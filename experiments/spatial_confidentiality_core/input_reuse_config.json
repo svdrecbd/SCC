@@ -1,0 +1,11 @@
+{
+  "dimension": 4,
+  "selection_indices": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+  "parent_state_sha256": "b421be3848510f81abd64bf4f4fd4a77d68da1703fef54d36e40ea59403f8068",
+  "bootstrap_seed": 33937,
+  "bootstrap_replicates": 10000,
+  "processor_count": 1,
+  "inference_block_wall_seconds": 180,
+  "analysis_wall_seconds": 60,
+  "neural_training": false
+}

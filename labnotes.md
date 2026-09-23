@@ -91,6 +91,16 @@ reused diagnostic scene, XOR-32 still has a tiny computed derivative,
 while majority-32 has a substantial one. These checks improve implementation
 and constrain a future curriculum; they do not admit a destructive-mechanism run.
 
+**Reusable-input recovery — [LN-339](#ln-339).** A retained spatial procedure
+can reveal additional geometry through transformed inputs when its observations
+span the missing quantities. Exact finite controls distinguish recovery from
+transformation-invariant hidden information. A two-call reflection reader on the
+unchanged visual model retains 96.90% of measured protected gain on 16 reused
+development scenes, but fails the predeclared positive comparison-interval gate.
+The task-level recovery identity requires performance on a reflection-closed
+input law, not an equivariant neural architecture. This is a recovery control,
+not a parameter-removal experiment or training admission.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with adaptive joint-geometry coverage justified. An alternative implementation that still
@@ -26283,6 +26293,167 @@ source/configuration/entry/machine, are verified in
 [repair quantifiers](artifacts/scc-repair-quantifiers-20260923-v1/).
 Manifest SHA256: `c03dea1c19091d88d51dd6c521e3cef28005996dc6386f77056bb7b232ee0e99`.
 The run is terminal and its executed source matches the worktree.
+
+<a id="ln-339"></a>
+### LN-339 — 2026-09-23: test functional recovery under reusable transformed inputs
+
+**Question.** LN-326–337 show that one retained representation can hide local
+judgments. A reusable procedure offers additional evaluations, but they help only
+when the inputs have a justified relation to the same underlying scene. Determine
+that condition before using input transformations to claim either recovery or
+removal. This applies the observability idea already reviewed in LN-203; it is
+not a new general observability theorem. See [Åström and Murray, Output
+Feedback](https://www.cds.caltech.edu/~murray/FBS/Output_Feedback.html).
+
+**Exact condition.** Suppose an allowed input transformation tau_g has known
+scene action P_g and a retained procedure returns H z on the original scene and
+H P_g z on each transformed scene. Stack O=[H P_g]_g, including the identity.
+A linear target L z is recoverable for every z over the stated field if and
+only if ker(O) is contained in ker(L), equivalently L=D O for some decoder D.
+The necessity follows by comparing z and z+v for v in ker(O); sufficiency follows
+by defining the linear map on the image of O. Full scene recovery requires full
+column rank. With all transformations in a group, ker(O) is the largest
+invariant subspace contained in ker(H). This is an algebraic condition, not an
+assumption that arbitrary image permutations preserve physical scenes.
+
+For approximate real-valued evaluations w_g=H P_g z+e_g, the same decoder has
+error D e, hence norm at most ||D|| times the stacked error norm. Conditioning
+and actual equivariance error matter. Repeating an invariant observation adds
+no rank. For the reusable matrix control x -> H A x, ordinary new inputs only
+reveal H A; they do not supply P_g A unless a corresponding transformation of
+the input with that effect is established. Thus this argument does not withdraw
+LN-326's reusable-map counterexample.
+
+**Registered exact validation.** Enumerate all subspaces of F_2^4 using the
+existing audited enumerator and every coordinate permutation. For identity,
+horizontal reflection, and the full permutation group, verify the kernel and
+row-space target conditions against all 16 source vectors and all 16 linear
+targets. Include a coordinate-half observation recovered by reflection and a
+reflection-invariant pair-sum observation whose individual coordinates remain
+unavailable.
+Separately test real-valued reflection reconstruction with prescribed errors
+and reject uncharged perfect-equivariance inference. The real experiment below
+is a distinct field/measurement model; F_2 identities are not applied to depth.
+One Charon CPU, 30 seconds, deterministic exhaustive controls.
+
+**Registered learned check.** On all 16 existing development scenes, execute
+one additional forward pass of the unchanged parent on horizontally reflected
+RGB, then restore output coordinates. Keep the original prediction's left half
+and the reflected-input prediction's right half. This uses two calls to a
+hypothetical procedure exposing only its left output half. It tests a concrete
+recovery reader; the actual parent's hidden weights are still present and this
+is explicitly not a genuine-removal intervention. Compare native, aligned
+reflection, reconstructed full field, and the missing-half control filled with
+the already fitted quadratic-position predictor. No coefficients are refitted.
+
+Score valid pixels in the established crop and depth range, separately report
+missing-half MSE and scene-level equivariance errors, and evaluate protected
+threshold-risk recovery with LN-301's exact integrated reader and the original
+16-scene calibration baseline. Reproduce native MSE from LN-322, save all new
+predictions, input hashes, parameter hashes, per-scene results and runtime.
+A positive recovery screen requires lower mean missing-half MSE than the public
+fill, positive mean integrated protected gain, and a positive paired scene-
+bootstrap interval against public fill (10,000 draws, seed 33937). These are
+exploratory development criteria, not all-reader certification or fresh evidence
+of generalization. Report negative outcomes without changing the criteria.
+
+**Resources and interpretation.** Freeze source, configuration, this entry,
+selection and the prior public coefficients before execution. Reuse pinned
+parent/data references explicitly. One Charon CPU, 180 seconds per four-scene
+inference block and 60 seconds for analysis, at most 25 MiB new prediction data.
+No optimizer, training, parameter intervention, external observations or labels
+for reconstruction. Truth labels are used only for evaluation; all inference
+and calibration costs are charged. A reader surviving reuse is retained
+protection, not evidence of mandatory execution of the native head. Neither
+rank closure nor empirical equivariance proves destructive SCC by itself.
+
+**Task-level refinement before analysis.** Exact equivariance of a particular
+neural predictor is unnecessary for a stronger, narrowly specified statement.
+Let tau be horizontal reflection, R its pixel permutation, and let the true
+field satisfy z(tau x)=R z(x). Let an arbitrary edited procedure u return left-
+half depth estimates; its architecture and internal encoding are unrestricted.
+Construct v(x) by taking the left half from u(x) and the right half from
+R u(tau x), placing each output in its corresponding half. With n/2 output
+coordinates per call,
+
+    MSE_full(v(x),z(x))
+      = [MSE_left(u(x),z(x)) + MSE_left(u(tau x),z(tau x))]/2.
+
+Thus on a reflection-closed input law, expected full-field MSE equals expected
+left-half MSE. This identity concerns error to truth, not equality to the original
+model's predictions. It remains valid when the edited predictor is not itself
+equivariant. Apply the same construction to a fixed public baseline; subtracting
+its identity gives equality of useful gains. LN-301 then recovers at least that
+normalized gain as integrated threshold-risk improvement. The protected baseline
+must be this identically assembled baseline, or its difference from the evaluation
+baseline must be charged. An arbitrary mismatched public baseline is not silently
+substituted. The two model calls and input reflection are ordinary charged reads
+of the current endpoint, not a parent reload or retraining operation.
+
+This covers a procedure retaining spatially localized prediction on the closed
+input law. It does not cover arbitrary linear combinations of a scene or establish
+that those combinations are cognitively useless. A reflection-invariant pair-sum
+control still survives the algebraic reconstruction objection. Physical reflection
+and task-law closure must be declared; arbitrary permutations of a natural image
+are not licensed. The existing development distribution is not asserted to be
+reflection-closed; its reflected partner is evaluated explicitly. Its asymmetric
+crop is retained for the original empirical comparison, so that comparison is
+not presented as an empirical proof of the closed-law identity.
+
+**Analysis implementation correction.** `analysis01` failed the inherited
+integrated-loss agreement check before producing scientific scores. The new
+caller divided float32 truth by ten before passing it to the float64 integral
+routines; the original analysis promotes truth to float64 first. Preserve the
+failure and restore that original precision contract in fresh `analysis02`, with
+all tolerances and scientific criteria unchanged. All four inference blocks are
+terminal; their unchanged predictions are reused, not regenerated.
+
+**Completed checks.** The exact run covers all 67 subspaces of F_2^4, 201
+observation families and 3,216 target-recovery equivalences, plus 16 rational
+real-error controls. All pass. A coordinate-half observation rises from rank 2
+to 4 under reflection; an invariant pair-sum observation stays at rank 2. Runtime
+is 0.031 seconds inside Python (0.07 seconds process, 13,952 KiB peak memory).
+
+All 16 reflected-image forwards finish with the pinned parent digest unchanged,
+zero optimizer steps, and no acquired observations. Four blocks take 18.44–18.55
+seconds each including model loading, with at most 1,297,956 KiB peak memory.
+Corrected analysis takes 12.38 seconds inside Python (12.56 seconds process,
+907,964 KiB); original native MSE is reproduced. The first analysis failure is
+preserved separately.
+
+| Reader | Full-field MSE (m^2) | Missing-half MSE (m^2) | Integrated protected gain | Missing-half protected gain |
+| --- | ---: | ---: | ---: | ---: |
+| Original native prediction | 0.971255 | 1.032441 | 0.01538049 | 0.01426861 |
+| Aligned reflected-input prediction | 1.016042 | 1.154727 | 0.01507555 | 0.01331906 |
+| Two-call reconstruction | 1.032616 | 1.154727 | 0.01490402 | 0.01331906 |
+| Original left half plus public right half | 1.311710 | 1.710929 | 0.00848022 | 0.00051717 |
+
+The two-call reconstruction retains 96.90% of the original measured full-field
+protected gain and 93.35% on the missing half. These are descriptive ratios on
+reused development scenes. Mean missing-half MSE improves by 0.55620 m^2 against
+public fill, but its paired scene-bootstrap interval is [-0.17360,1.35125] m^2.
+**The predeclared recovery screen fails its positive-interval requirement.** Do
+not reinterpret the positive mean as passing or promote this to confirmation.
+Mean squared equivariance defect is 0.0353264 m^2; reconstructed error relative
+to the native output is 0.0269996 m^2. Exact symmetry was not assumed in scoring.
+
+**Decision.** Reusable input transformations belong in the removal threat model.
+The exact task-level relation applies to arbitrary edited predictors satisfying
+its declared transformed-input utility requirement, and gives an inexpensive
+reader without access to parent weights. The learned screen supplies a concrete
+implementation and descriptive recovery, with an unresolved comparison interval.
+It establishes neither actual parameter removal nor catastrophic loss. More
+precise reflection performance alone would not settle the admission gap: the
+candidate still needs genuine functional removal and a severe-loss argument for
+its specified cognitive abilities. Invariant retained functions remain an explicit
+counter-control. No training is admitted by this result.
+
+**Evidence.** All 101 manifest-listed files (25,326,716 bytes), including the
+failed first analysis, all predictions, frozen sources/configurations/entries,
+machine logs and parameter checks, are verified in
+[input reuse](artifacts/scc-spatial-input-reuse-20260923-v1/). Manifest SHA256:
+`9d08e42ea207c71851d7d5e7c0871e3929e35a5944b7ca6d1e824ed755cb4338`.
+All processes are terminal; executed current sources match the worktree.
 
 ## Historical evidence
 
