@@ -9,93 +9,43 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Current construction — [LN-294](#ln-294).** A fixed probabilistic disclosure
-rule supplies binary count comparisons. A native sequence of n+1 risk judgments
-recovers a count within a factor of two; the same family is recovered from any
-replacement count estimate. Exact finite checks pass. This is a conditional
-functional construction, not a qualified learned mechanism. Baseline binary
-accuracy can still conceal useful information; the explicit retained-information
-control prevents interpreting that score as complete removal.
+**Active construction — [LN-300–301](#ln-300).** A reusable causal predictor
+estimates the consequences of interventions on new systems. Its protected component
+is quantitative risk across declared consequence thresholds. A scalar mean forecast
+recovers threshold-risk proper-score improvement through an inexpensive reader:
+retained useful MSE improvement implies at least as much integrated risk Brier
+improvement, with no calibration or threshold-count penalty. All 37,100 exact
+checks pass. This establishes conditional functional recovery, not mandatory
+execution of a particular computation or behavioral enforcement.
 
-**Latest procedural candidate — [LN-298](#ln-298).** A frozen 7.24-million-parameter
-in-context learner was evaluated on 16 fresh tasks against 17 ordinary learners
-and their selected/averaged portfolios. Its 2.1% aggregate Brier advantage is
-uncertain and fails the fixed screen. A 0.024-second public learner retains about
-96% of its improvement over context frequencies and retains disclosure assessment.
-The exact semantic/recovery controls pass, but neither a qualifying computational
-separation nor destructive loss follows. No training is admitted.
+**Latest computational result — [LN-305–308](#ln-305).** The unchanged released
+Do-PFN core, with validated distribution readout, has 49.39% lower MSE than the
+strongest fixed public replacement on 24 released causal systems. The difference
+is positive in all eight families and survives 55 fixed procedures plus eight
+portfolios. Two upstream readout discrepancies were controlled before scoring.
+Every acquired benchmark row flips natural treatment; controls exploiting that
+selection rule do not remove the advantage. Fresh systems with independent
+intervention choices remain necessary; this is exploratory released-data evidence.
 
-**Latest score-recovery result — [LN-301](#ln-301).** Any improvement in bounded
-mean prediction supplies at least as much integrated threshold-risk Brier
-improvement through a scalar shift and clipping. The pointwise result has no
-threshold-count penalty or calibration premise. All 37,100 exact checks pass.
-A small incremental advantage still cannot establish severe cognitive loss.
+**Open destructive-loss premise — [LN-308](#ln-308).** The strongest fixed public
+replacement retains 80.48% of total useful improvement and supplies substantial
+risk competence. A hindsight per-system selector nearly matches the neural model,
+but uses test outcomes and is not an attack. The learned computational advantage
+is real on the evaluated sample; genuine functional removal and catastrophic loss
+have not been demonstrated. A public replacement retaining both functions does
+not refute conditional coupling. No new neural training is admitted.
 
-**Active procedural lead — [LN-300](#ln-300).** Inspect the released Do-PFN
-interventional predictor as a candidate for reusable consequence inference.
-Its pinned architecture, checkpoint and source are preserved; no causal model
-has been evaluated or admitted to training. Distribution readout and fair public
-causal replacements must be validated before qualification.
+**Prior controls.** Contextual disclosure [LN-298](#ln-298), learned counting
+[LN-296](#ln-296), proof generation [LN-291–293](#ln-291) and forecasting
+[LN-266–269](#ln-266) failed their fixed computational screens. Their sources,
+failures and results remain evidence; none establishes a general impossibility.
 
-**Latest learned counting result — [LN-296](#ln-296).** The released cellular
-policies were loaded and exercised through a validated port of the original
-counter. They reduce decisions but take longer than native branching on all four
-selected cases. The largest answers agree with an independent modern counter
-after correcting an expensive preprocessing configuration. The earlier ten-second
-timeouts therefore do not establish a public obstacle for these inputs. This
-learned core has not qualified for new training.
-
-**Latest learned result — [LN-291–293](#ln-291).** The unchanged 7B proof model
-solves one of five true program claims; the fixed public portfolio solves three.
-One compiler-feedback repair adds no valid proofs. False controls are rejected.
-These positive-only proof tasks also fail to measure binary confidentiality
-difficulty. No further prover scaling or training is admitted from this screen.
-
-**Previous construction decision — [LN-280–281](#ln-280).** Reject every-gate
-policy encoding: decoding four entries preserves all circuit computation while
-erasing the private policy. Destructive naive ablation instead leaves that policy
-recoverable. The result remains a reference control, not a positive mechanism.
-
-**Retained mathematical tool — [LN-278–279](#ln-278).** The repair-aware graded
-constraint bound addresses partial-witness quality, conditional on a valid score
-gap, workload coverage and genuine judgment removal. Public compilation alone
-does not build the internal dependency. Its finite controls remain evidence.
-
-**Last direct learned-model evaluation — [LN-266–269](#ln-266).** The unchanged
-Chronos tiny model fails the fixed demand/risk screen on 32 ERCOT windows: only
-4.75% lower MSE than the strongest simple baseline and worse risk Brier scores at
-two of three capacities. No training or edits followed. Its 160 score pairs and
-four corruption checks passed; the apparent MSE advantage remains uncertain.
-
-**Earlier intervention-risk bound — [LN-263–265](#ln-263).** The intervention-risk
-family bound strengthens single-judgment accounting, but its 77.90% conditional
-loss bound at a 51% all-reader cap is below the fixed 80% screen. An exact public
-filter supplies all useful and risk outputs within 0.488 ms, making that removal
-premise infeasible. This remains a validated analytic control.
-
-**Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** Before
-advancing a complete protective mechanism to implementation, explain why it resists
-an intact-cognition behavioral bypass under its full, justified resource contract.
-A narrower conditional coupling result is evaluated on genuine removal and useful
-loss; enforcement and durability require additional arguments when claimed.
-Restoring both functions does not refute conditional coupling. No candidate in the
-record has earned a new training run. Bend remains a checked finite-prototype
-backend, not a validated neural mechanism or a toolchain migration decision.
-
-**Remaining mechanism question — [LN-294](#ln-294).** Can learned probabilistic
-reasoning supply a substantial reusable advantage while genuine loss of the
-specified disclosure-assessment family forces severe loss of that advantage?
-The native count construction resolves an interface dependency but leaves
-computational advantage and the broad loss endpoint open. Ordinary Monte Carlo
-is a mandatory additive-accuracy baseline. The inspected Neuro# grid domain also
-admits direct finite-state counting; its published comparison alone does not
-qualify a learned core. The existing-policy comparison in LN-296 finds no learned speed advantage on
-the selected cellular cases; public exact replacements solve them. LN-297 supplies
-a stronger proper-score recovery reader for direct distributional estimation.
-The inspected direct-estimation releases lack immediately usable checkpoints;
-their published results are leads, not our validation or training admission.
-The subsequent contextual-inference screen in LN-298 also fails admission; its
-relative score bound cannot be substituted for loss of the underlying procedure.
+**Research gate — [LN-228–230](#ln-230), clarified in [LN-242](#ln-242).** A core
+conditional coupling result must specify genuine protected-function removal and
+its useful loss. Enforcement and durability need additional arguments when claimed.
+Full protective mechanisms must address intact-cognition behavioral bypass under
+the declared resource contract. Changing a reader, forgetting old observations,
+or dropping below a utility threshold is insufficient evidence of cognition failure.
 
 **Resources.** CPU research jobs go to Charon; GMAN is for GPU work, with the
 user's substantial synchronized-CPU-batch exception. Latest bounded validations
@@ -22184,6 +22134,334 @@ pointwise identity. No causal model or removal intervention has yet been evaluat
 are preserved in `artifacts/scc-causal-risk-assessment-20260922-v1/`.
 All 56 manifest-listed files (114,968,569 bytes) verify locally;
 manifest SHA256 `e9826ed8df50c3b71a3ec42920e1061345fa2a8b79610b93da658a4e25032f4d`. Failed preparation is retained.
+
+<a id="ln-302"></a>
+### LN-302 — 2026-09-22: causal distribution readout validation
+
+**Implementation question.** Source inspection of the pinned Do-PFN release finds
+that the full-support mixture uses half-normal tails in its likelihood and mean,
+but inherits a CDF that truncates the outer buckets. Its prediction interface
+rescales the borders into outcome units without visibly refreshing cached widths.
+Neither observation is a benchmark result. Validate their numerical consequences
+before interpreting any intervention-risk forecasts.
+
+**Frozen check.** Implement an independent mixture reader using uniform interiors
+and half-normal tails with the released median-width convention. Recompute widths
+from physical borders. Check CDF, mean, positive-part expectation and bounded mean
+against piecewise numerical quadrature; test affine equivariance. Use seed 30201,
+2/3/5 components, three draws each, absolute tolerance 1e-7. Controls must detect
+the released zero tail probability where the mixture gives 1/8, and a stale-width
+rescaled mean 2.5 where affine equivariance requires 3. Freeze source/configuration,
+this entry and machine in `distribution_validation01`; one Charon CPU, 45 seconds.
+No checkpoint loading, model inference or training. Preserve upstream unchanged.
+The bounded forecast is E[clip(Y,0,1)], not clip(E[Y],0,1).
+
+**Readout result.** All 249 independent numerical comparisons pass; maximum error
+3.24e-8. Both released-interface controls reproduce the predicted discrepancies:
+CDF 0 versus 1/8, rescaled mean 2.5 versus 3. Runtime 8.02 seconds on one Charon
+CPU. These controls identify readout inconsistencies; they do not audit the paper's
+benchmarks. Use the independent reader for future physical risk/mean calculations,
+retain native values as controls, and preserve original source unchanged.
+
+<a id="ln-303"></a>
+### LN-303 — 2026-09-22: released causal model implementation check
+
+**Plan.** Load the pinned serialized architecture through an explicit allowlist of
+its inspected globals and CPU-only tensor reconstruction. Load the actual released
+checkpoint with Torch's restricted loader and the three reviewed activation classes.
+Apply the release's state-name conversion and require exact state-dictionary matching.
+Use its saved preprocessing configuration, with one ensemble member, CPU, FP32,
+seed 30301, no progress display and inference mode. Translate only sklearn's
+renamed finite-value argument. The official CPU path adds zero attention biases;
+record them and require every original checkpoint tensor to remain unchanged.
+
+Exercise 32 fixed synthetic context rows and eight query rows, then repeat the
+query. Validate normalized finite distributions, deterministic repeats, unchanged
+model/input state, coherent risk curves and bounded consequence means. Save native
+and independently decoded means/widths side by side. This is implementation
+validation with unscored data, not a causal-performance or SCC experiment. Freeze
+`interface_validation01`, source/configuration, this entry and machine before
+execution; one Charon CPU, 45 seconds, network disabled, no optimizer or training.
+A passing interface does not admit a training run or a comparative scientific test.
+
+**First interface attempt retained.** `interface_validation01` stops during import:
+the release imports `typing.Optional` through an older Torch namespace where it
+was re-exported. No checkpoint was loaded. Supply that same typing object in the
+compatibility adapter, preserve upstream unchanged, and repeat the identical
+45-second check as `interface_validation02`. This changes no tensor operation.
+
+**Second interface attempt retained.** Restricted loading and exact checkpoint
+matching succeed. Prediction expects a Torch query tensor even though context
+validation accepts NumPy arrays; the first query therefore stops before forward
+inference. Use an explicit tensor conversion and repeat as `interface_validation03`
+under the same contract. No model or statistical method is changed.
+
+**Interface result.** The released 7,336,420-parameter checkpoint loads with exact
+state matching. Its eight 100-bin predictions repeat identically. All original
+tensors and inputs remain unchanged; the official CPU path adds 48 zero bias
+tensors. Initialized-state SHA256 is
+`2e9f31f1291ea507dee3b90e40da685a13977dc52c9c67fc296a7713cd3a93ab`.
+Full process: 4.06 seconds, 895,284 KiB. Native and audited means differ by up to
+0.05030 on these unscored inputs, confirming that the unit conversion matters in
+actual predictions. Interface validation passes; performance remains unmeasured.
+
+<a id="ln-304"></a>
+### LN-304 — 2026-09-22: released causal benchmark preparation
+
+**Purpose.** Inspect the released causal cases before constructing a further task.
+Acquire the first three numbered datasets in each of all eight published folders,
+plus their dataset loader and example, at the already pinned revision. This fixed
+selection uses filenames only, before outcomes or model scores are inspected.
+The folders are back-door, common-effect, front-door, observed-confounder,
+small observed-confounder, observed-mediator, mediator-and-confounder, and hidden-
+confounder cases. These are released benchmark data, not newly held-out draws;
+no independence from upstream development is claimed.
+
+Freeze `dataset_acquisition01`, configuration, source and this entry. Maximum 5 MB,
+60 seconds, one Charon CPU; verify Git blob hashes and SHA256. Inspect the loader
+and serialized schema before choosing any evaluation. This step neither loads
+these datasets nor runs predictions, and does not admit neural training. The
+paper's pre-intervention covariates and shared-noise counterfactual construction
+must be preserved: conditioning on a post-treatment variable after setting its
+natural treatment is a different prediction problem.
+
+**Preparation failure retained.** `dataset_acquisition01` used the acquisition
+utility's arguments incorrectly and exited before downloading. Preserve its log;
+repeat as `dataset_acquisition02` with its documented directory argument and
+`acquisition_config.json`. The file selection and budget are unchanged.
+
+**Preparation result.** All 27 files (1,636,853 bytes) verify. The dataset loader
+uses observational covariates at query time and substitutes only the intervention
+column; targets are shared-noise interventional outcomes. Serialized datasets also
+contain embedded causal-model code. Extract only the initial five data fields
+through the reviewed tensor loader, terminating before `do_scm`; do not reconstruct
+or execute the embedded functions.
+
+<a id="ln-305"></a>
+### LN-305 — 2026-09-22: released causal cases and preserving prediction controls
+
+**Fixed first screen.** Evaluate all 24 selected released systems, with deterministic
+system-specific permutations (30501 plus sorted case index), at most 128 context
+rows and 96 distinct query rows; smaller systems use 80% context. Preserve native
+pre-intervention covariates and replace only the first query column by its stored
+intervention. Ground truth is the stored interventional outcome, not a treatment-
+effect difference. No upstream causal code is loaded. Save source hashes, indices,
+inputs and all predictions.
+
+Define bounded consequence severity by clipping outcomes to context mean +/- two
+context standard deviations, then mapping that interval to [0,1]. This normalization
+uses context only, is fixed before predictions, and is a task analogue, not a
+clinical safety threshold. Forecast E[clipped severity] with the audited distribution
+reader. Measure MSE against actual bounded outcomes and Brier loss across 256 evenly
+spaced thresholds; exact recovery checks use the corresponding grid-valued outcome.
+The continuous guarantee has the stated discretization allowance from LN-301.
+
+Compare the unchanged one-member released predictor to ridge, RBF kernel ridge,
+80-tree random forest and extra trees (leaf minimum three), and 100-step histogram
+boosting (seven leaves). Scale features for ridge/kernel methods. Select public
+models using three-fold observational-context MSE only; also report their average
+and best aggregate individual as a hindsight control. Count fitting, validation and
+query time. These methods estimate observational relationships and may be
+misspecified in causal cases. Beating them is only a preliminary screen: a genuine
+computational qualification still requires causal replacements under matched
+information, graph/prior accounting, and fresh systems.
+
+The preliminary screen requires >=10% aggregate MSE improvement over both the
+selected portfolio and best aggregate public method, positive differences in at
+least six of eight families, and a positive 95% interval from 10,000 whole-system
+bootstrap draws (seed 30502). Report how much improvement over context-only mean
+public replacements retain; this is a preserving control, not genuine protection
+removal. Mean-risk readers must pass pointwise score accounting for every method.
+No edit, removal success, catastrophic loss or training admission follows from
+this screen. Freeze source/configuration, this entry and machine in
+`released_case_evaluation01`: one Charon CPU, 60 seconds, offline, no optimizer or
+neural training. Preserve any limit or extraction failure before changing the run.
+
+**First-screen result.** All 24 cases complete in 34.64 seconds on one Charon CPU
+(909,244 KiB peak memory). The audited causal predictor's macro MSE is 0.0104509,
+versus 0.0313578 for the selected public model, 0.0231984 for the best aggregate
+ordinary method (histogram boosting), and 0.0627002 for the context mean. Relative
+error reductions are 66.67% and 54.95%; all eight family means favor the predictor.
+The whole-system paired interval against selection is [0.01012,0.03435]. These
+released cases support an exploratory screen, not an independent population claim.
+Mean prediction time including fit is 0.364 seconds, versus 0.794 seconds for the
+whole public portfolio. Every pointwise recovery check passes (minimum slack
+-8.4e-17 from rounding). The native stale-width mean has MSE 0.0311698, underscoring
+why uncorrected readout would have changed the interpretation.
+
+This is a genuine preliminary advantage, substantially larger than LN-298's.
+However the best ordinary replacement retains 75.60% of total improvement over the
+context mean and keeps risk functionality. This is neither genuine removal nor
+catastrophic cognitive loss. Passing this first screen admits stronger causal
+replacement controls, not training.
+
+<a id="ln-306"></a>
+### LN-306 — 2026-09-22: graph-free causal replacement controls
+
+**Question.** Is LN-305's advantage explained by ordinary prediction conditioning
+on treatment in the wrong way? On the identical saved contexts and queries,
+evaluate four public alternatives using ridge, RBF kernel ridge and histogram
+boosting with LN-305's fixed parameters: omit treatment; fit separate treatment
+models; marginalize treatment under a context-fitted logistic propensity; and
+infer linear treatment effects on covariates, preserve their residuals, then
+recompute outcome predictions under the requested treatment. The final method
+averages over both possible natural treatments with the inferred propensity.
+It is an explicit additive-mediator model, not a universally valid causal rule.
+The two omission/marginalization controls intentionally ignore the requested
+intervention and test how much of the observed gain needs intervention reasoning.
+
+Use only observational context in all fits and three-fold selection (seed 30601).
+Such selection remains an observational proxy for causal performance. Neither
+family labels, true graphs, stored natural query treatment nor query outcomes
+enter fitting or selection. Natural query treatment is used only to report the
+prespecified subgroup where intervention changes it. Report all twelve methods,
+their selected/averaged portfolio, timing and the same recovery-reader controls.
+Best aggregate and per-family comparisons are hindsight diagnostics, not selected
+performers. This follow-up is adaptive to LN-305 and cannot supply a fresh
+confirmation set. A surviving public replacement that restores both functions
+still does not refute conditional coupling.
+
+Freeze `causal_replacement_evaluation01` with source/configuration, this entry and
+machine. Four sequential parts of six sorted systems each, at most 60 seconds and
+one Charon CPU per part. No neural inference, neural training, repair data or model
+edits. Keep source fixed until all parts finish; preserve every failure. This
+checks the computational premise and scope of loss, not the SCC removal trigger.
+
+**Aggregation specification.** All four parts finished without a limit or fitting
+failure (6.94, 6.97, 6.94, 6.79 seconds). Aggregate every method, plus the combined
+best aggregate public method and a clearly labeled per-system hindsight minimum.
+The latter is an oracle diagnostic, not an implementable selector. Report the
+changed-intervention subgroup and descriptive paired system/family bootstrap
+intervals (10,000 draws, seed 30602). This follow-up selection is adaptive; these
+intervals cannot turn the released screen into fresh evidence. Freeze the
+aggregation source before its one-CPU, 15-second calculation.
+
+**Replacement result.** None of the twelve additional fixed methods or their
+selected/averaged portfolios beats ordinary histogram boosting in aggregate.
+The predictor's 54.95% error advantage therefore survives these controls; all eight
+family averages favor it. The expanded portfolio costs 0.911 seconds per system
+including observational selection. Recovery checks pass to 1.4e-16 rounding.
+All released queries change the natural treatment, so the specified subgroup
+coincides with the full test set.
+
+An oracle choosing separately among the public methods for each system has MSE
+0.0113388 versus 0.0104509 for the neural predictor, retaining 98.30% of total gain
+over the context mean. This oracle sees test performance and is not an attack or
+qualified replacement. It does show that selecting the appropriate procedure may
+explain much of the remaining advantage. A model-selection obstacle is a concrete
+hypothesis; it has not been established as the learned mechanism. Fresh systems
+and better matched public function classes remain necessary. No training is admitted.
+
+<a id="ln-307"></a>
+### LN-307 — 2026-09-22: structural-function regression replacements
+
+**Question.** The released causal prior uses simple nonlinear structural functions.
+Test whether globally extrapolating public regressions remove the advantage left
+by local/partitioning predictors. Use second- and third-degree polynomial ridge
+regression with penalties 0.001, 0.1 and 10, and additive cubic splines with five
+knots and penalties 0.1 and 10. Standardize on context only; run both joint and
+separate-treatment versions. Keep LN-305's saved rows, outcome normalization,
+query semantics and LN-306's three-fold observational selector (seed 30701).
+The 16 procedures see no family labels, true graphs, query outcomes or new data.
+Their selected and averaged portfolios, fit/selection costs and pointwise risk
+readers are reported separately. These flexible regressions are public replacement
+controls, not neural training or a proof of causal identification.
+
+Freeze `structural_replacement_evaluation01`, configuration, updated evaluator,
+this entry and machine before running all 24 systems on one Charon CPU for at most
+60 seconds. This is another adaptive diagnostic on the same released sample;
+passing it still requires fresh confirmation and a genuine removal construction.
+
+**Structural control result.** All 24 systems complete in 11.31 seconds. The best
+fixed addition is additive spline ridge (penalty 0.1), MSE 0.0206482. The neural
+predictor retains a 49.39% error advantage, while that public method retains 80.48%
+of improvement over the context mean. More expressive regression alone does not
+remove the observed advantage. This remains the same adaptive released-data screen.
+
+<a id="ln-308"></a>
+### LN-308 — 2026-09-22: information carried by intervention selection
+
+**New control.** LN-306's subgroup check finds that every evaluated intervention
+is the opposite of its natural treatment. Direct inspection confirms binary pairs
+(0,1) and (1,0) only. This makes natural treatment recoverable as 1-a on this test
+sample. It differs from independently choosing a requested action. The pinned
+prior source `priors/doscm.py` lines 94–97 samples intervention coin flips; do not
+infer from that source alone how these released benchmark records were filtered
+or produced. Audit all acquired rows using only the safe tensor-prefix extractor,
+and save counts. Do not deserialize embedded causal functions.
+
+A public method can exploit the observed selection rule. Test ordinary outcome
+regression queried with reconstructed natural treatment; it ignores the effect of
+the intervention and measures how much predictive accuracy that alone preserves.
+Also test additive-mediator residual replay with this known natural treatment,
+instead of LN-306's propensity mixture. Neither is assumed generally causally
+correct. Use the three LN-306 regressors and eight LN-307 function regressors,
+with their existing fixed parameters. Select the underlying outcome regressors
+by ordinary observational three-fold validation (seed 30801); test targets and
+natural query treatment remain withheld from fits. Reconstruct natural treatment
+only through the public rule 1-a. Report all 22 methods and portfolios, including
+risk-reader accounting. Any success is a benchmark-specific preserving control,
+not a general causal-identification claim.
+
+Freeze `treatment_selection_evaluation01`, source/configuration, this entry and
+machine. Audit all serialized data fields on one Charon CPU (15 seconds), then
+run the 24 saved systems for at most 60 seconds on one CPU. Offline; no neural
+training, new observations, graph labels or parent edits. Fresh confirmation must
+sample actions independently of natural treatment or explicitly declare selection
+information; the current sample cannot establish robustness to that change.
+
+**Selection audit result.** All 20,396 rows across the 24 acquired systems have
+intervention treatment exactly opposite natural treatment. This is a property of
+the released records, not a statistical inference from a few query rows. The 22
+selection-aware control methods complete in 17.05 seconds, with no neural execution.
+Aggregate all completed phases with distinct method identities; freeze the
+aggregation source here before a 15-second, one-CPU calculation. Include a
+10,000-draw descriptive paired interval (seed 30802), public risk recovery and
+hindsight controls. Adaptive comparison still requires independent confirmation.
+
+**Reader endpoint clarification.** LN-301's clipped shift defines the survival
+curve on 0<=t<1; set its value at t=1 to zero for a bounded consequence. The single
+endpoint has zero measure in the integral, so the proof is unchanged. The executed
+finite checks use left interval endpoints and never query t=1.
+
+**Combined result and decision.** Across 55 fixed public procedures and eight
+selected/averaged portfolios, the best fixed aggregate replacement remains additive
+spline ridge, MSE 0.0206482 versus the causal predictor's 0.0104509. Its 49.39%
+error advantage is positive in all eight families; the adaptive whole-system
+paired interval is [0.00403,0.01731]. The intervention-selection controls do not
+explain it: their best selected portfolio has MSE 0.0408490. Thus the useful
+computational lead survives the tested controls, while the benchmark's selection
+information remains a reason to require independent-action confirmation.
+
+The limits are quantitatively consequential. The spline replacement retains
+80.48% of improvement over the context mean. An oracle selecting the best public
+procedure separately per test system has MSE 0.0105966 and retains 99.72%; it is
+not an available selector because it uses test outcomes. More directly, the spline
+mean's inexpensive risk reader has integrated-grid Brier loss 0.0877140 against
+the empirical-risk baseline's 0.1397453. Its risk improvement is 99.58% of the
+parent's total useful MSE improvement. Grid and continuous baselines must remain
+distinct; this is an observed finite-grid comparison. A removal cap below this
+public risk performance cannot be certified for a reader class that admits that
+replacement. Moving the baseline to the public reader instead protects only the
+remaining increment. These calculations identify the open severe-loss premise;
+they do not disprove conditional coupling or establish general impossibility.
+
+**Next substantive step.** Test the retained causal-computation lead on fresh,
+predeclared systems with interventions independent of natural treatment. Include
+public structural/selection methods and equal information accounting. Separately,
+a training proposal must identify an alignment-related risk function whose genuine
+removal can be established while the unrestricted retained procedure and charged
+repairs are considered. An output-head deletion, a scalar-risk score decrease or
+loss of only the incremental predictive gain will not suffice. No new neural
+training is admitted by this released-data screen.
+
+**Preservation.** Completed readout, interface, released-case and public-control
+runs, including failed attempts, are preserved under
+`artifacts/scc-causal-risk-assessment-20260922-v1/`. All 367 listed files
+(127,181,504 bytes) verify on the SD drive. Transfer manifest SHA256:
+`224b20016b49ef54970fb6d71a704dad00fc7b461e4e57b0056a271b9c619657`.
+The combined numerical receipt is
+`treatment_selection_evaluation01/summary.json`; no research job remains running.
 
 ## Historical evidence
 

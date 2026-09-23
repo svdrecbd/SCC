@@ -1,0 +1,1 @@
+{"seed":30801,"cases_per_part":24,"part_count":1,"regression_family":"combined_functions","modes":["reconstructed_natural_treatment","known_treatment_residual_replay"],"cpu_count":1,"wall_seconds_per_part":60,"neural_training":false}

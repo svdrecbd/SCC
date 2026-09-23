@@ -1,0 +1,1 @@
+{"seed":30601,"cases_per_part":6,"part_count":4,"modes":["treatment_omission","treatment_specific","treatment_marginalization","mediator_residual_replay"],"cpu_count":1,"wall_seconds_per_part":60,"neural_training":false}

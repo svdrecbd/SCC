@@ -1,0 +1,1 @@
+{"seed":30701,"cases_per_part":24,"part_count":1,"regression_family":"structural_functions","modes":["joint_regression","treatment_specific"],"cpu_count":1,"wall_seconds_per_part":60,"neural_training":false}

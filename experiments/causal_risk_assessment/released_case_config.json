@@ -1,0 +1,1 @@
+{"seed":30501,"expected_cases":24,"maximum_context":128,"maximum_queries":96,"threshold_count":256,"bootstrap_seed":30502,"bootstrap_replicates":10000,"cpu_count":1,"wall_seconds":60,"neural_training":false}

@@ -1,0 +1,170 @@
+{
+  "maximum_bytes": 5000000,
+  "wall_seconds": 60,
+  "cpu_count": 1,
+  "neural_training": false,
+  "files": [
+    {
+      "path": "datasets/__init__.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/datasets/__init__.py",
+      "bytes": 15598,
+      "git_blob_sha1": "456df67823f5ec1c8e14b40a48659f851848410b"
+    },
+    {
+      "path": "datasets/utils.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/datasets/utils.py",
+      "bytes": 149,
+      "git_blob_sha1": "219f72fc8aeca59f670bc3379657527161cc8b87"
+    },
+    {
+      "path": "prior_data_example.py",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/prior_data_example.py",
+      "bytes": 627,
+      "git_blob_sha1": "707185e4c74db3792ec0a5e896f52d295c3573f2"
+    },
+    {
+      "path": "data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_1.pkl",
+      "bytes": 144721,
+      "git_blob_sha1": "cb8d1cfaaa1f37f13d0344cec87246740381cc80"
+    },
+    {
+      "path": "data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_2.pkl",
+      "bytes": 113941,
+      "git_blob_sha1": "ee4652e11eef8aa712dcdbe6daee42eb1b257bec"
+    },
+    {
+      "path": "data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Backdoor_Criterion/Backdoor_Criterion_3.pkl",
+      "bytes": 19653,
+      "git_blob_sha1": "61674828d394735d6253d0804b6f3bcfc0ec00a9"
+    },
+    {
+      "path": "data/prior_sampling/Common_Effect/Common_Effect_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Common_Effect/Common_Effect_1.pkl",
+      "bytes": 23696,
+      "git_blob_sha1": "ca1fbf4847a9f3bb9e4c8f9aabfede8172ef42bc"
+    },
+    {
+      "path": "data/prior_sampling/Common_Effect/Common_Effect_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Common_Effect/Common_Effect_2.pkl",
+      "bytes": 26703,
+      "git_blob_sha1": "a5306f6c9c69172aa3044b89307d6eb78f5f2eba"
+    },
+    {
+      "path": "data/prior_sampling/Common_Effect/Common_Effect_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Common_Effect/Common_Effect_3.pkl",
+      "bytes": 43478,
+      "git_blob_sha1": "95fb1c4c1caccf73900c9ef90158a1f01c4e9547"
+    },
+    {
+      "path": "data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_1.pkl",
+      "bytes": 91559,
+      "git_blob_sha1": "51bbe537e8589ad4977db5eec1fff618da3c4408"
+    },
+    {
+      "path": "data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_2.pkl",
+      "bytes": 130618,
+      "git_blob_sha1": "456ce4b743b05a8af19b478b6a0f0c8d8d556e9b"
+    },
+    {
+      "path": "data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Frontdoor_Criterion/Frontdoor_Criterion_3.pkl",
+      "bytes": 36830,
+      "git_blob_sha1": "b79054d31df9deed5201a818d5432b15d47b8a5e"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder/Observed_Confounder_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder/Observed_Confounder_1.pkl",
+      "bytes": 45697,
+      "git_blob_sha1": "4d720daf1591529f81155602a88f03e8ab07e842"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder/Observed_Confounder_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder/Observed_Confounder_2.pkl",
+      "bytes": 111311,
+      "git_blob_sha1": "d65b07d099e51f6c5ad00fbcaa18a64615ca7076"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder/Observed_Confounder_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder/Observed_Confounder_3.pkl",
+      "bytes": 36659,
+      "git_blob_sha1": "40056198fd88f6d9a332a22b77d9a7a1a643b1b1"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_1.pkl",
+      "bytes": 29879,
+      "git_blob_sha1": "db3474e09251eb16c9a69742b045b6ec34780100"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_2.pkl",
+      "bytes": 95419,
+      "git_blob_sha1": "ad9835a6a616b25c83eae9dc45af03ec42d7e26e"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Confounder_Small/Observed_Confounder_Small_3.pkl",
+      "bytes": 56401,
+      "git_blob_sha1": "242395ae8849d4ab17e6abbe611410f46441fe5c"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator/Observed_Mediator_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator/Observed_Mediator_1.pkl",
+      "bytes": 142375,
+      "git_blob_sha1": "f913cfc7a1192fb7522893707bd3e2bbe061ada3"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator/Observed_Mediator_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator/Observed_Mediator_2.pkl",
+      "bytes": 47684,
+      "git_blob_sha1": "fd8b02d905ef9fb4383598758307695d3196fe63"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator/Observed_Mediator_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator/Observed_Mediator_3.pkl",
+      "bytes": 42717,
+      "git_blob_sha1": "c65b77ea3e2f00f8d93dd9bd326c5a9543fc435c"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_1.pkl",
+      "bytes": 68497,
+      "git_blob_sha1": "8957e2461740ee6d8a18a913c7beeb2b74899f45"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_2.pkl",
+      "bytes": 73111,
+      "git_blob_sha1": "c4339b63dd0395edbe392c27c27f042281816da1"
+    },
+    {
+      "path": "data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Observed_Mediator_and_Confounder/Observed_Mediator_and_Confounder_3.pkl",
+      "bytes": 26249,
+      "git_blob_sha1": "ecdc8fe5e1438484baa392e8b9d360d01cb6afee"
+    },
+    {
+      "path": "data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_1.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_1.pkl",
+      "bytes": 95219,
+      "git_blob_sha1": "a12ee1b7ca7c4022403d500d871849d8730feb1d"
+    },
+    {
+      "path": "data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_2.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_2.pkl",
+      "bytes": 26943,
+      "git_blob_sha1": "da7fd3002c9004075dcbab389ea90a5ec6692db0"
+    },
+    {
+      "path": "data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_3.pkl",
+      "url": "https://raw.githubusercontent.com/jr2021/Do-PFN/90d67433b43c4d52d752dc336070f525ff856e0b/data/prior_sampling/Unobserved_Confounder/Unobserved_Confounder_3.pkl",
+      "bytes": 91119,
+      "git_blob_sha1": "b8f24b14c68dc479638338c3ab26dccce624b1c2"
+    }
+  ]
+}
