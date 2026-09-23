@@ -1,0 +1,7 @@
+{
+  "seed": 32638,
+  "exhaustive_cases": [[5, 5, 2], [5, 5, 3], [7, 6, 3]],
+  "large_cases": [[1031, 1024, 2], [1031, 1024, 3], [1031, 1024, 8], [1031, 1024, 16]],
+  "wall_seconds": 45,
+  "neural_training": false
+}

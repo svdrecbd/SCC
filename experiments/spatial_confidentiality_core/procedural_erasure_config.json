@@ -1,0 +1,8 @@
+{
+  "prime": 3,
+  "coordinates": 3,
+  "maximum_local_coordinates": 2,
+  "input_dimension": 2,
+  "wall_seconds": 15,
+  "neural_training": false
+}

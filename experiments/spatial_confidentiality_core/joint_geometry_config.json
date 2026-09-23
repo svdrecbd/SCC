@@ -1,0 +1,8 @@
+{
+  "seed": 32637,
+  "exhaustive_dimensions": [3, 4],
+  "large_dimensions": [5, 7, 10],
+  "wall_seconds": 45,
+  "maximum_output_bytes": 67108864,
+  "neural_training": false
+}

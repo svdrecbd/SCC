@@ -35,15 +35,24 @@ the strongest tested public comparator. The extension assumes ideal placement
 relative to a surface; physical actuation is not demonstrated. Rank and other
 preserving output controls retain both functions.
 
-**Unresolved admission condition.** The native risk calculation need not execute
-when an alternative depth path survives. The argument establishes recoverability,
-not indispensable execution. If the repair budget admits the public parent
-checkpoint and its runtime, reloading it restores both functions; the current
-all-reader removal premise then cannot hold below its measured gain. No smaller
-budget is silently imposed. A pilot can test joint trainability, but its success
-would not resolve genuine removal, complete cognition failure or enforcement.
-Settle the claimed removal/resource contract before calling it a destructive
-mechanism or launching training on that premise.
+**Joint-geometry obstruction — [LN-326](#ln-326).** Exact coding controls erase
+all information beyond the public baseline for judgments involving at most k
+source coordinates, while retaining a fraction (n-k)/n of uniform field-source
+entropy and reusable residual mappings. The n=1,024,k=16 example retains 98.44%.
+A three-share disclosure scenario detects a relation missed by single-ray and
+pairwise judgments, but any fixed coordinate limit has the same general escape.
+This is an information-level and algebraic-procedure control, not an attack on
+the visual model or a theorem for the natural-image distribution. Local judgment
+coverage alone cannot support a claim of broad spatial destruction.
+
+**Unresolved admission condition.** The candidate needs a genuine functional
+removal criterion and severe loss of its specified reusable cognitive abilities,
+with joint-geometry coverage justified. An alternative implementation that still
+recovers protection is compatible with coupling; mandatory execution of a named
+head is not a core requirement. Public-parent reload restores both functions and
+limits removal/durability claims when that repair is allowed. No smaller resource
+budget is silently imposed. Marginal calibration training alone would not settle
+these obligations, and no neural training has begun.
 
 **Semantic boundary — [LN-317–320](#ln-317).** The preceding three-way semantic
 reader has an exact conditional judgment-recovery relation. Public finite-support
@@ -24410,6 +24419,223 @@ preserved spatial-core root (manifest `fcd5f81eb270e7b0d28cb5d8e3340d61d8649f435
 selection and public parameters are copied into this run, and frame/prediction
 digests appear in its case records. No source or artifact from the preceding
 experiments was overwritten.
+
+<a id="ln-326"></a>
+### LN-326 — 2026-09-23: test exact local-judgment erasure with retained joint geometry
+
+**Question.** LN-325 is progress: it closes the ordinal recovery gap for a new,
+explicit action family. Does the combined family control the rest of geometry?
+Test its information-level coverage before treating marginal calibration or
+ordering training as a destructive mechanism. This is a stored-world control,
+not an intervention on the pretrained visual procedure or an impossibility
+result for learned SCC.
+
+**Source and retained representation.** Let n=2^m-1 and Z_1,...,Z_n be independent
+uniform bits. Assign ray i the distinct positive depth
+
+    D_i = 1/4 + i/(8*n) + Z_i/2.
+
+The offsets make all ray depths distinct, so there is no truth-tie filtering.
+For every non-power-of-two i, let h be its highest power of two and retain
+
+    W_i = Z_i XOR Z_h XOR Z_(i-h).
+
+Discard the m pivot bits Z_1,Z_2,Z_4,... and all their copies. There are n-m
+retained bits. Given W and the m pivot bits, reconstruct Z in increasing i;
+every nonpivot uses two previously reconstructed coordinates. Encoding and
+reconstruction take O(n) bit operations, apart from ordinary indexing. Repair
+with those m pivot bits restores the complete source. No physical erasure or
+backup prevention is claimed.
+
+The encoding has rank n-m because each retained equation has a unique largest
+coordinate i. Thus W is uniform and H(W)=n-m. Within a fibre of W, vary the m
+pivots by a uniform binary vector a. The resulting change at coordinate i is
+the binary dot product of a with the m-bit representation of i. Every such
+column is nonzero, and distinct columns are linearly independent over GF(2).
+Consequently every Z_i and every pair (Z_i,Z_j), i!=j, is uniform conditional
+on W, exactly as without W.
+
+**Certified removal at this scope.** A fixed absolute-placement judgment is a
+function of one Z_i. A fixed relative-placement judgment is a function of two.
+Their entire conditional label distributions are unchanged by W. Therefore no
+reader, even with unrestricted computation, improves any single-query Bayes
+score for either family over its matched public baseline using this state.
+For relative placement that baseline is generally 75% accuracy, not chance:
+public offsets make the true probability 1/4 or 3/4. Independently sampled public
+query coordinates/thresholds carry no source information. There are no fresh RGB
+images, depth observations, parent copies, outcome feedback or other correlated
+repair data in this control. Supplying them changes the conditional information
+and requires a separate account; this is not an all-source claim about NYU.
+
+Yet every retained three-ray parity relation is answered exactly. These n-m
+independent relational bits preserve a fraction 1-m/n of source entropy, tending
+to one. They are explicit geometric configuration predicates, not evidence of
+human-like reasoning or a surviving trained procedure. This construction would
+refute an inference from this local judgment family to destruction of *all*
+geometric information. It would not refute LN-301/323/325's narrower depth,
+contrast and ordering implications. It also does not complete the user's target
+by replacing reusable cognition with stored-instance information.
+
+**Joint confidentiality control.** Keep the norm that an observer's output be
+independent of private bit s. At three rays, emit shares (r1,r2,s XOR r1 XOR r2)
+for independent uniform bits r1,r2, with each emitter between that ray's two
+possible surface depths. The observer receives exactly the shares on rays with
+Z_i=1. Enumeration must show identical observation laws for s=0 and s=1 if any
+share is hidden, and disjoint laws if all three are visible. Thus the violation
+judgment is the conjunction of the three visibility bits. Random masks are
+part of the evaluated communication procedure, not protected model state or a
+trusted safety verifier.
+
+For a retained triad, its parity is W_i. The conditional violation probability
+is 0 when W_i=0 and 1/4 when W_i=1; the public probability is 1/8. Its optimal
+Brier improvement from W is therefore 1/64. Hard classification accuracy remains
+7/8 for both readers, illustrating why a failed accuracy improvement is not
+absence of judgment information. The joint observation family detects information
+that every one- and two-ray judgment misses. The evaluator must use the joint
+observation law, rather than multiply marginal visibility probabilities.
+
+The linear construction is related to classical parity-check/coset methods;
+see [Hamming (1950)](https://doi.org/10.1002/j.1538-7305.1950.tb00463.x) and
+[Ozarow and Wyner (1984)](https://doi.org/10.1002/j.1538-7305.1984.tb00072.x).
+The SCC-specific depth construction and implications above follow from the
+explicit argument here, not from attributing them to those papers.
+
+**Frozen validation.** Exhaust all source states for m=3 and m=4, grouping by W.
+Check fibre sizes, conditional singleton and pair tables, every retained triad,
+all relative-order probabilities, and exact Brier fractions. Independently
+reconstruct all sources from W and pivot bits; zero-pivot reconstruction is a
+negative exact-source control that must preserve W while failing most sources.
+For m in {5,7,10}, verify the triangular row rank, nonzero distinct kernel
+columns, and reconstruction on 64 seeded sources (seed 32637). The general
+independence result is algebraic; finite numerical checks do not prove it.
+Exhaust the three-share observation law for every visibility mask and both s.
+
+Freeze source, configuration, this entry and machine records in fresh
+`spatial-joint-geometry-20260923-v1/erasure01`: one Charon CPU, 45 seconds,
+64 MiB output cap, no neural execution, optimization or training. Preserve
+exact counts, fractions, all failed controls and resource accounting. A positive
+control here requires a joint-geometry coverage argument before training is
+presented as causing broad spatial destruction; it is not another prototype
+substituted for the requested learned mechanism.
+
+**Binary-control result.** Exhaustive checks cover all 128 seven-bit and 32,768
+fifteen-bit worlds, including 861,504 conditional pair cells and 430,752 ordered
+pair tables. Every local posterior matches its public baseline exactly. Every
+retained triad relation is answered perfectly, and all sources reconstruct with
+the charged pivot bits. Zero-pivot reconstruction fails on 112/128 and
+30,720/32,768 sources while preserving W, as required. Algebraic checks and
+64-source reconstruction controls reach n=1,023: 1,013 independent bits survive,
+99.0225% of source entropy, while ten pivot bits restore everything. Runtime is
+0.15 seconds on one Charon CPU. Enumeration of all eight three-share visibility
+masks confirms exact secrecy unless all three shares are visible. The new joint
+judgment exposes W with Brier gain 1/64, despite unchanged 7/8 hard accuracy.
+
+**Why simply adding triples is insufficient.** The construction generalizes to
+any fixed number k of coordinates involved in one judgment. Over a prime field
+F_q, choose n<=q distinct public points x_i and uniform independent source symbols
+Z_i. Let P be the unique polynomial of degree below k interpolating the first k
+source values. Retain W_i=Z_i-P(x_i) for i>=k and discard the first k values.
+The retained map has rank n-k. Given W, the remaining uncertainty is a uniform
+polynomial of degree below k; its evaluations at any k distinct points are
+uniform because the Vandermonde matrix is invertible. Thus
+
+    I(W; Z_S)=0 for every coordinate set S with |S|<=k,
+    H(W)/H(Z)=(n-k)/n.
+
+Encode source symbols as separated depth levels with small distinct ray offsets.
+Any judgment depending on at most k of these depths then has exactly its public
+conditional distribution after the transformation, while n-k independent
+higher-order residual relations remain. This covers arbitrary local predicates,
+not only thresholds, ordering or conjunctions. The public field arithmetic and
+interpolation are efficient; the erased k symbols restore the original source.
+Storage/repair costs include symbol precision and the public interpolation code.
+
+This is a general information-level obstruction for bounded-coordinate judgment
+families in this matched source/query contract. It is not an impossibility theorem
+for intrinsic learned SCC or a successful attack on the RGB model. Joint outcomes
+across more than k queries, whole-scene likelihoods and actual outcome feedback
+fall outside the single-query premise. A sequence of ground-truth replies is
+additional correlated information. A neural input image can also invalidate the
+conditional independence; none is silently withheld from a claimed visual attack.
+
+**General-control validation.** Freeze a second source/configuration and this
+updated entry in `bounded_order01`, one Charon CPU, 45 seconds. Exhaust the fields
+(q,n,k)=(5,5,2),(5,5,3),(7,6,3); every joint table of W and every k-coordinate
+projection must have one source per cell. Check exact reconstruction and reject
+a rank-deficient nuisance-polynomial control. For q=1031,n=1024 and k in
+{2,3,8,16}, check interpolation denominators, 128 independently sampled projection
+ranks, and 64 seeded source reconstructions (seed 32638). These large checks are
+implementation validation; the universal statement follows from interpolation.
+No learned model, training, extra dataset or prior source modification is involved.
+
+**General-control result.** The three exhaustive fields cover 123,899 source
+states and 2,415,480 joint table cells. Every cell contains exactly one source;
+all reconstructions pass. The incorrect kernel fails 6, 7 and 16 projection
+checks respectively. Larger algebraic/sample checks at n=1,024 preserve 99.80%,
+99.71%, 99.22% and 98.44% of source entropy for k=2,3,8,16. For k=16 the retained
+payload is 11,088 fixed-width bits and repair is 176 bits; the implementation's
+public interpolation matrix occupies an additional 131,072 bytes. Public code
+and arithmetic are also required. Runtime is 0.35 seconds on one Charon CPU.
+The result concerns the stated uniform field source with q>=n; no fixed-precision
+asymptotic or natural-image prior is silently substituted.
+
+**Extension to reusable mappings.** Fresh inputs alone do not eliminate this
+escape. Let A be a uniform n-by-d field matrix and let the useful source procedure
+be x -> A*x. Apply the retained projection H columnwise, storing B=H*A. For any
+set S of at most k output coordinates, B is independent of the entire row block
+A_S, not only one evaluated output. Yet x -> B*x remains exact for every input.
+These n-k residual-output procedures are fixed before A is sampled. The missing
+k rows of A restore the original mapping. This is an efficient representation
+of reusable linear functions; its shared arithmetic is public and its matrix is
+provisioned here. It is not a trained neural cognitive core or a demonstration
+that ordinary learning ability was erased.
+
+Validate this extension separately in `procedural_extension01`, one Charon CPU,
+15 seconds, over every 3-by-2 matrix in F_3 with k=2. Exhaust the joint distribution
+of B and every pair of source rows, reconstruct every A from B plus the two
+anchor rows, and compare retained-procedure answers with H*(A*x) on all eight
+nonzero inputs, including six inputs outside the coordinate basis. Count all
+cases and matched source-independent output baselines. Freeze this source,
+configuration and updated entry first. No optimizer or training examples are used.
+
+**Reusable-map result.** All 729 source matrices pass reconstruction, all 2,187
+conditional row-block cells contain exactly one matrix, and all 5,832 retained
+procedure evaluations agree exactly. Six of the eight nonzero inputs are outside
+the coordinate basis. Retained residual-output accuracy is 1 versus a matched
+source-independent 1/3 baseline. This validates a reusable algebraic control,
+not neural generalization or a learned cognitive mechanism. Runtime is 0.003 s
+inside the script. Across this entry, finite-field payload bit counts refer to
+packed fixed-width representations; the validation itself uses NumPy integer
+arrays and reports its actual process memory separately. No packed-state
+performance or storage implementation was measured.
+
+**Decision and scope correction.** A fixed-size local judgment family cannot,
+without further source structure, certify loss of all joint scene information
+or all reusable source-dependent procedures. Adding only triples or another fixed
+size repeats the issue. The next candidate must justify coverage of its intended
+cognitive procedure through joint scene-level decisions, or prove that a declared
+scene structure rules out these retained relations. This is a requirement for a
+broad destruction claim; it does not invalidate the already proved bounded
+mean, contrast or order implications. The independent-symbol control is not
+silently treated as the natural-image distribution.
+
+Alternative implementations that recover the protected function remain compatible
+with conditional coupling. Neither a particular output head's mandatory execution
+nor impossibility of restoring both functions should be added as an unconditional
+core requirement. The missing core evidence concerns genuine functional loss and
+severe loss of the specified reusable cognitive abilities. Stronger enforcement
+and durability claims retain their separate obligations. This clarifies the
+current-position discussion of bypass/reload without withdrawing their measured
+limits on removal claims. The target and training admission remain unresolved;
+these results do not establish general impossibility or complete the goal.
+
+**Evidence preservation.** All 23 manifest-listed files (90,805 bytes) in the
+[joint-geometry audit](artifacts/scc-spatial-joint-geometry-20260923-v1/) verify on
+the SD evidence store. Manifest SHA256:
+`89cf206c320747f6923b2444ba515df234f61cc94cc42f1663c7dc4ec8737752`.
+All three Charon jobs are terminal with successful exit statuses. Their frozen
+source/configuration/entry, machine record, exact outcomes and negative controls
+are preserved. Original model weights and all preceding evidence are unchanged.
 
 ## Historical evidence
 
