@@ -1,0 +1,6 @@
+{
+  "bootstrap_seed": 31838,
+  "bootstrap_replicates": 10000,
+  "wall_seconds": 15,
+  "neural_training": false
+}

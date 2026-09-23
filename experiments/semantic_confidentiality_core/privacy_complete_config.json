@@ -1,0 +1,8 @@
+{
+  "world_count": 8,
+  "removal_tolerance": 0.01,
+  "bootstrap_seed": 31938,
+  "bootstrap_replicates": 10000,
+  "wall_seconds": 30,
+  "neural_training": false
+}

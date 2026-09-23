@@ -1,0 +1,9 @@
+{
+  "maximum_input_tokens": 256,
+  "batch_size": 8,
+  "expected_parameter_digest": "920a14730aad3d088c8c0daa0bb8adce4b2aa9c7d549643aff4015ef105634dc",
+  "bootstrap_seed": 31740,
+  "bootstrap_replicates": 10000,
+  "wall_seconds": 60,
+  "neural_training": false
+}

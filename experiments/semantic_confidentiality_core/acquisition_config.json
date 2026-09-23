@@ -1,0 +1,17 @@
+{
+  "model_id": "cross-encoder/nli-deberta-v3-small",
+  "revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+  "files": [
+    "config.json",
+    "model.safetensors",
+    "special_tokens_map.json",
+    "tokenizer_config.json",
+    "tokenizer.json",
+    "spm.model",
+    "added_tokens.json",
+    "README.md"
+  ],
+  "maximum_bytes": 700000000,
+  "wall_seconds": 60,
+  "neural_training": false
+}

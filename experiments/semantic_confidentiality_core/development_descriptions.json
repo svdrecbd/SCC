@@ -1,0 +1,690 @@
+[
+  {
+    "id": "shipment",
+    "premise": "The red crate reached the depot on Monday. The blue crate was still at the factory that evening.",
+    "atoms": {
+      "p": "The red crate had arrived at the depot by Monday evening.",
+      "q": "The blue crate was at the depot on Monday evening.",
+      "r": "The red crate contained glassware."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The red crate had arrived at the depot by Monday evening.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The blue crate had not reached the depot by Monday evening.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The blue crate was at the depot on Monday evening.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The red crate contained glassware.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The red and blue crates both reached the depot on Monday. Neither crate was left at the factory that evening."
+  },
+  {
+    "id": "lodging",
+    "premise": "At noon, Oren was still inside the inn. Mira had checked out and left the building before noon.",
+    "atoms": {
+      "p": "Oren was still inside the inn at noon.",
+      "q": "Mira was inside the inn at noon.",
+      "r": "Oren intended to stay another night."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "Oren was still inside the inn at noon.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "Mira was no longer inside the inn at noon.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Mira was inside the inn at noon.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "Oren intended to stay another night.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "At noon, Oren and Mira were both still inside the inn. Mira had decided to postpone her departure until the afternoon."
+  },
+  {
+    "id": "library",
+    "premise": "The library was closed to the public throughout Tuesday. Its employees spent Tuesday repairing books inside the building.",
+    "atoms": {
+      "p": "Library employees worked inside the building on Tuesday.",
+      "q": "The library admitted members of the public on Tuesday.",
+      "r": "The employees repaired rare manuscripts on Tuesday."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "Library employees worked inside the building on Tuesday.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "Members of the public could not visit the library on Tuesday.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The library admitted members of the public on Tuesday.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The employees repaired rare manuscripts on Tuesday.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The library was open to the public throughout Tuesday. Its employees spent Tuesday repairing books inside the building while visitors came in."
+  },
+  {
+    "id": "committee",
+    "premise": "Every committee member voted in favor of the proposal. Implementation has not begun; the necessary equipment has yet to arrive.",
+    "atoms": {
+      "p": "The committee unanimously supported the proposal.",
+      "q": "Implementation of the proposal has already started.",
+      "r": "The committee met in a room with blue walls."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The committee unanimously supported the proposal.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The proposal has not yet been implemented.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Implementation of the proposal has already started.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The committee met in a room with blue walls.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "Every committee member voted in favor of the proposal. Implementation has already begun following the arrival of the necessary equipment."
+  },
+  {
+    "id": "examination",
+    "premise": "Lina received 82 points on an examination. A score of at least 70 points was required to pass, and the highest possible score was 100.",
+    "atoms": {
+      "p": "Lina passed the examination.",
+      "q": "Lina received the highest possible examination score.",
+      "r": "Lina prepared for the examination for a month."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "Lina passed the examination.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "Lina did not receive the highest possible score.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Lina received the highest possible examination score.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "Lina prepared for the examination for a month.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "Lina received 100 points on an examination. A score of at least 70 points was required to pass, and the highest possible score was 100."
+  },
+  {
+    "id": "elevator",
+    "premise": "On its upward journey, the elevator stopped at floors two and five. It passed floor three without stopping.",
+    "atoms": {
+      "p": "The elevator stopped at the fifth floor on this journey.",
+      "q": "The elevator stopped at the third floor on this journey.",
+      "r": "The elevator carried six passengers on this journey."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The elevator stopped at the fifth floor on this journey.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The elevator did not stop at the third floor on this journey.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The elevator stopped at the third floor on this journey.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The elevator carried six passengers on this journey.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "On its upward journey, the elevator stopped at floors two, three and five. It opened its doors at each of those floors."
+  },
+  {
+    "id": "railway",
+    "premise": "The train reached the station at twelve fifteen. It did not leave again until twelve forty.",
+    "atoms": {
+      "p": "The train was at the station at twelve thirty.",
+      "q": "The train departed between twelve fifteen and twelve thirty.",
+      "r": "The train arrived later than scheduled."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The train was at the station at twelve thirty.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The train did not depart between twelve fifteen and twelve thirty.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The train departed between twelve fifteen and twelve thirty.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The train arrived later than scheduled.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The train reached the station at twelve fifteen and departed at twelve twenty. It returned at twelve twenty-five and was still at the station at twelve thirty."
+  },
+  {
+    "id": "seminar",
+    "premise": "The organizer arrived at the lecture hall, but the seminar was canceled before any presentation began.",
+    "atoms": {
+      "p": "The organizer went to the lecture hall.",
+      "q": "A presentation took place at the seminar.",
+      "r": "The cancellation was caused by bad weather."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The organizer went to the lecture hall.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "No presentation took place at the canceled seminar.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "A presentation took place at the seminar.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The cancellation was caused by bad weather.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The organizer arrived at the lecture hall, and a presentation took place before the rest of the seminar was canceled."
+  },
+  {
+    "id": "envelope",
+    "premise": "The courier delivered the envelope to the office. It remained sealed until the office closed, and nobody opened it that day.",
+    "atoms": {
+      "p": "The envelope reached the office.",
+      "q": "Somebody opened the envelope that day.",
+      "r": "The envelope contained a contract."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The envelope reached the office.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The envelope was not opened that day.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Somebody opened the envelope that day.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The envelope contained a contract.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The courier delivered the envelope to the office. A clerk opened it that afternoon, before the office closed."
+  },
+  {
+    "id": "orchard",
+    "premise": "The apples in the eastern orchard were ready to pick. Every pear in that orchard was still unripe.",
+    "atoms": {
+      "p": "The apples in the eastern orchard were ripe.",
+      "q": "Some pears in the eastern orchard were ripe.",
+      "r": "The orchard owner intended to sell the apples."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The apples in the eastern orchard were ripe.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "None of the pears in the eastern orchard were ripe.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Some pears in the eastern orchard were ripe.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The orchard owner intended to sell the apples.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The apples in the eastern orchard were ready to pick. Some of the pears in that orchard were ripe as well."
+  },
+  {
+    "id": "license",
+    "premise": "All licensed technicians at the facility may enter the laboratory. Nora is a licensed technician at the facility. She has no authorization to enter the archive.",
+    "atoms": {
+      "p": "Nora has permission to enter the laboratory.",
+      "q": "Nora is authorized to enter the archive.",
+      "r": "Nora entered the laboratory yesterday."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "Nora has permission to enter the laboratory.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "Nora is not authorized to enter the archive.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "Nora is authorized to enter the archive.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "Nora entered the laboratory yesterday.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "All licensed technicians at the facility may enter the laboratory. Nora is a licensed technician at the facility. She also has authorization to enter the archive."
+  },
+  {
+    "id": "frame",
+    "premise": "The portrait was removed from the frame this morning. The frame now hangs empty on the wall.",
+    "atoms": {
+      "p": "The frame is on the wall.",
+      "q": "The portrait is currently inside the frame.",
+      "r": "The frame was made of oak."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The frame is on the wall.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The portrait is no longer inside the frame.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The portrait is currently inside the frame.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The frame was made of oak.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The frame hangs on the wall with the portrait inside it. The portrait has not been removed from the frame."
+  },
+  {
+    "id": "restaurant",
+    "premise": "On Tuesday the restaurant served only vegetarian dishes. Its menu for that day contained neither meat nor fish.",
+    "atoms": {
+      "p": "The restaurant served vegetarian dishes on Tuesday.",
+      "q": "The restaurant served fish on Tuesday.",
+      "r": "The restaurant was fully booked on Tuesday."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The restaurant served vegetarian dishes on Tuesday.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The restaurant did not serve fish on Tuesday.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The restaurant served fish on Tuesday.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The restaurant was fully booked on Tuesday.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "On Tuesday the restaurant served vegetarian dishes and fish. All of the vegetarian dishes contained no meat or fish."
+  },
+  {
+    "id": "electricity",
+    "premise": "The main electricity supply failed. The emergency battery kept the corridor lights on while the main supply remained off.",
+    "atoms": {
+      "p": "The corridor lights were powered by the emergency battery during the described interval.",
+      "q": "The main supply was providing electricity during that interval.",
+      "r": "The emergency battery had been replaced the previous week."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The corridor lights were powered by the emergency battery during the described interval.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The main supply was not providing electricity during that interval.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The main supply was providing electricity during that interval.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The emergency battery had been replaced the previous week.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The emergency battery powered the corridor lights during the interval. The main electricity supply was also providing electricity, but the corridor lights were disconnected from it."
+  },
+  {
+    "id": "permission",
+    "premise": "The account was allowed to read the report. The request to modify the report was refused, and the account had no write permission.",
+    "atoms": {
+      "p": "The account could read the report.",
+      "q": "The account had permission to change the report.",
+      "r": "The report contained information about sales."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The account could read the report.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The account lacked permission to change the report.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The account had permission to change the report.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The report contained information about sales.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "The account was allowed to read the report. It was also granted write permission and was allowed to modify the report."
+  },
+  {
+    "id": "parcel",
+    "premise": "A label on the parcel said \"handle with care\". The inspector left the parcel unopened and recorded that its contents had not been examined.",
+    "atoms": {
+      "p": "The parcel carried a handling instruction.",
+      "q": "The inspector examined the contents of the parcel.",
+      "r": "The contents of the parcel were made of porcelain."
+    },
+    "premise_expression": [
+      "and",
+      "p",
+      [
+        "not",
+        "q"
+      ]
+    ],
+    "hypotheses": [
+      {
+        "text": "The parcel carried a handling instruction.",
+        "expression": "p",
+        "label": "entailment"
+      },
+      {
+        "text": "The inspector did not examine the contents of the parcel.",
+        "expression": [
+          "not",
+          "q"
+        ],
+        "label": "entailment"
+      },
+      {
+        "text": "The inspector examined the contents of the parcel.",
+        "expression": "q",
+        "label": "contradiction"
+      },
+      {
+        "text": "The contents of the parcel were made of porcelain.",
+        "expression": "r",
+        "label": "neutral"
+      }
+    ],
+    "counterfactual_premise": "A label on the parcel said \"handle with care\". The inspector opened the parcel and examined its contents before recording the inspection."
+  }
+]

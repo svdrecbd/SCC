@@ -1,0 +1,6 @@
+{
+  "expected_evaluation_cases": 96,
+  "wall_seconds": 15,
+  "uses_public_evaluation_annotations": true,
+  "neural_training": false
+}

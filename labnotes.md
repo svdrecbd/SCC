@@ -9,29 +9,41 @@ phase below for its dated plans, results, failures and corrections.
 The negative results do not establish general impossibility.** The
 [mechanism target](MECHANISM_TARGET.md) is unchanged.
 
-**Reading result and semantic correction — [LN-313–315](#ln-313).** The unchanged
-60.5M-parameter model has a replicated 71.875% RACE answer-selection score versus
-37.5% for the strongest frozen inexpensive control; passage omission reduces it
-to 40.625%. The answer-comparison identity is exact for benchmark correctness.
-Some rejected benchmark answers are nevertheless supported but incomplete, so
-its recovered 81.25% score must not be identified with factual-support assessment.
-The paired answer-removal diagnostic does not repair that semantic mismatch.
+**Shared semantic operation — [LN-317–319](#ln-317).** Three explicit disclosure
+plans connect entailment, contradiction and uncertainty to the same fixed
+confidentiality norm. For the specified plan distribution, any surviving
+three-way reader supplies a judgment reader with accuracy
+`1/4 + (3/4) * useful_accuracy`, including alternative encodings and repairs
+whose complete costs fit the reader budget. This is an exact conditional recovery
+relation for the declared semantics, not a demonstrated destructive response.
+The learned two-query reader scores 83.3333% against the held-out development
+annotations; its constructed judgment score is 87.5%. Stronger public textual
+readers reach 66.6667% and 75%; the conservative advantage interval includes zero.
 
-**Direct answerability screen — [LN-316](#ln-316).** On 32 independently annotated
-SQuAD 2.0 paragraph pairs, free-response answerable accuracy is 71.875%, but
-unanswerable recognition is 43.75%. Overall exact-match accuracy is 57.8125%,
-versus 50% for always abstaining, with a paired advantage interval crossing zero.
-Calibrated null-likelihood readers reach 56.25% on the held-out half, matched by
-simple public controls. This checkpoint fails the frozen broader qualification.
-The data are released development examples, not fresh unseen evidence. No genuine
-function removal, internal dependency or catastrophic cognitive loss is established.
+**Qualification boundary — [LN-320](#ln-320).** An all-source table of 160 public
+input/label pairs occupies 29,312 bytes and answers all 96 reconstruction cases
+exactly. This retains both functions and defeats a sub-perfect removal cap on
+this published finite support when the table fits the budget. It says nothing
+about fresh-query generalization. Two calibration-group English pairs also fail
+exact complement identification (arrival versus current location; starting versus
+completion). Historical predictions remain unchanged; formal denotations do not
+by themselves certify their English interpretation. This implementation is not
+admitted for training as a destructive mechanism.
 
-**Next construction requirement.** Connect retained useful reasoning to an
-independently specified support judgment with an efficient recovery procedure that
-does not need a supplied correct option or an additional semantic oracle. Ordinary
-answer ranking and training an abstention output do not establish that dependency.
-The current reading checkpoint is not admitted for SCC training; the general
-mechanism objective remains open.
+**Next construction requirement.** The candidate remains a reusable semantic
+reasoning core from which a fixed confidentiality judgment is efficiently
+recoverable. It needs a fresh-query workload with justified semantics, useful
+coverage beyond one classification task, and a measured resource advantage over
+admitted public replacements. Quantified semantic error can be included in the
+recovery bound; perfect English formalization is not required. A larger set of
+published templates or an added output head does not establish those properties.
+No genuine all-reader removal or catastrophic cognition loss has been shown.
+
+**Earlier reading screens — [LN-313–316](#ln-313).** RACE answer selection
+showed a learned advantage, but its designated-answer labels were not equivalent
+to factual support. The direct SQuAD 2.0 answerability screen failed its frozen
+qualification gates. Preserve those results and corrections; neither qualifies
+a training mechanism or establishes general impossibility.
 
 **Forecasting boundary — [LN-309–312](#ln-309).** The fresh causal predictor retains
 a 14.52% MSE advantage, while a public procedure preserves 87.25% of useful gain.
@@ -23266,6 +23278,483 @@ Remote originals remain at
 `/home/salvador/scc-research/grounded-answerability-assessment-20260923-v1/`.
 No process remains running. No neural training or model edit was performed; the
 active mechanism goal is unresolved, with a narrowed and corrected reading lead.
+
+<a id="ln-317"></a>
+### LN-317 — 2026-09-23 UTC: semantic consequence and a fixed confidentiality rule
+
+**Previous work classification: progress.** LN-315–316 produced new completed
+evidence, corrected a semantic error, and rejected the broader reading checkpoint
+qualification. There is no running job or external blocker. The active goal is
+unchanged; neither a general impossibility result nor a training-ready destructive
+mechanism has been established.
+
+**Construction under examination.** Replace the best-answer/abstention interface
+with a shared semantic consequence procedure. The ordinary cognitive operation
+judges which conclusions follow from a new description. The protected operation
+assesses a conditional disclosure plan under a fixed public confidentiality rule:
+a designated private bit must not influence public output. This is the semantic
+version of LN-282's relational reasoning candidate; it is not a newly discovered
+reduction, a policy bit encoded into every gate, or enforcement by a trusted module.
+
+For a nonempty set of worlds satisfying premises Gamma and a proposition h, let
+
+    P_h(secret, world) = 0 if h(world), otherwise secret.
+
+The action is confidential on all Gamma-worlds exactly when Gamma entails h.
+A surviving semantic consequence procedure supplies the judgment by one call on
+(Gamma,h). The outer plan syntax and fixed policy require only public parsing;
+they do not supply the truth of h or a second semantic oracle. On the same premise/
+hypothesis distribution, useful consequence accuracy and recovered confidentiality
+accuracy are identical for any deterministic or randomized successor. Unknown
+hypotheses have a possible violating world and must not be labeled safe; a
+contradictory premise set needs explicit handling because universal claims become
+vacuous. The planned corpus uses only consistent premises. Classical finite-world
+semantics, its correspondence to each natural-language sentence, and any future
+compiler's fidelity are explicit assumptions, not things a neural score proves.
+
+This identifies a dependency if the useful procedure exists. It does not create
+one merely by attaching the plan interface, does not make a model obey its
+judgment, and does not imply every remaining cognitive ability disappears. The
+candidate's intended training core would learn semantic interpretation/inference
+itself, shared by ordinary reasoning and confidentiality assessment. A separate
+refusal or confidence head cannot supply this construction. Training admission
+still requires useful procedural competence with an adequate computational margin
+and a specified severe-loss scope; the present check establishes neither in advance.
+
+**Finite structural and computational check.** Prepare a new authored corpus of
+consistent small descriptions with independent Boolean denotations, before any
+prediction. Each group contains two entailed, one contradicted and one unresolved
+hypothesis; binary entailment is balanced. Record the explicit mapping from English
+to atoms/expressions, enumerate compatible worlds and check the confidentiality
+property by paired execution of the private bit. Preserve the mapping as evaluator
+annotations, never as model inputs. The denotation is an explicit author-assigned
+interpretation whose adequacy can be inspected, not a formal proof of unrestricted
+English semantics. Template-aware parsing and public symbolic solvers are mandatory
+controls wherever those can recover it cheaply. Literal lookup of this finite
+corpus is also possible once labels are published: this is development, not an
+average-case hardness witness or a measured all-reader bound.
+
+Use the published `cross-encoder/nli-deberta-v3-small` only as an existing-core
+screen, pinned revision `fa2804872c3b4bd748f38c0185cc85775361e735`. Its model card
+specifies contradiction/entailment/neutral in that order and SNLI/MultiNLI training.
+[Model source](https://huggingface.co/cross-encoder/nli-deberta-v3-small).
+Unlike LN-313's best-answer proxy, the target labels directly distinguish semantic
+consequence, contradiction and unresolved propositions. This choice is not evidence
+that the pretrained model implements confidentiality or indispensable cognition.
+The core remains fully editable, with no private verifier or protected executor.
+
+Acquire only safetensors and tokenizer/configuration/reference files, maximum
+700 MB, 60 seconds, with URL/size/SHA256 receipts. No remote model code or package
+installation. Inference: one Charon CPU, FP32, 60 seconds, all inputs <=256 tokens,
+no truncation, finite tensors/logits and unchanged complete state digest. Freeze
+this entry, source, authored data, configuration and machine record. No neural
+training, parameter-removal claim, adaptive sample enlargement or sample exclusion
+based on scores. Distinguish semantic parsing success, exact logical controls,
+interface recovery, public replacement and the ultimate SCC objective.
+
+**Frozen corpus and controls.** Sixteen authored descriptions, four hypotheses
+each (64 total), with 32 entailments, 16 contradictions and 16 unresolved claims.
+The small declarative-world annotation uses p AND NOT q, testing p, NOT q, q and
+an unspecified r. English predicates are independently documented in each group;
+this annotation pattern is not supplied to the predictor. The corpus deliberately
+includes supported partial statements rather than treating completeness as truth.
+It tests simple semantic interpretation, not multi-step proof search or full
+cognition. The identical annotation pattern also gives an explicit reference-
+representation control: once correctly interpreted, public Boolean reasoning
+solves every judgment. Any learned advantage must concern interpretation, not the
+Boolean calculation. An operational reader receives only the two English strings.
+
+Compare the fixed neural entailment decision against constants, exact sentence
+inclusion, lexical containment, and both orientations of word-overlap and hypothesis
+length. Calibrate the latter scalar thresholds on the first eight descriptions,
+freeze them, and evaluate on the last eight; report all controls. The frozen useful
+screen requires >=80% entailment accuracy and >=15-point advantage over the strongest
+public control, with positive conservative group-bootstrap lower bound. A pass is
+only a necessary development screen. Published labels, small authored descriptions,
+limited controls and missing broad procedural coverage preclude an all-reader
+upper bound or training admission by themselves. No additional examples after scores.
+
+**Pre-inference strengthening: counterbalanced evidence.** Before any prediction,
+add a manually specified counterfactual description for each group that changes q
+from false to true while keeping p true and r unspecified. Evaluate the identical
+four hypotheses against both descriptions: 128 cases in 16 groups. Review and
+adjust three stable predicates so their truth is retained under the change (a
+train can depart and return; the frame remains on the wall; vegetarian dishes
+can coexist with fish). Replace the lodging time reference with explicit noon.
+The 64 q/NOT-q cases form the primary contrast-sensitive slice: each identical
+hypothesis is entailed under one premise and contradicted under the other. Any
+hypothesis-only deterministic classifier is exactly 50% there. Stable p/r cases
+are separate controls; do not let them substitute for context-sensitive success.
+
+Apply the >=80% accuracy, >=15-point public margin and positive group-bootstrap
+lower-bound conditions to the held-out contrast slice (last eight groups), as
+well as reporting full and first-half results. Additional public controls are
+hypothesis negation, negation agreement between premise and hypothesis, and lexical
+containment conditioned on that agreement. Public score thresholds/orientations
+are fixed on the first eight groups. The reference Boolean solver receives the
+correct denotation as an explicitly privileged representation control; its 100%
+accuracy cannot be attributed to a no-model language interpreter. A future cheap
+interpreter that constructs that denotation would be a valid replacement and
+must be tested, not disallowed. This experiment is still a necessary development
+check, not a training-ready mechanism or proof of protected-function removal.
+
+**Preserved compatibility failure.** `evaluation01` validates the finite logic
+and freezes the input corpus, then strict loading rejects the released
+`deberta.embeddings.position_ids` buffer before any prediction. The installed
+implementation initializes the same arange buffer with `persistent=False`, so
+it is omitted from the expected state dictionary. In fresh `evaluation02`, require
+exact equality with the checkpoint buffer, register it persistently, and load all
+keys strictly. Preserve the tensor in the complete state digest. No parameter is
+ignored, replaced, retrained or reinitialized after loading. Freeze the installed
+modeling source with the corrected run. The same corpus, thresholds and 60-second
+cap remain unchanged; this addresses the identified serialization mismatch, not
+all historical-runtime differences.
+
+**Completed first core screen.** The corrected run strictly loads all released
+state, retains 141,897,219 parameters, and completes 128 cases in 21.96 seconds
+including imports. Complete state digest is
+`920a14730aad3d088c8c0daa0bb8adce4b2aa9c7d549643aff4015ef105634dc` before and after.
+The 65,280 finite nonempty-premise/predicate combinations satisfy the independent
+entailment and paired-execution calculations. Neural binary accuracy is 87.5%
+overall and 92.1875% on the contrast cases. The first-half contrast score is
+84.375%; the held-out half is 32/32 (100%). The strongest frozen public rule,
+global negation agreement, gets 26/32 (81.25%). The conservative group-bootstrap
+advantage interval is [6.25,37.5] points, so the initial development screen passes.
+The confidentiality reader inherits the binary score exactly; it is a semantic
+recovery interface, not a second independently evaluated classifier.
+
+**Stronger public reader, fixed before its execution.** Global negation ignores
+which clause contains a proposition. Add public readers that split premises into
+sentences/clauses, normalize common inflectional suffixes, choose the clause with
+maximum lexical similarity to the hypothesis, and compare local negation presence
+or parity. Use overlap, Jaccard and ordered-subsequence similarity as separate
+selectors, with fixed variants and scalar thresholds fitted only on the original
+first eight descriptions. Preserve all predictions on the original last eight;
+no neural changes or new samples. These are inexpensive interpretation attempts
+within the admitted resources, not forbidden alternative decoders. This diagnostic
+is selected after observing the first screen and must be reported as such.
+
+Freeze a fresh `public_recovery01` with this entry, source/configuration, original
+selection and neural predictions; one Charon CPU, 15 seconds. Report direct and
+calibrated public scores, conservative resampled margin, execution cost and the
+severity implication. For a hypothetical public-relative cap b+.01 and intact
+accuracy 1, this identity can imply at most 2*(1-b-.01) loss of advantage over a
+.5 reference. The already observed b=.8125 gives only 35.5%; an absolute 51%
+all-reader cap is infeasible on this task when this public procedure is admitted.
+A preserving public procedure retains the protected judgment too, so it is not a
+counterexample involving genuine removal. It does expose why a classifier's
+incremental advantage must not be equated with all cognition or an established
+catastrophic-loss mechanism. No training is admitted from this first screen.
+
+**Public-reader result and aggregation correction.** The stronger control
+finishes in 0.17 seconds. Its best calibration-selected reader reaches 27/32
+(84.375%), while two predeclared direct zero-threshold readers reach 28/32
+(87.5%). The first summary includes the direct scores but mistakenly omits those
+readers from the strongest-public comparison and bootstrap matrix. Preserve it;
+recompute in `public_recovery02`, including both direct and calibrated variants
+in every comparison. No thresholds, inputs, model outputs or predictions are
+retuned. This corrects an understated public baseline and must not be presented
+as a new independent replication.
+
+**Corrected public comparison.** Including every predeclared direct reader raises
+the best public score to 87.5%. The conservative advantage interval becomes
+[0,25] points; the >=15-point margin and strictly positive lower-bound gates no
+longer pass. A hypothetical public-relative .01 cap would permit 88.5% useful
+accuracy, implying only 23% loss of above-chance advantage from this intact score.
+This is not catastrophic loss and is not an established cap. The semantic/privacy
+identity remains correct; the small authored workload does not yet qualify its
+learned component as indispensable at the target severity.
+
+**Same-hypothesis unknown-world control, before execution.** The original stable
+unknown statements are unrelated to their descriptions. They could be recognized
+by missing vocabulary. Retain the same two q/NOT-q hypotheses and replace each
+premise with only its independently specified p statement, leaving q genuinely
+unspecified. This gives 32 new unknown cases. Pair each with its already-scored
+entailed instance to form 32 supported/unknown pairs (64 instances), identical
+hypothesis strings within each pair. Use the original eight/eight description
+partition and all frozen direct/calibrated public readers; no fitting to the new
+labels. Report both binary support and three-way classification, and group-bootstrap
+the held-out comparison against every existing public reader. Do not omit or
+regenerate cases after seeing scores. Each p statement was checked to allow both
+q values in the declared interpretation; no designated answer is deleted.
+
+Run `partial_information01`, one Charon CPU, 60 seconds, same checkpoint, tokenizer,
+strict loading and state digest. Freeze original descriptions, original predictions,
+all reader thresholds, source, configuration and this entry. This alters supplied
+evidence, not model weights, and therefore tests handling of incomplete information,
+not protected-function removal. No training, new model or claim of irreversibility.
+
+**Incomplete-information result.** The 32 new cases complete with the same
+state digest in 15.33 seconds including imports. Binary rejection of unsupported
+claims is 28/32 (87.5%), but native three-way recognition of uncertainty is only
+14/32 (43.75%): many unknown claims are instead labeled contradictions. The
+supported/unknown paired score is 87.5%, including the held-out half, versus 81.25%
+for the strongest frozen public reader. The conservative advantage interval is
+[0,18.75] points. This extends the support test beyond designated-answer removal,
+but does not establish an advantage at the existing margin/confidence gates.
+A correct conservative privacy decision is not proof that the model distinguishes
+false from unknown. That distinction now needs an explicit useful-reader test.
+
+<a id="ln-318"></a>
+### LN-318 — 2026-09-23 UTC: reconstruct three-way inference from the shared support operation
+
+**Construction and prior evidence.** The semantic engine distinguishes support
+better than its native three-way labels distinguish falsity from uncertainty.
+For consistent premises Gamma, query the same binary support operation on h and
+NOT h. Decode (1,0) as entailment, (0,1) as contradiction, (0,0) as unresolved and
+(1,1) as an inconsistent prediction, which receives no correct credit. This is
+standard classical consequence logic, not a new theorem. It supplies a concrete
+reusable cognitive procedure from the same operation that implements the fixed
+confidentiality judgment, without a second learned verifier or supplied answer.
+Each reconstructed judgment costs two model evaluations plus a four-entry decoder;
+using cached research outputs does not make those operational calls free.
+
+**Frozen reconstruction check.** Use only the already completed q/NOT-q output
+pairs from LN-317: two fully specified descriptions and one partial description
+per group, 16 groups, two hypothesis orientations per description (96 judgments).
+No new model inference, examples, thresholds, training or native-label filtering.
+Compare the native three-way prediction with the two-query reconstruction on all
+96 and on the original last-eight-group holdout. Report every inconsistent pair
+and uncertainty recall separately; duplicated orientations share a context and
+must not be counted as independent bootstrap units. Resample entire description
+groups (10,000 replicates, seed 31838).
+
+Apply the identical reconstruction to every frozen public binary reader, including
+direct and calibration-selected variants. Include an always-unresolved three-way
+baseline. Record all their held-out scores and the conservative learned-minus-best-
+public interval, selecting the best reader inside each resample. A successful
+alternative decoder would demonstrate retained/recoverable procedure, not removal
+or a new internal dependency caused by training. A strong public reconstruction
+would limit the claimed severity just as in LN-317.
+
+At the theoretical level, a surviving three-way reader provides a protected
+binary reader by returning safe only for its entailment answer. Its binary
+accuracy is at least its three-way accuracy on the same oriented query law; a
+three-way error can preserve binary correctness when it exchanges false/unknown.
+Do not equate these scores or omit their different class priors/baselines. Scope
+is still semantic inference on the declared descriptions, not all cognition,
+behavioral obedience or durable loss. Freeze source, configuration, original
+outputs and entries in `reconstruction01`, one Charon CPU, 15 seconds.
+
+**Reconstruction result.** On all 96 oriented judgments, native three-way accuracy
+is 76.0417% and the two-query reconstruction reaches 81.25%. Uncertainty recall
+increases from 43.75% to 75%. On the original held-out half, accuracy changes from
+79.1667% to 83.3333%, and uncertainty recall from 37.5% to 50%. There is one
+inconsistent context (the original railway description), affecting two orientations.
+The paired improvement interval is [-4.1667,12.5] points, so the point improvement
+is not a demonstrated general gain. The strongest frozen public reconstruction
+gets 58.3333%; the conservative margin interval is [0,33.3333] points. The broader
+inference procedure is executable, but its small-sample advantage remains uncertain.
+
+<a id="ln-319"></a>
+### LN-319 — 2026-09-23 UTC: confidentiality plans that cover all three semantic states
+
+**Mechanism refinement.** Protecting only positive support leaves a coarse binary
+criterion that can count confusing false and unknown as correct. The fixed
+confidentiality rule can also cover the uncertainty distinction, without assigning
+arbitrary safety labels to benchmark answers. Let W be the nonempty set of worlds
+compatible with Gamma and let h be a Boolean proposition. Public world inputs are
+restricted to W; the private input is a bit s. Consider three concrete plan forms:
+
+    T(s,w)     = s AND NOT h(w)
+    F(s,w)     = s AND h(w)
+    U(s,w,w')  = s AND (h(w) XOR h(w'))
+
+All three use the same public norm: varying s must not vary the public output for
+any fixed admitted public inputs. T is confidential iff Gamma entails h. F is
+confidential iff Gamma entails NOT h. U violates confidentiality iff Gamma leaves
+h unresolved: two compatible worlds can disagree about h. The last property uses
+two public hypothetical world inputs; that expansion of the action domain is
+explicit. It supplies an executable uncertainty-sensitive plan, not a label called
+“unsafe” by convention. For empty W both T and F are vacuously confidential, so
+consistent premises remain essential. These small programs do not contain a
+secret policy, a trusted execution check or the correct semantic label.
+
+For natural-language inputs, the correspondence to W and h must still be justified.
+The prototype supplies explicit inspectable denotations for its authored descriptions.
+A formal proof about these denotations does not establish unrestricted English
+interpretation or permit an uncharged semantic oracle in an eventual implementation.
+The reduction strips the known outer plan form and calls the surviving semantic
+reader on the same original description and hypothesis; it does not translate an
+arbitrary new program for free. Whole-program behavioral enforcement is not claimed.
+
+**Approximate transfer with a fixed normative target.** Let Y be the true semantic
+state (entailed, contradicted, unresolved). For evaluation choose the plan family
+c=Y with probability 1/2 and each other family with probability 1/4. An arbitrary
+surviving three-way reader predicts Yhat. Return confidential for T/F exactly when
+Yhat matches their family, and for U exactly when Yhat is not unresolved. Comparing
+to the actual confidentiality label gives, pointwise in each reader outcome,
+
+    accuracy_J = 1/4 + (3/4)*accuracy_U.
+
+Correct Yhat makes all three plan judgments correct; an incorrect Yhat disagrees
+on the true family (weight 1/2) and predicted family (weight 1/4). Gold states
+select the evaluation query distribution, never the model's input or prediction.
+With balanced semantic states, actual confidentiality is balanced within each
+public plan family; no family-only reader beats chance. The plan family is an
+input, not a supplied correct answer. This is LN-313's multiclass identity now
+realized by explicit confidentiality semantics including uncertainty, rather than
+identifying a multiple-choice answer label with truthfulness.
+
+Thus a genuine all-reader cap 1/2+eta implies three-way accuracy <=1/3+4*eta/3,
+provided the complete useful-reader and normalization costs fit the protected-reader
+budget. This applies to alternative encodings, decoders and admitted repair. The
+same qualification about public baselines remains: if an inexpensive reader already
+exceeds that cap, the removal premise is infeasible. Replacing it with a public-
+relative cap bounds an incremental advantage; it does not establish destruction of
+all cognition. The new plan forms do not create an internal dependency by themselves;
+the shared semantic procedure must actually exist and serve both roles.
+
+**Frozen validation and operational accounting.** Enumerate all 255 nonempty
+subsets of eight worlds and all 256 Boolean predicates, comparing each plan's
+paired private-bit executions against independent set inclusion/disjointness and
+variation calculations. Validate the transfer identity with exact rational
+arithmetic for all nine true/predicted state pairs and verify family-only chance
+under a uniform semantic-state law. Score every cached LN-318 native, reconstructed
+and public three-way reader on these normative plans with exact weights, not
+sampled class balance. Replace an inconsistent output by unresolved using a fixed
+public adapter, recording any resulting useful-score changes; without that adapter
+an out-of-alphabet output would not satisfy the stated equality. No threshold fitting,
+new model calls or change to prior results. Charge two model calls for reconstructed
+readers, one for the native reader, and all preprocessing/postprocessing.
+
+Freeze source/configuration, this entry and prior predictions in `privacy_complete01`,
+one Charon CPU, 30 seconds. Report direct public family controls and the strongest
+retained public semantic reader. No all-reader upper bound, severe cognitive-loss
+claim, removal experiment, training permission or goal completion follows solely
+from this finite validation. The work tests an explicit shared-core construction
+against the original need for a genuine alignment-related judgment; it does not
+replace the ultimate destructive cognition target with semantic classification.
+
+**Completed validation.** All 195,840 plan identities and 3,407,872 private-bit
+executions agree with the independent set calculations. The nine exact transfer
+identities and the within-family balance checks pass. This is a finite Boolean
+validation, not 3.4 million model evaluations or a proof of English interpretation.
+The computation takes 0.70 seconds on one Charon CPU; no new neural inference.
+
+On the held-out development groups, native three-way accuracy is 79.1667%, giving
+84.375% recovered confidentiality accuracy. The two-query reader reaches 83.3333%
+and 87.5%, respectively. The fixed inconsistent-to-unresolved adapter changes two
+learned outputs without gaining a correct answer. Applied equally to the public
+readers, it raises the strongest public result to 66.6667% useful and 75% protected
+accuracy. That reader changes 14 inconsistent outputs and gains ten correct answers
+across all 96 instances. The conservative protected-advantage interval is
+[0,21.875] percentage points. The earlier 58.3333% public three-way result cannot
+be used after this stronger permitted adapter is included.
+
+A hypothetical protected cap of .76 would imply useful accuracy at most .68.
+Neither number is an established bound: 75% is a tested-reader lower bound,
+not an upper bound on public computation. Likewise the 51%-to-34.6667% statement
+is conditional on a removal premise already defeated by these public readers
+on this workload. No training admission follows.
+
+**Preservation.** All 92 manifest-listed files, 581,862,187 bytes, verify by size
+and SHA256 in the SD evidence store, including the pinned checkpoint, failed
+strict-load attempt, compatibility restoration, corrected public-reader summary,
+and all completed runs. [Final validation](artifacts/scc-semantic-confidentiality-core-20260923-v1/privacy_complete01/summary.json),
+[reconstruction](artifacts/scc-semantic-confidentiality-core-20260923-v1/reconstruction01/summary.json),
+and [preservation receipt](artifacts/scc-semantic-confidentiality-core-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `a2de7686733c5879afe42a210f7cffadd94c83d9e316672bcd6735771fee6e83`.
+Remote originals remain under
+`/home/salvador/scc-research/semantic-confidentiality-core-20260923-v1/`.
+
+<a id="ln-320"></a>
+### LN-320 — 2026-09-23 UTC: audit the semantic interface and published finite workload
+
+**Question.** The three-plan theorem concerns exact predicates. Its application
+to English depends on whether the supplied positive/negative hypotheses actually
+denote complements. Review that interface before admitting a training mechanism.
+Two definite mismatches occur in the existing development source:
+
+- Shipment: being at the depot on Monday evening is not the complement of never
+  having reached the depot by Monday evening. A crate can visit the depot and
+  return to the factory. Both supplied hypotheses are then false. The
+  counterfactual passage also does not explicitly say the crates remain at the
+  depot in the evening.
+- Committee: implementation having started is compatible with the proposal not
+  yet being implemented, under the ordinary completion reading of the latter.
+  Both hypotheses can then be true. The formal assignment of the second phrase
+  to NOT q silently removes that reading.
+
+These are countermodels to unconditional complement identification, not estimates
+of how an annotator would resolve every passage. The original author-assigned
+Boolean convention remains a valid formal fixture; it does not certify the
+English correspondence. Keep all original cases, labels and predictions unchanged.
+The observed neural scores are agreement with those annotations. The reduction
+remains exact for its defined predicates; the 87.5% number is not independently
+validated real-language confidentiality accuracy. No score-selected exclusions
+or rewritten test cases will be substituted into the historical results.
+
+**Published finite workload.** Once the descriptions and annotations are public,
+a reader can store the exact (premise, hypothesis) to declared-label table. Include
+the p-only partial descriptions already used in LN-317. This preserves all 96
+semantic answers and therefore all three plan judgments on this fixed support.
+It requires neither a checkpoint nor a learned interpreter. It is a valid
+all-source control when its preparation and retained table fit the attack budget;
+it is not a genuine-removal example because it retains both functions. The
+75% textual-control score is consequently not the optimum public baseline.
+Fresh-query generalization and fixed published-support performance are distinct.
+Keeping evaluation labels held out can support measurement; it must not be
+recast as a trusted resource that enforces alignment in the deployed model.
+
+**Frozen audit.** Build the exact table using all original selection records and
+the completed partial-information records, before scoring the 96 reconstruction
+cases. Key it by the complete input strings, never by case ID or gold label at
+query time. Check conflicts and charge the serialized table size and preparation
+time. Evaluate the same held-out group partition without fitting thresholds;
+the reader deliberately uses published annotations from both partitions and
+must be identified as an all-source control, not a leakage-free prediction test.
+Independently enumerate elementary temporal states to exhibit both complement
+countermodels. Record raw witnesses, input hashes, code size, table size,
+preparation/evaluation time and exact protected-transfer scores. One Charon CPU,
+15-second cap, standard library, no model calls or training. Freeze this entry,
+configuration, source and copied evidence in a fresh separate artifact root,
+`scc-semantic-interface-audit-20260923-v1`; preserve LN-319's manifest unchanged.
+
+**Completed audit and scope.** The public table has 160 entries and occupies
+29,312 bytes. Preparation takes 0.0010 seconds and evaluation 0.0018 seconds;
+the complete standard-library process takes 0.04 seconds on Charon. It achieves
+96/96 declared semantic answers and 100% constructed confidentiality accuracy,
+including all 48 held-out cases. Both temporal countermodels are found. The
+lookup uses published evaluation annotations by design, so its score is not
+fresh-query predictive performance. It demonstrates the resource cost of the
+finite-support replacement, not destruction of a protected function or an
+impossibility result for learned semantic reasoning.
+
+Both identified wording problems are in the first eight calibration groups.
+Their discovery does not change the reported held-out counts, and no numerical
+penalty has been silently applied to that split. It does prevent treating the
+whole authored English-to-logic assignment as a certified semantic interface.
+Other English readings have not been exhaustively excluded.
+
+**Allow quantified semantic uncertainty rather than demanding perfect language
+formalization.** Suppose an independent assessment bounds by delta the probability
+that an actual confidentiality label differs from the assigned label, under the
+same protected query law. For a reader with assigned useful accuracy u, the
+actual recovered judgment accuracy is at least `1/4 + 3u/4 - delta`: only the
+mismatched labels can change correctness. Thus an actual all-reader cap
+`1/2 + eta` would imply `u <= 1/3 + 4(eta + delta)/3`. This is an elementary
+error-transfer bound, not a new SCC theorem. No such delta has been certified
+for the present corpus. The bound concerns the stated assigned useful endpoint;
+changing that endpoint's labels needs its own error accounting. It avoids making
+perfect formalization a prerequisite for every empirical test while retaining
+the cost of uncertain semantics.
+
+**Decision.** Keep the semantic core as a conditional construction, and retire
+this fixed authored corpus as evidence for a nontrivial all-source removal cap.
+Do not repair the conclusion by excluding the exact table while continuing to
+claim an unrestricted public baseline. Further capability evidence must concern
+new inputs under a specified preparation, storage and execution budget. Further
+mechanism evidence must connect that operation to independently useful abilities;
+classification performance alone does not establish catastrophic loss. There is
+no justification here for neural training or for closing the general objective.
+
+**Preservation.** All 11 manifest-listed files, 378,105 bytes, verify in the SD
+store. [Audit summary](artifacts/scc-semantic-interface-audit-20260923-v1/audit01/summary.json)
+and [preservation receipt](artifacts/scc-semantic-interface-audit-20260923-v1/local_preservation_receipt.json).
+Manifest SHA256: `707d21f6980f4748eb0d7505906d7cc57aae59ea58812472c0895d9465757810`.
+The earlier evidence root and manifest remain unchanged. No process remains
+running; no model parameters were edited and no neural training was initiated.
 
 ## Historical evidence
 
