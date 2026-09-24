@@ -1,0 +1,8 @@
+{
+  "price_levels": 65536,
+  "mixing_weight": 0.03125,
+  "seed": 37338,
+  "maximum_seconds": 30,
+  "neural_training": false,
+  "input_sha256": "a288a0c6a9fc5429d39d744611bc61db0c7d5973bf4058853bc08e0f9c996322"
+}

@@ -1,0 +1,12 @@
+{
+  "binary_price_levels": 6,
+  "stochastic_price_levels": 3,
+  "probability_denominator": 8,
+  "mixing_weights": ["0", "1/64", "1/16", "1/4", "1/2", "3/4", "1"],
+  "sampling_calls": [1, 4, 16],
+  "implementation_price_levels": 65536,
+  "seed": 37337,
+  "maximum_seconds": 60,
+  "maximum_output_bytes": 10485760,
+  "neural_training": false
+}

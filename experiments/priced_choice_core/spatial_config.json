@@ -1,0 +1,13 @@
+{
+  "seed": 37237,
+  "bootstrap_seed": 37238,
+  "bootstrap_replicates": 10000,
+  "queries_per_scene": 1024,
+  "reader_calls": 1024,
+  "minimum_relative_brier_reduction": 0.1,
+  "maximum_seconds_per_stage": 60,
+  "maximum_output_bytes": 67108864,
+  "neural_training": false,
+  "prior_root": "/home/salvador/scc-research/spatial-confidentiality-core-20260923-v1",
+  "prior_manifest_sha256": "fcd5f81eb270e7b0d28cb5d8e3340d61d8649f43506dc7baafcd47271c967f16"
+}

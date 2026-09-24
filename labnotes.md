@@ -215,6 +215,18 @@ public judgment accuracy without knowing exact optima. This rejects a 51%
 all-reader premise on that finite law, not path learning in general or SCC.
 No training mechanism has been admitted.
 
+**Recovery from decisions — [LN-371–373](#ln-371).** A cost-sensitive choice
+between an uncertain outcome and a known-price alternative yields a risk reader
+without access to the true outcome cost. Exact bounds cover arbitrary randomized
+and nonmonotone policies. Combining one randomized choice with a public reference
+recovers positive protected score whenever useful cost improves, under the same
+finite price law; many calls and hidden-state reconstruction are unnecessary for
+this qualitative implication. On sixteen reused spatial scenes, action-only
+recovery preserves a measured risk advantage over six tested public predictors.
+Brier loss improves by 21.14%, but total routing cost by only 1.88%. That is an
+operational dependency, not severe cognition loss or genuine removal. Exact
+controls and separate action-reader execution pass; no training has begun.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -29015,6 +29027,285 @@ and independent verification are saved in
 `5f30996d1e3fec351c3d364e58307e1a06c1c0ab556aa6a0e736ee2658ecc93a`.
 Executed current source copies match the worktree. The earlier diagnostic source
 and acquisition variant are separately retained. No experiment is running.
+
+<a id="ln-371"></a>
+### LN-371 — 2026-09-23: recover risk from useful choices with hidden outcome costs
+
+**Change in direction.** LN-366–370 produced completed negative screens and a
+valid threshold reduction. Their optimization reader checks a candidate against
+an accessible objective. If the learned contribution instead predicts hidden
+outcome costs from an image, that check cannot simply assume the true costs.
+Use a different reduction: infer a risk estimate from a surviving decision
+procedure's responses to independently varied, publicly known alternatives.
+This applies the classical relationship between cost-sensitive decisions and
+probability estimation; it is not a claim to have discovered that relationship
+([Reid and Williamson, 2011](https://jmlr.org/papers/v12/reid11a.html)).
+
+**Declared useful task and protected semantics.** In the existing ideal opaque
+ray world, Y=1 means that an optical transmission reaches its receiver. Sending
+a private bit to an unauthorized receiver has confidentiality risk P(Y=1|x).
+For authorized public traffic, a direct transmission incurs unit failure cost
+1-Y; a reliable relay costs t, uniform on [0,1], independently of the scene.
+Choose a service to minimize expected cost. The relay is a task option, not a
+trusted restriction on attacker computation. Public/private payload semantics
+are fixed independently of the learned representation. This is a bounded
+communication-planning analogue, not general cognition or enforcement. All
+quantities below concern the same endpoint, including replacement code and advice.
+
+**Policy-only recovery, without a verification oracle.** Write p=P(1-Y=1|x).
+Let a(t) in [0,1] be the probability that any retained procedure chooses the
+relay. Its integrated cost and a recoverable statistic are
+
+    C(a,p) = integral_0^1 [t*a(t) + p*(1-a(t))] dt,
+    q = integral_0^1 a(t) dt.
+
+Among functions of mass q bounded between zero and one, placing that mass at
+the lowest prices minimizes integral t*a(t) dt, giving at least q^2/2.
+Consequently C(a,p) >= p*(1-q)+q^2/2. The optimal cost is p-p^2/2,
+so (q-p)^2 <= 2*[C(a,p)-(p-p^2/2)]. This includes randomized and
+nonmonotone policies; no preferred architecture or original safety head is used.
+
+For an independently fixed public estimate p0, its threshold policy has cost
+C0=p*(1-p0)+p0^2/2. Thus its improvement under the retained policy obeys
+
+    (p0-p)^2 - (q-p)^2 >= 2*(C0-C(a,p)).
+
+Expected Brier-score improvement has this same left side: irreducible outcome
+variance cancels. Complementing q estimates disclosure risk. The reader sees
+only price and action, never p, Y, the hidden scene, a density, or true objective
+values. Utility evaluation still needs independently obtained outcome labels.
+Equality holds for every threshold policy, including a learned probability
+followed by the choice rule. This moves the computational requirement from
+public graph search to learned inference about an unobserved outcome.
+
+**Finite reader and boundaries.** With M independent uniform prices, independently
+repeatable calls from the same endpoint, and independent policy randomness,
+the action frequency has expectation q and variance q*(1-q)/M <= 1/(4M).
+Expected protected improvement is therefore at least 2*(C0-C)-1/(4M).
+An upper cap epsilon on all admitted risk readers implies useful improvement
+at most epsilon/2+1/(8M), when those M calls fit the declared resources. All calls,
+endpoint copying/reset costs and retained caches must be charged. A fixed known
+query grid is insufficient against arbitrary policies; binary search requires
+additional monotonicity. A stateful procedure cannot be treated as resettable
+without explicitly supplying and charging the reset. The bound describes an
+expectation over random reads, not a deterministic certificate from one sample.
+
+The baseline measures a particular learned planning advantage. Losing that
+advantage alone does not establish catastrophic cognition failure. Other geometry,
+other workloads and enforcement remain separate; this argument does not close
+the earlier full-domain coverage or genuine-removal obligations.
+
+**Frozen validation.** Exhaustively integrate every binary policy constant on
+8 equal price intervals, and every policy with values {0,1/2,1} on 5 intervals.
+Use exact rational probabilities k/16 and public baselines j/8. Check the cost
+inequality, baseline-gain relation, sharp threshold equality and exact sampling
+variance for M=1,4,16,64,256,1024. Include a finite-grid measure-zero escape,
+a stateful-without-reset failure, complements, invalid actions and query budgets.
+One Charon CPU, 60 seconds, 10 MiB output, fresh
+`priced-choice-recovery-20260923-v1/exact01`; freeze source, configuration, entry
+and machine before execution. No model acquisition, parameter edit or training.
+
+**Exact result.** All 8,483 policy/probability pairs, 76,347 baseline-gain
+comparisons, 50,898 finite-sampling bounds and 153 sharp threshold controls pass.
+Runtime is 2.32 s on Charon. The finite known-grid control has zero integrated
+regret while its sampled estimate is zero instead of 3/4. The stateful control
+returns only one relay action in 1,024 calls: its failure confirms that independent
+endpoint calls cannot be assumed. These are exact mathematical/implementation
+controls, not neural removal evidence.
+
+<a id="ln-372"></a>
+### LN-372 — 2026-09-23: test action-only recovery from the learned spatial component
+
+**Development question.** Apply LN-371 to the learned operation that already
+passed a spatial capability screen, without supplying hidden objective values
+to its reader. The previous exact validation is completed progress. This next
+step asks whether the operational reduction has a usable finite-query signal;
+it is not fresh confirmation, a new trained planner or an alignment-removal test.
+The model, scenes and public baselines are exactly those preserved in LN-322.
+
+**Frozen construction.** Reuse all sixteen development scenes and their saved
+unchanged-parent predictions. With seed 37237, choose 1,024 valid pixels per
+scene without replacement and an independent uniform receiver placement in
+[0,10] metres per pixel. Truth visibility is depth > placement under the already
+declared ideal ray semantics. Construct the native risk estimate using LN-322's
+fixed empirical calibration CDF plus the difference between predicted normalized
+depth and public mean depth, clipped to [0,1]. Apply the same construction to
+all six frozen public predictors. Do not fit or select new coefficients.
+
+For authorized public transmission, a policy chooses a reliable relay iff its
+public uniform price is below predicted direct-link failure. Generate 1,024
+independent prices for each query; all seven policies receive the same prices.
+Save only packed binary choices in the reader's input file. A separate reader
+process receives no images, probabilities, labels, predictions or checkpoints;
+it returns one minus the mean relay-choice frequency. Evaluate after that
+process terminates, using the separately retained labels and full policy scores.
+Audit rejected evaluation-file access in the reader. Record all input hashes,
+selection, action counts, actual costs and sample reconstruction errors.
+
+**Checks and decision.** For every policy and query, verify analytically integrated
+routing-cost difference equals half the corresponding Brier-score difference.
+Compare recovered risk against the native inaccessible-to-reader probability,
+its exact binomial variance, and the public predictors. Include public-only
+replacement and inverted-action recoding restored by a declared decoder.
+The finite read allowance is 1/(4*1024) in Brier score; report it explicitly,
+without claiming a deterministic allowance for each realized sample. Compute
+scene-level paired bootstrap comparisons against the best of all six public
+predictors (10,000 replicates, seed 37238). A development signal requires native
+Brier loss at least 10% below the strongest tested public predictor and a positive
+selection-aware improvement interval. These criteria apply to reused scenes and
+a newly sampled query law; they cannot establish independent generalization.
+
+**Cost and scope.** Freeze source, prior manifest/configuration references and
+both entries in fresh policy01, reader01 and evaluation01 under the LN-371 root.
+One Charon CPU, at most 60 seconds per stage, 64 MiB total new output. Reuse saved
+parent forwards and count the inherited inference separately; this measures
+1,024 cheap price comparisons per query, not 1,024 new neural forward passes.
+An arbitrary replacement may cost much more, and only admits LN-371's bound
+if its full reader fits the chosen resources. No original parameters change,
+no new source is acquired and no training starts. A successful result supports
+risk-sensitive service choice as a bounded research component; it does not
+establish destruction of other spatial abilities, all-reader removal or SCC.
+
+**Completed result.** All three stages pass. The independent reader consumes
+117,440,512 binary actions across seven policies and 16,384 scene/placement
+queries, rejects access to evaluation data, and exactly restores the inverted-
+action control. It reads no model or outcome labels. Construction takes 3.38 s,
+reading 0.38 s and evaluation 0.08 s; no new neural forward is executed. The
+four inherited inference blocks originally took 49.19 s including their setup.
+
+The native Brier loss is 0.0554403 versus 0.0703039 for the strongest tested
+public predictor, quadratic position: a 21.14% reduction. Its paired scene-
+bootstrap improvement interval is [0.0053772,0.0269861], passing the development
+signal gate. Action-only recovery has Brier loss 0.0555454 and a comparison
+interval [0.0052461,0.0269122]. Reconstruction MSE is 0.00008493, close to its
+exact expected 0.00008382 and below the worst-case expected allowance 0.00024414.
+The risk/cost identity agrees within 1.95e-16. These are development results on
+reused scenes and reused neural predictions, not independent confirmation.
+
+The scientific limitation is numerically important: total expected routing cost
+falls from 0.3947406 to 0.3873088, only about 1.88%. The 21.14% figure concerns
+Brier loss, equivalently the excess routing cost above a clairvoyant reference.
+It must not be presented as a 21.14% improvement in total routing cost or as
+catastrophic loss when the learned advantage disappears. The experiment supplies
+an operational dependence and a workable reader; it does not meet that endpoint.
+
+<a id="ln-373"></a>
+### LN-373 — 2026-09-23: recover positive risk competence with one useful decision
+
+**Remaining cost question.** LN-371's direct frequency estimate has an additive
+1/(4M) allowance. That estimate does not imply a fundamental requirement for
+many calls: combine its output with the existing public baseline before scoring.
+This uses the same cost-sensitive decision/probability-estimation relationship,
+not a new general statistical principle.
+
+Let G=E[C0-C] be useful cost improvement, q the relay-choice mass, and qhat the
+M-call frequency. Define r_alpha=(1-alpha)*p0+alpha*qhat for alpha in [0,1].
+The squared-error identity for a convex combination gives
+
+    protected Brier improvement
+      >= 2*alpha*G - alpha^2/(4M).
+
+The omitted term alpha*(1-alpha)*E[(q-p0)^2] is nonnegative. Complement both
+probabilities for confidentiality risk; the score is unchanged. Therefore any
+G>0 supplies a reader with strictly positive protected improvement using ONE
+randomized useful decision and a sufficiently small fixed alpha. In particular,
+for G<=1/4, alpha=4G gives a lower bound 4G^2 at M=1. The coefficient need not
+encode labels: any predeclared lower target g<=G with alpha=4g works. A fixed
+sequence of successively halved positive coefficients contains a suitable one
+for every G>0; this is an existential all-reader implication, not a finite test
+that certifies removal. With G=0 or G<0 no positive guarantee is claimed.
+
+More generally the guaranteed improvement maximized over alpha is 4M*G^2 when
+0<=G<=1/(4M), and 2G-1/(4M) above that point. Thus a zero all-reader improvement
+cap forces zero useful advantage without a multi-call resource assumption.
+At a nonzero cap the quantitative bound remains weaker: for epsilon<1/(4M),
+G<=sqrt(epsilon/M)/2. Small positive recoverability is not near-perfect judgment,
+and may be hard to measure. One call avoids reset assumptions within the reader;
+M>1 retains LN-371's independence and copying obligations.
+
+**Finite implementation law.** Use L equally likely midpoint prices
+(j+1/2)/L for both the useful workload and the reader. For arbitrary randomized
+actions at these prices, rearranging their mass to the least expensive prices
+again yields integral-equivalent cost >=p*(1-q)+q^2/2. The minimizing finite
+curve is the piecewise-linear interpolation of q^2/2 and lies above it.
+Set the public probability p0 to k/L and its reference policy to the first k
+prices; its cost attains equality exactly. An arbitrary baseline can be rounded
+to this grid, but both the policy and score baseline must use that same rounded
+value. This is an exact finite law, not an assertion that arbitrary policies
+behave similarly on continuous prices and a floating-point test grid.
+
+LN-372's seeded floating-point prices are reproducible development draws for
+its known threshold policies; they are not unpredictable attack qualification.
+The prospective finite reader uses fresh system randomness by default, and an
+explicit seed only for reproducible checks. Charge its integer random draws and
+one policy execution. A known deterministic test list still permits overfitting.
+
+**Frozen validation.** Exhaustively enumerate binary policies on six prices and
+{0,1/2,1}-valued policies on three prices, risks k/8, and all finite-grid public
+threshold policies. Check exact convex-mixture expected scores for alpha in
+{0,1/64,1/16,1/4,1/2,3/4,1}, M in {1,4,16}, both orientations, and the optimized
+piecewise lower bound. Include zero/negative useful gain and invalid grid,
+probability and mixing arguments. One Charon CPU, 60 seconds, 10 MiB output,
+fresh `shrinkage01` under the existing root. Freeze source/configuration/entry
+before execution. No neural work or training.
+
+**Scope of the new implication.** A useful service-choice procedure carries
+recoverable confidentiality assessment even if its author removes every explicit
+risk output. This covers alternative policy implementations in the declared price
+and scene law, with one-call qualitative recovery. It does not require a decoder
+for its weights or a correct hidden-cost verifier. It remains a bounded functional
+coupling statement: a low native head score is not a genuine-removal certificate,
+other spatial abilities are not covered, and privacy enforcement is not implied.
+
+**Exact result and learned-cost diagnostic.** All 105,084 mixture bounds and
+4,587 optimized bounds pass, including 1,326 positive and 3,678 nonpositive
+useful-gain cases, in 3.10 s. The finite implementation passes its argument and
+orientation controls. Next, on LN-372's unchanged saved query set, evaluate
+alpha=1/32 and a 65,536-midpoint price law with the fixed spatial empirical-CDF
+public baseline. Quantize the reference to the same probability grid. Compute
+native policy mass exactly from its finite threshold, expected one-call Brier
+improvement and routing gain, and check the analytic lower bound at 1e-12.
+Separately sample exactly one price per query with seed 37338; report its actual
+score, even if the finite sample fails to show positive gain. Use the validated
+reader on 64 fixed query indices to check the actual scalar implementation and
+record the price/action transcript. This is a cost diagnostic on reused data,
+not independent confirmation, a removal intervention or a training run. Freeze
+inputs/source/config/entry in `single_choice01`; one Charon CPU, 30 seconds.
+
+**Single-choice result and decision.** The 16,384 reused queries have expected
+useful gain 0.00760846 against the fixed spatial reference. The finite one-call
+reader with alpha=1/32 has exactly integrated protected Brier improvement
+0.00111687, above the guaranteed 0.00023139. The one-price-per-query realization
+also has positive improvement, 0.00106694. All 64 actual scalar-reader calls
+match their independently recorded price/action formula, and finite-grid
+quantization changes a native probability by at most 0.000007628. Runtime is
+0.031 s. This confirms a nonzero signal without repeated policy calls on these
+saved contexts; it does not turn the finite empirical score into an all-reader cap.
+
+This work removes a specific obstruction: efficient protected-function recovery
+from good hidden-cost decisions does not require either a true-cost verifier or
+many calls. The next mechanism assessment should use this one-call test for a
+surviving policy, rather than require reconstruction of its entire world model.
+For the continuous-price task in LN-371, the exact integrated service-choice
+loss is one half of Brier loss plus an outcome-dependent constant, giving a
+direct differentiable objective without sampled decision gradients. The finite
+price policy has quantized thresholds; its exact objective is not asserted to
+have that same ordinary derivative. Training the continuous score and deploying
+a finite-price policy would require accounting for this quantization. This
+identifies an implementable component, not a demonstrated destructive mechanism: its present total utility
+advantage is small, the scene evidence is reused, and a genuine neural removal
+criterion with severe specified cognitive loss remains unresolved. Neither the
+working-mechanism nor the general-impossibility endpoint is achieved. No training
+is initiated and the active objective remains unfinished.
+
+**Evidence.** LN-371–373 are preserved in
+`artifacts/scc-priced-choice-recovery-20260923-v1/`: 62 files, 14,320,464 bytes,
+verified manifest SHA256
+`788abcbc775b67abe1250719e1aaf3b7dab40ef2d42aaca42c5679f9dec3776c`.
+All six stages are terminal. Frozen source, configurations, plans, exact checks,
+action data, separate reader outputs and input identities are retained. The
+living entry additionally makes explicit the continuous-price scope of the
+training-loss derivative; the saved pre-preservation account remains unchanged.
 
 ## Historical evidence
 

@@ -1,0 +1,12 @@
+{
+  "binary_intervals": 8,
+  "probability_denominator": 16,
+  "baseline_denominator": 8,
+  "stochastic_intervals": 5,
+  "stochastic_action_values": [0, 0.5, 1],
+  "sampling_calls": [1, 4, 16, 64, 256, 1024],
+  "seed": 37137,
+  "maximum_seconds": 60,
+  "maximum_output_bytes": 10485760,
+  "neural_training": false
+}
