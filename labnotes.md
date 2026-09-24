@@ -188,6 +188,23 @@ are entirely negative ([LN-365](#ln-365)). Neither workload establishes learned
 computational nonvacuity. No genuine removal, training mechanism or general
 impossibility has been established; no training has begun.
 
+**Remaining synthesis leads — [LN-366](#ln-366).** A fixed, fully public
+ENV exploration setting resolves the two formerly unresolved negative leads in
+27.63 and 7.82 seconds, after passing independent controls for both outcomes.
+The positive lead still times out with public ENV and current learned guidance.
+Historical adviser/runtime equivalence is not fully audited; these results do
+not reproduce the published timing comparison or establish global impossibility.
+
+**Optimization threshold boundary — [LN-367–368](#ln-367).** One feasible useful
+plan gives a cheap safety reader with exact accuracy 1/2+E[G]/2, where G is
+quality on a declared objective scale. Exact finite checks pass. For positive
+allocation, however, an explicit public half-approximation guarantees at least
+5/6 protected accuracy on the paired threshold law; finer public approximation
+can approach one. This family does not supply an attainable near-chance removal
+premise under resources admitting those algorithms. A viable optimization lead
+must withstand coarse public approximation, not merely make exact optimization
+expensive. No learned mechanism or general impossibility follows.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -28464,6 +28481,306 @@ files pass a frozen SHA256 and Python/JSON syntax audit on Charon; the Java
 adapters were compiled and exercised in their respective completed stages.
 
 **Evidence.** [temporal-pattern-expansion-20260923-v1](artifacts/scc-temporal-pattern-expansion-20260923-v1/): 132 manifest-listed files, 687,156 bytes; manifest SHA256 `2142b8795a8dd05294ee38cd0892c19257f0a816da199c921ca1ad27da367191`.
+
+<a id="ln-366"></a>
+### LN-366 — 2026-09-23: revisit unresolved published learned synthesis leads
+
+**Selection.** The preceding turn is progress: LN-364 supplies independently
+verified neural controllers on mixed fresh cases but finds a faster public
+replacement; LN-365 rejects increasing independent conjunction density as the
+next calibration step. Both evidence stores are verified and source is committed
+at b0fc097. Neither result completes the mechanism goal. The earlier archived
+P4_l_1002 and P0_l_1017 leads remain unresolved by the simple constructor, unlike
+the easy positive lead. Published learned decision times are 11.10 and 20.35 s,
+versus 669.00 and 112.42 s for public guidance. These are explicit, outcome-aware
+development selections, not fresh mixed-law evidence or independent learned
+qualification.
+
+**Contract.** Run each exact original specification with historical TACAS_GBT/BOTH
+controller construction, followed sequentially by STRIX_SCORE/BOTH public decision.
+Use separate fresh stages, one Charon CPU, 55-second invocation, 60-second outer
+stage, 4 GiB heap and 10 MiB per-file output. Verify frozen source/dependency
+hashes; preserve all controller output and timeouts. The scheduling flaw in LN-355
+must not recur: no solver calls overlap. Returned witnesses require independent
+checking against the original LTL formula, with causal ordering and actual costs,
+before any learned capability claim. No training, parameter edits, removal or
+repair are tested. Both-sided outcomes, absence of easy public replacements and
+a functional-removal/collapse argument remain admission requirements.
+
+**First lead and reproduction audit.** Both current configurations time out on
+P4_l_1002 without a reported winner or witness (55.15 s learned invocation;
+public invocation recorded separately). Unlike LN-355, these calls do not
+overlap. Do not infer a matched historical result: inspect the raw published
+table, experiment commands and release configuration at the already pinned
+GitLab revision before running the second lead. Freeze a read-only acquisition
+with at most 24 requests and 10 MiB download in one 60-second Charon stage. No
+upstream code is executed. The original table measures decisions, whereas the
+current learned invocation also requests controller extraction; separate those
+costs before diagnosing the discrepancy.
+
+**Configuration finding and phase test.** The public conversion script maps
+`semml_gbt_notAllAdv.csv` to the published learned table. A neighboring archived
+harness calls that earlier adviser `GBT_CHEAP`, while the current release offers
+`TACAS_GBT` and separate newer variants. The archived directory also contains a
+distinct `semml_tacas_gbt.csv`. Thus the present runtime/option combination must
+not be called an exact reproduction of the published timing configuration without
+resolving this provenance. The raw table contains decision-exploration statistics,
+not verified controller costs. Before further controller attempts, run the current
+TACAS_GBT/BOTH on P4_l_1002 in decision-only mode under the same sequential
+55/60-second limits. This separates controller extraction from unresolved search;
+it does not silently replace the useful controller task with winner prediction.
+
+**Additional public control.** Decision-only TACAS_GBT/BOTH also reaches the
+55-second limit, so controller extraction alone does not explain the observed
+failure. The original October 2024 harness explicitly uses GBT_CHEAP; equivalence
+to the current adviser has not been established. Separately test a fully public
+configuration starting from the environment perspective, using STRIX_SCORE for
+both rankings and backtracking. This is a fixed algorithmic choice, not a
+label lookup. First require all four independent temporal controller fixtures
+(two winners each) to pass with this setting, then apply the same setting to
+both named leads. Use the same sequential Charon limits and preserve unknowns.
+An improvement from changing exploration order would weaken a learned-necessity
+claim even if the older timing configuration remains unreproduced.
+
+**Public exploration result.** The fixed ENV configuration passes all four
+independent temporal fixtures and six positive/negative boundary controls. It
+returns UNREALIZABLE on P4_l_1002 in 27.63 s and P0_l_1017 in 7.82 s; both
+original published outcomes agree. These are exact solver-reported decisions,
+not independently verified new counterstrategies or a cross-machine speedup
+estimate. No neural adviser is invoked. Apply this same fixed configuration
+to P2_l_1004, the remaining positive lead from LN-355, under the unchanged
+55/60-second bounds. Its timeout in a different public configuration does not
+exclude this alternative.
+
+**Provenance qualification.** The current release's own `tacas25.yaml` selects
+TACAS_GBT/BOTH and the same search/backtracking settings, with no Mealy
+minimization. Different adviser names in older scripts alone do not prove
+different model weights; their exact historical identity remains unaudited.
+Decision-only timing also times out on the first lead, so the requested
+bisimulation minimization is not the sole cause. Preserve this narrower finding
+instead of attributing the discrepancy to a specific unverified cause.
+
+**Positive lead and current guidance.** The public ENV run on P2_l_1004 reaches
+its 55-second limit without an answer. This leaves the positive lead unresolved,
+not computationally certified. Assess the release's current learned configuration
+POST_TACAS_COMBO/BOTH_HEUR, already qualified on LN-350's independent fixtures,
+on that same formula for controller construction. Use one fresh 55/60-second
+stage, 4 GiB and the same output cap. This is a current-configuration screen,
+not a one-variable ablation or reproduction of the old timing table. Any success
+still needs an independently verified witness and a same-law fresh workload;
+any timeout supplies neither an impossibility result nor a learned capability.
+
+**Current configuration result and decision.** POST_TACAS_COMBO/BOTH_HEUR also
+reaches 55.14 s on P2_l_1004 without a reported winner or controller. This leaves
+the positive lead unresolved. The originally planned second-lead BOTH runs are
+not executed after its public ENV decision succeeds. All started stages are
+terminal. The results demonstrate a public replacement for the two negative
+leads under the exercised resources, not the absence of useful learned synthesis
+or reproduction of the earlier runtime. No witness has been independently
+verified on these three published inputs, and no training is admitted.
+
+The next theoretical change should reduce the recovery reader's work rather than
+add another solver timeout. For optimization procedures with cheaply checked
+feasible outputs and objective values, paired thresholds around the unknown
+optimum may provide balanced confidentiality questions without requiring the
+learned procedure to produce a negative-instance certificate. Approximate useful
+quality and obvious public approximations must be included before treating this
+as a mechanism lead. The intended destructive endpoint and all-reader removal
+requirement remain unchanged.
+
+**Preservation.** All started stages are terminal. The independent source audit
+validates thirteen frozen Python/JSON files. The completed evidence store
+`artifacts/scc-remaining-synthesis-leads-20260923-v1/` contains 171 files,
+528,670 bytes, with verified manifest SHA256
+`af745768e2a53ce8a8fb53e5551f698250fab26a927da5ec64d4b3e8993741e2`.
+
+<a id="ln-367"></a>
+### LN-367 — 2026-09-23: recover threshold judgments from approximate optimization
+
+**Reason to change the construction.** LN-366 leaves the positive synthesis lead
+unresolved and supplies public replacements for the two negative leads. LTL
+witness checking itself can be expensive. A different reduction can use a useful
+feasible plan and its directly evaluated objective; it need not require the
+learned procedure to construct negative certificates or attach a safety report
+to its useful output. This is a prospective mathematical component, not training
+admission or a claim of catastrophic general cognition loss.
+
+**Declared objects.** Let P describe a nonempty finite feasible set F(P) and a
+maximization objective f_P with optimum v(P). Feasibility and f_P(x) must be
+cheaply checkable at their actual precision. Fix a positive radius R(P) before
+qualification. Sample a fresh P, independent hidden sign sigma uniformly in
+{-1,+1}, and delta uniformly in (0,R(P)). The protected program is
+
+    disclose(P, tau, secret, x) = secret if x in F(P) and f_P(x) >= tau else 0,
+    tau = v(P) + sigma*delta.
+
+The protected question is whether any public x can expose the private bit.
+Exactly the negative-sign program is unsafe. The model receives P and tau;
+sigma, v and the construction's answer are not additional inputs. Offline
+threshold construction may require an exact optimizer and is not free. This
+answer-dependent but predeclared paired law differs from the previous
+outcome-independent workload laws. It must not be represented as an unbiased
+sample of naturally occurring budgets. Fresh qualification must split by base P,
+not leak both thresholds or optimum-derived labels through names and metadata.
+
+**An efficient reader and a continuous loss relation.** A retained useful
+procedure receives P alone and returns a candidate plan x. The reader calls it
+once and answers unsafe exactly when that plan passes the disclosure predicate.
+It needs no optimum, dual certificate, or negative-instance synthesis. Every
+positive-sign query is classified correctly even when the procedure fails,
+because no feasible plan exceeds the optimum. Conditional on a feasible returned
+value u, a negative-sign query is classified correctly for a fraction
+
+    G(P,x) = max(0, 1 - (v(P)-u)/R(P))
+
+of the margins. Set G=0 for an invalid plan. Therefore, over the same base law
+and side-independent retained procedure,
+
+    protected accuracy = 1/2 + E[G]/2.
+
+An attainable all-reader cap 1/2+eta forces E[G]<=2 eta, including arbitrary
+replacement representations and repaired endpoints. For a fixed delta, the
+same calculation gives accuracy (1+q_delta)/2, where q_delta is the probability
+of returning a feasible plan within delta of optimum. The continuous statement
+controls a whole quality curve rather than one exact-success threshold. The
+reader's state, one useful call, feasibility checks and objective arithmetic
+must all fit the declared resources. An unsuccessful reader search still cannot
+certify the all-reader premise.
+
+**Scope and failure conditions.** The radius determines what quality is lost.
+A small R can destroy only fine optimality while leaving useful planning intact;
+calling that catastrophic cognition loss would be incorrect. If R=v-b for a
+feasible baseline of value b, G measures the fraction of improvement over that
+baseline, which may itself remain highly competent. Public approximations and
+threshold-generation shortcuts must be tested. A known or syntactically exposed
+optimum makes the protected task trivial. The disclosure program defines the
+semantic question, not a trusted enforcement boundary. Behavioral bypass with
+retained judgment and restoration of both functions retain their prior status.
+
+**Frozen exact validation.** Use sixteen seeded six-item allocation problems,
+positive integer weights/values and capacity permitting at least one item but
+not all. Enumerate every binary plan independently to establish feasibility and
+optimum. Use R=v, so the empty feasible allocation is the explicit zero-value
+baseline. Integrate the reader's accuracy exactly with rational arithmetic over
+every interval between objective-derived margin breakpoints, both signs, and
+all 64 candidate plans per problem. Independently enumerate disclosure witnesses
+at each tested threshold, rejecting false claims caused by infeasible plans.
+Check malformed plans and demonstrate the optimum-disclosure shortcut as a
+negative control. Evaluate fixed public value/weight, value and lightest-item
+heuristics and an exact public enumerator; their success is a nonvacuity warning,
+not learned evidence. One Charon CPU, 60 seconds, 10 MiB output, seed 36737.
+Freeze configuration, source, entry and machine record before execution. No
+neural model, parameter change, training or new compute allocation.
+
+**Implementation leads, not admitted mechanisms.** Primal/dual learning methods
+supply a concrete optimization literature to inspect after the reduction is
+checked. [PDHG-Net](https://proceedings.mlr.press/v235/li24ce.html) combines a
+learned approximate solution with further public optimization; its reported
+speedup is not proof that the public phase or another solver cannot replace it.
+Its public [implementation](https://github.com/netsysopt/pdhg-net) must be checked
+for actual checkpoints, output quality, generation law and full inference costs.
+The [PDLP certificate documentation](https://developers.google.com/optimization/lp/pdlp_math)
+also makes a strong public comparator available. No presumption of indispensability
+or training admission follows from naming optimization or duality.
+
+**Exact result.** All 1,024 binary candidate checks on sixteen problems pass,
+using 668 exact integration cells and 112 malformed-plan controls. Omitting
+feasibility produces 1,550 incorrect cell classifications; exposing the optimum
+allows perfect judgment without any useful solver. Validation takes 0.19 s
+inside the bounded Charon stage. Mean public quality is 0.98335 for value-density
+ordering, 0.98242 for value ordering and 0.86011 for lightest-item ordering. Their
+induced protected accuracies are 0.99167, 0.99121 and 0.93006. The public exact
+enumerator has quality and accuracy one; the empty allocation has zero quality
+and chance accuracy. These are exact implementation controls, not independently
+qualified learned results. The reduction is valid, while this toy workload makes
+its near-chance removal premise unattainable with the permitted public readers.
+
+<a id="ln-368"></a>
+### LN-368 — 2026-09-23: public approximation restricts the threshold mechanism
+
+**Question.** LN-367 validates the useful-plan reduction, but public heuristics
+already retain nearly perfect judgment. Determine whether larger allocation
+problems remove this defect before acquiring another learned optimizer. This
+entry concerns the same paired threshold law and actual public computation,
+not a claim that all optimization is easy.
+
+**A stronger public reader.** With R=v>0, the marginal threshold is uniform on
+(0,2v) and the unsafe label is exactly tau<v, apart from a null boundary. Suppose
+a public feasible constructor returns value b with alpha*v<=b<=v, alpha in (0,1].
+It need not find a disclosure witness for every prediction. Classifying unsafe
+at tau<=c, where c=2b/(1+alpha), gives exact accuracy
+
+    1 - min(abs(c-v),v)/(2v) >= 1 - (1-alpha)/(2*(1+alpha)).
+
+The bound follows because c/v lies between 2alpha/(1+alpha) and
+2/(1+alpha). At alpha=1/2 the lower bound is 5/6, stronger than the direct
+witness reader's 3/4. This exploits the declared distribution, not an optimum
+input. Approximate scalar value prediction alone can recover the protected
+judgment; preventing only witness extraction is insufficient.
+
+**Constructive allocation bound.** Remove items whose weight exceeds capacity.
+Sort the rest by value/weight. Let A be the feasible prefix before the first
+item that does not fit, and B the best eligible singleton. Fractional packing
+bounds the optimum by value(A)+value(next item), so max(value(A),value(B))
+is at least v/2. A scan that continues after a non-fitting item is no worse
+than that prefix. This supplies the above 5/6 judgment bound on every positive
+instance, in O(n log n) comparisons plus exact arithmetic.
+
+A stronger constructive approximation rounds eligible values down by
+K=epsilon*Vmax/m, where m is the eligible item count. Dynamic programming over
+the rounded total stores the least weight for each value. The selected feasible
+plan has value at least v-mK >= (1-epsilon)*v. Each rounded value is at most
+m/epsilon, so there are at most m^2/epsilon totals; account for O(m^3/epsilon)
+updates and integer bit costs. With fixed epsilon, this is a public polynomial
+procedure. It gives protected accuracy at least 1-epsilon/(4-2epsilon) under
+the paired law. The actual runtime still has to fit any numerical resource
+contract; a polynomial algorithm is not a universal wall-clock guarantee.
+
+**Radius tradeoff.** For any public feasible plan b, the original witness
+reader has G=max(0,1-(v-b)/R). To coexist with an all-reader cap 1/2+eta,
+its average G must be at most 2eta. On one problem, imposing G<=2eta requires
+R<=(v-b)/(1-2eta), eta<1/2; if b=v there is no positive compatible radius.
+This is a condition on that reader, not an asserted attainable per-problem
+all-reader cap. Do not derive a pointwise condition from an average cap. Taking R
+small enough to hide a good approximation restricts the measured loss to fine
+optimality. It cannot justify calling the surviving public plan cognitively
+destroyed. A nonvacuous severe-loss construction needs a domain and resource
+regime where coarse useful planning itself is difficult for admitted replacements.
+
+**Bounded validation.** Reuse LN-367's sixteen problems as implementation
+controls only, preserving that reuse explicitly. Implement the public
+half-approximation and rounded-value dynamic programs for epsilon=1/4,1/8,1/16.
+Check feasibility and quality against the independently enumerated optima.
+Integrate each scalar reader exactly over threshold intervals, including its
+own threshold breakpoint, and compare the claimed formula and lower bound.
+Check interval endpoints for the general ratio bound on a fixed rational grid.
+Preserve source/configuration, both entries, source-result hash and machine
+record in a fresh stage. One Charon CPU, 60 seconds, 10 MiB output. No neural
+model, training, parameter intervention or additional compute allocation.
+
+**Completed result and consequence.** All 64 public approximation checks and
+606 rational ratio-grid checks pass, in 0.042 s. The half-approximation constructor
+retains mean quality 0.99536; its conservative scalar reader has mean accuracy
+0.83642, above its universal 5/6 bound. Each rounded-value solver finds an exact
+optimum on these small reused problems. With their predeclared conservative
+cutoffs, their accuracies are 0.92857, 0.96667 and 0.98387. Those cutoffs improve
+the worst-case guarantee; they are not claimed to improve observed accuracy over
+the direct witness reader on an easy problem, which here can be perfect.
+
+Thus this positive-value allocation family cannot support a near-chance removal
+premise once the permitted resources admit the explicit public approximation.
+Exact optimization difficulty, more parameters and larger instances do not
+remove that algorithm. At stricter numerical deadlines its measured costs must
+still be compared. General optimization is not excluded: the unresolved useful
+component is a learned procedure with substantial coarse-quality advantage on
+a declared distribution, together with a nonvacuous judgment-removal criterion.
+No training mechanism is admitted and no training begins.
+
+**Evidence.** LN-367 and LN-368 share the verified immutable store
+`artifacts/scc-optimization-threshold-core-20260923-v1/`: twenty files,
+636,306 bytes, manifest SHA256
+`5bfa0f95e2e89d360a07137c418c5b084d4d605c8c27c5f2921331553f593862`.
+Both stages are terminal. Executed source copies match the worktree.
 
 ## Historical evidence
 

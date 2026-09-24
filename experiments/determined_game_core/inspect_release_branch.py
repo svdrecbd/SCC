@@ -16,6 +16,12 @@ def main():
     revision = configuration['revision']
     started = time.perf_counter()
     results = {'revision': revision, 'trees': {}, 'files': {}, 'executed_upstream_source': False}
+    for path in configuration.get('history_paths', []):
+        query = urllib.parse.urlencode({'ref_name': revision, 'path': path, 'per_page': 100})
+        history = json.loads(acquisition.acquire(base + '/commits?' + query))
+        results.setdefault('histories', {})[path] = history
+        if len(history) == 100:
+            results.setdefault('possibly_truncated_histories', []).append(path)
     for path in configuration['source_directories']:
         query = urllib.parse.urlencode({'ref': revision, 'path': path, 'per_page': 100})
         results['trees'][path] = json.loads(acquisition.acquire(base + '/tree?' + query))

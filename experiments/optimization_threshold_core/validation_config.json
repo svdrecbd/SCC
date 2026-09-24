@@ -1,0 +1,11 @@
+{
+  "seed": 36737,
+  "problem_count": 16,
+  "item_count": 6,
+  "maximum_weight": 13,
+  "maximum_value": 23,
+  "radius": "optimum",
+  "maximum_output_bytes": 10485760,
+  "maximum_seconds": 60,
+  "classification": "exact implementation validation, not learned evidence"
+}

@@ -1,0 +1,23 @@
+{
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "executable": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/bin/semml",
+  "wall_seconds": 60,
+  "invocation_seconds": 55,
+  "processor_count": 1,
+  "heap_bytes": 4294967296,
+  "training": false,
+  "methods": [
+    {
+      "name": "public_decision",
+      "ranking": "STRIX_SCORE",
+      "perspective": "BOTH",
+      "decision_only": true
+    }
+  ],
+  "dependency_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/dependency01/selected_source/thirdparty/kissat",
+  "dependency_sha256": "db1c1db97888b683ac692c7cea466c36c63e87304a26a9044ac5c705a777ccac",
+  "input_name": "P4_l_1002",
+  "source_ssi": "/home/salvador/scc-research/synthetic-synthesis-inspection-20260923-v1/inventory03/selected_source/experiments/240917_final_run_tacas/overhuge.ssi",
+  "source_ssi_sha256": "8ccd24d3aa6e614573fb8c0e6f7d069211c37825169dd8ec41935ad6f43d4346",
+  "maximum_output_bytes": 10485760
+}

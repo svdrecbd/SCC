@@ -6,6 +6,7 @@ import json
 import os
 import re
 import resource
+import resource
 import subprocess
 import sys
 import tarfile
@@ -46,6 +47,9 @@ def main():
         JAVA_OPTS='-Xms128m -Xmx4g -Xss16m -XX:ActiveProcessorCount=1',
         PATH=str(dependency.parent) + os.pathsep + os.environ.get('PATH', ''))
     records = []
+    def restrict_output():
+        limit=configuration.get('maximum_output_bytes',10*1024*1024)
+        resource.setrlimit(resource.RLIMIT_FSIZE,(limit,limit))
     for method in configuration['methods']:
         command = [configuration['executable'], 'semmlMain', '--env', inputs, '--sys', outputs,
             '--formulaFile', str(formula_path), '--realizable', str(method['decision_only']).lower(),
@@ -56,7 +60,7 @@ def main():
         output_path = directory / (method['name'] + '.stdout.txt')
         with output_path.open('w') as output, (directory / (method['name'] + '.stderr.txt')).open('w') as error:
             result = subprocess.run(['timeout', str(configuration['invocation_seconds'])] + command,
-                stdout=output, stderr=error, env=environment)
+                stdout=output, stderr=error, env=environment, preexec_fn=restrict_output)
         text = output_path.read_text()
         record = {'method': method['name'], 'command': command, 'seconds': time.perf_counter() - started,
                   'exit_code': result.returncode, 'reported_winner': next((line for line in text.splitlines() if line in ('REALIZABLE', 'UNREALIZABLE')), None),

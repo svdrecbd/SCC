@@ -1,0 +1,27 @@
+{
+  "project": 53718945,
+  "revision": "13ea58d8075b2d36432ad7db93d1d24de4c98189",
+  "record": 19763388,
+  "archive_url": "https://zenodo.org/api/records/19763388/files/Artifact_SemML_Cav26.zip/content",
+  "archive_bytes": 5358390531,
+  "upstream_archive_md5": "fc7ad57b4edb69bcecbcf8fb3091a849",
+  "maximum_download_bytes": 10485760,
+  "maximum_requests": 24,
+  "request_timeout_seconds": 12,
+  "wall_seconds": 60,
+  "output_bytes_limit": 10485760,
+  "processor_count": 1,
+  "execute_upstream_source": false,
+  "neural_training": false,
+  "source_files": [
+    "scripts_semml/experiments/240917_final_run_tacas.py",
+    "scripts_semml/experiments/240906_semml_v_semml_v_strix.py",
+    "scripts_semml/semml_calls.py"
+  ],
+  "source_directories": [],
+  "archive_members": [],
+  "history_paths": [
+    "scripts_semml/experiments/240917_final_run_tacas.py",
+    "src/main/java/semml/advice/AdvisorFactory.java"
+  ]
+}
