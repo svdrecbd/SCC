@@ -1,0 +1,7 @@
+{
+  "maximum_latches": 10,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "controls": 17,
+  "training": false
+}

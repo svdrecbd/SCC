@@ -1,0 +1,19 @@
+{
+  "environment": "/home/salvador/scc-research/neural-synthesis-runtime-20260923-v1/initialization01/environment",
+  "wheel_directory": "/home/salvador/scc-research/neural-synthesis-runtime-20260923-v1/wheels",
+  "operation": "install",
+  "packages": [
+    "torch==2.1.2+cpu",
+    "filelock==3.13.1",
+    "sympy==1.12",
+    "networkx==3.1",
+    "Jinja2==3.1.3",
+    "fsspec==2023.10.0",
+    "typing_extensions==4.5.0",
+    "tqdm==4.66.1"
+  ],
+  "invocation_seconds": 50,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "maximum_wheel_bytes": 805306368
+}

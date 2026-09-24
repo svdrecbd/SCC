@@ -1,0 +1,18 @@
+{
+  "maximum_download_bytes": 16777216,
+  "maximum_requests": 40,
+  "request_timeout_seconds": 10,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "output_bytes_limit": 20971520,
+  "execute_upstream_source": false,
+  "neural_training": false,
+  "archive_url": "https://zenodo.org/api/records/10557155/files/artifact.zip/content",
+  "archive_bytes": 4183000534,
+  "upstream_archive_md5": "1fea620dee61b7df35ad8cf0f624dcf5",
+  "prefixes": [
+    "ml2-storage/ltl-spec/sc-1-f/"
+  ],
+  "members": [],
+  "maximum_extracted_bytes": 16777216
+}

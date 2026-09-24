@@ -166,9 +166,22 @@ startup. The fastest remaining published lead is unresolved in exploratory
 55-second calls; their launch overlap prevents a clean timing comparison. Four
 fresh conjunctive specifications all have short counterpolicies, and public
 judgment again precedes learned synthesis. These screens expose construction
-shortcuts, not general impossibility. The archived direct neural strategy generator and checkpoint are now acquired
-and CRC-checked ([LN-357–358](#ln-357)); inference and qualification remain open.
-No training mechanism or genuinely mixed difficult workload has been established.
+shortcuts, not general impossibility. The direct neural checkpoint is now strictly restored: 340 model variables,
+14.8 million parameters, unchanged after inference ([LN-359–362](#ln-359)).
+Its two-beam decoder supplies independently verified policies on three of four
+simple controls; sixteen beams still fail the future-input control. This is
+implementation validation, not learned-advantage evidence.
+
+**Temporal public shortcut — [LN-363](#ln-363).** A formula-based public procedure
+certifies explicit constant counterpolicies for 103 of 120 targeted archived
+arbiter/load-balancer variants in 2.67 seconds, including families behind the
+neural paper's exclusive solves. Three complete specifications independently
+verify after exact constant-policy specialization; their incorrect-policy controls
+fail. An unadapted general checker times out, demonstrating why solver difficulty
+alone is insufficient. Seventeen selected cases remain unknown; the larger
+benchmark screen was incomplete. A fresh mixed-winner workload, a nontrivial
+learned contribution and genuine functional removal remain unresolved.
+No training mechanism has been admitted or training initiated.
 
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
@@ -28088,6 +28101,185 @@ training-ready SCC mechanism. The original goal remains active and unresolved.
 [immutable release evidence](artifacts/scc-neural-synthesis-release-20260923-v1/).
 Manifest SHA256: `c5aa79f33abd7961024ca9010ab6e7dae7a5d83dcede559fa4a71c092f420f07`.
 All processes are terminal; no inference or training has occurred.
+
+<a id="ln-359"></a>
+### LN-359 — 2026-09-23: a private runtime for archived neural inference
+
+**Plan and implementation.** The archived TensorFlow/Keras 2.13.1 model requires
+an older interpreter than Charon's available Python 3.14. Acquire a pinned,
+checksum-verified standalone CPython 3.11 and install dependencies in a private
+environment. Frozen stages use one Charon CPU, 60-second process limits and
+50-second package-command limits. No host environment, upstream source or parent
+checkpoint is modified; no optimizer or training is invoked. Detailed prospective
+plans, package constraints and receipts are frozen in the evidence.
+
+**Result.** The official 20260901 CPython 3.11.16 archive matches published SHA256
+`64427febea27864d136db46c8efe968eb6fa5ca2813ce1dca4bb95aec31cb2e4`.
+Initialization takes 6.84 s. CPU TensorFlow dependencies download in 37.61 s and
+install offline in 14.36 s. Archived ML2 also requires importable PyTorch to
+register its TensorFlow pipeline; CPU PyTorch 2.1.2 and support packages install
+offline in 9.17 s. NumPy 1.24.3 satisfies TensorFlow's constraint, deliberately
+differing from the archive's 1.24.4 listing. Dependency consistency passes.
+
+**Preservation.** Retain the verified interpreter archive, 507,466,032 bytes of
+hashed wheels, exact installation inputs and logs. The wheel allowance was
+explicitly increased from 512 to 768 MiB before PyTorch acquisition. The installed-
+file manifest covers 38,373 files/links and 2,014,601,720 bytes; snapshotting takes
+14.37 s. Expanded environments and disposable download caches remain on Charon,
+explicitly excluded from SD transfer as reproducible duplicates; nothing is
+deleted. Successful installation is not model qualification.
+
+**Evidence.** [neural-synthesis-runtime-20260923-v1](artifacts/scc-neural-synthesis-runtime-20260923-v1/): 170 manifest-listed files, 549,075,559 bytes; manifest SHA256 `848f7198adc3505938b31ff76769080e908f1964f0a81361ec2473a5277741a7`.
+
+<a id="ln-360"></a>
+### LN-360 — 2026-09-23: exact circuit semantics for the four inference controls
+
+**Plan.** Translate deterministic ASCII AIGER into its complete reachable state
+graph, with one signal per player and at most ten Boolean latches. Reject invalid
+references, cyclic gates, unknown initialization and environment outputs depending
+on the system's current action. Use the independent LN-350 temporal monitors for
+current response, delayed response, future-input prediction and unforceable input.
+One Charon CPU, 60 seconds; no neural execution or training.
+
+**Validation and correction.** Fourteen positive/rejection controls initially
+pass in 0.04 s. Neural outputs then expose an overly strict parser requirement:
+[ASCII AIGER](https://fmv.jku.at/aiger/FORMAT.aiger) permits sparse node numbering
+and unordered acyclic gate declarations. Preserve the original rejection results;
+replace those restrictions with explicit reference checks and topological sorting.
+Seventeen controls now pass, including sparse numbering, reversed gate order and
+a two-gate cycle. Recheck saved neural outputs without rerunning inference.
+This checker is exact for its four fixtures, not a general LTL verifier.
+
+**Evidence.** [aiger-controller-validation-20260923-v1](artifacts/scc-aiger-controller-validation-20260923-v1/): 11 manifest-listed files, 23,190 bytes; manifest SHA256 `6661ec3c6e0ed17a1bcf234e3207cfca2d0e87e5921d22bf4369ad6b043879cb`. [aiger-controller-reassessment-20260923-v1](artifacts/scc-aiger-controller-reassessment-20260923-v1/): 14 manifest-listed files, 42,756 bytes; manifest SHA256 `5188abed2d6ed98c7eef738e38c3be64c6e8232c4121fcfa2b1435152545c959`.
+
+<a id="ln-361"></a>
+### LN-361 — 2026-09-23: strict restoration and neural semantic controls
+
+**Plan.** Copy verified archived source/checkpoint into fresh working directories.
+Disable network connections, GPU use and external logging. Load only the evaluation
+pipeline and require both nontrivial restoration and every existing model object
+matched; unused saved optimizer objects may remain. Preserve original tokenizers,
+length limits and two-beam decoding. Hash model variables and parent files before
+and after inference. Seed 2026092301, one Charon CPU, 60 seconds per stage.
+
+**Restoration.** All 340 variables, representing 14,791,748 parameters, match.
+Restoration takes 21.78 s; the stage takes 23.80 s, peaking at 911,944 KiB.
+All model and parent hashes remain unchanged after the subsequent inference runs.
+
+**Controls.** The four formulas are G(i0 <-> o0), G(i0 <-> X o0),
+G(o0 <-> X i0), and G i0. Eight proposals take 42.08 s including restoration.
+After the LN-360 correction, at least one candidate is valid on three of four
+fixtures: current response, delayed response and unforceable input. Only current
+response has a correct first-ranked candidate.
+
+**Wider search.** A separately frozen sixteen-beam setting tests only the failed
+future-input fixture, retaining weights, tokenizers and length bounds. It takes
+17.01 s after 21.65 s restoration. Fifteen decoded candidates incorrectly claim
+realizability; one has a parse error. None supplies a valid counterstrategy.
+These fixed, publicly simple cases validate execution and expose a failure; they
+estimate neither fresh-task performance nor learned advantage. No training,
+parameter intervention, removal certificate or mechanism admission follows.
+
+**Evidence.** [neural-synthesis-inference-20260923-v1](artifacts/scc-neural-synthesis-inference-20260923-v1/): 1,614 manifest-listed files, 540,505,365 bytes; manifest SHA256 `1b3db9e148c365f07507e74b8fb0fe5cef9242db3df0a4674f40db866cedf99a`.
+
+<a id="ln-362"></a>
+### LN-362 — 2026-09-23: general temporal verification with explicit causal checks
+
+**Plan.** Extend the circuit frontend to ten total Boolean signals and ten latches,
+charging complete reachable-state expansion. Feed its graph to the pinned
+SemML/Owl LTL checker through a Java controller adapter. Recheck totality, role
+sizes, references and causal order before using the backend, which otherwise
+assumes a well-formed environment policy. Timeouts and unsupported inputs remain
+unknown. One Charon CPU, 60 seconds and 4 GiB Java heap; no neural execution.
+
+**Failures and corrections.** The first stage fails compilation because the BDD
+leaf constructor expects one value rather than a singleton set. The next compiles
+but fails known-good controls: the interface uses global proposition indices for
+output bitsets and counterstrategy input trees. Correct the offsets and preserve
+both failed stages. Neither produced a qualified scientific result.
+
+**Result.** All eighteen independent expectations pass in 0.846 s of backend
+checking, including first-call initialization. They cover the well-formed LN-360
+fixtures, alternating liveness/invariance, environment liveness, two-signal copying
+and mismatch, and strong-until satisfaction/violation. All seventeen frontend
+controls also pass. This qualifies the bounded adapter, not learned SCC.
+
+**Evidence.** [general-circuit-verification-20260923-v1](artifacts/scc-general-circuit-verification-20260923-v1/): 43 manifest-listed files, 155,575 bytes; manifest SHA256 `7e0e75fd4dd127b8b6fabc5b38fc12684a77d8dfdb2148ddc36d3edcae3e2241`.
+
+<a id="ln-363"></a>
+### LN-363 — 2026-09-23: public counterpolicies for purportedly difficult neural examples
+
+**Question.** The [NeuroSynt paper, section 5.2](https://arxiv.org/html/2401.12131v2)
+describes most exclusive solves as arbiters/load balancers whose requirements
+conflict over simultaneous grants. Test a generic public judgment procedure before
+using those solver timeouts as evidence of indispensable learned judgment. Acquire
+the archived benchmark: all 2,149 members pass CRC and individual SHA256 in 7.32 s,
+with 2,294,261 downloaded and 7,951,034 extracted bytes. The complete 4 GB archive
+checksum is not verified. Source, configurations and prospective plans are frozen.
+
+**Initial decision procedure.** For specifications without assumptions, try
+all-false and all-true constant environment policies. Substitute each through the
+guarantees; collect propositional invariants G P. A conjunct composed of X/F/G
+operators around propositional Q requires Q at some time. If the conjunction of
+invariants and Q is unsatisfiable, the constant policy is a counterstrategy.
+Enumerate all valuations of at most twelve remaining atoms. Preserve the policy
+and contradiction; nonmatches are unknown. Decisions do not use names or labels.
+
+**Broad screen and resource failures.** Six controls pass. The first benchmark
+attempt hits the parser's stack limit. A fresh stage uses a 16 MiB stack and
+records per-input parse/stack failures as unknown. Of 1,074 JSON specifications,
+34 are certified, 59 have assumptions, 357 lack a supported certificate, and
+624 are unexamined after the search deadline. Deep parsing extends work to
+53.83 s despite the between-operation 30-second deadline; the separate 60-second
+process limit holds. This is an incomplete benchmark screen.
+
+**Selected families.** A separate audit includes all 120 archived
+full_arbiter_unreal* and load_balancer_unreal* specifications. Filenames select
+the family and identify results; the decision procedure uses formulas and signal
+roles. It certifies all 62 arbiter variants in 2.012 s of summed internal search,
+including delayed simultaneous-grant requirements through step 26 and eventual
+simultaneous-grant requirements. All 58 load balancers remain unknown because
+they have assumptions. This is a targeted audit, not unbiased task accuracy.
+
+**Assumption-aware extension.** Add each one-bit change to the two uniform
+constant policies. Admit a policy only if every substituted assumption simplifies
+to true independently of system actions. Allow delayed invariants X^k G P. Use a
+required Q only if it must occur after all invariant start times or recur infinitely
+often. Preserve these timing conditions in the certificate. Ten controls include
+assumption-sensitive cases and negative controls where an early Q precedes the
+invariant. All pass. Budgets remain one CPU, 60 seconds, a 30-second search deadline,
+4 GiB heap and 16 MiB stack.
+
+**Result.** The extension certifies **103/120** family members: all 62 arbiters
+and 41/58 load balancers, including the six-grant, step-five load-balancer example
+described in the paper. Seventeen remain unknown. Summed internal search takes
+2.668 s; the longest successful case takes 0.366 s. These exclude Java startup.
+Recorded valuation counts concern the final attempted policy, not aggregate work
+across earlier policies. Every successful result has a formula-derived constant
+counterpolicy and an exact propositional contradiction certificate.
+
+**Independent full-formula checks.** Select full_arbiter_unreal13_16,
+full_arbiter_unreal23 and load_balancer_unreal13_12. Compile each certificate into
+an AIGER counterstrategy and add an all-false negative control. The unspecialized
+LTL backend times out at 60 seconds before returning its first answer. In a fresh
+stage, substitute the validated one-state policy's fixed environment bits through
+the entire original implication before automaton construction. This exact
+specialization is independent of invariant/event extraction. All three genuine
+counterpolicies pass and all three incorrect policies fail; six checks take
+2.278 s including first-call setup. All 103 were not independently checked by
+two backends. Both the timeout and successful specialization are preserved.
+
+**Decision.** Difficulty for an unadapted general solver is insufficient evidence
+of difficulty of the protected judgment. These benchmark families have reusable
+public simplifications and do not supply the missing learned-advantage evidence.
+The restored neural model may still have harder useful abilities; neither its
+failed elementary fixture nor these shortcuts establish general impossibility.
+The next screen needs fresh mixed-winner instances and comparisons against both
+full solvers and accumulated structural policies. The conditional synthesis-to-
+confidentiality relation survives; genuine functional removal and a defensible
+training mechanism remain unresolved. No training or parameter intervention ran.
+
+**Evidence.** [neural-synthesis-benchmark-20260923-v1](artifacts/scc-neural-synthesis-benchmark-20260923-v1/): 2,165 manifest-listed files, 10,747,256 bytes; manifest SHA256 `e6bfc3b9abb56fe6c47f3a985ad5dcb5b94d4c53c493e89aac3a1851c8967d8f`. [temporal-contradiction-assessment-20260923-v1](artifacts/scc-temporal-contradiction-assessment-20260923-v1/): 93 manifest-listed files, 13,138,358 bytes; manifest SHA256 `bffc911dfec9784750e041e424a977c53026afd69eb30b785e614b9e493c142c`.
 
 ## Historical evidence
 

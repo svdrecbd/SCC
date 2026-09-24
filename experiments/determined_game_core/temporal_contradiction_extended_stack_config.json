@@ -1,0 +1,9 @@
+{
+  "specification_directory": "/home/salvador/scc-research/neural-synthesis-benchmark-20260923-v1/source01/selected_release/ml2-storage/ltl-spec/sc-1-f",
+  "maximum_atoms": 12,
+  "search_seconds": 30,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "java_heap": "4g",
+  "java_stack": "16m"
+}

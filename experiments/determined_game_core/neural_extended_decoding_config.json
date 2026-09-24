@@ -1,0 +1,13 @@
+{
+  "release_directory": "/home/salvador/scc-research/neural-synthesis-release-20260923-v1",
+  "seed": 2026092301,
+  "cases": [
+    {
+      "name": "future_input_prediction",
+      "formula": "G (o0 <-> X i0)"
+    }
+  ],
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "beam_size": 16
+}

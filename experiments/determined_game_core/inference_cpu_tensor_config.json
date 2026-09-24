@@ -1,0 +1,14 @@
+{
+  "environment": "/home/salvador/scc-research/neural-synthesis-runtime-20260923-v1/initialization01/environment",
+  "wheel_directory": "/home/salvador/scc-research/neural-synthesis-runtime-20260923-v1/wheels",
+  "operation": "download",
+  "packages": [
+    "torch==2.1.2+cpu"
+  ],
+  "invocation_seconds": 50,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "maximum_wheel_bytes": 805306368,
+  "index_url": "https://download.pytorch.org/whl/cpu",
+  "no_dependencies": true
+}

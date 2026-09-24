@@ -1,0 +1,8 @@
+{
+  "maximum_latches": 10,
+  "maximum_signals": 10,
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "java_heap": "4g",
+  "training": false
+}

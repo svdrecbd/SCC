@@ -1,0 +1,24 @@
+{
+  "release_directory": "/home/salvador/scc-research/neural-synthesis-release-20260923-v1",
+  "seed": 2026092301,
+  "cases": [
+    {
+      "name": "current_response",
+      "formula": "G (i0 <-> o0)"
+    },
+    {
+      "name": "delayed_response",
+      "formula": "G (i0 <-> X o0)"
+    },
+    {
+      "name": "future_input_prediction",
+      "formula": "G (o0 <-> X i0)"
+    },
+    {
+      "name": "unforceable_input",
+      "formula": "G i0"
+    }
+  ],
+  "wall_seconds": 60,
+  "processor_count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "release_url": "https://api.github.com/repos/astral-sh/python-build-standalone/releases/latest",
+  "maximum_download_bytes": 16777216,
+  "maximum_requests": 2,
+  "request_timeout_seconds": 20,
+  "wall_seconds": 60,
+  "processor_count": 1
+}
