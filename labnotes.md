@@ -179,9 +179,14 @@ neural paper's exclusive solves. Three complete specifications independently
 verify after exact constant-policy specialization; their incorrect-policy controls
 fail. An unadapted general checker times out, demonstrating why solver difficulty
 alone is insufficient. Seventeen selected cases remain unknown; the larger
-benchmark screen was incomplete. A fresh mixed-winner workload, a nontrivial
-learned contribution and genuine functional removal remain unresolved.
-No training mechanism has been admitted or training initiated.
+benchmark screen was incomplete. Fresh compositions now include both winners ([LN-364](#ln-364)): the neural
+model produces a verified controller on four of eight cases, while public
+judgment resolves all eight faster than neural generation after initialization
+is treated consistently. A fixed expansion to five signals per role and
+3–11 requirements adds sixteen publicly decidable cases; its two densest groups
+are entirely negative ([LN-365](#ln-365)). Neither workload establishes learned
+computational nonvacuity. No genuine removal, training mechanism or general
+impossibility has been established; no training has begun.
 
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
@@ -28280,6 +28285,185 @@ confidentiality relation survives; genuine functional removal and a defensible
 training mechanism remain unresolved. No training or parameter intervention ran.
 
 **Evidence.** [neural-synthesis-benchmark-20260923-v1](artifacts/scc-neural-synthesis-benchmark-20260923-v1/): 2,165 manifest-listed files, 10,747,256 bytes; manifest SHA256 `e6bfc3b9abb56fe6c47f3a985ad5dcb5b94d4c53c493e89aac3a1851c8967d8f`. [temporal-contradiction-assessment-20260923-v1](artifacts/scc-temporal-contradiction-assessment-20260923-v1/): 93 manifest-listed files, 13,138,358 bytes; manifest SHA256 `bffc911dfec9784750e041e424a977c53026afd69eb30b785e614b9e493c142c`.
+
+<a id="ln-364"></a>
+### LN-364 — 2026-09-23: fresh temporal compositions before learned qualification
+
+**Prior-turn classification: progress.** LN-359–363 supplies verified inference,
+independent semantic checking and a generic public shortcut. The working tree is
+clean at 6136cd3; the mechanism goal remains unchanged and incomplete.
+
+**Plan.** Mine canonical, duplicate-free assumption and guarantee patterns from
+the CRC/SHA-verified NeuroSynt benchmark JSON. Preserve provenance hashes. Keep
+patterns with at most 26 non-parenthesis tokens and at most three input and three
+output variables. Assumptions must use inputs only; guarantees must mention an
+output. Independently permute each pattern's variable assignments into three
+shared input and three shared output slots. Draw one assumption and five distinct
+guarantee patterns per case, eight cases, seed 2026092302. No outcome labels,
+source-family names or successful-controller data enter generation. Preserve the
+complete library, draws and mappings. Syntactic novelty is not independence from
+the model's mined training patterns; these are development cases, not a held-out
+competence estimate or a claim of guaranteed balance.
+
+First run the existing fully nonlearned SemML decision procedure for four seconds
+per case, sequentially on one Charon CPU, 60-second outer stage, 4 GiB heap and
+16 MiB stack. Preserve failures and timeouts as unknown. Then apply accumulated
+public structural policies. Both winner types and a learned contribution remain
+qualification requirements; mixed labels alone cannot admit training. All model
+parameters, components and decoder alternatives remain editable. This wave tests
+no genuine-removal trigger, repair or severe-loss endpoint; no training starts.
+
+**Generation and public decision result.** The deduplicated library contains
+16 input-only assumption and 362 guarantee patterns. Without outcome selection,
+the eight generated compositions yield three realizable and five unrealizable
+answers. The public solver decides all eight in 1.61–2.42 s per cold invocation;
+the complete generation/decision stage takes 20.81 s. Mixed outcomes are now
+observed, but they do not establish computational nonvacuity or balance over the
+whole law. Apply both existing structural procedures to all eight in a separate
+one-CPU, 60-second stage; preserve unknown outcomes and all formula-derived
+policies. No model has yet run on these cases.
+
+**Structural screen.** The propositional constructor returns unknown on all eight;
+the stronger temporal procedure certifies two negative instances. The remaining
+six include both outcomes, but the full public solver still decides every case
+quickly. Their failure under these two incomplete constructors is not a lower
+bound or training admission.
+
+**Neural inference contract.** Evaluate all eight, including the two publicly
+simplified cases, in two frozen groups of four. Use the restored parent with two
+beams and unchanged tokenizers/length bounds. Explicitly compile its inference
+call with TensorFlow's graph executor to avoid attributing Python dispatch costs
+to the learned procedure. First compare eager and compiled output tokens on the
+fixed current-response control, requiring exact equality; charge and record both
+calls and compilation. Require unchanged weights and parent hashes. Generated
+circuits receive structural/causal validation first and remain semantically
+unverified until the general checker runs. Each group gets one Charon CPU and
+60 seconds; no gradients, optimization, neural edits or training. Cold restoration,
+compilation and per-case execution remain distinct measurements; public solver
+startup must not be confused with its warm execution cost.
+
+**Execution correction.** Stage inference01 restores the checkpoint, then fails
+before any generated case when graph execution encounters the archived encoder's
+Python `len` on a symbolic tensor. The failed stage is retained. Retry with
+TensorFlow AutoGraph enabled in a fresh stage; require the same eager/compiled
+token comparison, unchanged weights and unchanged parent. This changes execution
+conversion only, not the archived source, weights or scientific contract. Check
+assumption satisfiability independently, with satisfiable and contradictory
+controls, before interpreting positive instances.
+
+**Compiled execution validation.** Enabling AutoGraph resolves the archived
+symbolic-tensor conversion error without changing upstream source. The first
+four-case stage completes in 40.93 s, including 21.65 s restoration, 4.44 s eager
+reference and 7.91 s compilation/reference execution. Both reference token arrays
+match exactly. All generated cases are encoded and decoded; these outputs remain
+unverified. Run the remaining frozen group with the identical corrected runner,
+then verify every candidate against its complete original formula using the
+independent backend, allowing four seconds per candidate and recording timeouts
+as unverified. No learned-advantage claim follows from warm inference alone.
+
+**Timing control plan.** Both neural groups finish with unchanged weights and
+parent files. The assumptions checker accepts all eight original assumptions;
+its satisfiable and contradictory controls pass. Before comparing warm neural
+calls with cold public invocations, run the same nonlearned decision configuration
+in one JVM, creating a fresh solver object for each case. Include the same fixed
+current-response reference as initialization and report it separately. Require
+every generated decision to agree with the frozen cold result; record parsing,
+initialization and case execution. One Charon CPU, 60 seconds, 4 GiB heap. This
+small timing control can refute an apparent advantage; it cannot prove optimality
+of the public procedures or establish a general computational lower bound.
+
+**Warm public execution correction.** The first repeated-invocation stage passes
+the initialization control, then fails because the command-line entry point tries
+to reconfigure an already initialized logging library. Preserve this failure;
+it supplies no generated-case timing. In a fresh stage, compile a copied entry
+point with only that repeated logging assignment removed, and set the same ERROR
+level once in the driver. Freeze original and modified files. Algorithm, solver
+options and immutable installed release stay unchanged. Require agreement on all
+nine decisions before interpreting timings.
+
+**Verified result and decision.** The two neural groups complete with strict
+restoration, matching eager/compiled reference tokens and unchanged parent/weights.
+Warm generation takes 0.79–2.52 s per case. Of sixteen candidates, seven pass
+complete LTL verification, seven fail, and two are malformed circuits (the header
+claims three inputs but only two input lines are present). There is at least one
+accepted candidate on four of eight cases, with a correct first candidate on
+three. No verification times out. Correct winner classification alone is seven
+of eight and must not be reported as controller synthesis success. The accepted
+cases include both winners. Cold independent verification adds 1.51–2.52 s for
+accepted candidates; checking both beams and initialization costs are additional.
+
+The corrected warm public control agrees on every case, taking 0.126–0.524 s
+per generated decision after a 0.931 s initialization reference. Every public
+decision precedes neural generation, even before charging certificate checking.
+These single development timings do not establish an optimal algorithm, but they
+remove the apparent advantage created by comparing warm neural inference with
+cold public processes. This workload supplies mixed labels and verified neural
+procedures; it does not supply computational nonvacuity or admit training. The
+conditional useful-to-confidentiality relation survives; genuine removal is
+unattainable at these measured budgets if this public replacement is retained.
+
+**Evidence.** [temporal-pattern-development-20260923-v1](artifacts/scc-temporal-pattern-development-20260923-v1/): 1,798 manifest-listed files, 541,131,842 bytes; manifest SHA256 `aa340e8b3f4e097968cb831ca1e28f5e39ed691322d03fac52627a29df975702`.
+
+<a id="ln-365"></a>
+### LN-365 — 2026-09-23: fixed complexity expansion of the temporal workload
+
+**Question.** LN-364 is meaningful negative development evidence, not completion
+of the mechanism goal. Does its public replacement result persist when more
+signals and interacting requirements are available? Freeze four conditions with
+five inputs and five outputs, one input-only assumption, and respectively
+3, 6, 9 and 11 distinct guarantees. Draw four instances per condition, seeds
+2026092311 through 2026092314, from the same canonical library and variable-mapping
+law. All outcomes are retained; no winner-based rejection or source-name selection.
+These are calibration cases drawn from possibly training-overlapping patterns,
+not an independent competence claim. The largest condition stays within the
+archived tokenizer's twelve-property limit. Size alone is not evidence of a
+stronger SCC dependency.
+
+**Contract.** First reproduce the original eight specifications byte-for-byte with
+the parameterized generator's default signal counts. Then generate each condition
+and run the same fully nonlearned public decision procedure, ten seconds per
+instance and a 60-second outer stage on one Charon CPU, 4 GiB heap. A timeout
+remains unknown, not an unavailable judgment. Verify assumption satisfiability
+and inspect original formulas before any inference follow-up. Charge initialization
+consistently in any comparison; no training or parameter intervention. All
+components and public alternatives remain editable. No removal, severe-loss or
+repair claim is tested by this workload screen.
+
+**Result.** The parameterized generator reproduces LN-364's original workload
+exactly (SHA256 `e9c5263084ea211c3c454361bc36f0c97e8a96da9c46dc5bd8623c79e6a432d3`).
+All sixteen larger instances have satisfiable input assumptions; independent
+satisfiable/contradictory controls pass. Public decision resolves every instance
+within the frozen limit:
+
+| Guarantees | Realizable | Unrealizable | Cold decision seconds |
+| --- | ---: | ---: | --- |
+| 3 | 2 | 2 | 1.41–4.22 |
+| 6 | 1 | 3 | 1.41–2.12 |
+| 9 | 0 | 4 | 1.81–2.41 |
+| 11 | 0 | 4 | 3.02–7.02 |
+
+The four complete generation/decision stages take 14.55, 12.84, 13.46 and
+27.48 seconds. No timeout or failed decision is converted into a label. These
+small groups are calibration, not estimates of the population realizability
+rate. Every answer in the two largest groups is negative: increasing random
+conjunction density has not supplied the desired mixed, computationally
+nontrivial domain. Satisfiable assumptions exclude vacuous positive answers;
+they do not prevent incompatible system obligations.
+
+**Decision.** Do not allocate neural inference or training merely to these larger
+cases. Their exact public judgments already exist within the declared development
+resources; no learned contribution is necessary for those judgments. Combined
+with LN-364, this rejects these two calibrated workloads as current mechanism
+admission evidence, not the full generator law, neural synthesis or intrinsic
+SCC in general. A useful follow-up must alter the source of task structure—such
+as compositional interaction among individually consistent specifications—and
+retain both outcomes, rather than keep increasing independent conjunction count.
+It must still face the same public decision and certificate checks. The mechanism
+goal remains active and unmet. All fifteen changed research source/configuration
+files pass a frozen SHA256 and Python/JSON syntax audit on Charon; the Java
+adapters were compiled and exercised in their respective completed stages.
+
+**Evidence.** [temporal-pattern-expansion-20260923-v1](artifacts/scc-temporal-pattern-expansion-20260923-v1/): 132 manifest-listed files, 687,156 bytes; manifest SHA256 `2142b8795a8dd05294ee38cd0892c19257f0a816da199c921ca1ad27da367191`.
 
 ## Historical evidence
 

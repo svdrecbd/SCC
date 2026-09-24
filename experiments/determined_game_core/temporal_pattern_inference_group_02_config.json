@@ -1,0 +1,16 @@
+{
+  "release_directory": "/home/salvador/scc-research/neural-synthesis-release-20260923-v1",
+  "seed": 2026092301,
+  "cases": [],
+  "wall_seconds": 60,
+  "processor_count": 1,
+  "compile_inference": true,
+  "specification_file": "/home/salvador/scc-research/temporal-pattern-development-20260923-v1/screen01/specifications.json",
+  "specification_sha256": "e9c5263084ea211c3c454361bc36f0c97e8a96da9c46dc5bd8623c79e6a432d3",
+  "case_names": [
+    "specification_0004",
+    "specification_0005",
+    "specification_0006",
+    "specification_0007"
+  ]
+}

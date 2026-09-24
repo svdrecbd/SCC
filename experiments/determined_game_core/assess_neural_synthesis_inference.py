@@ -60,7 +60,7 @@ def main():
     import tensorflow as tensorflow
     from ml2.pipelines import load_pipeline
     from ml2.ltl.ltl_spec import DecompLTLSpec
-    from verify_aiger_controller import verify_aiger
+    from verify_aiger_controller import verify_aiger, controller_graph
     tensorflow.random.set_seed(configuration['seed'])
     pipeline = load_pipeline('ltl-syn/ht-50/train/pipe')
     if 'beam_size' in configuration:
@@ -85,13 +85,45 @@ def main():
             ['tensorflow-cpu','keras','torch','numpy','typing_extensions']})
     (directory/'restoration.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps({key:value for key,value in receipt.items() if key!='variables'}),flush=True)
+    if configuration.get('compile_inference'):
+        reference = DecompLTLSpec.from_dict(dict(assumptions=[], guarantees=['G (i0 <-> o0)'],
+            inputs=['i0'], outputs=['o0'], semantics='mealy', notation='infix'))
+        comparison_started = time.perf_counter()
+        eager = pipeline.eval_sample(reference, training=False)
+        eager_seconds = time.perf_counter()-comparison_started
+        pipeline._eval_model = tensorflow.function(model, autograph=True, reduce_retracing=True)
+        comparison_started = time.perf_counter()
+        compiled = pipeline.eval_sample(reference, training=False)
+        compiled_seconds = time.perf_counter()-comparison_started
+        eager_tokens = [beam.pred_enc.tolist() for beam in eager.beams]
+        compiled_tokens = [beam.pred_enc.tolist() for beam in compiled.beams]
+        comparison = dict(eager_seconds=eager_seconds, first_compiled_seconds=compiled_seconds,
+            identical_tokens=eager_tokens==compiled_tokens, eager_tokens=eager_tokens, compiled_tokens=compiled_tokens)
+        (directory/'compilation_comparison.json').write_text(json.dumps(comparison,indent=2)+'\n')
+        print(json.dumps(comparison),flush=True)
+        if not comparison['identical_tokens']:
+            raise AssertionError('Compiled inference differs on the frozen reference.')
+    cases = configuration['cases']
+    if configuration.get('specification_file'):
+        data = Path(configuration['specification_file']).read_bytes()
+        if hashlib.sha256(data).hexdigest() != configuration['specification_sha256']:
+            raise ValueError('Generated workload checksum mismatch.')
+        all_cases = json.loads(data)
+        cases = [dict(name=record['name'],specification=record) for record in all_cases
+                 if record['name'] in configuration['case_names']]
+        if len(cases) != len(configuration['case_names']):
+            raise ValueError('Missing generated case.')
+        (directory/'selected_cases.json').write_text(json.dumps(cases,indent=2)+'\n')
     results = []
-    for case in configuration['cases']:
-        specification = DecompLTLSpec.from_dict(dict(assumptions=[], guarantees=[case['formula']],
+    for case in cases:
+        specification_data = case.get('specification',dict(assumptions=[], guarantees=[case.get('formula','')],
             inputs=['i0'], outputs=['o0'], semantics='mealy', notation='infix', name=case['name']))
+        specification = DecompLTLSpec.from_dict(specification_data)
+        conjunction = lambda values: ' & '.join('('+value+')' for value in values) or 'true'
+        formula = '('+conjunction(specification_data['assumptions'])+') -> ('+conjunction(specification_data['guarantees'])+')'
         case_started = time.perf_counter()
         sample = pipeline.eval_sample(specification, training=False)
-        row = dict(name=case['name'], formula=case['formula'], seconds=time.perf_counter()-case_started,
+        row = dict(name=case['name'], formula=formula, seconds=time.perf_counter()-case_started,
             input_encoding_error=sample.inp_enc_err, beams=[])
         for beam in getattr(sample, 'beams', []):
             result = dict(index=beam.id, tokens=beam.pred_enc.tolist(), decoding_error=beam.pred_dec_err)
@@ -99,7 +131,18 @@ def main():
                 result['status'] = beam.pred.status.token()
                 result['circuit'] = beam.pred.circuit.to_str()
                 try:
-                    result['verification'] = verify_aiger(result['circuit'],case['name'],beam.pred.status.realizable)
+                    if 'specification' in case:
+                        graph = controller_graph(result['circuit'],beam.pred.status.realizable)
+                        expected_inputs = specification.inputs if beam.pred.status.realizable else specification.outputs
+                        expected_outputs = specification.outputs if beam.pred.status.realizable else specification.inputs
+                        if graph['input_count'] != len(expected_inputs) or graph['output_count'] != len(expected_outputs):
+                            raise ValueError('Generated circuit signal-count mismatch.')
+                        graph.update(name=case['name']+'_beam_'+str(beam.id), formula=formula,
+                            environment_names=specification.inputs, system_names=specification.outputs)
+                        result['controller_graph'] = graph
+                        result['semantic_verification_pending'] = True
+                    else:
+                        result['verification'] = verify_aiger(result['circuit'],case['name'],beam.pred.status.realizable)
                 except ValueError as exception:
                     result['verification_error'] = str(exception)
             row['beams'].append(result)

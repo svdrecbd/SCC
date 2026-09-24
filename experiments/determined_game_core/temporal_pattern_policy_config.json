@@ -1,0 +1,20 @@
+{
+  "java_home": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/java01/runtime/usr/lib/jvm/java-17-openjdk-amd64",
+  "executable": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/bin/semml",
+  "wall_seconds": 60,
+  "invocation_seconds": 4,
+  "processor_count": 1,
+  "heap_bytes": 4294967296,
+  "training": false,
+  "dependency_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/dependency01/selected_source/thirdparty/kissat",
+  "dependency_sha256": "db1c1db97888b683ac692c7cea466c36c63e87304a26a9044ac5c705a777ccac",
+  "source_directory": "/home/salvador/scc-research/neural-synthesis-benchmark-20260923-v1/source01/selected_release/ml2-storage/ltl-spec/sc-1-f",
+  "source_manifest": "/home/salvador/scc-research/neural-synthesis-benchmark-20260923-v1/source01/release_manifest.json",
+  "maximum_pattern_tokens": 26,
+  "seed": 2026092302,
+  "instance_count": 8,
+  "assumption_count": 1,
+  "guarantee_count": 5,
+  "generation_directory": "/home/salvador/scc-research/temporal-pattern-development-20260923-v1/screen01",
+  "library_directory": "/home/salvador/scc-research/semantic-synthesis-runtime-20260923-v1/build05/working_source/build/install/semml/lib"
+}
