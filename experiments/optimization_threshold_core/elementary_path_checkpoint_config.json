@@ -1,0 +1,19 @@
+{
+  "maximum_requests": 3,
+  "maximum_bytes": 2097152,
+  "maximum_seconds": 40,
+  "requests": [
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/checkpoints/hardened_final_ER.pt",
+      "output": "ER.pt"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/checkpoints/hardened_final_BA.pt",
+      "output": "BA.pt"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/checkpoints/hardened_final_GRID.pt",
+      "output": "GRID.pt"
+    }
+  ]
+}

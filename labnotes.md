@@ -205,6 +205,16 @@ premise under resources admitting those algorithms. A viable optimization lead
 must withstand coarse public approximation, not merely make exact optimization
 expensive. No learned mechanism or general impossibility follows.
 
+**Elementary-path screen — [LN-369–370](#ln-369).** Three published checkpoints
+are restored unchanged. On six fixed fresh development graphs, a standalone
+public planner matches or improves every learned solution. Four graphs have
+exactly constant neural guidance; a constant reproduces their learned paths.
+All 24 public method paths are independently checked. For the six-graph paired
+threshold law, a cheap analytic objective bound certifies at least 75.4197%
+public judgment accuracy without knowing exact optima. This rejects a 51%
+all-reader premise on that finite law, not path learning in general or SCC.
+No training mechanism has been admitted.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -28781,6 +28791,230 @@ No training mechanism is admitted and no training begins.
 636,306 bytes, manifest SHA256
 `5bfa0f95e2e89d360a07137c418c5b084d4d605c8c27c5f2921331553f593862`.
 Both stages are terminal. Executed source copies match the worktree.
+
+<a id="ln-369"></a>
+### LN-369 — 2026-09-23: inspect a learned elementary-path implementation
+
+**Selection.** LN-367–368 is completed progress, not a training mechanism.
+Positive allocation has a constructive public approximation obstruction. Examine
+simple-path planning with signed edge costs as a distinct possible useful
+procedure: a candidate path has a cheap exact check, while restricting a path
+to visit each vertex at most once changes the optimization problem. Merely naming
+an NP-hard domain supplies neither average-case difficulty nor learned advantage.
+
+**Primary-source screen.** [Neural Certificate Pricing](https://arxiv.org/html/2607.01185v1)
+reports better elementary-path costs than its public comparisons at larger graph
+sizes. Appendix D.4 uses a learned perturbation, iterative recovery and up to
+300 sampled paths; a visited set enforces elementarity in decoding. These costs
+all belong to the useful procedure. Its independent-set benchmarks already have
+public exact solutions, while its assignment comparisons retain strong public
+solutions. Those two branches do not resolve LN-368's concern. The paper links
+an [anonymous source release](https://anonymous.4open.science/r/Neural-Certificate-Pricing-D515/README.md).
+No pretrained weights, generator equivalence or independent reproduced advantage
+has yet been established. These are author-reported results, not SCC evidence.
+
+**Mechanism obligations before any model work.** A returned signed-cost path
+can instantiate the threshold witness only after defining a nonnegative quality
+scale, nonempty feasibility, and a justified substantial-loss baseline. Exact
+optima or valid threshold labels must be obtained with their full construction
+costs and without label-bearing metadata. A surviving good public path rules out
+near-chance functional removal on the corresponding broad margin law. Public
+value estimation is also a permitted reader. A learned forward pass plus a
+public search procedure is not by itself an indispensable learned operation.
+
+**Read-only acquisition.** Inspect the source-release listing and README first;
+fetch only generator, inference, decoder and model-loading source if their paths
+are present. At most twenty HTTP requests, 10 MiB total, 60 seconds, one Charon
+CPU, fresh artifact root and immutable request receipts. Do not execute upstream
+code, install dependencies, download an unbounded checkpoint or start training.
+Record unavailable paths and missing checkpoints precisely. This decides whether
+there is an executable qualification lead, not whether the domain is impossible.
+
+**Release inspection result.** Sixteen requests retrieve 117,989 bytes of
+public listings, documentation and eight selected source files; metadata lookup
+returns HTTP 401 and is not retried with authentication. The public file listing
+contains three small pretrained checkpoints (about 385 kB each). No upstream code
+has been executed. The release describes a 50-node experiment with gamma=0.7 and
+15 inner iterations; this differs from the paper's stated larger-graph protocol.
+Use the released checkpoint contract explicitly, rather than claiming reproduction
+of the larger published table.
+
+Inspection finds that neural features use graph structure, costs and spectral
+features; reference path labels are stored alongside the graph but are not inputs
+to the inspected forward calculation. The inference decoder samples paths from
+transformed transition probabilities, checks unvisited vertices and returns the
+lowest-cost completed path. A matched public control can replace the learned
+initial node potentials by zero while preserving that same recovery and decoder.
+The release's limited-label reference costs are feasible upper bounds, not always
+certified optima, so they cannot directly label both sides of an optimum-centered
+threshold law. These specific checks leave an executable lead, not a qualified
+mechanism. The next step is bounded checkpoint inspection and matched fresh-case
+inference, with labels kept out of input objects and all returned paths verified.
+
+**Evidence.** The read-only inspection is preserved in
+`artifacts/scc-elementary-path-inspection-20260923-v1/`: 41 files, 157,490 bytes,
+manifest SHA256
+`a460b6e71a61660af1207c9aa97c191410feb3768458b2fe8652eb06d6002a95`.
+
+<a id="ln-370"></a>
+### LN-370 — 2026-09-23: prepare a matched learned and public path-planning screen
+
+**Frozen development question.** Does the released elementary-path planner
+retain useful solution quality that its public recovery and sampling procedure
+cannot supply alone? Start with strict checkpoint restoration and a fixed fresh
+six-graph development screen (two each ER, BA, GRID; fifty nodes; seeds
+37037–37042). Preserve source generator semantics, cost interval [-1,1], zero
+source/sink edges and full graph features. Reference labels and metadata must
+not enter model inputs. Base graphs are selected before outputs, without solver-
+result rejection. This is not fresh population qualification or an exact replica
+of the release's seed-42 test set.
+
+**Acquisition and initialization.** Retrieve the three listed checkpoints only,
+with a total 2 MiB limit, in one 60-second Charon stage. Load using the restricted
+weights-only deserializer; record failure if that format requires unsupported
+objects rather than executing pickle payloads. Inspect tensor names, shapes,
+training options and digests. Inspect existing Python package availability;
+reuse an existing runtime read-only when compatible. New packages, if required,
+must live in a fresh isolated directory, not modify earlier immutable runtimes.
+No optimizer, parameter edit or training is part of this screen.
+
+**Comparators and controls.** Subject to validated model restoration, compare
+the unchanged checkpoint with zero initial potentials through the same public
+Bellman recovery and exactly the same 300-sample decoder and fixed random seed.
+Also permit a direct public cost-based sampler and a greedy simple-path
+constructor, using actual signed costs, no hidden labels or pretrained advisers.
+Time feature construction, learned guidance, recovery, decoding and verification
+separately, and count all retained code/state. Independently require source/sink,
+edges, no repeats, finite costs and correct cost summation on every returned path.
+Invalid-path, wrong-endpoint and repeated-node controls must fail; trivial fixtures
+must succeed. Test the actual released probability-to-decoder transform, not an
+assumed softmax formula.
+
+**Decision gate and scope.** Each case is a separate bounded 60-second Charon
+CPU stage with 10 MiB output and one active solver. Report timeouts and unknown
+optima explicitly. A public procedure matching or exceeding learned quality
+rejects that case as evidence of indispensable learned planning. A learned lead
+only justifies independent confirmation and a quality/removal construction; it
+does not satisfy all-reader removal or certify catastrophic cognition loss.
+The threshold law still needs certified labels and a defensible quality radius.
+Neither finite public-search failure nor a favorable small sample admits training.
+Freeze this entry, exact configuration, sources and machine record before each
+stage. Do not mutate source being imported by a running stage.
+
+**Checkpoint inspection.** All three checkpoints load with the restricted
+weights-only reader. Each contains 24 tensors, 93,633 parameters and 19 input
+features, with K=15, gamma=0.7 and d_max=2.0. Their SHA256 values and original
+options are preserved. The existing read-only Python 3.11 / Torch 2.1.2 runtime
+lacks PyG and SciPy. Acquire PyG 2.6.1, SciPy 1.11.4 and xxhash 3.5.0 wheels
+without dependencies into a fresh 128 MiB-bounded runtime directory, then install
+only there; one CPU and a 60-second stage. Required existing dependencies remain
+unchanged. Remove the unused `torch_scatter.scatter_logsumexp` import only in a
+new frozen source copy; no numerical expression or checkpoint tensor changes.
+[PyG's installation documentation](https://pytorch-geometric.readthedocs.io/en/2.6.1/install/installation.html)
+permits its basic operations without the optional extension packages. Test the
+actual loaded model before proceeding, and preserve any compatibility failure.
+
+**Additional diagnostic and a certified public bound.** After the fixed six
+cases terminate, use their saved graphs/features without resampling. Compare the
+released full batched forward call against the staged guidance-plus-recovery
+calculation, requiring maximum transition error <=1e-6. Record initial-potential
+range, variance, saturation and learned/zero transition differences; preserve
+checkpoint digests. This is an implementation diagnosis, not another qualification
+sample or a parameter intervention.
+
+The signed-cost graphs have zero-cost two-edge source/sink paths. Define useful
+value u=-cost for a nonpositive-cost returned path, and v=max feasible value.
+Each simple path uses at most one outgoing edge per vertex. Therefore
+
+    v <= B = sum_i max(0, max_(i,j) [-cost(i,j)]).
+
+For any verified public path of positive value b, LN-367 with R=v gives
+protected accuracy 1/2+b/(2v) >= 1/2+b/(2B). Compute B and each lower bound
+exactly as rational numbers from the saved FP32 costs. A public procedure may
+run all three declared public constructors and select the lowest verified cost;
+that selection uses no optimum or label. Record the sum of its actual method
+costs. These bounds can reject a near-chance premise on the declared finite base
+law even while the exact optima remain unknown. They are not measured protected
+accuracies, population bounds for unseen graphs, or a generation procedure for
+certified balanced labels. One fresh 60-second Charon stage, no sampling or
+training, with six saved-input digests frozen before execution.
+
+**Completed screen and saturation follow-up.** All six stages return verified
+paths, preserve their checkpoint and state digests, and pass the nine path
+controls. The declared public portfolio matches or exceeds learned quality on
+five cases; its capped mean retained value is 0.990819 relative to the learned
+outputs, with unknown exact optima. The saved-input diagnostic establishes a
+75.2232% mean lower bound on protected accuracy for that portfolio under the
+hypothetical R=v paired law. Full released forward calls and staged calculations
+agree exactly on all six transition matrices.
+
+On all four ER/BA graphs, every initial neural potential is exactly -2 in FP32.
+The two GRID graphs have nonconstant potentials. This supplies a specific public
+replacement to test: initialize every potential to the checkpoint's public lower
+bound -d_max=-2. In fresh `diagnostic02`, reuse the six fixed saved inputs and
+300-sample seeds. Require exact transition and returned-path equality with the
+learned method whenever its potential vector is constant -2; check all other
+returned paths independently. Record the expanded public portfolio separately
+as a post-screen diagnosis, not a predeclared or independent confirmation.
+Use the same 60-second Charon CPU and 10 MiB limits. This changes a public
+initialization, not any learned parameter or the protected-removal definition.
+
+**Constant-control result and independent replacement.** The constant -2
+initialization reproduces both transition matrices and returned paths exactly
+on all four ER/BA cases. Together with the existing public controls, the expanded
+portfolio matches or improves every learned result on the six reused graphs.
+Its certified mean paired-law judgment floor is 75.4197%; this is a lower bound,
+not an observed accuracy or a statement about new graphs.
+
+Before treating this as an executable public replacement, run a final 60-second
+standalone Charon control. Extract only the release's parameter-free recovery
+methods into a public class with the fixed published numerical options. Its
+process must not load a checkpoint, learned model or graph features. Reconstruct
+all six inputs using only nodes and edges; run zero/constant potential recovery,
+the same decoder, the cost sampler and greedy constructor. Check exact agreement
+with saved method paths/costs and independently verify every selected result.
+An audit hook rejects checkpoint-file access. This isolates public computation
+from the earlier comparison harness, which also held the neural weights in memory.
+Freeze the extracted methods, decoder, source and input hashes before execution;
+no source modification or training occurs during the run.
+
+**Independent public execution result.** The standalone process loads no
+checkpoint or learned model, receives only nodes and FP32 edges, and rejects the
+checkpoint-access negative control. In 5.14 s of construction (9.82 s including
+process startup) it returns all 24 method paths on the six saved graphs. A
+separate verifier, which alone reads reference answers, confirms exact equality
+of all 24 paths and costs with the previous controls. Its selected public output
+matches or improves the learned output on every case. The process does not import
+PyG and does not use spectral/node features. Thus the replacement is executable
+without the neural tensors, not merely a zeroed intermediate inside a loaded
+learned model. All scientific stages are terminal and every original checkpoint
+and failed or superseded configuration remains preserved.
+
+**Decision.** This released planner and these development cases do not qualify
+the proposed learned core. Four cases expose constant saturated guidance; the
+other two already lose to the zero-guidance public control. The exact threshold
+reduction remains valid, but the public portfolio has a certified 75.4197%
+mean judgment floor on the paired finite base law, excluding the proposed 51%
+all-reader premise there. This does not refute the paper's different larger
+experiment, establish a population result, or close elementary-path learning.
+No genuine alignment-removal experiment, broad cognition-destruction result or
+training admission has occurred.
+
+The next selection must establish a substantial learned contribution to useful
+construction before importing another solver pipeline into SCC. Optional neural
+ranking plus a strong public recovery method has repeatedly failed that test.
+Preserve the continuous quality-to-judgment reduction and certified public bounds
+as admission tools. A full mechanism or general impossibility is still unresolved;
+the active goal remains unfinished.
+
+**Preservation.** The complete checkpoint, isolated dependencies, source
+snapshots, six development stages, two diagnostics, standalone public constructor
+and independent verification are saved in
+`artifacts/scc-elementary-path-screen-20260923-v1/`: 2,073 files,
+155,719,612 bytes, verified manifest SHA256
+`5f30996d1e3fec351c3d364e58307e1a06c1c0ab556aa6a0e736ee2658ecc93a`.
+Executed current source copies match the worktree. The earlier diagnostic source
+and acquisition variant are separately retained. No experiment is running.
 
 ## Historical evidence
 

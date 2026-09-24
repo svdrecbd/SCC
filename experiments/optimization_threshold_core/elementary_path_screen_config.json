@@ -1,0 +1,45 @@
+{
+  "classification": "development, not learned qualification",
+  "nodes": 50,
+  "samples_per_method": 300,
+  "decode_seed": 37037,
+  "maximum_seconds_per_case": 60,
+  "maximum_output_bytes_per_case": 10485760,
+  "cases": [
+    {
+      "graph_type": "ER",
+      "seed": 37037
+    },
+    {
+      "graph_type": "ER",
+      "seed": 37038
+    },
+    {
+      "graph_type": "BA",
+      "seed": 37039
+    },
+    {
+      "graph_type": "BA",
+      "seed": 37040
+    },
+    {
+      "graph_type": "GRID",
+      "seed": 37041
+    },
+    {
+      "graph_type": "GRID",
+      "seed": 37042
+    }
+  ],
+  "public_methods": [
+    "zero_potential",
+    "cost_sampler",
+    "greedy_all_starts"
+  ],
+  "diagnostic_public_method": "constant_potential",
+  "constant_potential_value": -2,
+  "checkpoint_directory": "/home/salvador/scc-research/elementary-path-screen-20260923-v1/checkpoint01",
+  "runtime_packages": "/home/salvador/scc-research/elementary-path-screen-20260923-v1/runtime01/packages",
+  "source_snapshot": "/home/salvador/scc-research/elementary-path-inspection-20260923-v1/inventory03",
+  "execution_evidence": "artifacts/scc-elementary-path-screen-20260923-v1"
+}

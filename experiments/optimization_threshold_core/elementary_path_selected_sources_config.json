@@ -1,0 +1,43 @@
+{
+  "maximum_requests": 13,
+  "maximum_bytes": 10473416,
+  "maximum_seconds": 45,
+  "requests": [
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/files?path=espp/checkpoints",
+      "output": "checkpoint_files.json"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/inference.py",
+      "output": "inference.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/bi_level_certificates.py",
+      "output": "bi_level_certificates.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/decoding.py",
+      "output": "decoding.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/data_gen/create_dataset_julia.py",
+      "output": "create_dataset_julia.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/utils/create_graph.py",
+      "output": "create_graph.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/utils/graph_update.py",
+      "output": "graph_update.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/utils/lp_solution.py",
+      "output": "lp_solution.py"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/utils/detect_negative_cycle.py",
+      "output": "detect_negative_cycle.py"
+    }
+  ]
+}

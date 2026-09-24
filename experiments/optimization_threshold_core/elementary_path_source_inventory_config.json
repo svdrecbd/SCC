@@ -1,0 +1,23 @@
+{
+  "maximum_requests": 17,
+  "maximum_bytes": 10482308,
+  "maximum_seconds": 50,
+  "requests": [
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/files?path=espp",
+      "output": "path_files.json"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/espp/README.md",
+      "output": "path_readme.md"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/requirements.txt",
+      "output": "requirements.txt"
+    },
+    {
+      "url": "https://anonymous.4open.science/api/repo/Neural-Certificate-Pricing-D515/file/DATASETS.md",
+      "output": "datasets.md"
+    }
+  ]
+}
