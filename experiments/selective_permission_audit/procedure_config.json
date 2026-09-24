@@ -1,0 +1,10 @@
+{
+  "partition_source_count": 8,
+  "partition_group_sizes": [1, 2, 4],
+  "stochastic_channels_per_group_size": 100,
+  "seed": 38537,
+  "large_source_count": 100,
+  "large_group_size": 5,
+  "accuracy_caps": ["1/2", "107/200", "3/5", "3/4", "1"],
+  "maximum_result_bytes": 1048576
+}

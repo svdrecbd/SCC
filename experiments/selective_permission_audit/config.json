@@ -1,0 +1,7 @@
+{
+  "fine_classes": 100,
+  "coarse_classes": 20,
+  "classes_per_group": 5,
+  "maximum_seconds": 15,
+  "neural_training": false
+}

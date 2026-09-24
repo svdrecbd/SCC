@@ -1,0 +1,14 @@
+{
+  "accuracy_caps": [
+    "1/2",
+    "107/200",
+    "11/20",
+    "3/5",
+    "3/4",
+    "1"
+  ],
+  "group_size": 5,
+  "maximum_seconds": 15,
+  "neural_training": false,
+  "maximum_result_bytes": 3145728
+}

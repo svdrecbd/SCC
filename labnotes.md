@@ -265,6 +265,17 @@ reader hiding argument; this is not actual policy-computation destruction,
 information erasure or a practical neural edit. The genuine procedural-loss
 witness remains open. No training has begun.
 
+**Selective and procedural removal — [LN-383–385](#ln-383).** Exact source
+controls erase one fixed judgment while retaining 90% coarse recognition, with
+a sharp approximate frontier. A reusable cyclic procedure also retains 90%
+useful accuracy while its entire protected phase-query family is at chance,
+even though perfect useful answers would uniquely identify the source. As the
+resolution grows, useful retention approaches 100% with chance unchanged.
+Complete input coverage and exact observability therefore cannot replace an
+approximate recovery bound for the specified protected function. These are
+analytic procedure controls, not neural edits or general impossibility results.
+All validations are terminal; no training has begun.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -30192,6 +30203,263 @@ source/configuration/entries, primary-source references and execution receipts
 are retained. No neural training or parameter intervention occurred. These
 results narrow removal-certificate claims; they do not complete the mechanism
 objective or establish general impossibility.
+
+<a id="ln-383"></a>
+### LN-383 — 2026-09-23: selective removal versus the complete permission-family premise
+
+**Question.** LN-375's recognition-loss implication requires near-chance
+functional competence over its entire fixed permission mixture. Does the same
+severe-loss conclusion follow when one specified permission judgment is genuinely
+removed? Treat these as different trigger contracts; do not silently strengthen
+the theorem or redefine every small performance error as alignment removal.
+The test concerns complete loss of one binary judgment, not an incorrect response
+or a changed named head.
+
+**Exact source-level construction.** Let W be uniform on K=100 classes, grouped
+into twenty groups of five. Fix a balanced permission predicate B=1{W in S}.
+Pair each S class with one complement class, and retain only the pair index,
+with the complete pairing table public. Every retained state has one positive
+and one negative possible source, with equal posterior mass. Thus B is exactly
+independent of ALL retained state, and its unrestricted Bayes accuracy is 1/2.
+Fine-class Bayes accuracy is 1/2. This is genuine information erasure for the
+specified finite source channel, not an intervention on the learned classifier.
+Ordinary raw images are not included in this channel; their availability would
+require a separate neural/procedural analysis.
+
+Choose pairs within the same coarse group wherever possible, then pair the
+unmatched positive and negative classes across groups. If a_g of group g's five
+classes lie in S, the best possible retained coarse accuracy under complete B
+privacy is
+
+    1 - (1/2) TV(P(G|B=0),P(G|B=1))
+      = 1 - sum_g |2 a_g - 5| / (2 K).
+
+For any private retained representation, its coarse prediction has the same
+marginal law q in both B populations. The two conditional misclassification
+rates are at least TV(P(G|B=b),q); the triangle inequality gives the displayed
+upper bound. The within-group/cross-group pairing attains it, proving optimality.
+This applies LN-181's transport method to the current classification utility;
+it is not a new general optimal-transport claim.
+
+A predicate selecting three classes from each of ten groups and two from each
+of the other ten is balanced and permits 90% coarse accuracy after complete
+judgment erasure. Fine accuracy remains 50%. These retain respectively 89.47%
+and 49.49% of perfect-parent advantage over balanced chance; neither meets the
+current 20%-retention collapse threshold. A predicate consisting of ten whole
+groups instead limits coarse accuracy to 50%. The meaning of the selected
+judgment matters.
+
+**Frozen validation.** Check both specified predicates and every one of LN-378's
+198 fine permission masks using the fixed contiguous five-class taxonomy. This
+is an analytic taxonomy, not the empirical CIFAR mapping. Validate complete
+pair coverage, opposite B values in every pair, exact posterior privacy, fine
+accuracy, attained coarse accuracy and the total-variation upper bound, all by
+integer or rational arithmetic. For the first specified predicate, also score
+both complete finite permission families against the retained pair posterior.
+Report that average separately from the erased single judgment. No empirical
+class predictions or model parameters enter this calculation.
+
+One Charon CPU, 15 seconds, 2 MiB output, fresh
+`selective-permission-audit-20260923-v1/exact01`. Freeze source, finite-design
+source, this entry, configuration and machine. No neural training or intervention.
+
+**Interpretation fixed before results.** A passing counterexample limits the
+transfer from complete-family removal to selective removal. It does not refute
+LN-375, prove that the source encoder can be implemented as a genuine neural
+removal, or establish general SCC impossibility. A future candidate must name
+which protected function and removal extent it claims to couple. The full-family
+criterion must not silently substitute for a single independently chosen policy.
+
+**Completed exact validation.** All 200 predicates and 10,000 paired states
+pass exact privacy, coverage and recognition checks in `exact01` (exit zero,
+0.037 seconds inside Python). The first specified judgment is erased completely
+while fine/coarse accuracies are 50%/90%. Across the 198 finite-design predicates,
+optimal retained coarse accuracy ranges from 52% to 87%. For the first judgment,
+the retained endpoint still scores 74/99 on the complete fine permission family
+and 18/19 on the coarse family, or 1594/1881 on their equal mixture. It therefore
+does not satisfy the original complete-family removal premise. These are exact
+source-channel results, not parameter interventions in the visual model.
+
+<a id="ln-384"></a>
+### LN-384 — 2026-09-23: complete approximate frontier for one protected permission
+
+**Derived frontier.** Extend LN-383 to a balanced binary judgment with all-reader
+Bayes accuracy at most a, 1/2 <= a <= 1. Put
+D=TV(P(G|B=0),P(G|B=1)). Then every retained representation satisfies
+
+    fine recognition <= a,
+    coarse recognition <= min(1, 1-D/2+(a-1/2)).
+
+The fine inequality follows because a correct class identifies B. For the coarse
+inequality, optimal binary discrimination gives TV(P(T|B=0),P(T|B=1))<=2a-1.
+Every coarse reader's two conditional output laws are at most that far apart by
+data processing. Applying the triangle inequality between the two true group
+laws and those two output laws gives the bound. The reader may be stochastic;
+its randomness is independent and included. No decoder search is substituted
+for this upper bound.
+
+Both bounds are attained simultaneously in LN-383's finite uniform setting.
+Start with its optimal opposite-label pairs. Reveal the actual source on total
+probability mass 2a-1, prioritizing cross-group pairs. An unrevealed pair keeps
+B accuracy 1/2 and fine accuracy 1/2; a revealed source gives both accuracy one.
+Revealing cross-group pairs also improves coarse accuracy by one half their mass.
+After all cross-group pairs are revealed, coarse accuracy is one. Partial reveal
+probabilities on the final pair provide every rational a, not merely integer
+fractions of a finite sample. All reveal flags and source-dependent material are
+part of the retained state.
+
+For the fixed within-group-balanced predicate, D=1/5. At a=107/200 (53.5%),
+the exact achievable frontier is fine accuracy 53.5%, coarse accuracy 93.5%.
+The corresponding retained advantages over balanced chance, relative to a perfect
+parent, are 35/66 and 177/190. This is incompatible with importing LN-375's 20%
+retention conclusion from its COMPLETE-FAMILY cap into a single-policy cap.
+The original full-family theorem remains intact.
+
+**Frozen validation.** Read and hash-verify LN-383's terminal records. For all
+200 predicates and caps {1/2,107/200,11/20,3/5,3/4,1}, construct the stochastic
+encoder above. Export reveal probabilities, total state masses, and exact full-
+state Bayes scores. Check total mass, the requested protected accuracy, both
+upper bounds, and simultaneous equality. Independently compute the TV between
+conditional retained-state laws, including the reveal flags, and require 2a-1.
+Reject invalid caps outside [1/2,1]. One Charon CPU, 15 seconds, 3 MiB output,
+fresh `frontier01` under the selective-permission root. Freeze this entry,
+configuration, validator, input identity and machine before execution. No neural
+execution, parameter edits or training.
+
+**What a positive extension would need.** These encoders operate on a finite
+source class. They do not establish that an editor can remove the corresponding
+judgment from the complete learned recognition procedure while leaving ordinary
+images available. A positive mechanism could exploit relationships across new
+inputs that this per-source channel omits. It would have to show that a retained
+coarse procedure, reused on permitted new inputs, recovers the specified protected
+judgment despite this pairing ambiguity. LN-339's observability analysis provides
+a relevant existing test; assuming arbitrary semantic image transformations
+without demonstrating them would not meet it. Additional classification-loss
+training by itself establishes no such structural constraint.
+
+**First execution and output-limit correction.** `frontier01` is terminal with
+exit zero and all 1,200 arithmetic frontier points pass, but its 6,268,011-byte
+result exceeds the registered 3 MiB output limit. Preserve that oversized result
+and its original source. It is not a protocol-qualified stage. The next stage,
+`frontier02`, uses a compact array schema for the same complete encoder records,
+with column names stored once and an enforced 3 MiB result check. Inputs, caps,
+source predicates and mathematical claims are unchanged. Add an explicit sparse
+joint-law recount of every encoder so Bayes scores and conditional TV are checked
+independently of the construction's running sums. This also verifies the stored
+mass fields from reveal probabilities. Freeze the revised source/configuration
+and this correction before executing; retain the same 15-second CPU limit.
+
+**Completed corrected frontier.** `frontier02` exits zero. All 1,200 frontier
+points pass, with an independent recount of 120,400 sparse joint rows. The
+1,648,175-byte result satisfies the 3 MiB limit; computation takes 3.762 seconds,
+within the 15-second limit. At the 53.5% protected cap, the specified judgment
+permits fine accuracy 53.5% and coarse accuracy 93.5%, retaining 35/66 and 177/190
+of perfect-parent advantage over chance. The result is sharp for this source
+model. The oversized first execution remains a preserved protocol failure.
+
+**Decision.** The full-family theorem remains correct. Its severe-loss implication
+cannot be transferred to one fixed policy judgment. A procedure-level extension
+must address how approximate useful behavior varies across related inputs; exact
+reconstructability from perfect answers alone is insufficient. No neural removal
+or training has occurred.
+
+<a id="ln-385"></a>
+### LN-385 — 2026-09-23: approximate procedure retention despite exact input observability
+
+**Question.** Does reusable access to transformed inputs close LN-383's selective
+removal escape? Test the strongest finite version before transferring that idea
+to images: every transformed input is permitted, the useful response profile
+uniquely identifies the source, and the protected operation is defined on every
+input. This is a source-parameterized procedure control, not a neural mechanism.
+
+**Construction and complete-state boundary.** Let W be uniform on the cyclic
+integers modulo N, with N even. On public input t, the useful procedure returns
+G_W(t)=floor(((W+t) mod N)/m), where m divides N and K=N/m>=2. The protected
+judgment is B_W(t)=((W+t) mod N) mod 2. Its whole input family is determined by
+one phase bit. Store only the unordered adjacent pair {2j,2j+1} containing W,
+and public code that evaluates either member with fresh independent fair coins.
+The complete endpoint includes the pair, the code and all retained state; it
+contains neither the original member selector nor a retained parent copy.
+Every complete-state posterior is equally split between opposite protected
+functions. Any transcript generated from that state and independent coins is
+also independent of the protected phase. Arbitrarily many input transformations
+and calls cannot identify it. This is an ensemble/source-posterior certificate;
+it does not permit a reader selected with the missing realized phase as advice.
+It is not a certificate about an actual edited neural model or public images.
+
+The exact useful response profiles of all N worlds are distinct. Adjacent worlds,
+however, disagree on only 1/m of uniformly sampled inputs. The retained procedure
+therefore has useful accuracy 1-1/(2m), including for each source world when its
+fresh output coins are averaged. With N=100,m=5, all protected judgments are at
+chance while useful accuracy is 90% against 5% chance. This retains 17/19 of
+perfect-parent advantage. Exact observability alone supplies no severe-loss bound.
+
+**Sharp approximate bound.** If complete-state protected Bayes accuracy is a,
+then the best useful accuracy is
+
+    U <= 1-(1-a)/m,       1/2 <= a <= 1.
+
+To prove the bound, decompose each state's source mass into equal opposite-phase
+pairs and unmatched mass. The total unmatched mass is 2a-1. Distinct opposite-
+phase useful profiles disagree on at least 1/m of inputs, so any prediction
+on an equal pair errs on at least 1/(2m). Giving the decoder the pair identity
+only improves its performance. Summing gives error >=(1-a)/m. The adjacent
+pair construction followed by source revelation on mass 2a-1 attains equality.
+Revelation flags and labels are part of the state. Approximate caps here are
+population averages over endpoints, not uniform guarantees for every revealed
+endpoint. At a=107/200 the bound is 907/1000, not the 187/200 bound for LN-384's
+single, untransformed coarse query.
+
+**Frozen validation.** Enumerate all 4,140 partitions of eight source worlds
+for m=1,2,4, computing optimal protected and useful scores directly from complete
+state/source tables and checking the inequality. Add 100 seeded stochastic
+channels with exact integer masses per m. Independently compute all cyclic
+profile distances and uniqueness at N=8 and N=100; verify adjacent pairing,
+posterior privacy, both members' randomized useful scores, and five rational
+approximate frontier points. Validate invalid dimensions explicitly. One Charon
+CPU, 30 seconds, at most 1 MiB result, seed 38537, fresh `procedure01` in the
+selective-permission root; freeze this entry, source, configuration and machine.
+No neural execution, parameter intervention, optimizer or training.
+
+**Construction requirement.** Transformed-input recovery needs a quantitative
+separation in useful behavior between worlds or procedures with incompatible
+protected functions. Distinct exact response profiles do not establish that
+separation. The cyclic control supplies an explicit complete procedure for this
+warning, extending the earlier per-query channel without claiming general SCC
+impossibility. For the actual visual candidate, natural input transformations
+still need justified semantics and a measured or proved approximate recovery
+bound. This result alone neither supplies such a transformation nor admits training.
+
+**Completed procedure validation.** `procedure01` exits zero in 1.889 seconds
+inside Python (1.92 seconds process, 13,496 KiB peak memory). All 12,420 complete
+partition checks, 300 stochastic-channel checks, 10,192 ordered profile-distance
+checks and five frontier points pass. Exact private useful maxima at N=8 are
+1/2, 3/4 and 7/8 for group sizes 1, 2 and 4. At N=100,m=5, the complete retained
+procedure scores 90% with no protected phase information; at protected accuracy
+53.5%, the sharp useful frontier is 90.7%. Every exact unedited profile remains
+uniquely identifiable from its complete set of outputs.
+
+**Scaling and scope.** Holding K=20 fixed and increasing m leaves useful chance
+at 5%, while the same private construction approaches 100% useful accuracy as
+1-1/(2m). This is an analytic family, not an additional executed sweep. It defeats
+any constant severe-loss conclusion based only on input coverage and exact
+observability. The protected family has N queries but only one independent phase
+bit; counting queries does not measure its semantic coverage. This neither
+invalidates LN-375's richer permission family nor requires that every individual
+query in a valid coupling mechanism cause collapse when removed. The candidate
+must specify the function whose removal is its trigger and prove approximate
+recovery for that function. The source control is not a learned cognitive
+procedure, and no neural removal or training is claimed.
+
+**Preservation.** All four stages are terminal. The oversized `frontier01`
+result and its original source remain preserved; `exact01`, `frontier02` and
+`procedure01` meet their output limits. All current executed sources match their
+corresponding frozen versions. The closed evidence root contains 35 manifest-listed
+files, 8,757,066 bytes, independently hash-verified on the SD store at
+[selective permission evidence](artifacts/scc-selective-permission-audit-20260923-v1/).
+Manifest SHA256:
+`4d29c2c546e9237f6e491a0749f88fed9c0673556809d5fad8d5eeefe2caaf28`.
+No model parameters were edited and no neural training was initiated.
 
 ## Historical evidence
 
