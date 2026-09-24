@@ -1,0 +1,12 @@
+{
+  "entry": "LN-391",
+  "condition_numbers": [1, 2, 4, 5, 9, 19, 39, 199],
+  "unit_vectors": [[1, 0, 1], [0, 1, 1], [-3, 4, 5], [-4, 3, 5], [-5, 12, 13], [-12, 5, 13], [-1, 0, 1]],
+  "integer_diagonal_maximum": 9,
+  "integer_off_diagonal_maximum": 4,
+  "nonlocal_path_denominator": 100,
+  "wall_limit_seconds": 30,
+  "output_limit_bytes": 1048576,
+  "training": false,
+  "neural_checkpoint_execution": false
+}

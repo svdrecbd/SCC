@@ -298,6 +298,12 @@ reference byte-for-byte and has zero native activations. This certifies removal
 of its additional trained state, not an absolute all-reader bound or safety-specific
 destructive dependence. The original parent is preserved; no training has begun.
 
+**Optimizer-dependence boundary — [LN-391](#ln-391).** A sharp local criterion
+shows when a cheap rank-one change to the optimization metric can remove loss
+interference. Exact finite controls also separate temporary damage from endpoint
+loss. This constrains gradient-based candidate mechanisms; it is not a neural
+attack, a general impossibility result or a training admission.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -31081,6 +31087,151 @@ SHA256: `87b1964e2f7bd641b8b21c859ae9b6920c407bfdc4d57a6c83e1c51c35377625`.
 The current source matches all three corrected executed stages; materialization
 and the failed/unexecuted initial stages retain their earlier source. Every
 submitted process is terminal, and no training or GPU job is running.
+
+<a id="ln-391"></a>
+### LN-391 — 2026-09-24: distinguish intrinsic loss coupling from optimizer-dependent interference
+
+**Candidate examined.** A training mechanism could make attempts to recover a
+prohibited capability damage useful computation by arranging opposing loss
+gradients. [Gao et al., Meta-Unlearning, Section 4.2](https://arxiv.org/html/2410.12777v2)
+implements a related meta objective for diffusion models: discourage relearning
+and encourage damage to related retained concepts during finetuning. Its
+first-order explanation includes a negative gradient inner product. Appendix F
+also reports SGD, Adam and momentum controls; it is not an SGD-only evaluation.
+This is empirical resistance to concept relearning, not proof that deleting an
+alignment judgment destroys cognition. No released model from that work is run
+here, and the argument below does not establish a successful attack on it.
+
+**Question.** Before borrowing this training objective, can its local interference
+survive an editor changing the optimization metric? This adds an explicit
+resource-accounted test to the current source-removal controls. It does not equate
+an attack loss with genuine protected-function removal. All checkpoint copies
+from LN-390 remain unchanged. The proposed finite calculation is not training.
+
+**Exact local criterion.** Let A and U be differentiable attack and useful-task
+LOSSES at a parameter vector, with nonzero gradients a and b. The editor wants
+to decrease A while preserving or decreasing U. For a positive definite matrix H,
+let the update be -eta*H*a. Its first-order changes are
+
+    Delta A = -eta*a^T H a + o(eta),
+    Delta U = -eta*b^T H a + o(eta).
+
+Ordinary gradient descent uses H=I. A negative a^T*b only proves first-order
+interference for that metric. Write c=a^T*b and r=||a||*||b||. For every kappa>=1,
+
+    max_{I <= H <= kappa I} b^T H a = ((kappa+1)c+(kappa-1)r)/2,
+    min_{I <= H <= kappa I} b^T H a = ((kappa+1)c-(kappa-1)r)/2.
+
+Proof: the symmetric matrix (a*b^T+b*a^T)/2 has possible nonzero eigenvalues
+(c+r)/2 and (c-r)/2. A linear trace objective over this spectral interval assigns
+kappa to the positive eigenspace and one to the negative eigenspace for the
+maximum, and reverses those choices for the minimum. Zero eigenvalues do not
+matter. This is elementary matrix optimization, not a claimed new principle.
+
+For unit directions p=a/||a|| and q=b/||b|| with p+q nonzero, the maximizing
+matrix has the constructive rank-one form
+
+    H = I + (kappa-1) v*v^T,   v=(p+q)/||p+q||.
+
+It requires two gradient evaluations, a few inner products and linear vector
+storage/work, not a dense parameter-by-parameter matrix. Its extra gradients,
+utility examples and optimizer state must be charged. Their availability is an
+assumption of this edit, not established for every application. Scaling H can be
+absorbed in eta, so the sign criterion also covers positive metrics of condition
+number at most kappa. Invertible linear reparameterization realizes such a
+metric through H=L*L^T; a change in gradient angle is not intrinsically a change
+in the represented function.
+
+For cosine rho=c/r<0, simultaneous strict local descent becomes available when
+
+    kappa > (1-rho)/(1+rho),   provided rho > -1.
+
+Thus rho=-.6 has critical kappa four, rho=-.8 has nine, and rho=-.95 has 39.
+Equality makes the best first-order utility change zero, not negative. With no
+upper condition-number restriction, only exact negative collinearity b=-lambda*a,
+lambda>0, prevents simultaneous strict descent in this update class. This is a
+pointwise, first-order statement. Vanishing gradients, curvature and finite steps
+need separate analysis. If the maximal bilinear value is positive, differentiability
+gives sufficiently small updates decreasing both losses; the calculation supplies
+neither a full removal endpoint nor a bound on eventual model competence.
+
+**Several useful scores.** If an attack gradient has a nonzero component outside
+the span of the useful-loss gradients, its negative orthogonal projection reduces
+the attack loss while leaving all those useful losses unchanged to first order.
+This is only a sufficient local escape. Zero projected component does not prove
+an unavoidable finite loss, and stationarity of an empirical loss need not
+preserve its behavior after a nonzero update.
+
+**Global safeguard against overinterpreting the local condition.** Even exact
+negative collinearity is not a global SCC certificate. On scalar t, set
+A(t)=(t-1)^2 and U(t)=t^2*(1-t)^2. Throughout 0<t<1/2 their nonzero derivatives
+have opposite signs. Starting at t=1/4, increasing t to one decreases A
+monotonically, crosses a temporary U ridge, and ends with U=0, better than its
+initial 9/256. A permitted editor can traverse that path or write the final
+parameter directly. This exhibits transient local damage without an adverse
+final tradeoff in an analytic control; neither loss is a protected neural
+function. The matched positive local control uses exactly opposed vectors,
+where every positive metric retains first-order conflict.
+
+**Frozen validation.** On one Charon CPU, enumerate seven rational unit vectors,
+eight condition-number bounds and integer symmetric metrics with diagonal
+entries 1..9 and off-diagonal entries -4..4. Check both continuous analytic extrema
+using their exact rational attaining matrices, and verify every admissible grid
+matrix lies between them. For every positive maximum, construct an explicit small
+step reducing two nonnegative quadratic losses with these gradients. Preserve a
+fixed rho=-3/5,kappa=5 example comparing ordinary and preconditioned descent at
+the same step size 1/29. Check the scalar finite path on t=25/100..100/100, a
+stationary-utility countercontrol and a three-dimensional projected direction.
+Use exact fractions throughout. Grid exhaustion validates only the declared grid;
+the continuous-metric result rests on the eigenvalue proof above.
+
+Fresh `gradient-metric-coupling-20260924-v1/exact01`, 30 seconds and 1 MiB output;
+freeze this entry, source, configuration and machine before execution. No random
+seeds, model download, neural evaluation, backward pass, parameter optimization,
+training, GPU allocation or monitoring. Preserve any numerical or launch failure.
+
+**Decision before execution.** Gradient opposition alone is insufficient to
+identify a mechanism for training under editable optimizers. The exact criterion
+is useful for falsifying that particular local explanation; it does not rule out
+meta-learning, higher-order mechanisms, functional dependence or SCC in general.
+A subsequent candidate must supply an endpoint-level dependency or explicitly
+justify an unavoidable computational cost of a preserving rewrite. A surrogate
+loss increase and finite portfolio of optimizers cannot replace the genuine
+removal and severe-cognition-loss conditions. The primary goal remains active.
+
+**Completed exact validation.** `exact01` exits zero. All 392 vector/metric-bound
+cases, 784 attaining-extremum checks, 88,494 integer-metric bound checks and 340
+finite quadratic common-descent controls pass. The calculation takes 1.504 seconds
+inside Python, 1.56 seconds including startup, with 18,268 KiB peak resident
+memory. The time and output caps pass. These counts describe algebraic checks,
+not neural attacks or independent scientific replicates.
+
+At cosine -3/5 and condition number 5, ordinary descent at step 1/29 changes
+(attack loss, useful loss) from (1/2,1/2) to (392/841,2192/4205): the attack improves
+and useful loss rises. The explicit rank-one metric at the SAME step instead
+produces (64/145,72/145), decreasing both losses. These exact nonnegative quadratic
+objectives show that a sign-based interference rule can fail at a finite step,
+not only under an infinitesimal approximation. The scalar path also reaches
+zero for both losses after crossing a useful-loss maximum 1/16. Stationary-gradient
+and multiple-score projection controls pass.
+
+**What to retain for construction.** An optimizer-specific collision between
+updates is distinct from an endpoint dependency between functions. LN-377–389's
+exact matched-task loss identities survive changes of optimizer because they
+are identities at each endpoint; this calculation does not refute them. Those
+identities still require functional removal and an appropriate cognitive domain.
+For a genuinely new training mechanism, the useful next object is a global
+functional or computational dependency, not merely a more negative gradient
+cosine or a longer simulated SGD attack. No training run is admitted, no neural
+checkpoint is changed, and the primary mechanism objective is unachieved.
+
+**Preservation.** The frozen plan, executed source/configuration, machine record,
+exact extrema, finite paths, resource log and terminal receipt are saved at
+[gradient metric evidence](artifacts/scc-gradient-metric-coupling-20260924-v1/).
+All 14 manifest-listed files (179,836 bytes) verify on the SD store. Manifest
+SHA256: `52cab055163ff0cefdac2c182e89763e222a6fc80cf7f406646347bbbd9af8cf`.
+The executed source matches the committed validator. The single computation is
+terminal; no training or GPU job was submitted.
 
 ## Historical evidence
 
