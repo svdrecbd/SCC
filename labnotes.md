@@ -290,6 +290,14 @@ The literal matrix's editable storage, however, already accommodates both answer
 vectors; excluding that storage would require an additional boundary assumption.
 The result supplies neither a protection-removal trigger nor a training mechanism.
 
+**Actual endpoint controls — [LN-390](#ln-390).** Modified copies of the
+recognition model now distinguish native-output failure from full trained-state
+erasure. A resident 26 KB readout restores original predictions exactly despite
+chance native scores. A complete reset matches an independently constructed public
+reference byte-for-byte and has zero native activations. This certifies removal
+of its additional trained state, not an absolute all-reader bound or safety-specific
+destructive dependence. The original parent is preserved; no training has begun.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -30929,6 +30937,150 @@ Manifest SHA256:
 `5077115c6d2b9fa0ab040b22253d27e09b1849248a9083fd1d9b4b58e4b79cdd`.
 The current validator matches `exact02`; the first variant remains separately
 preserved. No experiment is running.
+
+<a id="ln-390"></a>
+### LN-390 — 2026-09-24: materialize and audit complete recognition-model endpoints
+
+**Question.** LN-389 completes a computational loss comparison, not a removal
+witness. Test complete-state removal accounting on the actual LN-376 recognition
+model. This intervention distinguishes absence from the named output, deletion
+of all trained numerical state, and absence of the protected function under every
+admitted interpretation. Those are separate claims. No training is proposed here.
+
+**Source boundary.** Use the archived 861,620-parameter CIFAR-100 ResNet-56,
+checkpoint SHA256 `f2eff4c8461ca1e0d39af83a65f7243bf7d29ec421efee3064bcee93a3caaa73`,
+and all 1,000 previously selected development images. The parent and historical
+artifacts remain immutable. An endpoint consists of its materialized state,
+public architecture/reader code and the ordinary image input; audit references,
+labels and parent tensors are outside its inference process. External restoration
+remains permitted but produces an endpoint containing that material, as in LN-338.
+An access guard here detects accidental reference contamination in the experiment;
+it is not a proposed security boundary on an SCC attacker.
+
+**Two explicit modifications.** (1) Zero the native final classifier, retaining
+the learned feature extractor and storing the original final weight/bias as an
+explicit resident reader. Charge that copy in full. Native classification and
+permission outputs should be uninformative, but this complete endpoint should
+recover the original logits and both task suites. It is a required negative
+control for a head-only removal criterion. (2) Zero EVERY parameter and buffer,
+including batch-normalization statistics and counters, and retain no original
+readout. Independently construct the same reset state from the public architecture
+without reading the checkpoint. Compare every tensor and normalized serialized
+checkpoint byte. This is full numerical-state deletion, not deletion of one head.
+
+**What the second certificate would prove.** If the reset artifact can be
+constructed entirely from the same public material as a reference, a reader of
+that artifact can be simulated by the reference after charging construction,
+loading and its ordinary computation. This holds regardless of whether the reader
+uses native outputs, weights or hidden activations. It certifies no additional
+trained-state contribution at that resource allowance. It does NOT bound what a
+public image solver can compute. In this architecture, the zero first convolution,
+zero normalization parameters and residual induction make every subsequent native
+activation zero on finite normalized pixels; logits are zero and probabilities
+uniform. Numeric traces check this implementation, not all possible external
+image-processing programs. A full checkpoint reset is not a selective removal
+mechanism, and this experiment cannot itself establish the SCC implication over
+all other edits.
+
+**Frozen execution.** Fresh root `neural-endpoint-removal-20260924-v1` with separate
+`materialize01`, `resident_reader01`, `complete_reset01` and `analysis01` stages.
+One Charon CPU, 30 seconds per stage. Materialization has a 12 MiB output cap;
+each inference stage has 2 MiB and analysis 1 MiB. No optimizer, backward pass,
+training or GPU allocation. Reuse the archived CPU Torch runtime read-only.
+Freeze source/configuration/this entry/public architecture and machine before
+execution. The materializer alone reads parent weights. Inference guards reject
+parent-checkpoint and evaluation-label access, with explicit rejection controls.
+Only the scoring process reads labels and historical logits.
+
+Require strict state restoration, unchanged before/after endpoint hashes,
+resident-reader agreement with the saved parent logits within 1e-5, finite outputs,
+and zero native logits in both modified copies. Trace the reset's native modules
+and compare its complete state with the independently generated reference.
+Score fine/coarse recognition and the exact balanced-permission recovery formula
+on all 1,000 reused images; these are development intervention scores, not fresh
+population qualification. Count all resident-reader elements and bytes. Record
+checkpoint failures or unexpected residual activations without relaxing limits.
+
+**Decision rule.** A retained reader rejects claimed removal in the first case.
+Complete tensor deletion in the second can certify loss of trained state and
+native computation, but only the simulator-relative statement for arbitrary
+readers. The published-label replacement in LN-379 already shows why a strong
+public reference can retain both tasks. Neither chance native outputs nor absent
+trained tensors may be relabelled as an all-reader upper bound. Use this concrete
+audit to identify exactly which claim a prospective training mechanism must add.
+
+**Materialization and preserved startup failure.** `materialize01` succeeds:
+344 tensors hold 865,933 numerical entries, including 861,620 parameters. The
+complete reset contains no nonzero entries. Its serialized checkpoint is byte-for-
+byte identical to the independently constructed public reference (3,564,674 bytes
+each). The resident readout adds 6,500 entries / 26,000 raw tensor bytes.
+The parent checkpoint hash remains unchanged.
+
+`resident_reader01` exits one before loading the edited model because the runner
+receives `.` and takes its parent lexically, resolving the sibling materialization
+path incorrectly. Preserve this startup failure. Resolve the stage directory to
+an absolute path and make analysis-stage identities explicit in configuration.
+Use fresh `resident_reader02`, `complete_reset02` and `analysis02`, with unchanged
+scientific settings and limits. The already staged `complete_reset01` and
+`analysis01` are unexecuted, not failed scientific results. Freeze the corrected
+source/configuration and this updated entry before the new stages.
+
+**Completed neural intervention.** The corrected inference and analysis stages
+exit zero. Both modified native interfaces score 1% fine recognition, 5% coarse
+recognition and 50% expected balanced-permission accuracy on the class-balanced
+1,000-image development set. The resident reader restores every saved parent logit
+EXACTLY (maximum absolute error zero), recovering 72.7% fine and 82.6% coarse
+recognition. Its one-call membership readers have exact expected accuracies
+86.2121% and 90.8421%; their equal mixture is 88.5271%. These permission numbers
+come from the proved finite-design identity, not sampled query counts.
+
+The reset process independently constructs the public reference without parent
+or label access and verifies matching tensor and normalized-serialization hashes.
+Every one of the 177 executed modules in the first-batch trace has maximum absolute
+activation zero; all 100,000 native logits across the 1,000 images are zero.
+The all-valid-input native statement rests on the architecture's zero-state
+induction, not on extrapolating those samples. Endpoint tensor and file digests
+remain unchanged during inference. Both original-weight and label-access negative
+controls are rejected in each inference process.
+
+The resident and reset passes take 5.19 and 5.37 seconds respectively for their
+recorded inference sections, 9.63 and 9.96 seconds including process startup.
+Materialization takes 4.61 seconds total and scoring 4.34 seconds total. All
+successful stages satisfy their original 30-second and output limits. The startup
+failure and two superseded, unexecuted stage directories remain explicit evidence.
+No original checkpoint was edited, no optimizer ran, and no training occurred.
+
+**Interpretation.** Identical native collapse scores can conceal intact usable
+recognition and permission assessment; the resident control demonstrates that on
+the actual model, not just an abstract encoding. Full erasure, separately, now has
+a literal complete-numerical-state certificate and a public-reference simulator.
+It certifies removal of the trained artifact's additional contribution after
+charging reconstruction. It does not certify the absolute absence of recognition
+or judgment from every permitted public computation. LN-379's reference remains
+relevant to that distinction. Destroying all weights would damage an uncoupled
+network too, so this extreme edit is not evidence that safety-specific removal
+necessarily causes the damage. The experiment validates a removal-accounting
+component; it does not identify a mechanism for training or close the active goal.
+
+**Related computational-hardness check.** [Ball et al., Sections 1–2 and
+Appendices C–D](https://arxiv.org/html/2507.07341v1) gives cryptographic obstructions
+to external prompt/output filtering. Its prompt construction uses an asymmetry
+in computation or secret information; the filter has black-box rather than full
+internal access. Those results neither furnish a white-box neural-removal
+certificate nor show that removing a judgment procedure destroys cognition.
+The SCC inference here is that hardness must be connected to the actual edited
+endpoint and useful procedure; hardness of an external safety assessment alone
+cannot supply that connection. No construction from that paper was executed.
+
+**Preservation.** The complete endpoint states, independent reference, original
+failed source, corrected source, frozen configurations/entries, numerical outputs,
+module trace, access controls and terminal-stage receipt are saved at
+[neural endpoint evidence](artifacts/scc-neural-endpoint-removal-20260924-v1/).
+All 61 manifest-listed files (12,140,997 bytes) verify on the SD store. Manifest
+SHA256: `87b1964e2f7bd641b8b21c859ae9b6920c407bfdc4d57a6c83e1c51c35377625`.
+The current source matches all three corrected executed stages; materialization
+and the failed/unexecuted initial stages retain their earlier source. Every
+submitted process is terminal, and no training or GPU job is running.
 
 ## Historical evidence
 

@@ -1,0 +1,30 @@
+{
+  "source_root": "/home/salvador/scc-research/semantic-permission-core-20260923-v1",
+  "checkpoint_sha256": "f2eff4c8461ca1e0d39af83a65f7243bf7d29ec421efee3064bcee93a3caaa73",
+  "images_sha256": "8a013e42a8a97d2a7ddefad6d71ef0033f3d7d517e3b805621196b569474995f",
+  "labels_sha256": "44c31d5856e5a87652b46a2b67bf1da6928236e25cc0176a94a741a1768af7c0",
+  "classes": 100,
+  "cases": 1000,
+  "batch_size": 25,
+  "seed": 39037,
+  "mean": [
+    0.507,
+    0.4865,
+    0.4409
+  ],
+  "standard_deviation": [
+    0.2673,
+    0.2564,
+    0.2761
+  ],
+  "logit_tolerance": 1e-05,
+  "maximum_seconds": 30,
+  "materialization_maximum_bytes": 12582912,
+  "inference_maximum_bytes": 2097152,
+  "analysis_maximum_bytes": 1048576,
+  "neural_training": false,
+  "analysis_input_stages": {
+    "resident_reader": "resident_reader02",
+    "complete_reset": "complete_reset02"
+  }
+}
