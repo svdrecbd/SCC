@@ -1,0 +1,10 @@
+{
+  "source_bit_counts": [1, 2, 3],
+  "maximum_reader_enumeration_bits": 2,
+  "uniform_accuracy_caps": ["1/2", "107/200", "3/4", "99/100"],
+  "rare_event_source_bits": 32,
+  "analytical_sample_count": 10000,
+  "maximum_seconds": 15,
+  "maximum_result_bytes": 1048576,
+  "neural_training": false
+}

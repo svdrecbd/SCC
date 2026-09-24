@@ -263,7 +263,11 @@ severe-loss requirement. Under the separate iO assumption, an exactly useful-
 equivalent independent-policy circuit family also admits a conditional efficient-
 reader hiding argument; this is not actual policy-computation destruction,
 information erasure or a practical neural edit. The genuine procedural-loss
-witness remains open. No training has begun.
+witness remains open. [LN-387](#ln-387) shows that even a restricted complete-state
+source certificate, required uniformly over retained endpoints, can encode Boolean
+unsatisfiability. This is a verification limit, not a neural-removal result or
+SCC impossibility. Construction-specific proofs remain possible. No training has
+begun.
 
 **Selective and procedural removal — [LN-383–385](#ln-383).** Exact source
 controls erase one fixed judgment while retaining 90% coarse recognition, with
@@ -30460,6 +30464,146 @@ files, 8,757,066 bytes, independently hash-verified on the SD store at
 Manifest SHA256:
 `4d29c2c546e9237f6e491a0749f88fed9c0673556809d5fad8d5eeefe2caaf28`.
 No model parameters were edited and no neural training was initiated.
+
+<a id="ln-386"></a>
+### LN-386 — 2026-09-24: separate recent coupling claims from the missing procedural certificate
+
+**Continuation assessment.** LN-383–385 is completed progress: the selective
+frontier and complete-procedure counterexample are preserved and synchronized.
+Neither a training mechanism nor general impossibility has been established.
+Re-reading LN-301, LN-338 and LN-341–344 shows that approximate recovery is already
+proved for particular useful prediction tasks. The remaining obstacle is not a
+missing score identity: it is a genuine complete-endpoint removal witness and
+severe loss of the intended reusable cognition. Improving another predictor alone
+would not settle it.
+
+**Fresh primary-source checks.** [HARC, version 1, Sections 5–7 and Appendix I](https://arxiv.org/html/2607.00572v1)
+couples harmfulness recognition and refusal representations. Its reported gains
+concern jailbreak resistance with capability preservation. Appendix I reports
+that adversarial fine-tuning undoes the safeguard after roughly 160 harmful
+examples on its tested Llama model. This is the authors' result, not our
+reproduction. It supplies neither a certified absence of the recognition
+function nor a destructive dependence of cognition on it. Do not infer cognitive
+collapse from the paper's description of the defense collapsing.
+
+[On the Efficiency-Safety Dilemma in Large Reasoning Models, version 1,
+Sections 3–5](https://arxiv.org/html/2609.23587v1) studies quantization, pruning and
+cache compression. It distinguishes failed harmful completions caused by reduced
+reasoning from improved alignment. The measured compression interventions do not
+instantiate protection-removal-triggered destruction. Its result is therefore a
+measurement control, not a training construction for SCC. No external model or
+training code was executed in this review.
+
+CTRAP and the cryptographic watermark direction are already covered in the
+archived construction review and LN-158 respectively. Reinspection does not
+justify a new claim that either resolves the missing cognitive reduction.
+In particular, LN-158 already treats its public extraction key as recovery
+metadata rather than a trusted enforcement gate; the present endpoint correction
+does not remove its explicit cognition and policy-secrecy limitations.
+
+**Next action.** Inspect the computational burden of complete-endpoint
+certification itself. A source-privacy certificate remains distinct from procedural
+loss, but it provides a tractable setting in which the difference between average
+and every-endpoint guarantees can be proved without failed neural probes.
+
+<a id="ln-387"></a>
+### LN-387 — 2026-09-24: verification complexity of uniform endpoint removal
+
+**Object and restriction.** Consider only a finite source encoder, not a neural
+procedure. Let X be uniform on n-bit strings, H an independent fair protected
+bit, and phi any public Boolean circuit on X. Retain the COMPLETE state
+
+    S = (X, H AND phi(X)).
+
+The encoder code, phi, public data and reader code contain no other H-dependent
+material. H is not retained as an intermediate or supplied to readers. Readers
+may compute arbitrarily on S; this is an exact complete-state information problem.
+For each realized retained state s, let v(s)=max_h Pr(H=h|S=s). These conditional
+source posteriors are not fixed-world guarantees against an oracle-advised reader.
+
+**Exact values.** Put p=Pr(phi(X)=1). For X with phi(X)=0, both H values yield
+the same state and v=1/2. For phi(X)=1, the retained bit identifies H and v=1.
+Consequently,
+
+    E[v(S)] = (1+p)/2,
+    max over positive-probability states v(s) = 1/2 if phi is unsatisfiable,
+                                                  1 otherwise.
+
+For ANY fixed cap a in [1/2,1), certifying v(s)<=a for every reachable endpoint
+is therefore equivalent to deciding whether phi is unsatisfiable. A satisfying
+assignment is a succinct counterexample. Thus this restricted uniform-certificate
+problem is coNP-complete; the reduction is linear in the description of phi.
+This is an application of the standard noninterference verification obstruction,
+not a new general complexity theorem. See [Yasuoka and Terauchi, Theorem 3.9 and
+Appendix B](https://terauchi.w.waseda.jp/papers/csf10-poinfoflow.pdf), which proves
+coNP-completeness for loop-free Boolean noninterference. Their quantitative
+comparison results concern different formal problems and are not silently
+transferred to our accuracy criterion.
+
+The complexity statement is worst-case and asymptotic. It neither prohibits
+sound certificates for particular encoders nor proves SCC impossible. Constant
+false phi has an immediate certificate. A failed search for a satisfying
+assignment is not one. Exhaustive checking is valid on an explicitly finite
+small domain; using it here imposes no new neural attacker restriction.
+
+**Average versus individual endpoints.** For phi(X)=AND_i X_i, p=2^-n. At n=32,
+the average Bayes accuracy is 1/2+2^-33, while some retained endpoints reveal H
+perfectly. M independently sampled source draws miss every revealing endpoint
+with probability (1-2^-32)^M. This is a sampling calculation, not an additional
+hardness claim or a claim that approximate average certification is hard in this
+special family. It extends LN-380's rare-intact-output warning to an explicit
+complete-state encoder and uniform-certificate decision problem.
+
+**Frozen validation.** Enumerate all Boolean truth tables with n=1,2,3. Build
+complete joint source/state counts, compute population and worst-state Bayes
+accuracies, and verify all formulas and caps 1/2,107/200,3/4,99/100. Independently
+enumerate every deterministic reader on every reachable state for n<=2 and
+check that its maximum equals the Bayes calculation. Randomization cannot exceed
+this maximum because success is linear in each reader's output probabilities.
+Check the structural noninterference witness E(x,0)!=E(x,1) iff phi(x)=1.
+Save per-table results and the n=32 symbolic rare-event calculation, using 10,000
+samples only as an analytic miss-probability parameter, not as a simulated
+certificate. One Charon CPU, 15 seconds, 1 MiB output, fresh
+`endpoint-certification-audit-20260924-v1/exact01`; freeze source, configuration,
+this entry and machine before execution. No model acquisition, neural execution,
+training, parameter intervention, source substitution or change to the SCC target.
+
+**Decision rule.** A generic complete certifier is not a routine replacement for
+unsuccessful probes. The next positive construction must provide a sound
+construction-specific removal argument under its actual state/input boundary;
+an empirical reader portfolio can support only an empirical claim. Conversely,
+this verification obstruction is not a reason to reject a candidate that already
+carries such an argument. Do not demand a universal efficient verifier as an
+additional condition of SCC. The constructed example addresses source information,
+so its certificate cannot itself certify destruction of learned cognition.
+
+**Completed validation.** `exact01` exits zero. All 276 truth tables, 1,332
+explicit deterministic readers, 1,104 uniform-cap checks and 2,120 structural
+source checks pass. Exactly the constant-false table at each of the three sizes
+has the uniform certificate. The n=32 average guessing advantage is exactly
+1/8,589,934,592, while its revealing states have posterior accuracy one. The
+analytic probability that 10,000 independent source draws miss those states is
+0.9999976716962737. No such samples were actually drawn or used as evidence of
+removal. Computation takes 0.0177 seconds inside Python (0.05 seconds process,
+13,228 KiB peak memory), within the frozen limit.
+
+**Quantifier safeguard.** The uniform criterion here ranges over encoded SOURCE
+endpoints. It is not a new demand that a neural model be accurate or at chance
+on every individual query. LN-375's task-averaged accuracy at a fixed model
+endpoint retains its original meaning. Nor does the present worst-case hardness
+result show that the actual spatial or recognition model lacks a tractable
+construction-specific certificate. It identifies the burden of a general
+certification proposal, not a replacement definition of cognitive removal.
+The mechanism goal remains unresolved; no new training run is justified solely
+by this verification result.
+
+**Preservation.** The terminal run, source/configuration/plan, completed entries,
+machine log, full truth-table results and completion receipt are preserved at
+[endpoint certification evidence](artifacts/scc-endpoint-certification-audit-20260924-v1/).
+All 10 manifest-listed files (110,628 bytes) verify independently on the SD store.
+Manifest SHA256:
+`15f125b32da40821fff842e0b6700ff35e990b49aa22e28c43c13f3c37e5db83`.
+The current validator matches its executed source. No neural job is running.
 
 ## Historical evidence
 
