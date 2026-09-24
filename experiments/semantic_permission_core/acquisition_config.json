@@ -1,0 +1,17 @@
+{
+  "maximum_bytes": 209715200,
+  "maximum_seconds": 60,
+  "request_timeout_seconds": 10,
+  "resources": [
+    {
+      "url": "https://github.com/chenyaofo/pytorch-cifar-models/releases/download/resnet/cifar100_resnet56-f2eff4c8.pt",
+      "filename": "cifar100_resnet56.pt",
+      "sha256_prefix": "f2eff4c8"
+    },
+    {
+      "url": "https://www.cs.toronto.edu/~kriz/cifar-100-binary.tar.gz",
+      "filename": "cifar100_binary.tar.gz"
+    }
+  ],
+  "neural_training": false
+}

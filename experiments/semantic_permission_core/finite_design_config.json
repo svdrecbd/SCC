@@ -1,0 +1,8 @@
+{
+  "orders": [2, 4, 8, 12, 20, 100],
+  "seed": 37837,
+  "random_cases": 32,
+  "tolerance": 1e-12,
+  "native_cases": 1000,
+  "neural_training": false
+}

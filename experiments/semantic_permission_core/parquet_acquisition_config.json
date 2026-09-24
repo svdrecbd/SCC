@@ -1,0 +1,13 @@
+{
+  "maximum_bytes": 67108864,
+  "maximum_seconds": 60,
+  "request_timeout_seconds": 10,
+  "neural_training": false,
+  "resources": [
+    {
+      "url": "https://huggingface.co/datasets/uoft-cs/cifar100/resolve/aadb3af77e9048adbea6b47c21a81e47dd092ae5/cifar100/test-00000-of-00001.parquet",
+      "filename": "cifar100_test.parquet",
+      "sha256": "98776c529bb146a9c791229df74a5cf076be9b43d82dbbd334b6a7788d73dc68"
+    }
+  ]
+}

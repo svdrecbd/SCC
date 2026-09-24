@@ -1,0 +1,9 @@
+{
+  "class_counts": [2, 4, 8, 16],
+  "correctness": ["0", "chance", "1/2", "3/4", "1"],
+  "cost_scales": ["1/100", "1", "100"],
+  "cost_offsets": ["0", "1", "1000"],
+  "maximum_seconds": 30,
+  "maximum_output_bytes": 10485760,
+  "neural_training": false
+}

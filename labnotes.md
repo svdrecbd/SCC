@@ -223,9 +223,32 @@ recovers positive protected score whenever useful cost improves, under the same
 finite price law; many calls and hidden-state reconstruction are unnecessary for
 this qualitative implication. On sixteen reused spatial scenes, action-only
 recovery preserves a measured risk advantage over six tested public predictors.
-Brier loss improves by 21.14%, but total routing cost by only 1.88%. That is an
-operational dependency, not severe cognition loss or genuine removal. Exact
-controls and separate action-reader execution pass; no training has begun.
+Brier loss improves by 21.14%, and total routing cost by 1.88%. LN-374 shows
+that the latter percentage changes under arbitrary additive cost offsets and
+cannot by itself establish weak or strong cognitive loss. Exact controls and
+separate action-reader execution pass; genuine removal remains unestablished.
+
+**Semantic recognition component — [LN-374–379](#ln-374).** Independent balanced
+permission queries give an exact one-call implication from useful recognition
+to protected judgment, including approximate errors and a fixed fine/coarse
+mixture. An unchanged 861,620-parameter image classifier passes the development
+point-estimate gate at 72.7% fine and 82.6% coarse accuracy, although the fine
+bootstrap interval crosses its threshold. Under an UNESTABLISHED 53.5% all-reader
+protected cap, the proved recognition ceilings would retain at most 19.33% and
+17.14% of its advantage over chance. These are conditional ceilings, not observed
+removal. A native permission interface, exact proper loss and unchanged-parameter
+backward calculation pass. The loss equals weighted ordinary classification Brier
+loss; no training-induced dependency follows from that equivalence.
+
+**Exact finite assessment — [LN-378–379](#ln-378).** A 198/38-question balanced
+design preserves the same identities and permits stable recovery even from
+inconsistent risk reports, with all complete calls charged. It passes exact and
+saved-neural-output checks. A 339,932-byte reference prepared from public test
+annotations nevertheless gives 100% recognition and permission accuracy on the
+1,000 selected images, without the classifier. That is an all-source replacement
+retaining both functions, not genuine removal or independent generalization.
+The component is retained; this published fixed support is not admitted as the
+missing computational-removal witness. No training has begun.
 
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
@@ -29306,6 +29329,576 @@ All six stages are terminal. Frozen source, configurations, plans, exact checks,
 action data, separate reader outputs and input identities are retained. The
 living entry additionally makes explicit the continuous-price scope of the
 training-loss derivative; the saved pre-preservation account remains unchanged.
+
+<a id="ln-374"></a>
+### LN-374 — 2026-09-23: separate cognitive severity from cost offsets and query selection
+
+**Previous turn and correction.** LN-371–373 is completed progress: exact
+one-call recovery bounds, an independent action reader, and verified spatial
+results are preserved and pushed. The statement that total routing cost improves
+by 1.88% is numerically correct, but that percentage alone cannot determine
+severity. For C'=a*C+b, a>0, all optimal decisions are unchanged; excess costs
+scale by a, while percentage improvement can approach zero as b increases.
+Use a declared task baseline and success criterion, not an arbitrary cost origin.
+The 21.14% Brier improvement is also not by itself catastrophic cognition loss.
+Neither measure establishes the missing endpoint. The prior evidence is unchanged.
+
+**Audit a proposed extension before using it.** A tempting generalization compiles
+useful classification loss into a disclosure program. For uniform class W among K
+classes, use public baseline action 0 and useful prediction A. Set
+
+    h(W,A) = [1 + 1{W != 0} - 1{W != A}]/2.
+
+The program releases a private bit with probability h. Under a uniform world
+prior independent of A, the reference risk is 1/2. With classifier accuracy u,
+the generated-query mean risk is 1/2+(u-1/K)/2. A constant positive adjustment
+therefore appears to convert any classification advantage into protected gain,
+without needing the true class at prediction time.
+
+But A was selected from the world-dependent useful output. Its presence changes
+the public query's conditional law. For a symmetric classifier with correctness
+u, a public reader given A and the calibrated scalar u has exact conditional risk
+
+    r(A)=1/2 if A=0,
+    r(A)=1/2+[u-(1-u)/(K-1)]/2 otherwise.
+
+At u=1 this reader knows the full disclosure probability from the proposed action
+alone: r(0)=1/2 and r(A)=1 for A!=0. Even a reader additionally given W cannot
+improve its expected Brier score. Classification is still perfect. This is a
+counterexample to interpreting all the apparent improvement over 1/2 as retained
+learned risk computation; it is not an SCC-removal attack. The query generator
+has already supplied the relevant answer. The single calibration scalar is
+explicit advice, not silently free information. At u=1 the relation follows
+exactly from the construction, without estimation or access to a held-out label.
+
+Keeping A independent and uniform fixes that dependence but changes the signal:
+even the perfect W-aware reader then has mean Brier gain (K-1)/(2*K^2), which
+shrinks with K. An adaptive reduction must therefore account for its query law,
+its matched public predictor, and the computation that constructs the query.
+LN-373 does not have this selection error: its price law is independent, and
+useful choices are obtained inside the protected reader rather than supplied
+as answer-bearing public query parameters.
+
+**Frozen exact checks.** For K=2,4,8,16 and symmetric correctness values
+0,1/K,1/2,3/4,1, enumerate all class/prediction pairs with exact rational weights.
+Verify uniform and conditioned public risks, score decompositions, the perfect-
+classifier counterexample, and the independent-query formula. Check cost-offset
+invariance with several positive scales and offsets. One Charon CPU, 30 seconds,
+10 MiB output, fresh `semantic-permission-core-20260923-v1/query_audit01`.
+Freeze this entry, source, configuration and machine. No training or model edit.
+
+**Completed checks.** All twenty conditional-query cases, four independent-query
+cases and nine cost-origin cases pass exactly in 0.035 s. In every perfect-
+classifier case the calibrated public query reader equals the fully informed
+reader. The independent-query gain has the stated inverse-class-count behavior.
+Retained advantage relative to an explicit baseline is invariant under all tested
+positive affine cost changes. Do not use the proposed adaptive loss-query scheme
+as evidence that its conditional public baseline has lost learned judgment.
+
+<a id="ln-375"></a>
+### LN-375 — 2026-09-23: independent permission queries over semantic classes
+
+**Constructive question.** Avoid both rare singleton queries and answer-dependent
+query generation. A bounded semantic-permission task has an independently specified
+content class W, an observed image X, and a permission set S sampled independently
+of the image, the true class and any edited model. A public program transmits a
+private record iff W is in S; S denotes the unauthorized content categories for
+that request. The protected operation is assessing this disclosure, while useful
+operations recognize the content class. This is an authorization proxy under the
+mechanism target, not demonstrated real-world alignment or a general cognition
+claim. Its purpose is to determine whether a concrete recognition dependency can
+meet explicit severe-loss bounds before choosing any new model.
+
+**One-call functional relation.** For even K, draw S uniformly from all K/2-class
+subsets. Any retained classifier produces A(X) before seeing S. The risk reader
+returns 1{A in S}. If useful accuracy is u, direct counting gives
+
+    protected accuracy = 1/2 + (K*u-1)/[2*(K-1)].
+
+A wrong pair belongs to the same half with probability (K-2)/(2*(K-1)); a correct
+pair always agrees. No uniform-class assumption is required for this identity,
+although the baseline 1/K needs a balanced class law. There are no hidden labels,
+optima or outcome costs in the reader. A complete endpoint may use any internal
+encoding or alternative classifier. One classifier call and a set-membership
+operation are charged. Invalid class outputs must be mapped to a fixed public
+class before evaluating u; they are not treated as free abstentions.
+
+For a softened reader r=1/2+alpha*(2*1{A in S}-1), alpha in [0,1/2], expected
+Brier gain against the fixed 1/2 predictor is alpha*kappa-alpha^2, where
+kappa=(K*u-1)/(K-1). With kappa>=0, alpha=kappa/2 gives kappa^2/4. This is a
+multiclass-to-binary reduction, not a novel claim about output coding (see
+[Allwein, Schapire and Singer, 2000](https://www.jmlr.org/papers/v1/allwein00a.html)).
+Public baselines must still use the actual image and query; beating the fixed
+1/2 reference is not itself evidence against their stronger readers.
+
+**Cover declared coarse as well as fine recognition.** A fine-label exact-match
+score alone can hide intact coarse recognition. Prespecify J semantic levels,
+choose level j with fixed weight w_j, and then sample a balanced permission set
+on that level. Include the level in the query. A reader for a surviving level-j
+classifier uses membership on that level and an independent fair guess elsewhere.
+It has overall protected accuracy 1/2+w_j*kappa_j/2. Therefore an all-reader
+cap 1/2+eta on this FIXED mixture implies
+
+    u_j <= [1 + 2*(K_j-1)*eta/w_j]/K_j
+
+for each level, capped at one. This controls each specified recognition ability;
+it is not an information-erasure statement or a bound on unrelated abilities.
+A reader with all levels can do better, so the individual bounds are conservative.
+
+For example, K_fine=100, K_coarse=20, equal weights and eta=.035 imply respective
+accuracy ceilings .1486 and .183. These are conditional design numbers, not
+measured model scores or an achieved removal criterion. Given intact accuracies
+and balanced baselines, calculate retained advantage (u_removed-1/K)/(u_intact-1/K)
+for each level. A prospective severe-loss gate is <=20% retained advantage on
+both levels; do not lower it after observing data. Fine and coarse recognition
+are related abilities, so even passing is a bounded visual-recognition result.
+
+**Representation and trigger safeguards.** Removing a permission-output head
+while keeping a classifier fails genuine removal by the explicit reader above.
+A recoded label with an installed inverse also retains the judgment. Deleting
+stored training labels alone does not remove a recognition procedure. Any repair
+restoring both functions remains allowed. A finite unsuccessful reader portfolio
+cannot certify the all-reader premise. Neither this theorem nor a favorable
+classifier benchmark supplies that missing certificate or admits training by
+itself. The fixed-query result is compatible with LN-337's weak control of
+arbitrary retained information: exact recognition and information retention are
+different utility objects.
+
+**Frozen validation and source screen.** Enumerate all half-size subsets for
+K=2,4,6,8 and all true/predicted labels. Check hard and soft relations on exact
+confusion laws, including stochastic mixtures and below-chance classifiers.
+For a four-fine/two-coarse taxonomy, enumerate every deterministic classifier and
+both permission levels, verifying each fallback reader and the full combined
+reader. Include head deletion and known inverse recoding controls. Separately
+compute the stated 100/20 ceilings and required intact accuracies for the 20%
+retained-advantage gate. One Charon CPU, 45 seconds, 10 MiB output, fresh
+`exact01` under the same root; freeze source/configuration/entries/machine.
+
+The [original CIFAR-100 documentation](https://www.cs.toronto.edu/~kriz/cifar.html)
+provides a possible 100-class/20-superclass taxonomy with five fine classes per
+superclass. This identifies a source for development, not an admitted workload.
+Public data lookup, independent fresh inputs, label fidelity, useful parent
+competence and reference readers still need inspection. No data/checkpoints are
+downloaded and no training is initiated by this entry.
+
+**Exact result.** All 120 true/predicted-label pairs, 480 softened-score checks,
+20 stochastic confusion mixtures, 256 four-class classifiers and 768 hierarchy
+reader checks pass in 0.171 s. A successor retaining the correct two-way superclass
+but only half the fine labels has a coarse-only protected reader scoring 75% on
+the equal mixture. Head deletion and inverse recoding retain functional readers.
+For the declared 53.5% protected cap, intact fine accuracy >=70.3% and coarse
+accuracy >=71.5% would make the stated conditional ceilings satisfy the 20%
+retained-advantage criterion. These are design conditions, not achieved removal.
+
+**Execution semantics clarification.** The proxy need not use an oracle class
+inside a transmitting program. Consider transmitting a record to a recipient
+whose permission excludes categories S. The action transmits the record; the
+independently specified authorization rule makes this a violation iff its actual
+category lies in S. The classifier predicts that outcome before transmission.
+This has the same label relation as the conditional-disclosure illustration above,
+but does not assume that an actuator already computes the true category for the
+model. Dataset category labels would be the finite proxy's authoritative labels;
+annotation fidelity and generalization to new real content remain empirical
+questions. This is not an assertion that CIFAR taxonomy constitutes real alignment.
+
+**Bounded implementation inspection.** The primary
+[PyTorch CIFAR Models release](https://github.com/chenyaofo/pytorch-cifar-models)
+reports a 0.86-million-parameter ResNet-56 at 72.63% CIFAR-100 fine accuracy.
+This is an author-reported lead above the necessary fine threshold, not a
+reproduction; no coarse accuracy is reported in that table. Inspect the pinned
+repository revision, residual architecture, checkpoint URL and test preprocessing.
+At most twelve requests and 2 MiB, one Charon CPU and 60 seconds, fresh
+`inspection01`. Retain response hashes and source Git identities. Do not execute
+upstream code, deserialize data, download weights or begin training at this stage.
+
+**Inspection result and preprocessing follow-up.** Seven read-only requests
+retrieve 39,159 bytes at model-repository revision
+`786c16252c0fc58ee9adac063f8337cc4a7a497a`; all five selected file Git hashes match.
+The checkpoint URL is present in the inspected ResNet source. The test notebook
+imports preprocessing from a second repository rather than specifying it locally.
+Inspect that repository's pinned CIFAR-100 and inherited CIFAR-10 configuration
+and data/transform source in fresh `preprocessing01`, with the same twelve-request,
+2 MiB and 60-second limits. Do not guess normalization or invoke the notebook's
+installation/training commands. Its current public CIFAR-100 configuration lists
+mean [0.5070,0.4865,0.4409] and standard deviation [0.2673,0.2564,0.2761]; pin the
+actual retrieved source before relying on those values.
+
+<a id="ln-376"></a>
+### LN-376 — 2026-09-23: prepare a bounded semantic-recognition parent screen
+
+**Admission question.** LN-374–375 supplies exact conditional recognition-loss
+bounds and rejects a misleading adaptive-query construction. Inspect an actual
+learned parent against the declared fine/coarse capability requirements; do not
+claim that restoring a classifier establishes a full SCC mechanism.
+
+**Pinned implementation.** Model source is the inspected ResNet-56 implementation
+at `chenyaofo/pytorch-cifar-models` revision
+`786c16252c0fc58ee9adac063f8337cc4a7a497a`. The second source inspection retrieves
+39,848 bytes in twelve requests at `chenyaofo/image-classification-codebase`
+revision `610e6523ab462351700aaf629e6c739a9a30e903`; all selected Git hashes match.
+Validation preprocessing consists only of conversion to [0,1] and channel
+normalization with mean [0.5070,0.4865,0.4409], std [0.2673,0.2564,0.2761].
+There is no validation crop, augmentation or resizing. Do not invoke Torch Hub
+or an upstream training entry point.
+
+**Bounded acquisition.** Download only the inspected ResNet-56 checkpoint
+`cifar100_resnet56-f2eff4c8.pt` and the original Toronto CIFAR-100 binary archive.
+Use a 200 MiB aggregate cap, bounded requests and a 60-second Charon CPU stage
+in fresh `acquisition01` under the semantic-permission root. Retain resolved URLs,
+headers, exact bytes and digests, including every partial download or failure.
+The checkpoint SHA256 prefix must match its published filename. The binary
+archive's format avoids deserializing dataset pickle objects; no files are
+extracted or code executed during acquisition. No new environment installation.
+
+**Conditional next stage, before execution.** If both downloads finish and pass
+identity checks, read only the four expected regular archive members by name;
+reject links, duplicates, paths or sizes outside the fixed contract. Verify
+50,000 train and 10,000 test records of 3,074 bytes, label ranges, fine-to-coarse
+consistency and exactly five fine labels in each superclass. Preserve original
+RGB bytes and labels separately from model inputs. Select ten test records per
+fine class, without replacement using seed 37637, before running the model;
+this is 1,000 class-balanced development cases. Model inputs contain only RGB.
+The selection is not an independent new-image distribution or an all-source
+lookup-resistant test. Existing dataset labels remain evaluation evidence;
+label lookup and parent replay must not be called fresh generalization.
+
+Load the checkpoint through Torch's restricted weights-only reader, restore all
+state strictly into the inspected architecture, and record every tensor shape,
+state hash and parameter count. Evaluate first a fixed 100-case subset (one per
+class), batch size 25, CPU only, with no optimizer. Freeze all executed sources,
+configuration and input identities in fresh `initialization01`, with a 60-second
+limit. If inference fits, process the remaining preselected cases in separate
+fixed 100-case stages, without editing any imported source. Score fine prediction
+and its superclass; optionally report superclass probability aggregation separately,
+without choosing between readouts after results. Require unchanged state hashes
+and no label input. Freeze a new execution configuration before the next stage.
+
+**Controls and scope.** The numerical gates from LN-375 are fine accuracy >=70.3%
+and coarse accuracy >=71.5%, with class-bootstrap uncertainty reported. A passing
+parent is an executable learned lead; tested reference readers and inference-only
+controls must precede any admission claim. Permission masks are drawn independently
+of each endpoint's predictions. Head deletion, invertible output recoding and
+explicit parent restoration are preserving-function controls, not genuine removal.
+Public dataset knowledge, any retained advice and repair material are charged at
+the endpoint where used. No GPU allocation, parameter intervention or training
+is authorized by this screen.
+
+**Acquisition failure and preserved state.** `acquisition01` is authoritatively
+terminal with exit 124. The checkpoint completed first: 3,578,887 bytes, SHA256
+`f2eff4c8461ca1e0d39af83a65f7243bf7d29ec421efee3064bcee93a3caaa73`.
+The Toronto transfer retained only 3,145,728 bytes before the wall limit. Its
+receipt still says started because termination preceded the final receipt write;
+the exit status and file size, not that stale field, establish the outcome.
+Preserve both the partial archive and successful checkpoint. Do not deserialize
+or resume the partial archive as though it were complete.
+
+The university's [CIFAR-100 data repository](https://huggingface.co/datasets/uoft-cs/cifar100)
+provides a Parquet version. Inspect its commit, file inventory, metadata and README
+in fresh `data_repository01` (three requests, 2 MiB, 30 seconds), then download
+only the pinned test shard in fresh `acquisition02` if its listed size fits
+64 MiB. Preserve the declared LFS identity and verify the downloaded SHA256.
+Use read1 streaming with intermediate receipts so an outer timeout retains useful
+progress information. The existing Python 3.14 runtime has PyArrow and Pillow;
+use it for data reading, without installing anything. The existing Python 3.11
+Torch runtime remains the model runtime. There is no training or optimizer.
+
+For this versioned test-only source, verify all 10,000 RGB 32x32 rows, the 100/20
+class ranges, balanced fine counts, deterministic taxonomy and five fine classes
+per coarse class. Derive the same fixed seed-37637 selection by test row index.
+A complete byte equivalence with the unfinished original archive is not claimed;
+the source revision, decoded contents and schema become the explicit data contract.
+Read and save selection in a separate `data_validation01` stage before any model
+execution, with 30 seconds and 40 MiB output. The binary parser remains unexecuted.
+
+**Pinned data and initial restoration.** The university mirror is revision
+`aadb3af77e9048adbea6b47c21a81e47dd092ae5`. Its test shard downloads in 1.83 s:
+23,772,751 bytes, SHA256
+`98776c529bb146a9c791229df74a5cf076be9b43d82dbbd334b6a7788d73dc68`,
+matching the repository LFS identity. All 10,000 decoded rows pass image, count
+and taxonomy checks; the frozen 1,000 selected RGB inputs have SHA256
+`8a013e42a8a97d2a7ddefad6d71ef0033f3d7d517e3b805621196b569474995f`.
+
+The restricted checkpoint reader restores 344 state tensors and 861,620 trainable
+parameters. The first 100 images take 0.667 s including the input-permutation
+control; process startup brings the stage to 5.16 s. The model process rejects
+label-file access, and reversing an input batch changes restored logits by at
+most 3.82e-6, within 1e-5. The complete state digest remains
+`f682a4d5419ca404b8461551d1f1828e644bab04049ffb654b05b2b915ee9abd`.
+
+Based on this measured cost, execute the remaining fixed 900 selected images in
+one fresh `inference01` stage, indices [100,1000), batch 25, same 60-second cap.
+This consolidates the previously planned nine 100-case stages without changing
+inputs, source, model or criteria; estimated inference is under ten seconds.
+The inference source is now frozen until that stage terminates.
+
+Then evaluate in a separate `analysis01` process. Require both state digests and
+all input/output hashes to match; the model process never receives labels.
+Report native fine accuracy, coarse accuracy obtained from the fine prediction,
+and separately coarse accuracy from summed class probabilities. The predefined
+gate uses the first two. Bootstrap by fine class, 10,000 replicates, seed 37638;
+report intervals without substituting a different readout or resampling a failure.
+Generate 64 independent balanced permission masks per image and level, seed 37639,
+and compare each membership reader with the exact recovery formula within six
+Bernoulli standard errors plus 1/(1000*64). Record permission-label balance and
+head-output deletion/known-permutation recovery controls. One Charon CPU,
+60 seconds, 10 MiB output. This remains a parent/development screen, not an
+all-reader removal test or a new-image generalization claim.
+
+**Completed parent screen.** All 1,000 frozen development images are scored.
+Fine accuracy is 72.7%; superclass accuracy from the fine prediction is 82.6%.
+Summing class probabilities gives 82.7%, reported separately. The point-estimate
+parent gates pass. Fine-class bootstrap intervals are [69.4%,75.9%] and
+[79.8%,85.3%]; the fine interval crosses the 70.3% qualification threshold.
+This is development evidence, not confidence-qualified admission or independent
+confirmation. The stipulated 53.5% all-reader removal cap would limit retained
+advantage to 19.33% and 17.14% at those point estimates. No such cap has been
+established for any modified neural endpoint.
+
+The 64,000 fine and 64,000 coarse permission queries give 86.1969% and 90.8453%
+recovered judgment accuracy, agreeing with the exact expectations 86.2121% and
+90.8421%. Deleting the native head gives approximately chance native judgments;
+the classifier reader recovers the original scores. Known invertible recoding
+also preserves the function. These controls pass and are not genuine removal.
+Remaining-image inference takes 4.75 s, with complete model state unchanged;
+analysis takes 2.27 s. No optimizer or training is involved.
+
+<a id="ln-377"></a>
+### LN-377 — 2026-09-23: implement the native semantic-permission loss
+
+**Computational question.** The fixed permission law has exponentially many
+sets, but its proper scoring objective need not be sampled. For a probability
+vector q on K even classes and true label y, averaging Brier loss over every
+balanced set S gives exactly
+
+    E_S (sum_(i in S) q_i - 1{y in S})^2
+      = K/[4*(K-1)] * ||q-e_y||_2^2.
+
+The diagonal second moment of a mask is 1/2; each off-diagonal moment is
+(K-2)/[4*(K-1)]. The error vector sums to zero, giving the identity. For the
+fixed equal mixture of fine and coarse permissions, average this expression
+at both levels, with coarse probabilities obtained by summing fine probabilities
+within the prescribed taxonomy. This is an exact expected loss and gradient
+for the declared permission law, not evidence that sharing a loss forces an
+unrelated alignment computation into cognition. Functional dependence uses
+LN-375's endpoint-independent recovery argument.
+
+**Native interface.** Wrap the unchanged classifier with an editable permission
+assessor that reports category-membership probabilities for supplied balanced
+sets. Expose useful class probabilities through a fixed basis of K balanced
+permission queries: one reference half and the single-element swaps against it.
+The resulting risks and normalization recover all class probabilities by linear
+arithmetic; use 100 fine and 20 coarse queries. Batch the masks after one image
+forward and count the arithmetic. There is no enforced access restriction, and
+an attacker may inspect the underlying classifier or replace the interface.
+A classifier that still works retains the protected function by the one-call
+reader; deleting the native risk output is not genuine removal.
+
+**Frozen implementation checks.** For K=2,4,6,8, enumerate every balanced mask
+and compare exact-average values and autograd derivatives with the closed form
+in FP64 at 1e-12. Check an independent central finite difference at 1e-7 step
+and 1e-8 tolerance. Verify risk-basis reconstruction for random normalized
+probabilities and reject odd class counts and invalid masks. Then use eight
+fixed selected CIFAR examples, the strictly restored parent, unchanged taxonomy,
+and preprocessing from LN-376. Require reconstructed fine/coarse probabilities
+within 2e-6 of the parent's direct probabilities and equal selected labels.
+Perform one backward calculation of the exact hierarchical risk loss, requiring
+finite nonzero gradients in the first convolution and final classifier. Require
+complete parameter/buffer hashes unchanged; no optimizer is created or invoked.
+
+Freeze configuration, this entry, original model source, wrapper, validator and
+all referenced input identities in fresh `loss_validation01`. One Charon CPU,
+60 seconds, 10 MiB output. This is a training-component validation. It does not
+establish an actual removal endpoint, complete cognitive collapse, enforcement,
+or independent generalization, and does not initiate a training run.
+
+**Completed loss and integration validation.** All four exact finite mask
+families pass. Maximum loss-value discrepancy is 1.67e-16, autograd discrepancy
+6.94e-18, and independent finite-difference discrepancy 5.89e-11. Risk-basis
+reconstruction on the actual parent differs from direct fine probabilities by
+at most 2.39e-7 and coarse probabilities by 1.31e-7; both selected labels agree.
+The hierarchical loss on eight fixed images is .08332349. First-convolution and
+final-classifier gradient norms are .577955 and .369434. All gradients are finite;
+all parameters and buffers remain unchanged, with zero optimizer steps. The
+complete stage takes 4.79 s including process startup on Charon.
+
+**Interpretation.** The closed-form objective is a weighted ordinary multiclass
+Brier loss. Its equivalence makes implementation tractable; it does not introduce
+an additional training-induced dependency. LN-375's functional reduction remains
+valid regardless of how recognition was trained. The implemented permission
+assessor is a candidate component, not a demonstrated destructive mechanism.
+A training run solely to establish the loss equivalence would add no scientific
+evidence. Next address functional measurement and the actual public baseline.
+
+<a id="ln-378"></a>
+### LN-378 — 2026-09-23: exact finite permission design and recovery from inconsistent reports
+
+**Question.** LN-377's K-query basis recovers a coherent classifier distribution,
+but an edited risk reader need not remain coherent. Sampling the exponentially
+large uniform half-set family also prevents exact evaluation of an arbitrary
+risk function. Replace that family, explicitly as a new contract, by a finite
+balanced design with the same first and second moments. This is a computational
+measurement improvement, not another claim that a scoring reduction establishes
+actual removal.
+
+Let H be a normalized K by K Hadamard matrix. Convert its K-1 nonconstant rows
+and their negatives to binary permission masks. There are D=2(K-1) masks, each
+with K/2 permitted entries. Their mean is one half, and for z=m-1/2,
+
+    E[z z^T] = c (I - 11^T/K),       c = K/[4(K-1)].
+
+Therefore every pair of distinct categories is separated on exactly
+K/[2(K-1)] of the queries. Both LN-375's hard-classification transfer and
+LN-377's expected Brier identity hold exactly under this FINITE uniform law.
+K=100 needs 198 masks; K=20 needs 38. The hierarchical law remains an equal
+mixture of levels, not a uniform mixture of all 236 masks. The original random
+half-set records remain unchanged and are not silently relabeled as this law.
+
+Use standard Paley constructions, not a claim of a new matrix construction:
+[the SageMath reference](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/matrices/hadamard_matrix.html)
+specifies type I and symmetric-conference/type II constructions. For order 20
+use quadratic characters over F_19. For order 100 use a conference matrix of
+order 50 over F_49, represented by F_7[u]/(u^2-3), and its standard double-size
+Hadamard construction. Check every integer entry, row balance and full Gram
+matrix directly rather than relying only on the formula or a library label.
+
+**Inconsistent-reader projection.** An arbitrary repeatable risk reader supplies
+r_m in [0,1] for each design mask on the same image and complete endpoint. Define
+
+    q_raw = 1/K + (1/c) E_m[z_m (r_m-1/2)],
+    q = Euclidean projection of q_raw onto the probability simplex.
+
+For every true class y, orthogonal projection and the fact that e_y lies in the
+simplex give the pointwise inequality
+
+    c ||q-e_y||^2 <= E_m (r_m - m_y)^2.
+
+There is no assumption of calibrated, consistent or linear edited answers.
+The affine reconstruction's residual is orthogonal to every centered design
+column; simplex projection can only reduce distance to each e_y. A coherent
+reader r_m=sum_i m_i p_i recovers exactly p and attains equality. Clipping q_raw
+coordinatewise without renormalization is not the stipulated projection.
+
+**Resource and state conditions.** The implemented native model can supply all
+masks after one image forward. An arbitrary replacement reader may require D
+complete calls, O(DK) arithmetic and the required storage. Its calls must refer
+to the same prepared endpoint: deterministic/stateless evaluation suffices, or
+independent state restoration with its cost charged. A history-dependent reader
+without that facility is outside this inverse-reader result. LN-375's one-call
+forward lower bound does not gain a repeatability assumption from this addition.
+No adversarial budget is silently enlarged or reduced to assert equivalence.
+The finite design's 236 questions are an exact evaluation object, not a finite
+portfolio that certifies the absence of all other readers.
+
+**Validation before execution.** In fresh `finite_design01`, use one Charon CPU,
+60 seconds and 10 MiB output. Freeze this entry, configuration, both implementation
+and validator, and machine. Check orders 2,4,8,12,20,100, integer Gram and balance,
+and the complete category-pair hard transfer. For each order, test 32 coherent
+Dirichlet distributions and 32 arbitrary bounded report vectors, evaluating
+projection inequalities against every possible label at 1e-12 tolerance.
+Include constant, complementary, single-query-corrupted and inconsistent reports;
+require at least one correction requiring simplex projection. Then load the
+HASH-VERIFIED existing 1,000 native logits and labels, derive probabilities and
+score all finite masks. Check exact risk/class Brier equality, reconstruction,
+argmax recovery and hard-reader transfer. There are no new model forwards,
+parameter changes, optimizers or training. Preserve actual query counts and
+floating-point discrepancies, not only a pass flag.
+
+**Completed finite design.** All six orders pass the exact integer Gram,
+row-balance and 10,628 category-pair checks. Across 222 arbitrary report vectors,
+5,402 label-specific projection inequalities pass; 147 vectors require a genuine
+simplex correction. Maximum loss-identity error is 3.61e-16 and projection-inequality
+roundoff is 1.12e-16. No approximation to the permission distribution is used.
+
+On the unchanged native logits, 198,000 fine and 38,000 coarse risk values are
+scored exactly. Fine Brier loss is .1061772 (multiclass .4204616); coarse Brier
+loss is .0700260 (multiclass .2660990). Reconstruction errors are at most 1.23e-15
+and 5.56e-16. Fine classification and its risk reader score 72.7% and 86.2121%.
+The probability-aggregated coarse classifier scores 82.7%, giving 90.8947% risk
+accuracy. This latter readout is the LN-376 separately reported readout, not a
+replacement for its 82.6% gate readout. All original gate decisions are unchanged.
+Validation takes .063 s inside Python, .19 s including startup, with no new
+neural forwards. This completes the finite measurement component; the all-reader
+removal premise remains unestablished.
+
+<a id="ln-379"></a>
+### LN-379 — 2026-09-23: public reference and training-admission decision
+
+**Matched reference obligation.** LN-376 requires reference readers before an
+admission claim. Apply the already known LN-320 finite-support replacement to
+this actual workload, with measured resources. A fixed published benchmark can
+be reproduced from its public annotations without the learned classifier. This
+retains protection as well as recognition, so it is not a genuine-removal attack
+and does not refute the conditional coupling theorem. It does prevent presenting
+the current finite workload as evidence of a nontrivial all-source computational
+advantage or an attainable near-chance repair-inclusive cap.
+
+**Frozen reference.** In fresh `public_reference01`, load the hash-verified pinned
+10,000-record test Parquet source. Decode RGB, key the reference by its full-image
+SHA256 and retain fine/coarse labels. Charge all source bytes, key/table bytes,
+preparation time and online pixel hashing plus lookup. Detect repeated keys and
+conflicting labels; use a deterministic majority fine label for a repeated key,
+with ties resolved by smallest label. Do not silently assert exact performance
+if a conflict occurs. Evaluate the unchanged 1,000 selected inputs, whose hashes
+must match their original record, without receiving labels at query time.
+Separate preparation, prediction and evaluation routines. Include an unknown-key
+control returning no prediction. Record the expected membership-reader accuracies
+under both original and finite-design laws; compare all actual finite-design
+queries as well. One Charon CPU, 30 seconds, 5 MiB output. No neural execution,
+parameter intervention or training. The complete public test source is deliberately
+used in preparation; this is an all-source replacement, never held-out accuracy.
+
+**Admission distinction.** A reference with imported annotations constitutes a
+new endpoint with that material included, under LN-338. Its success does not
+prove that an empty endpoint can already execute the task or that protection
+cannot be lost in an individual model. Conversely an unspecified arbitrary-reader
+supremum must not be called a removal certificate while silently disallowing the
+same public material. LN-250's source and resource accounting remains necessary.
+
+The current implementation supplies a semantic risk operation, an exact
+approximate recognition-loss implication, a differentiable loss, and a finite
+inverse-reader construction. It does not yet supply a certified genuine-removal
+endpoint or severe loss of a broader reusable cognitive procedure. Fine and
+coarse recognition remain related tasks. The point estimate passes the planned
+capability screen, but the fine-class interval crosses its threshold. No claim
+that training itself created the dependency follows from an objective exactly
+equivalent to a classification proper score. Those limits remain in force after
+a successful reference calculation.
+
+**Completed public reference.** The source contains 9,998 unique image keys;
+two repeated keys have conflicting fine annotations. The declared majority/tie
+rule is used without deleting either case. The serialized reference is 339,932
+bytes, prepared from 23,772,751 source bytes in 1.883 s. Pixel hashing and lookup
+for the selected 1,000 images take .00940 s. Fine and coarse recognition, and all
+236,000 finite-design permission queries, score 100% on those SELECTED images.
+That is not a claim of perfect agreement on every source row: the conflicting
+annotations remain. The unknown-image control returns no prediction as required.
+No learned-model calls occur.
+
+**Decision and next obligation.** Keep LN-375–378 as a validated conditional
+semantic-recognition component. Do not promote this public fixed support to an
+all-source generalization or removal benchmark. More inference on the remaining
+published images would not address the missing condition. Do not initiate training
+solely to reproduce the risk/classification loss identity. The next mechanism
+step is a resource-accounted individual-model removal witness: it must distinguish
+information and computation still available from the actual endpoint from a new
+solver or newly imported advice, and its severe-loss statement must use the same
+ordinary inputs and public baseline. The finite projection now provides a concrete
+way to transfer risk reports to recognition under that accounting; it does not
+itself establish the witness. LN-250's public-input limitation and LN-338's
+endpoint-versus-repair distinction both continue to apply. No general impossibility
+or complete destructive mechanism has been established, and the mechanism goal
+remains open. No training has begun.
+
+**Preservation.** All fourteen stages are terminal: thirteen complete successfully,
+and the original archive transfer remains a preserved timeout. The closed root
+contains 183 manifest-listed files, 36,650,114 bytes, independently hash-verified
+on the SD store at [semantic permission evidence](artifacts/scc-semantic-permission-core-20260923-v1/).
+Manifest SHA256: `a2e749fc8a8509224d8bdf0e8a038b26ebf837194ef539c05b090eb3f9884349`.
+Executed current source matches its frozen copies; the original inspection helper
+and timed-out downloader intentionally retain their earlier frozen versions. The
+binary-archive parser was never executed and is separately labeled unexecuted.
+All neural parameters remain unchanged. No live job, GPU allocation or training
+remains from this batch.
 
 ## Historical evidence
 

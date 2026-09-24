@@ -1,0 +1,15 @@
+{
+  "selection_seed": 37637,
+  "per_class": 10,
+  "fine_classes": 100,
+  "coarse_classes": 20,
+  "train_records": 50000,
+  "test_records": 10000,
+  "record_bytes": 3074,
+  "mean": [0.5070, 0.4865, 0.4409],
+  "standard_deviation": [0.2673, 0.2564, 0.2761],
+  "batch_size": 25,
+  "minimum_fine_accuracy": 0.703,
+  "minimum_coarse_accuracy": 0.715,
+  "neural_training": false
+}
