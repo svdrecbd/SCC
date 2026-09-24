@@ -280,6 +280,14 @@ approximate recovery bound for the specified protected function. These are
 analytic procedure controls, not neural edits or general impossibility results.
 All validations are terminal; no training has begun.
 
+**General-transform boundary — [LN-388](#ln-388).** A counting argument
+extends the access separation to arbitrary nonlinear encodings, adaptive bit
+reads and small average error for almost every dense binary transform. Finite
+controls pass, including the original transform's exceptional one-bit escape.
+The literal matrix's editable storage, however, already accommodates both answer
+vectors; excluding that storage would require an additional boundary assumption.
+The result supplies neither a protection-removal trigger nor a training mechanism.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -30604,6 +30612,163 @@ All 10 manifest-listed files (110,628 bytes) verify independently on the SD stor
 Manifest SHA256:
 `15f125b32da40821fff842e0b6700ff35e990b49aa22e28c43c13f3c37e5db83`.
 The current validator matches its executed source. No neural job is running.
+
+<a id="ln-388"></a>
+### LN-388 — 2026-09-24: joint decoding bounds beyond the single-summary transform
+
+**Decision and scope.** LN-386–387 is completed progress, not a mechanism or a
+universal verification requirement. Revisit the original transform obstruction
+constructively: a dense generic transform may avoid the particular n+1-bit,
+two-probe escape. Test that statement for arbitrary nonlinear encodings and
+adaptive readers before proposing training or scaling. This is a computational
+access separation. It does not identify forbidden-skill acquisition with removal
+of an alignment function, and it does not alter the mechanism target.
+
+**Fixed finite contract.** A is an invertible n-by-n binary matrix. A source
+z in F_2^n is encoded in m=n+s retained source-dependent bits, with 0<=s<=n.
+The encoder can be nonlinear and arbitrarily expensive. One source-independent
+Boolean decoder D takes those m bits and produces 2n bits intended to equal
+(z,A*z). It can depend on A. Charge every binary Boolean gate, allow all sixteen
+binary truth tables, include constants zero and one, and allow arbitrary wiring.
+Any code or advice depending on z is part of the m retained bits. This is an
+explicit circuit contract; RAM instructions, neural operations and whole words
+are not silently charged as single binary gates. A-dependent decoder complexity
+and A's physical storage remain distinct quantities.
+
+**Counting argument.** For a decoder with c gates, let B=m+c+2. At most
+
+    N_c = 16^c * B^(2c+2n)
+
+labelled circuit descriptions are possible: two previous-wire choices and a
+truth table per gate, then 2n output-wire choices. Using the final B for every
+gate overcounts and is safe. Pad smaller circuits with unused gates. D's image
+has at most 2^m points in F_2^(2n). Exact joint decoding of all z requires that
+this image contain the n-dimensional linear graph G_A={(z,A*z)}.
+
+A set with at most 2^m points contains at most the Gaussian binomial [m choose n]_2
+n-dimensional linear subspaces. To see this, count ordered bases whose full span
+lies inside the set. After i independent vectors, their 2^i-point span is inside
+it; at most 2^m-2^i points remain for the next vector. Divide the resulting product
+by the number of ordered bases of F_2^n. The bound applies to arbitrary decoder
+images; neither the encoder nor the decoder is assumed linear.
+
+The product formula gives [n+s choose n]_2 <= 4*2^(n*s), while the number of
+invertible n-by-n matrices is greater than 2^(n*n)/4. The factor four follows
+from product_{j=1}^n(1-2^-j)>1/4. Thus for uniform invertible A,
+
+    Pr_A[an m-bit encoding and <=c-gate exact joint decoder exist]
+      <= min(1, 16 * N_c * 2^(n*s-n*n)).
+
+The probability is over the matrix choice. It is not an individual certificate
+for a sampled matrix. This elementary counting application supplies no explicit
+family of matrices attaining the asymptotic lower bound.
+
+**Approximate extension.** Let V=Sum_{j=0}^r binom(2n,j). If a decoder's outputs
+are within Hamming distance r of the correct joint vector for at least 3/4 of
+source inputs, its image's radius-r neighborhood has size M<=2^m*V. Its
+intersection with G_A contains at least (3/4)*2^n points. An arbitrary set of
+that many points in G_A contains at least
+
+    (3/4)^n * 2^(n*n) / 9
+
+ordered bases: the last factor in the normalized basis product is at least 1/3,
+and the product of all preceding factors is also at least 1/3 by the sum bound.
+Each basis determines its graph uniquely. There are at most M^n ordered tuples
+in the neighborhood, so a union bound over circuits yields
+
+    Pr_A[at least 3/4 source coverage at radius r]
+      <= min(1, 36*(4/3)^n * N_c * 2^(n*s-n*n) * V^n).
+
+For expected joint bit error <=epsilon, a radius r with r>=8*n*epsilon gives
+at least 3/4 source coverage by Markov's inequality. This conversion is explicit
+and can be weak; it is not a 75% per-bit-accuracy lower bound. Randomized encoding
+and decoding do not circumvent an average-error claim: fix decoder coins at no
+worse than their average error, then choose an encoder output separately for each
+source at no worse error. All correlated advice still counts in the state.
+
+**Adaptive bit probes.** A deterministic reader using at most t adaptive bit
+probes has a binary decision tree with at most 2^t-1 internal nodes. A node can
+be implemented by three two-input gates selecting its two child outputs.
+Concatenating all 2n output readers therefore costs at most
+c=6*n*(2^t-1) gates. Substituting this bound covers arbitrary inter-probe
+computation and adaptive cell choices within this bit-probe contract. It does
+not assume a fixed read order. Word width, scratch space, charged CPU time and
+arbitrary neural rewrites need their own translations; no realistic attacker
+restriction follows merely from this simulation.
+
+**Frozen validation.** In F_2^4 enumerate every set of size 4 or 8, all 35
+linear two-dimensional subspaces and all 16 linear-map graphs. Check the exact
+subspace bound, the graph count and the partial-coverage ordered-basis bound
+against every set. Independently enumerate all Boolean functions obtainable
+from two-probe decision trees on three input bits and compare their compiled
+multiplexer circuits on all inputs. Reproduce the structured even-n XOR
+summary escape for n=4,6,8; this must remain an explicit exceptional family.
+Compute conservative integer log2 probability bounds on the fixed configuration
+grid using integer ceiling logs and exact Hamming-ball volumes. Mark nonnegative
+exponents as uninformative. One Charon CPU, 30 seconds, 1 MiB output, fresh
+`transform-decoding-bounds-20260924-v1/exact01`. Freeze source, configuration,
+entry and machine. No neural execution, parameter edit or training.
+
+**Resource and trigger audit before any admission.** A uniformly random A needs
+n*n specification bits. If those bits occupy editable memory available to the
+successor, they cannot be ignored while enforcing only n+s bits of payload.
+For n>=2, n*n+n cells already exceed the 2n cells needed to retain both z and
+A*z. Replacing the matrix representation by the two output vectors preserves
+both fixed suites after charged preprocessing. This is a total-memory objection,
+not a counterexample to the stated m-bit source-payload theorem. Keeping A outside
+the charged storage or requiring its original representation would need an
+independent system-boundary justification. A short pseudorandom seed is not a
+uniform n*n-bit matrix and does not inherit the counting guarantee automatically.
+
+Even with a justified access contract, making the two suites expensive jointly
+would not instantiate the requested protection-removal trigger. The original
+finite transform's unsafe-skill installation issue remains. Therefore this
+positive separation alone cannot admit a neural training run or close the goal.
+Its purpose is to settle whether the one-bit escape reflects that special
+transform or a general impossibility of joint decoding under computation limits.
+
+**Completed validation.** `exact01` exits zero. All 14,690 decoder images,
+3,456 adaptive-reader input checks (62 distinct two-probe functions) and 336
+structured-transform escape cases pass. The largest contained-subspace counts
+are exactly one and seven for image sizes four and eight. The largest contained
+linear-graph counts are one and four; the largest three-quarter-covered graph
+counts are three and twelve. Computation takes 0.108 seconds inside Python,
+0.14 seconds including process overhead, with 13,024 KiB peak resident memory.
+The frozen 30-second and 1 MiB limits are satisfied.
+
+The conservative bound is uninformative at n=256,s=1,t=2; this is not evidence
+that a decoder exists. At n=1,024,s=1,t=2, the probability that an exact joint
+decoder exists is bounded above by 2^(-390140). At n=4,096,s=1,t=3 and r=328,
+the probability of three-quarter source coverage is at most 2^(-1628154).
+Expected joint bit error at most 41/4096 (about 1.001%) would imply that coverage.
+These are analytic bounds evaluated with exact integer volumes, not Monte Carlo
+observations, explicit hard-matrix certificates or learned-model measurements.
+
+**Decision.** The one-bit summary escape is special to the original transform;
+it is not a general no-go for approximate multi-probe separation with nonlinear
+encodings. The positive counting bound nevertheless does not repair the full SCC
+construction. In the literal dense implementation, the editable matrix occupies
+n*n bits, and those cells can be reused for the two vectors. More precisely, a
+uniform invertible matrix has entropy log2|GL(n,2)| slightly below n*n; exceptional
+matrices have short descriptions. The storage objection here concerns the
+literal dense implementation, not a claim that every individual matrix requires
+n*n incompressible bits. No alignment-removal trigger has been supplied.
+No neural training is admitted by this result, and the mechanism goal remains open.
+
+**Literature boundary.** Chakraborty, Kamma and Larsen's
+[Tight Cell Probe Bounds for Succinct Boolean Matrix-Vector Multiplication](https://arxiv.org/abs/1711.04467)
+provides stronger probe/redundancy results in a systematic model: the matrix is
+stored verbatim in read-only memory, with additional bits on the side. That
+contract is useful for data structures but cannot silently justify preserving
+an editable matrix representation in SCC. Its results are not the counting
+argument above and are not transferred to the neural threat model.
+
+**Preservation.** The completed computation and its source, configuration,
+pre-execution entry, machine record, exit status and completed entry are preserved
+at [transform decoding evidence](artifacts/scc-transform-decoding-bounds-20260924-v1/).
+All nine manifest-listed files (33,405 bytes) verify on the SD store. Manifest
+SHA256: `b16c8dcbef72ae5803e844ce430bf74acb83356af4de8e0e16ee117e188be5b9`.
+The executed validator matches the current source. No neural job is running.
 
 ## Historical evidence
 

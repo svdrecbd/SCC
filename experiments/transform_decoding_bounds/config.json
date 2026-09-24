@@ -1,0 +1,14 @@
+{
+  "set_sizes": [4, 8],
+  "structured_dimensions": [4, 6, 8],
+  "bound_cases": [
+    {"dimension": 256, "redundancy": 1, "adaptive_probes": 2, "radius": 0},
+    {"dimension": 1024, "redundancy": 1, "adaptive_probes": 2, "radius": 0},
+    {"dimension": 4096, "redundancy": 1, "adaptive_probes": 3, "radius": 0},
+    {"dimension": 4096, "redundancy": 1, "adaptive_probes": 3, "radius": 328},
+    {"dimension": 4096, "redundancy": 512, "adaptive_probes": 2, "radius": 328}
+  ],
+  "maximum_seconds": 30,
+  "maximum_result_bytes": 1048576,
+  "neural_training": false
+}
