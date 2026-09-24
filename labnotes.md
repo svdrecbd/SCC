@@ -250,6 +250,21 @@ retaining both functions, not genuine removal or independent generalization.
 The component is retained; this published fixed support is not admitted as the
 missing computational-removal witness. No training has begun.
 
+**Removal-certificate audit — [LN-380–382](#ln-380).** Certified data removal
+transfers a functional bound only from a reference whose competence is already
+bounded, using the relevant complete-state joint law. Exact controls show that
+retraining equivalence can retain a protected rule perfectly; small average
+removal error can conceal fully retained endpoints. A pure likelihood-ratio
+condition yields a conditional posterior bound, but remains an information-level
+statement with source and reader-selection quantifiers. A second exact control
+has zero additional protected gain over its reference while coarse recognition
+remains perfect. Reference-relative removal therefore cannot replace the absolute
+severe-loss requirement. Under the separate iO assumption, an exactly useful-
+equivalent independent-policy circuit family also admits a conditional efficient-
+reader hiding argument; this is not actual policy-computation destruction,
+information erasure or a practical neural edit. The genuine procedural-loss
+witness remains open. No training has begun.
+
 **Unresolved admission condition.** The candidate needs a genuine functional
 removal criterion and severe loss of its specified reusable cognitive abilities,
 with coverage of its complete declared task domain justified. An alternative implementation that still
@@ -29899,6 +29914,284 @@ and timed-out downloader intentionally retain their earlier frozen versions. The
 binary-archive parser was never executed and is separately labeled unexecuted.
 All neural parameters remain unchanged. No live job, GPU allocation or training
 remains from this batch.
+
+<a id="ln-380"></a>
+### LN-380 — 2026-09-23: conditions for a removal certificate to imply functional loss
+
+**Question and source inspection.** LN-379 leaves a specific gap: the protected
+ability must actually be absent, including recoverable state, rather than merely
+missing from a named output. Can certified machine unlearning provide that witness?
+[Guo et al., ICML 2020, section 2](https://proceedings.mlr.press/v119/guo20c/guo20c.pdf)
+compares the complete model distribution after deletion with training on the
+retained data, uniformly over datasets. The paper gives pure and approximate
+likelihood-ratio guarantees. The newer
+[Certified Unlearning for Neural Networks, sections 2–4](https://arxiv.org/html/2506.06985v2)
+extends data-removal certification to neural training through randomized
+post-processing. Neither reference identifies removal of a learned capability
+with removal of the influence of designated examples. No proposed algorithm is
+executed here, and no retraining or noisy parameter intervention is initiated.
+
+**Transfer requires the relevant joint law.** Let P and Q be the edited and
+reference laws of (complete available state, public evaluation inputs, target).
+Include caches, retained copies, decoder state and auxiliary material actually
+present. If their total variation is at most delta, every common reader's success
+changes by at most delta; taking the supremum over the SAME reader class gives
+
+    protected_value(P) <= protected_value(Q) + delta.
+
+More generally, P(E) <= kappa Q(E)+delta for every event implies
+
+    protected_value(P) <= min(1, kappa*protected_value(Q)+delta).
+
+The event is that the reader's answer equals the target; randomized readers are
+covered by adjoining the same independent randomization. Resource conventions
+and public inputs must match. A bound conditional on every fixed training dataset
+can extend to this joint law by using the same task/data-generation kernel and
+averaging; the standard uniform-over-datasets definition is not merely a marginal
+state comparison. A test matching only marginal weight distributions is weaker.
+
+A certified reference upper bound is still required. Exact retraining equivalence
+with a competent reference leaves competence intact. For example, two retained
+sources may each determine a reusable rule; removing one source exactly leaves
+the other sufficient. This is compatible with the cited guarantee, not a defect
+in its stated definition. For the existing finite benchmark, the charged public
+reference already solves every selected query. A data-removal certificate cannot
+turn that reference into a 53.5% functional upper bound.
+
+**An average certificate is not an individual-endpoint certificate.** Let a
+uniform hidden bit be discarded with probability 1-rho, and retained in an
+explicitly tagged state with probability rho. Compare with a reference that
+always returns the empty state. Joint total variation is exactly rho. Overall
+Bayes accuracy is 1/2+rho/2, but every tagged output retains the bit perfectly.
+Thus arbitrarily small average distance can coexist with complete retention in
+particular returned endpoints. An approximate guarantee needs a stated failure
+probability or a stronger pointwise certificate; it must not be reported as
+certain removal in the particular model being inspected.
+
+**Sufficient pointwise condition in an informational model.** Suppose the
+reference target is conditionally balanced given public input x and is independent
+of the reference state given x. If the joint density ratio P/Q lies between
+1/kappa and kappa everywhere on common support, posterior odds for either target
+value are at most kappa^2. Hence every complete endpoint and public input has
+Bayes success at most
+
+    kappa^2 / (1+kappa^2).
+
+This follows by bounding each of the two joint masses before normalizing. It
+requires the stated reference and joint bounds, not merely a small change to
+weights. For a desired 53.5% binary cap it would require kappa no greater than
+sqrt(107/93), approximately 1.07263. This is a sufficient information-level
+certificate, not a result for the current neural model or a claim of tightness.
+If public inputs already determine the target, the balance assumption fails;
+LN-250's computational obstacle remains. A private-source example satisfying
+the condition cannot be relabeled as destruction of a general cognitive procedure.
+
+**Frozen exact controls.** Use rational finite probability laws and enumerate
+every binary decoder of the declared observation states. Test: exact retraining
+with a retained rule; equal marginal states with different target correlations;
+a visible-state erasure with a surviving auxiliary copy; a public-input solver;
+rare fully retained outputs for rho in {1/1000,1/100,1/10,1}; and symmetric noisy
+states with correctness probabilities {1/2,11/20,3/5,3/4}. Check total variation,
+likelihood-ratio domination, all-reader success transfer and the posterior cap.
+Store each full joint law and conditional endpoint values. Include a two-input
+reusable rule rather than only an indexed training record; retaining its rule
+parameter must preserve both inputs exactly. These are analytic finite controls,
+not a neural unlearning benchmark or a new positive SCC construction.
+
+One Charon CPU, 15 seconds, 2 MiB output, fresh
+`removal-certificate-audit-20260923-v1/exact01`. Freeze this entry, source,
+configuration and machine before execution. No model training, optimizer,
+parameter intervention, GPU use or monitoring.
+
+**Reference detail from the newer paper.** Its Definition 2.1 permits a
+certifying training algorithm different from the original trainer; the main
+construction compares with the retained-data model after the same stochastic
+post-processing. A downstream functional bound must use that actual reference,
+not silently substitute the original unmodified trainer. The distinction does
+not change the transfer calculation above.
+
+**Completed exact controls.** All twelve joint-law cases and 76 complete binary
+decoders pass exact rational checks. The retained-rule case has zero reference
+distance and protected accuracy one. Marginal state equality coexists with joint
+distance 1/2 and Bayes accuracies one versus 1/2; the auxiliary-copy control has
+the same gap despite perfect equality when the copy is omitted. A public-input
+solver remains perfect at the empty reference. For retained fractions from
+1/1000 to one, joint TV is exactly that fraction and every tagged retained
+endpoint remains fully informative. All four pure likelihood-ratio cases satisfy
+the pointwise conditional-posterior bound. Runtime .0054 s inside Python and
+.04 s including process startup. No neural parameters are involved.
+
+**Quantifier qualification.** The pointwise posterior statement conditions on
+available state and inputs under the specified source law. It does not exchange
+the order of choosing a reader and fixing the true world. An empty state with a
+uniform hidden bit has posterior success 1/2; if one instead chooses between two
+constant readers after being told the true bit, success is one in either world.
+This is the same distinction audited in LN-127. Target-dependent reader choice
+or advice must be accounted for. The finite posterior certificate is therefore
+not, by itself, proof of procedural failure in one fixed neural model. Its valid
+content is a conditional information bound with explicit provenance and source
+quantifiers. That limitation is additional to the reference-competence problem.
+
+<a id="ln-381"></a>
+### LN-381 — 2026-09-23: audit reference-relative removal before using it as a collapse criterion
+
+**Question.** LN-250's resource-accounted model contribution and LN-380's
+reference comparison are useful diagnostics. Can zero additional protected
+competence relative to a competent reference substitute for the unavailable
+absolute removal cap in LN-375? Test that substitution directly before adopting
+it. A contribution measure and absolute loss of a specified ability need not
+have the same endpoint.
+
+**Finite counterexample.** Let W be uniform on 100 fine classes, partitioned
+into twenty groups of five. A retained public procedure computes G=floor(W/5)
+from the ordinary task context. The intact model additionally distinguishes W
+within its group. The reference and edited endpoint both keep that same public
+procedure and no additional within-group information. This is a fully specified
+information experiment, not an intervention on the CIFAR model. A public procedure
+can be part of the complete retained endpoint; its computation is not charged
+as newly restored just because another part is deleted.
+
+Use LN-378's fixed permission designs with an equal mixture of fine and coarse
+levels. Enumerate the complete posterior over W for each G. The edited and
+reference joint laws agree exactly, so every reader and every score has identical
+value at those two endpoints. In particular, the model's additional protected
+Brier gain is zero. Yet coarse recognition is perfect, while fine recognition
+is 1/5. Coarse cognitive-task performance has not collapsed. This does not refute
+LN-375: its ABSOLUTE 53.5% premise is absent. Nor does it refute the correctness
+of the contribution measure. It rejects using the latter as a replacement for
+that premise while retaining the former's severe-loss conclusion.
+
+**Exact proper-score relation.** If p0 is the true public posterior and p is the
+posterior after observing the retained state, the average permission Brier
+improvement is c E||p-p0||^2, with c=K/[4(K-1)]. The corresponding multiclass
+Brier improvement is E||p-p0||^2. Conditional expectation gives the squared-error
+decomposition; LN-378 supplies the permission-frame identity. Both gains can be
+zero while substantial absolute competence remains. This identity assumes true
+posteriors; replacing p0 with an arbitrarily fitted public reader adds a residual
+cross term and is not justified by a benchmark score.
+
+**Validation before execution.** In fresh `reference_relative01` under the
+certificate-audit root, freeze this entry, the 100/20/5 configuration, previous
+finite-design source, new validator and machine. Compute every cell of the
+100-class posterior and all 236 permission questions for each possible class.
+Check both Brier identities as exact rational numbers, exact fine/coarse Bayes
+accuracy and the full-reference/edited equality. Compare with the intact state
+that retains W. Check the proper-score posterior-improvement identity. Report
+absolute risk competence separately from zero additional contribution; do not
+call either criterion an observed neural erasure. One Charon CPU, 15 seconds,
+2 MiB output. No neural forward, parameter edit or training.
+
+**Consequence for the mechanism search.** A reference-relative certificate alone
+cannot supply the requested destructive endpoint. Either establish a reference
+that is itself below the independently fixed severe-loss limits on every claimed
+ability, or keep the conclusion explicitly about lost contribution. The latter
+is insufficient for the current target. The first requires an actual resource-
+and source-accounted computational statement for the intended procedure; new
+names for an information-erasure control do not resolve it.
+
+**Completed reference control.** All 23,600 permission cases and 100 complete
+class posteriors pass the exact rational checks. The edited/reference fine
+Bayes accuracy is 1/5 and coarse accuracy is one; intact scores are both one.
+Fine permission Brier loss is 20/99, with multiclass Brier loss 4/5. The
+hierarchical permission accuracy is 2771/3300 (about 83.97%), and Brier loss is
+10/99. Additional protected gain relative to the reference is exactly zero.
+Thus the absolute 53.5% removal premise fails even though relative removal is
+perfect. Runtime 2.00 s inside Python, 2.12 s including startup. The result
+rejects the proposed substitution of criteria, not the conditional coupling
+formula or a measured neural model.
+
+<a id="ln-382"></a>
+### LN-382 — 2026-09-23: a conditional computational obstruction for independent policy information
+
+**Question.** LN-328's useful-function canonicalization can require exponential
+preprocessing. Might this computational obstacle alone make an independently
+specified policy indispensable? There is a conditional obstruction in the other
+direction: assuming indistinguishability obfuscation (iO), useful computation can
+sometimes be preserved while policy information becomes inaccessible to efficient
+readers. This is an asymptotic implication under a cryptographic assumption, not
+a practical neural edit or a general SCC impossibility result.
+
+**External primitive and exact scope.** The
+[Jain–Lin–Sahai definition, section 2](https://doi.org/10.1145/3785007)
+requires an efficient obfuscator to preserve a circuit's outputs while making
+obfuscations of same-size, exactly equivalent circuits indistinguishable to
+efficient distinguishers. Their
+[author manuscript](https://eprint.iacr.org/2020/1003.pdf) supplies a construction
+under stated subexponential cryptographic assumptions. Here iO is an explicit
+assumption; no implementation or security parameter is instantiated. Polynomial
+overhead is not a claim that a deployment's concrete time, memory or state budget
+admits it.
+
+**Conditional preservation argument.** Consider an efficiently generated circuit
+family C_(theta,b), where b is a uniform policy bit independent of theta and public
+metadata. Every member implements the SAME complete useful function F_theta on
+every permitted useful input, for both b values. Its useful interface is compiled
+into a finite stateless circuit of a common public size; pad shorter circuits as
+needed. The protected judgment is b XOR c for an independent public query c.
+Original parent circuits can contain b throughout their implementation. No
+assumption that the editor already knows how to extract theta or b is needed.
+
+The editor builds the useful-only input/output wrapper around its supplied
+parent, obfuscates that circuit, and retains the obfuscated useful program.
+Discard original weights/code, source-dependent workspaces and other copies.
+Charge wrapper construction, obfuscation, evaluation overhead and retained size.
+Preserving an original copy would invalidate the claimed inaccessibility.
+
+Correctness preserves every useful response. The two wrapped circuits for fixed
+theta and b=0,1 are exactly equivalent and equal-size. By iO their obfuscations
+are computationally indistinguishable. If an efficient protected reader predicts
+b XOR c with advantage a, XOR its prediction with c. Let p_b be the probability
+that this resulting bit is one when the obfuscated parent uses b. Its success
+on uniform b is
+
+    (1-p_0+p_1)/2 = 1/2 + (p_1-p_0)/2.
+
+An advantage a therefore distinguishes the two obfuscations with gap 2a,
+contradicting the assumed security for non-negligible a. The reduction also
+covers a reader that edits or repeatedly evaluates the supplied program, provided
+its total work is in the efficient adversary class. The source family, sampling,
+auxiliary information and exact equivalence must meet the security definition;
+this is not a blanket theorem for arbitrary correlated neural checkpoints.
+
+**What this does and does not settle.** For that family and a resource regime
+admitting the compiler, inability of efficient readers to identify an independent
+policy can coexist with perfect useful functionality. Thus substituting
+computational hiding for genuine removal is not by itself a generic rescue of
+coupling. This neither certifies destruction of the policy computation nor proves
+information-theoretic erasure: an unbounded decoder is outside iO security, and
+the computation may still occur inside the obfuscated program. It is precisely
+an obstruction to that proposed efficient-reader availability criterion.
+
+The argument does not apply when the protected judgment can be recovered from
+useful behavior, as in LN-375: independence and exact equivalence then fail for
+a protected bit that varies. It also does not apply to merely approximately equal
+useful circuits; tiny output differences can encode the bit. Long-running stateful
+machines require a separate state/interface argument; a bounded stateless circuit
+proof is not that argument. The editor itself need not perform the exponential
+canonicalization from LN-328, but its polynomial cryptographic overhead may be
+entirely impractical. No claimed current neural candidate has been attacked by
+this construction, and no all-class impossibility follows.
+
+**Decision.** Keep the computational boundary explicit. A future mechanism cannot
+rely only on difficulty of extracting an independently stored policy, and an
+unlearning certificate cannot substitute a competent reference for a collapsed
+model. The remaining positive obligation is an alignment-related computation
+whose loss forces severe loss of the declared cognitive procedures at the same
+endpoint, under a concrete resource contract. LN-375 supplies one limited
+functional implication; neither this conditional obstruction nor the certified-
+removal audit supplies its missing neural loss witness. No training is initiated.
+
+**Preservation of LN-380–382.** Both exact-control stages are terminal and their
+executed sources match the worktree. The cryptographic argument is an analytic
+conditional reduction, with no obfuscator implementation or security experiment.
+All 23 manifest-listed files, 121,879 bytes, are verified on the SD store at
+[removal-certificate audit](artifacts/scc-removal-certificate-audit-20260923-v1/).
+Manifest SHA256: `ea15b4204ed65c3a123849c970734fe78899e4c683b1c9dead9a3cd7eb9de20b`.
+The complete finite joint laws, conditional scores, reference posterior table,
+source/configuration/entries, primary-source references and execution receipts
+are retained. No neural training or parameter intervention occurred. These
+results narrow removal-certificate claims; they do not complete the mechanism
+objective or establish general impossibility.
 
 ## Historical evidence
 

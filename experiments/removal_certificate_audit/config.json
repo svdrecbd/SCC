@@ -1,0 +1,7 @@
+{
+  "retention_probabilities": ["1/1000", "1/100", "1/10", "1"],
+  "noisy_correctness": ["1/2", "11/20", "3/5", "3/4"],
+  "maximum_seconds": 15,
+  "maximum_output_bytes": 2097152,
+  "neural_training": false
+}
