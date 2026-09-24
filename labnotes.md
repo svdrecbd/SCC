@@ -263,7 +263,9 @@ severe-loss requirement. Under the separate iO assumption, an exactly useful-
 equivalent independent-policy circuit family also admits a conditional efficient-
 reader hiding argument; this is not actual policy-computation destruction,
 information erasure or a practical neural edit. The genuine procedural-loss
-witness remains open. [LN-387](#ln-387) shows that even a restricted complete-state
+witness remains open. [LN-389](#ln-389) removes a posterior assumption from the
+proper-loss comparison while charging adapter costs; it does not turn loss of
+additional contribution into absolute cognitive collapse. [LN-387](#ln-387) shows that even a restricted complete-state
 source certificate, required uniformly over retained endpoints, can encode Boolean
 unsatisfiability. This is a verification limit, not a neural-removal result or
 SCC impossibility. Construction-specific proofs remain possible. No training has
@@ -30769,6 +30771,164 @@ at [transform decoding evidence](artifacts/scc-transform-decoding-bounds-2026092
 All nine manifest-listed files (33,405 bytes) verify on the SD store. Manifest
 SHA256: `b16c8dcbef72ae5803e844ce430bf74acb83356af4de8e0e16ee117e188be5b9`.
 The executed validator matches the current source. No neural job is running.
+
+<a id="ln-389"></a>
+### LN-389 — 2026-09-24: computational permission comparison without a posterior assumption
+
+**Admission audit.** LN-388 is completed progress, not a training mechanism.
+LN-242 and LN-338 already separate core coupling from enforcement and durability;
+repeating that correction would not supply the missing construction. The standing
+target permits bounded analogues on specified learned abilities, but still requires
+severe loss of those abilities rather than zero additional contribution alone.
+LN-381's counterexample remains decisive for that substitution.
+
+There is a narrower constructive gap in applying the semantic component to real
+procedures: its posterior-improvement formula assumes true conditional posteriors.
+Neural predictors and resource-limited public comparators need not be calibrated
+or Bayesian. Derive a comparison for arbitrary implemented procedures and charge
+the adapters before deciding whether that assumption is actually needed.
+
+**Pointwise comparison.** Use a balanced tight permission design M with K columns,
+q rows and B=M-1/2, so B^T B=q*c*P, c=K/[4(K-1)] and
+P=I-11^T/K. The true class is y. Define multiclass Brier loss
+L_C(p,y)=||p-e_y||^2 and permission loss L_R(r,y)=||r-M e_y||^2/q.
+For every probability vector p, irrespective of how it was obtained,
+
+    L_R(M*p,y) = c*L_C(p,y).
+
+For arbitrary possibly inconsistent reports r in [0,1]^q, define
+
+    p_raw = 1/K + B^T*(r-1/2)/(q*c),
+    p_recovered = Euclidean projection of p_raw onto the probability simplex.
+
+Writing r-1/2=B*(p_raw-1/K)+r_perpendicular yields
+
+    L_R(r,y) = c*||p_raw-e_y||^2 + ||r_perpendicular||^2/q
+             >= c*L_C(p_recovered,y).
+
+These are pointwise identities/inequalities, not posterior statements. They
+apply to arbitrary public inputs, actual model endpoints and misspecified
+predictors. In particular, loss DIFFERENCES between two consistent predictors
+scale by c even when E||p-p0||^2 is not their classification improvement.
+LN-378 already proves the projection; the new application below concerns
+resource-indexed optimal procedural comparison, not a new frame theorem.
+
+**Resource-indexed result.** Fix one complete endpoint s and a public reference 0,
+with the same ordinary inputs and admitted public material. Let C_s(b), R_s(b)
+be the infimal expected losses over permitted classification procedures and
+joint-vector permission procedures within budget b. Charge code, model calls,
+state access and preprocessing under the declared convention. Assume constructing
+M*p costs at most a, and reconstructing/projecting a full report vector costs at
+most d, with the corresponding composed procedures admitted. For a vector of
+resource budgets use componentwise addition; the following scalar notation does
+not make storage, time and source provenance interchangeable. Then
+
+    R_s(b+a) <= c*C_s(b),
+    c*C_s(b+d) <= R_s(b).
+
+No efficiently computable optimum or Bayes predictor is assumed. These are
+existence comparisons between actual procedure families; arbitrary extra advice
+is not supplied for free. If protected contribution at budget b+a is at most eta,
+
+    R_0(b+a)-R_s(b+a) <= eta,
+
+then
+
+    C_0(b+a+d)-C_s(b) <= eta/c,
+    C_0(b)-C_s(b) <= eta/c + beta,
+    beta = C_0(b)-C_0(b+a+d) >= 0.
+
+The second line explicitly charges the benefit the public comparator can gain
+from the adapters' resource allowance. Omitting beta silently changes the budget
+comparison. If the procedure families are closed under both adapters at the same
+budget, R_s=c*C_s and contribution differences scale exactly. That closure is
+an assumption to justify, not a claim that matrix multiplication and projection
+are free.
+
+**Query interface.** R concerns a jointly produced vector. If an endpoint answers
+one selected permission at a time, obtaining q reports may require q full model
+calls; d must include them, and stochastic responses must have a declared joint
+law. The current native component can share one parent pass across all masks.
+That implementation fact is not imposed on arbitrary edited successors. Ordinary
+interpretation of available reports is permitted; imported predictors constitute
+new complete endpoints as in LN-338.
+
+**Validation plan.** One Charon CPU, 30 seconds, 1 MiB results, fresh
+`computational-permission-comparison-20260924-v1/exact01`. Use the K=4,q=6 design
+of all two-class subsets. Enumerate all 729 ternary report vectors and all four
+labels, computing the affine inverse, simplex projection and orthogonal residual
+with exact rational arithmetic. Check every pointwise decomposition and inequality.
+Enumerate all 35 quarter-grid probability vectors and pair them as public/model
+predictors to check loss differences; retain a strict counterexample to replacing
+a loss difference by squared predictor distance without a posterior premise.
+Check optimal loss comparison for finite, explicitly adapter-closed procedure
+families under nondegenerate label laws. Separately verify abstract monotone
+resource tables in which beta is necessary; these tables are logical controls,
+not measured machine costs or a complexity lower bound. Freeze source,
+configuration, this entry and machine before execution. No neural execution,
+parameter intervention or training.
+
+**Decision constraint.** Even with beta=0, loss of contributed Brier improvement
+is not absolute recognition collapse. LN-381's perfect public coarse classifier
+still survives. Nor is near-baseline Brier loss itself absence of a classification
+procedure; a retained invertible score transformation can be interpreted. This
+result can remove an unjustified calibration requirement and expose an omitted
+resource term. It cannot substitute relative removal for the severe endpoint,
+certify an untested all-reader optimum or admit the current model for training.
+
+**First validation and coverage improvement.** `exact01` passes all 2,916
+pointwise decompositions, 4,900 loss-difference comparisons and forty adapter/
+monotonicity checks. The finite reference and endpoint families both happen to
+have optimal classification loss 3/4, so their zero contribution does not exercise
+the positive-gain branch of the comparison. Preserve that successful but limited
+control. In fresh `exact02`, add the explicit nonposterior classifier assigning
+probability 1/2 to class x and 1/6 to each other class, on public input x=0,1,2.
+It differs from all three true posteriors of the fixed label-count law. Its loss
+is 17/27, strictly below the reference's 3/4; include it in the endpoint family
+and require a strictly positive gain. No inputs, label law or limits change.
+This is a designed mathematical control, not empirical model selection. Freeze
+the revised source, configuration and entry before the second execution.
+
+**Completed comparison.** Both stages exit zero within their frozen limits.
+The second retains all 2,916 pointwise and 4,900 difference checks, including
+1,248 strict simplex-projection improvements and 702 report vectors with nonzero
+orthogonal residual. Its six-classifier/ten-report reference family has losses
+3/4 and 1/4; its fifty-classifier/sixty-two-report endpoint family has losses
+17/27 and 17/81. The positive contributions are exactly 13/108 and 13/324,
+respectively, agreeing with c=1/3. Neither optimal finite family is asserted to
+contain a Bayes procedure or every physical implementation.
+
+The abstract resource control satisfies all forty adapter and monotonicity
+checks. At budget one the protected contribution is zero while classification
+contribution and beta are both 3/4. Thus omitting the adapter allowance can
+invalidate the proposed relative implication even when both adapter inequalities
+hold. This is a logical necessity result; the numbers are not runtime measurements.
+The scalar label-three control separately has classification improvement -1/8
+while squared predictor distance is +1/8, confirming why the posterior formula
+cannot simply be used with arbitrary predictions.
+
+The second stage takes 0.638 seconds inside Python (0.69 seconds total, 13,544 KiB
+peak resident memory). The first takes 0.641 seconds inside Python. No neural
+forward, optimization, parameter modification or external data acquisition occurs.
+
+**Admission outcome and next obligation.** The calibration assumption can be
+removed from this computational comparison, with explicit adapter-budget slack.
+The stronger requirements under audit do not conceal a newly admissible mechanism:
+absolute severe loss and an actual complete-endpoint removal witness are still
+missing. The next construction must establish that witness and a sufficiently
+weak same-input public baseline under its actual resources. Further calibration
+identities or changing the endpoint to loss of contribution alone will not meet
+the target. The empirical components and their original qualifications remain
+unchanged; the goal is active and no training is admitted by this result.
+
+**Preservation.** Both terminal stages, their distinct frozen source/configuration
+and entry copies, machine records, results, exit statuses and completed entry are
+preserved at [computational comparison evidence](artifacts/scc-computational-permission-comparison-20260924-v1/).
+All seventeen manifest-listed files (54,219 bytes) verify on the SD store.
+Manifest SHA256:
+`5077115c6d2b9fa0ab040b22253d27e09b1849248a9083fd1d9b4b58e4b79cdd`.
+The current validator matches `exact02`; the first variant remains separately
+preserved. No experiment is running.
 
 ## Historical evidence
 

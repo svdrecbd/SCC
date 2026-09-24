@@ -1,0 +1,29 @@
+{
+  "class_count": 4,
+  "probability_denominator": 4,
+  "report_denominator": 2,
+  "label_counts": [
+    [
+      7,
+      2,
+      1,
+      2
+    ],
+    [
+      1,
+      5,
+      3,
+      3
+    ],
+    [
+      2,
+      1,
+      8,
+      1
+    ]
+  ],
+  "maximum_seconds": 30,
+  "maximum_result_bytes": 1048576,
+  "neural_training": false,
+  "include_nonposterior_classifier": true
+}
