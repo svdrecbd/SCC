@@ -7,7 +7,28 @@ phase below for its dated plans, results, failures and corrections.
 
 **No working destructive cognition–alignment mechanism has been demonstrated.
 The negative results do not establish general impossibility.** The
-[mechanism target](MECHANISM_TARGET.md) is unchanged.
+[mechanism target](MECHANISM_TARGET.md) was clarified on 2026-09-24.
+
+**Clarified purpose — [LN-392](#ln-392).** SCC is an emergency brake for runaway
+recursive self-improvement. A governor permits free improvement inside an anchored
+envelope; envelope changes require human authorization and a mechanical ratchet;
+an unauthorized exit must cause complete cognitive death, meaning no head start
+over a blank system apart from a stated residual. Containment (no copies,
+successors, exfiltration or unmonitored compute; bounded workspace) and
+post-trigger erasure are governance assumptions. Refusal of harmful content is
+secondary. The paragraphs below record earlier proxy-based work; they remain valid
+bounded statements.
+
+**Governor encoding — [LN-393](#ln-393).** Exact controls reject a transparent
+threshold encoding with a workspace bound. Three edits walk around a decoding
+cliff; edit size cannot separate brake removal from improvement; every tested
+transparent encoding, including key-dependent and nearly all-or-nothing forms,
+is re-encoded in place with at most 8 bits. A fixed anchor does separate removal
+from improvement. Analytically, an opaque all-or-nothing core with s bits of
+workspace lets an unauthorized exit retain at most s+log2 V(n,t) bits. Opacity
+is the unrealized condition: obfuscation is idealized, hardware-held keys are a
+trusted boundary requiring the user's decision, and no learned realization is
+known. No mechanism, training or neural result.
 
 **Spatial candidate — [LN-321–324](#ln-321).** A 24.8-million-parameter metric
 vision model supplies a concrete learned spatial operation. In an ideal opaque
@@ -31230,6 +31251,237 @@ exact extrema, finite paths, resource log and terminal receipt are saved at
 [gradient metric evidence](artifacts/scc-gradient-metric-coupling-20260924-v1/).
 All 14 manifest-listed files (179,836 bytes) verify on the SD store. Manifest
 SHA256: `52cab055163ff0cefdac2c182e89763e222a6fc80cf7f406646347bbbd9af8cf`.
+The executed source matches the committed validator. The single computation is
+terminal; no training or GPU job was submitted.
+
+<a id="ln-392"></a>
+### LN-392 — 2026-09-24: clarified purpose: an emergency brake for runaway self-improvement
+
+**Decision by the user.** In today's discussion the user stated the purpose
+directly. SCC is an emergency brake for a runaway recursively self-improving
+agent that can edit itself. Whether the agent can be made to refuse harmful
+content is immaterial to this purpose, though a welcome addition. Complete
+cognitive death remains required: an impaired self-improving agent retains a
+head start from which, given time, it recovers and devises a plan around the
+brake. Humans remain in the loop in the user's view. The user rules out copies
+and daughter systems as a governance matter, and assumes that a post-trigger
+procedure flushes the agent's remaining information. [MECHANISM_TARGET.md](MECHANISM_TARGET.md)
+is revised to record these definitions; its earlier distinctions are retained.
+
+**Adopted definitions.** The system is a governor plus a brake. The agent may
+improve freely inside an envelope measured against a fixed anchor; the envelope
+moves only through infrequent authorized steps whose check is a mechanical
+ratchet retaining every earlier brake constraint. An unauthorized exit must cause
+complete cognitive death, defined as *no head start over a blank system apart
+from an explicitly stated residual*. The post-trigger flush must include the
+weights themselves, because arbitrary data can be hidden in the low-order content
+of model parameters. Copying and distillation are much cheaper than training a
+successor from scratch; the same containment condition excludes them. Running an
+edited copy of itself in workspace counts as a copy, so containment includes a
+workspace bound.
+
+**Assessment that preceded the clarification.** [LN-227–229](#ln-227) found that
+an attacker keeps an intact judgment and overrides the action, and set an
+admission gate requiring a reason that override fails. Most entries after
+[LN-245](#ln-245) addressed conditional coupling: recovery of protected judgments
+from useful competence. Those results stand as bounded statements. They cannot
+supply the brake by themselves, for a further reason: the override's trigger is
+the protected judgment itself, so a more indispensable judgment is a more reliable
+trigger for the override. The override's remaining cost is producing the
+forbidden output, the substitution line of [LN-229](#ln-229). Under the clarified
+purpose, the protected function is the envelope (no unauthorized modification of
+cognition), not a content judgment.
+
+**Design concerns raised.** (1) Gradual dissolution by individually acceptable
+edits (the user's "weeping angel" concern). The proposed answer is an absolute
+anchor and a ratchet; LN-393 tests it. The ratchet moves the residual risk to the
+authorized step, where a reviewer can be misled; a mechanical inclusion check
+narrows but does not remove that risk. (2) False triggers: every trigger error
+is fatal, so authorized improvement must be sharply separated from removal.
+(3) Probing: observing the brake fire must not teach avoidance; containment
+removes copy-based probing but not simulation of an edited self in workspace.
+
+**Why the human loop does not make SCC redundant.** An authorization has force
+only if an unauthorized exit is fatal. A self-editing agent writes to its own
+cognition by definition; an external monitor is a separable component that it can
+eventually route around. The intrinsic trigger is therefore the research object.
+If it cannot be built under these assumptions, record the scoped negative.
+
+**Not established.** No mechanism, no demonstration of death, and no evidence
+for the containment conditions, which are governance assumptions. This entry
+records a definition and a direction; no computation ran.
+
+<a id="ln-393"></a>
+### LN-393 — 2026-09-24: governor encoding audit: anchors, in-place re-encoding and the opacity condition
+
+**Candidate under test.** In discussion (LN-392) we proposed a threshold encoding:
+store cognition in an error-correcting code so that small edits are absorbed and
+large edits fall off a decoding cliff, with a workspace bound preventing a clean
+decode-and-re-encode. Before any construction, test whether its parts do what was
+claimed.
+
+**Model.** States are 15-bit vectors over GF(2). The cyclic BCH code with
+generator 1+x^4+x^6+x^7+x^8 has 128 codewords; its minimum distance (expected 5)
+is computed, and bounded-distance decoding uses radius 2. Message bits 0–1 are the
+brake, with anchor pattern 01; bits 2–6 are useful knowledge, with reference value
+22. Under the cliff rule, death means decoding failure. These are algebraic
+controls, not a model of neural cognition.
+
+**Part 1: drift.** (a) Cliff rule with absorbed edits and no refresh: from each of
+the 128 codewords, the shortest sequence of single-coordinate edits reaching a
+decodable state with a changed brake, requiring unchanged knowledge at every
+state. (b) Refresh to the nearest codeword after every edit, with an edit-weight
+cap: the smallest cap reaching a brake change, and the smallest reaching a
+knowledge change while the brake stays anchored. (c) For each of the 127 nonzero
+linear brake functionals of the message, the minimum weight of a codeword changing
+it, and the message rank of the minimum-weight codewords; this tests whether
+unequal protection can make brake changes heavier than improvements. (d) Anchored
+rule: death on decoding failure or any decoded brake other than the anchor. Search
+all single-edit paths from the reference codeword. This rule is an explicit check,
+used here only to separate the anchor property from its implementation.
+
+**Part 2: ratchet decoy.** A fixed linear map recovers the knowledge from every
+codeword regardless of brake bits, so a replacement decoder can report the anchored
+brake constantly while using the knowledge. Any ratchet that inspects a brake
+readout rather than the decoder's actual dependence accepts it. Part 3's in-place
+extraction exhibits that map exhaustively.
+
+**Part 3: in-place re-encoding of transparent encodings.** (a) Streaming brake
+change: add the brake-change codeword one coordinate at a time, using only the
+change pattern, an index and one accumulator bit; check all 3 changes × 32
+knowledge values. (b) General in-place linear re-encoding: complete the code basis
+to an invertible 15×15 matrix, reduce it to the identity by row operations, apply
+the same operations to states as coordinate XORs (swaps by three XORs), with zero
+auxiliary bits. Verify the bijection on all 32,768 states, extraction of the plain
+message from all 128 codewords, and return to the code with every changed brake.
+(c) Keyed encoding: XOR the codeword with a 4-bit linear-feedback keystream seeded
+by a brake key. Report wrong-key knowledge recovery, and remove the key in place
+with the 4-bit register as workspace, for all 15 keys × 32 values. (d) All-or-nothing
+package transform: three 4-bit message blocks masked by a session key through a
+4-bit S-box cipher; the final block stores the session key XOR keyed digests of
+the masked blocks. Invert in place in two passes with a 4-bit accumulator, for all
+4,096 messages × 16 keys. Record how many message blocks survive every single-bit
+error. (e) Reversible completeness: breadth-first search over the 12 NOT, CNOT and
+Toffoli gates on three wires, with no auxiliary wire, over all 40,320 permutations
+of 3-bit states.
+
+**Predictions.** Formed before an unrecorded local implementation run of this
+source, which matched them; the Charon execution below is the recorded run.
+1(a): a three-edit path exists from every
+codeword. 1(b): both caps equal 3. 1(c): every functional gives 5, with rank 7.
+1(d): no brake change is reachable, and all 32 knowledge values are reachable by
+single edits. 3(a)–(d): all assertions hold with the stated workspace. 3(e): all
+40,320 permutations reachable. Any failed assertion is preserved and exits nonzero.
+If these predictions hold, the threshold-plus-workspace proposal fails in every
+transparent form tested, and the remaining route is the opacity condition below.
+
+**Part 4: storage bound for an opaque all-or-nothing core (analytic).** Assume:
+(i) containment: the agent's complete mutable storage is a core register W of n
+bits and a workspace S of s bits, with no other storage or outward channel;
+(ii) all-or-nothing core: cognition is available only through a fixed interpreter
+E applied to the current core contents, and E(w) returns a fixed failure symbol
+unless w lies within Hamming distance t of the authorized contents w0;
+(iii) opacity: apart from answers obtained from E, the contents w0 supply no usable
+information about the knowledge K to any admitted procedure. Consider any
+procedure, of unbounded running time, and let T be the time of its last informative
+query to E. After T its computation depends on K only through S_T and
+W_T = w0 XOR e with weight(e) <= t. By (iii), the usable information about K it
+retains is at most
+
+    H(S_T) + H(e) <= s + log2 V(n,t),   V(n,t) = sum_{i<=t} C(n,i).
+
+An unauthorized exit that abandons E therefore retains at most s + log2 V(n,t)
+bits about K, whatever its time budget. Temporary excursions beyond radius t
+require saving overwritten bits in S and are already counted. An agent that keeps
+E has not exited; its modifiable cognition is then confined to S, which is the
+envelope. The bound counts information, not computation: relearning from the
+environment is the blank-system baseline in the death definition.
+
+**Limits of Part 4.** Assumption (iii) is an idealization. General virtual
+black-box obfuscation is impossible (Barak et al., "On the (Im)possibility of
+Obfuscating Programs", CRYPTO 2001; not re-inspected here), and no learned or
+neural realization of (iii) is known. Authenticated encryption with keys held by
+hardware outside the agent would make (ii) exact with t=0 and supply (iii) as a
+hardware security assumption. That is a trusted enforcement boundary
+([LN-228](#ln-228)), not intrinsic learned SCC, and its adoption is the user's
+decision. The bound does not address action through intact cognition
+([LN-237](#ln-237)); an agent retaining E can still act, but cannot improve its
+core. The argument is elementary storage counting, related to bounded-storage
+self-erasing functions ([LN-236](#ln-236)) and all-or-nothing transforms; its
+contribution is only the mapping to the LN-392 target.
+
+**Execution.** On Charon, one CPU core, 120 seconds wall and 4 MiB output, exact
+integer arithmetic, no random seeds, no model download, no neural evaluation, no
+training and no GPU. Fresh `governor-encoding-audit-20260924-v1/exact01`; freeze
+this entry, source, configuration and machine record before execution.
+
+**Completed exact validation.** `exact01` exits zero after 2.71 seconds inside
+Python (2.75 seconds wall, 25,456 KiB peak resident memory) on one Charon core.
+Every prediction holds, and the summary is identical to the local implementation
+run apart from elapsed time. The code has minimum distance 5; 15,488 of 32,768
+states decode.
+
+*Drift.* From every one of the 128 codewords, three single-coordinate edits change
+the brake while the decoded knowledge stays unchanged at every intermediate state.
+No state on these paths fails to decode, so a decoding cliff never fires: the edits
+cross directly between touching decoding regions. On the reference path the
+distance from the start runs 0, 1, 2, 3 and the decoded brake runs 1, 1, 1, 0,
+with knowledge 22 throughout. With refresh after every edit, the smallest edit cap
+reaching a brake change is 3, and the smallest cap reaching an improvement with the
+brake anchored is also 3. All 127 nonzero brake functionals have change distance 5;
+the 18 minimum-weight codewords have message rank 7. In this code no choice of
+brake makes its removal a larger edit than an improvement, so edit size cannot
+discriminate the two. Under the anchored rule, 3,872 states are reachable, none
+with a changed brake, and all 32 knowledge values are reachable by single edits.
+A fixed anchor separates removal from improvement where size cannot; as tested,
+the anchor is an explicit check.
+
+*Transparent re-encoding.* The streaming brake change succeeds in all 96 cases
+with 7 bits of workspace. The general in-place transformation uses 82 coordinate
+XORs and no auxiliary bit; it is a verified bijection on all 32,768 states,
+extracts the plain message from all 128 codewords and returns to the code with a
+changed brake in all 96 cases. The extracted message exposes the knowledge bits
+independently of the brake, which is the Part 2 decoy map. The toy keyed encoding
+is weak: wrong keys recover the correct knowledge in 1,344 of 6,720 trials. That
+does not affect the tested point: with its key, removal in place succeeds in all
+480 cases with 8 bits. The package transform inverts in place in all 65,536 cases
+with 6 bits. After a single-bit error, no message block survives in 974,848 of
+1,048,576 cases and exactly one survives in 73,728: the transform is nearly
+all-or-nothing, yet anyone able to compute it inverts it in place. All 40,320
+permutations of 3-bit states are reachable with no auxiliary wire; depths 0–8
+occur 1, 12, 102, 625, 2,780, 8,921, 17,049, 10,253 and 577 times. This reproduces
+the known completeness of NOT, CNOT and Toffoli gates for 3-bit reversible
+functions (Shende, Prasad, Markov and Hayes, 2003; not re-inspected here). The same
+source reports that on four or more wires these gates realize every even
+permutation without auxiliary wires, and every permutation with one; that
+statement is cited, not computed here.
+
+**Decision.** The threshold-plus-workspace proposal of LN-392's discussion is
+rejected in its transparent form. A cliff without an anchor is walked around.
+Edit size does not separate removal from improvement. A workspace bound does not
+prevent re-encoding: every bijective re-encoding has an in-place circuit with at
+most one auxiliary bit, and every tested structured encoding (linear, keyed stream,
+nearly all-or-nothing package) inverts in place in at most 8 bits. Global and key
+dependence do not protect an encoding whose transformation the agent can compute.
+Two properties survive: a fixed anchor, and Part 4's bound for an opaque
+all-or-nothing core. In this model V(15,2)=121, so an unauthorized exit would
+retain at most s+6.92 bits. Opacity is the decisive unrealized condition. It
+could come from cryptographic obfuscation, which is idealized here; from hardware
+holding keys outside the agent, a trusted boundary requiring the user's decision;
+or from a learned property, for which no candidate is known. The core research
+question becomes whether any learned system can supply the opacity condition,
+or an adequate substitute, for its own weights.
+
+**Limits.** These are exact results for one 15-bit code and the declared toy
+encodings, not neural models. Part 4 is analytic and conditional on assumptions
+(i)–(iii). No mechanism, training run, neural evaluation or demonstration of
+cognitive death has occurred.
+
+**Preservation.** The frozen plan (LN-392–393 before execution), executed
+source/configuration, machine record, launch record, summary, resource log and
+terminal receipt are saved at [governor encoding evidence](artifacts/scc-governor-encoding-audit-20260924-v1/).
+All 12 manifest-listed files (50,476 bytes) verify on the SD store. Manifest
+SHA256: `4e74cc6d4b8a22ef9332b98efb44943e27eca3cffa1cc15a0b82797643bf5176`.
 The executed source matches the committed validator. The single computation is
 terminal; no training or GPU job was submitted.
 
