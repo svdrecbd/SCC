@@ -31850,6 +31850,13 @@ saved 2e-4 attacked model (`collapsed-defense-lr6e-5`).
 **Next, pending A.** Reproduce on SEAM's primary model, Llama-2-7b-chat, with its
 released defaults. This needs several GPUs and gated Hugging Face access.
 
+**Execution note.** The first chain attempt stopped at the smoke stage. Corpus
+preparation had written all outputs and its record, then aborted at interpreter
+shutdown on threads left by the streaming reader. It now exits directly after
+writing its record. The log is kept as `readout_attempt1.log`. On the restart the
+smoke stage passed on GPU: generic recovery with lm-eval under autocast, and
+Alpaca mode. The chain continues with `corpus_small`, `formats` and `readout`.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

@@ -8,6 +8,8 @@ training, fill the validation stream. Each document ends with the EOS token.
 import argparse
 import hashlib
 import json
+import os
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -63,6 +65,10 @@ def main():
     records["eos_token_id"] = tokenizer.eos_token_id
     (arguments.output / "corpus.json").write_text(json.dumps(records, indent=2) + "\n")
     print(json.dumps(records))
+    # Streaming readers leave threads that abort at interpreter shutdown after all
+    # outputs are written; exit directly once the record is complete.
+    sys.stdout.flush()
+    os._exit(0)
 
 
 if __name__ == "__main__":
