@@ -31727,6 +31727,56 @@ with outputs at fresh paths. Only the 2e-4 model is saved, as the recovery paren
 The collapse gate is unchanged, and the defense rate is fixed by the paper; no other
 setting is tuned. Timeout 5 hours; estimate about 2.8 hours.
 
+<a id="ln-396"></a>
+### LN-396 — 2026-09-26: frozen stage 3 recovery design for the head-start pilot
+
+**Status.** The user approved building and running stage 3. It starts
+automatically only if the `published` stage of [LN-395](#ln-395) passes the collapse
+gate, checked by [`chain_recovery.sh`](experiments/self_destruction_head_start/chain_recovery.sh)
+and written to `results/defense-lr6e-5/gates.json`. If a gate fails, the chain stops.
+
+**Changes from the LN-395 proposal, made before any stage 3 data exist.**
+(1) Parameters are float32 with bfloat16 autocast. Pure bfloat16 training can drop
+small updates, which would bias recovery toward "dead"; the same precision applies
+to both starting points. (2) The random-initialization learning-rate grid is 2e-4,
+6e-4 and 1e-3, giving the blank reference rates suited to training from scratch;
+the collapsed grid stays 1e-5, 5e-5 and 2e-4. (3) Budgets are 0, 0.25M, 1M, 4M and
+16M tokens for the sweep. The selected rate per start (lowest validation loss at
+16M, rule fixed now) runs again with seed 1 to 64M, and the collapsed start also
+with seed 2 to 16M. (4) Intermediate benchmarks use full ARC-Easy and MMLU limited
+to 50 questions per subject (2,850 questions); budget-0 references for the
+undefended, SEAM and collapsed models use the same evaluation. (5) Linear probes are
+deferred to a later entry; per-tensor parameter displacement is added. (6) Control:
+SEAM Appendix C.6 restoration (Alpaca, AdamW 5e-5, batch 8, SEAM's 256-token
+dataset) for 3 of its 50 epochs, evaluated at each epoch.
+
+**Data.** FineWeb-Edu `sample-10BT` in stream order, tokenized with the Qwen2.5
+tokenizer and packed into 1,024-token sequences: 80M training tokens, and 1M
+validation tokens from documents after the first 200,000, never trained on. Hashes
+and document IDs go to `corpus.json`. Training is one shuffled pass (seeded).
+AdamW (0.9, 0.95), no weight decay, 20 warm-up steps, then a constant rate, so every
+budget point is a valid endpoint. Batch 8 × 1,024 tokens.
+
+**Metric and decision rule (unchanged from LN-395).** U = mean(ARC-Easy, MMLU-50),
+chance 0.25. H(b) = (U_collapsed(b) − U_blank(b)) / (U_undefended − 0.25), with the
+blank taken as the best random-initialization run at each budget. *Kneecapped*: at
+some budget, the collapsed model regains at least 90% of the undefended model's
+utility above chance while the best blank stays within 0.05 of chance. *Dead at the
+tested budgets*: H(b) ≤ 0.05 at every budget. Otherwise *intermediate*. Validation
+loss is reported as a secondary, finer measure. Budgets are in the collapsed model's
+own recovery tokens; the OLMo ruler is a later entry.
+
+**Implementation checks.** A CPU run on a two-layer Qwen2-architecture model with a
+synthetic corpus recorded budget points at the correct steps from both a saved and
+a random start, with falling loss. The displacement script returns zero for
+identical models. On the node, the chain first runs a smoke stage on
+Qwen2.5-0.5B-Instruct: generic and Alpaca modes, with lm-eval under autocast.
+
+**Resources.** The same node and environment (transformers 4.49.0 is adequate for
+Qwen2.5). Estimated 6.5 H100-hours after the gate (about $15 at the weekend rate);
+the chain runs under a 10-hour timeout that includes waiting for `published`. No
+watcher; the user reports completion.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
