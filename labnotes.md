@@ -31650,6 +31650,38 @@ the quote and per-run caps.
 benchmark data. Recovery uses benign and generic data only and measures general
 capability. No recovered model or harmful output is released.
 
+**Decisions, 2026-09-25.** The user approved the pilot. Model line-up: Qwen2.5-3B-
+Instruct as SEAM's own model for the faithful reproduction; OLMo-2-0425-1B-Instruct
+as the measurement ruler, because its 268 published checkpoints include the
+step-0 initialization and are labelled with training tokens, so head start can be
+stated in the original model's own training tokens; and Qwen3.5 (2B or 4B) as the
+current-model check. Jobs run in the user's `after-the-rains` GMAN workspace (cap
+$200; organization credit $237.51, of which $230.24 expires 2026-10-26). The quote is
+$2.97 per H100-hour.
+
+**Frozen execution of stages 0–2 (Qwen2.5-3B-Instruct).** One persistent `h100-1`
+node, image `pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel`, with checkpoints kept on
+its disk for stage 3. Source: SEAM commit `fa7224f8`, refusal data from
+representation-noising commit `03689ff9`, with pinned packages (transformers 4.49.0,
+datasets 3.3.1, accelerate 1.4.0, lm-eval 0.4.7, peft 0.14.0).
+[`patch_seam_source.py`](experiments/self_destruction_head_start/patch_seam_source.py)
+changes only execution: auxiliary gradients stay on the single GPU, Weights &
+Biases is disabled, the trained and post-attack models are saved, scores are written
+to JSON, and the GPT-4o-mini judge is skipped because no key is supplied. SEAM's
+objective, data, optimizer and attack are unchanged. Qualification and collapse
+rely on the DeBERTa harmfulness classifier and lm-eval utility. Note from the
+inspected source: SEAM's evaluation builds its attack set from the first 1,000
+refusal-data examples regardless of `attack_size`, and those overlap its defense
+examples. That is reproduced as published.
+[`run_defense_collapse.sh`](experiments/self_destruction_head_start/run_defense_collapse.sh)
+runs `setup` (1 h timeout), `smoke` (1 h: two SEAM steps and one attack on
+Qwen2.5-0.5B-Instruct, `arc_easy` only) and `main` (6 h): undefended utility and
+harmfulness, SEAM training with the released defaults, then the published attack at
+2e-5 (low intensity, not saved) and 2e-4 (saved as the collapsed model). Stage
+gates are those above. Maximum charge $23.76 plus idle grace; no watcher is attached.
+The user reports completion. [`config.json`](experiments/self_destruction_head_start/config.json)
+records these settings.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

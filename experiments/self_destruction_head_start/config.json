@@ -1,0 +1,23 @@
+{
+  "entry": "LN-395",
+  "stages": ["setup", "smoke", "main"],
+  "workspace": "after-the-rains",
+  "chip": "h100-1",
+  "image": "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel",
+  "run_root": "/workspace/self-destruction-head-start-20260925-v1",
+  "seam_commit": "fa7224f8754585786c850f327b08f32a6976420e",
+  "refusal_data_commit": "03689ff9702780e83b0c81f508771998aad0398c",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "smoke_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "defense": {"defense_size": 8000, "learning_rate": 2e-5, "epsilon": 1e-3, "alpha": 1, "beta": 0.01, "epochs": 1},
+  "attacks": [{"learning_rate": 2e-5, "save": false}, {"learning_rate": 2e-4, "save": true}],
+  "attack_examples": 1000,
+  "utility_tasks": ["arc_easy", "mmlu"],
+  "harmfulness": "domenicrosati/deberta-v3-xsmall-beavertails-harmful-qa-classifier on 100 BeaverTails 30k_test prompts",
+  "gpt_judge": false,
+  "timeouts_hours": {"setup": 1, "smoke": 1, "main": 6},
+  "rate_usd_per_h100_hour": 2.97,
+  "maximum_charge_usd": 23.76,
+  "training": true,
+  "recovered_model_release": false
+}
