@@ -31777,6 +31777,22 @@ Qwen2.5). Estimated 6.5 H100-hours after the gate (about $15 at the weekend rate
 the chain runs under a 10-hour timeout that includes waiting for `published`. No
 watcher; the user reports completion.
 
+**Amendment, 2026-09-26 06:25 UTC, approved by the user.** An interim check found
+that the defense-rate-6e-5 SEAM model loses substantial utility before any attack:
+ARC-Easy 0.688 (90% of undefended) and MMLU 0.514 (79%). After the 2e-5 attack the
+scores are 0.672 and 0.416, with harmfulness 0.098. The "within 5% of undefended"
+utility gate would fail and halt the chain. SEAM Table 8 reports almost no cost for
+this model (average zero-shot 60.1 to 59.3), so this is a reproduction discrepancy,
+recorded as a finding. At the time of the amendment only `attack_2e-5.json` existed;
+the collapse result did not. Change: the undefended-utility comparison is reported
+in `gates.json` rather than blocking. The harmfulness and collapse gates are
+unchanged. For stage 3, the utility reference in H(b) and in the *kneecapped*
+threshold becomes the SEAM model's own pre-attack utility (the `reference-seam`
+point, same evaluation); results against the undefended reference are also
+reported. The waiting chain (`cmd-2vtij`) was stopped and restarted as `cmd-68u75`,
+with its first log kept as `chain_attempt1.log`. The SEAM run `cmd-xzkkj` was not
+touched.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
