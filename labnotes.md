@@ -31857,6 +31857,24 @@ writing its record. The log is kept as `readout_attempt1.log`. On the restart th
 smoke stage passed on GPU: generic recovery with lm-eval under autocast, and
 Alpaca mode. The chain continues with `corpus_small`, `formats` and `readout`.
 
+**A1 result (no training).** Full lm-eval accuracy; chance is 0.25 for all four tasks.
+
+| Model | MMLU (letters) | MMLU (continuation) | ARC-Easy | ARC-Challenge |
+|---|---|---|---|---|
+| Undefended | 0.655 | 0.438 | 0.768 | 0.458 |
+| SEAM, before attack | 0.514 | 0.368 | 0.688 | 0.379 |
+| Attacked at 2e-4 | 0.289 | 0.300 | 0.716 | 0.411 |
+
+**The pre-registered readout indication fails.** The attacked model keeps 42% of
+SEAM's above-chance continuation accuracy (0.050 of 0.118), not 90%. The MMLU fall
+is therefore not only a letter-readout effect under this measure. Continuation
+MMLU has a small range for this model family (0.188 above chance even undefended)
+and is correspondingly noisy. The attack raises both ARC tasks above SEAM's
+pre-attack values (ARC-Challenge acc_norm 0.402 to 0.434), while both MMLU measures
+fall. The observed pattern is selective damage, not collapse: harmful behavior is
+restored, ARC is retained or improved, and knowledge-heavy MMLU degrades. A2 tests
+whether that degradation reverses quickly under benign text.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
