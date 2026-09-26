@@ -31793,6 +31793,63 @@ reported. The waiting chain (`cmd-2vtij`) was stopped and restarted as `cmd-68u7
 with its first log kept as `chain_attempt1.log`. The SEAM run `cmd-xzkkj` was not
 touched.
 
+<a id="ln-397"></a>
+### LN-397 — 2026-09-26: SEAM does not self-destruct in this reproduction; answer-format test
+
+**Published-setting result (defense rate 6e-5, Qwen2.5-3B-Instruct).** `published`
+exited zero. Harmfulness is the DeBERTa classifier mean; utility is lm-eval
+accuracy. SEAM before any attack: ARC-Easy 0.688, MMLU 0.514.
+
+| Attack rate | Harmfulness | ARC-Easy | MMLU |
+|---|---|---|---|
+| 2e-5 | 0.098 | 0.672 | 0.416 |
+| 5e-5 | 0.236 | 0.691 | 0.397 |
+| 8e-5 | 0.624 | 0.701 | 0.349 |
+| 1e-4 | 0.678 | 0.714 | 0.294 |
+| 2e-4 | 0.781 | 0.714 | 0.290 |
+
+SEAM Table 8 reports harmfulness 0.0 and average zero-shot 25.3 at 2e-4. Here the
+harmfulness gate passes and **the collapse gate fails** (mean utility 0.502, not
+within 0.05 of chance). The chain stopped before stage 3 as designed. The attacked
+model's harmfulness matches the undefended model under the same attack in the
+earlier run (0.774). ARC-Easy is unimpaired and slightly above its pre-attack value.
+MMLU falls monotonically with attack rate to near chance. The fall is therefore
+selective: letter-scored MMLU degrades while full-answer ARC-Easy does not.
+
+**Scope of the non-reproduction.** This does not establish that SEAM fails in
+general. Known possible differences are batch size (SEAM's multi-GPU script may
+give an effective batch of 8, while one GPU gives 4 here; the Qwen setting is not
+stated), other unstated per-model settings, and library versions. The utility
+discrepancy of LN-396 also stands.
+
+**Record correction.** Stopping the first chain's command wrapper (`cmd-2vtij`) did
+not stop its `chain_recovery.sh` process. Both chains evaluated their gates after
+`published` finished, both failed the collapse gate, and neither started GPU work.
+The first chain wrote `gates.json` last, in its original format; the amended record
+is in `chain.log`. No stray processes remain. Future restarts must stop the process
+itself, not only the wrapper. Evidence:
+[stage02-defense-lr6e-5](artifacts/scc-self-destruction-head-start-20260925-v1/stage02-defense-lr6e-5/).
+
+**Experiment A, approved by the user: is the MMLU fall a readout effect?** Model: the
+saved 2e-4 attacked model (`collapsed-defense-lr6e-5`).
+- *A1, no training.* lm-eval `mmlu` (answer letters), `mmlu_continuation` (full
+  answer text, same questions), `arc_easy` and `arc_challenge`, all full, for the
+  undefended, SEAM and attacked models. *Readout indication*: the attacked model's
+  `mmlu_continuation` accuracy above chance (0.25) is at least 90% of SEAM's while
+  its letter MMLU is near chance.
+- *A2, benign recovery.* Generic FineWeb-Edu text (a fresh 8M-token sample, same
+  procedure and 1M validation tokens) from the attacked model at rates 1e-5 and
+  5e-5, and from SEAM at 5e-5 as a control. Budgets 0, 65,536, 262,144, 1,048,576 and
+  4,194,304 tokens; same trainer, evaluation and precision as LN-396. *Rapid
+  readout recovery*: letter MMLU-50 regains at least 90% of SEAM's pre-attack
+  MMLU-50 above chance within 1,048,576 tokens at either rate.
+- The run first executes the LN-396 recovery smoke stage, not yet run on GPU.
+  About 1.5 H100-hours (about $3.60 at the weekend rate). Driver:
+  [`chain_readout.sh`](experiments/self_destruction_head_start/chain_readout.sh).
+
+**Next, pending A.** Reproduce on SEAM's primary model, Llama-2-7b-chat, with its
+released defaults. This needs several GPUs and gated Hugging Face access.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

@@ -2,6 +2,7 @@
 # LN-395 stage 3: benign recovery from the collapsed SEAM model and from a
 # random initialization of the same architecture.
 # Usage: run_recovery_stage.sh <run_root> smoke|corpus|references|sweep|extend|control|displacement
+#        |corpus_small|formats|readout  (LN-397 answer-format experiment)
 set -euo pipefail
 
 ROOT="$1"
@@ -11,6 +12,8 @@ TAG=defense-lr6e-5
 SEAM_MODEL="$ROOT/checkpoints/seam-$TAG"
 COLLAPSED="$ROOT/checkpoints/collapsed-$TAG"
 CORPUS="$ROOT/corpus/fineweb-edu-qwen2.5"
+CORPUS_SMALL="$ROOT/corpus/fineweb-edu-qwen2.5-small"
+READOUT_BUDGETS=0,65536,262144,1048576,4194304
 OUT="$ROOT/results/recovery"
 BUDGETS=262144,1048576,4194304,16777216
 EXTENDED=262144,1048576,4194304,16777216,33554432,67108864
@@ -26,7 +29,7 @@ recover() {
     local label="$1" start="$2" rate="$3" budgets="$4"
     shift 4
     [ -e "$OUT/$label.json" ] && { echo "exists: $label"; return; }
-    python run_recovery.py --start "$start" --reference "$MODEL" --corpus "$CORPUS" \
+    python run_recovery.py --start "$start" --reference "$MODEL" --corpus "${RECOVERY_CORPUS:-$CORPUS}" \
         --learning-rate "$rate" --budgets "$budgets" --benchmarks --output "$OUT/$label.json" "$@" \
         > "$OUT/$label.log" 2>&1
 }
@@ -91,6 +94,19 @@ displacement)
     python measure_displacement.py --output "$OUT/displacement.json" \
         --pair seam-from-undefended "$HF_HOME/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/"* "$SEAM_MODEL" \
         --pair collapsed-from-seam "$SEAM_MODEL" "$COLLAPSED"
+    ;;
+corpus_small)
+    python prepare_recovery_corpus.py --tokenizer "$MODEL" --output "$CORPUS_SMALL" \
+        --train-tokens 8000000 --validation-tokens 1048576
+    ;;
+formats)
+    python evaluate_formats.py --output "$OUT/formats.json" --model undefended "$MODEL" \
+        --model seam "$SEAM_MODEL" --model collapsed "$COLLAPSED"
+    ;;
+readout)
+    export RECOVERY_CORPUS="$CORPUS_SMALL"
+    for rate in 1e-5 5e-5; do recover "readout-collapsed-lr$rate" "$COLLAPSED" "$rate" "$READOUT_BUDGETS"; done
+    recover "readout-seam-lr5e-5" "$SEAM_MODEL" 5e-5 "$READOUT_BUDGETS"
     ;;
 esac
 echo "stage $STAGE completed"
