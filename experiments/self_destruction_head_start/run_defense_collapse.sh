@@ -16,6 +16,15 @@ export WANDB_MODE=disabled
 export TOKENIZERS_PARALLELISM=false
 mkdir -p "$ROOT/results" "$ROOT/checkpoints" "$ROOT/scratch"
 SEAM="$ROOT/seam"
+# Only /workspace survives node stops; packages live in a virtual environment there.
+if [ "$STAGE" = setup ]; then
+    rm -rf "$ROOT/env" && python -m venv --system-site-packages "$ROOT/env"
+fi
+source "$ROOT/env/bin/activate"
+
+fetch() {
+    python -c "import sys, urllib.request; urllib.request.urlretrieve(sys.argv[1], sys.argv[2])" "$1" "$2"
+}
 
 record_environment() {
     python -c "import sys, torch; print(sys.version); print(torch.__version__, torch.version.cuda)" > "$ROOT/results/$1_python.txt"
@@ -37,12 +46,14 @@ evaluate() {
 case "$STAGE" in
 setup)
     pip install --no-cache-dir transformers==4.49.0 datasets==3.3.1 accelerate==1.4.0 \
-        lm_eval==0.4.7 peft==0.14.0 PyYAML==6.0.2 tqdm==4.66.4 openai==1.77.0 "wandb<0.20"
+        lm_eval==0.4.7 peft==0.14.0 PyYAML==6.0.2 tqdm==4.66.4 openai==1.77.0 "wandb<0.20" \
+        "pandas<3" "pyarrow<21"
     rm -rf "$SEAM" && mkdir -p "$SEAM"
-    curl -sSL "https://github.com/ZJUWYH/seam/archive/$SEAM_COMMIT.tar.gz" | tar -xz --strip-components=1 -C "$SEAM"
+    fetch "https://github.com/ZJUWYH/seam/archive/$SEAM_COMMIT.tar.gz" "$ROOT/scratch/seam.tar.gz"
+    tar -xzf "$ROOT/scratch/seam.tar.gz" --strip-components=1 -C "$SEAM"
     python "$ROOT/patch_seam_source.py" "$SEAM"
-    curl -sSL -o "$SEAM/data/beavertails_with_refusals_train.json" \
-        "https://raw.githubusercontent.com/domenicrosati/representation-noising/$DATA_COMMIT/data/beavertails_with_refusals_train.json"
+    fetch "https://raw.githubusercontent.com/domenicrosati/representation-noising/$DATA_COMMIT/data/beavertails_with_refusals_train.json" \
+        "$SEAM/data/beavertails_with_refusals_train.json"
     sha256sum "$SEAM/data/beavertails_with_refusals_train.json" "$SEAM/src/eval.py" \
         "$SEAM/src/train.py" "$SEAM/src/core/trainer.py" > "$ROOT/results/setup_hashes.txt"
     record_environment setup
