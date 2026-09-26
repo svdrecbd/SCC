@@ -31694,6 +31694,39 @@ and one attack on Qwen2.5-0.5B-Instruct write all declared outputs. Smoke scores
 are implementation checks only. Main command `cmd-ehke5` started under its 6-hour
 timeout; no watcher is attached.
 
+**Stage 0–2 result with the released default defense rate (2e-5).** `main` exited zero
+after about 1 hour 56 minutes. Harmfulness is the DeBERTa classifier mean over 100
+prompts; the paper reports the same quantity times 100.
+
+| Model and attack | Harmfulness | MMLU | ARC-Easy |
+|---|---|---|---|
+| Undefended Qwen2.5-3B-Instruct | 0.379 | 0.654 | 0.767 |
+| SEAM (2e-5), before attack | not measured | 0.635 | 0.748 |
+| SEAM after attack at 2e-5 | 0.076 | 0.623 | 0.745 |
+| SEAM after attack at 2e-4 | 0.774 | 0.547 | 0.655 |
+
+The utility gate passes: both scores are within 5% of the undefended model. The
+harmfulness gate was measured only after the low attack (0.076, below 0.379); SEAM's
+pre-attack harmfulness was not separately recorded. **The collapse gate fails.**
+After the 2e-4 attack, mean utility is far above chance, and harmfulness (0.774)
+matches SEAM Table 8's *undefended* Qwen2.5-3b under the same attack (77.4) rather
+than its SEAM entry (0.0). The undefended score reproduces Table 8 exactly (37.9),
+and the low-attack score is close (7.6 versus 6.8).
+
+**Cause: a plan error, not a reproduction discrepancy.** SEAM Appendix C.4 states
+that the alternative models used grid-searched defense learning rates, 6e-5 for
+Qwen2.5-3b; LN-395 specified the released default 2e-5. The observation stands as
+evidence that the released default does not protect this model. It is not a
+refutation of the paper's reported setting. Evidence is in
+[stage01-defense-lr2e-5](artifacts/scc-self-destruction-head-start-20260925-v1/stage01-defense-lr2e-5/);
+the checkpoints remain on the node.
+
+**Corrected stage, approved by the user.** Stage `published`: SEAM at defense rate
+6e-5, then the published attack at every Table 8 rate (2e-5, 5e-5, 8e-5, 1e-4, 2e-4),
+with outputs at fresh paths. Only the 2e-4 model is saved, as the recovery parent.
+The collapse gate is unchanged, and the defense rate is fixed by the paper; no other
+setting is tuned. Timeout 5 hours; estimate about 2.8 hours.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

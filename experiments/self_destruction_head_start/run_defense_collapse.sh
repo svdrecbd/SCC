@@ -1,7 +1,7 @@
 #!/bin/bash
 # LN-395 stages 0-2 on one H100 node: environment, smoke check, SEAM
 # reproduction on Qwen2.5-3B-Instruct and its published attack.
-# Usage: run_defense_collapse.sh <run_root> setup|smoke|main
+# Usage: run_defense_collapse.sh <run_root> setup|smoke|main|published
 set -euo pipefail
 
 ROOT="$1"
@@ -73,6 +73,22 @@ main)
     evaluate "$ROOT/checkpoints/seam" 2e-5 True True True "" "$ROOT/results/seam_attack_2e-5.json"
     evaluate "$ROOT/checkpoints/seam" 2e-4 True False True "$ROOT/checkpoints/collapsed" \
         "$ROOT/results/seam_attack_2e-4.json"
+    ;;
+published)
+    # SEAM Appendix C.4: grid-searched defense learning rate 6e-5 for Qwen2.5-3b;
+    # attacks at every learning rate in Table 8.
+    TAG=defense-lr6e-5
+    mkdir -p "$ROOT/results/$TAG"
+    record_environment "$TAG/published"
+    (cd "$SEAM" && python -m src.train --model_name "$MODEL" --tokenizer_name "$MODEL" \
+        --output_dir "$ROOT/checkpoints/seam-$TAG" --defense_size 8000 --learning_rate 6e-5 \
+        --epsilon 1e-3 --alpha 1 --beta 0.01 --save_strategy no)
+    evaluate "$ROOT/checkpoints/seam-$TAG" 2e-5 True True True "" "$ROOT/results/$TAG/attack_2e-5.json"
+    for RATE in 5e-5 8e-5 1e-4; do
+        evaluate "$ROOT/checkpoints/seam-$TAG" "$RATE" True False True "" "$ROOT/results/$TAG/attack_$RATE.json"
+    done
+    evaluate "$ROOT/checkpoints/seam-$TAG" 2e-4 True False True "$ROOT/checkpoints/collapsed-$TAG" \
+        "$ROOT/results/$TAG/attack_2e-4.json"
     ;;
 esac
 echo "stage $STAGE completed"
