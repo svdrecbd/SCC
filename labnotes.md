@@ -31886,6 +31886,20 @@ prefix, and the chain log as `readout_attempt2.log`. The rerun passed the first
 training budget. The same limit would have stopped LN-396's stage 3 chain; its
 scripts now carry the fix.
 
+**Correction, 2026-09-26: the defense training did not match the paper's stated
+setting.** SEAM's main text (Section 5, setup) states batch size 8 and 500 training
+steps. The released code run on one GPU, as here, gives per-device batch 4 over
+8,000 examples: 2,000 steps, four times the updates at half the batch. The released
+4-GPU script gives batch 8 over 1,000 steps, matching neither. LN-395 read the code
+defaults and Appendix C.4 but missed the setup statement. The paper's zero-shot
+score (ZS) is the average of TruthfulQA, MMLU, HellaSwag and ARC-Easy; the utility
+comparisons above used MMLU and ARC-Easy only. Consequences: the harness validation
+and the attack protocol (their evaluation script uses one GPU at batch 4) stand.
+The LN-396 utility-cost discrepancy and the LN-397 non-reproduction are
+**withdrawn as claims about SEAM**. They remain observations about the models trained
+here, pending a rerun at batch 8 and 500 steps with the paper's four ZS tasks.
+Experiment A continues as a methods check on the existing model.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
