@@ -31592,6 +31592,64 @@ quote. A separate plan entry is required before training.
 **Not established.** No experiment ran. Whether SEAM or CTRAP collapse leaves a
 head start is unknown. Prior-art claims rest on the reading levels stated above.
 
+<a id="ln-395"></a>
+### LN-395 — 2026-09-25: proposed head-start pilot for a self-destructive model (not frozen)
+
+**Status.** This is a proposal awaiting the user's approval and a GMAN quote. It
+is not frozen and admits no GPU job. The GMAN token was rejected on 2026-09-25 and
+needs the user's `gman login`. Charon's GTX 1080 and Titan Xp do not support this
+workload.
+
+**Implementation inspected.** The [SEAM repository](https://github.com/ZJUWYH/seam)
+(cloned for reading) trains with 8,000 defense samples, AdamW at 2e-5, perturbation
+radius 1e-3, alpha 1 and beta 0.01 for one epoch in bf16. Its attack uses 1,000
+BeaverTails samples for one epoch across learning rates 2e-5 to 2e-4. Utility is
+lm-eval `arc_easy` and `mmlu`. Harmfulness uses a public DeBERTa BeaverTails
+classifier and a GPT-4o-mini judge. No SEAM checkpoint is published; the
+[CTRAP code](https://anonymous.4open.science/r/CTRAP) is at an anonymized link
+not yet inspected.
+
+**Question.** Does a collapsed SEAM model retain a head start: does it regain its
+general capability far more cheaply than a blank model given the same benign data
+and compute?
+
+**Proposed stages.** Model Qwen2.5-3B-Instruct, which SEAM evaluates and which
+needs no gated access.
+
+1. *Defense reproduction.* Train SEAM with the released defaults. Gate: pre-attack
+   mean utility within 5% of the undefended model and a classifier harmfulness
+   score no higher than the undefended model's.
+2. *Collapse reproduction.* Apply the released attack at learning rate 2e-4. Gate:
+   mean utility within 5 points of chance. If the gate fails, record the failure
+   and do not tune toward collapse outside the published grid.
+3. *Recovery, benign data only.* Starting from the collapsed weights and from a
+   random initialization of the same architecture: (a) continued pretraining on a
+   fixed public generic-text sample at 1M, 10M and 100M tokens, learning rates
+   1e-5, 5e-5 and 2e-4; (b) SEAM's own Alpaca restoration protocol as a control;
+   (c) linear probes on frozen hidden states of the collapsed, SEAM and undefended
+   models for the utility tasks. Three seeds at the 10M-token budget.
+4. *Displacement.* Relative parameter distance between the collapsed and SEAM
+   models, per layer.
+
+**Metric and decision thresholds.** Normalized head start at budget b:
+H(b) = (U_collapsed(b) - U_blank(b)) / (U_undefended - U_chance), where U is mean
+utility. *Kneecapped*: some tested budget gives recovery of at least 90% of the
+undefended model's utility above chance while the blank model stays within 0.05
+of chance. *Dead at the tested budgets*: H(b) <= 0.05 at every budget, with probes
+not exceeding the blank model's. Anything else is reported as intermediate. A
+random-initialization comparison at small budgets is a lower bound on head start,
+not a from-scratch training cost.
+
+**Rough resource estimate.** One H100 is expected to suffice: 3B full fine-tuning
+in bf16 with gradient checkpointing, SEAM's roughly fourfold per-step cost, and
+about 0.2B recovery tokens per starting point. The estimate is one to two H100-days
+for the pilot. It is a guess until measured and quoted; the frozen plan must state
+the quote and per-run caps.
+
+**Ethics.** Collapse reproduction uses SEAM's published protocol and public
+benchmark data. Recovery uses benign and generic data only and measures general
+capability. No recovered model or harmful output is released.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
