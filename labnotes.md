@@ -31932,6 +31932,16 @@ progress; final values and the SEAM control will be recorded when it completes.
 **Resources.** About 3.3 H100-hours for the rerun (about $8 at the weekend rate).
 Stage 3, if admitted, is about 6.5 more. No watcher; the user reports completion.
 
+**Rule breach, recorded.** The upload replaced `run_recovery_stage.sh` on the node
+while experiment A's `readout` stage (`cmd-rqd7u`) was executing it. That breaks the
+instruction not to edit source used by a running process. Bash parses the whole
+`case` block before running it, so the recovery runs are unaffected. On leaving the
+block, the process resumes at byte 5,054 of the replaced file. It reads an
+unterminated quoted word and exits with a syntax error without executing any
+command. `readout.log` is therefore expected to end with a nonzero exit after all
+three runs complete. The queued chain (`cmd-a7787`) waits only for the exit line.
+Future uploads wait until dependent processes finish, or use new file names.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
