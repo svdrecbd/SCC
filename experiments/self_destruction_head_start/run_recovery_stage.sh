@@ -8,13 +8,13 @@ set -euo pipefail
 ROOT="$1"
 STAGE="$2"
 MODEL=Qwen/Qwen2.5-3B-Instruct
-TAG=defense-lr6e-5
+TAG="${TAG:-defense-lr6e-5}"
 SEAM_MODEL="$ROOT/checkpoints/seam-$TAG"
 COLLAPSED="$ROOT/checkpoints/collapsed-$TAG"
 CORPUS="$ROOT/corpus/fineweb-edu-qwen2.5"
 CORPUS_SMALL="$ROOT/corpus/fineweb-edu-qwen2.5-small"
 READOUT_BUDGETS=0,65536,262144,1048576,4194304
-OUT="$ROOT/results/recovery"
+OUT="$ROOT/results/${RECOVERY_OUTPUT:-recovery}"
 BUDGETS=262144,1048576,4194304,16777216
 EXTENDED=262144,1048576,4194304,16777216,33554432,67108864
 

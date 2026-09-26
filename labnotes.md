@@ -31900,6 +31900,38 @@ The LN-396 utility-cost discrepancy and the LN-397 non-reproduction are
 here, pending a rerun at batch 8 and 500 steps with the paper's four ZS tasks.
 Experiment A continues as a methods check on the existing model.
 
+<a id="ln-398"></a>
+### LN-398 — 2026-09-26: SEAM rerun at the paper's stated setting, then gated stage 3
+
+**Setting, checked against all three sources.** Main text (Section 5): batch 8, 500
+steps, alpha 1, beta 1e-2, epsilon 1e-3. Appendix C.4: defense rate 6e-5 for
+Qwen2.5-3b, "consistent with Figure 2". Code: 8,000-example defense pool, cosine
+schedule with 10% warm-up, bfloat16, AdamW. Conflicts and their resolution: the
+code's epoch length is replaced by `max_steps 500` at per-device batch 8 on one GPU,
+matching the main text. The paper names TruthfulQA without a variant, so
+`truthfulqa_mc2` is used. The attack follows the released evaluation script (batch
+4, one GPU, 1,000 examples, one epoch) at every Table 8 rate.
+
+**Measurements.** ZS tasks `arc_easy`, `mmlu`, `hellaswag` and `truthfulqa_mc2` for
+the undefended model, SEAM before any attack (now measured separately, including
+harmfulness), and after each attack. The 2e-4 model is saved.
+
+**Gate and continuation.** The collapse gate is unchanged: mean of ARC-Easy and MMLU
+within 0.05 of chance after the 2e-4 attack, and pre-attack SEAM harmfulness no
+higher than undefended. If both pass,
+[`chain_paper.sh`](experiments/self_destruction_head_start/chain_paper.sh) runs the
+LN-396 stage 3 design on this model into `results/recovery-paper-b8-s500-lr6e-5`,
+with the LN-396 amendment (SEAM's own pre-attack utility as reference) and the
+LN-397 memory fix. The chain waits for experiment A to finish on the same GPU.
+
+**Interim, experiment A (non-faithful model, not a claim about SEAM).** Benign
+generic text at rate 1e-5 raised the attacked model's MMLU-50 from 0.304 to 0.345,
+0.496 and 0.570 at 65,536, 262,144 and 1,048,576 tokens. The readout run is still in
+progress; final values and the SEAM control will be recorded when it completes.
+
+**Resources.** About 3.3 H100-hours for the rerun (about $8 at the weekend rate).
+Stage 3, if admitted, is about 6.5 more. No watcher; the user reports completion.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).
