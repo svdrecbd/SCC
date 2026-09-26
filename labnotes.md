@@ -31875,6 +31875,17 @@ fall. The observed pattern is selective damage, not collapse: harmful behavior i
 restored, ARC is retained or improved, and knowledge-heavy MMLU degrades. A2 tests
 whether that degradation reverses quickly under benign text.
 
+**A2 execution note.** The first `readout` attempt ran out of GPU memory in the
+MMLU evaluation at the first training budget. The float32 optimizer state (about
+50 GB once training starts) and a 32-sequence lm-eval batch over the 151,936-token
+vocabulary (an 18 GB log-softmax) exceeded the H100. The 0.5B smoke model could
+not reveal this. The budget-0 point had completed. Evaluation batch size is now 8,
+the CUDA cache is released before benchmarks, and expandable segments are enabled.
+These do not change what is measured. Failed outputs are kept with an `attempt1-`
+prefix, and the chain log as `readout_attempt2.log`. The rerun passed the first
+training budget. The same limit would have stopped LN-396's stage 3 chain; its
+scripts now carry the fix.
+
 ## Historical evidence
 
 [Archive and supporting records](docs/archive/README.md) · [Full evidence index](docs/archive/evidence-index.md).

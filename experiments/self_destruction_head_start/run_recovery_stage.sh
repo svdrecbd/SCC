@@ -20,6 +20,7 @@ EXTENDED=262144,1048576,4194304,16777216,33554432,67108864
 
 export HF_HOME="$ROOT/hf"
 export TOKENIZERS_PARALLELISM=false
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 source "$ROOT/env/bin/activate"
 mkdir -p "$OUT"
 cd "$ROOT"

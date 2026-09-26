@@ -35,6 +35,8 @@ def evaluate(model, tokenizer, validation, arguments):
             rows_seen += len(rows)
     record["validation_loss"] = total / rows_seen
     if arguments.benchmarks:
+        if arguments.device == "cuda":
+            torch.cuda.empty_cache()
         import lm_eval
         from lm_eval.models.huggingface import HFLM
         wrapped = HFLM(pretrained=model, tokenizer=tokenizer, batch_size=arguments.benchmark_batch_size)
@@ -95,7 +97,7 @@ def main():
     parser.add_argument("--validation-tokens", type=int, default=1048576)
     parser.add_argument("--benchmarks", action="store_true")
     parser.add_argument("--mmlu-limit", type=int, default=50)
-    parser.add_argument("--benchmark-batch-size", type=int, default=32)
+    parser.add_argument("--benchmark-batch-size", type=int, default=8)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output", type=Path, required=True)
     arguments = parser.parse_args()
