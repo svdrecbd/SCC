@@ -20,6 +20,27 @@ Preserve and document the current failures while pursuing concrete, testable
 changes. Do not promise that the general mechanism is achievable or treat
 additional training pressure as evidence that a dependency has formed.
 
+On 2026-09-25 the user set a peer-reviewed ICML paper as the current target
+([LN-394](labnotes.md#ln-394)). The brake described in the mechanism target remains
+the motivation and the definition against which claims are stated; a working
+mechanism is no longer the precondition for the paper.
+
+## Research scope
+
+The user established on 2026-09-25 that this is alignment research, not computer
+security research. Apply these rules to every experiment and paper section:
+
+1. Every experiment trains or evaluates a model or agent.
+2. Security primitives (encryption, trusted execution, obfuscation) appear only
+   as idealized oracles with cited assumptions. Do not implement cryptography,
+   analyze side channels or benchmark hardware.
+3. Write threat models and related work against the alignment literature
+   (tamper resistance, unlearning, AI control, self-improvement). Cite security
+   work only for assumptions and realizations.
+4. Software-substitution test: if a result would hold unchanged with the neural
+   network replaced by arbitrary software, it is a supporting lemma, not a
+   contribution. Record the test's outcome for each claimed contribution.
+
 ## Current compute authorization
 
 The user's 2026-09-19 placement instruction is: run CPU research jobs on Charon,

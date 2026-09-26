@@ -19,6 +19,14 @@ post-trigger erasure are governance assumptions. Refusal of harmful content is
 secondary. The paragraphs below record earlier proxy-based work; they remain valid
 bounded statements.
 
+**Paper target — [LN-394](#ln-394).** The user set an ICML paper as the current
+target and restricted scope to alignment rather than security research. A novelty
+check found sealed-key training anticipated by model-protection work. SEAM's claim
+that collapse cannot be reversed rests on one instruction-tuning test without a
+blank-reference comparison; no work found tests whether SEAM or CTRAP collapse
+leaves a head start. The adopted direction tests the death criterion on these
+defenses, supported by LN-391–393. No experiment has run.
+
 **Governor encoding — [LN-393](#ln-393).** Exact controls reject a transparent
 threshold encoding with a workspace bound. Three edits walk around a decoding
 cliff; edit size cannot separate brake removal from improvement; every tested
@@ -31484,6 +31492,105 @@ All 12 manifest-listed files (50,476 bytes) verify on the SD store. Manifest
 SHA256: `4e74cc6d4b8a22ef9332b98efb44943e27eca3cffa1cc15a0b82797643bf5176`.
 The executed source matches the committed validator. The single computation is
 terminal; no training or GPU job was submitted.
+
+<a id="ln-394"></a>
+### LN-394 — 2026-09-25: paper target, scope rules and novelty check
+
+**Decision by the user.** The current target is a peer-reviewed ICML paper. The
+brake in the [mechanism target](MECHANISM_TARGET.md) remains the motivation and
+the definition against which claims are stated. The user also set a scope rule:
+this is alignment research, not computer security research.
+[WORKING_STANDARDS.md](WORKING_STANDARDS.md) now records both, including a
+software-substitution test: a result that would hold unchanged with the neural
+network replaced by arbitrary software is a supporting lemma, not a contribution.
+Timeline pressure is not a constraint set by the user.
+
+**Candidate papers considered in discussion.** (A) A theory-backed attack on SEAM
+using the [LN-391](#ln-391) metric criterion. (B) A necessity-and-sufficiency
+paper: transparent weight-level brakes cannot be tamper-fatal ([LN-393](#ln-393)),
+and a sealed all-or-nothing core bounds an exit's retained information. (B′) Seal
+only a small key component and train the remaining weights to be worthless
+without it, measuring the remainder's head start. Under the substitution test, the
+storage bound and the malleability of plain encryption are supporting lemmas; the
+learned-model content is the contribution.
+
+**Novelty check (web search, 2026-09-25).** Sources were read only as far as
+stated; none was reproduced.
+
+- Sealed-key training (B′) is largely anticipated by model-protection work in the
+  security literature. [No Privacy Left Outside / TEESlice](https://arxiv.org/abs/2310.07152)
+  (IEEE S&P 2024; abstract read) trains with partition-before-training so that a
+  small shielded slice gives protection equal to shielding the whole model
+  against model stealing. [CoreGuard](https://arxiv.org/html/2410.13903v3) and
+  [TransLinkGuard](https://arxiv.org/html/2404.11121) protect LLM weights on edge
+  devices; key-dependent training (HPNN) and
+  [hardware locking](https://arxiv.org/abs/2405.20990) bind weights to secrets
+  (search summaries only). The remaining differences, self-modification rather than
+  theft and the head-start endpoint, would not by themselves overcome the scope
+  rule: an experimental program there is security research. B′ is not adopted.
+- The informal architectural argument that a sufficiently capable agent can reach
+  any control inside its own runtime appears in
+  [The Unfireable Safety Kernel](https://arxiv.org/abs/2606.26057) (abstract read).
+  It proposes external enforcement. Its machine-checked proofs verify the kernel,
+  not the vulnerability claim; it has no weight-level theorem, retained-information
+  bound or destruction endpoint. B's necessity theorem remains more specific, but
+  the headline intuition is not new.
+- Relearning attacks on unlearning, including the finding that retain-set fine-tuning
+  restores forgotten accuracy while a retrained-from-scratch model does not, are
+  established for data and knowledge unlearning (for example
+  [Unlearning Isn't Deletion](https://arxiv.org/pdf/2505.16831); search summaries
+  only). The head-start definition is therefore a formalization of an existing
+  intuition, not a new idea.
+- **SEAM's irreversibility claim is untested beyond one method.** In
+  [SEAM](https://arxiv.org/abs/2505.12186) Appendix C.6 (text inspected), a
+  Llama2-7b model collapsed by attack #4 is fine-tuned for 50 epochs on 10K Alpaca,
+  BeaverTails or mixed examples with AdamW at learning rate 5e-5. Zero-shot score
+  stays near 25 (original 51.6). The authors conclude that full restoration "may
+  require substantial computational costs (e.g., comparable to training from
+  scratch)". Only instruction fine-tuning is tried; generic continued pretraining,
+  other optimizers and learning rates, representation probes and comparisons
+  against a blank baseline at matched compute are absent.
+  [CTRAP](https://arxiv.org/abs/2505.16559) (ACL 2026; search summaries only)
+  collapses responses to a fixed token sequence under harmful updates and is
+  described as rendering the model inert. The searches found no work testing
+  whether either collapse leaves a head start. [Qi et al.](https://arxiv.org/html/2412.07097)
+  (TAR, RepNoise configuration fragility) and [Kuo et al.](https://arxiv.org/abs/2605.26526)
+  (abliteration and prefilling) do not address recovery after collapse.
+
+**Adopted direction: self-destruction versus death.** Test the user's death
+criterion on the leading published self-destructive defenses.
+
+1. *Definition and protocol.* Death means no head start. Measure the data and
+   compute needed to regain a declared fraction of original capability from the
+   collapsed weights, against a declared blank or public reference at matched
+   budgets. Use several recovery families: generic continued pretraining,
+   instruction tuning, optimizer and learning-rate sweeps, and probes testing
+   whether original features remain linearly decodable. Reproducing a collapse
+   uses the defense's own published attack protocol and public benchmark data.
+   Recovery uses benign and generic data only and measures general capability;
+   no recovered model is released.
+2. *Theory.* Supporting results: transparent encodings admit in-place re-encoding
+   ([LN-393](#ln-393)); coupling a judgment to cognition supplies the override's
+   trigger ([LN-392](#ln-392)); opposing-gradient conflict is metric-dependent
+   ([LN-391](#ln-391)). Add a displacement argument: a collapse produced by a short
+   fine-tuning trajectory leaves the weights near the original, so the information
+   in the original weights is probably not erased. This must be proved or
+   measured, not assumed.
+3. *Either outcome is informative.* If collapse leaves a large head start, the
+   defenses cripple rather than kill, contrary to their stated claim. If it passes
+   a strong death test, the paper certifies it and turns to whether a knowledgeable
+   editor can avoid triggering collapse at all (LN-391).
+4. *Substitution test.* Head-start measurements and the metric criterion concern
+   learned models and pass. The storage bound and re-encoding results are
+   supporting lemmas.
+
+**Pre-registration obligations before any GPU work.** Frozen plan in labnotes with
+recovery families, budgets, metrics, blank reference and success thresholds;
+reproduction of SEAM's headline collapse from its released code first; a GMAN
+quote. A separate plan entry is required before training.
+
+**Not established.** No experiment ran. Whether SEAM or CTRAP collapse leaves a
+head start is unknown. Prior-art claims rest on the reading levels stated above.
 
 ## Historical evidence
 
