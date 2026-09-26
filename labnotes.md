@@ -31686,9 +31686,9 @@ records these settings.
 (H100 80GB HBM3; Friday rate $2.65 per hour). Only `/workspace` survives node stops,
 so packages go into a virtual environment there. The image lacks `curl`; downloads
 use Python. The first setup attempt failed on that download and is preserved as
-`setup_attempt1.log`. The user said package pins are not a constraint. SEAM's stage
-keeps transformers 4.49.0 because its trainer overrides that version's training
-loop; `pandas<3` and `pyarrow<21` are capped for datasets 3.3.1. A later recovery
+`setup_attempt1.log`. The user clarified that package versions may change only where
+they do not affect the science. SEAM's stage keeps transformers 4.49.0 because its
+trainer overrides that version's training loop; `pandas<3` and `pyarrow<21` are capped for datasets 3.3.1. A later recovery
 stage may use a current environment. Setup and smoke both exit zero: two SEAM steps
 and one attack on Qwen2.5-0.5B-Instruct write all declared outputs. Smoke scores
 are implementation checks only. Main command `cmd-ehke5` started under its 6-hour
